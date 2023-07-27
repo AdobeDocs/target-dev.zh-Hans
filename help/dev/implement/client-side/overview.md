@@ -1,0 +1,26 @@
+---
+keywords: 实施，at.js， adobe experience platform web sdk， aep web sdk
+description: 了解如何实施 [!DNL Adobe Target] 对于客户端Web，使用 [!DNL Adobe Experience Platform Web SDK] (AEP Web SDK)或at.js JavaScript库。
+title: 如何实施 [!DNL Target] 用于客户端Web
+feature: at.js
+exl-id: b3a850ff-ace0-4eea-955a-aa71dfad256f
+source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+workflow-type: tm+mt
+source-wordcount: '225'
+ht-degree: 30%
+
+---
+
+# 概述：实施 [!DNL Target] 用于客户端Web
+
+在 [!DNL Adobe Target] 的客户端实施中，[!DNL Target] 会将与活动相关联的体验直接交付给客户端浏览器。浏览器将决定要显示的体验，然后显示该体验。借助客户端实施，您可以使用 WYSIWYG 编辑器、[可视化体验编辑器](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html) (VEC)，或者非可视化界面（[基于表单的体验编辑器](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html)）来创建活动和个性化体验。
+
+实施 [!DNL Target] 在客户端，您必须使用以下JavaScript库之一：
+
+* [Adobe Experience Platform Web SDK](/help/dev/implement/client-side/aep-web-sdk.md)
+
+  此 [!UICONTROL Adobe Experience Platform Web SDK] 允许您与 [!DNL Adobe Experience Cloud] (包括 [!DNL Target])通过 [!UICONTROL Adobe Experience Edge Network]. 如果您选择迁移到 [!UICONTROL Adobe Experience Platform Web SDK]，请参见 [什么是 [!UICONTROL Adobe Experience Platform Web SDK]](/help/dev/implement/client-side/aep-web-sdk.md).
+
+* [[!DNL Target] at.js JavaScript库](/help/dev/implement/client-side/atjs/how-atjs-works/overview.md)
+
+  使用at.js JavaScript库可缩短Web实施的页面加载时间，增强安全性，并为单页应用程序提供更好的实施选项。 如果您选择迁移到at.js，请参阅 [At.js的工作原理](/help/dev/implement/client-side/atjs/how-atjs-works/overview.md) 和 [[!DNL Adobe Target] Skill Builder：开发人员聊天，将Adobe Target的mbox.js迁移到at.js](https://seminars.adobeconnect.com/ptdo6mfo6qn6/?proto=true).
