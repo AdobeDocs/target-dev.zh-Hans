@@ -6,7 +6,7 @@ level: Experienced
 role: Developer
 hide: true
 hidefromtoc: true
-source-git-commit: 5321ce43be26e8f0776da49e597ecb5f8dfb5984
+source-git-commit: 9b65380febf64896a3885c49f8bb79e4bb33f604
 workflow-type: tm+mt
 source-wordcount: '1032'
 ht-degree: 5%
@@ -27,7 +27,7 @@ at.js提供的现成自动闪烁处理功能仅在您具备以下条件时才有
 
 下图中的步骤编号与以下部分相对应。
 
-![渲染体验图](/help/dev/patterns/assets/render-experiences-diagram.png){width="600" zoomable="yes"}
+![渲染体验图](/help/dev/patterns/assets/diagram-render-experiences.png){width="600" zoomable="yes"}
 
 单击以下链接以导航到所需的部分：
 
