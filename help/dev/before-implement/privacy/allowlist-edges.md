@@ -4,10 +4,10 @@ description: 查看主机列表以帮助您列入允许列表 [!DNL Adobe Target
 title: 如何列入允许列表 [!DNL Target] 边缘节点？
 feature: Privacy & Security
 exl-id: a7e5d2fc-da8e-414d-a3da-2441ea21503d
-source-git-commit: 55deb12a59dc228ec7dcec17fc0ecb43e2900613
+source-git-commit: 3f4147d521b1fb3ee12e879e52a48d459f6b24b9
 workflow-type: tm+mt
-source-wordcount: '525'
-ht-degree: 5%
+source-wordcount: '516'
+ht-degree: 6%
 
 ---
 
@@ -27,11 +27,7 @@ ht-degree: 5%
 >
 >[!DNL Adobe Target] 基础架构正在更新，希望允许列表地址的客户必须使用这两组IP。 列入允许列表如果未能做到这一点，将会影响使用服务器端或混合实施的客户，在这些实施中，用于获取体验的Target API调用源自配置为使用的防火墙之后的网络内。
 >
->正在按照以下计划进行此更新：
->
->* 5月22-26日：欧洲、中东和非洲(EMEA)地区
->* 5月22-26日：亚太(APAC)地区
->* 6月6-10日：美洲区域
+>全部Edge4 *x* 下表所列地址将于2023年8月9日更新。
 
 ## 网络地址转换(NAT) IP地址 [!DNL Target] 边缘
 
