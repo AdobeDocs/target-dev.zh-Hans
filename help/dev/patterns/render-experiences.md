@@ -6,9 +6,9 @@ level: Experienced
 role: Developer
 hide: true
 hidefromtoc: true
-source-git-commit: 18f070005685699e2d1feb12a31802faa17e35f3
+source-git-commit: ca3a3e5b8272c0db9e355abd2d16896251594b43
 workflow-type: tm+mt
-source-wordcount: '1032'
+source-wordcount: '1080'
 ht-degree: 5%
 
 ---
@@ -16,6 +16,10 @@ ht-degree: 5%
 # 渲染体验
 
 请按照 *渲染体验* 图，可确保呈现体验所需的所有必要任务均以正确顺序执行。
+
+>[!NOTE]
+>
+>如果您在 [配置自动页面加载请求步骤](/help/dev/patterns/initialize-sdk.md#automatic) 在 *初始化SDK* ，您可以跳过此活动，除非您想要调用Adobe Target SDK以使用区域位置请求呈现其他体验。
 
 >[!TIP]
 >
@@ -90,7 +94,7 @@ at.js提供的现成自动闪烁处理功能仅在您具备以下条件时才有
 
 ## 3.3：基于热门程度的标准 {#popularity}
 
-根据项目在整个网站中的整体受欢迎程度或用户最喜爱或查看次数最多的类别、品牌、流派等中的项目受欢迎程度提供推荐。
+根据项目在整个网站中的整体受欢迎程度或访客最喜爱或查看次数最多的类别、品牌、流派等中的项目受欢迎程度提供推荐。
 
 +++查看详细信息
 
@@ -168,7 +172,7 @@ at.js提供的现成自动闪烁处理功能仅在您具备以下条件时才有
 
 ## 3.6：自定义标准 {#custom}
 
-根据您上传的自定义文件提出推荐
+根据您上传的自定义文件提出推荐。
 
 +++查看详细信息
 
@@ -222,7 +226,7 @@ at.js提供的现成自动闪烁处理功能仅在您具备以下条件时才有
 
 * [实体属性](https://experienceleague.adobe.com/docs/target/using/recommendations/entities/entity-attributes.html){target=_blank}
 
-您还可以通过使用创建产品馈送来完成此步骤。 [!DNL Target] 用于更新产品目录的UI [!DNL Recommendations].
+您还可以通过创建以下内容来完成此步骤 [产品信息源](https://experienceleague.adobe.com/docs/target/using/recommendations/entities/feeds.html){target=_blank} 使用 [!DNL Target] 用于更新产品目录的UI [!DNL Recommendations].
 
 +++
 
@@ -244,7 +248,7 @@ at.js提供的现成自动闪烁处理功能仅在您具备以下条件时才有
 
 ## 3.11：触发页面加载请求 {#fire}
 
-此步骤会触发 [!DNL Delivery API] 调用 `execute` > `pageLoad` 请求中的有效负荷。 此 `getOffers()` 方法可获取经验和 `applyOffers()` 呈现页面上的体验。 呈现在中创作的体验需要pageLoad请求 [可视化体验编辑器](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html){target=_blank} (VEC)。
+此步骤会触发 [!DNL Delivery API] 调用 `execute` > `pageLoad` 请求中的有效负荷。 此 `getOffers()` 方法可获取经验和 `applyOffers()` 呈现页面上的体验。 此 `pageLoad` 渲染在中创作的体验需要请求 [可视化体验编辑器](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html){target=_blank} (VEC)。
 
 +++查看详细信息
 
