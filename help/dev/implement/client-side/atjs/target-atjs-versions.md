@@ -4,9 +4,9 @@ description: 查看每个版本中更改的详细信息 [!DNL Adobe Target] at.j
 title: at.js的每个版本均包括什么内容？
 feature: at.js
 exl-id: 609dacba-2ab8-45e9-b189-928d59938c98
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+source-git-commit: dc7831e4c3eb7dfc4a11d440e55b3a116b6e28fc
 workflow-type: tm+mt
-source-wordcount: '4554'
+source-wordcount: '4603'
 ht-degree: 74%
 
 ---
@@ -15,9 +15,15 @@ ht-degree: 74%
 
 有关 [!DNL Adobe Target] at.js JavaScript 库每个版本中的更改的详细信息。
 
->[!WARNING]
+>[!IMPORTANT]
 >
->[!DNL Adobe Target] 同时支持at.js 1.*x* 与 at.js 2.*x* 之间的映射。请升级到任一主要版本的at.js的最新更新，以确保您运行的是受支持的版本。
+>[!DNL Adobe Target] 同时支持at.js 1.*x* 与 at.js 2.*x* 之间的映射。
+>
+>at.js 1.*x* 已进入维护模式。 此 [!DNL Target] 团队会根据需要发布错误修复和安全修补程序。
+>
+>此 [!DNL Target] 团队全面支持at.js 2.*x* 和会持续发布错误修复、安全修补程序、功能和性能优化。
+>
+>您应该升级到1的最新版本。*x* 或2。*x* 获取在相应主要版本的先前任何次要版本中发现问题的错误修复和安全修补程序。
 
 中的标记 [Adobe Experience Platform](/help/dev/implement/client-side/atjs/how-to-deployatjs/implement-target-using-adobe-launch.md) 是升级at.js的首选方法。 扩展开发人员会不断向其扩展中添加新功能，并且还经常修复错误。 这些更新将打包到扩展的新版本中，并在Adobe Experience Platform目录中作为升级提供。 有关更多信息，请参阅 [扩展升级](https://experienceleague.adobe.com/docs/experience-platform/tags/ui/extensions/extension-upgrade.html) 在 *标记概述* 指南。
 
