@@ -2,10 +2,10 @@
 user-guide-title: Adobe Target 开发人员指南
 breadcrumb-title: Target开发人员指南
 user-guide-description: 了解如何定制和个性化客户体验，从而最大限度地提升网站和移动网站、应用程序、社交媒体和其他数字渠道的收入。
-source-git-commit: 65cad3c558aa0f52c8007dcdb566c0ce3b29d8b7
+source-git-commit: eadb45877b13ac029dae6aaf172abebabb804983
 workflow-type: tm+mt
-source-wordcount: '739'
-ht-degree: 55%
+source-wordcount: '707'
+ht-degree: 54%
 
 ---
 
@@ -168,12 +168,6 @@ ht-degree: 55%
    + [Target 移动设备预览](implement/mobile/target-mobile-preview.md)
    + [使用位置服务](implement/mobile/use-location-service.md)
    + [Target 移动应用程序版常见问题解答](implement/mobile/mobile-faq.md)
-   + Adobe移动SDK版本4.x {#version-4}
-      + [Target 在移动应用程序中的工作原理](implement/mobile/how-target-works-mobile-apps.md)
-      + [在 SDK 中启用 Target](implement/mobile/enable-target-in-sdk.md)
-      + [iOS - 创建 Target 位置和成功量度](implement/mobile/mobile-create-location-and-metric.md)
-      + [iOS - 发送自定义用户数据](implement/mobile/mobile-custom-user-data.md)
-      + [预取选件内容](implement/mobile/prefetch-offer-content.md)
 + 电子邮件实施 {#implement-email}
    + [电子邮件：实施 Target 概述](implement/email/overview.md)
    + [为图像创建 Adbox](implement/email/testing-content-with-the-adbox.md)

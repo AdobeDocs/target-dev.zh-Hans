@@ -6,9 +6,9 @@ kt: 3815
 thumbnail: null
 author: Judy Kim
 exl-id: 9b391f42-2922-48e0-ad7e-10edd6125be6
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+source-git-commit: ba53161b2ec51af3d90994773034790feb51099c
 workflow-type: tm+mt
-source-wordcount: '1521'
+source-wordcount: '1507'
 ht-degree: 1%
 
 ---
@@ -88,7 +88,6 @@ Adobe Target和Adobe Target Recommendations API可用于提供对网页的响应
 | --- | --- |
 | [Adobe Target Everywhere — 在服务器端或物联网中实施](https://expleague.azureedge.net/labs/L733/index.html) | Adobe Summit2019实验室，为利用Adobe Target服务器端API的React应用程序提供实践体验。 |
 | [移动设备应用程序中的Adobe Target(不带AdobeSDK)](https://community.tealiumiq.com/t5/Universal-Data-Hub/Adobe-Target-in-a-Mobile-App-Without-the-Adobe-SDK/ta-p/26753) | 本指南向您展示如何在不安装Adobe Target SDK的情况下在移动应用程序中设置Adobe。 此解决方案使用Tealium SDK Webview和远程命令模块向Adobe访客API(Experience Cloud)和Adobe Target API发送请求并进行接收。 |
-| [Adobe Target在移动设备应用程序中的工作原理](../../implement/mobile/how-target-works-mobile-apps.md) | Target如何与Mobile SDK配合使用 |
 | [在Experience Platform Launch和实施Target API中配置Target扩展](https://developer.adobe.com/client-sdks/documentation/adobe-target/) | 在Experience Platform Launch中配置Target扩展、将Target扩展添加到您的应用程序以及实施Target API以请求活动、预取选件和进入可视化预览模式的步骤。 |
 | [Adobe Target节点客户端](https://www.npmjs.com/package/@adobe/target-nodejs-sdk) | 开源Target Node.js SDK v1.0 |
 | [服务器端概述](../../implement/server-side/server-side-overview.md) | 有关Adobe Target服务器端交付API、服务器端批量交付API、Node.js SDK和Adobe Target Recommendations API的信息。 |
