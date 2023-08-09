@@ -4,9 +4,9 @@ description: 使用移动设备预览链接对移动设备应用程序活动执�
 title: 如何在中使用移动设备预览链接 [!DNL Target] 手机？
 feature: Implement Mobile
 exl-id: c0c4237a-de1f-4231-b085-f8f1e96afc13
-source-git-commit: b678b69624963b4bdbce230a05a0355da96469f1
+source-git-commit: 97c96e63f9121793a83b445ad3dc33c5d094509a
 workflow-type: tm+mt
-source-wordcount: '552'
+source-wordcount: '555'
 ht-degree: 51%
 
 ---
@@ -34,7 +34,7 @@ ht-degree: 51%
    * **iOs**：有关为iOS设置URL方案的更多信息，请参阅 [为您的应用程序定义自定义URL方案](https://developer.apple.com/documentation/xcode/defining-a-custom-url-scheme-for-your-app){target=_blank} 在Apple开发人员网站上。
    * **Android**：有关为Android设置URL方案的更多信息，请参阅 [创建指向应用程序内容的深层链接](https://developer.android.com/training/app-links/deep-linking){target=_blank} Android开发人员网站上的。
 
-1. **设置 `collectLaunchInfo` API**
+1. **设置 `collectLaunchInfo` API（仅限i0S）**
 
    有关更多信息，请参阅 [可视化预览](https://developer.adobe.com/client-sdks/documentation/adobe-target/#visual-preview){target=_blank} 在 *Adobe Target* 在 *[!DNL Adobe Experience Platform Mobile SDK]* 文档。
 
