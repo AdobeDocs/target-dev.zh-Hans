@@ -4,20 +4,16 @@ description: 使用移动设备预览链接对移动设备应用程序活动执�
 title: 如何在中使用移动设备预览链接 [!DNL Target] 手机？
 feature: Implement Mobile
 exl-id: c0c4237a-de1f-4231-b085-f8f1e96afc13
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+source-git-commit: cf39b35e208a99114b3f97df2e9ef7eb8a46e153
 workflow-type: tm+mt
-source-wordcount: '617'
-ht-degree: 68%
+source-wordcount: '554'
+ht-degree: 57%
 
 ---
 
 # [!DNL Target] 移动设备预览
 
 使用移动预览链接可对移动设备应用程序活动轻松执行端到端 QA，并且无需任何特殊的测试设备即可在您的设备上感受到不同的体验。
-
->[!NOTE]
->
->移动设备预览功能要求您下载并安装相应的 Adobe Mobile SDK 4.14（或更高）版本。
 
 ## 概述
 
@@ -27,69 +23,24 @@ ht-degree: 68%
 
 1. **使用受支持的 SDK 版本：**&#x200B;移动设备预览功能要求您在相应的应用程序中下载并安装适当的 Adobe Mobile SDK 4.14（或更高）版本。
 
-   有关下载适当 SDK 的说明，请参阅：
-
-   * **iOS：** [开始之前](https://experienceleague.adobe.com/docs/mobile-services/ios/getting-started-ios/requirements.html) 在 *Mobile Services iOS帮助*.
-   * **Android：** [开始之前](https://experienceleague.adobe.com/docs/mobile-services/android/getting-started-android/requirements.html) 在 *Mobile Services Android帮助*.
+   有关下载适当SDK的说明，请参阅 [当前SDK版本](https://developer.adobe.com/client-sdks/documentation/current-sdk-versions/){target=_blank} 在 *[!DNL Adobe Experience Platform Mobile SDK]* 文档。
 
 1. **设置 URL 方案：**&#x200B;预览链接需使用 URL 方案来打开应用程序。您必须为预览指定一个唯一的 URL 方案。
 
-   下图显示了 iOS 上的一个示例：
+   有关更多信息，请参阅 [可视化预览](https://developer.adobe.com/client-sdks/documentation/adobe-target/#visual-preview){target=_blank} 在 *Adobe Target* 在 *[!DNL Adobe Experience Platform Mobile SDK]* 文档。
 
-   ![替代图像](assets/mobile-preview-url-scheme-ios.png)
+   以下链接包含更多信息：
 
-   下图显示了 Android 上的一个示例：
+   * **iOs**：有关为iOS设置URL方案的更多信息，请参阅 [为您的应用程序定义自定义URL方案](https://developer.apple.com/documentation/xcode/defining-a-custom-url-scheme-for-your-app){target=_blank} 在Apple开发人员网站上。
+   * **Android**：有关为Android设置URL方案的更多信息，请参阅 [创建指向应用程序内容的深层链接](https://developer.android.com/training/app-links/deep-linking){target=_blank} Android开发人员网站上的。
 
-   ![替代图像](assets/Android_Deeplink.png)
+1. **设置 `collectLaunchInfo` API**
 
-1. **跟踪 Adobe 深层链接**
-
-   **iOS：**&#x200B;在应用程序代理中，如果要求代理使用上一步中指定的 URL 方案打开资源，请调用 `[ADBMobile trackAdobeDeepLink:url`。
-
-   下面是一个代码片段示例：
-
-   ```javascript {line-numbers="true"}
-   - (BOOL) application:(UIApplication *)app openURL:(NSURL *)url 
-                options:(NSDictionary<NSString *,id> *)options { 
-   
-       if ([[url scheme] isEqualToString:@"com.adobe.targetmobile"]) { 
-           [ADBMobile trackAdobeDeepLink:url]; 
-           return YES; 
-       } 
-       return NO; 
-   } 
-   ```
-
-   **Android：**&#x200B;在应用程序中，如果要求调用方使用上一步中指定的 URL 方案打开资源，请调用 `Config.trackAdobeDeepLink(URL);`。
-
-   ```javascript {line-numbers="true"}
-    private Boolean shouldOpenDeeplinkUrl() { 
-        Intent appLinkIntent = getIntent(); 
-        String appLinkAction = appLinkIntent.getAction(); 
-        Uri appLinkData = appLinkIntent.getData; 
-        if (appLinkData.toString().startsWith("com.adobe.targetmobile")) { 
-            Config.trackAdobeDeepLink(appLinkData); 
-            return true; 
-        } 
-        return false; 
-     }
-   ```
-
-   要使移动设备预览功能在Android中正常工作，如果使用的是AdobeMobile SDK版本5，则还必须在AndroidManifest.xml中添加以下代码片段：
-
-   ```javascript {line-numbers="true"}
-   <activity android:name="com.adobe.marketing.mobile.FullscreenMessageActivity" />
-   ```
-
-   如果您使用的是版本4AdobeMobile SDK，请使用以下代码片段：
-
-   ```javascript {line-numbers="true"}
-   <activity android:name="com.adobe.mobile.MessageFullScreenActivity" />
-   ```
+   有关更多信息，请参阅 [可视化预览](https://developer.adobe.com/client-sdks/documentation/adobe-target/#visual-preview){target=_blank} 在 *Adobe Target* 在 *[!DNL Adobe Experience Platform Mobile SDK]* 文档。
 
 ## 生成预览链接
 
-1. 在 [!DNL Target] 在UI中，单击 **[!UICONTROL 更多选项]** 图标（三个垂直省略号），然后选择 **[!UICONTROL 创建移动设备预览]**.
+1. 在 [!DNL Target] 在UI中，单击 **[!UICONTROL 更多选项]** 图标（垂直省略号），然后选择 **[!UICONTROL 创建移动设备预览]**.
 
    ![替代图像](assets/mobile-preview-create.png)
 
