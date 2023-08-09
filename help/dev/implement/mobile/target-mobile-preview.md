@@ -4,10 +4,10 @@ description: 使用移动设备预览链接对移动设备应用程序活动执�
 title: 如何在中使用移动设备预览链接 [!DNL Target] 手机？
 feature: Implement Mobile
 exl-id: c0c4237a-de1f-4231-b085-f8f1e96afc13
-source-git-commit: cf39b35e208a99114b3f97df2e9ef7eb8a46e153
+source-git-commit: b678b69624963b4bdbce230a05a0355da96469f1
 workflow-type: tm+mt
-source-wordcount: '554'
-ht-degree: 57%
+source-wordcount: '552'
+ht-degree: 51%
 
 ---
 
@@ -21,7 +21,7 @@ ht-degree: 57%
 
 ## 先决条件
 
-1. **使用受支持的 SDK 版本：**&#x200B;移动设备预览功能要求您在相应的应用程序中下载并安装适当的 Adobe Mobile SDK 4.14（或更高）版本。
+1. **使用支持的SDK版本：** 移动设备预览功能要求您下载适当版本的Adobe Mobile SDK并将其安装在相应的应用程序中。
 
    有关下载适当SDK的说明，请参阅 [当前SDK版本](https://developer.adobe.com/client-sdks/documentation/current-sdk-versions/){target=_blank} 在 *[!DNL Adobe Experience Platform Mobile SDK]* 文档。
 
