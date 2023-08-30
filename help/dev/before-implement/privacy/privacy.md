@@ -4,10 +4,10 @@ description: 了解如何 [!DNL Adobe Target] 遵守适用的数据隐私法，�
 title: Target如何处理隐私问题（包括PII）？
 feature: Privacy & Security
 exl-id: 4330e034-2483-4a25-9c87-48dbef6fc9de
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+source-git-commit: 88bde40aa6dfb96e1d53e4db6ba5547d38dbbb99
 workflow-type: tm+mt
-source-wordcount: '716'
-ht-degree: 47%
+source-wordcount: '790'
+ht-degree: 42%
 
 ---
 
@@ -38,6 +38,12 @@ Adobe开发了“通过设计保护隐私”设置，用户可以启用该设置
   ![obfuscate-ip-options](assets/obfuscate-ip.png)
 
 [!DNL Target] 接收完整IP地址并根据指定对其进行模糊处理（如果设置为“最后八位字节”或“整个IP”）。 [!DNL Target] 然后仅在当前会话期间将模糊处理的IP地址保存在内存中。
+
+### 使用时的数据流级别IP模糊处理 [!DNL Adobe Experience Platform Web SDK] {#aep}
+
+使用时 [!DNL Platform Web SDK] （版本23.4或更高版本），数据流级别的IP模糊处理设置优先于中设置的任何IP模糊处理选项 [!DNL Target]. 例如，如果数据流级别的IP模糊处理选项设置为 [!UICONTROL 完整] 和 [!DNL Target] IP模糊处理选项设置为 [!UICONTROL 最后一个八位字节模糊处理]， [!DNL Target] 接收完全模糊处理的IP。
+
+有关更多信息，请参阅 [!UICONTROL IP模糊处理] 在 [配置数据流](https://experienceleague.adobe.com/docs/experience-platform/datastreams/configure.html){target=_blank} 在 *[!DNL Adobe Experience Platfrom]Datastreams指南*.
 
 ## 地域划分
 
