@@ -6,9 +6,9 @@ level: Experienced
 role: Developer
 hide: true
 hidefromtoc: true
-source-git-commit: 948ebe0c5011fb0327a7b5d45f3e7ac857fcb8ad
+source-git-commit: e15513f5c52240536ccf41f16ba7f4dc6dbf9a04
 workflow-type: tm+mt
-source-wordcount: '1772'
+source-wordcount: '1791'
 ht-degree: 8%
 
 ---
@@ -59,7 +59,7 @@ ht-degree: 8%
 **先决条件**
 
 * 要使用访客ID/API服务，您的公司必须启用 [!DNL Adobe Experience Cloud] 并拥有 [!UICONTROL 组织ID]. 有关更多信息，请参阅 [Experience Cloud要求：组织ID](https://experienceleague.adobe.com/docs/id-service/using/reference/requirements.html?){target=_blank} 在 *Identity服务帮助* 指南。
-* 您需要 `VisitorAPI.js` 文件。 请联系您的数字营销团队以获取此文件。
+* 您需要 `VisitorAPI.js` 文件。 如果您拥有，则应该已经拥有此文件 [!DNL Adobe Analytics] 已实施。 此文件也可以通过 [[!DNL Adobe Experience Platform] 标记扩展](https://experienceleague.adobe.com/docs/tags.html){target=_blank} or can be downloaded from the [Adobe Analytics Code Manager](https://experienceleague.adobe.com/docs/id-service/using/implementation/setup-analytics.html){target=_blank}.
 
 **配置和引用VisitorAPI.js**
 
@@ -431,7 +431,7 @@ ht-degree: 8%
 
 **先决条件**
 
-* 下载或请求您的数字营销团队获取Web SDK库文件： `at.js 2.*x*`
+* 下载或请求您的数字营销团队获得 `at.js 2.*x*` javascript库文件。
 
 *读数*
 
