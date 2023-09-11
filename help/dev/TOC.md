@@ -2,10 +2,10 @@
 user-guide-title: Adobe Target 开发人员指南
 breadcrumb-title: Target开发人员指南
 user-guide-description: 了解如何定制和个性化客户体验，从而最大限度地提升网站和移动网站、应用程序、社交媒体和其他数字渠道的收入。
-source-git-commit: 2d1b1829a8f794e29bb054d1bfdcb5047d6b4acb
+source-git-commit: 7a79eb1d263cf42529a5a1b1ca1f9de4db218a49
 workflow-type: tm+mt
-source-wordcount: '721'
-ht-degree: 53%
+source-wordcount: '729'
+ht-degree: 54%
 
 ---
 
@@ -168,7 +168,7 @@ ht-degree: 53%
    + [Target 移动设备预览](implement/mobile/target-mobile-preview.md)
    + [使用位置服务](implement/mobile/use-location-service.md)
    + [Target 移动应用程序版常见问题解答](implement/mobile/mobile-faq.md)
-   + [在具有Web视图的本机应用程序中通过AEP Mobile SDK实施Target](/help/dev/implement/mobile/native-app.md)
+   + [在具有 Web 视图的本机应用程序中使用 AEP Mobile SDK 实施 Target](/help/dev/implement/mobile/native-app.md)
 + 电子邮件实施 {#implement-email}
    + [电子邮件：实施 Target 概述](implement/email/overview.md)
    + [为图像创建 Adbox](implement/email/testing-content-with-the-adbox.md)
@@ -208,10 +208,11 @@ ht-degree: 53%
    + [Adobe Experience Platform Edge Network服务器API](/help/dev/before-implement/delivery-api-overview/aep-edge-network-server-api.md)
 + 实施模式 {#implementation-patterns} {#hidden}
    + [实施模式概述](/help/dev/patterns/pattern-overview.md)
-   + Target实施模式 {#target}
-      + [初始化SDK](/help/dev/patterns/initialize-sdk.md)
-      + [配置数据收集](/help/dev/patterns/data-collection.md)
-      + [渲染体验](/help/dev/patterns/render-experiences.md)
-      + [通知Target](/help/dev/patterns/notify-target.md)
+   + 使用at.js的Recommendations实施模式 {#atjs}
+      + [使用at.js的Recommendations实施模式概述](/help/dev/patterns/recs-atjs/recs-implementation-pattern-atjs.md)
+      + [初始化SDK](/help/dev/patterns/recs-atjs/initialize-sdk.md)
+      + [配置数据收集](/help/dev/patterns/recs-atjs/data-collection.md)
+      + [渲染体验](/help/dev/patterns/recs-atjs/render-experiences.md)
+      + [通知Target](/help/dev/patterns/recs-atjs/notify-target.md)
 
 

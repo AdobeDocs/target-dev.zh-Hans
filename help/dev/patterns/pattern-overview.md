@@ -6,9 +6,9 @@ level: Experienced
 role: Developer
 hide: true
 hidefromtoc: true
-source-git-commit: c4b9dfed19e5e4a56bfeae26c4310b997a2d617e
+source-git-commit: 7a79eb1d263cf42529a5a1b1ca1f9de4db218a49
 workflow-type: tm+mt
-source-wordcount: '145'
+source-wordcount: '148'
 ht-degree: 0%
 
 ---
@@ -34,10 +34,10 @@ ht-degree: 0%
 
 每个阵列由不同的部分组成。 每个部分对应于贵机构的关键实施要求 [!DNL Target] 实现。
 
-本指南在一个单独的页面中对每个部分进行了说明。 例如， [!DNL Target] 实施模式包含以下页面：
+本指南在一个单独的页面中对每个部分进行了说明。 例如， [[!DNL Recommendations] 使用at.js的实施模式](/help/dev/patterns/recs-atjs/recs-implementation-pattern-atjs.md) 包含以下页面：
 
 * 初始化SDK
-* 丰富用户档案
+* 配置数据收集
 * 渲染体验
 * 通知 [!DNL Target]
 
