@@ -4,10 +4,10 @@ description: 查看每个版本中更改的详细信息 [!DNL Adobe Target] at.j
 title: at.js的每个版本均包括什么内容？
 feature: at.js
 exl-id: 609dacba-2ab8-45e9-b189-928d59938c98
-source-git-commit: dc7831e4c3eb7dfc4a11d440e55b3a116b6e28fc
+source-git-commit: 0bdbeebc07bc4e1dd0dc34171fbf2476db5c256f
 workflow-type: tm+mt
-source-wordcount: '4603'
-ht-degree: 74%
+source-wordcount: '4635'
+ht-degree: 73%
 
 ---
 
@@ -25,7 +25,12 @@ ht-degree: 74%
 >
 >您应该升级到1的最新版本。*x* 或2。*x* 获取在相应主要版本的先前任何次要版本中发现问题的错误修复和安全修补程序。
 
-中的标记 [Adobe Experience Platform](/help/dev/implement/client-side/atjs/how-to-deployatjs/implement-target-using-adobe-launch.md) 是升级at.js的首选方法。 扩展开发人员会不断向其扩展中添加新功能，并且还经常修复错误。 这些更新将打包到扩展的新版本中，并在Adobe Experience Platform目录中作为升级提供。 有关更多信息，请参阅 [扩展升级](https://experienceleague.adobe.com/docs/experience-platform/tags/ui/extensions/extension-upgrade.html) 在 *标记概述* 指南。
+中的标记 [Adobe Experience Platform](/help/dev/implement/client-side/atjs/how-to-deployatjs/implement-target-using-adobe-launch.md) 是升级at.js的首选方法。 扩展开发人员会不断向其扩展中添加新功能，并且还经常修复错误。 这些更新将打包到扩展的新版本中，并在Adobe Experience Platform目录中作为升级提供。 有关更多信息，请参阅 [扩展升级](https://experienceleague.adobe.com/docs/experience-platform/tags/ui/extensions/extension-upgrade.html) 在 *标记概述* 指南。6+
+
+## at.js 版本 2.10.3（2023 年 9 月 12 日）
+
+* 修复了错误触发的问题 `at-content-rendering-succeeded` 未呈现任何选件时的自定义事件。 正确的事件， `at-content-rendering-no-offers`，现在会触发。
+* 已添加 `eventToken` 和 `responseTokens` 出错的对象 `at-content-rendering-failed` 自定义事件。
 
 ## at.js 版本 2.10.2（2023 年 3 月 7 日）
 
