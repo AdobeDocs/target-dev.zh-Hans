@@ -6,7 +6,7 @@ level: Experienced
 role: Developer
 hide: true
 hidefromtoc: true
-source-git-commit: e15513f5c52240536ccf41f16ba7f4dc6dbf9a04
+source-git-commit: 6cd78f8e3cbdd97a09b0cb6ca3af55994e85f819
 workflow-type: tm+mt
 source-wordcount: '1791'
 ht-degree: 8%
@@ -54,7 +54,7 @@ ht-degree: 8%
 
 +++查看详细信息
 
-![加载访客API SDK图](/help/dev/patterns/recs-atjs/assets/load-visitor-api-sdk.png){width="300" zoomable="yes"}
+![加载访客API SDK图](/help/dev/patterns/recs-atjs/assets/load-visitor-api-sdk.png){width="400" zoomable="yes"}
 
 **先决条件**
 
@@ -90,7 +90,7 @@ ht-degree: 8%
 
 +++查看详细信息
 
-![设置客户ID](/help/dev/patterns/recs-atjs/assets/set-customer-id.png){width="300" zoomable="yes"}
+![设置客户ID](/help/dev/patterns/recs-atjs/assets/set-customer-id.png){width="400" zoomable="yes"}
 
 **先决条件**
 
@@ -117,7 +117,7 @@ ht-degree: 8%
 
 +++查看详细信息
 
-![配置自动页面加载请求](/help/dev/patterns/recs-atjs/assets/configure-automatic-page-request.png){width="300" zoomable="yes"}
+![配置自动页面加载请求](/help/dev/patterns/recs-atjs/assets/configure-automatic-page-request.png){width="400" zoomable="yes"}
 
 **先决条件**
 
@@ -146,7 +146,7 @@ ht-degree: 8%
 
 +++查看详细信息
 
-![配置闪烁处理图](/help/dev/patterns/recs-atjs/assets/flicker-handling.png){width="300" zoomable="yes"}
+![配置闪烁处理图](/help/dev/patterns/recs-atjs/assets/flicker-handling.png){width="400" zoomable="yes"}
 
 **先决条件**
 
@@ -179,7 +179,7 @@ ht-degree: 8%
 
 +++查看详细信息
 
-![数据映射图](/help/dev/patterns/recs-atjs/assets/data-mapping.png){width="300" zoomable="yes"}
+![数据映射图](/help/dev/patterns/recs-atjs/assets/data-mapping.png){width="400" zoomable="yes"}
 
 **先决条件**
 
@@ -399,7 +399,7 @@ ht-degree: 8%
 
 +++查看详细信息
 
-![远程数据映射图](/help/dev/patterns/recs-atjs/assets/remote-data-mapping.png){width="300" zoomable="yes"}
+![远程数据映射图](/help/dev/patterns/recs-atjs/assets/remote-data-mapping.png){width="400" zoomable="yes"}
 
 **先决条件**
 
@@ -427,7 +427,7 @@ ht-degree: 8%
 
 +++查看详细信息
 
-![加载Adobe Target Web SDK图](/help/dev/patterns/recs-atjs/assets/load-web-sdk.png){width="300" zoomable="yes"}
+![加载Adobe Target Web SDK图](/help/dev/patterns/recs-atjs/assets/load-web-sdk.png){width="400" zoomable="yes"}
 
 **先决条件**
 

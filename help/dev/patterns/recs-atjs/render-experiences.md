@@ -6,7 +6,7 @@ level: Experienced
 role: Developer
 hide: true
 hidefromtoc: true
-source-git-commit: 1349004b7da45b775b27a6ba119a26f77a9607fb
+source-git-commit: 6cd78f8e3cbdd97a09b0cb6ca3af55994e85f819
 workflow-type: tm+mt
 source-wordcount: '1080'
 ht-degree: 7%
@@ -252,7 +252,7 @@ at.js提供的现成自动闪烁处理功能仅在您具备以下条件时才有
 
 +++查看详细信息
 
-![触发页面加载请求图表](/help/dev/patterns/recs-atjs/assets/fire-page-load-request.png){width="300" zoomable="yes"}
+![触发页面加载请求图表](/help/dev/patterns/recs-atjs/assets/fire-page-load-request.png){width="400" zoomable="yes"}
 
 **先决条件**
 
@@ -277,7 +277,7 @@ at.js提供的现成自动闪烁处理功能仅在您具备以下条件时才有
 
 +++查看详细信息
 
-![触发区域位置请求图表](/help/dev/patterns/recs-atjs/assets/fire-regional-location-request.png){width="300" zoomable="yes"}
+![触发区域位置请求图表](/help/dev/patterns/recs-atjs/assets/fire-regional-location-request.png){width="400" zoomable="yes"}
 
 **先决条件**
 
