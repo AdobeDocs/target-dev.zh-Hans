@@ -6,9 +6,9 @@ level: Experienced
 role: Developer
 hide: true
 hidefromtoc: true
-source-git-commit: 8707fb55d66cb7a28d311a03c749acb1a1d79cf8
+source-git-commit: 3f97c3b38300ec4bbb0bffccfc0ff3f02457a0fc
 workflow-type: tm+mt
-source-wordcount: '311'
+source-wordcount: '405'
 ht-degree: 0%
 
 ---
@@ -17,13 +17,17 @@ ht-degree: 0%
 
 此 [!DNL Adobe Target] 实施模式提供了关于如何实施的指导 [!DNL Target] 遵循最佳实践并帮助减少客户和顾问的实施问题。
 
+因为实施过程 [!DNL Target] 因不同的框架和平台而异， [!DNL Target] 团队计划为各种框架、平台和集成创建实施模式。
+
 以下模式当前可用：
 
 * [[!DNL Recommendations] 使用at.js的实施模式](/help/dev/patterns/recs-atjs/recs-implementation-pattern-atjs.md)
 
+这些实施模式旨在重点关注应该做什么、何时做什么、在哪里执行而不是如何执行。 详细的流量图可帮助您了解操作顺序，相关文档的链接提供了上下文和分步说明。
+
 ## 提出新模式或现有模式更正的想法
 
-此 [!DNL Target] 团队计划为各种框架、平台和集成创建实施模式。 该小组还欢迎改进现有模式的建议。
+此 [!DNL Target] 团队计划为不同的框架、平台和集成创建各种实施模式。 该小组还欢迎改进现有模式的建议。
 
 要帮助团队创建新模式或改进现有模式，请使用 **反馈选项** 中所有文章底部的功能 *[!DNL Adobe Experience League]*.
 
@@ -43,9 +47,11 @@ ht-degree: 0%
 
    1. 提供标题，然后在文本框中键入您的注释。
 
+      根据需要附加文件或屏幕截图。
+
    1. 单击 **[!UICONTROL 提交新问题]** 完成后。
 
-1. （视情况而定）要编辑现有模式的文章，请单击 **[!UICONTROL 建议编辑]**，然后单击 **[!UICONTROL 编辑]** 图标（铅笔图标）。
+1. （视情况而定）要编辑现有模式的文本，请从相关文章上的反馈选项模型中单击 **[!UICONTROL 建议编辑]**，然后单击 **[!UICONTROL 编辑]** 图标（铅笔图标）。
 
    1. 使用Markdown语法进行编辑。
 
@@ -55,7 +61,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->[!DNL Adobe] 员工可以使用 *的实施模式 [!DNL Adobe Target] 实现* wiki ，以了解有关如何贡献设计模式的更多信息。 按照上面的说明要求链接和 [!DNL Target] 团队可以提供指向内部存储库的链接 [!DNL Adobe] 维客。
+>[!DNL Adobe] 员工可以使用 *的实施模式 [!DNL Adobe Target] 实现* wiki ，以了解有关如何对设计模式做出贡献的更多信息。 按照上面的说明提出想法，然后要求提供链接和 [!DNL Target] 团队可以提供指向内部存储库的链接 [!DNL Adobe] 维客。
 
 
 
