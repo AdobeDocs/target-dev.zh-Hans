@@ -6,7 +6,7 @@ level: Experienced
 role: Developer
 hide: true
 hidefromtoc: true
-source-git-commit: a3644cd06c01d7b0d996aabbcb67272e1712b70c
+source-git-commit: 60b986b4d956972714cb485057484ee5d6eed2bb
 workflow-type: tm+mt
 source-wordcount: '1791'
 ht-degree: 8%
@@ -117,7 +117,7 @@ ht-degree: 8%
 
 +++查看详细信息
 
-![配置自动页面加载请求](/help/dev/patterns/recs-atjs/assets/configure-automatic-page-request.png){width="400" zoomable="yes"}
+![配置自动页面加载请求](/help/dev/patterns/recs-atjs/assets/configure-automatic-page-request-combined.png){width="400" zoomable="yes"}
 
 **先决条件**
 
@@ -146,7 +146,7 @@ ht-degree: 8%
 
 +++查看详细信息
 
-![配置闪烁处理图](/help/dev/patterns/recs-atjs/assets/flicker-handling.png){width="400" zoomable="yes"}
+![配置闪烁处理图](/help/dev/patterns/recs-atjs/assets/flicker-handling-combined.png){width="400" zoomable="yes"}
 
 **先决条件**
 
