@@ -6,7 +6,7 @@ level: Experienced
 role: Developer
 hide: true
 hidefromtoc: true
-source-git-commit: 6cd78f8e3cbdd97a09b0cb6ca3af55994e85f819
+source-git-commit: 8fae7e18f555e6b549e0b9c486be73e3483dac86
 workflow-type: tm+mt
 source-wordcount: '335'
 ht-degree: 1%
@@ -29,13 +29,13 @@ ht-degree: 1%
 
 ![通知Target](/help/dev/patterns/recs-atjs/assets/diagram-notify-target.png){width="600" zoomable="yes"}
 
-## Fire [!DNL Adobe Target] 跟踪API
+## 4.1：火灾 [!DNL Adobe Target] 跟踪API
 
 此步骤可帮助您确保必须发送给的所有事件 [!DNL Target] 使用发送 `trackEvent` 方法。
 
 +++查看详细信息
 
-![Fire Adobe Target跟踪API图](/help/dev/patterns/recs-atjs/assets/fire-adobe-target-track-api-diagram.png){width="400" zoomable="yes"}
+![Fire Adobe Target跟踪API图](/help/dev/patterns/recs-atjs/assets/fire-adobe-target-track-api-diagram-combined.png){width="400" zoomable="yes"}
 
 您可以发送订单转化属性，如以下文档中所述： *先决条件* 部分。 mbox的名称无关紧要，但需进行转换 `orderConfirmPage`.
 
