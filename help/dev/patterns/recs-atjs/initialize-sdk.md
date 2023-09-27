@@ -6,9 +6,9 @@ level: Experienced
 role: Developer
 hide: true
 hidefromtoc: true
-source-git-commit: a87f9a13fc1feb12c62f1b772975958541f7523a
+source-git-commit: 266a8670a906e5be70f11bb05301b708f61a57d6
 workflow-type: tm+mt
-source-wordcount: '1790'
+source-wordcount: '1814'
 ht-degree: 8%
 
 ---
@@ -25,7 +25,9 @@ ht-degree: 8%
 
 对于多页面应用程序，每当页面重新加载或访客导航到网站上的新页面时，就会出现此流程。
 
-下图中的步骤编号与以下部分相对应。
+>[!NOTE]
+>
+>下图中的步骤编号与以下部分相对应。 步骤编号没有特定顺序，并且不反映中执行的步骤顺序 [!DNL Target] 创建活动时的UI。
 
 ![初始化SDK图](/help/dev/patterns/recs-atjs/assets/diagram-initiaze-sdk.png){width="600" zoomable="yes"}
 

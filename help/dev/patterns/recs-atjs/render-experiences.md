@@ -6,9 +6,9 @@ level: Experienced
 role: Developer
 hide: true
 hidefromtoc: true
-source-git-commit: 85af1bad244dc0aa7665e2fbb627d82f6fabbf88
+source-git-commit: 266a8670a906e5be70f11bb05301b708f61a57d6
 workflow-type: tm+mt
-source-wordcount: '1080'
+source-wordcount: '1104'
 ht-degree: 7%
 
 ---
@@ -29,7 +29,9 @@ ht-degree: 7%
 
 at.js提供的现成自动闪烁处理功能仅在您具备以下条件时才有意义 [!UICONTROL 自动页面加载请求] 已启用。 此选项在从提取HTML时隐藏整个体验正文 [!DNL Target]. 在这种情况下，您有责任处理闪烁。 搜索可用于闪烁处理的实施模式以获取指导。
 
-下图中的步骤编号与以下部分相对应。
+>[!NOTE]
+>
+>下图中的步骤编号与以下部分相对应。 步骤编号没有特定顺序，并且不反映中执行的步骤顺序 [!DNL Target] 创建活动时的UI。
 
 ![渲染体验图](/help/dev/patterns/recs-atjs/assets/diagram-render-experiences-new.png){width="600" zoomable="yes"}
 
