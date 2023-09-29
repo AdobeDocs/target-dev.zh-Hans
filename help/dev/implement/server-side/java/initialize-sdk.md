@@ -3,10 +3,10 @@ title: 使用create方法初始化Java SDK
 description: 了解如何使用create方法初始化Java SDK并实例化 [!UICONTROL TargetClient] 以调用 [!DNL Adobe Target] 用于实验和个性化体验。
 feature: APIs/SDKs
 exl-id: 0e0ddead-7de8-4549-b81c-e72598558e4b
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+source-git-commit: 1d080b5e402e5d55039bf06611b44678cc6c36de
 workflow-type: tm+mt
-source-wordcount: '401'
-ht-degree: 18%
+source-wordcount: '462'
+ht-degree: 17%
 
 ---
 
@@ -44,6 +44,9 @@ ClientConfigBuilder ClientConfig.builder()
 | sockettimeout | 数值 | 否 | 10000 | 所有请求的套接字超时（以毫秒为单位） |
 | maxConnectionsPerHost | 数值 | 否 | 100 | 最大连接数，每 [!DNL Target] 主机 |
 | maxConnectionsTotal | 数值 | 否 | 200 | 最大连接数（包括全部） [!DNL Target] 主机 |
+| connectionTtlMs | 数值 | 否 | -1 | 总生存时间(TTL)定义持久连接的最大生存时间（以毫秒为单位）。 默认情况下，连接将无限期地保持活动状态 |
+| idleConnectionValidationMs | 数值 | 否 | 1000 | 非活动时间段（以毫秒为单位），在此段时间后，将重新验证永久连接后再重新使用 |
+| evictIdleConnectionsAfterSecs | 数值 | 否 | 20 | 从连接池中收回空闲连接的时间（以秒为单位） |
 | enableRetries | 布尔值 | 否 | true | 套接字超时自动重试（最多4次） |
 | logRequests | 布尔值 | 否 | false | 日志 [!DNL Target] debug中的请求和响应 |
 | Logrequestatus | 布尔值 | 否 | false | 日志 [!DNL Target] 响应时间、状态和URL |
