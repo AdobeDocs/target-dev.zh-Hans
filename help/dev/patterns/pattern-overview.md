@@ -4,9 +4,7 @@ description: 了解如何使用实施模式
 feature: APIs/SDKs
 level: Experienced
 role: Developer
-hide: true
-hidefromtoc: true
-source-git-commit: 3f97c3b38300ec4bbb0bffccfc0ff3f02457a0fc
+source-git-commit: 723bb2f33a011995757009193ee9c48757ae1213
 workflow-type: tm+mt
 source-wordcount: '405'
 ht-degree: 0%

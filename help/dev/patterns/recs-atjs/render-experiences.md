@@ -4,11 +4,9 @@ description: 请确保按照正确的顺序执行渲染体验的所有必要步�
 feature: APIs/SDKs
 level: Experienced
 role: Developer
-hide: true
-hidefromtoc: true
-source-git-commit: 266a8670a906e5be70f11bb05301b708f61a57d6
+source-git-commit: 723bb2f33a011995757009193ee9c48757ae1213
 workflow-type: tm+mt
-source-wordcount: '1104'
+source-wordcount: '1124'
 ht-degree: 7%
 
 ---
@@ -52,7 +50,7 @@ at.js提供的现成自动闪烁处理功能仅在您具备以下条件时才有
 
 ## 3.1：促销活动 {#promotion}
 
-添加促销项目并控制它们在Target Recommendations中的放置位置 [设计](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations-design/create-design.html){target=_blank}.
+通过在以下位置选择前端或后端促销活动，添加促销项目并控制它们在推荐设计中的放置位置： [!DNL Target] 创建活动时的UI。
 
 +++查看详细信息
 
@@ -65,6 +63,10 @@ at.js提供的现成自动闪烁处理功能仅在您具备以下条件时才有
 **需要实体参数**
 
 * 使用“按属性促销”选项时，必须传递促销活动中的项目属性。
+
+**读数**
+
+* [添加促销活动](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations-activity/adding-promotions.html){target=_blank}
 
 +++
 
@@ -297,3 +299,5 @@ at.js提供的现成自动闪烁处理功能仅在您具备以下条件时才有
 +++
 
 [返回此页面顶部的图表。](#diagram)
+
+继续执行步骤4： [通知Target](/help/dev/patterns/recs-atjs/notify-target.md).

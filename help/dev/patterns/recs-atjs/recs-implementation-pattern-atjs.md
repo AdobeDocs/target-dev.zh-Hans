@@ -4,9 +4,7 @@ description: 了解如何将Recommendations的实施模式与at.js结合使用
 feature: APIs/SDKs
 level: Experienced
 role: Developer
-hide: true
-hidefromtoc: true
-source-git-commit: 752c52c0db5173f49fd828c297fa7afd7c53c6ce
+source-git-commit: 723bb2f33a011995757009193ee9c48757ae1213
 workflow-type: tm+mt
 source-wordcount: '154'
 ht-degree: 0%

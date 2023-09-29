@@ -4,11 +4,9 @@ description: 确保加载 [!DNL Adobe Target] at.js JavaScript库以正确的顺
 feature: APIs/SDKs
 level: Experienced
 role: Developer
-hide: true
-hidefromtoc: true
-source-git-commit: 266a8670a906e5be70f11bb05301b708f61a57d6
+source-git-commit: 723bb2f33a011995757009193ee9c48757ae1213
 workflow-type: tm+mt
-source-wordcount: '1814'
+source-wordcount: '1820'
 ht-degree: 8%
 
 ---
@@ -448,6 +446,8 @@ ht-degree: 8%
 +++
 
 [返回此页面顶部的图表。](#diagram)
+
+继续执行步骤2： [配置数据收集](/help/dev/patterns/recs-atjs/data-collection.md).
 
 
 

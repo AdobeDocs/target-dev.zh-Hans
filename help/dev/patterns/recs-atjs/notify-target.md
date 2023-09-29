@@ -4,11 +4,9 @@ description: 确保需要跟踪的所有事件 [!DNL Target] 使用trackEvent方
 feature: APIs/SDKs
 level: Experienced
 role: Developer
-hide: true
-hidefromtoc: true
-source-git-commit: 013a49b92357cfb5d45f7e595b46b1b12ce91c65
+source-git-commit: 723bb2f33a011995757009193ee9c48757ae1213
 workflow-type: tm+mt
-source-wordcount: '335'
+source-wordcount: '359'
 ht-degree: 1%
 
 ---
@@ -49,6 +47,10 @@ ht-degree: 1%
    * `productPurchaseId`：作为订单的一部分购买的产品ID。 使用逗号分隔多个产品。
    * `orderTotal`：采购的订单总计。
    * `orderId`：购买的订单ID。
+
+  下图显示了一个 [规则 [!DNL tags] 在 [!DNL Experience Platform]](https://experienceleague.adobe.com/docs/tags.html){target=_blank} 只应在 [!UICONTROL 确认] 页面。
+
+  ![操作配置页面](/help/dev/patterns/recs-atjs/assets/action-configuration.png){width="400" zoomable="yes"}
 
 * 如果您正在跟踪购物车添加事件，请发送 `cartIds` 作为参数。 可以传递产品ID的逗号分隔列表 `cardIds`.
 
