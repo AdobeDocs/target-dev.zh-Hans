@@ -4,9 +4,9 @@ description: 了解如何使用实施模式
 feature: APIs/SDKs
 level: Experienced
 role: Developer
-source-git-commit: 723bb2f33a011995757009193ee9c48757ae1213
+source-git-commit: 09dafc7c85ea7f3600fceac4e673e8f1901771a4
 workflow-type: tm+mt
-source-wordcount: '405'
+source-wordcount: '396'
 ht-degree: 0%
 
 ---
@@ -21,7 +21,7 @@ ht-degree: 0%
 
 * [[!DNL Recommendations] 使用at.js的实施模式](/help/dev/patterns/recs-atjs/recs-implementation-pattern-atjs.md)
 
-这些实施模式旨在重点关注应该做什么、何时做什么、在哪里执行而不是如何执行。 详细的流量图可帮助您了解操作顺序，相关文档的链接提供了上下文和分步说明。
+这些实施模式侧重于做什么、何时做什么、在哪里做。 详细的流量图可帮助您了解操作顺序，相关文档的链接提供了上下文和分步说明。
 
 ## 提出新模式或现有模式更正的想法
 
