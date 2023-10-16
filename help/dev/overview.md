@@ -5,16 +5,14 @@ description: 如何实施和管理  [!DNL Adobe Target]  并使用其 API 和 SD
 contributors: https://github.com/icaraps
 feature: APIs/SDKs
 exl-id: 655cff9b-fc04-45cf-9068-5c6c32b70d79
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+source-git-commit: 063d0574ee380bf76130fb0f17db89cd09efdb7d
 workflow-type: tm+mt
-source-wordcount: '483'
+source-wordcount: '479'
 ht-degree: 12%
 
 ---
 
 # [!DNL Adobe Target] 开发人员指南
-
-![Adobe Target横幅图像](/help/dev/assets/target-home-banner-simple.png)
 
 **([视图 [!DNL Target] 文档更新](https://experienceleague.adobe.com/docs/target/using/release-notes/doc-change.html){target=_blank})**
 
@@ -36,7 +34,7 @@ ht-degree: 12%
 
 ## 客户端实施
 
-[**Adobe Experience Platform Web SDK**](/help/dev/implement/client-side/aep-web-sdk.md)：和 [!DNL Adobe Experience Platform Web SDK] 允许您与 [!DNL Experience Cloud] (包括 [!DNL Target])通过 [!UICONTROL Adobe Experience Edge Network].
+[**Adobe Experience Platform Web SDK**](/help/dev/implement/client-side/aep-web-sdk.md)：和 [!DNL Adobe Experience Platform Web SDK] 允许您与 [!DNL Experience Cloud] (包括 [!DNL Target])通过 [!UICONTROL AdobeExperience Edge Network].
 
 [**Target at.js JavaScript库**](/help/dev/implement/client-side/overview.md)： at.js JavaScript库可缩短Web实施的页面加载时间，增强安全性，并为单页应用程序提供更好的实施选项。
 
