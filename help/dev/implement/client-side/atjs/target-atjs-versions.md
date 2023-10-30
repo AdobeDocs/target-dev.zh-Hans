@@ -4,10 +4,10 @@ description: 查看每个版本中更改的详细信息 [!DNL Adobe Target] at.j
 title: at.js的每个版本均包括什么内容？
 feature: at.js
 exl-id: 609dacba-2ab8-45e9-b189-928d59938c98
-source-git-commit: 00c8391bf77a6a33157a85272ab9547d29f654ca
+source-git-commit: c5d1f477a2561a59efb3250e35563b48822fbe59
 workflow-type: tm+mt
-source-wordcount: '4678'
-ht-degree: 73%
+source-wordcount: '4697'
+ht-degree: 72%
 
 ---
 
@@ -27,9 +27,13 @@ ht-degree: 73%
 
 中的标记 [Adobe Experience Platform](/help/dev/implement/client-side/atjs/how-to-deployatjs/implement-target-using-adobe-launch.md) 是升级at.js的首选方法。 扩展开发人员会不断向其扩展中添加新功能，并且还经常修复错误。 这些更新将打包到扩展的新版本中，并在Adobe Experience Platform目录中作为升级提供。 有关更多信息，请参阅 [扩展升级](https://experienceleague.adobe.com/docs/experience-platform/tags/ui/extensions/extension-upgrade.html) 在 *标记概述* 指南。6+
 
-## at.js 版本 2.11.0（2023 年 10 月 26 日）
+## at.js 版本 2.11.2（2023 年 10 月 26 日）
 
 * 修复了在自定义事件上发送的响应令牌不一致的问题。
+
+## at.js 版本 2.11.1（2023 年 10 月 13 日）
+
+* 修复了在运行at.js的页面处于怪异模式时导致出现未捕获错误的问题。
 
 ## at.js 版本 2.11.0（2023 年 10 月 10 日）
 
