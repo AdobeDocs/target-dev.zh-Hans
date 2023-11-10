@@ -6,9 +6,9 @@ kt: 3815
 thumbnail: null
 author: Judy Kim
 exl-id: 9b391f42-2922-48e0-ad7e-10edd6125be6
-source-git-commit: ba53161b2ec51af3d90994773034790feb51099c
+source-git-commit: d98c7b890f7456de0676cadce5d6c70bc62d6140
 workflow-type: tm+mt
-source-wordcount: '1507'
+source-wordcount: '1520'
 ht-degree: 1%
 
 ---
@@ -97,22 +97,22 @@ Adobe Target和Adobe Target Recommendations API可用于提供对网页的响应
 
 大多数情况下，出于以上部分所述的原因，推荐是在Adobe Target UI中配置，然后通过Target API使用或访问。 这种UI-API协调是常见的。 但是，有时，用户可能希望通过API执行所有操作 — 包括设置和结果使用。 尽管不太常见，但用户可以完全配置、执行 *和* 完全使用API来利用推荐的结果。
 
-我们在 [上一节](manage-catalog.md) 如何管理Adobe Target Recommendations实体并在服务器端交付它们。 同样地， [Adobe Developer控制台](https://developer.adobe.com/console/home) 让您无需登录Adobe Target即可管理标准、促销活动、收藏集和设计模板。 可以找到所有Recommendations API的完整列表 [此处](http://developers.adobetarget.com/api/recommendations/)，但此处提供了一份摘要以供参考。
+我们在 [上一节](manage-catalog.md) 如何管理Adobe Target Recommendations实体并在服务器端交付它们。 同样地， [Adobe Developer控制台](https://developer.adobe.com/console/home) 让您无需登录Adobe Target即可管理标准、促销活动、收藏集和设计模板。 可以找到所有Recommendations API的完整列表 [此处](https://developer.adobe.com/target/administer/recommendations-api/)，但此处提供了一份摘要以供参考。
 
 | 资源 | 详细信息 |
 | --- | --- |
-| [收藏集](http://developers.adobetarget.com/api/recommendations/#tag/Collections) | 列出、创建、获取、编辑和删除收藏集。 |
-| [标准](http://developers.adobetarget.com/api/recommendations/#tag/Criteria) | 列出并获取条件。 |
-| [设计](http://developers.adobetarget.com/api/recommendations/#tag/Designs) | 列出、创建、获取、编辑、删除和验证设计。 |
-| [实体](http://developers.adobetarget.com/api/recommendations/#tag/Entities) | 保存、删除和获取实体。 |
-| [促销活动](http://developers.adobetarget.com/api/recommendations/#tag/Promotions) | 列出、创建、获取、编辑和删除促销活动。 |
-| [类别标准](http://developers.adobetarget.com/api/recommendations/#tag/Category-Criteria) | 列出、创建、获取、编辑和删除类别标准。 |
-| [自定义标准](http://developers.adobetarget.com/api/recommendations/#tag/Custom-Criteria) | 列出、创建、获取、编辑和删除自定义标准。 |
-| [项目条件](http://developers.adobetarget.com/api/recommendations/#tag/Item-Criteria) | 列出、创建、获取、编辑和删除项目标准。 |
-| [热门程度标准](http://developers.adobetarget.com/api/recommendations/#tag/Popularity-Criteria) | 列出、创建、获取、编辑和删除热门程度标准。 |
-| [配置文件属性标准](http://developers.adobetarget.com/api/recommendations/#tag/Profile-Attribute-Criteria) | 列出、创建、获取、编辑和删除配置文件属性标准。 |
-| [最新标准](http://developers.adobetarget.com/api/recommendations/#tag/Recent-Criteria) | 列出、创建、获取、编辑和删除最近使用的标准。 |
-| [序列标准](http://developers.adobetarget.com/api/recommendations/#tag/Sequence-Criteria) | 列出、创建、获取、编辑和删除序列标准。 |
+| [收藏集](https://developer.adobe.com/target/administer/recommendations-api/#tag/Collections) | 列出、创建、获取、编辑和删除收藏集。 |
+| [标准](https://developer.adobe.com/target/administer/recommendations-api/#tag/Criteria) | 列出并获取条件。 |
+| [设计](https://developer.adobe.com/target/administer/recommendations-api/#tag/Designs) | 列出、创建、获取、编辑、删除和验证设计。 |
+| [实体](https://developer.adobe.com/target/administer/recommendations-api/#tag/Entities) | 保存、删除和获取实体。 |
+| [促销活动](https://developer.adobe.com/target/administer/recommendations-api/#tag/Promotions) | 列出、创建、获取、编辑和删除促销活动。 |
+| [类别标准](https://developer.adobe.com/target/administer/recommendations-api/#tag/Category-Criteria) | 列出、创建、获取、编辑和删除类别标准。 |
+| [自定义标准](https://developer.adobe.com/target/administer/recommendations-api/#tag/Custom-Criteria) | 列出、创建、获取、编辑和删除自定义标准。 |
+| [项目条件](https://developer.adobe.com/target/administer/recommendations-api/#tag/Item-Criteria) | 列出、创建、获取、编辑和删除项目标准。 |
+| [热门程度标准](https://developer.adobe.com/target/administer/recommendations-api/#tag/Popularity-Criteria) | 列出、创建、获取、编辑和删除热门程度标准。 |
+| [配置文件属性标准](https://developer.adobe.com/target/administer/recommendations-api/#tag/Profile-Attribute-Criteria) | 列出、创建、获取、编辑和删除配置文件属性标准。 |
+| [最新标准](https://developer.adobe.com/target/administer/recommendations-api/#tag/Recent-Criteria) | 列出、创建、获取、编辑和删除最近使用的标准。 |
+| [序列标准](https://developer.adobe.com/target/administer/recommendations-api/#tag/Sequence-Criteria) | 列出、创建、获取、编辑和删除序列标准。 |
 
 ## 参考文档
 
