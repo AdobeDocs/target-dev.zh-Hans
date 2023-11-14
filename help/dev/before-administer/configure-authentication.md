@@ -3,9 +3,9 @@ title: 如何为配置身份验证 [!DNL Adobe Target] API
 description: 如何生成与成功交互所需的身份验证令牌 [!DNL Adobe Target] API？
 feature: APIs/SDKs, Administration & Configuration
 exl-id: fc67363c-6527-40aa-aff1-350b5af884ab
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+source-git-commit: 2fba03b3882fd23a16342eaab9406ae4491c9044
 workflow-type: tm+mt
-source-wordcount: '1941'
+source-wordcount: '1942'
 ht-degree: 2%
 
 ---
@@ -36,7 +36,7 @@ ht-degree: 2%
 | 资源 | 详细信息 |
 | --- | --- |
 | Postman | 为了成功完成这些步骤，请获取 [Postman应用程序](https://www.postman.com/downloads/) 适用于您的操作系统。 Postman basic可在创建帐户时免费使用。 虽然不是要使用 [!DNL Adobe Target] API一般而言，Postman使API工作流更容易，并且 [!DNL Adobe Target] 提供了多个Postman收藏集，以帮助执行其API并了解其操作方式。 本指南的其余部分假定您了解Postman的工作知识。 如需帮助，请参阅 [Postman文档](https://learning.getpostman.com/). |
-| 引用 | 在本指南的其余部分中，均假定您已熟悉以下资源：<ul><li>[Adobe I/OGithub](https://github.com/adobeio)</li><li>[Target管理员和配置文件API文档](../administer/admin-api/admin-api-overview-new.md)</li><li>[Recommendations API文档](https://developers.adobetarget.com/api/recommendations/)</li></ul> |
+| 引用 | 在本指南的其余部分中，均假定您已熟悉以下资源：<ul><li>[Adobe I/OGithub](https://github.com/adobeio)</li><li>[Target管理员和配置文件API文档](../administer/admin-api/admin-api-overview-new.md)</li><li>[Recommendations API文档](https://developer.adobe.com/target/administer/recommendations-api/)</li></ul> |
 
 ## 创建Adobe I/O项目
 

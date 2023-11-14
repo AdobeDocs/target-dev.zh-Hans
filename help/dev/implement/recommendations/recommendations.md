@@ -4,9 +4,9 @@ description: 了解如何实施 [!UICONTROL Recommendations] 中的活动 [!DNL 
 title: 如何实施 [!UICONTROL Recommendations] 活动？
 feature: Recommendations
 exl-id: af1e8b60-6dbb-451b-aa4f-e167d1800d1c
-source-git-commit: 1e1bfb556005f7ea998caf97685c834825372bd6
+source-git-commit: 2fba03b3882fd23a16342eaab9406ae4491c9044
 workflow-type: tm+mt
-source-wordcount: '1460'
+source-wordcount: '1461'
 ht-degree: 29%
 
 ---
@@ -45,7 +45,7 @@ ht-degree: 29%
 | 方法 | 内容 | 何时使用 | 其他信息 |
 | --- | --- | --- | --- |
 | 目录信息源 | 计划每天上传和摄取信息源(CSV、Google Product XML或Analytics Product Classifications)。 | 用于一次发送有关多个项目的信息。 用于发送不经常更改的信息。 | 请参阅 [信息源](https://experienceleague.adobe.com/docs/target/using/recommendations/entities/feeds.html). |
-| 实体API | 调用API以发送单个项目的最新更新。 | 用于在更新发生时一次发送一个项目的更新。 用于发送经常更改的信息（例如价格、库存/库存水平）。 | 请参阅 [实体API开发人员文档](https://developers.adobetarget.com/api/recommendations/#tag/Entities). |
+| 实体API | 调用API以发送单个项目的最新更新。 | 用于在更新发生时一次发送一个项目的更新。 用于发送经常更改的信息（例如价格、库存/库存水平）。 | 请参阅 [实体API开发人员文档](https://developer.adobe.com/target/administer/recommendations-api/#tag/Entities). |
 | 在页面上传递更新 | 在页面上使用JavaScript或使用投放API发送单个项目的即时更新。 | 用于在更新发生时一次发送一个项目的更新。 用于发送经常更改的信息（例如价格、库存/库存水平）。 | 请参阅 [项目查看次数/产品页面](#item-views-or-product-pages) 下。 |
 
 大多数客户应至少实施一个信息源。 然后，您可以选择使用实体API或页面上的方法通过经常更改属性或项目的更新来补充馈送。

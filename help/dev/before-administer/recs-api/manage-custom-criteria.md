@@ -6,9 +6,9 @@ kt: 3815
 thumbnail: null
 author: Judy Kim
 exl-id: 51a67a49-a92d-4377-9a9f-27116e011ab1
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+source-git-commit: 2fba03b3882fd23a16342eaab9406ae4491c9044
 workflow-type: tm+mt
-source-wordcount: '933'
+source-wordcount: '939'
 ht-degree: 1%
 
 ---
@@ -25,7 +25,7 @@ ht-degree: 1%
 
 ## 创建自定义标准
 
-要使用，创建自定义标准 [创建自定义标准API](https://developers.adobetarget.com/api/recommendations/#operation/createCriteriaCustom)，语法为：
+要使用，创建自定义标准 [创建自定义标准API](https://developer.adobe.com/target/administer/recommendations-api/#operation/createCriteriaCustom)，语法为：
 
 `POST https://mc.adobe.io/{{TENANT_ID}}/target/recs/criteria/custom`
 
@@ -39,7 +39,7 @@ ht-degree: 1%
 
    ![CreateCustomCriteria1](assets/CreateCustomCriteria1.png)
 
-1. 添加您的 **正文** 作为 **原始** 定义自定义标准CSV文件位置的JSON。 使用中提供的示例 [创建自定义标准API](https://developers.adobetarget.com/api/recommendations/#operation/getAllCriteriaCustom) 文档作为模板，提供您的 `environmentId` 和其他值。 在本例中，我们使用LAST_PURCHASED作为键。
+1. 添加您的 **正文** 作为 **原始** 定义自定义标准CSV文件位置的JSON。 使用中提供的示例 [创建自定义标准API](https://developer.adobe.com/target/administer/recommendations-api/#operation/getAllCriteriaCustom) 文档作为模板，提供您的 `environmentId` 和其他值。 在本例中，我们使用LAST_PURCHASED作为键。
 
    ![CreateCustomCriteria2](assets/CreateCustomCriteria2.png)
 
@@ -55,7 +55,7 @@ ht-degree: 1%
 
 ## 列出自定义标准
 
-要检索所有自定义标准的列表以及每个标准的详细信息，请使用 [列出自定义标准API](https://developers.adobetarget.com/api/recommendations/#operation/getAllCriteriaCustom). 语法为：
+要检索所有自定义标准的列表以及每个标准的详细信息，请使用 [列出自定义标准API](https://developer.adobe.com/target/administer/recommendations-api/#operation/getAllCriteriaCustom). 语法为：
 
 `GET https://mc.adobe.io/{{TENANT_ID}}/target/recs/criteria/custom`
 
@@ -66,7 +66,7 @@ ht-degree: 1%
 
 ## 编辑自定义标准
 
-要更改自定义标准定义的详细信息，请使用 [编辑自定义标准API](https://developers.adobetarget.com/api/recommendations/#operation/updateCriteriaCustom). 语法为：
+要更改自定义标准定义的详细信息，请使用 [编辑自定义标准API](https://developer.adobe.com/target/administer/recommendations-api/#operation/updateCriteriaCustom). 语法为：
 
 `POST https://mc.adobe.io/{{TENANT_ID}}/target/recs/criteria/custom/:criteriaId`
 
@@ -86,7 +86,7 @@ ht-degree: 1%
 
 ## 获取自定义标准
 
-要查看特定自定义标准的自定义标准详细信息，请使用 [获取自定义标准API](https://developers.adobetarget.com/api/recommendations/#operation/getCriteriaCustom). 语法为：
+要查看特定自定义标准的自定义标准详细信息，请使用 [获取自定义标准API](https://developer.adobe.com/target/administer/recommendations-api/#operation/getCriteriaCustom). 语法为：
 
 `GET https://mc.adobe.io/{{TENANT_ID}}/target/recs/criteria/custom/:criteriaId`
 
@@ -99,7 +99,7 @@ ht-degree: 1%
 
 ## 删除自定义标准
 
-使用前面所述的标准ID，使用 [删除自定义标准API](https://developers.adobetarget.com/api/recommendations/#operation/deleteCriteriaCustom). 语法为：
+使用前面所述的标准ID，使用 [删除自定义标准API](https://developer.adobe.com/target/administer/recommendations-api/#operation/deleteCriteriaCustom). 语法为：
 
 `DELETE https://mc.adobe.io/{{TENANT_ID}}/target/recs/criteria/custom/:criteriaId`
 

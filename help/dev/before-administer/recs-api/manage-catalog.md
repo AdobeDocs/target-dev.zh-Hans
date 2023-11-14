@@ -6,10 +6,10 @@ kt: 3815
 thumbnail: null
 author: Judy Kim
 exl-id: aea82607-cde4-456a-8dfb-2967badce455
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+source-git-commit: 2fba03b3882fd23a16342eaab9406ae4491c9044
 workflow-type: tm+mt
-source-wordcount: '919'
-ht-degree: 2%
+source-wordcount: '924'
+ht-degree: 1%
 
 ---
 
@@ -17,7 +17,7 @@ ht-degree: 2%
 
 同时确保您符合 [使用Recommendations API的要求](/help/dev/before-administer/recs-api/overview.md#prerequisites)，您已学习如何 [生成访问令牌](/help/dev/before-administer/configure-authentication.md) 使用JWT身份验证流程使用 [!DNL Adobe Target] 上的管理员API [Adobe Developer控制台](https://developer.adobe.com/console/home).
 
-您现在可以使用 [RECOMMENDATIONS API](https://developers.adobetarget.com/api/recommendations/) 以添加、更新或删除推荐目录中的项目。 与其他Adobe Target管理员API一样，Recommendations API需要身份验证。
+您现在可以使用 [RECOMMENDATIONS API](https://developer.adobe.com/target/administer/recommendations-api/) 以添加、更新或删除推荐目录中的项目。 与其他Adobe Target管理员API一样，Recommendations API需要身份验证。
 
 >[!NOTE]
 >
@@ -25,11 +25,11 @@ ht-degree: 2%
 
 ![JWT3ff](assets/configure-io-target-jwt3ff.png)
 
-在继续操作之前，请先获取 [Recommendations Postman收藏集](https://developers.adobetarget.com/api/recommendations/#section/Postman).
+在继续操作之前，请先获取 [Recommendations Postman收藏集](https://developer.adobe.com/target/administer/recommendations-api/#section/Postman).
 
 ## 使用保存实体API创建和更新项目
 
-要使用API而不是CSV产品信息源或产品页面上触发的Target请求填充您的Recommendations产品数据库，请使用 [保存实体API](https://developers.adobetarget.com/api/recommendations/#operation/saveEntities). 此请求在单一Target环境中添加或更新项目。 语法为：
+要使用API而不是CSV产品信息源或产品页面上触发的Target请求填充您的Recommendations产品数据库，请使用 [保存实体API](https://developer.adobe.com/target/administer/recommendations-api/#operation/saveEntities). 此请求在单一Target环境中添加或更新项目。 语法为：
 
 ```
 POST https://mc.adobe.io/{{TENANT_ID}}/target/recs/entities
@@ -124,7 +124,7 @@ POST https://mc.adobe.io/{{TENANT_ID}}/target/recs/entities
 
 ## 使用获取实体API获取项目详细信息
 
-要检索现有项目的详细信息，请使用 [获取实体API](https://developers.adobetarget.com/api/recommendations/#operation/getEntity). 语法为：
+要检索现有项目的详细信息，请使用 [获取实体API](https://developer.adobe.com/target/administer/recommendations-api/#operation/getEntity). 语法为：
 
 ```
 GET https://mc.adobe.io/{{TENANT_ID}}/target/recs/entities/[entity.id]
@@ -163,7 +163,7 @@ GET https://mc.adobe.io/{{TENANT_ID}}/target/recs/entities/[entity.id]
 
 ## 使用删除实体API删除项目
 
-要从目录中删除项目，请使用 [删除实体API](https://developers.adobetarget.com/api/recommendations/#operation/deleteEntities). 语法为：
+要从目录中删除项目，请使用 [删除实体API](https://developer.adobe.com/target/administer/recommendations-api/#operation/deleteEntities). 语法为：
 
 ```
 DELETE https://mc.adobe.io/{{TENANT_ID}}/target/recs/entities?ids=[comma-delimited-entity-ids]&environment=[environmentId]
