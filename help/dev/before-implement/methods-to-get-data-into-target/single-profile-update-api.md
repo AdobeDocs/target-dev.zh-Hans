@@ -4,9 +4,9 @@ description: 将数据导入 [!DNL Target] 使用单个配置文件更新API。
 title: 如何将数据导入 [!DNL Target] 是否使用单个配置文件更新API？
 feature: Implementation
 exl-id: e6c394cb-74a3-4991-b656-5ae601f2d5e2
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+source-git-commit: 3ae2391dea9994c0ddc1df39d74cccf6e067c1a4
 workflow-type: tm+mt
-source-wordcount: '203'
+source-wordcount: '204'
 ht-degree: 35%
 
 ---
@@ -35,7 +35,7 @@ ht-degree: 35%
 
 仅限配置文件更新。无法为潜在用户创建配置文件 [!DNL Target] 尚未看到。
 
-更新通常在1小时内发生，但可能需要长达24小时才能反映出来。
+更新通常在一小时内发生，但可能需要长达24小时的时间才能反映出来。
 
 ## 代码示例
 
