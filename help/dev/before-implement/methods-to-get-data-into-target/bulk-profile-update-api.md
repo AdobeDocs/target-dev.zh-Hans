@@ -4,7 +4,7 @@ description: 将数据导入 [!DNL Target] 使用批量配置文件更新API。
 title: 如何将数据导入 [!DNL Target] 是否使用批量配置文件更新API？
 feature: Implementation
 exl-id: 654b13b7-1683-4c44-80e6-7557b9d29f66
-source-git-commit: 3ae2391dea9994c0ddc1df39d74cccf6e067c1a4
+source-git-commit: 773f8a2f22cfbf740a5ce68809b38b33b621f3b5
 workflow-type: tm+mt
 source-wordcount: '404'
 ht-degree: 57%
@@ -42,7 +42,7 @@ ht-degree: 57%
 
 批处理文件必须小于 50 MB。另外，每次上传的总行数不应超过 500,000 行。
 
-更新通常在一小时内发生，但可能需要长达24小时才能反映
+更新通常在一小时内发生，但可能需要长达24小时的时间才能反映出来。
 
 在后续的批处理中，您在 24 小时内上传的数量或行数不受限制。但是，为了确保其他进程能够高效运行，这些数据的吸收过程在工作时间可能会受到节流限制。
 
