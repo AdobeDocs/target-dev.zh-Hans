@@ -3,9 +3,9 @@ title: Adobe Target单个配置文件更新API
 description: 了解如何使用 [!DNL Adobe Target] [!UICONTROL 单个配置文件更新API] 将单个访客的配置文件数据发送到 [!DNL Target].
 feature: APIs/SDKs
 contributors: https://github.com/icaraps
-source-git-commit: 81bff85a9d1fe28ca267c471a470da95568fd06d
+source-git-commit: dcff5d2eb8740420a9f9cf488474c3bca1628567
 workflow-type: tm+mt
-source-wordcount: '349'
+source-wordcount: '386'
 ht-degree: 4%
 
 ---
@@ -27,6 +27,8 @@ ht-degree: 4%
 * 更新通常在一小时内发生，但可能需要24小时才能反映出来。
 
   如果必须发送更多更新，或需要在较短的时间范围内处理更新，请考虑通过客户端更新（首选）或通过 [!DNL Adobe Target] 服务器端 [投放API](/help/dev/implement/delivery-api/overview.md).
+
+* 此 [!UICONTROL 单个配置文件更新API] 是一个服务器到服务器API，设计初衷不是在网页中工作。 要从您的网页中更新访客资料，您可以使用 [trackEvent()](/help/dev/implement/client-side/atjs/atjs-functions/adobe-target-trackevent.md) 函数或 [投放API](/help/dev/implement/delivery-api/overview.md).
 
 ## 格式
 
