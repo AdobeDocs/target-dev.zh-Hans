@@ -3,18 +3,32 @@ title: Adobe Target单个配置文件更新API
 description: 了解如何使用 [!DNL Adobe Target] [!UICONTROL 单个配置文件更新API] 将单个访客的配置文件数据发送到 [!DNL Target].
 feature: APIs/SDKs
 contributors: https://github.com/icaraps
-source-git-commit: 6f7d9875e3b73352ead3a55e40a4b2f81f3d4400
+source-git-commit: 81bff85a9d1fe28ca267c471a470da95568fd06d
 workflow-type: tm+mt
-source-wordcount: '241'
-ht-degree: 2%
+source-wordcount: '349'
+ht-degree: 4%
 
 ---
 
 # [!DNL Adobe Target Single Profile Update API]
 
-此 [!DNL Adobe Target] [!UICONTROL 单个配置文件更新API] 允许您为单个用户发送配置文件更新。 此 [!UICONTROL 单个配置文件更新API] 并且通常用于必须针对在尚未实施的渠道中发生的事务进行更新时 [!DNL Target].
+此 [!DNL Adobe Target] [!UICONTROL 单个配置文件更新API] 允许您为单个用户发送配置文件更新。 此 [!UICONTROL 单个配置文件更新API] 几乎与 [!UICONTROL 批量配置文件更新API]，但一次更新一个访客资料，与API调用而不是.cvs文件内联。
 
-此 [!UICONTROL 单个配置文件更新API] 限于在任何滚动的24小时内执行100万次更新。 更新通常在一小时内发生，但可能需要24小时才能反映出来。 如果必须发送更多更新，或需要在较短的时间范围内处理更新，请考虑通过客户端更新（首选）或通过 [!DNL Adobe Target] 服务器端 [投放API](/help/dev/implement/delivery-api/overview.md).
+此 [!UICONTROL 单个配置文件更新API] 并且通常用于必须针对在尚未实施的渠道中发生的事务进行更新时 [!DNL Target]. 例如，要更新执行某些离线操作的单个访客的配置文件。 操作包括联系呼叫中心、资助贷款、在商店中使用会员卡、访问自助服务亭等。
+
+的优势 [!UICONTROL 单个配置文件更新API] 包括：
+
+* 配置文件属性的数量没有限制。
+* 通过网站发送的用户档案属性可以通过API更新，反之亦然。
+
+## 注意事项
+
+* 此 [!UICONTROL 单个配置文件更新API] 限于在任何滚动的24小时内执行100万次更新。
+* 更新通常在一小时内发生，但可能需要24小时才能反映出来。
+
+  如果必须发送更多更新，或需要在较短的时间范围内处理更新，请考虑通过客户端更新（首选）或通过 [!DNL Adobe Target] 服务器端 [投放API](/help/dev/implement/delivery-api/overview.md).
+
+## 格式
 
 以格式指定配置文件参数 `profile.paramName=value`.
 
