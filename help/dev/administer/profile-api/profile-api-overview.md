@@ -1,18 +1,27 @@
 ---
-title: Adobe Target配置文件API
-description: Adobe Target配置文件API
+title: Adobe Target配置文件API概述
+description: 了解如何使用Adobe Target配置文件API将访客数据发送至 [!DNL Target].
 contributors: https://github.com/icaraps
 exl-id: 482a4175-1d02-47e9-a5c0-dd00e8560773
 feature: APIs/SDKs
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+source-git-commit: af9db32d59bdf32f2b9fade267922803250377dd
 workflow-type: tm+mt
-source-wordcount: '21'
-ht-degree: 0%
+source-wordcount: '213'
+ht-degree: 1%
 
 ---
 
-# [!DNL Adobe Target Profile API]
+# [!DNL Adobe Target Profile APIs overview]
 
-此 [!DNL Adobe Target Profiles API] 可在此处找到：
+用户配置文件包含网页访客的人口统计和行为信息，如年龄、性别、购买的产品、上次访问时间等。 [!DNL Adobe Target] 使用此信息将它提供给每位访客的内容个性化。
 
-* [https://developers.adobetarget.com/api/#profiles](https://developers.adobetarget.com/api/#profiles){target=_blank}
+每个访客的配置文件信息存储在Cookie或第三方应用程序中。
+
+如果您的网页实施了Target代码([at.js](/help/dev/implement/client-side/atjs/how-atjs-works/overview.md) 或 [Adobe Experience Platform Web SDK](/help/dev/implement/client-side/aep-web-sdk.md))，则Cookie中的用户档案信息将传递到 [!DNL Target] 使用配置文件参数。 [!DNL Target] 通过 `pcID` 它会生成访客的Cookie。 但是，您可以使用通过mbox调用从外部应用程序传递配置文件参数 `mbox3rdPartyIds`.
+
+使用 [!DNL Adobe Target] 当您有要发送到的访客的配置文件数据时，可使用配置文件API [!DNL Target] ，并且您不能或不希望将其作为基于页面的集成的一部分发送 [!DNL Target]. 这可能是来自客户关系管理(CRM)或销售点(POS)系统的数据，或者在页面上没有提供，或者属于更敏感性质的数据，没有必要在页面上传递。
+
+可通过两种方式通过API更新用户档案：
+
+* [单个配置文件更新 API](/help/dev/administer/profile-api/profile-single-api.md)
+* [批量更新配置文件](/help/dev/administer/profile-api/profile-bulk-api.md)

@@ -2,10 +2,10 @@
 user-guide-title: Adobe Target 开发人员指南
 breadcrumb-title: Target开发人员指南
 user-guide-description: 了解如何定制和个性化客户体验，从而最大限度地提升网站和移动网站、应用程序、社交媒体和其他数字渠道的收入。
-source-git-commit: 734bda64915a08f2edba37cbbb66b2de581c2237
+source-git-commit: af9db32d59bdf32f2b9fade267922803250377dd
 workflow-type: tm+mt
-source-wordcount: '729'
-ht-degree: 55%
+source-wordcount: '740'
+ht-degree: 54%
 
 ---
 
@@ -193,7 +193,10 @@ ht-degree: 55%
    + 管理员 API {#admin-api}
       + [管理员API概述](before-administer/admin-api-overview/admin-api-overview.md)
       + [Adobe Target管理API](/help/dev/administer/admin-api/admin-api-overview-new.md)
-   + [配置文件API](/help/dev/administer/profile-api/profile-api-overview.md)
+   + 配置文件API {#profile-apis}
+      + [配置文件API概述](/help/dev/administer/profile-api/profile-api-overview.md)
+      + [单个配置文件更新API](/help/dev/administer/profile-api/profile-single-api.md)
+      + [批量配置文件更新API](/help/dev/administer/profile-api/profile-bulk-api.md)
    + [报表 API](/help/dev/administer/reporting-api/reporting-api.md)
    + RECOMMENDATIONS API {#recommendations-api}
       + [Recommendations API概述](before-administer/recs-api/overview.md)

@@ -4,10 +4,10 @@ description: 将数据导入 [!DNL Target] 使用 [!UICONTROL 批量配置文件
 title: 如何将数据导入 [!DNL Target] 使用 [!UICONTROL 批量配置文件更新API]？
 feature: Implementation
 exl-id: 654b13b7-1683-4c44-80e6-7557b9d29f66
-source-git-commit: 734bda64915a08f2edba37cbbb66b2de581c2237
+source-git-commit: af9db32d59bdf32f2b9fade267922803250377dd
 workflow-type: tm+mt
-source-wordcount: '443'
-ht-degree: 25%
+source-wordcount: '421'
+ht-degree: 23%
 
 ---
 
@@ -44,12 +44,10 @@ ht-degree: 25%
 * 批处理文件必须小于 50 MB。另外，每次上传的总行数不应超过 500,000 行。
 * 更新通常在一小时内发生，但可能需要24小时才能反映出来。
 * 对于在后续批次中可以在24小时内上传的一个或多个行数没有限制。 但是，为了确保其他进程能够高效运行，这些数据的吸收过程在工作时间可能会受到节流限制。
-* 连续 [V2批量更新调用](https://developers.adobetarget.com/api/#updating-profiles) ，且两者之间没有mbox调用 `thirdPartyIds` 覆盖在第一次批量更新调用中更新的属性。
+* 对相同的V2进行连续V2批量更新调用，且其中没有mbox调用 `thirdPartyIds` 覆盖在第一次批量更新调用中更新的属性。
 
-## 代码示例
+## 资源
 
-请参阅[更新配置文件](https://developers.adobetarget.com/api/#updating-profiles)。
-
-### 相关信息的链接
-
-[更新配置文件](https://developers.adobetarget.com/api/#updating-profiles)
+* [[!DNL Adobe Target Profile APIs overview]](/help/dev/administer/profile-api/profile-api-overview.md)
+* [[!DNL Adobe Target Single Profile Update API]](/help/dev/administer/profile-api/profile-single-api.md)
+* [[!DNL Adobe Target Bulk Profile Update API]](/help/dev/administer/profile-api/profile-bulk-api.md)
