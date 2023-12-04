@@ -1,17 +1,17 @@
 ---
-title: Adobe Target配置文件API概述
+title: 更新用户档案
 description: 了解如何使用Adobe Target配置文件API将访客数据发送至 [!DNL Target].
 contributors: https://github.com/icaraps
 exl-id: 482a4175-1d02-47e9-a5c0-dd00e8560773
 feature: APIs/SDKs
-source-git-commit: 1a1c3d96cf6ef5c337a63fdec8c700da695ff5d1
+source-git-commit: 9707680ddcf0c373c635aa9f3cb5ba1b74cf90a3
 workflow-type: tm+mt
-source-wordcount: '233'
+source-wordcount: '226'
 ht-degree: 1%
 
 ---
 
-# [!DNL Adobe Target Profile APIs overview]
+# 更新用户档案
 
 用户配置文件包含网页访客的人口统计和行为信息，如年龄、性别、购买的产品、上次访问时间等。 [!DNL Adobe Target] 使用此信息将它提供给每位访客的内容个性化。
 

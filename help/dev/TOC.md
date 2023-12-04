@@ -1,19 +1,19 @@
 ---
-user-guide-title: Adobe Target 开发人员指南
+user-guide-title: Adobe Target开发人员指南
 breadcrumb-title: Target开发人员指南
 user-guide-description: 了解如何定制和个性化客户体验，从而最大限度地提升网站和移动网站、应用程序、社交媒体和其他数字渠道的收入。
-source-git-commit: af9db32d59bdf32f2b9fade267922803250377dd
+source-git-commit: 9707680ddcf0c373c635aa9f3cb5ba1b74cf90a3
 workflow-type: tm+mt
-source-wordcount: '740'
-ht-degree: 54%
+source-wordcount: '744'
+ht-degree: 45%
 
 ---
 
 
-# Adobe Target 开发人员指南 {#developer}
+# Adobe Target开发人员指南 {#developer}
 
-+ [Adobe Target 开发人员指南](overview.md)
-+ 入门指南 {#implementation}
++ [Adobe Target开发人员指南](overview.md)
++ 快速入门 {#implementation}
    + 实施之前 {#before-implement}
       + [实施之前](before-implement/considerations-before-you-implement-target.md)
       + [准备实施 Target](before-implement/prepare-to-implement-target.md)
@@ -36,7 +36,7 @@ ht-degree: 54%
       + [单个配置文件更新API](before-implement/methods-to-get-data-into-target/single-profile-update-api.md)
       + [客户属性](before-implement/methods-to-get-data-into-target/customer-attributes.md)
       + [配置文件 API 设置](before-implement/methods-to-get-data-into-target/profile-api-settings.md)
-   + [Target 安全性概述](before-implement/target-security-overview.md)
+   + [Target 安全概述](before-implement/target-security-overview.md)
    + [支持的浏览器](before-implement/supported-browsers.md)
    + [TLS（传输层安全性）加密更改](before-implement/tls-transport-layer-security-encryption.md)
    + [CNAME 和 Adobe Target](before-implement/implement-cname-support-in-target.md)
@@ -132,7 +132,7 @@ ht-degree: 54%
    + Java SDK参考 {#java}
       + [Java SDK概述](implement/server-side/java/overview.md)
       + [安装Java SDK](implement/server-side/java/install-sdk.md)
-      + [初始化 Java SDK](implement/server-side/java/initialize-sdk.md)
+      + [初始化Java SDK](implement/server-side/java/initialize-sdk.md)
       + [获取选件(Java)](implement/server-side/java/get-offers.md)
       + [获取属性(Java)](implement/server-side/java/get-attributes.md)
       + [发送通知(Java)](implement/server-side/java/send-notifications.md)
@@ -154,7 +154,7 @@ ht-degree: 54%
    + Python SDK参考 {#python}
       + [Python SDK概述](implement/server-side/python/overview.md)
       + [安装Python SDK](implement/server-side/python/install-sdk.md)
-      + [初始化 Python SDK](implement/server-side/python/initialize-sdk.md)
+      + [初始化Python SDK](implement/server-side/python/initialize-sdk.md)
       + [获取选件(Python)](implement/server-side/python/get-offers.md)
       + [获取属性(Python)](implement/server-side/python/get-attributes.md)
       + [发送通知(Python)](implement/server-side/python/send-notifications.md)
@@ -168,7 +168,7 @@ ht-degree: 54%
    + [Target 移动设备预览](implement/mobile/target-mobile-preview.md)
    + [使用位置服务](implement/mobile/use-location-service.md)
    + [Target 移动应用程序版常见问题解答](implement/mobile/mobile-faq.md)
-   + [在具有 Web 视图的本机应用程序中使用 AEP Mobile SDK 实施 Target](/help/dev/implement/mobile/native-app.md)
+   + [在具有Web视图的本机应用程序中通过AEP Mobile SDK实施Target](/help/dev/implement/mobile/native-app.md)
 + 电子邮件实施 {#implement-email}
    + [电子邮件：实施 Target 概述](implement/email/overview.md)
    + [为图像创建 Adbox](implement/email/testing-content-with-the-adbox.md)
@@ -190,11 +190,13 @@ ht-degree: 54%
       + [注意事项和已知限制](/help/dev/before-implement/delivery-api-overview/known-limitations.md)
       + [客户端提示](/help/dev/before-implement/delivery-api-overview/client-hints.md)
       + [投放 API](/help/dev/implement/delivery-api/delivery-api.md)
-   + 管理员 API {#admin-api}
+   + 管理员API {#admin-api}
       + [管理员API概述](before-administer/admin-api-overview/admin-api-overview.md)
       + [Adobe Target管理API](/help/dev/administer/admin-api/admin-api-overview-new.md)
    + 配置文件API {#profile-apis}
-      + [配置文件API概述](/help/dev/administer/profile-api/profile-api-overview.md)
+      + [配置文件API概述](/help/dev/administer/profile-api/profiles-api.md)
+      + [获取配置文件](/help/dev/administer/profile-api/profile-fetch.md)
+      + [更新用户档案](/help/dev/administer/profile-api/profile-api-overview.md)
       + [单个配置文件更新API](/help/dev/administer/profile-api/profile-single-api.md)
       + [批量配置文件更新API](/help/dev/administer/profile-api/profile-bulk-api.md)
    + [报表 API](/help/dev/administer/reporting-api/reporting-api.md)
@@ -212,8 +214,8 @@ ht-degree: 54%
 + 实施模式 {#implementation-patterns}
    + [实施模式概述](/help/dev/patterns/pattern-overview.md)
    + 使用at.js的Recommendations实施模式 {#atjs}
-      + [使用 at.js 的 Recommendations 实施模式概述](/help/dev/patterns/recs-atjs/recs-implementation-pattern-atjs.md)
-      + [初始化 SDK](/help/dev/patterns/recs-atjs/initialize-sdk.md)
+      + [使用at.js的Recommendations实施模式概述](/help/dev/patterns/recs-atjs/recs-implementation-pattern-atjs.md)
+      + [初始化SDK](/help/dev/patterns/recs-atjs/initialize-sdk.md)
       + [配置数据收集](/help/dev/patterns/recs-atjs/data-collection.md)
       + [渲染体验](/help/dev/patterns/recs-atjs/render-experiences.md)
       + [通知Target](/help/dev/patterns/recs-atjs/notify-target.md)
