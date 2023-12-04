@@ -4,9 +4,9 @@ description: 了解如何使用Adobe Target配置文件API将访客数据发送�
 contributors: https://github.com/icaraps
 exl-id: 482a4175-1d02-47e9-a5c0-dd00e8560773
 feature: APIs/SDKs
-source-git-commit: 9707680ddcf0c373c635aa9f3cb5ba1b74cf90a3
+source-git-commit: 289299a52e5611c0da341f313aa4a447fcf3666a
 workflow-type: tm+mt
-source-wordcount: '226'
+source-wordcount: '215'
 ht-degree: 1%
 
 ---
@@ -25,5 +25,3 @@ ht-degree: 1%
 
 * [单个配置文件更新 API](/help/dev/administer/profile-api/profile-single-api.md)
 * [批量更新配置文件](/help/dev/administer/profile-api/profile-bulk-api.md)
-
-旧版配置文件API文档可在以下位置找到： [https://developers.adobetarget.com/api/#profiles](https://developers.adobetarget.com/api/#profiles){target=_blank}

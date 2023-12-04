@@ -3,9 +3,9 @@ title: Adobe Target配置文件API
 description: 了解如何使用Adobe Target配置文件API将访客数据发送至 [!DNL Target].
 contributors: https://github.com/icaraps
 feature: APIs/SDKs
-source-git-commit: 9707680ddcf0c373c635aa9f3cb5ba1b74cf90a3
+source-git-commit: 289299a52e5611c0da341f313aa4a447fcf3666a
 workflow-type: tm+mt
-source-wordcount: '134'
+source-wordcount: '149'
 ht-degree: 1%
 
 ---
@@ -17,6 +17,10 @@ ht-degree: 1%
 ## 配置文件 [!DNL Postman] 收藏集
 
 [!DNL Postman] 是一个应用程序，可轻松触发API调用。 此 [!DNL Postman] 收藏集包含所有 [!DNL Profile API] 呼叫。 单击 [在Postman上运行](https://www.getpostman.com/collections/ec7376f9028977ccaa99){target=_blank} 以导入配置文件API集合。
+
+## 旧版配置文件API文档。
+
+旧版配置文件API文档可在以下位置找到： [https://developers.adobetarget.com/api/#profiles](https://developers.adobetarget.com/api/#profiles){target=_blank}
 
 ## 的结构 [!DNL Target] 个人资料
 
