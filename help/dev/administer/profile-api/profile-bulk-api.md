@@ -3,10 +3,10 @@ title: Adobe Target批量配置文件更新API
 description: 了解如何使用 [!DNL Adobe Target] [!UICONTROL 批量配置文件更新API] 将多个访客的配置文件数据发送到 [!DNL Target].
 feature: APIs/SDKs
 contributors: https://github.com/icaraps
-source-git-commit: b263fef6017dc6f840037cab9045c36b9e354cee
+source-git-commit: 38a5e82d3170fa64220bd63f505f1470af43e8a3
 workflow-type: tm+mt
-source-wordcount: '773'
-ht-degree: 9%
+source-wordcount: '824'
+ht-degree: 8%
 
 ---
 
@@ -35,6 +35,7 @@ ht-degree: 9%
 * 批处理文件必须小于 50 MB。另外，每次上传的总行数不应超过 500,000 行。
 * 对于在后续批次中可以在24小时内上传的一个或多个行数没有限制。 但是，为了确保其他进程能够高效运行，这些数据的吸收过程在工作时间可能会受到节流限制。
 * 对于相同thirdPartyId，如果连续的v2批量更新调用之间没有mbox调用，则会覆盖在第一次批量更新调用中更新的属性。
+* [!DNL Adobe] 不保证100%的批量配置文件数据将载入并保留在Target中，因此可用于定位。 在当前设计中，有可能不会载入或保留一小部分数据（最多占大批量生产的0.1%）。
 
 ## 批处理文件
 
