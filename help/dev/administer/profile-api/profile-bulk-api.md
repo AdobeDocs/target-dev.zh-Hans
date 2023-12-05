@@ -1,11 +1,11 @@
 ---
 title: Adobe Target批量配置文件更新API
-description: 了解如何使用 [!DNL Adobe Target] [!UICONTROL 批量配置文件更新API] 将多个访客的配置文件数据发送到 [!DNL Target].
+description: 了解如何使用 [!DNL Adobe Target] [!UICONTROL 批量配置文件更新API] 将多个访客的配置文件数据发送到 [!DNL Target] 以用于定位。
 feature: APIs/SDKs
 contributors: https://github.com/icaraps
-source-git-commit: 38a5e82d3170fa64220bd63f505f1470af43e8a3
+source-git-commit: a6f47c99cfc419771c1a6674990c415a2035ab4e
 workflow-type: tm+mt
-source-wordcount: '824'
+source-wordcount: '828'
 ht-degree: 8%
 
 ---
