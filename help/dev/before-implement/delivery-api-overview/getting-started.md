@@ -4,9 +4,9 @@ description: 如何使用 [!UICONTROL Adobe Target交付API]？
 keywords: 投放api
 exl-id: 142ec3be-b017-4cdc-9079-b1cc173a710a
 feature: APIs/SDKs
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+source-git-commit: e5a1c38d448cb7446b7b26cd0dc882976ba94dd3
 workflow-type: tm+mt
-source-wordcount: '151'
+source-wordcount: '112'
 ht-degree: 0%
 
 ---
@@ -52,7 +52,3 @@ curl -X POST \
 1. 创建 [!DNL Target] 活动(A/B、XT、AP或Recommendations) [基于表单的编辑器](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html?lang=en) 或 [可视化体验编辑器](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html).
 1. 使用投放API获取 [!DNL Target] 在步骤2中创建的活动。
 1. 向访客展示体验。
-
-## Postman收藏集 {#postman}
-
-Postman是一款能够轻松触发API调用的应用程序。 [此Postman收藏集](https://run.pstmn.io/button.svg) 包含示例投放API调用。

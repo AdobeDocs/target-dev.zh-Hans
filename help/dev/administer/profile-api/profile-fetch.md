@@ -3,7 +3,7 @@ title: 获取配置文件
 description: 了解如何使用Adobe Target配置文件API来获取访客数据，以用于 [!DNL Target].
 contributors: https://github.com/icaraps
 feature: APIs/SDKs
-source-git-commit: 9707680ddcf0c373c635aa9f3cb5ba1b74cf90a3
+source-git-commit: e5a1c38d448cb7446b7b26cd0dc882976ba94dd3
 workflow-type: tm+mt
 source-wordcount: '262'
 ht-degree: 0%
@@ -39,13 +39,13 @@ http://<your-client-code>.tt.omtrdc.net/rest/v1/profiles/111492025094307-353046?
 以下示例显示了使用获取配置文件的请求格式 `thirdPartyId`：
 
 ```
-https://<your-client-code>.tt.omtrdc.net/rest/v1/profiles/thirdPartyId/your-thirdpartyid?<your-client-code>
+https://<your-client-code>.tt.omtrdc.net/rest/v1/profiles/thirdPartyId/your-thirdpartyid?client=<your-client-code>
 ```
 
 替换 `<your-client-code>` 和 `your-thirdpartyid` 并触发GET请求。 以下是使用的配置文件提取调用示例 [!UICONTROL thirdpartyid]：
 
 ```
-http://<your-client-code>.tt.omtrdc.net/rest/v1/profiles/thirdPartyId/a1-mbox3rdPartyId?client=<your-client-code>
+https://<your-client-code>.tt.omtrdc.net/rest/v1/profiles/thirdPartyId/a1-mbox3rdPartyId?client=<your-client-code>
 ```
 
 当进行此调用时， [!DNL Target] 会尝试首先在边缘请求中所述的集群中找到用户档案，或找到用户档案并返回内容。 配置文件内容以JSON格式返回。
