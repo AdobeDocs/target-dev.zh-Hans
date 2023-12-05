@@ -3,10 +3,10 @@ title: Adobe Target批量配置文件更新API
 description: 了解如何使用 [!DNL Adobe Target] [!UICONTROL 批量配置文件更新API] 将多个访客的配置文件数据发送到 [!DNL Target].
 feature: APIs/SDKs
 contributors: https://github.com/icaraps
-source-git-commit: 8bc819823462fae71335ac3b6c871140158638fe
+source-git-commit: b263fef6017dc6f840037cab9045c36b9e354cee
 workflow-type: tm+mt
-source-wordcount: '727'
-ht-degree: 8%
+source-wordcount: '773'
+ht-degree: 9%
 
 ---
 
@@ -72,27 +72,58 @@ BATCH.TXT是文件名。 CLIENTCODE [!DNL Target] 客户端代码。
 
 ### Inspect响应
 
-v2会返回按配置文件划分的状态，而v1只会返回整体状态。 响应中包含指向其他URL的链接，该URL具有逐个用户档案的成功消息。
+配置文件API可返回批处理的提交状态，以及“batchStatus”下的链接以指向显示特定批处理作业整体状态的其他URL。
 
-### 示例响应
+### 示例API响应
+
+以下代码片段是Profiles API响应的示例：
 
 ```
-true http://mboxedge19.tt.omtrdc.net/m2/demo/v2/profile/batchStatus?batchId=demo-1845664501&m2Node=00 Batch submitted for processing
+<response>
+    <success>true</success>
+    <batchStatus>http://mboxedge45.tt.omtrdc.net/m2/demo/profile/batchStatus?batchId=demo-1701473848678-13029383</batchStatus>
+    <message>Batch submitted for processing</message>
+</response>
 ```
 
 如果出现错误，响应将包含 `success=false` 以及错误的详细消息。
 
-成功的响应如下所示：
+### 默认批次状态响应
 
-``````
-demo-1845664501 1436187396849-250353.03_03 success 2403081156529-351655.03_03 success 2403081156529-351656.03_03 success 1436187396849-250351.01_00 success 
-``````
+成功默认响应（如果满足上述条件） `batchStatus` 单击URL链接时如下所示：
+
+```
+<response><batchId>demo4-1701473848678-13029383</batchId><status>complete</status><batchSize>1</batchSize></response>
+```
 
 状态字段的预期值包括：
 
-**success**：已更新用户档案。 如果未找到配置文件，则使用批次中的值创建一个配置文件。
-**错误**：由于失败、异常或消息丢失，未更新或创建用户档案。
-**待处理**：尚未更新或创建用户档案。
+| 状态 | 详细信息 |
+| --- | --- |
+| [!UICONTROL complete] | 配置文件批量更新请求已成功完成。 |
+| [!UICONTROL 未完成] | 用户档案批量更新请求仍在处理中，尚未完成。 |
+| [!UICONTROL 卡住] | 配置文件批次更新请求卡住，无法完成。 |
 
+### 详细的批次状态URL响应
 
+可以通过传递参数获取更详细的响应 `showDetails=true` 到 `batchStatus` 上面的url。
 
+例如：
+
+```
+http://mboxedge45.tt.omtrdc.net/m2/demo/profile/batchStatus?batchId=demo-1701473848678-13029383&showDetails=true
+```
+
+#### 详细响应
+
+```
+<response>
+    <batchId>demo4-1701473848678-13029383</batchId>
+    <status>complete</status>
+    <batchSize>1</batchSize>
+    <consumedCount>1</consumedCount>
+    <successfulUpdates>1</successfulUpdates>
+    <profilesNotFound>0</profilesNotFound>
+    <failedUpdates>0</failedUpdates>
+</response>
+```
