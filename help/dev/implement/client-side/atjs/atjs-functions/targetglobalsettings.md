@@ -4,10 +4,10 @@ description: 使用 [!UICONTROL targetGlobalSettings()] 函数 [!DNL Adobe Targe
 title: 如何使用 [!UICONTROL targetGlobalSettings()] 功能？
 feature: at.js
 exl-id: f6218313-6a70-448e-8555-b7b039e64b2c
-source-git-commit: d5d25c6a559dafe446d26cca6c03d8e693cbd508
+source-git-commit: 12cf430b65695d38d1651f2a97df418d82d231f3
 workflow-type: tm+mt
-source-wordcount: '2521'
-ht-degree: 19%
+source-wordcount: '2568'
+ht-degree: 17%
 
 ---
 
@@ -18,6 +18,18 @@ ht-degree: 19%
 ## 设置
 
 您可以覆盖以下设置：
+
+### aepSandboxId
+
+* **类型**：字符串
+* **默认值**：空
+* **描述**：用于发送的可选参数 [!DNL Adobe Experience Platform] 要共享的沙盒ID [!DNL Adobe Experience Platform] 在非默认沙盒中创建的目标 [!DNL Target]. 如果 `aepSandboxId` 为非null， `aepSandboxName` 还必须提供。
+
+### aepSandboxName
+
+* **类型**：字符串
+* **默认值**：空
+* **描述**：用于发送的可选参数 [!DNL Adobe Experience Platform] 要共享的沙盒名称 [!DNL Adobe Experience Platform] 在非默认沙盒中创建的目标 [!DNL Target]. 如果 `aepSandboxName` 为非null， `aepSandboxId` 还必须提供。
 
 ### artifectlocation
 
@@ -31,7 +43,7 @@ ht-degree: 19%
 * **默认值**：正文{ opacity： 0 }
 * **描述**：仅在以下情况下使用 `globalMboxAutocreate === true` 以尽可能减少闪烁的可能性。
 
-  有关更多信息，请参阅 [at.js 如何管理闪烁](/help/dev/implement/client-side/atjs/how-atjs-works/manage-flicker-with-atjs.md)。
+  有关更多信息，请参阅 [at.js如何管理闪烁](/help/dev/implement/client-side/atjs/how-atjs-works/manage-flicker-with-atjs.md).
 
 ### bodyHidingEnabled
 
@@ -174,7 +186,7 @@ ht-degree: 19%
 * **默认值**： true（从at.js版本1.6.2开始为true）
 * **描述**：指示我们是否应该使用 `<clientCode>.tt.omtrdc.net` 域或 `mboxedge<clusterNumber>.tt.omtrdc.net` 域。
 
-  如果此值为 true，`mboxedge<clusterNumber>.tt.omtrdc.net` 域将被保存到 Cookie 中. 当前未使用 [CNAME](/help/dev/before-implement/implement-cname-support-in-target.md) 使用at.js 1.8.2和at.js 2.3.1之前的at.js版本时。如果您遇到问题，请考虑 [更新at.js](/help/dev/implement/client-side/atjs/target-atjs-versions.md) 更新为支持的版本。
+  如果此值为true， `mboxedge<clusterNumber>.tt.omtrdc.net` 域将被保存到Cookie中。 当前未使用 [CNAME](/help/dev/before-implement/implement-cname-support-in-target.md) 使用at.js 1.8.2和at.js 2.3.1之前的at.js版本时。如果您遇到问题，请考虑 [更新at.js](/help/dev/implement/client-side/atjs/target-atjs-versions.md) 更新为支持的版本。
 
 ### overrideMboxEdgeServerTimeout
 
@@ -284,7 +296,7 @@ window.targetGlobalSettings = {
 | name | 字符串 | 提供程序的名称。 |
 | version | 字符串 | 提供程序版本。此键值将用于提供程序的版本演变。 |
 | timeout | 数值 | 如果这是网络请求，则表示提供程序超时。此键值是可选的。 |
-| provider | 函数 | 包含提供程序数据提取逻辑的函数。<p>该函数有一个必需的参数：`callback`。callback 参数是一个函数，只有在成功获取数据或发生错误时才应调用该函数。<p>callback 应有两个参数：<ul><li>error：指示是否发生错误。如果一切正常，则应将此参数设置为空。</li><li>params：一个JSON对象，表示将在 [!DNL Target] 请求。</li></ul> |
+| provider | 函数 | 包含提供程序数据提取逻辑的函数。<p>函数有一个必需的参数： `callback`. callback 参数是一个函数，只有在成功获取数据或发生错误时才应调用该函数。<p>callback 应有两个参数：<ul><li>error：指示是否发生错误。如果一切正常，则应将此参数设置为空。</li><li>params：一个JSON对象，表示将在 [!DNL Target] 请求。</li></ul> |
 
 以下示例显示数据提供程序使用同步执行的位置：
 
