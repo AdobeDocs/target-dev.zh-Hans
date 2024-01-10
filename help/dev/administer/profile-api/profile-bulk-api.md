@@ -4,9 +4,9 @@ description: 了解如何使用 [!DNL Adobe Target] [!UICONTROL 批量配置文�
 feature: APIs/SDKs
 contributors: https://github.com/icaraps
 exl-id: 0f38d109-5273-4f73-9488-80eca115d44d
-source-git-commit: 32a6d14c911b977aea96b0fb6832929892d70d5d
+source-git-commit: 3d90616b0a920abea380d4cfcd1227eafde86adb
 workflow-type: tm+mt
-source-wordcount: '828'
+source-wordcount: '846'
 ht-degree: 8%
 
 ---
@@ -34,6 +34,7 @@ ht-degree: 8%
 ## 注意事项
 
 * 批处理文件必须小于 50 MB。另外，每次上传的总行数不应超过 500,000 行。
+* 更新通常在一小时内发生，但可能需要24小时才能反映出来。
 * 对于在后续批次中可以在24小时内上传的一个或多个行数没有限制。 但是，为了确保其他进程能够高效运行，这些数据的吸收过程在工作时间可能会受到节流限制。
 * 对于相同thirdPartyId，如果连续的v2批量更新调用之间没有mbox调用，则会覆盖在第一次批量更新调用中更新的属性。
 * [!DNL Adobe] 不保证100%的批量配置文件数据将载入并保留在Target中，因此可用于定位。 在当前设计中，有可能不会载入或保留一小部分数据（最多占大批量生产的0.1%）。
