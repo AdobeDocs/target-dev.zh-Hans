@@ -4,10 +4,10 @@ description: 阅读关于 [!DNL Adobe Target] at.js JavaScript库。
 title: 有关at.js的常见问题和解答有哪些？
 feature: at.js
 exl-id: 362ccc5b-8731-46c0-bc52-3e55c273e216
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+source-git-commit: 448c43c0c10e22ad054f4ee98bfc282f8c96cdcb
 workflow-type: tm+mt
-source-wordcount: '2897'
-ht-degree: 50%
+source-wordcount: '2938'
+ht-degree: 39%
 
 ---
 
@@ -15,11 +15,11 @@ ht-degree: 50%
 
 关于的常见问题解答 [!DNL Adobe Target] at.js JavaScript库。
 
-## 与 mbox.js 相比，使用 at.js 具有什么好处？
+## 与mbox.js相比，使用at.js具有哪些优势？
 
-at.js库将取代mbox.js。 不再支持mbox.js库。 但是，对于大多数人来说，at.js 比 mbox.js 更具优势。
+at.js库将取代mbox.js。 不再支持mbox.js库。 但是，对于大多数人来说，at.js将能够比mbox.js提供更大的优势。
 
-使用 at.js 具有许多好处，包括缩短 Web 实施的页面加载时间，增强安全性，以及为单页应用程序提供更好的实施选项，等等。
+使用at.js具有许多好处，包括缩短Web实施的页面加载时间，增强安全性，以及为单页应用程序提供更好的实施选项，等等。
 
 下图说明了使用 mbox.js 与使用 at.js 时的页面加载性能。
 
@@ -29,9 +29,9 @@ at.js库将取代mbox.js。 不再支持mbox.js库。 但是，对于大多数�
 
 如上图所示，使用mbox.js时，页面内容直到 [!DNL Target] 呼叫完成。 使用 at.js 时，在 [!DNL Target] 调用启动后即会开始加载页面内容，而不会等到调用完成才开始加载。
 
-## at.js 和 mbox.js 对页面加载时间有何影响？
+## at.js和mbox.js对页面加载时间有何影响？
 
-很多客户和顾问都想了解 at.js 和 mbox.js 对页面加载时间的影响，特别是对于新用户与旧用户的情况。但遗憾的是，由于每位客户的实施不尽相同，因此很难评测 at.js 或 mbox.js 对页面加载时间的影响并给出具体的数字。
+许多客户和顾问都想了解at.js和mbox.js对页面加载时间的影响，尤其是对于新用户与旧用户的情况。 遗憾的是，由于每位客户的实施不尽相同，因此很难评测at.js或mbox.js对页面加载时间的影响并给出具体的数字。
 
 但是，如果页面上存在访客API， [!DNL Target] 可以更好地了解at.js和mbox.js对页面加载时间有何影响。
 
@@ -69,9 +69,9 @@ at.js库将取代mbox.js。 不再支持mbox.js库。 但是，对于大多数�
 
 ## 为何从以前版本的 at.js 升级到版本 1.0.0 后，响应时间似乎变长了？
 
-at.js 版本 1.0.0 及更高版本可并行触发所有请求。以前的版本会按顺序执行请求，这意味着请求会被放入队列中，并且 [!DNL Target] 会等待第一个请求完成，然后再转到下一个请求。
+at.js版本1.0.0及更高版本可并行触发所有请求。 以前的版本会按顺序执行请求，这意味着请求会被放入队列中，并且 [!DNL Target] 会等待第一个请求完成，然后再转到下一个请求。
 
-以前版本的 at.js 执行请求的方式容易受到“队头阻塞”的影响。在at.js 1.0.0及更高版本中， [!DNL Target] 切换到并行请求执行。
+早期版本的at.js执行请求的方式容易受到“队头阻塞”的影响。 在at.js 1.0.0及更高版本中， [!DNL Target] 切换到并行请求执行。
 
 例如，如果您检查at.js 0.9.1的“网络”选项卡瀑布图，则下一步将看到该瀑布图 [!DNL Target] 在前一个请求完成之前，不会启动请求。 at.js 1.0.0及更高版本的情况并非如此，所有请求基本上可以同时启动。
 
@@ -118,29 +118,29 @@ at.js 1.0.0版本使您可以加载 [!DNL Target] 库异步运行。
 
 ## at.js是否与 [!DNL Adobe Experience Manager] 集成(Experience Manager)？
 
-现在，带有 FP-11577 的 [!DNL Adobe Experience Manager] 6.2（或更高版本）支持通过其 [!UICONTROL Adobe Target 云服务]集成来实施 at.js。
+[!DNL Adobe Experience Manager] 现在，带有FP-11577的6.2（或更高版本）支持通过其 [!UICONTROL Adobe TargetCloud Service] 集成。
 
-## 使用 at.js 时，我如何才能阻止页面加载闪烁？
+## 使用at.js时，我如何才能阻止页面加载闪烁？
 
-[!DNL Target] 提供了多种方法来阻止页面加载闪烁。有关更多信息，请参阅 [使用at.js阻止闪烁](/help/dev/implement/client-side/atjs/how-atjs-works/manage-flicker-with-atjs.md).
+[!DNL Target] 提供了几种防止页面加载闪烁的方法。 有关更多信息，请参阅 [使用at.js阻止闪烁](/help/dev/implement/client-side/atjs/how-atjs-works/manage-flicker-with-atjs.md).
 
-## at.js 的文件大小是多少？
+## at.js的文件大小是多少？
 
 at.js 文件在下载后大约为 109 KB。但是，由于大多数服务器会自动压缩文件以缩小文件大小，因此在服务器上压缩（使用 GZIP 或其他方法）后，at.js 的大小约为 34 KB，并且该文件会在用户访问您的网站时加载。安装 at.js 的服务器上的压缩设置决定了其实际压缩大小。
 
-## 为何 at.js 比 mbox.js 大？
+## at.js为何比mbox.js大？
 
-at.js 实施使用单个库 (at.js)，而 mbox.js 实施则实际使用两个库（mbox.js 和 target.js）。因此，更公平的比较方式是将 at.js 与 mbox.js *和* `target.js` 进行比较。若比较两个版本的 gzip 压缩文件大小，at.js 版本 1.2 的大小为 34 KB，而 mbox.js 版本 63 的大小则为 26.2 KB。
+at.js实施使用单个库( at.js)，而mbox.js实施则实际使用两个库（ mbox.js和target.js）。 因此，更公平的比较方式是将 at.js 与 mbox.js *和* `target.js` 进行比较。若比较两个版本的 gzip 压缩文件大小，at.js 版本 1.2 的大小为 34 KB，而 mbox.js 版本 63 的大小则为 26.2 KB。
 
 at.js 更大，因为与 mbox.js 相比，它执行更多的 DOM 解析。该解析是必需的，因为 at.js 会在 JSON 响应中获取“原始”数据，并且必须了解这些数据的含义。使用的mbox.js `document.write()` 所有的解析都是由浏览器完成的。
 
 尽管文件较大，但我们的测试表明，与使用 mbox.js 相比，使用 at.js 可加快页面加载速度。此外，at.js的安全性也更高，因为它不会动态加载其他文件或使用 `document.write`.
 
-## at.js 中是否有 jQuery？如果我的网站上已有 jQuery，我是否可以删除 at.js 中的这一部分？
+## at.js 中是否有 jQuery？如果我的网站上已有jQuery，我是否可以删除at.js中的这一部分？
 
 at.js当前使用部分jQuery，因此您会在at.js顶部看到MIT许可证通知。 jQuery 不会显示，且不会影响您的页面上已有的 jQuery 库，页面上已有的 jQuery 版本可能不同。不支持删除 at.js 内的 jQuery 代码。
 
-## at.js 是否支持 Safari 和将跨域设置为“仅限 x”？
+## at.js是否支持Safari和将跨域设置为“仅限x”？
 
 不需要，如果跨域设置为x-only且Safari禁用了第三方Cookie，则mbox.js和at.js会设置一个禁用的Cookie，并且不会为该特定客户端的域执行任何mbox请求。
 
@@ -160,9 +160,9 @@ at.js当前使用部分jQuery，因此您会在at.js顶部看到MIT许可证通�
 
 ## 为何 mbox 没有在我的网页上触发？
 
-[!DNL Target] 客户有时会将基于云的实例与 [!DNL Target] 结合使用来进行测试或简单的概念验证。这些域以及其他许多域均是[公共后缀列表](https://publicsuffix.org/list/public_suffix_list.dat)的一部分。
+[!DNL Target] 客户有时会将基于云的实例与结合使用 [!DNL Target] 用于测试或简单的概念验证。 这些域以及其他许多域均是[公共后缀列表](https://publicsuffix.org/list/public_suffix_list.dat)的一部分。
 
-如果您使用这些域，则新型浏览器不会保存Cookie，除非您自定义 `cookieDomain` 使用targetGlobalSettings()设置。 有关更多信息，请参阅[结合使用基于云的实例和  [!DNL Target]](/help/dev/implement/client-side/target-debugging-atjs/targeting-using-cloud-based-instances.md)。
+如果您使用这些域，则新型浏览器不会保存Cookie，除非您自定义 `cookieDomain` 使用targetGlobalSettings()设置。 有关更多信息，请参阅 [结合使用基于云的实例 [!DNL Target]](/help/dev/implement/client-side/target-debugging-atjs/targeting-using-cloud-based-instances.md).
 
 ## 使用 at.js 时，IP 地址能否用作 Cookie 域？
 
@@ -196,15 +196,15 @@ if (/^123\.456\.78\..*/g.test(window.location.hostname)) {
 
 ## 为何我会看到诸如“操作缺少选择器”之类的警告消息？
 
-这些消息与at.js功能无关。 at.js 库会尝试报告无法在 DOM 中找到的任何内容。
+这些消息与at.js功能无关。 at.js库会尝试报告无法在DOM中找到的任何内容。
 
 如果看到此类警告消息，则根本原因可能如下所示：
 
 * 页面正在动态生成，且at.js无法找到该元素。
 * 页面构建缓慢（由于网络速度慢），并且at.js无法在DOM中找到选择器。
 * 正在运行活动的页面结构发生更改。如果您在可视化体验编辑器 (VEC) 中重新打开活动，则应会收到警告消息。更新活动，以便能够找到所有必需的元素。
-* 基础页面是单页应用程序 (SPA) 的一部分，或者该页面包含显示在页面更靠底部的元素，且 at.js“选择器轮询机制”无法找到这些元素。增加 `selectorsPollingTimeout` 可能会有所帮助。有关更多信息，请参阅 [targetGlobalSettings()](/help/dev/implement/client-side/atjs/atjs-functions/targetglobalsettings.md)。
-* 任何点击跟踪量度都会尝试将其自身添加到每个页面，而不考虑已设置量度的 URL。尽管不会产生不利影响，但此情况会显示许多此类消息。
+* 基础页面是单页应用程序(SPA)的一部分，或者该页面包含显示在页面更靠底部的元素，并且at.js“选择器轮询机制”无法找到这些元素。 增加 `selectorsPollingTimeout` 可能会有所帮助。有关更多信息，请参阅 [targetGlobalSettings()](/help/dev/implement/client-side/atjs/atjs-functions/targetglobalsettings.md)。
+* 任何点击跟踪量度都会尝试将其自身添加到每个页面，而不考虑已设置量度的 URL。这种情况虽然无害，但使许多此类消息得以显示。
 
   为了获得最佳结果，请下载并使用 [最新版本的at.js](/help/dev/implement/client-side/atjs/target-atjs-versions.md). 有关如何下载at.js的更多信息，请参阅 [使用下载at.js [!DNL Target] 界面](how-to-deployatjs/implement-target-without-a-tag-manager.md#download-atjs-using-the-target-interface) 中的部分 [*如何部署at.js* > *实施 [!DNL Target] 没有标签管理器*](how-to-deployatjs/implement-target-without-a-tag-manager.md) 文章。
 
@@ -214,7 +214,7 @@ tt.omtrdc.net是AdobeEDGE网络的域名，用于接收所有服务器调用 [!D
 
 ## 为什么at.js不始终使用HttpOnly和Secure Cookie标记？
 
-HttpOnly 只能通过服务器端代码进行设置。[!DNL Target] Cookie（例如 mbox）通过 JavaScript 代码创建和保存，因此 无法使用 HttpOnly Cookie 标记。[!DNL Target][!DNL Target] 启用跨域后，不为从服务器端设置的第三方Cookie使用set HttpOnly。
+HttpOnly 只能通过服务器端代码进行设置。[!DNL Target] Cookie（例如mbox）是通过JavaScript代码创建和保存的，因此 [!DNL Target] 无法使用HttpOnly Cookie标记。 [!DNL Target] 启用跨域后，不为从服务器端设置的第三方Cookie使用set HttpOnly。
 
 只有在通过 HTTPS 加载页面时，才能通过 JavaScript 设置 Secure 标记。如果页面最初通过 HTTP 加载，则 JavaScript 无法设置此标记。此外，如果使用Secure标记，则Cookie仅在HTTPS页面上可用。 对于通过HTTPS加载的页面， [!DNL Target] 设置Secure和SameSite=None属性。
 
@@ -242,13 +242,13 @@ HttpOnly 只能通过服务器端代码进行设置。[!DNL Target] Cookie（例
 * 可以禁用响应令牌([响应令牌](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html))
 * 它们仅在Adobe解决方案的环境中有用。
 
-预计将会看到 `Access-Control-Allow-Origin` at.js请求中具有值“*”的标头，由于这些标头是公共的，因此无需进行身份验证，并且需要通过JavaScript调用从任何域访问Adobe Edge网络。
+预计将会看到 `Access-Control-Allow-Origin` at.js请求中具有值“*”的标头，由于它们是公共的，因此无需身份验证，并且需要通过JavaScript调用从任何域访问Adobe Edge网络。
 
 但是，需要在页面上实施内容安全策略(CSP)。 有关at.js的CSP要求的更多信息，请参阅 [内容安全策略](/help/dev/before-implement/privacy/content-security-policy.md) 和 [targetGlobalSettings](/help/dev/implement/client-side/atjs/atjs-functions/targetglobalsettings.md).
 
 ## at.js 多久触发一次网络请求？
 
-[!DNL Target] 可在服务器端执行其所有决策。这意味着每次重新加载页面或调用 at.js 公共 API 时，at.js 都会触发网络请求。
+[!DNL Target] 在服务器端执行其所有决策。 这意味着每次重新加载页面或调用 at.js 公共 API 时，at.js 都会触发网络请求。
 
 ## 在最佳情况下，当执行隐藏、替换和显示内容这类页面加载操作时，用户是否不会受到明显影响？
 
@@ -264,7 +264,7 @@ at.js会试图避免长时间预先隐藏HTMLBODY或其他DOM元素，但这具�
 1. 在 [!DNL Target] 已收到响应， [!DNL Target] 提取CSS选择器。
 1. 使用CSS选择器， [!DNL Target] 创建STYLE标记以预先隐藏将自定义的DOM元素。
 1. 删除 HTML 主体预先隐藏 STYLE。
-1. [!DNL Target] 对 DOM 元素启动轮询。
+1. [!DNL Target] 开始轮询DOM元素。
 1. 如果找到DOM元素， [!DNL Target] 应用DOM更改并删除元素预隐藏样式。
 1. 如果未找到DOM元素，则全局超时将取消隐藏这些元素，以避免页面损坏。
 
@@ -296,4 +296,8 @@ at.js 需要 HTML 5 doctype。
 
 `<!DOCTYPE html>`
 
-HTML 5 doctype 可确保页面以标准模式加载。在 Quirks 模式下加载时，at.js 所依赖的一些 JS API 将被禁用。[!DNL Target] 会在 Quirks 模式下禁用 at.js。
+HTML 5 doctype 可确保页面以标准模式加载。在 Quirks 模式下加载时，at.js 所依赖的一些 JS API 将被禁用。[!DNL Target] 在Quirks模式下禁用at.js。
+
+## at.js是否可以在Ionic应用程序环境中工作。
+
+此实施从未进行过测试，因为at.js并不打算在非Web环境中工作。 [!DNL Adobe] 建议其 [适用于移动实施的SDK](/help/dev/implement/mobile/overview.md).
