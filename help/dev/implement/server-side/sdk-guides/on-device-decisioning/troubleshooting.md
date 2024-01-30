@@ -3,9 +3,9 @@ title: 设备上决策疑难解答
 description: 了解如何进行故障排除 [!UICONTROL 设备上决策]
 exl-id: e76f95ce-afae-48e0-9dbb-2097133574dc
 feature: APIs/SDKs
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+source-git-commit: 1d892d4d4d6f370f7772d0308ee0dd0d5c12e700
 workflow-type: tm+mt
-source-wordcount: '1161'
+source-wordcount: '1177'
 ht-degree: 0%
 
 ---
@@ -115,7 +115,7 @@ java -Dorg.slf4j.simpleLogger.defaultLogLevel=DEBUG ...
 
 ## 3.验证 [!UICONTROL 设备上决策] *规则构件* 已根据定义的轮询间隔进行检索和缓存。
 
-1. 等待轮询间隔的持续时间（默认值为5分钟），并确保SDK正在获取构件。 将输出相同的终端日志。
+1. 等待轮询间隔的持续时间（默认值为20分钟），并确保SDK正在获取构件。 将输出相同的终端日志。
 
    此外，来自[!DNL Target]应将跟踪输出到终端，其中包含有关规则工件的详细信息。
 
