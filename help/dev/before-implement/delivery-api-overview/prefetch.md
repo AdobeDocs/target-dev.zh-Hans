@@ -4,9 +4,9 @@ description: 如何在中使用预取 [!UICONTROL Adobe Target交付API]？
 keywords: 投放api
 exl-id: eab88e3a-442c-440b-a83d-f4512fc73e75
 feature: APIs/SDKs
-source-git-commit: 91592a86957770c4d189115fd3ebda61ed52dd38
+source-git-commit: 803723d95d50cc39101d1646232446fbb0254385
 workflow-type: tm+mt
-source-wordcount: '553'
+source-wordcount: '556'
 ht-degree: 0%
 
 ---
@@ -126,7 +126,7 @@ curl -X POST \
 
 [[!UICONTROL Adobe Analytics目标版]](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t.html){target=_blank} (A4T)是一种跨解决方案的集成，通过它，可根据以下内容创建活动 [!DNL Analytics] 转化量度和受众区段。
 
-以下代码片段允许您预取包含以下 `clickTrack` 要通知的量度 [!DNL Analytics] 已单击选件时的响应：
+以下代码片段是来自预获取mbox的响应，其中包含 `clickTrack` 要通知的量度 [!DNL Analytics] 已单击选件时的响应：
 
 ```
 {
