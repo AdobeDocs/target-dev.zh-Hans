@@ -4,9 +4,9 @@ description: 如何在中使用预取 [!UICONTROL Adobe Target交付API]？
 keywords: 投放api
 exl-id: eab88e3a-442c-440b-a83d-f4512fc73e75
 feature: APIs/SDKs
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+source-git-commit: 91592a86957770c4d189115fd3ebda61ed52dd38
 workflow-type: tm+mt
-source-wordcount: '478'
+source-wordcount: '553'
 ht-degree: 0%
 
 ---
@@ -121,6 +121,51 @@ curl -X POST \
 ```
 
 在响应中，您将看到 `content` 包含要向用户显示的特定体验的字段 `mbox`. 当缓存到您的服务器上时，此功能非常有用，这样当用户与会话中的Web或移动应用程序交互并访问 `mbox` 在应用程序的任何特定页面上，可以从缓存中提供体验，而不是再提供体验 [!UICONTROL Adobe Target交付API] 呼叫。 但是，在从将体验交付给用户时 `mbox`， a `notification` 将通过投放API调用发送，以便进行展示日志记录。 这是因为 `prefetch` 调用已缓存，这意味着用户在 `prefetch` 呼叫发生。 为了进一步了解 `notification` 进程，请参见 [通知](notifications.md).
+
+## 使用时通过clickTrack量度预取mbox [!UICONTROL 目标分析] (A4T)
+
+[[!UICONTROL Adobe Analytics目标版]](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t.html){target=_blank} (A4T)是一种跨解决方案的集成，通过它，可根据以下内容创建活动 [!DNL Analytics] 转化量度和受众区段。
+
+以下代码片段允许您预取包含以下 `clickTrack` 要通知的量度 [!DNL Analytics] 已单击选件时的响应：
+
+```
+{
+  "prefetch": {
+    "mboxes": [
+      {
+        "index": 0,
+        "name": "<mboxName>",
+        "options": [
+           ...
+        ],
+        "metrics": [
+          {
+            "type": "click",
+            "eventToken": "<eventToken>",
+             "analytics": {
+               "payload": {
+                 "pe": "tnt",
+                 "tnta": "..."
+               }
+             }
+          },
+          }
+        ],
+        "analytics": {
+          "payload": {
+            "pe": "tnt",
+            "tnta": "347565:1:0|2,347565:1:0|1"
+          }
+        }
+      }
+    ]
+  }
+}
+```
+
+>[!NOTE]
+>
+>mbox的预获取包含 [!DNL Analytics] 仅限符合条件的活动的有效负荷。 预取尚未符合条件的活动的成功量度会导致报表不一致。
 
 ## 预取视图
 
