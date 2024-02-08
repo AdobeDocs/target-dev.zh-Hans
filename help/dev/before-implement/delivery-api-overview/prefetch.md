@@ -4,28 +4,28 @@ description: 如何在中使用预取 [!UICONTROL Adobe Target交付API]？
 keywords: 投放api
 exl-id: eab88e3a-442c-440b-a83d-f4512fc73e75
 feature: APIs/SDKs
-source-git-commit: 9a3068b0765c238daa2f9af904c0f6f15b57cc24
+source-git-commit: 901b56a91c69c9c5a2bd322aa999d45c47058a5e
 workflow-type: tm+mt
-source-wordcount: '557'
+source-wordcount: '547'
 ht-degree: 0%
 
 ---
 
 # 预取
 
-预取允许移动设备应用程序和服务器等客户端在一个请求中为多个mbox或视图获取内容，并将其缓存在本地，然后通知 [!DNL Target] 用户访问这些mbox或视图时。
+预取允许移动设备应用程序和服务器等客户端在一个请求中为多个mbox或视图获取内容，并将其缓存在本地，然后通知 [!DNL Target] 访客访问这些mbox或视图时。
 
-在使用预取时，请务必熟悉以下术语：
+使用预取时，请务必熟悉以下术语：
 
 | 字段名称 | 描述 |
 | --- | --- |
-| `prefetch` | 应获取但不应标记为已访问的mbox和视图的列表。 此 [!DNL Target] Edge返回 `eventToke`对于预取数组中存在的每个mbox或视图，返回n。 |
+| `prefetch` | 应获取但不应标记为已访问的mbox和视图的列表。 此 [!DNL Target] Edge返回 `eventToken` 预取数组中存在的每个mbox或视图。 |
 | `notifications` | 之前预取并应标记为已访问的mbox和视图的列表。 |
 | `eventToken` | 在预取内容时返回的哈希加密令牌。 此令牌应发送回 [!DNL Target] 在 `notifications` 数组。 |
 
 ## 预取Mbox
 
-移动设备应用程序和服务器等客户端可以在一个会话中为给定用户预取多个mbox并将其缓存，以避免多次调用 [!UICONTROL Adobe Target交付API].
+客户端（如移动应用程序和服务器）可以在一个会话中为给定访客预取多个mbox，并将其缓存，以避免多次调用 [!UICONTROL Adobe Target交付API].
 
 ```
 curl -X POST \
@@ -69,7 +69,7 @@ curl -X POST \
 }'
 ```
 
-在 `prefetch` 字段，添加一个或多个 `mboxes` 一次预取会话中某个用户的值。 一旦您预取了这些 `mboxes` 您将收到以下响应：
+在 `prefetch` 字段，添加一个或多个 `mboxes` 您需要为会话中的访客至少预取一次。 在预取这些内容之后 `mboxes`，您将收到以下响应：
 
 ```
 {
@@ -120,9 +120,9 @@ curl -X POST \
 }
 ```
 
-在响应中，您将看到 `content` 包含要向用户显示的特定体验的字段 `mbox`. 当缓存到您的服务器上时，此功能非常有用，这样当用户与会话中的Web或移动应用程序交互并访问 `mbox` 在应用程序的任何特定页面上，可以从缓存中提供体验，而不是再提供体验 [!UICONTROL Adobe Target交付API] 呼叫。 但是，在从将体验交付给用户时 `mbox`， a `notification` 将通过投放API调用发送，以便进行展示日志记录。 这是因为 `prefetch` 调用已缓存，这意味着用户在 `prefetch` 呼叫发生。 为了进一步了解 `notification` 进程，请参见 [通知](notifications.md).
+在响应中，您会看到 `content` 包含要向访客显示的特定体验的字段 `mbox`. 当您在服务器上缓存时，此功能非常有用，这样当访客在会话中与Web或移动应用程序交互并访问 `mbox` 在应用程序的任何特定页面上，可以从缓存中提供体验，而不是再提供体验 [!UICONTROL Adobe Target交付API] 呼叫。 但是，在将体验从交付给访客时， `mbox`， a `notification` 通过投放API调用发送，以便进行展示日志记录。 这是因为 `prefetch` 调用已缓存，这意味着访客在每次调用 `prefetch` 呼叫发生。 要了解有关 `notification` 流程，请参阅 [通知](notifications.md).
 
-## 使用时通过clickTrack量度预取mbox [!UICONTROL 目标分析] (A4T)
+## 预取mbox，使用 `clickTrack` 量度（使用时） [!UICONTROL 目标分析] (A4T)
 
 [[!UICONTROL Adobe Analytics目标版]](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t.html){target=_blank} (A4T)是一种跨解决方案的集成，通过它，可根据以下内容创建活动 [!DNL Analytics] 转化量度和受众区段。
 
