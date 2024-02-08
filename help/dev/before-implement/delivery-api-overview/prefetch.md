@@ -4,9 +4,9 @@ description: 如何在中使用预取 [!UICONTROL Adobe Target交付API]？
 keywords: 投放api
 exl-id: eab88e3a-442c-440b-a83d-f4512fc73e75
 feature: APIs/SDKs
-source-git-commit: 901b56a91c69c9c5a2bd322aa999d45c47058a5e
+source-git-commit: 4ff2746b8b485fe3d845337f06b5b0c1c8d411ad
 workflow-type: tm+mt
-source-wordcount: '547'
+source-wordcount: '549'
 ht-degree: 0%
 
 ---
@@ -27,7 +27,7 @@ ht-degree: 0%
 
 客户端（如移动应用程序和服务器）可以在一个会话中为给定访客预取多个mbox，并将其缓存，以避免多次调用 [!UICONTROL Adobe Target交付API].
 
-```
+```shell shell-session
 curl -X POST \
 'https://demo.tt.omtrdc.net/rest/v1/delivery?client=demo&sessionId=7abf6304b2714215b1fd39a870f01afc#1555632114' \
 -H 'Content-Type: application/json' \
@@ -71,7 +71,7 @@ curl -X POST \
 
 在 `prefetch` 字段，添加一个或多个 `mboxes` 您需要为会话中的访客至少预取一次。 在预取这些内容之后 `mboxes`，您将收到以下响应：
 
-```
+```JSON {line-numbers="true"}
 {
     "status": 200,
     "requestId": "5efee0d8-3779-4b12-a74e-e04848faf191",
@@ -128,7 +128,7 @@ curl -X POST \
 
 以下代码片段是mbox预取产生的响应，其中包含 `clickTrack` 要通知的量度 [!DNL Analytics] 已单击选件时的响应：
 
-```
+```JSON {line-numbers="true"}
 {
   "prefetch": {
     "mboxes": [
@@ -169,9 +169,9 @@ curl -X POST \
 
 ## 预取视图
 
-视图可以更加无缝地支持单页应用程序(SPA)和移动应用程序。 视图可以视为视觉元素的逻辑组，这些元素共同构成了SPA或移动设备体验。 现在，VEC通过投放API创建了AB和XT活动，并对它们进行了修改 [SPA视图](/help/dev/implement/client-side/atjs/how-to-deployatjs/target-atjs-single-page-application.md) 现在可以预取。
+视图可以更加无缝地支持单页应用程序(SPA)和移动应用程序。 视图可以视为视觉元素的逻辑组，这些元素共同构成了SPA或移动设备体验。 现在，通过投放API，VEC创建了 [[!UICONTROL A/B测试]](https://experienceleague.adobe.com/docs/target/using/activities/abtest/test-ab.html){target=_blank} and [[!UICONTROL Experience Targeting]](https://experienceleague.adobe.com/docs/target/using/activities/experience-targeting/experience-target.html){target=_blank} (X)T对进行修改的活动 [SPA视图](/help/dev/implement/client-side/atjs/how-to-deployatjs/target-atjs-single-page-application.md) 现在可以预取。
 
-```
+```shell  {line-numbers="true"}
 curl -X POST \
   'https://demo.tt.omtrdc.net/rest/v1/delivery?client=demo&sessionId=a3e7368c62d944c0855d424cd7a03ab0' \
   -H 'Content-Type: application/json' \
@@ -199,9 +199,9 @@ curl -X POST \
 }'
 ```
 
-上面的示例调用将预取通过SPA VEC为AB和XT活动创建的所有视图，以针对Web显示 `channel`. 请注意，在调用中，我们要从访客所在的AB或XT活动中预取所有视图 `tntId`：`84e8d0e211054f18af365d65f45e902b.28_131` 正在访问 `url`：`https://target.enablementadobe.com/react/demo/#/` 符合条件。
+上述示例调用预取通过SPA VEC为创建的所有视图 [!UICONTROL A/B测试] 和要为Web显示的XT活动 `channel`. 请注意，调用会预取以下对象的所有视图： [!UICONTROL A/B测试] 或XT活动 `tntId`：`84e8d0e211054f18af365d65f45e902b.28_131` 正在访问 `url`：`https://target.enablementadobe.com/react/demo/#/` 符合条件。
 
-```
+```JSON  {line-numbers="true"}
 {
     "status": 200,
     "requestId": "14ce028e-d2d2-4504-b3da-32740fa8dd61",
@@ -280,4 +280,4 @@ curl -X POST \
 }
 ```
 
-在 `content` 响应的字段，请注意元数据，例如 `type`， `selector`， `cssSelector`、和 `content`，用于在用户访问您的页面时向最终用户呈现体验。 请注意 `prefetched` 如有必要，可以缓存内容并将其呈现给用户。
+在 `content` 响应的字段，请注意元数据，例如 `type`， `selector`， `cssSelector`、和 `content`，用于在用户访问您的页面时向访客呈现体验。 请注意 `prefetched` 如有必要，可以缓存内容并将其呈现给用户。
