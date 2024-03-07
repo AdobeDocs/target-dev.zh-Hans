@@ -4,10 +4,10 @@ description: 使用移动设备预览链接对移动设备应用程序活动执�
 title: 如何在中使用移动设备预览链接 [!DNL Adobe Target] 手机？
 feature: Implement Mobile
 exl-id: c0c4237a-de1f-4231-b085-f8f1e96afc13
-source-git-commit: 0bcfa16cb79644e7ce10e33daf6c8385104c197f
+source-git-commit: 15e42d0fb049f9243ff5468ff5f22a8e79c55c79
 workflow-type: tm+mt
-source-wordcount: '548'
-ht-degree: 27%
+source-wordcount: '508'
+ht-degree: 23%
 
 ---
 
@@ -38,25 +38,25 @@ ht-degree: 27%
 
 ## 生成预览链接
 
-1. 在 [!DNL Target] 在UI中，单击 **[!UICONTROL 更多选项]** 图标（垂直省略号），然后选择 **[!UICONTROL 创建移动设备预览链接]**.
+1. 在 [!DNL Target] 在UI中，单击 **[!UICONTROL More Options]** 图标（垂直省略号），然后选择 **[!UICONTROL Create Mobile Preview Link]**.
 
    ![替代图像](assets/mobile-preview-create.png)
 
-1. 选择要预览的活动，然后单击 **[!UICONTROL 生成移动设备预览链接]**.
+1. 选择要预览的活动，然后单击 **[!UICONTROL Generate Mobile Preview Link]**.
 
    >[!NOTE]
    >
-   >您只能选择基于表单的 [!UICONTROL A/B测试] 和 [!UICONTROL 体验定位] (XT)活动。
+   >您只能选择基于表单的 [!UICONTROL A/B Test] 和 [!UICONTROL Experience Targeting] (XT)活动。
 
    ![替代图像](assets/mobile-preview-select-activities.png)
 
 1. 指定应用程序的 URL 方案。
 
-   这些URL方案必须与iOS或Android应用程序中提供的方案相同。 如有必要，请分别对iOS和Android重复此过程。
+   URL方案必须与iOS或Android应用程序中提供的方案相同。 如有必要，请分别对iOS和Android重复此过程。
 
    ![替代图像](assets/mobile-preview-enter-url-scheme.png)
 
-1. 单击&#x200B;**[!UICONTROL 生成移动设备预览链接]**，然后复制该链接。
+1. 单击 **[!UICONTROL Generate Mobile Preview Link]**，然后复制链接。
 
    ![替代图像](assets/mobile-preview-generate-and-copy.png)
 
@@ -70,14 +70,14 @@ ht-degree: 27%
 
    |![预览深层链接 1](assets/mobile-preview-open-deeplink.png)|![预览深层链接 2](assets/mobile-preview-open-app.png)|
 
-   您的应用程序随即会打开，并启动 [!DNL Target] [!UICONTROL 移动设备预览模式].
+   您的应用程序随即会打开，并启动 [!DNL Target] [!UICONTROL Mobile Preview Mode].
 
-1. 选择要查看的体验组合，然后单击&#x200B;**[!UICONTROL 启动体验]**。
+1. 选择要查看的体验组合，然后单击 **[!UICONTROL Launch Experiences]**.
 
    |![移动设备预览 1](assets/mobile-preview-experience-selection-1.png)|![移动设备预览 2](assets/mobile-preview-experience-result-1-france.png)|![移动设备预览 3](assets/mobile-preview-experience-result-1-shipfree.png)|
 |![移动设备预览 4](assets/mobile-preview-experience-selection-2.png)|![移动设备预览 5](assets/mobile-preview-experience-result-2-aus.png)|![移动设备预览 6](assets/mobile-preview-experience-result-2-10off.png)|
 
 ## 限制
 
-* 单击“**[!UICONTROL 启动体验]**”按钮后，必须重新加载视图，才能显示新内容。最简单的方式是先切换到另一个屏幕，然后再返回到您期待发生更改的屏幕。
+* 视图必须再次加载才能在之后显示新内容 **[!UICONTROL Launch Experiences]** 已单击按钮。 最简单的方式是先切换到另一个屏幕，然后再返回到您期待发生更改的屏幕。
 * 低于 API-19 (KitKat) 的 Android 版本不支持移动设备预览功能。
