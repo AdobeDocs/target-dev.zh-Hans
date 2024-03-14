@@ -4,16 +4,22 @@ description: 了解 [!DNL Adobe Target] 服务器端交付API、SDK和 [!DNL Tar
 title: 我可以从何处了解 [!DNL Target] 服务器端交付API和SDK？
 feature: Implement Server-side
 exl-id: 3eb0a789-cf1a-4d02-acf7-3c895bcb662f
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+source-git-commit: 75af30045684b95d5989b0a1f877ba95bb8cd883
 workflow-type: tm+mt
-source-wordcount: '545'
-ht-degree: 14%
+source-wordcount: '569'
+ht-degree: 13%
 
 ---
 
 # 服务器端：实施 [!DNL Target]
 
 有关信息 [!DNL Adobe Target] 服务器端交付API、SDK和 [!DNL Target Recommendations] API。
+
+>[!NOTE]
+>
+>如果您的实施使用at.js和 [!DNL AppMeasurement] 在客户端，您应使用 [!UICONTROL Target Delivery API] 和服务器端SDK一起使用。
+>
+>如果您的实施使用 [!UICONTROL Adobe Experience Platform Web SDK]，您应使用 [[!UICONTROL Adobe Experience Platform] [!UICONTROL Edge Network Server API]](https://experienceleague.adobe.com/en/docs/experience-platform/edge-network-server-api/overview){target=_blank}.
 
 以下过程会在 [!DNL Target] 的服务器端实施中发生：
 
