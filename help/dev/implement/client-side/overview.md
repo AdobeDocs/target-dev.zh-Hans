@@ -4,10 +4,10 @@ description: 了解如何实施 [!DNL Adobe Target] 对于客户端Web，使用 
 title: 如何实施 [!DNL Target] 用于客户端Web
 feature: at.js
 exl-id: b3a850ff-ace0-4eea-955a-aa71dfad256f
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+source-git-commit: 2d2a593df661c7e6c6e6384af6042e8aa4575fdb
 workflow-type: tm+mt
-source-wordcount: '225'
-ht-degree: 30%
+source-wordcount: '207'
+ht-degree: 28%
 
 ---
 
@@ -24,3 +24,6 @@ ht-degree: 30%
 * [[!DNL Target] at.js JavaScript库](/help/dev/implement/client-side/atjs/how-atjs-works/overview.md)
 
   使用at.js JavaScript库可缩短Web实施的页面加载时间，增强安全性，并为单页应用程序提供更好的实施选项。 如果您选择迁移到at.js，请参阅 [At.js的工作原理](/help/dev/implement/client-side/atjs/how-atjs-works/overview.md) 和 [[!DNL Adobe Target] Skill Builder：开发人员聊天，将Adobe Target的mbox.js迁移到at.js](https://seminars.adobeconnect.com/ptdo6mfo6qn6/?proto=true).
+
+
+请参阅 [将at.js库与Web SDK进行比较](https://experienceleague.adobe.com/en/docs/experience-platform/web-sdk/personalization/adobe-target/web-sdk-atjs-comparison){target=_blank} 以了解这两种实施方法之间的差异。
