@@ -4,10 +4,10 @@ description: 了解如何实施 [!UICONTROL Recommendations] 中的活动 [!DNL 
 title: 如何实施 [!UICONTROL Recommendations] 活动？
 feature: Recommendations
 exl-id: af1e8b60-6dbb-451b-aa4f-e167d1800d1c
-source-git-commit: 2fba03b3882fd23a16342eaab9406ae4491c9044
+source-git-commit: 777c8b9aeb866e1b20ec24e85532a99f57d1fe72
 workflow-type: tm+mt
-source-wordcount: '1461'
-ht-degree: 29%
+source-wordcount: '1365'
+ht-degree: 25%
 
 ---
 
@@ -17,7 +17,7 @@ ht-degree: 29%
 
 >[!NOTE]
 >
->除了本文之外， [Adobe Target商业从业者指南](https://experienceleague.adobe.com/docs/target/using/target-home.html?lang=zh-Hans){target=_blank} contains in-depth information about [Target Recommendations](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations.html){target=_blank}.
+>除了本文之外， [Adobe Target商业从业者指南](https://experienceleague.adobe.com/docs/target/using/target-home.html?lang=zh-Hans){target=_blank} 包含有关以下内容的深入信息 [定位Recommendations](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations.html){target=_blank}.
 
 在设置您的第一个之前 [!UICONTROL Recommendations] 中的活动 [!DNL Adobe Target]，请完成以下步骤：
 
@@ -133,22 +133,22 @@ function targetPageParams() {
 
 ## 5.配置 [!UICONTROL Recommendations] 设置
 
-可使用一些设置来管理[!UICONTROL 推荐]实施。
+可使用一些设置来管理 [!UICONTROL Recommendations] 实施。
 
-要访问“**[!UICONTROL 推荐设置]**”选项，请在 [!DNL Adobe Experience Cloud] 中打开 Target，然后单击&#x200B;**[!UICONTROL 推荐]** > **[!UICONTROL 设置]**。
+要访问 **[!UICONTROL Recommendations Settings]** 选项，在中打开Target [!DNL Adobe Experience Cloud]，然后单击 **[!UICONTROL Recommendations]** > **[!UICONTROL Settings]**.
 
-![替代图像](assets/recs_settings.png)
+![“Recommendations设置”页面](/help/dev/implement/recommendations/assets/recs_settings.png)
 
 以下选项可供选择：
 
 | 设置 | 描述 |
 |--- |--- |
-| 自定义全局 Mbox | （可选）指定要用于提供 [!UICONTROL Target] 活动的自定义全局 mbox。默认情况下，[!UICONTROL Target] 使用的全局 mbox 会用于[!UICONTROL 推荐]。<P>注意：此选项是在 [!UICONTROL Target] **[!UICONTROL 管理]** 页面。 打开 [!UICONTROL Target]，然后单击 **[!UICONTROL 管理]** > **[!UICONTROL 可视化体验编辑器]**. |
+| 自定义全局 Mbox | （可选）指定要用于提供 [!UICONTROL Target] 活动的自定义全局 mbox。默认情况下，使用的全局mbox [!UICONTROL Target] 用于 [!UICONTROL Recommendations].<P>注意：此选项是在 [!UICONTROL Target] **[!UICONTROL Administration]** 页面。 打开 [!UICONTROL Target]，然后单击 **[!UICONTROL Administration]** > **[!UICONTROL Visual Experience Composer]**. |
 | 垂直行业 | 垂直行业用来帮助对您的推荐标准进行分类。此信息可帮助您的团队成员找到适合特定页面的标准，例如最适合购物车页面或媒体页面的标准。 |
-| 筛选不兼容的标准 | 启用此选项，可仅显示要求选定页面传递所需数据的标准。并非每个标准都在每个页面上正确运行。 必须传入页面或mbox `entity.id` 或 `entity.categoryId` 以使当前项目/当前类别推荐兼容。 一般来说，最好只显示兼容的标准。但是，如果您希望将不兼容的标准用于活动，请取消选中此选项。<P>如果使用标签管理解决方案，建议您禁用此选项。<P>有关此选项的更多信息，请参阅 [[!UICONTROL Recommendations] 常见问题解答](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations-faq/recommendations-faq.html) 在 *[!DNL Adobe Target]商业从业者指南*. |
-| 默认主机组 | 选择您的默认主机组。<P>主机组可用于为不同用途而分隔目录中的可用项。例如，您可以将主机组用于“开发和生产”环境、不同的品牌或不同的地理位置。默认情况下，“目录搜索”、“收藏集”和“排除项”中的预览结果均基于默认的主机组。（也可以使用“环境”筛选器来选择要预览结果的不同主机组。）默认情况下，新添加的项目在所有主机组中都可用，除非在创建或更新项目时指定了环境 ID。交付的“推荐”取决于请求中指定的主机组。<P>如果您看不到产品，请确保您使用的是正确的主机组。例如，如果您将推荐设置为使用测试环境并将您的主机组设置为“测试”，则您可能需要在测试环境中重新创建收藏集，之后才会显示产品。要查看每个环境中提供了哪些产品，请在每个环境中使用“目录搜索”。您还可以预览 [!UICONTROL Recommendations] 选定环境（主机组）的收藏集和排除项。<P>**注意：**&#x200B;更改选定的环境后，必须单击搜索以更新返回的结果。<P> **[!UICONTROL “环境”筛选器可从 Target UI 中的以下位置访问：]**<ul><li>目录搜索(**[!UICONTROL Recommendations]** > **[!UICONTROL 目录搜索]**)</li><li>“创建收藏集”对话框(**[!UICONTROL Recommendations]** > **[!UICONTROL 收藏集]** > **[!UICONTROL 新建]**)</li><li>“更新收藏集”对话框(**[!UICONTROL Recommendations]** > **[!UICONTROL 收藏集]** > **[!UICONTROL 编辑]**)</li><li>“创建排除项”对话框(**[!UICONTROL Recommendations]** > **[!UICONTROL 排除项]** > **[!UICONTROL 新建]**)</li><li>“更新排除项”对话框(**[!UICONTROL Recommendations]** > **[!UICONTROL 排除项]** > **[!UICONTROL 编辑]**)</li></ul>有关更多信息，请参阅 [主机](https://experienceleague.adobe.com/docs/target/using/administer/hosts.html) 在 *[!DNL Adobe Target]商业从业者指南*. |
+| 筛选不兼容的标准 | 启用此选项，可仅显示要求选定页面传递所需数据的标准。并非每个标准都在每个页面上正确运行。 必须传入页面或mbox `entity.id` 或 `entity.categoryId` 以使当前项目/当前类别推荐兼容。 一般来说，最好只显示兼容的标准。但是，如果您希望将不兼容的标准用于活动，请取消选中此选项。<P>如果使用标签管理解决方案，建议您禁用此选项。<P>有关此选项的详细信息，请参阅 [[!UICONTROL Recommendations] 常见问题解答](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations-faq/recommendations-faq.html) 在 *[!DNL Adobe Target]商业从业者指南*. |
+| 默认主机组 | 选择默认主机组。<P>主机组可用于为不同用途而分隔目录中的可用项。例如，您可以将主机组用于“开发和生产”环境、不同的品牌或不同的地理位置。默认情况下，“目录搜索”、“收藏集”和“排除项”中的预览结果均基于默认的主机组。（也可以使用“环境”筛选器来选择要预览结果的不同主机组。）默认情况下，新添加的项目在所有主机组中都可用，除非在创建或更新项目时指定了环境 ID。交付的“推荐”取决于请求中指定的主机组。<P>如果您看不到产品，请确保您使用的是正确的主机组。例如，如果您将推荐设置为使用测试环境并将您的主机组设置为“测试”，则您可能需要在测试环境中重新创建收藏集，之后才会显示产品。要查看每个环境中提供了哪些产品，请在每个环境中使用“目录搜索”。您还可以预览 [!UICONTROL Recommendations] 选定环境（主机组）的收藏集和排除项。<P>**注意：** 更改选定的环境后，必须单击“搜索”以更新返回的结果。<P> **[!UICONTROL The Environment]** 筛选器可从Target UI中的以下位置访问：<ul><li>目录搜索(**[!UICONTROL Recommendations]** > **[!UICONTROL Catalog Search]**)</li><li>“创建收藏集”对话框(**[!UICONTROL Recommendations]** > **[!UICONTROL Collections]** > **[!UICONTROL Create New]**)</li><li>“更新收藏集”对话框(**[!UICONTROL Recommendations]** > **[!UICONTROL Collections]** > **[!UICONTROL Edit]**)</li><li>“创建排除项”对话框(**[!UICONTROL Recommendations]** > **[!UICONTROL Exclusions]** > **[!UICONTROL Create New]**)</li><li>“更新排除项”对话框(**[!UICONTROL Recommendations]** > **[!UICONTROL Exclusions]** > **[!UICONTROL Edit]**)</li></ul>有关更多信息，请参阅 [主机](https://experienceleague.adobe.com/docs/target/using/administer/hosts.html) 在 *[!DNL Adobe Target]商业从业者指南*. |
 | 缩览图基本 URL | 为您的产品目录设置基本 URL 后，可以在指定产品缩览图以及传递缩览图 URL 时使用相对 URL。<P>例如：<P>`"entity.thumbnailURL=/Images/Homepage/product1.jpg"`<P>设置的便是相对于缩览图基本 URL 的 URL。 |
-| [!UICONTROL 推荐 API 令牌] | 在中使用此令牌 [!UICONTROL Recommendations] API调用，例如下载API。 |
+| [!UICONTROL Recommendations] api令牌 | 在中使用此令牌 [!UICONTROL Recommendations] API调用，例如下载API。 |
 
 ## 6. （可选）管理 [!UICONTROL Recommendations] 使用管理员API
 
