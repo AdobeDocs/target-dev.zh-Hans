@@ -2,9 +2,9 @@
 user-guide-title: Adobe Target开发人员指南
 breadcrumb-title: Target开发人员指南
 user-guide-description: 了解如何定制和个性化客户体验，从而最大限度地提升网站和移动网站、应用程序、社交媒体和其他数字渠道的收入。
-source-git-commit: 54647001c4e5dc5ce208430c7fea103a720b0980
+source-git-commit: c963a070a7a4c5e7dc2915eb5ac7d60895340705
 workflow-type: tm+mt
-source-wordcount: '753'
+source-wordcount: '756'
 ht-degree: 45%
 
 ---
@@ -164,6 +164,7 @@ ht-degree: 45%
       + [Logger (Python)](implement/server-side/python/logger.md)
 + [混合实施](implement/hybrid/hybrid-overview.md)
 + [Recommendations实施](implement/recommendations/recommendations.md)
++ [Recommendations实施测试版](/help/dev/implement/recommendations/recommendations-beta.md)
 + 移动应用程序实施 {#mobile-apps}
    + [适用于移动应用程序的 Target 概述](implement/mobile/overview.md)
    + [Target 移动设备预览](implement/mobile/target-mobile-preview.md)
@@ -211,7 +212,7 @@ ht-degree: 45%
       + [模型API(列入阻止列表)概述](before-administer/models-api.md)
       + [模型API](/help/dev/administer/models-api/models-api-overview.md)
    + [ADOBE ADMIN CONSOLE API](/help/dev/before-implement/delivery-api-overview/adobe-console-api.md)
-   + [Adobe Experience Platform Edge Network服务器API](/help/dev/before-implement/delivery-api-overview/aep-edge-network-server-api.md)
+   + [Adobe Experience PlatformEdge Network服务器API](/help/dev/before-implement/delivery-api-overview/aep-edge-network-server-api.md)
 + 实施模式 {#implementation-patterns}
    + [实施模式概述](/help/dev/patterns/pattern-overview.md)
    + 使用at.js的Recommendations实施模式 {#atjs}
