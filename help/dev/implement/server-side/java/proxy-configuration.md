@@ -3,9 +3,9 @@ title: 在中实施代理配置 [!DNL Adobe Target] Java SDK
 description: 了解如何在中配置TargetClient代理配置 [!DNL Adobe Target] Java SDK。
 feature: APIs/SDKs
 exl-id: 32e8277d-3bba-4621-b9c7-3a49ac48a466
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+source-git-commit: 59ab3f53e2efcbb9f7b1b2073060bbd6a173e380
 workflow-type: tm+mt
-source-wordcount: '88'
+source-wordcount: '170'
 ht-degree: 1%
 
 ---
@@ -41,3 +41,17 @@ ClientConfig clientConfig = ClientConfig.builder()
     .build();
 TargetClient targetClient = TargetClient.create(clientConfig);
 ```
+
+## 设备上决策
+
+对于提取规则工件的请求，应将代理配置为不缓存响应。 但是，如果无法为该请求配置代理的缓存机制，请使用配置选项作为绕过代理级别缓存的解决方法。 此解决方法添加了 `Authorization` 标头，具有用于规则请求的空字符串值，这应该向代理指示不应缓存响应。
+
+要启用此解决方法，请设置以下内容：
+
+```java {line-numbers="true"}
+ClientConfig.builder()
+    .shouldArtifactRequestBypassProxyCache(true)
+    .build();
+```
+
+
