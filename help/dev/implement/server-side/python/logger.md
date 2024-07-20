@@ -1,6 +1,6 @@
 ---
-title: 初始化 [!DNL Adobe Target] 用于记录请求的Python SDK
-description: 了解如何在中记录请求 [!DNL Adobe Target] Python SDK.
+title: 初始化 [!DNL Adobe Target] Python SDK以记录请求
+description: 了解如何在 [!DNL Adobe Target] Python SDK中记录请求。
 feature: APIs/SDKs
 exl-id: 0b3792a5-a9a7-4768-a429-598b49f1fd93
 source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
@@ -14,9 +14,9 @@ ht-degree: 3%
 
 ## 描述
 
-时间 [初始化SDK](initialize-sdk.md)， `options["logger"]` 对象是可选对象。 默认情况下，将在下创建INFO级别记录器 `adobe.target` 命名空间。 但是，为了在发生问题时自定义日志级别或有效调试， `logger` 初始化SDK时可以提供对象。
+当[初始化SDK](initialize-sdk.md)时，`options["logger"]`对象是可选对象。 默认情况下，将在`adobe.target`命名空间下创建INFO级别日志记录器。 但是，为了在发生问题时有效地自定义日志级别或调试，可以在初始化SDK时提供`logger`对象。
 
-此 `logger` 对象应具有 `debug()` 和 `error()` 方法。 当提供合适的记录器时， [!DNL Target] 将记录请求和响应。
+`logger`对象应具有`debug()`和`error()`方法。 提供适当的记录器后，将记录[!DNL Target]个请求和响应。
 
 ## 示例
 

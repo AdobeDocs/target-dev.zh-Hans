@@ -13,7 +13,7 @@ ht-degree: 4%
 
 # AAM 区段
 
-[!DNL Adobe Audience Manager] 可以通过以下方式利用区段： [!DNL Adobe Target] SDK。 为了利用AAM区段，需要提供以下字段：
+可通过[!DNL Adobe Target] SDK利用[!DNL Adobe Audience Manager]区段。 为了利用AAM区段，需要提供以下字段：
 
 >[!NOTE]
 >
@@ -25,31 +25,31 @@ ht-degree: 4%
 | `marketingCloudVisitorId` | 是 | Marketing Cloud 访客 ID |
 | `blob` | 是 | AAM Blob用于将其他数据发送到AAM。 不得为空且大小小于= 1024。 |
 
-SDK会在创建时自动填充这些字段。 `getOffers` 方法调用，但您需要确保提供有效的访客Cookie。 要获取此Cookie，您需要在浏览器中实施VisitorAPI.js。
+SDK将在进行`getOffers`方法调用时自动填充这些字段，但您需要确保提供有效的访客Cookie。 要获取此Cookie，您需要在浏览器中实施VisitorAPI.js。
 
 ## Implementation 指南
 
 ### Cookie的使用
 
-Cookie用于关联 [!DNL Adobe Audience Manager] 请求 [!DNL Adobe Target] 请求。 这些是此实施中使用的Cookie。
+Cookie用于将[!DNL Adobe Audience Manager]请求与[!DNL Adobe Target]请求相关联。 这些是此实施中使用的Cookie。
 
 | Cookie | 名称 | 描述 |
 | --- | --- | --- |
-| 访客Cookie | `AMCVS_XXXXXXXXXXXXXXXXXXXXXXXX%40AdobeOrg` | 此Cookie由设置 `VisitorAPI.js` 当它初始化为 `visitorState` 从目标 `getOffers` 响应。 |
-| target cookie | `mbox` | Web服务器必须使用名称和值设置此Cookie `targetCookie` 从目标 `getOffers` 响应。 |
+| 访客Cookie | `AMCVS_XXXXXXXXXXXXXXXXXXXXXXXX%40AdobeOrg` | 当此Cookie从目标`getOffers`响应通过`visitorState`初始化时，由`VisitorAPI.js`设置。 |
+| target cookie | `mbox` | 您的Web服务器必须使用目标`getOffers`响应中的`targetCookie`名称和值设置此Cookie。 |
 
 ### 步骤概述
 
 假设用户在浏览器中输入URL，浏览器向Web服务器发送请求。 满足该请求时：
 
 1. 服务器从请求中读取访客和目标Cookie。
-1. 服务器调用 `getOffers` 方法 [!DNL Target] SDK，指定访客和目标Cookie（如果可用）。
-1. 当 `getOffers` 呼叫已完成，值 `targetCookie` 和 `visitorState` 响应中的。
-   1. 在响应中设置Cookie，其值取自 `targetCookie`. 可使用 `Set-Cookie` 响应标头，用于告知浏览器保留Target Cookie。
-   1. 准备了一个HTML响应，该响应将初始化 `VisitorAPI.js` 并传入 `visitorState` 目标响应中的。
+1. 服务器调用[!DNL Target] SDK的`getOffers`方法，指定访客和目标Cookie（如果可用）。
+1. 完成`getOffers`调用后，使用响应中的`targetCookie`和`visitorState`的值。
+   1. 在响应中设置了Cookie，其值取自`targetCookie`。 可使用`Set-Cookie`响应标头完成此操作，该标头可告知浏览器保留目标Cookie。
+   1. 准备了一个HTML响应，该响应初始化`VisitorAPI.js`并从Target响应中传入`visitorState`。
 1. HTML响应已加载到浏览器中……
-   1. `VisitorAPI.js` 包含在文档标题中。
-   1. VisitorAPI通过进行初始化 `visitorState` 从 `getOffers` SDK响应。 这将导致在浏览器中设置访客Cookie，以便在后续请求时将其发送到服务器。
+   1. `VisitorAPI.js`包含在文档标题中。
+   1. 通过`getOffers` SDK响应中的`visitorState`初始化VisitorAPI。 这将导致在浏览器中设置访客Cookie，以便在后续请求时将其发送到服务器。
 
 ### 示例代码
 
@@ -57,7 +57,7 @@ Cookie用于关联 [!DNL Adobe Audience Manager] 请求 [!DNL Adobe Target] 请�
 
 #### Node.js
 
-此示例依赖于 [express，一个Node.js Web框架](https://expressjs.com/).
+此示例依赖于Node.js Web框架](https://expressjs.com/) [express。
 
 >[!BEGINTABS]
 
@@ -175,7 +175,7 @@ app.listen(3000, function () {
 
 #### Java
 
-此示例使用 [Java Web框架Spring](https://spring.io/).
+此示例使用[spring，一个Java Web框架](https://spring.io/)。
 
 >[!BEGINTABS]
 
@@ -298,4 +298,4 @@ public class TargetClientService {
 
 >[!ENDTABS]
 
-有关详情 `TargetRequestUtils.java`，请参见 [实用程序方法(Java)](https://experienceleague.adobe.com/docs/target-dev/developer/server-side/java/utility-methods.html){target=_blank}
+有关`TargetRequestUtils.java`的详细信息，请参阅[实用工具方法(Java)](https://experienceleague.adobe.com/docs/target-dev/developer/server-side/java/utility-methods.html){target=_blank}

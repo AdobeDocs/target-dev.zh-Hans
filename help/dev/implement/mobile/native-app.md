@@ -1,36 +1,36 @@
 ---
 keywords: 移动应用程序，aep sdk，本机应用程序，Web视图，本机；swift，adobe experience platform移动sdk，移动sdk，本机代码
-description: 了解如何实施 [!DNL Adobe Target] 使用 [!DNL AEP Mobile SDK] 在本机应用程序中使用Web视图。
-title: 实施 [!DNL Adobe Target] 在通过Web视图使用本机代码的移动设备应用程序中
+description: 了解如何在具有Web视图的本机应用程序中使用 [!DNL AEP Mobile SDK] 实施 [!DNL Adobe Target] 。
+title: 在使用带有Web视图的本机代码的移动应用程序中实施 [!DNL Adobe Target]
 feature: Implement Mobile
 role: Developer
-source-git-commit: c0fda36cb5472d71438c47b8b484716003da4214
+exl-id: 3dd2e1d7-c744-4ba8-aaa4-6c2fe64d01fa
+source-git-commit: 50ee7e66e30c0f8367763a63b6fde5977d30cfe7
 workflow-type: tm+mt
-source-wordcount: '600'
+source-wordcount: '561'
 ht-degree: 0%
 
 ---
 
+# 在具有Web视图的本机应用程序中通过[!DNL AEP Mobile SDK]实施[!DNL Target]
 
-# 实施 [!DNL Target] 使用 [!DNL AEP Mobile SDK] 在本机应用程序中使用Web视图
+本文分享在移动应用程序中实施[!DNL Adobe Target]的最佳实践，该应用程序使用[!DNL Adobe Experience Platform Mobile SDK]在Web视图中使用本机代码。
 
-本文分享了实施的最佳实践 [!DNL Adobe Target] 在将本机代码与Web视图结合使用的移动应用程序中，使用 [!DNL Adobe Experience Platform Mobile SDK].
-
-本文使用示例iOS应用程序，其中 [[!DNL Adobe Experience Platform Mobile SDK]](https://developer.adobe.com/client-sdks/documentation/getting-started/){target=_blank} and a [!DNL Target] integration written in [Swift from the GitHub repository](https://github.com/adobe/aep-sdk-app/){target=_blank}.
+本文使用来自GitHub存储库](https://github.com/adobe/aep-sdk-app/){target=_blank}的[[!DNL Adobe Experience Platform Mobile SDK]](https://developer.adobe.com/client-sdks/documentation/getting-started/){target=_blank}和在[Swift中编写的[!DNL Target]集成作为示例iOS应用程序。
 
 在现实中，您的企业应用程序可能会使用移动应用程序中的Web视图。 Web视图是一个使用URL加载网页的容器。 该容器类似于没有控件的浏览器窗口。 在iOS中，处理网页时，Web视图容器可充当Safari浏览器。
 
 ## 先决条件
 
-要开始使用 [!DNL Adobe Experience Platform Mobile SDK]中，您必须执行一些先决任务。
+要开始使用[!DNL Adobe Experience Platform Mobile SDK]，您必须执行一些先决任务。
 
-有关更多信息，请参阅 [Adobe Target](https://developer.adobe.com/client-sdks/documentation/adobe-target/){target=_blank} in the [[!DNL Adobe Experience Platform Mobile SDK]](https://developer.adobe.com/client-sdks/documentation/){target=_blank} 文档。
+有关详细信息，请参阅[[!DNL Adobe Experience Platform Mobile SDK]](https://developer.adobe.com/client-sdks/documentation/){target=_blank}文档中的[Adobe Target](https://developer.adobe.com/client-sdks/documentation/adobe-target/){target=_blank}。
 
 ## 将本机代码与Web视图同步
 
-实施方面的挑战 [!DNL Target] 在具有Web视图的本机应用程序中， [!DNL Adobe Experience Platform Mobile SDK] 已生成以下项所需的所有必需标识符： [!DNL Adobe] 解决方案无缝工作。 但是，这些标识符对Web视图尚不可见，因为这些标识符在本机Platform环境中不存在。 因此，您必须创建一个桥接器以将某些SDK标识符传递到Web视图，以便访客身份保留在Web环境中。 如果不正确执行此操作，则会导致重复访问，从而影响您的报表。
+在使用Web视图的本机应用程序中实施[!DNL Target]时，面临的挑战是[!DNL Adobe Experience Platform Mobile SDK]已生成了[!DNL Adobe]解决方案无缝工作所需的所有必要标识符。 但是，这些标识符对Web视图尚不可见，因为这些标识符在本机Platform环境中不存在。 因此，您必须创建一个桥接器以将某些SDK标识符传递到Web视图，以便访客身份保留在Web环境中。 如果不正确执行此操作，则会导致重复访问，从而影响您的报表。
 
-幸运的是， [!DNL Adobe Experience Platform Mobile SDK] 提供了一种简便的生成方法 [!DNL Adobe] Web视图需要参数来使用和保留同一访客，如以下示例代码中所示：
+幸运的是，[!DNL Adobe Experience Platform Mobile SDK]提供了一种方便的方法来生成Web视图使用并保留同一访客所需的[!DNL Adobe]参数，如以下示例代码中所示：
 
 ```swift
 Identity.appendTo(url: URL(string: url), completion: {appendedURL, error in
@@ -43,9 +43,9 @@ Identity.appendTo(url: URL(string: url), completion: {appendedURL, error in
 });
 ```
 
-欲知关于 `Identity.appendTo` 方法，要了解如何使用该方法的示例，请参阅 [Swift >示例](https://developer.adobe.com/client-sdks/documentation/mobile-core/identity/tabs/api-reference/){target=_blank} 在 *移动SDK文档*.
+有关`Identity.appendTo`方法的详细信息，并查看如何使用该方法的示例，请参阅&#x200B;*Mobile SDK文档*&#x200B;中的[Swift >示例](https://developer.adobe.com/client-sdks/documentation/mobile-core/identity/tabs/api-reference/){target=_blank}。
 
-使用 `Identity.appendTo`，此URL：
+使用`Identity.appendTo`，此URL：
 
 ```
 https://vadymus.github.io/ateng/at-order-confirmation/index.html?a=1&b=2
@@ -57,19 +57,19 @@ https://vadymus.github.io/ateng/at-order-confirmation/index.html?a=1&b=2
 https://vadymus.github.io/ateng/at-order-confirmation/index.html?a=1&b=2&adobe_mc=TS%3D1660667205%7CMCMID%3D69624092487065093697422606480535692677%7CMCORGID%3DEB9CAE8B56E003697F000101%40AdobeOrg
 ```
 
-如您所见，有 `adobe_mc` 附加到URL的参数。 此参数包含下列内容的编码值：
+如您所见，URL附加了`adobe_mc`参数。 此参数包含下列内容的编码值：
 
 * TS=1660667205：当前时间戳。 此时间戳可确保Web视图不会接收过期的值。
-* MCMID=69624092487065093697422606480535692677： [!UICONTROL EXPERIENCE CLOUDID] (ECID)。 也称为MID或 [!UICONTROL MARKETING CLOUDID] 需要 [!DNL Adobe] 跨解决方案访客识别。
-* MCORGID=EB9CAE8B56E003697F000101@AdobeOrg： [!UICONTROL Adobe组织ID].
+* MCMID=69624092487065093697422606480535692677： [!UICONTROL Experience Cloud ID] (ECID)。 也称为[!DNL Adobe]跨解决方案访客识别所需的MID或[!UICONTROL Marketing Cloud ID]。
+* MCORGID=EB9CAE8B56E003697F000101@AdobeOrg： [!UICONTROL Adobe Organization ID]。
 
-此 `Identity.getUrlVariables` 是替代项 [!DNL Adobe Experience Platform Mobile SDK] 方法，返回一个格式正确的字符串，该字符串包含 [!DNL Experience Cloud Identity Service] URL变量。 有关更多信息，请参阅 [getUrlVariables](https://developer.adobe.com/client-sdks/documentation/mobile-core/identity/api-reference/#geturlvariables){target=_blank} 在 *身份API引用*.
+`Identity.getUrlVariables`是一种替代[!DNL Adobe Experience Platform Mobile SDK]方法，它返回包含[!DNL Experience Cloud Identity Service] URL变量的格式正确的字符串。 有关详细信息，请参阅&#x200B;*标识API引用*&#x200B;中的[getUrlVariables](https://developer.adobe.com/client-sdks/documentation/mobile-core/identity/api-reference/#geturlvariables){target=_blank}。
 
-## 传递 [!DNL Target] 相同会话体验的会话ID
+## 传递用于相同会话体验的[!DNL Target]会话ID
 
-还需要执行一个额外的步骤，以使 [!DNL Target] 用户历程可在本机视图和Web视图之间无缝工作。 此步骤包括提取和传递 [!DNL Target] 来自的会话ID [!DNL Adobe Experience Platform Mobile SDK] 移动应用程序的Web视图。
+还需要执行一个额外的步骤，以使[!DNL Target]用户历程在本机视图和Web视图之间无缝工作。 此步骤包括从[!DNL Adobe Experience Platform Mobile SDK]提取[!DNL Target]会话ID并将其传递给移动设备应用程序的Web视图。
 
-此 `Target.getSessionId` 提取可以作为Web视图URL传递的会话ID `mboxSession` 参数：
+`Target.getSessionId`提取可以作为`mboxSession`参数传递到Web视图URL的会话ID：
 
 ```swift
 Target.getSessionId { (id, err) in
@@ -79,13 +79,13 @@ Target.getSessionId { (id, err) in
 
 ## 在Web视图中测试
 
-Web预览链接生成于 [!UICONTROL 活动详细信息] 页面，方法是单击 [[!UICONTROL ADOBEQA] 链接](/help/dev/implement/mobile/target-mobile-preview.md) 要显示用于复制每个体验预览链接的弹出窗口，请执行以下操作：
+通过单击[[!UICONTROL Adobe QA]链接](/help/dev/implement/mobile/target-mobile-preview.md)在[!UICONTROL Activity detail]页面上生成Web预览链接，以显示弹出窗口来复制每个体验预览链接，如下所示：
 
 ```
 ?at_preview_token=mhFIzJSF7JWb-RsnakpBqi_s83Sl64hZp928VWpkwvI&at_preview_index=1_1&at_preview_listed_activities_only=true
 ```
 
-Web预览链接包含其他 `at_preview_index` 和 `at_preview_listed_activities_only` 参数。 复制这些参数以使用Web链接参数构建移动友好的预览链接。
+Web预览链接包含其他`at_preview_index`和`at_preview_listed_activities_only`参数。 复制这些参数以使用Web链接参数构建移动友好的预览链接。
 
 例如：
 
@@ -93,7 +93,7 @@ Web预览链接包含其他 `at_preview_index` 和 `at_preview_listed_activities
 com.adobe.targetmobile://?at_preview_token=mhFIzJSF7JWb-RsnakpBqhBwj-TiIlZsRTx_1QQuiXLIJFdpSLeEZwKGPUyy57O_&at_preview_index=1_1&at_preview_listed_activities_only=true
 ```
 
-在iOS Safari浏览器中打开该链接后，您的应用程序会捕获 `AppDelegate` 类类似于以下示例：
+在iOS Safari浏览器中打开该链接后，您的应用程序会捕获`AppDelegate`类中的URL，类似于以下示例：
 
 ```swift
 func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool {

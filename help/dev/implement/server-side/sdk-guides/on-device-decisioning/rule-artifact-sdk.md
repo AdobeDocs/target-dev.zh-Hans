@@ -1,18 +1,18 @@
 ---
 title: 自动下载、存储和更新设备上决策规则构件
-description: 了解如何在初始化时使用设备上决策规则构件 [!DNL Adobe Target] SDK。
+description: 了解如何在初始化 [!DNL Adobe Target] SDK时使用设备上决策规则构件。
 feature: APIs/SDKs
 exl-id: be41a723-616f-4aa3-9a38-8143438bd18a
 source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
 workflow-type: tm+mt
-source-wordcount: '346'
-ht-degree: 1%
+source-wordcount: '347'
+ht-degree: 0%
 
 ---
 
-# 通过自动下载、存储和更新规则构件 [!DNL Adobe Target] SDK
+# 通过[!DNL Adobe Target] SDK自动下载、存储和更新规则构件
 
-此方法最适合您能够初始化 [!DNL Adobe Target] SDK可在您初始化和启动Web服务器的同时运行。 规则工件将由 [!DNL Adobe Target] SDK，并在Web服务器应用程序开始为请求提供服务之前缓存到内存中。 一旦您的Web应用程序启动并运行，所有 [!DNL Adobe Target] 将使用内存中规则工件执行决策。 缓存的规则工件将根据 `pollingInterval` 您可以在SDK初始化步骤中指定。
+当您能够同时初始化[!DNL Adobe Target] SDK并启动Web服务器时，此方法将最有效。 在Web服务器应用程序开始为请求提供服务之前，规则工件将由[!DNL Adobe Target] SDK下载并缓存到内存中。 一旦您的Web应用程序启动并运行，将使用内存中规则工件执行所有[!DNL Adobe Target]决策。 将基于您在SDK初始化步骤中指定的`pollingInterval`更新缓存的规则构件。
 
 ## 步骤摘要
 
@@ -24,7 +24,7 @@ ht-degree: 1%
 
 >[!BEGINTABS]
 
->[!TAB npm]
+>[!TAB NPM]
 
 ```javascript {line-numbers="true"}
 npm i @adobe/target-nodejs-sdk -P
@@ -92,10 +92,10 @@ npm i @adobe/target-nodejs-sdk -P
    TargetClient targetClient = TargetClient.create(config);
    ```
 
-1. 客户端和organizationId都可以从 [!DNL Adobe Target] 导航到 **[!UICONTROL 管理]** > **[!UICONTROL 实现]**，如下所示。
+1. 通过导航到&#x200B;**[!UICONTROL Administration]** > **[!UICONTROL Implementation]**，可从[!DNL Adobe Target]中检索客户端和organizationId，如下所示。
 
-   &lt;! — 插入image-client-code.png —>
-   ![“实施”页面位于Target中的“管理”下](assets/asset-rule-artifact-3.png)
+   &lt;！ — 插入image-client-code.png —>
+   Target中“管理”下的![实现页面](assets/asset-rule-artifact-3.png)
 
 ## 3.存储和使用规则构件
 
@@ -146,9 +146,9 @@ TargetDeliveryResponse response = targetClient.getOffers(request);
 
 >[!NOTE]
 >
->在上述代码示例中， `TargetClient` 对象保留对内存中规则工件的引用。 当您使用此对象来调用标准SDK方法时，它会使用内存中规则工件进行决策。 如果您的应用程序的结构决定了您需要在其他文件中调用SDK方法，而这些文件需要初始化和侦听客户端请求，并且如果这些文件无权访问TargetClient对象，则您可以下载JSON有效负载并将其存储在本地JSON文件中，以供其他文件使用，这些文件需要初始化SDK。 此内容将在下一节中介绍，内容涉及 [使用JSON有效负载下载规则构件](rule-artifact-json.md).
+>在上述代码示例中，`TargetClient`对象保留对内存中规则工件的引用。 当您使用此对象来调用标准SDK方法时，它会使用内存中规则工件进行决策。 如果您的应用程序的结构决定了您需要在其他文件中调用SDK方法，而这些文件需要初始化和侦听客户端请求，并且如果这些文件无权访问TargetClient对象，则您可以下载JSON有效负载并将其存储在本地JSON文件中，以供其他文件使用，这些文件需要初始化SDK。 有关使用JSON有效负载](rule-artifact-json.md)下载规则工件的[部分，将对此进行说明。
 
-下面是一个在初始化 [!DNL Adobe Target] SDK。
+以下是初始化[!DNL Adobe Target] SDK后启动Web应用程序的示例。
 
 >[!BEGINTABS]
 

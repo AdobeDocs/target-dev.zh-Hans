@@ -1,17 +1,17 @@
 ---
 keywords: mboxCreate， mboxcreate， mbox create， at.js，函数，函数
-description: 使用 [!UICONTROL mboxCreate()] 函数 [!DNL Adobe Target] at.js JavaScript库可将选件应用到具有mboxDefault类名称的最接近DIV。 (at.js 1.x)
-title: 如何使用 [!UICONTROL mboxCreate()] 功能？
+description: 对 [!DNL Adobe Target] at.js JavaScript库使用[!UICONTROL mboxCreate()]函数可将选件应用到具有mboxDefault类名称的最接近DIV。 (at.js 1.x)
+title: 如何使用[!UICONTROL mboxCreate()]函数？
 feature: at.js
 exl-id: 86eba1fc-4e1d-4793-94e7-898bf81f8945
 source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
 workflow-type: tm+mt
-source-wordcount: '209'
-ht-degree: 55%
+source-wordcount: '205'
+ht-degree: 56%
 
 ---
 
-# [!UICONTROL mboxCreate(mbox，params)] - at.js 1.x
+# [!UICONTROL mboxCreate(mbox,params)] - at.js 1.x
 
 可使用 mboxDefault 类名称执行请求并将选件应用到最近的 DIV。
 
@@ -41,8 +41,8 @@ ht-degree: 55%
 
   例如，设置由站点代码或稍后出现在页面上的其他 mbox 所使用的 JavaScript 变量的选件。
 
-* 请确保具有 `<div class="mboxDefault"></div>`调用之前 `[!UICONTROL mboxCreate()]`，因为at.js不会为您添加此标记。
+* 调用`[!UICONTROL mboxCreate()]`之前请确保具有`<div class="mboxDefault"></div>`，因为at.js不会为您添加它。
 
 * 不建议将空白页面顶端的 `[!UICONTROL mboxCreate()]` 函数作为全局 mbox。
 
-  at.js中自动创建的全局mbox是一个更好的选项，因为它从 `<head>` 并且可以更早返回内容。
+  at.js中自动创建的全局mbox是一个更好的选项，因为它从`<head>`触发并可以更早返回内容。

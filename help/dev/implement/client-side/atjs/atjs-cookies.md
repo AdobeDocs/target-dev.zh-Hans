@@ -1,13 +1,13 @@
 ---
 keywords: at.js、2.0、1.x、Cookie
-description: 有关如何操作的详细信息 [!DNL Adobe Target] at.js 2.x和at.js 1.x处理Cookie
+description: 有关 [!DNL Adobe Target] at.js 2.x和at.js 1.x如何处理Cookie的详细信息
 title: at.js Cookies
 feature: at.js
 exl-id: 154a844a-6855-4af7-8aed-0719b4c389f5
 source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
 workflow-type: tm+mt
-source-wordcount: '1711'
-ht-degree: 78%
+source-wordcount: '1716'
+ht-degree: 72%
 
 ---
 
@@ -17,11 +17,11 @@ ht-degree: 78%
 
 ## at.js 2.x Cookie 行为
 
-对于at.js版本2.x（直至但不包括版本2.10.0）， *仅支持第一方Cookie*. 如同在 at.js 1.*x*，第一方Cookie“mbox”存储在中 `clientdomain.com`，其中 `clientdomain` 是您的域。
+对于at.js版本2.x（最高版本2.10.0，但不包括版本2.10.0），*仅支持第一方Cookie*。 如同在 at.js 1.*x*，第一方Cookie“mbox”存储在`clientdomain.com`中，其中`clientdomain`是您的域。
 
 at.js 会生成一个会话 ID 并将其存储在 Cookie 中。第一个响应包含任何活动信息，以及 [!DNL Target] 服务器生成的 `TNT` 或 `PC ID`。然后，at.js 将 `TNT/PC ID` 写入 Cookie。
 
-此 `AMCV_###@AdobeOrg` 第一方Cookie始终由Experience CloudID服务设置，尽管 `ECID` 已传入 [!DNL Target] 请求。
+`AMCV_###@AdobeOrg`第一方Cookie始终由Experience CloudID服务设置，尽管在[!DNL Target]请求中传递了`ECID`。
 
 >[!NOTE]
 >
@@ -42,7 +42,7 @@ at.js 会生成一个会话 ID 并将其存储在 Cookie 中。第一个响应�
 
 ### 何时使用第一方或第三方 Cookie
 
-您的网站设置决定了您要使用的 Cookie。了解如何 [!DNL Target] 在尝试了解第一方和第三方Cookie时有效。 请参阅 [如何 [!DNL Adobe Target] 工作](https://experienceleague.adobe.com/docs/target/using/introduction/how-target-works.html) 以了解更多信息。
+您的网站设置决定了您要使用的 Cookie。在尝试了解第一方和第三方Cookie时，了解[!DNL Target]的工作方式会很有帮助。 有关详细信息，请参阅[工作方式 [!DNL Adobe Target] ](https://experienceleague.adobe.com/docs/target/using/introduction/how-target-works.html)。
 
 下面提供了 Cookie 的三个主要用例：
 
@@ -82,7 +82,7 @@ at.js 会生成一个 `mboxSession ID` 并将其存储在 Cookie 中。第一个
 
 >[!NOTE]
 >
->此 `AMCV_###@AdobeOrg` 第一方Cookie始终使用Experience Cloud访客ID进行设置。
+>`AMCV_###@AdobeOrg`第一方Cookie始终使用Experience Cloud访客ID进行设置。
 
 ### 第三方 Cookie 行为
 
@@ -113,7 +113,7 @@ Cookie 有多个默认设置。您可以根据需要更改这些设置，但 Coo
 | Cookie 名称 | mbox。 |
 | Cookie 域 | 您从中提供内容的的第二级域和顶级域。由于这是来自您的公司域，所以此 Cookie 是第一方 Cookie。示例: `mycompany.com`。 |
 | 服务器域 | `clientcode.tt.omtrdc.net`，使用您帐户的客户代码。 |
-| Cookie 持续时间 | 自访客上次登录起，Cookie在访客的浏览器中保留两年。<P>此 `deviceIdLifetime` 设置在中可覆盖 [at.js版本2.3.1或更高版本](../atjs/target-atjs-versions.md). 有关更多信息，请参阅 [targetGlobalSettings()](../../../implement/client-side/atjs/atjs-functions/targetglobalsettings.md)。 |
+| Cookie 持续时间 | 自访客上次登录起，Cookie在访客的浏览器中保留两年。<P>`deviceIdLifetime`设置可在[at.js版本2.3.1或更高版本](../atjs/target-atjs-versions.md)中覆盖。 有关更多信息，请参阅 [targetGlobalSettings()](../../../implement/client-side/atjs/atjs-functions/targetglobalsettings.md)。 |
 | P3P 政策 | 根据大多数浏览器默认设置的要求，使用 P3P 政策发布 Cookie。P3P 政策指示提供 Cookie 的浏览器以及使用该信息的方式。 |
 
 此 Cookie 保存一系列值，以控制您的访客体验营销活动的方式：
@@ -125,16 +125,16 @@ Cookie 有多个默认设置。您可以根据需要更改这些设置，但 Coo
 | check | 用来确定访客是否支持 Cookie 的简单测试值。每次用户请求页面时设置。 |
 | disable | 如果访客的加载时间超过了Adobe Experience Platform Web SDK或at.js文件中配置的超时值，则进行设置。 默认情况下，该设置持续 1 小时。 |
 
-## 影响 [!DNL Target] 对于Safari访客，由于Apple WebKit跟踪更改的影响
+## 由于Apple WebKit跟踪更改而对Safari访客的[!DNL Target]产生的影响
 
 请牢记以下内容：
 
-### 如何 [!DNL Adobe Target] 跟踪工作？
+### [!DNL Adobe Target]跟踪如何工作？
 
 | Cookie | 详细信息 |
 |--- |--- |
-| 第一方域 | 这是的标准实施 [!DNL Target] 客户。  “mbox”Cookie 在客户的域中进行设置。 |
-| 第三方跟踪 | 第三方跟踪对于中的广告和定位用例非常重要 [!DNL Target] 和 [!DNL Adobe Audience Manager] (AAM)。  第三方跟踪需要跨站点脚本技术。[!DNL Target] 使用在 `clientcode.tt.omtrd.net` 域中设置的两个 Cookie：“mboxSession”和“mboxPC”。 |
+| 第一方域 | 这是[!DNL Target]客户的标准实施。  “mbox”Cookie 在客户的域中进行设置。 |
+| 第三方跟踪 | 第三方跟踪对于[!DNL Target]和[!DNL Adobe Audience Manager] (AAM)中的广告和定位用例非常重要。  第三方跟踪需要跨站点脚本技术。[!DNL Target]使用在`clientcode.tt.omtrd.net`域中设置的两个Cookie：“mboxSession”和“mboxPC”。 |
 
 ### Apple 的方法是什么？
 
@@ -148,11 +148,11 @@ Cookie 有多个默认设置。您可以根据需要更改这些设置，但 Coo
 |--- |--- |
 | 智能防跟踪 | 有关更多信息，请参阅 WebKit 开源 Web 浏览器引擎网站上的[智能防跟踪](https://webkit.org/blog/7675/intelligent-tracking-prevention/)。 |
 | Cookie | Safari 如何处理 Cookie：<ul><li>用户直接访问的域中未包含的第三方 Cookie 从不会进行保存。这不是一种新的行为。Safari 中还不支持第三方 Cookie。</li><li>24 小时后会清除在用户直接访问的域中设置的第三方 Cookie。</li><li>如果第一方域被分类为跨站点跟踪用户，则第一方 Cookie 会在 30 天后清除。此问题可能适用于将用户在线发送到不同域的大型公司。Apple 并未明确说明将如何对这些域进行正确分类，或者如何确定域是否已被分类为跨站点跟踪用户。</li></ul> |
-| 机器学习以识别跨站点的域 | 来自 Apple：<P>机器学习分类器：机器学习模型用于根据收集的统计数据，对能够跨站点跟踪用户的顶级私人控制域进行分类。在收集的各种统计数据中，根据当前的跟踪实践，以下三个矢量证明具有强烈的分类信号：唯一域数量下的子资源、唯一域数量下的子框架以及重定向到的唯一域数量。所有数据收集和分类均在设备上进行。<P>但是，如果用户与作为顶级域（通常称为第一方域）的 example.com 进行交互，则智能防跟踪会将其视为用户对该网站感兴趣的信号，并按照以下时间表所述临时调整其行为：<P>如果用户在过去 24 小时与 进行交互，则当 `example.com`example.com 为第三方域时，其 Cookie 将可用。这允许“使用我的 X 帐户登录到 Y”登录方案。<ul><li>作为顶级域访问的域不会受到影响。例如，OKTA 等网站</li><li>在多个唯一域中识别属于当前页面的子域或子框架的域.</li></ul> |
+| 机器学习以识别跨站点的域 | 来自 Apple：<P>机器学习分类器：机器学习模型用于根据收集的统计数据，对能够跨站点跟踪用户的顶级私人控制域进行分类。在收集的各种统计数据中，根据当前的跟踪实践，以下三个矢量证明具有强烈的分类信号：唯一域数量下的子资源、唯一域数量下的子框架以及重定向到的唯一域数量。所有数据收集和分类均在设备上进行。<P>但是，如果用户与作为顶级域的（通常称为第一方域）example.com进行交互，则智能防跟踪会将此视为用户对该网站感兴趣的信号，并且会暂时调整其行为，如此时间轴所示：<P>如果用户在过去24小时内与example.com进行了交互，则当`example.com`是第三方时，其Cookie将可用。 这允许“使用我的 X 帐户登录到 Y”登录方案。<ul><li>作为顶级域访问的域不会受到影响。例如，OKTA 等网站</li><li>标识跨多个唯一域作为当前页面的子域或子帧的域。</li></ul> |
 
 ### Adobe 将受到何种影响？
 
 | 受影响的功能 | 详细信息 |
 |--- |--- |
-| 选择退出支持 | Apple 的 WebKit 跟踪更改会中断选择退出支持。<P>[!DNL Target] 选择退出使用 `clientcode.tt.omtrdc.net` 域中的一个 Cookie。有关更多详细信息，请参阅[隐私](/help/dev/before-implement/privacy/privacy.md)。<P>[!DNL Target] 支持两种选择退出方式：<ul><li>一种是按客户端退出（客户端管理选择退出链接）。</li><li>一个通过Adobe选择用户退出所有 [!DNL Target] 功能。</li></ul>这两种方法都使用第三方 Cookie。 |
-| [!DNL Target] 活动 | 客户可以选择他们的 [配置文件生命周期长度](https://experienceleague.adobe.com/docs/target/using/audiences/visitor-profiles/visitor-profile-lifetime.html) 为其 [!DNL Target] 帐户 — 最长90天。 问题在于如果帐户的配置文件生命周期超过30天，并且由于客户的域已被标记为跨站点跟踪用户而清除了第一方Cookie，则Safari访客的行为将在的以下方面受到影响 [!DNL Target]：<P>**[!DNL Target]报表**：如果Safari用户进入活动，30天后返回转化，则该用户将计为两个访客和一次转化。<P>对于使用的活动，此行为相同 [!DNL Analytics] 作为报表源(A4T)。<P>**配置文件和活动成员资格**:<ul><li>第一方 Cookie 过期后会擦除配置文件数据。</li><li>第一方 Cookie 过期后会擦除活动成员资格。</li><li> [!DNL Target]对于使用第三方 Cookie 实施或第一方和第三方 Cookie 实施的帐户， 无法在 Safari 中使用。请注意，这不是一种新的行为。Safari 暂时还不允许使用第三方 Cookie。</li></ul><P>**建议**：如果您担心客户域可能会被标记为跨会话跟踪访客，则最安全的做法是将配置文件生命周期设置为等于或少于30天， [!DNL Target]. 这可确保在 Safari 和所有其他浏览器中以类似的方式对用户进行跟踪。 |
+| 选择退出支持 | Apple 的 WebKit 跟踪更改会中断选择退出支持。<P>[!DNL Target]选择退出使用`clientcode.tt.omtrdc.net`域中的Cookie。 有关更多详细信息，请参阅[隐私](/help/dev/before-implement/privacy/privacy.md)。<P>[!DNL Target]支持两种选择退出：<ul><li>一种是按客户端退出（客户端管理选择退出链接）。</li><li>一个通过Adobe，用于选择用户退出所有客户的所有[!DNL Target]功能。</li></ul>这两种方法都使用第三方 Cookie。 |
+| [!DNL Target]活动 | 客户可以为其[!DNL Target]帐户选择其[配置文件生命周期长度](https://experienceleague.adobe.com/docs/target/using/audiences/visitor-profiles/visitor-profile-lifetime.html) — 最长90天。 问题在于如果帐户的配置文件生命周期超过30天，并且由于客户的域已被标记为跨站点跟踪用户而清除了第一方Cookie，则Safari访客的行为将在[!DNL Target]的以下区域中受到影响：<P>**[!DNL Target]报告**：如果Safari用户进入活动，30天后返回转化，则该用户将计为两个访客和一次转化。<P>对于使用[!DNL Analytics]作为报表源(A4T)的活动，此行为是相同的。<P>**配置文件和活动成员资格**：<ul><li>第一方 Cookie 过期后会擦除配置文件数据。</li><li>第一方 Cookie 过期后会擦除活动成员资格。</li><li> 对于使用第三方Cookie实施或第一方和第三方Cookie实施的帐户，[!DNL Target]在Safari中不起作用。 请注意，这不是一种新的行为。Safari 暂时还不允许使用第三方 Cookie。</li></ul><P>**建议**：如果担心客户域可能会被标记为跨会话跟踪访客，则最安全的做法是将[!DNL Target]中的配置文件生命周期设置为等于或少于30天。 这可确保在 Safari 和所有其他浏览器中以类似的方式对用户进行跟踪。 |

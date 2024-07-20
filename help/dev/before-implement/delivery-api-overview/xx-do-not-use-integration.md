@@ -4,7 +4,7 @@ description: 与Experience Cloud集成
 keywords: 投放api
 source-git-commit: f16903556954d2b1854acd429f60fbf6fc2920de
 workflow-type: tm+mt
-source-wordcount: '478'
+source-wordcount: '467'
 ht-degree: 7%
 
 ---
@@ -25,8 +25,8 @@ ht-degree: 7%
 
 如果提供了以下标识符，Adobe Target则可以通过服务器端自动将analytics有效负载转发到Adobe Analytics：
 
-1. `supplementalDataId`  — 用于在Adobe Analytics和Adobe Target之间拼接的ID
-1. `trackingServer` - Analytics服务器Adobe，以便Adobe Target和Adobe Analytics能够正确地将数据拼合在一起，这一点相同 `supplementalDataId` 需要传递给Adobe Target和Adobe Analytics。
+1. `supplementalDataId` — 用于在Adobe Analytics和Adobe Target之间拼接的ID
+1. `trackingServer` - Analytics服务器Adobe为使Adobe Target和Adobe Analytics能够正确地将数据拼合在一起，需要将相同的`supplementalDataId`传递到Adobe Target和Adobe Analytics。
 
 ```
 curl -X POST \
@@ -73,7 +73,7 @@ curl -X POST \
 
 ### 从Adobe Target检索Analytics有效负荷
 
-Adobe Target交付API的使用者可以检索相应mbox的Adobe Analytics有效负荷，以便该使用者可以通过以下方式将有效负荷发送到Adobe Analytics [数据插入API](https://github.com/AdobeDocs/analytics-1.4-apis/blob/master/docs/data-insertion-api/index.md). 触发服务器端Adobe Target调用时，传递 `client_side` 到 `logging` 字段。 如果将Analytics用作报表源的活动中存在有mbox，则此操作将返回有效负载。
+Adobe Target交付API的使用者可以检索相应mbox的Adobe Analytics有效负荷，以便该使用者可以通过[数据插入API](https://github.com/AdobeDocs/analytics-1.4-apis/blob/master/docs/data-insertion-api/index.md)将该有效负荷发送到Adobe Analytics。 触发服务器端Adobe Target调用时，将`client_side`传递到请求中的`logging`字段。 如果将Analytics用作报表源的活动中存在有mbox，则此操作将返回有效负载。
 
 ```
 curl -X POST \
@@ -121,7 +121,7 @@ curl -X POST \
     }'
 ```
 
-指定后 `logging` = `client_side`，您将在以下位置收到有效负载： `mbox` 字段，如下所示。
+指定`logging` = `client_side`后，您将在`mbox`字段中接收有效负载，如下所示。
 
 ```
 {
@@ -176,7 +176,7 @@ curl -X POST \
 }
 ```
 
-如果来自Target的响应包含 `analytics` -> `payload` 资产，按原样将其转发到Adobe Analytics。 Analytics知道如何处理此有效负载。 这可以在GET请求中完成，可使用以下格式：
+如果来自Target的响应在`analytics` -> `payload`属性中包含任何内容，请将其转发到Adobe Analytics。 Analytics知道如何处理此有效负载。 这可以在GET请求中完成，可使用以下格式：
 
 ```
 https://{datacollectionhost.sc.omtrdc.net}/b/ss/{rsid}/0/CODEVERSION?pe=tnt&tnta={payload}&mid={mid}&vid={vid}&aid={aid}
@@ -187,13 +187,13 @@ https://{datacollectionhost.sc.omtrdc.net}/b/ss/{rsid}/0/CODEVERSION?pe=tnt&tnta
 | 字段名称 | 必需 | 描述 |
 | --- | --- | --- |
 | `rsid` | 是 | 点击 |
-| `pe` | 是 | 页面事件。 始终设置为 `tnt` |
-| `tnta` | 是 | Target服务器返回的分析有效负载位于 `analytics` -> `payload` -> `tnta` |
+| `pe` | 是 | 页面事件。 始终设置为`tnt` |
+| `tnta` | 是 | Target服务器在`analytics` -> `payload` -> `tnta`中返回的分析有效负载 |
 | `mid` | Marketing Cloud 访客 ID |
 
 ### 必需的标头值
 
-| 标题名称 | 标头值 |
+| 标头名称 | 标头值 |
 | --- | --- |
 | 主机 | Analytics数据收集服务器(如： adobeags421.sc.omtrdc.net) |
 

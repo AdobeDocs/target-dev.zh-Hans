@@ -1,6 +1,6 @@
 ---
-title: 在中使用getAttributes [!DNL Adobe Target] 使用.NET SDK
-description: 了解如何使用getAttributes()从获取试验性和个性化体验 [!DNL Target] 和提取属性值。
+title: 在 [!DNL Adobe Target] 中将getAttributes用于.NET SDK
+description: 了解如何使用getAttributes()从 [!DNL Target] 获取试验性和个性化体验并提取属性值。
 feature: APIs/SDKs
 exl-id: 808da83d-3077-468b-a2ad-e35c25905f7d
 source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
@@ -14,7 +14,7 @@ ht-degree: 10%
 
 ## 描述
 
-`GetAttributes()` 用于从获取试验性和个性化体验 [!DNL Target] 和提取属性值。
+`GetAttributes()`用于从[!DNL Target]获取试验性和个性化体验并提取属性值。
 
 ## 方法
 
@@ -28,19 +28,19 @@ TargetAttributes TargetClient.GetAttributes(TargetDeliveryRequest targetRequest,
 
 | 名称 | 类型 | 必需 | 默认 | 描述 |
 | --- | --- | --- | --- | --- |
-| targetRequest | TargetDeliveryRequest | 否 | null | 相同 [!DNL Target] 请求用于 [获取优惠&#x200B;](get-offers.md) |
+| targetRequest | TargetDeliveryRequest | 否 | null | 与[获取选件](get-offers.md)使用的&#x200B;[!DNL Target]请求相同 |
 | mboxNames | 参数字符串[] | 否 | null | mbox名称的参数数组 |
 
 ## 结果
 
-A `TargetAttributes` 对象返回自 `TargetClient.GetAttributes()` 具有以下属性和方法：
+从`TargetClient.GetAttributes()`返回的`TargetAttributes`对象具有以下属性和方法：
 
 | 属性/方法 | 返回类型 | 描述 |
 | --- | --- | --- |
-| 响应 | TargetDeliveryResponse | 返回通常由返回的响应对象 [获取优惠](get-offers.md) |
+| 响应 | TargetDeliveryResponse | 返回通常由[获取选件](get-offers.md)返回的响应对象 |
 | ToDictionary | IReadOnlyDictionary | 返回词典以及按mbox名称分组的键值对 |
 | ToMboxDictionary(mboxName) | IReadOnlyDictionary | 为提供的mbox返回一个包含键值对的字典 |
-| GetBoolean(mboxName， key， defaultValue) | bool | 返回指定mbox名称和属性键的值 |
+| GetBoolean(mboxName， key， defaultValue) | 布尔 | 返回指定mbox名称和属性键的值 |
 | GetString(mboxName， key， defaultValue) | 字符串 | 返回指定mbox名称和属性键的值 |
 | GetInteger(mboxName， key， defaultValue) | int | 返回指定mbox名称和属性键的值 |
 | GetDouble(mboxName， key， defaultValue) | 双精度 | 返回指定mbox名称和属性键的值 |

@@ -1,22 +1,22 @@
 ---
 title: Experience CloudID (ECID)服务
-description: 虽然使用 [!DNL Target] 用于从获取内容的SDK [!DNL Target] 功能非常强大，使用 [!UICONTROL EXPERIENCE CLOUDID] 用于用户跟踪的(ECID)的扩展超出了Adobe [!DNL Target]. The ECID enables you to leverage [!DNL Adobe Experience Cloud] 产品和功能，如A4T报表和 [!DNL Adobe Audience Manager] (AAM)区段。
+description: 虽然使用 [!DNL Target] SDK从 [!DNL Target] 中提取内容可能非常强大，但使用[!UICONTROL Experience Cloud ID] (ECID)进行用户跟踪的附加价值不仅限于Adobe [!DNL Target]. The ECID enables you to leverage [!DNL Adobe Experience Cloud] 产品和功能，如A4T报表和 [!DNL Adobe Audience Manager] (AAM)区段。
 exl-id: fd7e5c3e-51c1-4965-ab6a-f50a6b0c910b
 feature: Implement Server-side
 source-git-commit: 09a50aa67ccd5c687244a85caad24df56c0d78f5
 workflow-type: tm+mt
-source-wordcount: '278'
-ht-degree: 1%
+source-wordcount: '264'
+ht-degree: 0%
 
 ---
 
-# [!UICONTROL EXPERIENCE CLOUDID] (ECID)服务
+# [!UICONTROL Experience Cloud ID] (ECID)服务
 
-## [!UICONTROL EXPERIENCE CLOUDID] (ECID)集成
+## [!UICONTROL Experience Cloud ID] (ECID)集成
 
-虽然使用 [!DNL Target] 用于从获取内容的SDK [!DNL Target] 功能非常强大，使用 [!UICONTROL EXPERIENCE CLOUDID] 用于用户跟踪的(ECID)的扩展超过 [!DNL Adobe Target]. 利用ECID，您可以 [!DNL Adobe Experience Cloud] 产品和功能，如A4T报表和 [!DNL Adobe Audience Manager] (AAM)区段。
+尽管使用[!DNL Target] SDK从[!DNL Target]中提取内容可能非常强大，但使用[!UICONTROL Experience Cloud ID] (ECID)进行用户跟踪的附加值扩展到了[!DNL Adobe Target]之外。 ECID允许您利用[!DNL Adobe Experience Cloud]产品和功能，例如A4T报表和[!DNL Adobe Audience Manager] (AAM)区段。
 
-ECID由生成和维护 `visitor.js`，会保持其自身的状态。 此 `visitor.js` 文件创建一个名为的Cookie `AMCV_{organizationId}`，用于 [!DNL Target] 适用于ECID集成的SDK。 当 [!DNL Target] 返回响应，您需要使用更新客户端上的访客实例 `thevisitorState` 返回者 [!DNL Target] SDK。
+ECID由`visitor.js`生成和维护，它保持自己的状态。 `visitor.js`文件将创建一个名为`AMCV_{organizationId}`的Cookie，供[!DNL Target] SDK用于ECID集成。 当返回[!DNL Target]响应时，您需要使用[!DNL Target] SDK返回的`thevisitorState`更新客户端上的访客实例。
 
 ```html {line-numbers="true"}
 <!doctype html>
@@ -158,7 +158,7 @@ public class TargetControllerSample {
 
 ## ECID与客户ID集成
 
-要跟踪访客用户帐户和登录状态详细信息， `customerIds` 可以通过以下方式传递： [!DNL Target] SDK。
+为了跟踪访客用户帐户和登录状态详细信息，可以通过[!DNL Target] SDK传递`customerIds`。
 
 ```html {line-numbers="true"
 <!doctype html>
@@ -307,18 +307,18 @@ public class TargetControllerSample {
 
 >[!ENDTABS]
 
-## ECID和 [!DNL Analytics] 集成
+## ECID与[!DNL Analytics]集成
 
-充分利用 [!DNL Target] SDK，并利用提供的强大分析功能 [!DNL Adobe Analytics]中，您可以使用跨ECID的集成， [!DNL Analytics]、和 [!DNL Target].
+要充分利用[!DNL Target] SDK并使用[!DNL Adobe Analytics]提供的强大分析功能，您可以使用跨ECID、[!DNL Analytics]和[!DNL Target]的集成。
 
-使用跨ECID的集成， [!DNL Analytics]、和 [!DNL Target] 允许您：
+通过使用跨ECID、[!DNL Analytics]和[!DNL Target]的集成，您可以：
 
 * 使用来自Adobe Audience Manager (AAM)的区段
-* 根据从中检索的内容自定义用户体验 [!DNL Target]
-* 确保在中收集所有事件和成功量度 [!DNL Analytics]
-* 使用 [!DNL Analytics]&#39;强大的查询功能，并从其出色的报表可视化中受益
+* 根据从[!DNL Target]检索到的内容自定义用户体验
+* 确保在[!DNL Analytics]中收集所有事件和成功量度
+* 使用[!DNL Analytics]的强大查询并受益于其出色的报告可视化图表
 
-跨ECID的集成， [!DNL Analytics]、和 [!DNL Target] 不需要对服务器端上的analytics进行任何特殊处理。 相反，在集成ECID后，请添加 `AppMeasurement.js` ([!DNL Analytics] 库)。 [!DNL Analytics] 然后使用访客实例与同步 [!DNL Target].
+ECID、[!DNL Analytics]和[!DNL Target]之间的集成不需要在服务器端对分析进行任何特殊处理。 相反，集成ECID后，请在客户端添加`AppMeasurement.js` （[!DNL Analytics]库）。 [!DNL Analytics]然后使用访客实例与[!DNL Target]同步。
 
 ```html {line-numbers="true"}
 <!doctype html>

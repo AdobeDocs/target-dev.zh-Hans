@@ -1,23 +1,23 @@
 ---
 keywords: 实施， javascript库， js， atjs，设备上决策，设备上决策， at.js，设备上，设备上，故障排除，故障排除，实施2
-description: 了解如何进行故障排除 [!UICONTROL 设备上决策] 使用at.js库。
+description: 了解如何使用at.js库对[!UICONTROL on-device decisioning]进行故障排除。
 title: 如何使用at.js JavaScript库为设备上决策排除故障？
 feature: at.js
 exl-id: b9530cc7-5e83-4fdf-bde9-b2492e0861ff
 source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
 workflow-type: tm+mt
-source-wordcount: '274'
+source-wordcount: '265'
 ht-degree: 0%
 
 ---
 
-# 疑难解答 [!UICONTROL 设备上决策] 适用于at.js
+# 针对at.js的[!UICONTROL on-device decisioning]进行故障排除
 
-完成以下步骤以进行故障诊断 [!UICONTROL 设备上决策] 在 [!UICONTROL Adobe Target] 使用at.js JavaScript库：
+完成以下步骤以使用at.js JavaScript库对[!UICONTROL Adobe Target]中的[!UICONTROL on-device decisioning]进行故障排除：
 
 ## 步骤1：为at.js启用控制台日志
 
-附加URL参数 `mboxDebug=1` 使at.js能够在浏览器的控制台中打印消息。
+附加URL参数`mboxDebug=1`可让at.js在浏览器的控制台中打印消息。
 
 所有消息都包含前缀“AT：”，以便于概述。 要确保成功加载项目，控制台日志应包含类似于以下内容的消息：
 
@@ -30,7 +30,7 @@ AT: LD.ArtifactProvider artifact received - status=200
 
 （单击图像可展开至全宽。）
 
-![包含工件消息的控制台日志](/help/dev/implement/client-side/atjs/on-device-decisioning/assets/browser-console.png "包含工件消息的控制台日志"){zoomable=&quot;yes&quot;}
+![包含项目消息的控制台日志](/help/dev/implement/client-side/atjs/on-device-decisioning/assets/browser-console.png "包含项目消息的控制台日志"){zoomable="yes"}
 
 ## 步骤2：验证浏览器的“网络”选项卡中的规则工件下载
 
@@ -44,11 +44,11 @@ AT: LD.ArtifactProvider artifact received - status=200
 
    此外，您可以按“/delivery|rules.json/”进行筛选，以显示所有Target调用和构件rules.json。
 
-   ![Google Chrome中的“网络”选项卡](assets/rule-json.png)
+   Google Chrome中的![网络选项卡](assets/rule-json.png)
 
 ## 步骤3：使用at.js自定义事件验证规则工件下载
 
-at.js库会调度两个要支持的新自定义事件 [!UICONTROL 设备上决策].
+at.js库调度两个新的自定义事件以支持[!UICONTROL on-device decisioning]。
 
 * `adobe.target.event.ARTIFACT_DOWNLOAD_SUCCEEDED`
 * `adobe.target.event.ARTIFACT_DOWNLOAD_FAILED`

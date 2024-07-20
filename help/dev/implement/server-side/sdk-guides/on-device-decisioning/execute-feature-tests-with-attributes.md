@@ -5,7 +5,7 @@ feature: APIs/SDKs
 exl-id: c89d337c-20a9-454c-930c-79d9217e23b6
 source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
 workflow-type: tm+mt
-source-wordcount: '921'
+source-wordcount: '877'
 ht-degree: 0%
 
 ---
@@ -14,8 +14,8 @@ ht-degree: 0%
 
 ## 步骤摘要
 
-1. 启用 [!UICONTROL 设备上决策] （贵组织）
-1. 创建 [!UICONTROL A/B测试] 活动
+1. 为您的组织启用[!UICONTROL on-device decisioning]
+1. 创建[!UICONTROL A/B Test]活动
 1. 定义A和B
 1. 添加受众
 1. 设置流量分配
@@ -30,67 +30,67 @@ ht-degree: 0%
 >
 >假设您是一家零售电子商务公司。 当客户浏览您的产品目录并进行排序时，您希望提高转化率。 您有一个假设，即某些排序算法和分页策略产生比其他算法更好的结果。 为了测试此理论，您决定运行一个功能测试，该测试涉及使用最终用户不同的排序选项重新设计排序小组件。 您希望确保此功能测试在近乎零延迟的情况下执行，以便它不会对用户体验产生负面影响并扭曲结果。
 
-## 1.启用 [!UICONTROL 设备上决策] （贵组织）
+## 1.为您的组织启用[!UICONTROL on-device decisioning]
 
-启用设备上决策可确保在几乎零延迟的情况下执行A/B活动。 要启用此功能，请导航到 **[!UICONTROL 管理]** > **[!UICONTROL 实现]** > **[!UICONTROL 帐户详细信息]** 在 [!DNL Adobe Target]，并启用 **[!UICONTROL 设备上决策]** 切换。
+启用设备上决策可确保在几乎零延迟的情况下执行A/B活动。 要启用此功能，请在[!DNL Adobe Target]中导航到&#x200B;**[!UICONTROL Administration]** > **[!UICONTROL Implementation]** > **[!UICONTROL Account details]**，并启用&#x200B;**[!UICONTROL On-Device Decisioning]**&#x200B;切换开关。
 
 ![替代图像](assets/asset-odd-toggle.png)
 
 >[!NOTE]
 >
->您必须具有管理员或审批者 [用户角色](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/user-management.html) 启用或禁用 **[!UICONTROL 设备上决策]** 切换。
+>您必须具有管理员或审批者[用户角色](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/user-management.html)才能启用或禁用&#x200B;**[!UICONTROL On-Device Decisioning]**&#x200B;切换开关。
 
-启用 **[!UICONTROL 设备上决策]** 切换， [!DNL Adobe Target] 开始生成 *规则对象* 你的委托人。
+启用&#x200B;**[!UICONTROL On-Device Decisioning]**&#x200B;切换后，[!DNL Adobe Target]开始为您的客户端生成&#x200B;*规则工件*。
 
-## 2.创建一个 [!UICONTROL A/B测试] 活动
+## 2.创建[!UICONTROL A/B Test]活动
 
-1. 在 [!DNL Adobe Target]，导航到 **[!UICONTROL 活动]** 页面，然后选择 **[!UICONTROL 创建活动]** > **[!UICONTROL A/B测试]**.
+1. 在[!DNL Adobe Target]中，导航到&#x200B;**[!UICONTROL Activities]**&#x200B;页面，然后选择&#x200B;**[!UICONTROL Create Activity]** > **[!UICONTROL A/B test]**。
 
    ![替代图像](assets/asset-ab.png)
 
-1. 在 **[!UICONTROL 创建A/B测试活动]** 模式，保留默认值 **[!UICONTROL Web]** 已选择选项(1)，选择 **[!UICONTROL 表单]** 作为体验编辑器(2)，选择 **[!UICONTROL 默认工作区]** 替换为 **[!UICONTROL 无属性限制]** (3)，然后单击 **[!UICONTROL 下一个]** （四）。
+1. 在&#x200B;**[!UICONTROL Create A/B Test Activity]**&#x200B;模式中，保留默认的&#x200B;**[!UICONTROL Web]**&#x200B;选项(1)，选择&#x200B;**[!UICONTROL Form]**&#x200B;作为体验编辑器(2)，选择带有&#x200B;**[!UICONTROL No Property Restrictions]** (3)的&#x200B;**[!UICONTROL Default Workspace]**，然后单击&#x200B;**[!UICONTROL Next]** (4)。
 
    ![替代图像](assets/asset-form.png)
 
 ## 3.定义A和B
 
-1. 在 **[!UICONTROL 体验]** 创建活动的步骤，为您的活动提供一个名称(1)并添加第二个体验，即体验B，方法是单击 **[!UICONTROL 添加体验]** (2)按钮。 输入应用程序内要使用属性执行功能测试的位置(3)的名称。 在以下示例中， `product-results-page` 是为体验A定义的位置。（也是为体验B定义的位置。）
+1. 在活动创建&#x200B;**[!UICONTROL Experiences]**&#x200B;步骤中，提供活动(1)的名称，然后单击&#x200B;**[!UICONTROL Add Experience]** (2)按钮以添加第二个体验，即体验B。 输入应用程序内要使用属性执行功能测试的位置(3)的名称。 在以下示例中，`product-results-page`是为体验A定义的位置。（它也是为体验B定义的位置。）
 
    ![替代图像](assets/asset-location.png)
 
-   **[!UICONTROL 体验A]** 将包含指示您的业务逻辑执行以下操作的JSON：
+   **[!UICONTROL Experience A]**&#x200B;将包含指示您的业务逻辑执行以下操作的JSON：
 
-   * 通过启动排序算法功能 `test_sorting` 功能标志
-   * 执行中定义的推荐排序算法 `sorting_algorithm _**_attribute`
-   * 按照中定义的页面分页策略所定义，每页返回50个产品。 `pagination_limit`
+   * 通过`test_sorting`功能标志启动排序算法功能
+   * 执行`sorting_algorithm _**_attribute`中定义的推荐排序算法
+   * 按照`pagination_limit`中定义的分页策略定义，每页返回50个产品
 
-1. 在体验A中，单击以更改内容 **[!UICONTROL 默认内容]** 到JSON，方法是选择 **[!UICONTROL 创建JSON选件]** 如下所示(1)。
+1. 在体验A中，通过选择&#x200B;**[!UICONTROL Create JSON Offer]**&#x200B;将内容从&#x200B;**[!UICONTROL Default Content]**&#x200B;更改为JSON，如下所示(1)。
 
    ![替代图像](assets/asset-offer.png)
 
-1. 使用以下方式定义JSON `test_sorting`， `sorting_algorithm`、和 `pagination_limit` 用于启动推荐的排序算法（分页限制为50个产品）的标记和属性。
+1. 使用`test_sorting`、`sorting_algorithm`和`pagination_limit`标志和属性定义JSON，这些标志和属性将用于启动推荐的排序算法，分页限制为50个产品。
 
    >[!NOTE]
    >
-   >时间 [!DNL Adobe Target] 存储用户以查看体验A，将返回具有示例中定义的属性的JSON。 在您的代码中，您将需要检查功能标志的值 `test_sorting` 以查看是否应打开排序功能。 如果是这样，您将使用 `sorting_algorithm` 属性，以在产品列表视图中显示推荐的产品。 您的应用程序可显示的产品限制将为50，因为这是 `pagination_limit` 属性。
+   >当[!DNL Adobe Target]存储用户以查看体验A时，将返回具有示例中定义的属性的JSON。 在您的代码中，您需要检查功能标志`test_sorting`的值以查看是否应打开排序功能。 如果是这样，您将使用`sorting_algorithm`属性的推荐值在产品列表视图中显示推荐的产品。 为您的应用程序显示的产品限制将为50，因为这是`pagination_limit`属性的值。
 
    ![替代图像](assets/asset-sorting.png)
 
-   **[!UICONTROL 体验B]** 将定义向您的业务逻辑发出信号的JSON，以执行以下操作：
+   **[!UICONTROL Experience B]**&#x200B;将定义指示您的业务逻辑执行以下操作的JSON：
 
    * 通过test_sorting功能标志启动排序算法功能
-   * 执行 `best_sellers` 排序算法定义于 `sorting_algorithm _**_attribute`
-   * 按照中定义的页面分页策略所定义，每页返回50个产品。 `pagination_limit`
+   * 执行`sorting_algorithm _**_attribute`中定义的`best_sellers`排序算法
+   * 按照`pagination_limit`中定义的分页策略定义，每页返回50个产品
 
    >[!NOTE]
    >
-   >时间 [!DNL Adobe Target] 存储一个用户以查看体验B，将返回具有示例中定义的属性的JSON。 在您的代码中，您将需要检查功能标志的值 `test_sorting` 以查看是否应打开排序功能。 如果是这样的话，您将使用 `best_sellers` 的值 `sorting_algorithm` 属性，在产品列表视图中显示最畅销的产品。 您的应用程序可显示的产品限制将为50，因为这是 `pagination_limit` 属性。
+   >当[!DNL Adobe Target]存储用户以查看体验B时，将返回具有示例中定义的属性的JSON。 在您的代码中，您需要检查功能标志`test_sorting`的值以查看是否应打开排序功能。 如果是这样，您将使用`sorting_algorithm`属性的`best_sellers`值在产品列表视图中显示最畅销的产品。 为您的应用程序显示的产品限制将为50，因为这是`pagination_limit`属性的值。
 
    ![替代图像](assets/asset-sorting-b.png)
 
 ## 4.添加受众
 
-在 **[!UICONTROL 定位]** 步骤，保留 **[!UICONTROL 所有访客]** 受众。 这使您能够了解排序功能的影响，以及哪个算法和项目数最能影响结果。
+在&#x200B;**[!UICONTROL Targeting]**&#x200B;步骤中，保留&#x200B;**[!UICONTROL All Visitors]**&#x200B;受众。 这使您能够了解排序功能的影响，以及哪个算法和项目数最能影响结果。
 
 ![替代图像](assets/asset-audience-b.png)
 
@@ -108,13 +108,13 @@ ht-degree: 0%
 
 ## 7.设置报表
 
-在 **[!UICONTROL 目标和设置]** 步骤，选择 **[!UICONTROL Adobe Target]** 作为 **[!UICONTROL 报表源]** 要查看A/B测试结果，请执行以下操作： [!DNL Adobe Target] UI，或选择 **[!UICONTROL Adobe Analytics]** 以在Adobe Analytics UI中查看它们。
+在&#x200B;**[!UICONTROL Goals & Settings]**&#x200B;步骤中，选择&#x200B;**[!UICONTROL Adobe Target]**&#x200B;作为&#x200B;**[!UICONTROL Reporting Source]**，以便在[!DNL Adobe Target] UI中查看A/B测试结果；或者选择&#x200B;**[!UICONTROL Adobe Analytics]**，以便在Adobe Analytics UI中查看这些结果。
 
 ![替代图像](assets/asset-reporting-b.png)
 
 ## 8.添加用于跟踪KPI的量度
 
-选择 **[!UICONTROL 目标量度]** 以测量具有属性的特征测试。 在本例中，成功取决于用户是否购买产品，具体取决于显示它们的排序算法和分页策略。
+选择&#x200B;**[!UICONTROL Goal Metric]**&#x200B;以使用属性测量功能测试。 在本例中，成功取决于用户是否购买产品，具体取决于显示它们的排序算法和分页策略。
 
 ## 9.在应用程序中实施具有属性的功能测试
 

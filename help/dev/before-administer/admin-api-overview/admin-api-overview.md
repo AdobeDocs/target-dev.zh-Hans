@@ -1,36 +1,36 @@
 ---
 title: Adobe Target管理API概述
-description: 概述 [!DNL Adobe Target Admin API]
+description: ' [!DNL Adobe Target Admin API]概述'
 exl-id: 1168d376-c95b-4c5a-b7a2-c7815799a787
 feature: APIs/SDKs
 source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
 workflow-type: tm+mt
-source-wordcount: '1365'
-ht-degree: 3%
+source-wordcount: '1312'
+ht-degree: 2%
 
 ---
 
 # Target管理员API概述
 
-本文概述了解和使用所必须的背景信息 [!DNL Adobe Target Admin API]成功。 以下内容假设您了解如何 [配置身份验证](../configure-authentication.md) 对象 [!DNL Adobe Target Admin API]s.
+本文概述成功理解和使用[!DNL Adobe Target Admin API]所需的背景信息。 以下内容假设您了解如何[为[!DNL Adobe Target Admin API]配置身份验证](../configure-authentication.md)。
 
 >[!NOTE]
 >
->如果您希望管理 [!DNL Target] 通过UI，查看 [管理部分 *Adobe Target商业从业者指南*](https://experienceleague.adobe.com/docs/target/using/administer/administrating-target.html?lang=en).
+>如果您希望通过UI管理[!DNL Target]，请参阅&#x200B;*Adobe Target商业从业者指南*](https://experienceleague.adobe.com/docs/target/using/administer/administrating-target.html?lang=en)的[管理部分。
 >
->管理员API和配置文件API通常统称为“管理员API和配置文件API”)，但也可以单独称为（“管理员API”和“配置文件API”）。 Recommendations API是 [!DNL Target] 管理员API。
+>管理员API和配置文件API通常统称为“管理员API和配置文件API”)，但也可以单独称为（“管理员API”和“配置文件API”）。 Recommendations API是[!DNL Target]管理员API的特定实现。
 
 ## 开始之前
 
-在所有为提供的代码示例中， [管理员API](../../administer/admin-api/admin-api-overview-new.md)，替换 {tenant} 你的租户价值， `your-bearer-token` ，其中包含您使用JWT和生成的访问令牌 `your-api-key` 使用的API密钥 [Adobe Developer控制台](https://developer.adobe.com/console/home). 有关租户和JWT的更多信息，请参阅有关如何迁移的文章。 [配置身份验证](../configure-authentication.md) 用于Adobe [!DNL Target] 管理员API。
+在为[管理员API](../../administer/admin-api/admin-api-overview-new.md)提供的所有代码示例中，将{tenant}替换为您的租户值，`your-bearer-token`替换为您使用JWT生成的访问令牌，将`your-api-key`替换为您从[Adobe Developer Console](https://developer.adobe.com/console/home)生成的API密钥。 有关租户和JWT的详细信息，请参阅关于如何[为Adobe[!DNL Target]管理员API配置身份验证](../configure-authentication.md)的文章。
 
 ## 版本控制
 
 所有API都有一个关联的版本。 提供您要使用的API的正确版本很重要。
 
-如果请求包含有效负载(POST或PUT)，则 `Content-Type` 请求的标头用于指定版本。
+如果请求包含有效负载(POST或PUT)，则使用请求的`Content-Type`标头指定版本。
 
-如果请求不包含有效负载(GET、DELETE或OPTIONS)，则 `Accept` 标头用于指定版本。
+如果请求不包含有效负载(GET、DELETE或OPTIONS)，则使用`Accept`标头指定版本。
 
 如果未提供版本，则调用将默认使用V1 (application/vnd.adobe.target.v1+json)。
 
@@ -56,7 +56,7 @@ ht-degree: 3%
 
 管理员Postman收藏集
 
-Postman是一款能够轻松触发API调用的应用程序。 此 [Target管理员API Postman收藏集](https://developers.adobetarget.com/api/#admin-postman-collection) 包含所有要求使用活动、受众、选件、报表、Mbox和环境进行身份验证的Target管理员API调用
+Postman是一款能够轻松触发API调用的应用程序。 此[Target管理员API Postman集合](https://developers.adobetarget.com/api/#admin-postman-collection)包含所有需要使用活动、受众、选件、报表、Mbox和环境进行身份验证的Target管理员API调用
 
 ## 响应代码
 
@@ -64,11 +64,11 @@ Postman是一款能够轻松触发API调用的应用程序。 此 [Target管理�
 
 | 状态 | 含义 | 描述 |
 | --- | --- | --- |
-| 200 | [确定](https://www.rfc-editor.org/rfc/rfc7231#section-6.3.1) | OK |  |
-| 400 | [错误请求](https://www.rfc-editor.org/rfc/rfc7231#section-6.5.1) | 错误请求. 请求中提供的数据很可能无效。 |  |
+| 200 | [确定](https://www.rfc-editor.org/rfc/rfc7231#section-6.3.1) | 确定 |  |
+| 400 | [错误请求](https://www.rfc-editor.org/rfc/rfc7231#section-6.5.1) | 错误请求。 请求中提供的数据很可能无效。 |  |
 | 401 | [未授权](https://www.rfc-editor.org/rfc/rfc7235#section-3.1) | 不允许用户执行此操作。 |  |
-| 403 | [禁止](https://www.rfc-editor.org/rfc/rfc7231#section-6.5.3) | 禁止访问此资源。 |  |
-| 404 | [未找到”](https://www.rfc-editor.org/rfc/rfc7231#section-6.5.4) | 未找到引用的资源。 |  |
+| 403 | [禁止访问](https://www.rfc-editor.org/rfc/rfc7231#section-6.5.3) | 禁止访问此资源。 |  |
+| 404 | [未找到](https://www.rfc-editor.org/rfc/rfc7231#section-6.5.4) | 未找到引用的资源。 |  |
 
 ## 活动
 
@@ -78,7 +78,7 @@ Postman是一款能够轻松触发API调用的应用程序。 此 [Target管理�
 * [体验定位 (XT)](https://experienceleague.adobe.com/docs/target/using/activities/experience-targeting/experience-target.html)
 * [Recommendations](https://experienceleague.adobe.com/docs/target/using/activities/recommendations-activity.html)
 * [Automated Personalization](https://experienceleague.adobe.com/docs/target/using/activities/automated-personalization/automated-personalization.html)
-* [多变量测试 (MVT)](https://experienceleague.adobe.com/docs/target/using/activities/multivariate-test/multivariate-testing.html)
+* [多变量测试(MVT)](https://experienceleague.adobe.com/docs/target/using/activities/multivariate-test/multivariate-testing.html)
 
 ## 批量更新
 
@@ -110,7 +110,7 @@ Postman是一款能够轻松触发API调用的应用程序。 此 [Target管理�
 
 | 属性 | 描述 | 限制 | 默认 |
 | --- | --- | --- | --- |
-| body | HTTP批处理操作的主体。 将忽略除POST和PUT之外的所有操作。 可以引用来自以前的批处理操作的ID，例如：“offerId”：“{operationIdResponse：0}“，”segmentId“：”{operationIdResponse：1}&quot; | 应为有效的JSON；在引用operationIdResponse时，引用的operationId响应应为有效的ID，并且该操作的方法应POST | 空对象 {} |  |
+| 正文 | HTTP批处理操作的主体。 将忽略除POST和PUT之外的所有操作。 可以引用来自以前的批处理操作的ID，例如：“offerId”：“{operationIdResponse：0}”，“segmentId”：“{operationIdResponse：1}” | 应为有效的JSON；在引用operationIdResponse时，引用的operationId响应应为有效的ID，并且该操作的方法应POST | 空对象{} |  |
 | dependsOnOperationIds | 约束ID的列表，将确保仅在指定的操作成功完成时才执行当前操作。 可用于实现连锁操作。 | 最多允许255个操作；仅允许唯一值；应指向数组中的有效operationId；不允许循环依赖关系 |  |  |
 | 标头 | 要通过特定操作发送的键值标头数组。 如果已通过授权标头执行批处理API的身份验证，则还会为各个操作复制该标头。 | 数组中允许的最大标头数为50 | Content-Type： application/json |  |
 | 标头 — >名称 | 标头名称 | 应在其他标头名称中唯一。 rfc的标头不区分大小写，否则值将相互覆盖。 |  |  |
@@ -118,7 +118,7 @@ Postman是一款能够轻松触发API调用的应用程序。 此 [Target管理�
 | 方法 | 要使用的HTTP方法。 可用选项：GET、POST、PUT、PATCH、DELETE | 仅允许GET、POST、PUT、PATCH、DELETE方法 |  |  |
 | operationId | 操作ID，用于在用于响应和引用结果的其他操作中标识某个操作。 | 在其他操作中唯一；值介于0至255之间 |  |  |
 | 操作 | 要在批次中执行的操作列表。 顺序不相关。 | 最多允许256个操作 |  |  |
-| relativeUrl | 管理员rest API的相对URL，位于“/admin/rest/”之后。 可以包含查询字符串参数，如：&quot;/v2/campaigns？limit=10&amp;offset=10&quot;。 可以引用具有来自先前批处理操作的包含ID的URL，例如：&quot;/v1/offers/{operationIdResponse：0}“。 如果发送查询参数，则这些参数必须进行URL编码。 | 应当以/（相对）开头；仅支持新的有效JSON API；如果relativeURL无效，则将返回特定操作的404响应；如果引用operationIdResponse，则引用的operationId响应应当为有效ID，并且此操作的方法应当为POST |  |  |
+| relativeUrl | 管理员rest API的相对URL，位于“/admin/rest/”之后。 可以包含查询字符串参数，如：&quot;/v2/campaigns？limit=10&amp;offset=10&quot;。 可以引用具有来自先前批处理操作的包含ID的URL，例如：“/v1/offers/{operationIdResponse：0}”。 如果发送查询参数，则这些参数必须进行URL编码。 | 应当以/（相对）开头；仅支持新的有效JSON API；如果relativeURL无效，则将返回特定操作的404响应；如果引用operationIdResponse，则引用的operationId响应应当为有效ID，并且此操作的方法应当为POST |  |  |
 
 #### 示例请求对象
 
@@ -154,7 +154,7 @@ Postman是一款能够轻松触发API调用的应用程序。 此 [Target管理�
 | 标头 | 键值标头数组，将作为特定操作的响应发送。 |  |
 | 标头 — >名称 | 标头名称 |  |
 | 标头 — >值 | 标头值 |  |
-| body | HTTP批处理响应操作的主体 |  |
+| 正文 | HTTP批处理响应操作的主体 |  |
 
 #### 示例响应对象
 

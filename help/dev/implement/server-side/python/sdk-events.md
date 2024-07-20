@@ -1,11 +1,11 @@
 ---
-title: 订阅中的事件 [!DNL Adobe Target] Python SDK
-description: 了解如何使用订阅Python SDK中发生的各种事件 [!UICONTROL OnDeviceDecisioningHandler] 对象。
+title: 订阅 [!DNL Adobe Target] Python SDK中的事件
+description: 了解如何使用[!UICONTROL OnDeviceDecisioningHandler]对象订阅Python SDK中发生的各种事件。
 feature: APIs/SDKs
 exl-id: 4e32e3b5-6072-4703-b09d-abb467aa1304
 source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
 workflow-type: tm+mt
-source-wordcount: '175'
+source-wordcount: '165'
 ht-degree: 3%
 
 ---
@@ -14,9 +14,9 @@ ht-degree: 3%
 
 ## 描述
 
-时间 [初始化SDK](initialize-sdk.md)， `options["events"]` dict是一个可选对象，具有事件名称键和回调函数值。 它可用于订阅SDK内发生的各种事件。 例如， `client_ready` 事件可与回调函数一起使用，在SDK准备好进行方法调用时，将调用该回调函数。
+在[初始化SDK](initialize-sdk.md)时，`options["events"]` dict是一个可选对象，具有事件名称键和回调函数值。 它可用于订阅SDK内发生的各种事件。 例如，`client_ready`事件可与回调函数一起使用，在SDK准备好进行方法调用时，将调用该回调函数。
 
-当 `callback` 调用函数，传入一个事件对象。 每个事件都有一个 `type` 和事件名称相对应，并且某些事件包含附加属性以及相关信息。
+调用`callback`函数时，传入了一个事件对象。 每个事件都有一个与事件名称对应的`type`，并且某些事件包含具有相关信息的其他属性。
 
 ## 事件
 

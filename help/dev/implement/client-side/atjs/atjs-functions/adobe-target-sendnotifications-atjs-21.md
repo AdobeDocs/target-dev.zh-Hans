@@ -1,25 +1,25 @@
 ---
 keywords: adobe.target.sendNotifications， sendNotifications， sendnotifications，发送通知，通知， at.js，函数，函数， $9
-description: 使用 [!UICONTROL adobe.target.sendNotifications()] ，将通知发送至 [!DNL Target] 呈现体验时呈现的边缘，不使用 [!UICONTROL applyOffer](s)。 (at.js.2.1 +)
+description: 呈现体验时，使用at.js的[!UICONTROL adobe.target.sendNotifications()]向 [!DNL Target] 边缘发送通知，而不使用[!UICONTROL applyOffer]。 (at.js.2.1 +)
 title: 如何使用adobe.target.sendNotifications()函数？
 feature: at.js
 exl-id: 1a08da10-31a0-4b0b-af7d-91ed7d32c308
 source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
 workflow-type: tm+mt
-source-wordcount: '627'
-ht-degree: 84%
+source-wordcount: '640'
+ht-degree: 83%
 
 ---
 
 # [!UICONTROL adobe.target.sendNotifications(options)]
 
-此函数将通知发送至 [!DNL Target] 在不使用的情况下呈现体验时呈现边缘 `[!UICONTROL adobe.target.applyOffer()]` 或 `[!UICONTROL adobe.target.applyOffers()]`.
+在不使用`[!UICONTROL adobe.target.applyOffer()]`或`[!UICONTROL adobe.target.applyOffers()]`呈现体验时，此函数会向[!DNL Target]边缘发送通知。
 
 >[!NOTE]
 >
 >此函数已在 at.js 2.1.0 中引入，可用于 2.1.0 以上的任何版本。
 
-| 键值 | 类型 | 必需？ | 描述 |
+| 键 | 类型 | 必需？ | 描述 |
 | --- | --- | --- | --- |
 | consumerId | 字符串 | 否 | 如果未提供，则默认值为客户端的全局 mbox。可使用此键值生成用于 A4T 集成的补充数据 ID。 |
 | 请求 | 对象 | 是 | 请参阅下文的“请求”表。 |
@@ -48,7 +48,7 @@ ht-degree: 84%
 | Request > notifications > timestamp | 数值`<int64>` | 是 |  | 通知的时间戳（以自 UNIX 纪元以来所经过的毫秒数为单位）。 |
 | Request > notifications > tokens | 字符串数组 | 是 |  | 基于通知类型的已显示内容或已点击选择器的令牌列表。 |
 | Request > notifications > mbox | 对象 | 否 |  | 有关 mbox 的通知。 |
-| Request > notifications > mbox > name | 字符串 | 否 | 不允许使用空值。<p>允许使用的字符：请参阅此表后面的注释。 | mbox 名称。 |
+| Request > notifications > mbox > name | 字符串 | 否 | 不允许使用空值。<p>允许的字符：请参阅此表后面的注释。 | mbox 名称。 |
 | Request > notifications > mbox > state | 字符串 | 否 |  | mbox 状态令牌。 |
 | Request > notifications > view | 对象 | 否 |  |  |
 | Request > notifications > view > id | 整数 `<int64>` | 否 |  | 视图 ID。通过视图 API 创建视图时分配给视图的 ID。 |
@@ -56,7 +56,7 @@ ht-degree: 84%
 | Request > notifications > view > key | 字符串 | 否 | `<=` 512 个字符。 | 视图键。通过 API 在视图中设置的键。 |
 | Request > notifications > view > state | 字符串 | 否 |  | 视图状态令牌。 |
 
-**注意**：以下字符为 *非* 允许 `Request > notifications > mbox > name`：
+**注意**： `Request > notifications > mbox > name`不允许使用以下字符&#x200B;**：
 
 ```
 - '-, ./=`:;&!@#$%^&*()+|?~[]{}'
@@ -118,4 +118,4 @@ adobe.target.getOffers({
 
 >[!NOTE]
 >
->如果您使用 [!DNL Adobe Analytics]， `[!UICONTROL getOffers()]` 仅具有预取和 `[!UICONTROL sendNotifications()]`， [!DNL Analytics] 请求必须触发于 `[!UICONTROL sendNotifications()]` 执行。 这样做是为了确保生成的SDID `[!UICONTROL sendNotifications()]` 匹配发送到的SDID [!DNL Analytics] 和 [!DNL Target].
+>如果您正在使用[!DNL Adobe Analytics]、`[!UICONTROL getOffers()]`和`[!UICONTROL sendNotifications()]`，则在执行`[!UICONTROL sendNotifications()]`后必须触发[!DNL Analytics]请求。 其目的在于确保`[!UICONTROL sendNotifications()]`生成的SDID与发送到[!DNL Analytics]和[!DNL Target]的SDID匹配。

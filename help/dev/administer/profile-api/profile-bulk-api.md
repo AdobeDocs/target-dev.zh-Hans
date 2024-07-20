@@ -1,6 +1,6 @@
 ---
 title: Adobe Target批量配置文件更新API
-description: 了解如何使用 [!DNL Adobe Target] [!UICONTROL Bulk Profile Update API] 将多个访客的配置文件数据发送到 [!DNL Target] 以用于定位。
+description: 了解如何使用 [!DNL Adobe Target] [!UICONTROL Bulk Profile Update API]将多个访客的配置文件数据发送到 [!DNL Target] 以用于定位。
 feature: APIs/SDKs
 contributors: https://github.com/icaraps
 exl-id: 0f38d109-5273-4f73-9488-80eca115d44d
@@ -13,9 +13,9 @@ ht-degree: 8%
 
 # [!DNL Adobe Target Bulk Profile Update API]
 
-此 [!DNL Adobe Target] [!UICONTROL Bulk Profile Update API] 允许您使用批处理文件批量更新网站多个访客的用户配置文件。
+[!DNL Adobe Target] [!UICONTROL Bulk Profile Update API]允许您使用批处理文件批量更新网站多个访客的用户配置文件。
 
-使用 [!UICONTROL Bulk Profile Update API]，您可以方便地以多个用户的配置文件参数的形式将详细的访客配置文件数据发送至 [!DNL Target] 来自任何外部源。 外部来源可能包括客户关系管理(CRM)或销售点(POS)系统，这些系统通常无法在网页上使用。
+使用[!UICONTROL Bulk Profile Update API]，您可以方便地将许多用户的详细访客配置文件数据以配置文件参数的形式从任何外部源发送到[!DNL Target]。 外部来源可能包括客户关系管理(CRM)或销售点(POS)系统，这些系统通常无法在网页上使用。
 
 | 版本 | URL示例 | 功能 |
 | --- | --- | --- |
@@ -24,7 +24,7 @@ ht-degree: 8%
 
 >[!NOTE]
 >
->的版本2 (v2) [!UICONTROL Bulk Profile Update API] 是当前版本。 但是， [!DNL Target] 仍支持版本1 (v1)。
+>[!UICONTROL Bulk Profile Update API]的版本2 (v2)是当前版本。 但是，[!DNL Target]仍支持版本1 (v1)。
 
 ## 批量配置文件更新API的优势
 
@@ -37,7 +37,7 @@ ht-degree: 8%
 * 更新通常在一小时内发生，但可能需要24小时才能反映出来。
 * 对于在后续批次中可以在24小时内上传的一个或多个行数没有限制。 但是，为了确保其他进程能够高效运行，这些数据的吸收过程在工作时间可能会受到节流限制。
 * 对于相同thirdPartyId，如果连续的v2批量更新调用之间没有mbox调用，则会覆盖在第一次批量更新调用中更新的属性。
-* [!DNL Adobe] 不保证100%的批量配置文件数据将载入并保留在Target中，因此可用于定位。 在当前设计中，有可能不会载入或保留一小部分数据（最多占大批量生产的0.1%）。
+* [!DNL Adobe]不保证100%的批次配置文件数据将被载入并保留在Target中，因此可用于定位。 在当前设计中，有可能不会载入或保留一小部分数据（最多占大批量生产的0.1%）。
 
 ## 批处理文件
 
@@ -53,23 +53,23 @@ batch=pcId,param1,param2,param3,param4
 
 >[!NOTE]
 >
->此 `batch=` 参数是必需的，必须在文件开头指定。
+>`batch=`参数是必需的，必须在文件开头指定。
 
-您在POST调用中引用此文件 [!DNL Target] 服务器处理文件。 创建批处理文件时，请考虑以下事项：
+您在[!DNL Target]服务器的POST调用中引用此文件以处理该文件。 创建批处理文件时，请考虑以下事项：
 
 * 文件的第一行必须指定列标题。
-* 第一个标头应为 `pcId` 或 `thirdPartyId`. 此 [!UICONTROL Marketing Cloud visitor ID] 不受支持。 [!UICONTROL pcId] 是 [!DNL Target] — 生成的visitorID。 `thirdPartyId` 是由客户端应用程序指定的ID，传递给 [!DNL Target] 通过mbox调用，作为 `mbox3rdPartyId`. 必须在此将其引用为 `thirdPartyId`.
+* 第一个标头应为`pcId`或`thirdPartyId`。 不支持[!UICONTROL Marketing Cloud visitor ID]。 [!UICONTROL pcId]是[!DNL Target]生成的访客ID。 `thirdPartyId`是由客户端应用程序指定的ID，它通过mbox调用作为`mbox3rdPartyId`传递给[!DNL Target]。 它必须在此作为`thirdPartyId`引用。
 * 出于安全原因，您在批处理文件中指定的参数和值必须使用UTF-8进行URL编码。 参数和值可以转发到其他边缘节点以供通过HTTP请求进行处理。
-* 参数必须采用格式 `paramName` 仅限。 参数显示在中 [!DNL Target] 作为 `profile.paramName`.
-* 如果您使用 [!UICONTROL Bulk Profile Update API] v2，您无需为每个参数指定所有参数值 `pcId`. 已为任何对象创建配置文件 `pcId` 或 `mbox3rdPartyId` 在中未找到的 [!DNL Target]. 如果您使用的是v1，则不会为缺少的pcIds或mbox3rdPartyIds创建配置文件。
+* 参数必须仅采用`paramName`格式。 参数在[!DNL Target]中显示为`profile.paramName`。
+* 如果您使用[!UICONTROL Bulk Profile Update API] v2，则不需要为每个`pcId`指定所有参数值。 已为[!DNL Target]中未找到的任何`pcId`或`mbox3rdPartyId`创建配置文件。 如果您使用的是v1，则不会为缺少的pcIds或mbox3rdPartyIds创建配置文件。
 * 批处理文件必须小于 50 MB。此外，总行数不应超过500,000。 此限制可确保服务器不会因请求过多而泛滥。
 * 您可以发送多个文件。 但是，您一天内发送的所有文件的行总数不应超过每个客户端的100万。
-* 您上传的属性数量没有限制。 但是，配置文件的整体大小（包括系统数据）不应超过2000 KB。 [!DNL Adobe] 建议为配置文件属性使用的存储空间小于1000 KB。
+* 您上传的属性数量没有限制。 但是，配置文件的整体大小（包括系统数据）不应超过2000 KB。 [!DNL Adobe]建议您将小于1000 KB的存储空间用于配置文件属性。
 * 参数和值区分大小写。
 
 ## HTTPPOST请求
 
-向发出HTTPPOST请求 [!DNL Target] 用于处理文件的边缘服务器。 以下是使用curl命令获取文件batch.txt的示例HTTPPOST请求：
+向[!DNL Target]边缘服务器发出HTTPPOST请求以处理该文件。 以下是使用curl命令获取文件batch.txt的示例HTTPPOST请求：
 
 ``````
 curl -X POST --data-binary @BATCH.TXT http://CLIENTCODE.tt.omtrdc.net/m2/CLIENTCODE/v2/profile/batchUpdate
@@ -77,9 +77,9 @@ curl -X POST --data-binary @BATCH.TXT http://CLIENTCODE.tt.omtrdc.net/m2/CLIENTC
 
 其中：
 
-BATCH.TXT是文件名。 CLIENTCODE [!DNL Target] 客户端代码。
+BATCH.TXT是文件名。 CLIENTCODE是[!DNL Target]客户端代码。
 
-如果您不知道自己的客户端代码，请在 [!DNL Target] 用户界面点击 **[!UICONTROL Administration]** > **[!UICONTROL Implementation]**. 客户端代码显示在 [!UICONTROL Account Details] 部分。
+如果您不知道客户端代码，请在[!DNL Target]用户界面中单击&#x200B;**[!UICONTROL Administration]** > **[!UICONTROL Implementation]**。 客户端代码显示在[!UICONTROL Account Details]部分中。
 
 ### Inspect响应
 
@@ -97,11 +97,11 @@ BATCH.TXT是文件名。 CLIENTCODE [!DNL Target] 客户端代码。
 </response>
 ```
 
-如果出现错误，响应将包含 `success=false` 以及错误的详细消息。
+如果出现错误，则响应包含`success=false`和详细的错误消息。
 
 ### 默认批次状态响应
 
-成功默认响应（如果满足上述条件） `batchStatus` 单击URL链接时如下所示：
+单击上述`batchStatus` URL链接时成功的默认响应如下所示：
 
 ```
 <response><batchId>demo4-1701473848678-13029383</batchId><status>complete</status><batchSize>1</batchSize></response>
@@ -117,7 +117,7 @@ BATCH.TXT是文件名。 CLIENTCODE [!DNL Target] 客户端代码。
 
 ### 详细的批次状态URL响应
 
-可以通过传递参数获取更详细的响应 `showDetails=true` 到 `batchStatus` 上面的url。
+通过将参数`showDetails=true`传递到上面的`batchStatus` URL，可以获取更详细的响应。
 
 例如：
 

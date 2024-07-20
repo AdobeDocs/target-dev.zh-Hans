@@ -1,25 +1,25 @@
 ---
 title: Adobe Target交付API单次或批量交付
-description: 如何使用 [!UICONTROL Adobe Target交付API] 是单次还是批量交付调用？
+description: 如何使用[!UICONTROL Adobe Target Delivery API]单次或批量投放调用？
 keywords: 投放api
 exl-id: 525cd1f2-616a-486c-8f49-8117615500bb
 feature: APIs/SDKs
 source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
 workflow-type: tm+mt
-source-wordcount: '460'
+source-wordcount: '448'
 ht-degree: 0%
 
 ---
 
 # 单次或批量交付
 
-此 [!UICONTROL Adobe Target交付API] 支持单个或批量投放调用。 可以为单个或多个mbox发出内容服务器请求。
+[!UICONTROL Adobe Target Delivery API]支持单个或批次投放调用。 可以为单个或多个mbox发出内容服务器请求。
 
 在决定进行单次呼叫与批量呼叫时权衡性能成本。 如果您知道需要为用户显示的所有内容，则最佳实践是通过单个批量投放调用检索所有mbox的内容，以避免发出多个单个投放调用。
 
 ## 单个投放调用
 
-您可以通过以下方式检索要向用户显示的一种mbox体验 [!UICONTROL Adobe Target交付API]. 请注意，如果您进行单个交付调用，则需要启动另一个服务器调用，以便为用户的mbox检索其他内容。 随着时间的推移，这可能变得非常昂贵，因此，请确保在使用单个交付API调用时评估您的方法。
+您可以检索要通过[!UICONTROL Adobe Target Delivery API]显示给用户的一个mbox的体验。 请注意，如果您进行单个交付调用，则需要启动另一个服务器调用，以便为用户的mbox检索其他内容。 随着时间的推移，这可能变得非常昂贵，因此，请确保在使用单个交付API调用时评估您的方法。
 
 ```
 curl -X POST \
@@ -55,7 +55,7 @@ curl -X POST \
 }'
 ```
 
-在上述单个投放调用示例中，通过检索体验来向用户显示 `tntId`： `abcdefghijkl00023.1_1` 对于 `mbox`：`SummerOffer` 在Web渠道上。 此单个投放调用将生成以下响应：
+在上面的单个投放调用示例中，检索了体验，以在Web渠道上向具有`mbox`：`SummerOffer`的`tntId`： `abcdefghijkl00023.1_1`的用户显示。 此单个投放调用将生成以下响应：
 
 ```
 {
@@ -83,11 +83,11 @@ curl -X POST \
 }
 ```
 
-在响应中，请注意 `content` 字段包含的HTML描述了要向用户显示的与SummerOffer mbox对应的Web体验。
+在响应中，请注意`content`字段包含的HTML描述了要向用户显示的与SummerOffer mbox对应的Web体验。
 
 ### 执行页面加载
 
-如果在Web渠道中进行页面加载时应该显示一些体验（例如AB测试页脚或页眉中的字体），则可以指定 `pageLoad` 在 `execute` 字段以检索应应用的所有修改。
+如果在Web渠道中进行页面加载时应该显示一些体验，例如AB测试页脚或页眉中的字体，则可以在`execute`字段中指定`pageLoad`以检索应该应用的所有修改。
 
 ```
 curl -X POST \
@@ -117,7 +117,7 @@ curl -X POST \
 }'
 ```
 
-上述示例调用会检索任何体验，以在页面时向用户显示 `https://target.enablementadobe.com/react/demo/#/` 加载。
+上述示例调用检索任何体验以在加载页面`https://target.enablementadobe.com/react/demo/#/`时向用户显示。
 
 ```
 {
@@ -155,7 +155,7 @@ curl -X POST \
   }
 ```
 
-在 `content` 字段，则可以检索需要对页面加载应用的修改。 在上面的示例中，请注意，需要命名标头上的链接 *修改的主页*.
+在`content`字段中，可以检索需要应用于页面加载的修改。 在上面的示例中，请注意，标头上的链接需要命名为&#x200B;*Modified Home*。
 
 ## 已分批投放调用
 
@@ -203,7 +203,7 @@ curl -X POST \
 }'
 ```
 
-在上面的批量投放调用示例中，将检索体验，以便为用户显示 `tntId`： `abcdefghijkl00023.1_1` 表示多个 `mbox`：`SummerOffer`， `SummerShoesOffer`、和 `SummerDressOffer`. 由于我们知道需要为此用户显示多个mbox的体验，因此我们可以批量处理这些请求，并进行一次服务器调用，而不是三次单独的投放调用。
+在上面的批量投放调用示例中，检索了体验，以针对多个`mbox`：`SummerOffer`、`SummerShoesOffer`和`SummerDressOffer`的`tntId`： `abcdefghijkl00023.1_1`用户显示体验。 由于我们知道需要为此用户显示多个mbox的体验，因此我们可以批量处理这些请求，并进行一次服务器调用，而不是三次单独的投放调用。
 
 ```
 {
@@ -252,4 +252,4 @@ curl -X POST \
 }
 ```
 
-在上面的响应中，您可以看到在 `content` 字段中，可以检索要向每个mbox的HTML显示的体验呈现形式。
+在上面的响应中，您可以看到在每个mbox的`content`字段中，可以检索要向每个mbox的用户显示的体验HTML表示形式。

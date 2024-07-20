@@ -1,38 +1,38 @@
 ---
 keywords: 移动设备应用程序, 移动设备应用程序位置, 定位移动设备应用程序, 移动设备 Target 位置, 移动设备应用程序成功量度
-description: 查看示例代码，以帮助您了解如何在iOS应用程序中创建位置和成功量度以便使用 [!DNL Adobe Target] 以个性化和优化您的应用程序。
-title: 如何创建 [!DNL Target] iOS应用程序中的位置和成功量度？
+description: 查看示例代码，以帮助您了解如何在iOS应用程序中创建位置和成功量度，以便使用 [!DNL Adobe Target] 个性化和优化您的应用程序。
+title: 如何在iOS应用程序中创建 [!DNL Target] 位置和成功量度？
 feature: Implement Mobile
 exl-id: 755c8b26-5c60-48fc-9e7e-5e97a25edb78
 source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
 workflow-type: tm+mt
-source-wordcount: '456'
-ht-degree: 67%
+source-wordcount: '442'
+ht-degree: 66%
 
 ---
 
-# iOS — 创建 [!DNL Target] 位置和成功量度
+# iOS — 创建[!DNL Target]位置和成功量度
 
-使用 [!DNL Target] 在您的移动设备应用程序中，创建位置和成功量度。
+要在移动应用程序中使用[!DNL Target]，请创建位置和成功量度。
 
 >[!IMPORTANT]
 >
->支持 [!DNL Adobe Mobile] 版本4。*x* SDK已于2021年8月31日结束，不再建议用于 [!DNL Adobe Target] 移动用户。
+>支持[!DNL Adobe Mobile]版本4。*x* SDK已于2021年8月31日结束，不再推荐用于[!DNL Adobe Target]移动用户。
 >
->此 [适用于移动应用程序的Adobe Experience Platform SDK](https://developer.adobe.com/client-sdks/documentation/){target=_blank} 是推荐的电源解决方案 [!DNL Adobe Experience Cloud] 解决方案和服务。
+>适用于移动设备应用程序的[Adobe Experience Platform SDK](https://developer.adobe.com/client-sdks/documentation/){target=_blank}是推荐的解决方案，旨在为您的移动设备应用程序中的[!DNL Adobe Experience Cloud]解决方案和服务提供支持。
 
-本节包含的示例代码可用作应用程序的模板。本节中的示例包含适用于 iOS 的代码。相同的模式也适用于 Android。在[](https://experienceleague.adobe.com/docs/mobile-services/android/target-android/target-main.html)《适用于 Experience Cloud 解决方案的 Android SDK 4.x》指南中可以找到特定于 Android 的语法。
+本节包含的示例代码可用作应用程序的模板。本节中的示例包含适用于 iOS 的代码。相同的模式也适用于 Android。特定于Android的语法可以在[适用于Experience Cloud解决方案的Android SDK 4.x](https://experienceleague.adobe.com/docs/mobile-services/android/target-android/target-main.html)指南中找到。
 
 >[!NOTE]
 >
->请参阅 [移动设备文档](https://experienceleague.adobe.com/docs/mobile-services/ios/target-ios/c-target-methods.html) 以获取所有可用的 [!DNL Target] 方法。
+>有关所有可用[!DNL Target]方法的列表，请参阅[移动设备文档](https://experienceleague.adobe.com/docs/mobile-services/ios/target-ios/c-target-methods.html)。
 
-创建 [!DNL Target] 在您的应用程序中放置位置并进行请求，主要可以使用以下两种方法：
+要在应用程序中创建[!DNL Target]位置并进行请求，主要可以使用以下两种方法：
 
 * `targetCreateRequestWithName`
 * `targetLoadRequest`
 
-1. 创建 [!DNL Target] 位置。
+1. 创建[!DNL Target]位置。
 
    下面是用于创建请求的示例调用：
 

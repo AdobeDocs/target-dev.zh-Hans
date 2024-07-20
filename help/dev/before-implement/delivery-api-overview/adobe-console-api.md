@@ -2,17 +2,17 @@
 title: ADOBE ADMIN CONSOLE API
 description: 了解如何使用Adobe Admin Console API。
 keywords: Adobe控制台API；控制台；API
-exl-id: 18fb9c75-aa71-4902-bcb8-3ead9d2d087d
+exl-id: 515cb851-6553-42af-a1a9-e72c8952e210
 feature: APIs/SDKs, Recommendations, Administration & Configuration
-source-git-commit: 09a50aa67ccd5c687244a85caad24df56c0d78f5
+source-git-commit: 50ee7e66e30c0f8367763a63b6fde5977d30cfe7
 workflow-type: tm+mt
-source-wordcount: '58'
+source-wordcount: '50'
 ht-degree: 0%
 
 ---
 
 # ADOBE ADMIN CONSOLE API
 
-通过以下方式管理用户和产品权利 [!UICONTROL Adobe用户管理] 和 [!UICONTROL 用户同步API]s.
+通过[!UICONTROL Adobe User Management]和[!UICONTROL User Sync API]管理用户和产品权利。
 
-有关更多信息，请参阅 [通过API方式管理用户和产品权限](https://developer.adobe.com/umapi/){target=_blank} 在 *Adobe Developer* 网站。
+有关详细信息，请参阅&#x200B;*Adobe Developer*&#x200B;网站上的[管理用户和产品授权，API方式](https://developer.adobe.com/umapi/){target=_blank}。

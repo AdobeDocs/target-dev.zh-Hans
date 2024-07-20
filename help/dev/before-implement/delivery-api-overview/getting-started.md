@@ -1,19 +1,19 @@
 ---
 title: Adobe Target投放API快速入门
-description: 如何使用 [!UICONTROL Adobe Target交付API]？
+description: 如何使用[!UICONTROL Adobe Target Delivery API]？
 keywords: 投放api
 exl-id: 142ec3be-b017-4cdc-9079-b1cc173a710a
 feature: APIs/SDKs
 source-git-commit: e5a1c38d448cb7446b7b26cd0dc882976ba94dd3
 workflow-type: tm+mt
-source-wordcount: '112'
+source-wordcount: '96'
 ht-degree: 0%
 
 ---
 
-# 入门 [!UICONTROL Adobe Target交付API]
+# 开始使用[!UICONTROL Adobe Target Delivery API]
 
-A [!UICONTROL Target投放API] 调用如下所示：
+[!UICONTROL Target Delivery API]调用如下所示：
 
 ```
 curl -X POST \
@@ -45,10 +45,10 @@ curl -X POST \
     }'
 ```
 
-此 `clientCode` 可从以下位置检索： [!DNL Target] UI，导航到 **[!UICONTROL 管理]** > **[!UICONTROL 实现]**.
+通过导航到&#x200B;**[!UICONTROL Administration]** > **[!UICONTROL Implementation]**，可以从[!DNL Target] UI检索`clientCode`。
 
-创建之前 [!UICONTROL Target投放API] 调用，请按照以下步骤操作，以确保响应包含向最终用户显示的相关体验：
+在进行[!UICONTROL Target Delivery API]调用之前，请按照以下步骤操作，以确保响应包含向最终用户显示的相关体验：
 
-1. 创建 [!DNL Target] 活动(A/B、XT、AP或Recommendations) [基于表单的编辑器](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html?lang=en) 或 [可视化体验编辑器](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html).
-1. 使用投放API获取 [!DNL Target] 在步骤2中创建的活动。
+1. 使用基于表单的编辑器[或[可视化体验编辑器](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html)创建[!DNL Target]活动(A/B、XT、AP或Recommendations)。](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html?lang=en)
+1. 使用投放API获取在步骤2中创建的[!DNL Target]活动中使用的mbox的响应。
 1. 向访客展示体验。

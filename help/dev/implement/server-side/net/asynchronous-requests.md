@@ -1,6 +1,6 @@
 ---
-title: 如何在中使用异步请求 [!DNL Adobe Target] .NET SDK
-description: 了解如何 [!DNL Target] Java SDK支持异步请求，这可以将有效目标时间减少为零。
+title: 如何在 [!DNL Adobe Target] .NET SDK中使用异步请求
+description: 了解 [!DNL Target] Java SDK如何支持异步请求，这可以将有效目标时间减少为零。
 feature: APIs/SDKs
 exl-id: fd36cc7b-a884-4e57-93c2-8aff8256109a
 source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
@@ -14,7 +14,7 @@ ht-degree: 4%
 
 ## 描述
 
-服务器端集成的一个好处是，通过使用并行性，可以利用服务器端提供的巨大带宽和计算资源。 [!DNL Target] .NET SDK支持异步请求，使其易于集成 [!DNL Target] 放入应用程序的现有异步工作流中。
+服务器端集成的一个好处是，通过使用并行性，可以利用服务器端提供的巨大带宽和计算资源。 [!DNL Target] .NET SDK支持异步请求，从而可轻松将[!DNL Target]集成到应用程序的现有异步工作流中。
 
 ## 支持的方法
 
@@ -53,4 +53,4 @@ var notificationRequest = new TargetDeliveryRequest.Builder()
 var notificationResponse = await this.targetClient.SendNotificationsAsync(notificationRequest);
 ```
 
-此示例假设您拥有 [已初始化SDK](initialize-sdk.md).
+此示例假定您已[初始化SDK](initialize-sdk.md)。

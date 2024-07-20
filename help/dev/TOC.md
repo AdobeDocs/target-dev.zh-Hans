@@ -13,7 +13,7 @@ ht-degree: 45%
 # Adobe Target开发人员指南 {#developer}
 
 + [Adobe Target开发人员指南](overview.md)
-+ 快速入门 {#implementation}
++ 快速入门{#implementation}
    + 实施之前 {#before-implement}
       + [实施之前](before-implement/considerations-before-you-implement-target.md)
       + [准备实施 Target](before-implement/prepare-to-implement-target.md)
@@ -41,7 +41,7 @@ ht-degree: 45%
    + [支持的浏览器](before-implement/supported-browsers.md)
    + [TLS（传输层安全性）加密更改](before-implement/tls-transport-layer-security-encryption.md)
    + [CNAME 和 Adobe Target](before-implement/implement-cname-support-in-target.md)
-+ 客户端实施 {#client-side}
++ 客户端实施{#client-side}
    + [概述：为客户端 Web 实施 Target](implement/client-side/overview.md)
    + [Adobe Experience Platform Web SDK实施概述](implement/client-side/aep-web-sdk.md)
    + at.js 实施 {#at-js-implementation}
@@ -90,25 +90,25 @@ ht-degree: 45%
       + [使用旧版实施中的全局 mbox](implement/client-side/atjs/global-mbox/mbox-global-target-standard.md)
       + [将参数传递到全局 mbox](implement/client-side/atjs/global-mbox/pass-parameters-to-global-mbox.md)
       + [全局 mbox 常见问题解答](implement/client-side/atjs/global-mbox/global-mbox-faq.md)
-+ 服务器端实施 {#server-side}
++ 服务器端实现{#server-side}
    + [服务器端：实施 Target 概述](implement/server-side/server-side-overview.md)
    + [Target SDK快速入门](implement/server-side/sdk-guides/getting-started/getting-started.md)
    + [示例应用程序](implement/server-side/sdk-guides/sample-apps/sample-apps.md)
    + [从 Target 旧版 API 迁移到 Adobe I/O](implement/server-side/transition-from-target-classic-apis.md)
-   + 核心原则 {#core-principles}
+   + 核心原则{#core-principles}
       + [核心原则概述](implement/server-side/sdk-guides/core-principles/overview.md)
       + [用户ID和分段](implement/server-side/sdk-guides/core-principles/user-identification-and-bucketing.md)
       + [受众定位](implement/server-side/sdk-guides/core-principles/audience-targeting.md)
       + [事件跟踪](implement/server-side/sdk-guides/core-principles/event-tracking.md)
       + [用户权限和属性](implement/server-side/sdk-guides/core-principles/user-permissions-and-properties.md)
-   + 集成 {#integration}
+   + 集成{#integration}
       + [集成概述](implement/server-side/sdk-guides/integration-with-experience-cloud/overview.md)
       + [Experience CloudID服务(ECID)](implement/server-side/sdk-guides/integration-with-experience-cloud/ecid.md)
       + [Analytics for Target (A4T) 报表](implement/server-side/sdk-guides/integration-with-experience-cloud/a4t-reporting.md)
       + [AAM 区段](implement/server-side/sdk-guides/integration-with-experience-cloud/aam-segments.md)
-   + 设备上决策 {#on-device-decisioning}
+   + 设备上决策{#on-device-decisioning}
       + [设备上决策概述](implement/server-side/sdk-guides/on-device-decisioning/overview.md)
-      + 规则构件 {#rule-artifact}
+      + 规则项目{#rule-artifact}
          + [规则工件概述](implement/server-side/sdk-guides/on-device-decisioning/rule-artifact-overview.md)
          + [通过Adobe Target SDK下载](implement/server-side/sdk-guides/on-device-decisioning/rule-artifact-sdk.md)
          + [通过JSON有效负载下载](implement/server-side/sdk-guides/on-device-decisioning/rule-artifact-json.md)
@@ -120,7 +120,7 @@ ht-degree: 45%
       + [支持的功能概述](implement/server-side/sdk-guides/on-device-decisioning/supported-features.md)
       + [设备上决策疑难解答](implement/server-side/sdk-guides/on-device-decisioning/troubleshooting.md)
       + [最佳实践](implement/server-side/sdk-guides/best-practices/best-practices.md)
-   + Node.js SDK参考 {#node-js}
+   + Node.js SDK引用{#node-js}
       + [Node.js SDK概述](implement/server-side/node-js/overview.md)
       + [安装Node.js SDK](implement/server-side/node-js/install-sdk.md)
       + [初始化Node.js SDK](implement/server-side/node-js/initialize-sdk.md)
@@ -130,7 +130,7 @@ ht-degree: 45%
       + [SDK事件(Node.js)](implement/server-side/node-js/sdk-events.md)
       + [记录器(Node.js)](implement/server-side/node-js/logger.md)
       + [代理配置(Node.js)](implement/server-side/node-js/proxy-configuration.md)
-   + Java SDK参考 {#java}
+   + Java SDK引用{#java}
       + [Java SDK概述](implement/server-side/java/overview.md)
       + [安装Java SDK](implement/server-side/java/install-sdk.md)
       + [初始化Java SDK](implement/server-side/java/initialize-sdk.md)
@@ -143,7 +143,7 @@ ht-degree: 45%
       + [代理配置(Java)](implement/server-side/java/proxy-configuration.md)
       + [自定义HTTP客户端配置(Java)](implement/server-side/java/custom-http-client.md)
       + [实用程序方法(Java)](implement/server-side/java/utility-methods.md)
-   + .NET SDK参考 {#net}
+   + .NET SDK引用{#net}
       + [.NET SDK概述](implement/server-side/net/overview.md)
       + [安装.Net SDK](implement/server-side/net/install-sdk.md)
       + [初始化.NET SDK](implement/server-side/net/initialize-sdk.md)
@@ -152,7 +152,7 @@ ht-degree: 45%
       + [发送通知(.NET)](implement/server-side/net/send-notifications.md)
       + [SDK事件(.NET)](implement/server-side/net/sdk-events.md)
       + [异步请求(.NET)](implement/server-side/net/asynchronous-requests.md)
-   + Python SDK参考 {#python}
+   + Python SDK引用{#python}
       + [Python SDK概述](implement/server-side/python/overview.md)
       + [安装Python SDK](implement/server-side/python/install-sdk.md)
       + [初始化Python SDK](implement/server-side/python/initialize-sdk.md)
@@ -165,21 +165,21 @@ ht-degree: 45%
 + [混合实施](implement/hybrid/hybrid-overview.md)
 + [Recommendations实施](implement/recommendations/recommendations.md)
 + [Recommendations实施测试版](/help/dev/implement/recommendations/recommendations-beta.md)
-+ 移动应用程序实施 {#mobile-apps}
++ 移动应用实施{#mobile-apps}
    + [适用于移动应用程序的 Target 概述](implement/mobile/overview.md)
    + [Target 移动设备预览](implement/mobile/target-mobile-preview.md)
    + [使用位置服务](implement/mobile/use-location-service.md)
    + [Target 移动应用程序版常见问题解答](implement/mobile/mobile-faq.md)
    + [在具有Web视图的本机应用程序中通过AEP Mobile SDK实施Target](/help/dev/implement/mobile/native-app.md)
-+ 电子邮件实施 {#implement-email}
++ 电子邮件实施{#implement-email}
    + [电子邮件：实施 Target 概述](implement/email/overview.md)
    + [为图像创建 Adbox](implement/email/testing-content-with-the-adbox.md)
    + [测试电子邮件图像 Adbox](implement/email/testing-email-image-adbox.md)
    + [使用重定向程序](implement/email/working-with-redirectors.md)
-+ API指南 {#api}
++ API指南{#api}
    + [Target API概述](/help/dev/before-administer/target-api-overview.md)
    + [为Target API配置身份验证](/help/dev/before-administer/configure-authentication.md)
-   + 投放API指南 {#delivery-api}
+   + 投放API指南{#delivery-api}
       + [投放API概述](/help/dev/implement/delivery-api/overview.md)
       + [用于与投放API交互的SDK](/help/dev/before-implement/delivery-api-overview/sdks.md)
       + [入门指南](/help/dev/before-implement/delivery-api-overview/getting-started.md)
@@ -202,7 +202,7 @@ ht-degree: 45%
       + [单个配置文件更新API](/help/dev/administer/profile-api/profile-single-api.md)
       + [批量配置文件更新API](/help/dev/administer/profile-api/profile-bulk-api.md)
    + [报表 API](/help/dev/administer/reporting-api/reporting-api.md)
-   + RECOMMENDATIONS API {#recommendations-api}
+   + Recommendations API {#recommendations-api}
       + [Recommendations API概述](before-administer/recs-api/overview.md)
       + [使用API管理您的目录](before-administer/recs-api/manage-catalog.md)
       + [管理自定义标准](before-administer/recs-api/manage-custom-criteria.md)
@@ -213,9 +213,9 @@ ht-degree: 45%
       + [模型API](/help/dev/administer/models-api/models-api-overview.md)
    + [ADOBE ADMIN CONSOLE API](/help/dev/before-implement/delivery-api-overview/adobe-console-api.md)
    + [Adobe Experience PlatformEdge Network服务器API](/help/dev/before-implement/delivery-api-overview/aep-edge-network-server-api.md)
-+ 实施模式 {#implementation-patterns}
++ 实施模式{#implementation-patterns}
    + [实施模式概述](/help/dev/patterns/pattern-overview.md)
-   + 使用at.js的Recommendations实施模式 {#atjs}
+   + 使用at.js {#atjs}的Recommendations实施模式
       + [使用at.js的Recommendations实施模式概述](/help/dev/patterns/recs-atjs/recs-implementation-pattern-atjs.md)
       + [初始化SDK](/help/dev/patterns/recs-atjs/initialize-sdk.md)
       + [配置数据收集](/help/dev/patterns/recs-atjs/data-collection.md)

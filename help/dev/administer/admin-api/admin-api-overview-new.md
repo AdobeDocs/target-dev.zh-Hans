@@ -6,13 +6,13 @@ exl-id: 277fb1c2-49e8-48f1-9dd8-690de1c4d1e3
 feature: APIs/SDKs
 source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
 workflow-type: tm+mt
-source-wordcount: '31'
-ht-degree: 32%
+source-wordcount: '19'
+ht-degree: 0%
 
 ---
 
-# [!UICONTROL Adobe Target管理API]
+# [!UICONTROL Adobe Target Admin API]
 
-此 [!DNL Adobe Target] 可以在此处找到管理和报表API：
+可以在此处找到[!DNL Adobe Target]管理员和报表API：
 
 * [https://developer.adobe.com/target/administer/admin-api/](https://developer.adobe.com/target/administer/admin-api){target=_blank}

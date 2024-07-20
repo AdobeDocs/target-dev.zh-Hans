@@ -8,8 +8,8 @@ author: Judy Kim
 exl-id: 51a67a49-a92d-4377-9a9f-27116e011ab1
 source-git-commit: 2fba03b3882fd23a16342eaab9406ae4491c9044
 workflow-type: tm+mt
-source-wordcount: '939'
-ht-degree: 1%
+source-wordcount: '869'
+ht-degree: 0%
 
 ---
 
@@ -17,7 +17,7 @@ ht-degree: 1%
 
 有时，Recommendations提供的算法无法显示您要促销的特定项目。 在这种情况下，自定义标准为您提供了一种方法，可以为给定的关键项目或类别提供一组特定的推荐项目。
 
-要创建自定义标准，请定义并导入关键项目或类别与推荐项目之间的所需映射。 此过程的说明请参见 [自定义标准文档](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/recommendations-csv.html). 如该文档中所述，您可以通过Target用户界面(UI)创建、编辑和删除自定义标准。 但是，Target还提供了一组自定义标准API，允许对自定义标准进行更详细的管理。
+要创建自定义标准，请定义并导入关键项目或类别与推荐项目之间的所需映射。 [自定义标准文档](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/recommendations-csv.html)中介绍了此过程。 如该文档中所述，您可以通过Target用户界面(UI)创建、编辑和删除自定义标准。 但是，Target还提供了一组自定义标准API，允许对自定义标准进行更详细的管理。
 
 >[!WARNING]
 >
@@ -25,21 +25,21 @@ ht-degree: 1%
 
 ## 创建自定义标准
 
-要使用，创建自定义标准 [创建自定义标准API](https://developer.adobe.com/target/administer/recommendations-api/#operation/createCriteriaCustom)，语法为：
+要使用[创建自定义标准API](https://developer.adobe.com/target/administer/recommendations-api/#operation/createCriteriaCustom)创建自定义标准，语法为：
 
 `POST https://mc.adobe.io/{{TENANT_ID}}/target/recs/criteria/custom`
 
 >[!WARNING]
 >
->使用创建自定义标准API创建的自定义标准（如本练习中所述）将显示在UI中，并将保留这些标准。 您将无法从UI中编辑或删除它们。 您可以编辑或删除它们 **通过API**，但无论如何，它们将继续显示在Target UI中。 要保留从UI编辑或删除的选项，请使用符合以下条件的UI创建自定义标准 [文档](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/recommendations-csv.html)，而不是使用创建自定义标准API。
+>使用创建自定义标准API创建的自定义标准（如本练习中所述）将显示在UI中，并将保留这些标准。 您将无法从UI中编辑或删除它们。 您可以通过API **编辑或删除它们**，但无论哪种方式，它们将继续显示在Target UI中。 要保留从UI编辑或删除的选项，请使用[文档](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/recommendations-csv.html)的UI创建自定义标准，而不是使用创建自定义标准API。
 
 只有在阅读了上述警告并熟悉了如何创建新自定义标准且无法随后从UI中删除后，才应继续执行以下步骤。
 
-1. 验证 `TENANT_ID` 和 `API_KEY` 对象 **[!UICONTROL 创建自定义标准]** 引用之前建立的Postman环境变量。 使用下图进行比较。
+1. 验证&#x200B;**[!UICONTROL Create custom criteria]**&#x200B;的`TENANT_ID`和`API_KEY`是否引用了之前建立的Postman环境变量。 使用下图进行比较。
 
    ![CreateCustomCriteria1](assets/CreateCustomCriteria1.png)
 
-1. 添加您的 **正文** 作为 **原始** 定义自定义标准CSV文件位置的JSON。 使用中提供的示例 [创建自定义标准API](https://developer.adobe.com/target/administer/recommendations-api/#operation/getAllCriteriaCustom) 文档作为模板，提供您的 `environmentId` 和其他值。 在本例中，我们使用LAST_PURCHASED作为键。
+1. 将您的&#x200B;**Body**&#x200B;添加为&#x200B;**原始** JSON，定义自定义标准CSV文件的位置。 使用[创建自定义标准API](https://developer.adobe.com/target/administer/recommendations-api/#operation/getAllCriteriaCustom)文档中提供的示例作为模板，根据需要提供您的`environmentId`和其他值。 在本例中，我们使用LAST_PURCHASED作为键。
 
    ![CreateCustomCriteria2](assets/CreateCustomCriteria2.png)
 
@@ -47,30 +47,30 @@ ht-degree: 1%
 
    ![CreateCustomCriteria3](assets/CreateCustomCriteria3.png)
 
-1. 要验证您的自定义标准是否已创建，请在Adobe Target中导航至 **[!UICONTROL Recommendations >标准]** 并按名称搜索您的标准，或使用 **[!UICONTROL 列出自定义标准API]** 在下一步中。
+1. 要验证您的自定义标准是否已创建，请在Adobe Target中导航到&#x200B;**[!UICONTROL Recommendations > Criteria]**&#x200B;并按名称搜索您的标准，或者在下一个步骤中使用&#x200B;**[!UICONTROL List Custom Criteria API]**。
 
    ![CreateCustomCriteria4](assets/CreateCustomCriteria4.png)
 
-在这种情况下，我们有一个错误。 让我们通过更仔细地检查自定义标准来调查错误，使用 **[!UICONTROL 列出自定义标准API]**.
+在这种情况下，我们有一个错误。 让我们通过使用&#x200B;**[!UICONTROL List Custom Criteria API]**&#x200B;更仔细地检查自定义条件来调查错误。
 
 ## 列出自定义标准
 
-要检索所有自定义标准的列表以及每个标准的详细信息，请使用 [列出自定义标准API](https://developer.adobe.com/target/administer/recommendations-api/#operation/getAllCriteriaCustom). 语法为：
+要检索所有自定义标准的列表以及每个自定义标准的详细信息，请使用[列表自定义标准API](https://developer.adobe.com/target/administer/recommendations-api/#operation/getAllCriteriaCustom)。 语法为：
 
 `GET https://mc.adobe.io/{{TENANT_ID}}/target/recs/criteria/custom`
 
-1. 验证 `TENANT_ID` 和 `API_KEY` 和以前一样，并发送请求。 在响应中，请注意自定义标准ID以及有关之前指出的错误消息的详细信息。
+1. 与之前一样验证`TENANT_ID`和`API_KEY`，并发送请求。 在响应中，请注意自定义标准ID以及有关之前指出的错误消息的详细信息。
    ![ListCustomCriteria](assets/ListCustomCriteria.png)
 
 在这种情况下，发生错误的原因是服务器信息不正确，这意味着Target无法访问包含自定义标准定义的CSV文件。 让我们编辑自定义标准来更正此问题。
 
 ## 编辑自定义标准
 
-要更改自定义标准定义的详细信息，请使用 [编辑自定义标准API](https://developer.adobe.com/target/administer/recommendations-api/#operation/updateCriteriaCustom). 语法为：
+要更改自定义标准定义的详细信息，请使用[编辑自定义标准API](https://developer.adobe.com/target/administer/recommendations-api/#operation/updateCriteriaCustom)。 语法为：
 
 `POST https://mc.adobe.io/{{TENANT_ID}}/target/recs/criteria/custom/:criteriaId`
 
-1. 验证 `TENANT_ID` 和 `API_KEY`，与之前一样。
+1. 与之前一样，验证`TENANT_ID`和`API_KEY`。
    ![EditCustomCriteria1](assets/EditCustomCriteria1.png)
 
 1. 指定要编辑的（单个）自定义标准的标准ID。
@@ -82,11 +82,11 @@ ht-degree: 1%
 1. 发送请求并记录响应。
    ![EditCustomCriteria4](assets/EditCustomCriteria4.png)
 
-让我们使用 **[!UICONTROL 获取自定义标准API]**.
+让我们使用&#x200B;**[!UICONTROL Get Custom Criteria API]**&#x200B;验证更新后的自定义标准是否成功。
 
 ## 获取自定义标准
 
-要查看特定自定义标准的自定义标准详细信息，请使用 [获取自定义标准API](https://developer.adobe.com/target/administer/recommendations-api/#operation/getCriteriaCustom). 语法为：
+要查看特定自定义标准的自定义标准详细信息，请使用[获取自定义标准API](https://developer.adobe.com/target/administer/recommendations-api/#operation/getCriteriaCustom)。 语法为：
 
 `GET https://mc.adobe.io/{{TENANT_ID}}/target/recs/criteria/custom/:criteriaId`
 
@@ -99,11 +99,11 @@ ht-degree: 1%
 
 ## 删除自定义标准
 
-使用前面所述的标准ID，使用 [删除自定义标准API](https://developer.adobe.com/target/administer/recommendations-api/#operation/deleteCriteriaCustom). 语法为：
+使用前面提到的标准ID，使用[删除自定义标准API](https://developer.adobe.com/target/administer/recommendations-api/#operation/deleteCriteriaCustom)删除您的自定义标准。 语法为：
 
 `DELETE https://mc.adobe.io/{{TENANT_ID}}/target/recs/criteria/custom/:criteriaId`
 
-1. 指定要删除的（单个）自定义标准的标准ID。 单击&#x200B;**[!UICONTROL 发送]**。
+1. 指定要删除的（单个）自定义标准的标准ID。 单击 **[!UICONTROL Send]**。
    ![DeleteCustomCriteria1](assets/DeleteCustomCriteria1.png)
 
 1. 验证是否已使用获取自定义标准删除该标准。
@@ -116,4 +116,4 @@ ht-degree: 1%
 
 恭喜！您现在可以使用Recommendations API创建、列出、编辑、删除自定义标准并获取其详细信息。 在下一部分中，您将使用Target投放API检索推荐。
 
-&lt;!— [下一课程“使用服务器端交付API获取Recommendations”>](fetch-recs-server-side-delivery-api.md) —>
+&lt;！—[下一课程“使用服务器端交付API获取Recommendations”>](fetch-recs-server-side-delivery-api.md) —>

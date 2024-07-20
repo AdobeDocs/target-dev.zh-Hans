@@ -1,11 +1,11 @@
 ---
-title: 如何在中使用异步请求 [!DNL Adobe Target] Node.js SDK
-description: 了解如何 [!DNL Target] Node.js SDK支持异步请求，这可以将有效目标时间减少为零。
+title: 如何在 [!DNL Adobe Target] Node.js SDK中使用异步请求
+description: 了解 [!DNL Target] Node.js SDK如何支持异步请求，这可以将有效目标时间减少为零。
 feature: APIs/SDKs
 exl-id: aa06f3ca-7d2a-4334-8092-730a8705dfb0
 source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
 workflow-type: tm+mt
-source-wordcount: '116'
+source-wordcount: '112'
 ht-degree: 18%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 18%
 
 ## 描述
 
-`[!UICONTROL getAttributes()]` 用于从获取试验性和个性化体验 [!DNL Target] 和提取属性值。
+`[!UICONTROL getAttributes()]`用于从[!DNL Target]获取试验性和个性化体验并提取属性值。
 
 ## 方法
 
@@ -33,13 +33,13 @@ TargetClient.getAttributes(mboxNames: Array, options: Object): Promise
 
 ## Promise
 
-此 `Promise` 返回者 `TargetClient.getAttributes()` 使用以下方法解析对象：
+`TargetClient.getAttributes()`返回的`Promise`使用以下方法解析对象：
 
 | 方法 | 返回类型 | 描述 |
 | --- | --- | --- |
 | getValue(mboxName， key) | “任一” | 返回指定mbox名称和属性键的值 |
 | asObject(mboxName) | 对象 | 返回具有键值对的简单json对象 |
-| getResponse() | [getOffers响应](https://github.com/jasonwaters/target-nodejs-sdk#targetclientgetoffers) | 返回通常由返回的响应对象 `getOffers` |
+| getResponse() | [getOffers响应](https://github.com/jasonwaters/target-nodejs-sdk#targetclientgetoffers) | 返回`getOffers`通常返回的响应对象 |
 
 ## 示例
 

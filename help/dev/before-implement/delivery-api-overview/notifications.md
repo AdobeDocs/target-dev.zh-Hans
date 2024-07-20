@@ -1,12 +1,12 @@
 ---
 title: Adobe Target投放API通知
-description: 如何使用触发通知 [!UICONTROL Adobe Target交付API]？
+description: 如何使用[!UICONTROL Adobe Target Delivery API]触发通知？
 keywords: 投放api
 exl-id: 711388fd-2c1f-4ca4-939f-c56dc4bdc04a
 feature: APIs/SDKs
 source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
 workflow-type: tm+mt
-source-wordcount: '426'
+source-wordcount: '414'
 ht-degree: 0%
 
 ---
@@ -15,11 +15,11 @@ ht-degree: 0%
 
 在面向最终用户访问或呈现预取的mbox或视图时，应触发通知。
 
-为了针对正确的mbox或视图触发通知，请确保跟踪相应的 `eventToken` 每个mbox或视图的位置。 使用正确内容的通知 `eventToken` 要正确反映报表，需要触发相应的mbox或视图。
+为了针对正确的mbox或视图触发通知，请确保跟踪每个mbox或视图的对应`eventToken`。 必须触发对应mbox或视图具有正确`eventToken`的通知，才能正确反映报表。
 
 ## 预取Mbox的通知
 
-可以通过单个投放调用发送一个或多个通知。 确定需要跟踪的量度是否为 `click` 或 `display` ，以便 `type` 可以正确反映通知。 此外，传入 `id` ，以便可以确定通知是否通过[!UICONTROL  Adobe Target交付API]. 此 `timestamp` 转发到也很重要 [!DNL Target] 以指示何时 `click` 或 `display` 针对给定mbox发生的事件，以便进行报告。
+可以通过单个投放调用发送一个或多个通知。 确定需要跟踪的量度是每个mbox的`click`还是`display`，以便能够正确反映通知的`type`。 此外，请为每个通知传入`id`，以便可以确定是否通过[!UICONTROL  Adobe Target Delivery API]正确发送了通知。 `timestamp`转发到[!DNL Target]也很重要，以指示给定mbox何时发生`click`或`display`以用于报告。
 
 ```
 curl -X POST \
@@ -81,7 +81,7 @@ curl -X POST \
   }'
 ```
 
-上述示例调用将导致一个响应，指示 `notifications` 已成功处理请求。
+上述示例调用将导致一个响应，指示已成功处理`notifications`请求。
 
 ```
 {
@@ -106,11 +106,11 @@ curl -X POST \
 }
 ```
 
-如果所有 `notifications` 发送至 [!DNL Target] 正确处理之后，它们将显示在 `notifications` 数组。 但是，如果 `notifications` `id` 缺失了，那个特殊的 `notification` 没有通过。 在这种情况下，重试逻辑可以一直实施，直到成功为止 `notification` 已检索响应。 请确保为重试逻辑指定了超时，以便API调用不会阻塞并导致性能延迟。
+如果发送到[!DNL Target]的所有`notifications`都得到了正确处理，它们将显示在响应的`notifications`数组中。 但是，如果缺少`notifications` `id`，则该特定`notification`未通过。 在这种情况下，在检索到`notification`响应之前，可以设置重试逻辑。 请确保为重试逻辑指定了超时，以便API调用不会阻塞并导致性能延迟。
 
 ## 预获取视图的通知
 
-可以通过单个投放调用发送一个或多个通知。 确定需要跟踪的量度是否为 `click` 或 `display` ，以便能够正确反映通知的类型。 此外，传入 `id` ，以便可以确定通知是否通过 [!UICONTROL Adobe Target交付API]. 时间戳转发到也很重要 [!DNL Target] 以指示何时 `click` 或 `display` 发生于给定视图以用于报表目的。
+可以通过单个投放调用发送一个或多个通知。 确定需要跟踪的指标是每个mbox的`click`还是`display`，以便正确反映通知的类型。 此外，请为每个通知传入`id`，以便可以确定是否通过[!UICONTROL Adobe Target Delivery API]正确发送了通知。 时间戳也很重要以转发到[!DNL Target]，以指示针对给定视图何时发生`click`或`display`以用于报告。
 
 ```
 curl -X POST \
@@ -161,7 +161,7 @@ curl -X POST \
 }'
 ```
 
-上述示例调用将导致一个响应，指示 `notifications` 已成功处理请求。
+上述示例调用将导致一个响应，指示已成功处理`notifications`请求。
 
 ```
 {
@@ -186,4 +186,4 @@ curl -X POST \
 }
 ```
 
-如果所有 `notifications` 发送至  [!DNL Target] 正确处理之后，它们将显示在 `notifications` 数组。 但是，如果 `notifications` `id` 缺失，该特定通知未通过。 在这种情况下，可以实施重试逻辑，直到检索到成功的通知响应。 请确保为重试逻辑指定了超时，以便API调用不会阻塞并导致性能延迟。
+如果发送到[!DNL Target]的所有`notifications`都得到了正确处理，它们将显示在响应的`notifications`数组中。 但是，如果缺少`notifications` `id`，则该特定通知未通过。 在这种情况下，可以实施重试逻辑，直到检索到成功的通知响应。 请确保为重试逻辑指定了超时，以便API调用不会阻塞并导致性能延迟。

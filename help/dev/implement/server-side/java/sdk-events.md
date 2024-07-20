@@ -1,12 +1,12 @@
 ---
-title: 订阅中的事件 [!DNL Adobe Target] Java SDK
-description: 了解如何使用订阅在Java SDK中发生的各种事件 [!UICONTROL OnDeviceDecisioningHandler] 对象。
+title: 订阅 [!DNL Adobe Target] Java SDK中的事件
+description: 了解如何使用[!UICONTROL OnDeviceDecisioningHandler]对象订阅在Java SDK中发生的各种事件。
 feature: APIs/SDKs
 exl-id: f2d56762-6bf7-4c6b-9c14-fb20e5cfd60d
 source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
 workflow-type: tm+mt
-source-wordcount: '142'
-ht-degree: 4%
+source-wordcount: '135'
+ht-degree: 5%
 
 ---
 
@@ -14,17 +14,17 @@ ht-degree: 4%
 
 ## 描述
 
-时间 [初始化SDK](initialize-sdk.md)，可选 `OnDeviceDecisioningHandler` 对象可在 `ClientConfig` 对象。 它可用于订阅SDK内发生的各种事件。 例如， `onDeviceDecisioningReady` 事件可与回调函数一起使用，在SDK准备好进行方法调用时，将调用该回调函数。
+当[初始化SDK](initialize-sdk.md)时，可以在`ClientConfig`对象中提供可选的`OnDeviceDecisioningHandler`对象。 它可用于订阅SDK内发生的各种事件。 例如，`onDeviceDecisioningReady`事件可与回调函数一起使用，在SDK准备好进行方法调用时，将调用该回调函数。
 
 ## 事件
 
-此 `OnDeviceDecisioningHandler` 对象包含以下回调，这些回调是为某些事件调用的：
+`OnDeviceDecisioningHandler`对象包含以下回调，这些回调是为某些事件调用的：
 
 | 名称 | 参数 | 描述 |
 | --- | --- | --- |
-| DevicedecisioningReady | 无 | 在客户端第一次准备就绪时只调用一次 [!UICONTROL 设备上决策] |
-| artifactDownloadSucceeded | 字节[] 工件文件的内容 | 每次 [!UICONTROL 设备上决策] 工件已下载 |
-| artifactDownloadFailed | 例外 | 每次下载失败时调用 [!UICONTROL 设备上决策] 工件 |
+| DevicedecisioningReady | 无 | 在客户端第一次为[!UICONTROL on-device decisioning]准备就绪时只调用一次 |
+| artifactDownloadSucceeded | 工件文件的字节[]内容 | 每次下载[!UICONTROL on-device decisioning]工件时调用 |
+| artifactDownloadFailed | 例外 | 每次下载[!UICONTROL on-device decisioning]工件失败时调用 |
 
 ## 示例
 

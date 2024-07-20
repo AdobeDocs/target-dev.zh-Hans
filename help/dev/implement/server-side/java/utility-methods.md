@@ -1,5 +1,5 @@
 ---
-title: 在中使用实用程序方法 [!DNL Adobe Target] Java SDK
+title: 在 [!DNL Adobe Target] Java SDK中使用实用工具方法
 description: 了解如何使用帮助程序方法，这些方法可跨控制器重复使用，并可移到单独的实用程序类中。
 feature: APIs/SDKs
 exl-id: 19418126-c4d8-4e6b-bb84-036b7fe0e6ec

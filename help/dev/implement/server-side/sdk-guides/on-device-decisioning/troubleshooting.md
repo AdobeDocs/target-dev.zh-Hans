@@ -1,25 +1,25 @@
 ---
 title: 设备上决策疑难解答
-description: 了解如何进行故障排除 [!UICONTROL 设备上决策]
+description: 了解如何对[!UICONTROL on-device decisioning]进行故障排除
 exl-id: e76f95ce-afae-48e0-9dbb-2097133574dc
 feature: APIs/SDKs
 source-git-commit: 1d892d4d4d6f370f7772d0308ee0dd0d5c12e700
 workflow-type: tm+mt
-source-wordcount: '1177'
+source-wordcount: '1155'
 ht-degree: 0%
 
 ---
 
-# 疑难解答 [!UICONTROL 设备上决策]
+# 疑难解答 [!UICONTROL on-device decisioning]
 
 ## 正在验证配置
 
 ### 步骤摘要
 
-1. 确保 `logger` 已配置
-1. 确保 [!DNL Target] 已启用跟踪
-1. 验证 [!UICONTROL 设备上决策] *规则构件* 已根据定义的轮询间隔进行检索和缓存。
-1. 通过创建测试来验证通过缓存的规则工件进行的内容交付 [!UICONTROL 设备上决策] 通过基于表单的体验编辑器进行活动。
+1. 确保已配置`logger`
+1. 确保启用[!DNL Target]跟踪
+1. 验证是否已根据定义的轮询间隔检索和缓存[!UICONTROL on-device decisioning] *规则项目*。
+1. 通过基于表单的体验编辑器创建测试[!UICONTROL on-device decisioning]活动，验证通过缓存的规则工件进行的内容交付。
 1. Inspect发送通知错误
 
 ## 1.确保已配置日志程序
@@ -28,7 +28,7 @@ ht-degree: 0%
 
 **Node.js**
 
-对于Node.js SDK a `logger` 应提供对象。
+对于Node.js SDK，应提供`logger`对象。
 
 ```js {line-numbers="true"}
 const CONFIG = {
@@ -40,7 +40,7 @@ const CONFIG = {
 
 **Java SDK**
 
-适用于Java SDK的 `logRequests` 在 `ClientConfig` 应该启用。
+应该启用`ClientConfig`上的For Java SDK `logRequests`。
 
 ```js {line-numbers="true"}
 ClientConfig config = ClientConfig.builder()
@@ -56,15 +56,15 @@ ClientConfig config = ClientConfig.builder()
 java -Dorg.slf4j.simpleLogger.defaultLogLevel=DEBUG ...
 ```
 
-## 2.确保[!DNL Target]已启用跟踪
+## 2.确保启用[!DNL Target]跟踪
 
-启用跟踪将输出其他信息，来自 [!DNL Adobe Target] 关于规则成品。
+启用跟踪将输出[!DNL Adobe Target]中有关规则工件的其他信息。
 
-1. 导航至[!DNL Target]中的UI [!DNL Experience Cloud].
+1. 导航到[!DNL Experience Cloud]中的[!DNL Target]用户界面。
 
    ![替代图像](assets/asset-target-ui-1.png)
 
-1. 导航到 **[!UICONTROL 管理]** > **[!UICONTROL 实现]** 并单击 **[!UICONTROL 生成新的授权令牌]**.
+1. 导航到&#x200B;**[!UICONTROL Administration]** > **[!UICONTROL Implementation]**&#x200B;并单击&#x200B;**[!UICONTROL Generate New Authorization Token]**。
 
    ![替代图像](assets/asset-target-ui-2.png)
 
@@ -113,11 +113,11 @@ java -Dorg.slf4j.simpleLogger.defaultLogLevel=DEBUG ...
      AT: LD.ArtifactProvider artifact received - status=200
    ```
 
-## 3.验证 [!UICONTROL 设备上决策] *规则构件* 已根据定义的轮询间隔进行检索和缓存。
+## 3.验证是否已根据定义的轮询间隔检索和缓存[!UICONTROL on-device decisioning] *规则构件*。
 
 1. 等待轮询间隔的持续时间（默认值为20分钟），并确保SDK正在获取构件。 将输出相同的终端日志。
 
-   此外，来自[!DNL Target]应将跟踪输出到终端，其中包含有关规则工件的详细信息。
+   此外，应将来自[!DNL Target]跟踪的信息输出到终端，其中包含有关规则工件的详细信息。
 
    ```text {line-numbers="true"}
    "trace": {
@@ -135,9 +135,9 @@ java -Dorg.slf4j.simpleLogger.defaultLogLevel=DEBUG ...
      },
    ```
 
-## 4.通过创建测试来验证通过缓存的规则工件进行的内容交付 [!UICONTROL 设备上决策] 通过基于表单的体验编辑器进行活动
+## 4.通过基于表单的体验编辑器创建测试[!UICONTROL on-device decisioning]活动，通过缓存的规则工件验证内容交付
 
-1. 导航至[!DNL Target]Experience Cloud中的UI
+1. 导航到Experience Cloud中的[!DNL Target]用户界面
 
    ![替代图像](assets/asset-target-ui-1.png)
 
@@ -145,15 +145,15 @@ java -Dorg.slf4j.simpleLogger.defaultLogLevel=DEBUG ...
 
    ![替代图像](assets/asset-form-base-composer-ui.png)
 
-1. 输入mbox名称，该名称用于[!DNL Target]请求作为XT活动的位置（请注意，这应该是一个专门用于开发的唯一mbox名称）。
+1. 输入在[!DNL Target]请求中使用的mbox名称作为XT活动的位置（请注意，这应该是一个专门用于开发的唯一mbox名称）。
 
    ![替代图像](assets/asset-mbox-location-ui.png)
 
-1. 将内容更改为HTML选件或JSON选件。 此将返回到[!DNL Target]请求您的应用程序。 将活动的定位保留为“所有访客”，然后选择所需的任何量度。 命名活动，保存活动，然后激活活动以确保使用的mbox/位置仅用于开发。
+1. 将内容更改为HTML选件或JSON选件。 这将在[!DNL Target]请求中返回到您的应用程序。 将活动的定位保留为“所有访客”，然后选择所需的任何量度。 命名活动，保存活动，然后激活活动以确保使用的mbox/位置仅用于开发。
 
    ![替代图像](assets/asset-target-content-ui.png)
 
-1. 在您的应用程序中，为从您的应用程序收到的响应中收到的内容添加日志语句。[!DNL Target]请求
+1. 在您的应用程序中，为在[!DNL Target]请求的响应中收到的内容添加日志语句
 
    **Node.js SDK**
 
@@ -191,7 +191,7 @@ java -Dorg.slf4j.simpleLogger.defaultLogLevel=DEBUG ...
    }
    ```
 
-1. 查看您终端中的日志，以验证您的内容是否正在交付并通过服务器上的规则工件交付。 此 `LD.DeciscionProvider` 根据规则工件在设备上确定活动资格和决策时，输出对象。 此外，由于 `content`，您应该看到 `<div>test</div>` 或者，在创建测试活动时，您会决定采用哪种响应。
+1. 查看您终端中的日志，以验证您的内容是否正在交付并通过服务器上的规则工件交付。 根据规则工件在设备上确定活动资格和决策时，将输出`LD.DeciscionProvider`对象。 此外，由于`content`的日志记录，您应该会看到`<div>test</div>`，或者您已经决定在创建测试活动时响应此响应。
 
    **记录器输出**
 
@@ -203,7 +203,7 @@ java -Dorg.slf4j.simpleLogger.defaultLogLevel=DEBUG ...
 
 ## Inspect发送通知错误
 
-使用设备上决策时，会自动发送getOffers执行请求的通知。 这些请求将在后台静默发送。 通过订阅名为的事件，可以检查任何错误 `sendNotificationError`. 以下代码示例显示了如何使用Node.js SDK订阅通知错误。
+使用设备上决策时，会自动发送getOffers执行请求的通知。 这些请求将在后台静默发送。 通过订阅名为`sendNotificationError`的事件可以检查任何错误。 以下代码示例显示了如何使用Node.js SDK订阅通知错误。
 
 ```js {line-numbers="true"}
 const TargetClient = require("@adobe/target-nodejs-sdk");
@@ -239,11 +239,11 @@ client = TargetClient.create({
 
 ## 常见疑难解答方案
 
-请务必查看 [支持的功能](supported-features.md) 对象 [!UICONTROL 设备上决策] 遇到问题时。
+遇到问题时，请务必查看[!UICONTROL on-device decisioning]的[支持的功能](supported-features.md)。
 
 ### 由于受众或活动不受支持，设备上决策活动无法执行
 
-一个可能发生的常见问题是 [!UICONTROL 设备上决策] 由于正在使用的受众或活动类型不受支持，活动无法执行。
+一个可能发生的常见问题是[!UICONTROL on-device decisioning]个活动由于受众正在使用或活动类型不受支持而无法执行。
 
 (1)使用记录器输出，查看响应对象中trace属性中的条目。 明确标识促销活动属性：
 
@@ -264,9 +264,9 @@ client = TargetClient.create({
     }
 ```
 
-您会注意到，您尝试符合条件的活动不在 `campaigns` 属性，因为不支持受众或活动类型。 如果活动列在 `campaigns` 属性，问题并非由于不支持的受众或活动类型所导致。
+您会注意到，您尝试符合条件的活动不在`campaigns`属性中，因为该受众或活动类型不受支持。 如果活动列在`campaigns`属性下，则问题不是由于不受支持的受众或活动类型所导致。
 
-(2)此外，本公司将位于香港 `rules.json` 通过查看 `trace` > `artifact` > `artifactLocation` 在日志程序输出中，请注意您的活动在 `rules` > `mboxes` 属性：
+(2)此外，通过查看日志程序输出中的`trace` > `artifact` > `artifactLocation`找到`rules.json`文件，并注意到`rules` > `mboxes`属性中缺少您的活动：
 
 **记录器输出**
 
@@ -278,7 +278,7 @@ client = TargetClient.create({
  }
 ```
 
-最后，导航到[!DNL Target]UI并找到相关活动： [experience.adobe.com/target](https://experience.adobe.com/target)
+最后，导航到[!DNL Target]用户界面并找到相关活动： [experience.adobe.com/target](https://experience.adobe.com/target)
 
 查看受众中使用的规则，并确保仅使用前面提到的受支持的规则。 此外，请确保活动类型为A/B或XT。
 
@@ -342,7 +342,7 @@ TargetDeliveryResponse response = targetClient.getOffers(request);
 
 >[!ENDTABS]
 
-(2)通过查看 `matchedRuleConditions` 或 `unmatchedRuleConditions` 跟踪输出的属性：
+(2)通过查看跟踪输出的`matchedRuleConditions`或`unmatchedRuleConditions`属性，确保您符合活动的受众资格：
 
 **跟踪输出**
 
@@ -394,9 +394,9 @@ TargetDeliveryResponse response = targetClient.getOffers(request);
 ...
 ```
 
-查看 `artifactLastRetrieved` 项目的日期，并确保您拥有最新的 `rules.json` 文件已下载到您的应用程序。
+查看工件的`artifactLastRetrieved`日期，并确保您有最新的`rules.json`文件下载到应用程序。
 
-(2)查找 `evaluatedCampaignTargets` 记录器输出中的属性：
+(2)在记录器输出中找到`evaluatedCampaignTargets`属性：
 
 **记录器输出**
 
@@ -470,24 +470,24 @@ TargetDeliveryResponse response = targetClient.getOffers(request);
 ...
 ```
 
-(3)检阅 `context`， `page`、和 `referring` 数据，确保数据按预期显示，因为这可能会影响活动的定位资格。
+(3)查看`context`、`page`和`referring`数据，确保数据按预期显示，因为这可能会影响活动的定位资格。
 
-(4)检阅 `campaignId` 以确保评估您预期执行的一个或多个活动。 此 `campaignId` 将与中的活动概述选项卡上的活动ID匹配[!DNL Target]UI：
+(4)查看`campaignId`，以确保评估您期望执行的一个或多个活动。 `campaignId`将与[!DNL Target]UI中活动概述选项卡上的活动ID匹配：
 
 ![替代图像](assets/asset-activity-id-target-ui.png)
 
-(5)检阅 `matchedRuleConditions` 和 `unmatchedRuleConditions` 确定在给定活动中符合受众规则时出现的问题。
+(5)查看`matchedRuleConditions`和`unmatchedRuleConditions`，以识别在给定活动中符合受众规则条件的问题。
 
-(6)检阅最新资讯 `rules.json` 文件，以确保包含要本地执行的一个或多个活动。 上述步骤1中引用了该位置。
+(6)查看最新的`rules.json`文件，以确保包含要本地执行的一个或多个活动。 上述步骤1中引用了该位置。
 
 (7)确保在请求和活动中使用相同的mbox名称。
 
 (8)确保您使用的是支持的受众规则和支持的活动类型。
 
-### 即使mbox下的活动设置显示“符合设备决策条件”，系统也会进行服务器调用。[!DNL Target]用户界面
+### 即使[!DNL Target]用户界面中的mbox下的活动设置显示“符合设备决策条件”，也会进行服务器调用
 
 进行服务器调用的原因有几个，即使设备符合设备上决策的条件：
 
-* 当用于“符合设备上决策资格”活动的mbox也用于不符合“符合设备上决策资格”的其他活动时，mbox将列在 `remoteMboxes` 中的部分 `rules.json` 成品。 当mbox列在 `remoteMboxes`，任意 `getOffer(s)` 对该mbox的调用会导致服务器调用。
+* 当用于“符合设备上决策资格”活动的mbox也用于不符合“符合设备上决策资格”的其他活动时，该mbox将列在`rules.json`工件的`remoteMboxes`部分下。 当mbox列在`remoteMboxes`下时，对该mbox的任何`getOffer(s)`调用都会导致服务器调用。
 
-* 如果您在工作区/属性下设置活动，并且在配置SDK时未包含该活动，则可能会导致 `rules.josn` 要下载的默认工作区的，该工作区可以使用 `remoteMboxes` 部分。
+* 如果您在工作区/属性下设置了活动，并且在配置SDK时未包含该活动，则可能会导致下载默认工作区的`rules.josn`，该默认工作区可以使用`remoteMboxes`部分下的mbox。

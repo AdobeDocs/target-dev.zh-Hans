@@ -12,11 +12,11 @@ ht-degree: 0%
 
 # 自定义HTTP客户端配置(Java)
 
-如果运行SDK的应用程序需要自定义HTTP客户端，则要启用配置SSL或向请求添加默认标头等功能，请 `TargetClient` 需要使用进行配置 `ClientConfig.builder().httpClient()`：
+如果运行SDK的应用程序需要自定义HTTP客户端，要启用配置SSL或向请求添加默认标头等功能，则需要使用`ClientConfig.builder().httpClient()`配置`TargetClient`：
 
 ## 基本自定义HTTP客户端配置
 
-SDK当前支持实施的HTTP客户端 `org.apache.http.client.HttpClient` 界面。
+SDK当前支持实施`org.apache.http.client.HttpClient`接口的HTTP客户端。
 
 ### 基本实施
 
@@ -32,7 +32,7 @@ TargetClient targetClient = TargetClient.create(clientConfig);
 
 ## 使用SSL配置进行自定义HTTP客户端配置
 
-以下是如何在中配置SSL的示例 `TargetClient` 通过自定义 `HttpClient` 传递到 `ClientConfig`. 以下代码片段使用的类来自 `org.apache.http.conn.ssl` 用于SSL配置的包。
+以下是如何通过自定义传递到`ClientConfig`的`HttpClient`在`TargetClient`中配置SSL的示例。 以下代码片段使用`org.apache.http.conn.ssl`包中的类进行SSL配置。
 
 ### SSL实施
 

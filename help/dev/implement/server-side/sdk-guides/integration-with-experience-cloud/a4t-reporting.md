@@ -6,33 +6,33 @@ exl-id: 0d09d7a1-528d-4e6a-bc6c-f7ccd61f5b75
 feature: Implement Server-side
 source-git-commit: 09a50aa67ccd5c687244a85caad24df56c0d78f5
 workflow-type: tm+mt
-source-wordcount: '360'
-ht-degree: 6%
+source-wordcount: '342'
+ht-degree: 7%
 
 ---
 
 # Analytics for Target (A4T) 报表
 
-[!DNL Adobe Target] 支持对设备上决策和服务器端Target活动进行A4T报告。 启用A4T报表的配置选项有两种：
+[!DNL Adobe Target]支持设备上决策和服务器端Target活动的A4T报告。 启用A4T报表的配置选项有两种：
 
-* [!DNL Adobe Target] 自动将分析有效负载转发到 [!DNL Adobe Analytics]，或
-* 用户从请求分析有效负载 [!DNL Adobe Target]. ([!DNL Adobe Target] 返回 [!DNL Adobe Analytics] 有效负荷返回给调用方。)
+* [!DNL Adobe Target]自动将分析有效负载转发到[!DNL Adobe Analytics]，或者
+* 用户从[!DNL Adobe Target]请求分析有效负载。 （[!DNL Adobe Target]将[!DNL Adobe Analytics]有效负载返回给调用方。）
 
 >[!NOTE]
 >
->设备上决策仅支持以下对象的A4T报表： [!DNL Adobe Target] 自动将分析有效负载转发到 [!DNL Adobe Analytics]. 正在从检索分析有效负载 [!DNL Adobe Target] 不受支持。
+>设备上决策仅支持A4T报表，其中的[!DNL Adobe Target]自动将分析有效负载转发到[!DNL Adobe Analytics]。 不支持从[!DNL Adobe Target]检索分析有效负载。
 
 ## 先决条件
 
-1. 在中配置活动 [!DNL Adobe Target] UI与 [!DNL Adobe Analytics] 作为报表源，并确保已为A4T启用帐户。
+1. 在[!DNL Adobe Target] UI中将活动配置为将[!DNL Adobe Analytics]作为报表源，并确保已为A4T启用这些帐户。
 1. API用户会生成Adobe Marketing Cloud访客ID，并确保此ID在执行Target请求时可用。
 
-## [!DNL Adobe Target] 自动转发分析有效负载
+## [!DNL Adobe Target]自动转发分析有效负载
 
-[!DNL Adobe Target] 可自动将分析有效负载转发到 [!DNL Adobe Analytics] 如果提供了以下标识符：
+如果提供了以下标识符，[!DNL Adobe Target]可以自动将分析有效负载转发到[!DNL Adobe Analytics]：
 
-1. `supplementalDataId`：用于拼合的ID [!DNL Adobe Analytics] 和 [!DNL Adobe Target]. 为了 [!DNL Adobe Target] 和 [!DNL Adobe Analytics] 要正确地将数据拼合在一起，请相同 `supplementalDataId` 需要传递给两者 [!DNL Adobe Target] 和 [!DNL Adobe Analytics].
-1. `trackingServer`：和 [!DNL Adobe Analytics] 服务器。
+1. `supplementalDataId`：用于在[!DNL Adobe Analytics]和[!DNL Adobe Target]之间拼接的ID。 为了使[!DNL Adobe Target]和[!DNL Adobe Analytics]能够正确拼合数据，需要将`supplementalDataId`传递给[!DNL Adobe Target]和[!DNL Adobe Analytics]。
+1. `trackingServer`： [!DNL Adobe Analytics]服务器。
 
 >[!BEGINTABS]
 
@@ -113,9 +113,9 @@ TargetDeliveryResponse offers = targetClient.getOffers(request);
 
 >[!ENDTABS]
 
-## 用户从以下位置检索分析有效负载 [!DNL Adobe Target]
+## 用户从[!DNL Adobe Target]中检索分析有效负载
 
-用户可以检索 [!DNL Adobe Analytics] 给定mbox的有效负载，然后将其发送到 [!DNL Adobe Analytics] 通过 [数据插入API](https://github.com/AdobeDocs/analytics-1.4-apis/blob/master/docs/data-insertion-api/index.md). 当 [!DNL Adobe Target] 请求已触发，通过 `client_side` 到 `logging` 字段。 如果在使用Analytics作为报表源的活动中存在指定的mbox，则将返回有效负载。
+用户可以检索给定mbox的[!DNL Adobe Analytics]有效负荷，然后通过[数据插入API](https://github.com/AdobeDocs/analytics-1.4-apis/blob/master/docs/data-insertion-api/index.md)将其发送给[!DNL Adobe Analytics]。 触发[!DNL Adobe Target]请求时，将`client_side`传递到请求中的`logging`字段。 如果在使用Analytics作为报表源的活动中存在指定的mbox，则将返回有效负载。
 
 >[!BEGINTABS]
 
@@ -189,9 +189,9 @@ TargetDeliveryResponse offers = targetClient.getOffers(request);
 
 >[!ENDTABS]
 
-指定后 `logging = client_side`，您将在mbox字段中接收有效负载。
+指定`logging = client_side`后，您将在mbox字段中接收有效负载。
 
-如果来自Target的响应包含 `analytics -> payload` 属性，按原样转发到 [!DNL Adobe Analytics]. [!DNL Adobe Analytics] 知道如何处理此有效负载。 这可以在GET请求中完成，可使用以下格式：
+如果来自Target的响应在`analytics -> payload`属性中包含任何内容，请将其转发到[!DNL Adobe Analytics]。 [!DNL Adobe Analytics]知道如何处理此有效负载。 这可以在GET请求中完成，可使用以下格式：
 
 ```
 https://{datacollectionhost.sc.omtrdc.net}/b/ss/{rsid}/0/CODEVERSION?pe=tnt&tnta={payload}&mid={mid}&vid={vid}&aid={aid}
@@ -202,15 +202,15 @@ https://{datacollectionhost.sc.omtrdc.net}/b/ss/{rsid}/0/CODEVERSION?pe=tnt&tnta
 | 字段名称 | 必需 | 描述 |
 | --- | --- | --- |
 | `rsid` | 是 | 点击 |
-| `pe` | 是 | 页面事件。 始终设置为 `tnt` |
-| `tnta` | 是 | Target服务器返回的分析有效负载位于 `analytics -> payload -> tnta` |
+| `pe` | 是 | 页面事件。 始终设置为`tnt` |
+| `tnta` | 是 | Target服务器在`analytics -> payload -> tnta`中返回的分析有效负载 |
 | `mid` | 是 | Marketing Cloud 访客 ID |
 
 ### 必需的标头值
 
-| 标题名称 | 标头值 |
+| 标头名称 | 标头值 |
 | --- | --- |
-| 主机 | Analytics数据收集服务器(如： `adobeags421.sc.omtrdc.net`) |
+| 主机 | Analytics数据收集服务器（如： `adobeags421.sc.omtrdc.net`） |
 
 ### 示例A4T数据插入HTTP Get调用
 

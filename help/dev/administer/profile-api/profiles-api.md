@@ -1,27 +1,28 @@
 ---
 title: Adobe Target配置文件API
-description: 了解如何使用Adobe Target配置文件API将访客数据发送至 [!DNL Target].
+description: 了解如何使用Adobe Target配置文件API将访客数据发送到 [!DNL Target]。
 contributors: https://github.com/icaraps
 feature: APIs/SDKs
-source-git-commit: e5a1c38d448cb7446b7b26cd0dc882976ba94dd3
+exl-id: 480cbbbe-4822-48c3-80d4-53628dee57b0
+source-git-commit: e2462d12cf58ab5a588c13a96df5e6abafb9d675
 workflow-type: tm+mt
 source-wordcount: '104'
 ht-degree: 1%
 
 ---
 
-# [!DNL Adobe Target Profiles API] 概述
+# [!DNL Adobe Target Profiles API]概述
 
-[!DNL Adobe Target] 为每个用户创建和维护配置文件。 此配置文件存储在 [!DNL Target] 边缘群集，并在每次访问后实时更新。
+[!DNL Adobe Target]为每个用户创建和维护配置文件。 此配置文件存储在[!DNL Target]边缘群集上，并在每次访问后实时更新。
 
-## 的结构 [!DNL Target] 个人资料
+## [!DNL Target]配置文件的结构
 
 Target配置文件包含以下对象：
 
 | 对象 | 详细信息 |
 | --- | --- |
-| `clientcode` | 此 [!DNL Target] 与配置文件关联的客户端代码。 |
-| `visitorId` | 用户档案的标识符。 这可以是 `tntid`， `thirdpartyid`，或 `marketingcloudvisitorid`. |
+| `clientcode` | 与配置文件关联的[!DNL Target]客户端代码。 |
+| `visitorId` | 用户档案的标识符。 这可以是`tntid`、`thirdpartyid`或`marketingcloudvisitorid`。 |
 | `modifiedAt` | 上次更新配置文件的时间戳。 |
 | `profileAttributes` | 该单个配置文件上作为键值对存储的所有配置文件属性的列表。 |
 

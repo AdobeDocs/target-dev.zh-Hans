@@ -12,7 +12,7 @@ ht-degree: 0%
 
 # 核心原则概述
 
-[!DNL Adobe Target] 根据几个核心原则运行，要运行有效的试验或个性化活动，必须了解这些原则。 这些原则包括：
+[!DNL Adobe Target]根据几个核心原则运行，要运行有效的试验或个性化活动，必须了解这些原则。 这些原则包括：
 
 * [用户标识和分段](user-identification-and-bucketing.md)
 

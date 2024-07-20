@@ -1,27 +1,27 @@
 ---
 keywords: 客户关怀， cname，证书计划，规范名称， cookie，证书， amc， adobe管理的证书， digicert，域控制器验证， dcv，客户关怀2
-description: 使用 [!UICONTROL Adobe客户关怀] 在中实施CNAME（规范名称）支持 [!DNL Adobe Target] 以处理广告拦截问题。
+description: 使用[!UICONTROL Adobe Client Care]在 [!DNL Adobe Target] 中实施CNAME （规范名称）支持以处理广告阻止问题。
 title: 如何在Target中使用CNAME？
 feature: Privacy & Security
 exl-id: 5709df5b-6c21-4fea-b413-ca2e4912d6cb
 source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
 workflow-type: tm+mt
-source-wordcount: '1193'
+source-wordcount: '1164'
 ht-degree: 1%
 
 ---
 
 # CNAME和Target
 
-使用说明 [!DNL Adobe Client Care] 在中实施CNAME（规范名称）支持 [!DNL Adobe Target]. 使用CNAME处理广告阻止问题或与ITP相关的（智能防跟踪）Cookie策略。 使用CNAME时，会调用客户拥有的域，而不是Adobe拥有的域。
+有关使用[!DNL Adobe Client Care]在[!DNL Adobe Target]中实现CNAME （规范名称）支持的说明。 使用CNAME处理广告阻止问题或与ITP相关的（智能防跟踪）Cookie策略。 使用CNAME时，会调用客户拥有的域，而不是Adobe拥有的域。
 
 ## 请求Target中的CNAME支持
 
 1. 确定您的SSL证书所需的主机名列表（请参阅下面的常见问题解答）。
 
-1. 对于每个主机名，请在DNS中创建一个指向您的常规主机名的CNAME记录 [!DNL Target] 主机名 `clientcode.tt.omtrdc.net`.
+1. 对于每个主机名，请在DNS中创建一个指向常规[!DNL Target]主机名`clientcode.tt.omtrdc.net`的CNAME记录。
 
-   例如，如果您的客户端代码为“cnamecustomer”，并且您建议的主机名为 `target.example.com`，您的DNS CNAME记录将类似于以下内容：
+   例如，如果您的客户端代码为“cnamecustomer”，而建议的主机名为`target.example.com`，则您的DNS CNAME记录将类似于：
 
    ```
    target.example.com.  IN  CNAME  cnamecustomer.tt.omtrdc.net.
@@ -31,10 +31,10 @@ ht-degree: 1%
    >
    >在此步骤完成之前，Adobe的证书颁发机构DigiCert无法颁发证书。 因此，在此步骤完成之前，Adobe无法完成您对CNAME实施的请求。
 
-1. [填写此表单](assets/FPC_Request_Form.xlsx) 并在以下情况下包含它： [打开请求CNAME支持的Adobe客户关怀票证](https://experienceleague.adobe.com/docs/target/using/cmp-resources-and-contact-information.html?#reference_ACA3391A00EF467B87930A450050077C)：
+1. [填写此表单](assets/FPC_Request_Form.xlsx)，并在您[打开请求CNAME支持的Adobe客户关怀票证](https://experienceleague.adobe.com/docs/target/using/cmp-resources-and-contact-information.html?#reference_ACA3391A00EF467B87930A450050077C)时包含此表单：
 
-   * [!DNL Adobe Target] client code:
-   * SSL证书主机名(示例： `target.example.com target.example.org`)：
+   * [!DNL Adobe Target]客户端代码：
+   * SSL证书主机名（示例： `target.example.com target.example.org`）：
    * SSL证书购买者(强烈建议Adobe，请参阅常见问题解答)：Adobe/客户
    * 如果客户正在购买证书(也称为“自带证书”(BYOC))，请填写以下其他详细信息：
       * 证书组织（示例：Example Company Inc）：
@@ -49,7 +49,7 @@ ht-degree: 1%
 
    Adobe客户关怀会在您的实施准备就绪时通知您。
 
-1. 更新 `serverDomain` [文档](../implement/client-side/atjs/atjs-functions/targetglobalsettings.md#serverdomain) 到新的CNAME主机名并设置 `overrideMboxEdgeServer` 到 `false` [文档](../implement/client-side/atjs/atjs-functions/targetglobalsettings.md#overridemboxedgeserver) 在您的at.js配置中。
+1. 将`serverDomain` [文档](../implement/client-side/atjs/atjs-functions/targetglobalsettings.md#serverdomain)更新为新的CNAME主机名，并在您的at.js配置中将`overrideMboxEdgeServer`设置为`false` [文档](../implement/client-side/atjs/atjs-functions/targetglobalsettings.md#overridemboxedgeserver)。
 
 ## 常见问题解答
 
@@ -57,35 +57,35 @@ ht-degree: 1%
 
 ### 我可以提供我自己的证书（自带证书或BYOC）吗？
 
-您可以提供自己的证书。 但是，Adobe不建议采用这种做法。 如果Adobe购买并控制证书，则Adobe和您都可以更轻松地管理SSL证书生命周期。 SSL证书必须每年续订。 因此，Adobe客户关怀团队每年都必须与您联系，以及时获取新证书。 有些客户可能难以及时生成续订的证书。 您的 [!DNL Target] 证书过期时，由于浏览器拒绝连接，实施会受到影响。
+您可以提供自己的证书。 但是，Adobe不建议采用这种做法。 如果Adobe购买并控制证书，则Adobe和您都可以更轻松地管理SSL证书生命周期。 SSL证书必须每年续订。 因此，Adobe客户关怀团队每年都必须与您联系，以及时获取新证书。 有些客户可能难以及时生成续订的证书。 当证书过期时，由于浏览器拒绝连接，您的[!DNL Target]实施会受损。
 
 >[!WARNING]
 >
->如果您请求 [!DNL Target] 自带证书CNAME实施，您每年有责任向Adobe客户关怀团队提供续订证书。 在Adobe部署续订的证书之前，允许您的CNAME证书过期，会导致您的特定 [!DNL Target] 实现。
+>如果您请求[!DNL Target]自带证书CNAME实施，则需每年向Adobe客户关怀团队提供续订证书。 允许在Adobe部署续订的证书之前过期您的CNAME证书，会导致您的特定[!DNL Target]实现中断。
 
 ### 我的新SSL证书需要多久才能过期？
 
-所有Adobe购买的证书有效期为一年。 请参阅 [DigiCert关于1年期证书的文章](https://www.digicert.com/blog/position-on-1-year-certificates) 以了解更多信息。
+所有Adobe购买的证书有效期为一年。 有关详细信息，请参阅[DigiCert关于1年期证书](https://www.digicert.com/blog/position-on-1-year-certificates)的文章。
 
 ### 我应该选择哪些主机名？ 每个域应选择多少主机名？
 
 Target CNAME实施仅要求SSL证书和客户的DNS中的每个域使用一个主机名。 Adobe建议每个域使用一个主机名。 某些客户出于其自身的用途（例如，在暂存环境中测试）需要每个域提供更多主机名，这是受支持的。
 
-大多数客户都会选择类似于的主机名 `target.example.com`. Adobe建议遵循这一做法，但最终将由您来做出选择。 请勿请求现有DNS记录的主机名。 这样做会导致冲突，并延迟问题的解决 [!DNL Target] CNAME请求。
+大多数客户都会选择类似`target.example.com`的主机名。 Adobe建议遵循这一做法，但最终将由您来做出选择。 请勿请求现有DNS记录的主机名。 这样做会导致冲突并延迟解决[!DNL Target] CNAME请求的时间。
 
 ### 我已经有了Adobe Analytics的CNAME实施，我可以使用相同的证书或主机名吗？
 
-不， [!DNL Target] 需要单独的主机名和证书。
+否，[!DNL Target]需要单独的主机名和证书。
 
-### 我当前的实施是 [!DNL Target] 是否受ITP 2.x的影响？
+### 我当前的[!DNL Target]实施是否会受ITP 2.x影响？
 
-Apple智能防跟踪(ITP) 2.3版引入了其CNAME遮蔽缓解功能，该功能能够检测 [!DNL Target] CNAME实施并将Cookie的过期时间减少到7天。 当前 [!DNL Target] 没有ITP的CNAME遮蔽缓解的解决方法。 有关ITP的详细信息，请参阅 [Apple智能防跟踪(ITP) 2.x](../before-implement/privacy/apple-itp-2x.md).
+Apple智能防跟踪(ITP) 2.3版引入了其CNAME遮蔽缓解功能，此功能能够检测[!DNL Target]个CNAME实现并将Cookie过期时间减少到7天。 当前[!DNL Target]没有ITP的CNAME遮蔽缓解解决方法。 有关ITP的更多信息，请参阅[Apple智能防跟踪(ITP) 2.x](../before-implement/privacy/apple-itp-2x.md)。
 
 ### 部署我的CNAME实施时，可能会出现哪种服务中断？
 
 部署证书时没有服务中断（包括证书续订）。
 
-但是，在更改主机名之后，请 [!DNL Target] 实施代码(`serverDomain` （在at.js中）到新的CNAME主机名(`target.example.com`)，则Web浏览器会将回访访客视为新访客。 旧访客的配置文件数据丢失，因为旧主机名(`clientcode.tt.omtrdc.net`)。 由于浏览器安全模型，无法访问上一个Cookie。 此中断仅在初次切换到新CNAME时发生。 证书续订的效果并不相同，因为主机名不会更改。
+但是，在将[!DNL Target]实施代码（ at.js中的`serverDomain`）中的主机名更改为新的CNAME主机名(`target.example.com`)后，Web浏览器会将回访访客视为新访客。 回访访客的配置文件数据丢失，因为旧主机名(`clientcode.tt.omtrdc.net`)下的上一个Cookie不可访问。 由于浏览器安全模型，无法访问上一个Cookie。 此中断仅在初次切换到新CNAME时发生。 证书续订的效果并不相同，因为主机名不会更改。
 
 ### 我的CNAME实施使用什么密钥类型和证书签名算法？
 
@@ -95,7 +95,7 @@ Apple智能防跟踪(ITP) 2.3版引入了其CNAME遮蔽缓解功能，该功能�
 
 使用以下命令集(在macOS或Linux命令行终端中，使用bash和curl >=7.49)：
 
-1. 将此bash函数复制并粘贴到终端中，或者将该函数粘贴到bash启动脚本文件中(通常是 `~/.bash_profile` 或 `~/.bashrc`)，因此函数在终端会话间可用：
+1. 将此bash函数复制并粘贴到您的终端中，或者将该函数粘贴到bash启动脚本文件（通常为`~/.bash_profile`或`~/.bashrc`）中，以便该函数在终端会话间可用：
 
    ```
    function adobeTargetCnameValidation {
@@ -257,13 +257,13 @@ Apple智能防跟踪(ITP) 2.3版引入了其CNAME遮蔽缓解功能，该功能�
    }
    ```
 
-1. 粘贴此命令(替换 `target.example.com` （包含您的主机名）：
+1. 粘贴以下命令（将`target.example.com`替换为您的主机名）：
 
    ```
    adobeTargetCnameValidation target.example.com
    ```
 
-   如果实施已准备就绪，您将看到如下所示的输出。 重要的是所有验证状态行都显示 `✅` 而不是 `🚫`. 每个Target边缘CNAME分区应显示 `CN=target.example.com`，与请求的证书上的主主机名匹配（此输出中不打印证书上的其他SAN主机名）。
+   如果实施已准备就绪，您将看到如下所示的输出。 重要部分是所有验证状态行都显示`✅`而不是`🚫`。 每个Target边缘CNAME分区都应显示`CN=target.example.com`，这与所请求证书上的主要主机名匹配（此输出中未打印证书上的其他SAN主机名）。
 
    ```
    $ adobeTargetCnameValidation target.example.com
@@ -327,16 +327,16 @@ Apple智能防跟踪(ITP) 2.3版引入了其CNAME遮蔽缓解功能，该功能�
 
 >[!NOTE]
 >
->如果此验证命令在DNS验证时失败，但您已经进行了必要的DNS更改，则可能需要等待DNS更新完全传播。 DNS记录具有关联的 [TTL（存留期）](https://en.wikipedia.org/wiki/Time_to_live#DNS_records) 规定这些记录的DNS回复的缓存过期时间。 因此，您可能需要至少等待与TTL一样长的时间。 您可以使用 `dig target.example.com` 命令或 [G Suite Toolbox](https://toolbox.googleapps.com/apps/dig/#CNAME) 查找您的特定TTL。 要检查DNS在全球的传播，请参阅 [whatsmydns.net](https://whatsmydns.net/#CNAME).
+>如果此验证命令在DNS验证时失败，但您已经进行了必要的DNS更改，则可能需要等待DNS更新完全传播。 DNS记录具有关联的[TTL （生存时间）](https://en.wikipedia.org/wiki/Time_to_live#DNS_records)，它规定这些记录的DNS回复的缓存过期时间。 因此，您可能需要至少等待与TTL一样长的时间。 您可以使用`dig target.example.com`命令或[G Suite Toolbox](https://toolbox.googleapps.com/apps/dig/#CNAME)查找您的特定TTL。 要检查全球范围内的DNS传播，请参阅[whatsmydns.net](https://whatsmydns.net/#CNAME)。
 
 ### 如何将选择退出链接与 CNAME 配合使用
 
-如果您使用的是CNAME，则选择退出链接应包含“client=`clientcode` 参数，例如：
-`https://my.cname.domain/optout?client=clientcode`.
+如果您使用的是CNAME，则选择退出链接应包含“client=`clientcode`参数，例如：
+`https://my.cname.domain/optout?client=clientcode`。
 
-替换 `clientcode` ，然后添加要链接到的文本或图像 [选择退出URL](privacy/privacy.md).
+将`clientcode`替换为您的客户端代码，然后添加要链接到[选择退出URL](privacy/privacy.md)的文本或图像。
 
 ## 已知限制
 
 * 当您具有CNAME和at.js 1.x时，QA模式无粘性，因为它基于第三方Cookie。 解决方法是将预览参数添加到您导航到的每个URL中。 当您具有CNAME和at.js 2.x时，QA模式具有粘滞性。
-* 使用CNAME时，的Cookie标头的大小更有可能为 [!DNL Target] 呼叫数增加。 Adobe建议将Cookie大小保持在8 KB以下。
+* 使用CNAME时，[!DNL Target]调用的Cookie标头大小更有可能增加。 Adobe建议将Cookie大小保持在8 KB以下。

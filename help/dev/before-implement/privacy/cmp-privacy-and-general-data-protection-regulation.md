@@ -6,8 +6,8 @@ feature: Privacy & Security
 exl-id: 40bac3c5-8e6f-4a90-ac0c-eddce1dbe6c0
 source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
 workflow-type: tm+mt
-source-wordcount: '2374'
-ht-degree: 64%
+source-wordcount: '2329'
+ht-degree: 62%
 
 ---
 
@@ -53,7 +53,7 @@ Adobe Experience Cloud为数据控制方提供了为GDPR做好准备的API，这
 
 ## Adobe Target和Adobe Experience Platform选择加入
 
-Target通过Adobe Experience Platform中的标记提供选择加入功能支持，以帮助支持您的同意管理策略。 选择加入功能让客户可自行决定如何以及何时触发 Target 标记。还有一个选项，即通过Adobe Experience Platform预批准Target标记。 要启用在Target at.js中使用选择加入的功能，您应使用 `targetGlobalSettings` 并添加 `optinEnabled=true` 设置。 在Adobe Experience Platform中，从扩展安装视图的GDPR选择加入下拉列表中选择“启用”。 请参阅 [使用Adobe Experience Platform实施Target](/help/dev/implement/client-side/atjs/how-to-deployatjs/implement-target-using-adobe-launch.md) 以了解更多详细信息。
+Target通过Adobe Experience Platform中的标记提供选择加入功能支持，以帮助支持您的同意管理策略。 选择加入功能让客户可自行决定如何以及何时触发 Target 标记。还有一个选项，即通过Adobe Experience Platform预批准Target标记。 若要启用在Target at.js库中使用选择加入的功能，您应该使用`targetGlobalSettings`并添加`optinEnabled=true`设置。 在Adobe Experience Platform中，从扩展安装视图的GDPR选择加入下拉列表中选择“启用”。 有关更多详细信息，请参阅[使用Adobe Experience Platform实施Target](/help/dev/implement/client-side/atjs/how-to-deployatjs/implement-target-using-adobe-launch.md)。
 
 以下代码段显示了如何启用 `optinEnabled=true` 设置：
 
@@ -71,7 +71,7 @@ window.targetGlobalSettings = {
 
 使用选择加入功能时需要考虑三种情景：
 
-1. **Target标记是通过Adobe Experience Platform预批准的（或者数据主体之前已经批准了Target）：** Target标记不适用于征求同意，且会按预期运行。
+1. **Target标记已通过Adobe Experience Platform预批准（或数据主体以前批准了Target）：** Target标记不适用于征求同意，且会按预期运行。
 1. **Target 标记没有获得预批准且 `bodyHidingEnabled` 设置为 FALSE：**&#x200B;只有在收到客户的同意之后，才会触发 Target 标记。在收到客户同意之前，仅默认内容可用。在收到客户同意之后，将调用 Target 并向数据主体（访客）提供个性化内容。由于在同意之前只有默认内容可用，因此务必要使用正确的策略，例如过场动画页面涵盖了页面的任意部分或者可能个性化的内容。此过程确保对于所有数据主体（访客）保持一致的体验。
 1. **Target 标记没有获得预批准且 `bodyHidingEnabled` 设置为 TRUE：**&#x200B;只有在收到客户的同意之后，才会触发 Target 标记。在收到客户同意之前，仅默认内容可用。但是，因为 `bodyHidingEnabled` 设置为 true，`bodyHiddenStyle` 会指示在触发 Target 标记之前页面上需要隐藏的内容（或者数据主体拒绝使用选择加入功能，这种情况下会显示默认内容）。默认情况下，`bodyHiddenStyle` 设置为 `body { opacity:0;}`，这会隐藏 HTML 正文标记。Adobe 的推荐页面配置如下，通过将页面内容放在一个容器中并将同意管理器对话框放在单独的容器中，从而隐藏页面全部正文而不隐藏同意管理器对话框。配置这种设置之后，Target 仅隐藏页面内容容器。请参阅 [Privacy Service 概述](https://experienceleague.adobe.com/docs/experience-platform/privacy/home.html?)。
 
@@ -119,7 +119,7 @@ Adobe已经履行或者正在履行其作为数据处理商的义务。 Adobe �
 
 ### 作为对数据主体/用户请求的回应，Adobe允许客户删除哪些信息？
 
-在 Target 中，与单独访客有关的信息是包含在 Target 访客配置文件中。Target允许客户删除与其访客配置文件中某个ID关联的所有数据。 有关Target存储的配置文件数据的示例，请参阅 [访客资料](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/visitor-profile.html).
+在 Target 中，与单独访客有关的信息是包含在 Target 访客配置文件中。Target允许客户删除与其访客配置文件中某个ID关联的所有数据。 有关Target存储的配置文件数据的示例，请参阅[访客配置文件](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/visitor-profile.html)。
 
 未标识特定个人的聚合或匿名数据（例如，报表数据）或与特定个人无关的数据（例如，内容数据），不在用户删除请求的范围之内。
 
@@ -131,15 +131,15 @@ Target 支持以下 ID 类型来查找客户配置文件：
 
 | 用户 ID | 命名空间 ID 类型 | 命名空间 ID | 定义 |
 |--- |--- |--- |--- |
-| Experience Cloud ID (ECID) | Standard | 4 | Adobe Experience Cloud ID，以前称为访客 ID 或 Experience Cloud ID。您可以使用 JavaScript API 来查找此 ID（请参阅下面的详细信息）。 |
-| TnT ID / Cookie ID(TNTID) | Standard | 9 | 在访客的浏览器中设置为Cookie的目标标识符。 您可以使用 JavaScript API 来查找此 ID（请参阅下面的详细信息）。 |
-| 第三方 ID / CRM ID (THIRDPARTYID) | 特定于 Target | 不适用 | 如果您向 Target 提供您的 CRM 或您的客户的其他唯一标识符信息。 |
+| Experience Cloud ID (ECID) | Standard | 4 | Adobe Experience Cloud ID，以前称为访客ID或Experience CloudID。 您可以使用 JavaScript API 来查找此 ID（请参阅下面的详细信息）。 |
+| TnT ID/Cookie ID(TNTID) | Standard | 9 | 在访客的浏览器中设置为Cookie的目标标识符。 您可以使用 JavaScript API 来查找此 ID（请参阅下面的详细信息）。 |
+| 第三方ID/CRM ID (THIRDPARTYID) | 特定于 Target | 不适用 | 如果您向 Target 提供您的 CRM 或您的客户的其他唯一标识符信息。 |
 
 >[!NOTE]
 >
 >尽管Target支持第一方和第三方跨域Cookie，但是仅推荐使用第一方Target Cookie以满足GDPR和CCPA要求。
 
-###  Target 如何处理同意管理？
+### Target如何处理同意管理？
 
 对于您必须获取同意的情况，GDPR 和 CCPA 没有进行更改，而是更改了您获取同意的方式。每个客户的同意策略取决于其数据收集和使用实践及其隐私政策。不支持，也不应通过Target for GDPR和CCPA实现同意管理。
 
@@ -147,11 +147,11 @@ Adobe 目前不提供同意管理解决方案，不过，市面上有各种各�
 
 Target通过Adobe Experience Platform提供选择加入功能支持，以支持您的同意管理策略。 选择加入功能让客户可自行决定如何以及何时触发 Target 标记。还有一个选项，即通过Adobe Experience Platform预批准Target标记。 推荐使用Adobe Experience Platform管理选择加入功能。 Adobe Experience Platform中存在更细粒度的控制，用于在触发Target之前隐藏页面的选定元素，这对于在同意策略中的使用会非常有帮助。
 
-有关GDPR、CCPA和Adobe Experience Platform的更多信息，请参阅 [Adobe隐私JavaScript库和GDPR](https://experienceleague.adobe.com/docs/experience-platform/privacy/home.html?). 此外，请参阅上文的 *Adobe Target 和 Adobe Experience Platform 选择启用*&#x200B;部分。
+有关GDPR、CCPA和Adobe Experience Platform的更多信息，请参阅[Adobe隐私JavaScript库和GDPR](https://experienceleague.adobe.com/docs/experience-platform/privacy/home.html?)。 此外，请参阅上文的 *Adobe Target 和 Adobe Experience Platform 选择启用*&#x200B;部分。
 
 ### `AdobePrivacy.js` 是否向 GDPR API 提交信息？
 
-AdobePrivacy.js“不”**&#x200B;向 API 提交此信息。客户必须自行处理。该库仅提供存储在特定访客浏览器中的 ID。
+AdobePrivacy.js *不*&#x200B;向API提交此信息。 客户必须自行处理。该库仅提供存储在特定访客浏览器中的 ID。
 
 ### `removeIdentities` 删除什么？
 

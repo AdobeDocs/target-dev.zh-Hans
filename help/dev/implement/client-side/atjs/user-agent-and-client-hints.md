@@ -6,8 +6,8 @@ feature: at.js
 exl-id: e0d87d95-ee95-4ca9-8632-222ae1fb9a91
 source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
 workflow-type: tm+mt
-source-wordcount: '1208'
-ht-degree: 74%
+source-wordcount: '1162'
+ht-degree: 72%
 
 ---
 
@@ -175,7 +175,7 @@ Target 中的以下用例需要客户端提示：
 
 ### at.js 2.9.0 或更高版本
 
-从at.js 2.9.0开始，在以下情况下，用户代理客户端提示将自动从浏览器中收集并发送到Target： `getOffer/getOffers()` 称为。 默认情况下，at.js 只收集“低熵”客户端提示。如果执行受众分段或使用基于前几节中归类为“高熵”的数据的个人资料脚本，则需要配置 at.js，以通过 `targetGlobalSettings` 从浏览器收集“高熵”客户端提示。
+从at.js 2.9.0开始，用户代理客户端提示将从浏览器自动收集，并在调用`getOffer/getOffers()`时发送到Target。 默认情况下，at.js 只收集“低熵”客户端提示。如果执行受众分段或使用基于前几节中归类为“高熵”的数据的个人资料脚本，则需要配置 at.js，以通过 `targetGlobalSettings` 从浏览器收集“高熵”客户端提示。
 
 ```
 window.targetGlobalSettings = { allowHighEntropyClientHints: true };
@@ -183,4 +183,4 @@ window.targetGlobalSettings = { allowHighEntropyClientHints: true };
 
 ### 服务器端 SDK
 
-有关如何通过服务器端SDK传递客户端提示的更多信息，请参阅 [客户端提示](../../server-side/sdk-guides/core-principles/audience-targeting.md#client-hints) 在服务器端实施文档下。
+有关如何通过服务器端SDK传递客户端提示的更多信息，请参阅服务器端实施文档下的[客户端提示](../../server-side/sdk-guides/core-principles/audience-targeting.md#client-hints)。

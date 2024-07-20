@@ -1,18 +1,18 @@
 ---
 title: 用户权限和属性
-description: 此 [!DNL Target] SDK包含对用户权限和属性的支持。
+description: ' [!DNL Target] SDK包含对用户权限和属性的支持。'
 exl-id: 612faf1a-e8f9-4321-b831-90fba69ead3a
 feature: Implement Server-side
 source-git-commit: 09a50aa67ccd5c687244a85caad24df56c0d78f5
 workflow-type: tm+mt
-source-wordcount: '122'
-ht-degree: 9%
+source-wordcount: '114'
+ht-degree: 0%
 
 ---
 
 # 用户权限和属性
 
-此 [!DNL Target] SDK包含对用户权限和属性的支持。 如果您不熟悉如何 [!DNL Adobe Target] 通过工作区和属性处理企业权限，您可以在中阅读更多相关信息 [企业用户权限](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/enterprise/property-channel.html?lang=zh-Hans).
+[!DNL Target] SDK包括对用户权限和属性的支持。 如果您不熟悉[!DNL Adobe Target]如何通过工作区和属性处理企业权限，可以在[企业用户权限](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/enterprise/property-channel.html?lang=zh-Hans)中阅读更多相关信息。
 
 客户端可以通过两种方式之一使用资产令牌。
 
@@ -50,7 +50,7 @@ TargetClient targetClient = TargetClient.create(clientConfig);
 
 ## getOffers调用中的附属资产令牌
 
-资产令牌也可以在个人中指定 `getOffers` 呼叫。 这是通过将属性对象添加到请求来完成的。 以这种方式指定的属性令牌优先于配置中设置的一个令牌。
+也可以在单个`getOffers`调用中指定属性令牌。 这是通过将属性对象添加到请求来完成的。 以这种方式指定的属性令牌优先于配置中设置的一个令牌。
 
 >[!BEGINTABS]
 

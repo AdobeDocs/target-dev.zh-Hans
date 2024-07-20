@@ -1,6 +1,6 @@
 ---
-title: 初始化 [!DNL Adobe Target] 用于记录请求的Node.js SDK
-description: 了解如何在中记录请求 [!DNL Adobe Target] Node.js SDK.
+title: 初始化 [!DNL Adobe Target] Node.js SDK以记录请求
+description: 了解如何在 [!DNL Adobe Target] Node.js SDK中记录请求。
 feature: APIs/SDKs
 exl-id: 5db3e301-47b3-4330-b185-c0c03f72e790
 source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
@@ -14,9 +14,9 @@ ht-degree: 2%
 
 ## 描述
 
-时间 [初始化SDK](initialize-sdk.md)， `options.logger` 对象是可选对象。 但是，为了在发生问题时有效调试， `logger` 初始化SDK时应提供对象。
+当[初始化SDK](initialize-sdk.md)时，`options.logger`对象是可选对象。 但是，为了在发生问题时有效调试，应在初始化SDK时提供`logger`对象。
 
-此 `logger` 对象应具有 `debug()` 和 `error()` 方法。 在提供合适的记录器时，例如 `console`， [!DNL Target] 将记录请求和响应。
+`logger`对象应具有`debug()`和`error()`方法。 在提供了适当的记录器（如`console`、[!DNL Target]请求）后，将记录响应。
 
 ## 示例
 

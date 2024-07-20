@@ -8,14 +8,14 @@ author: Judy Kim
 exl-id: 9b391f42-2922-48e0-ad7e-10edd6125be6
 source-git-commit: d98c7b890f7456de0676cadce5d6c70bc62d6140
 workflow-type: tm+mt
-source-wordcount: '1520'
+source-wordcount: '1374'
 ht-degree: 1%
 
 ---
 
 # 使用投放API获取Recommendations
 
-Adobe Target和Adobe Target Recommendations API可用于提供对网页的响应，也可用于不基于HTML的体验，包括应用程序、屏幕、控制台、电子邮件、网亭和其他显示设备。 换句话说，当无法使用Target库和JavaScript时， [Target投放API](/help/dev/implement/delivery-api/overview.md) 仍然允许访问所有的Target功能，以便提供个性化的体验。
+Adobe Target和Adobe Target Recommendations API可用于提供对网页的响应，也可用于不基于HTML的体验，包括应用程序、屏幕、控制台、电子邮件、网亭和其他显示设备。 换句话说，当无法使用Target库和JavaScript时，[Target交付API](/help/dev/implement/delivery-api/overview.md)仍允许访问所有的Target功能，以提供个性化的体验。
 
 >[!NOTE]
 >
@@ -23,7 +23,7 @@ Adobe Target和Adobe Target Recommendations API可用于提供对网页的响应
 
 要检索推荐，请发送包含相应上下文信息的Adobe Target交付APIPOST调用，其中可能包括用户ID（用于用户最近查看过的项目等特定于配置文件的推荐）、相关mbox名称、mbox参数、配置文件参数或其他属性。 响应将包含JSON或HTML格式的推荐entity.ids（并可能包含其他实体数据），这些数据随后可以显示在设备中。
 
-此 [投放API](/help/dev/implement/delivery-api/overview.md) for Adobe Target会公开标准Target请求提供的所有现有功能。
+适用于Adobe Target的[交付API](/help/dev/implement/delivery-api/overview.md)会公开标准Target请求提供的所有现有功能。
 
 投放API：
 
@@ -38,40 +38,40 @@ Adobe Target和Adobe Target Recommendations API可用于提供对网页的响应
 1. 使用基于表单的编辑器（而非可视化体验编辑器）创建Target活动(A/B、XT、AP或Recommendations)。
 1. 使用交付API获取对刚刚创建的Target活动生成的请求的响应。
 
-&lt;! — 问：为何需要同时采取这两个步骤？ 如果您为mbox定义了基于表单的推荐，那么也通过投放API步骤来检索结果有什么好处？ 为什么不能让基于表单的Rec将结果传送到目标设备……?? 答：请参阅下面的用例……这是您希望“拦截”待处理结果，以便在显示结果之前执行更多操作的情况。 与库存水平进行实时比较等。 --->
+&lt;！ — 问：为何需要同时采取这两个步骤？ 如果您为mbox定义了基于表单的推荐，那么也通过投放API步骤来检索结果有什么好处？ 为什么不能让基于表单的Rec将结果传送到目标设备……?? 答：请参阅下面的用例……这是您希望“拦截”待处理结果，以便在显示结果之前执行更多操作的情况。 与库存水平进行实时比较等。 —>
 
 ## 使用基于表单的体验编辑器创建推荐
 
-要创建可与Delivery API一起使用的推荐，请使用 [基于表单的编辑器](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html).
+要创建可与投放API一起使用的推荐，请使用[基于表单的编辑器](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html)。
 
-1. 首先，创建并保存要在推荐中使用的基于JSON的设计。 有关示例JSON以及有关在配置基于表单的活动时如何返回JSON响应的背景信息，请参阅相关的文档 [创建推荐设计](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations-design/create-design.html). 在此示例中，设计名为 *简单JSON。*
+1. 首先，创建并保存要在推荐中使用的基于JSON的设计。 有关示例JSON以及有关在配置基于表单的活动时如何返回JSON响应的背景信息，请参阅有关[创建推荐设计](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations-design/create-design.html)的文档。 在此示例中，设计名为&#x200B;*简单JSON。*
    ![server-side-create-recs-json-design.png](assets/server-side-create-recs-json-design.png)
 
-1. 在Target中，导航到 **[!UICONTROL 活动]** > **[!UICONTROL 创建活动]** > **[!UICONTROL Recommendations]**，然后选择 **[!UICONTROL 表单]**.
+1. 在Target中，导航到&#x200B;**[!UICONTROL Activities]** > **[!UICONTROL Create Activity]** > **[!UICONTROL Recommendations]**，然后选择&#x200B;**[!UICONTROL Form]**。
 
    ![server-side-create-recs.png](assets/server-side-create-recs.png)
 
-1. 选择一个资产，然后单击 **[!UICONTROL 下一个]**.
-1. 定义您希望用户收到推荐响应的位置。 以下示例使用名为的位置 *api_charter*. 选择您之前创建的基于JSON的名为的设计 *简单JSON。*
+1. 选择一个属性，然后单击&#x200B;**[!UICONTROL Next]**。
+1. 定义您希望用户收到推荐响应的位置。 以下示例使用名为&#x200B;*api_charter*&#x200B;的位置。 选择您之前创建的基于JSON的名为&#x200B;*简单JSON.*的设计
    ![server-side-create-recs-form.png](assets/server-side-create-recs-form1.png)
-1. 保存并激活推荐。 那个产生结果。 [一旦结果准备好](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations-activity/previewing-and-launching-your-recommendations-activity.html)，您可以使用交付API检索它们。
+1. 保存并激活推荐。 那个产生结果。 [结果准备就绪后](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations-activity/previewing-and-launching-your-recommendations-activity.html)，您可以使用投放API检索它们。
 
 ## 使用投放API
 
-的语法 [投放API](/help/dev/implement/delivery-api/overview.md) 为：
+[投放API](/help/dev/implement/delivery-api/overview.md)的语法为：
 
 `POST https://{{CLIENT_CODE}}.tt.omtrdc.net/rest/v1/delivery`
 
-1. 请注意，客户端代码为必填项。 提醒一下，您可以通过导航到，在Adobe Target中找到您的客户端代码 **[!UICONTROL Recommendations]** > **[!UICONTROL 设置]**. 请注意 **客户代码** 中的值 **推荐API令牌** 部分。
+1. 请注意，客户端代码为必填项。 提醒一下，通过导航到&#x200B;**[!UICONTROL Recommendations]** > **[!UICONTROL Settings]**，可以在Adobe Target中找到您的客户端代码。 请注意&#x200B;**推荐API令牌**&#x200B;部分中的&#x200B;**客户端代码**值。
    ![client-code.png](assets/client-code.png)
-1. 获得客户端代码后，即可构建投放API调用。 下面的示例以 **[!UICONTROL Web批处理Mbox投放API调用]** 中提供 [投放API Postman收藏集](../../implement/delivery-api/overview.md/#section/Getting-Started/Postman-Collection)，进行相关修改。 例如：
-   * 该 **浏览器** 和 **地址** 对象已从 **正文**，因为非HTML用例不需要这些参数
-   * *api_charter* 在此示例中列为位置名称
+1. 获得客户端代码后，即可构建投放API调用。 以下示例以[投放API Postman集合](../../implement/delivery-api/overview.md/#section/Getting-Started/Postman-Collection)中提供的&#x200B;**[!UICONTROL Web Batched Mboxes Delivery API Call]**&#x200B;开头，进行了相关修改。 例如：
+   * 已从&#x200B;**正文**&#x200B;中移除&#x200B;**浏览器**&#x200B;和&#x200B;**地址**&#x200B;对象，因为它们不是非HTML用例的必需对象
+   * 在此示例中，*api_charter*&#x200B;被列为位置名称
    * 指定了entity.id，因为此推荐基于内容相似度，它要求将当前项目键传递到Target。
      ![server-side-Delivery-API-call.png](assets/server-side-delivery-api-call2.png)
-请记住正确配置查询参数。 例如，确保指定 `{{CLIENT_CODE}}` 视需要而定。 &lt;!— Q：在更新的调用语法中，entity.id作为profileParameter列出，而不作为mboxParameter在旧版本中列出。 ---> &lt;! — 问：旧图像 ![server-side-create-recs-post.png](assets/server-side-create-recs-post.png) 旧的随附文本：“请注意，此推荐基于基于mboxParameters发送的entity.id的‘内容类似’产品。” — >
+请记住正确配置查询参数。 例如，请确保根据需要指定`{{CLIENT_CODE}}`。 &lt;！— Q：在更新的调用语法中，entity.id作为profileParameter列出，而不作为mboxParameter在旧版本中列出。 —> &lt;！ — 问：旧图像![server-side-create-recs-post.png](assets/server-side-create-recs-post.png)旧的随附文本：“请注意，此推荐基于通过mboxParameters发送的entity.id的‘内容类似’产品。” —>
      ![client-code3](assets/client-code3.png)
-1. 发送请求。 此项针对执行 *api_charter* 位置上运行有活动推荐，该位置使用JSON设计定义，将输出推荐实体列表。
+1. 发送请求。 此操作将针对&#x200B;*api_charter*&#x200B;位置执行，该位置上运行有活动推荐，并使用您的JSON设计定义它，该设计将输出推荐实体列表。
 1. 接收基于JSON设计的响应。
    ![server-side-create-recs-json-response2.png](assets/server-side-create-recs-json-response2.png)
 响应包括键ID以及推荐实体的实体ID。
@@ -86,33 +86,33 @@ Adobe Target和Adobe Target Recommendations API可用于提供对网页的响应
 
 | 资源 | 详细信息 |
 | --- | --- |
-| [Adobe Target Everywhere — 在服务器端或物联网中实施](https://expleague.azureedge.net/labs/L733/index.html) | Adobe Summit2019实验室，为利用Adobe Target服务器端API的React应用程序提供实践体验。 |
-| [移动设备应用程序中的Adobe Target(不带AdobeSDK)](https://community.tealiumiq.com/t5/Universal-Data-Hub/Adobe-Target-in-a-Mobile-App-Without-the-Adobe-SDK/ta-p/26753) | 本指南向您展示如何在不安装Adobe Target SDK的情况下在移动应用程序中设置Adobe。 此解决方案使用Tealium SDK Webview和远程命令模块向Adobe访客API(Experience Cloud)和Adobe Target API发送请求并进行接收。 |
+| [Adobe Target所有位置 — 实施服务器端或在IoT中](https://expleague.azureedge.net/labs/L733/index.html) | Adobe Summit2019实验室，为利用Adobe Target服务器端API的React应用程序提供实践体验。 |
+| 在没有AdobeSDK的移动应用程序中[Adobe Target](https://community.tealiumiq.com/t5/Universal-Data-Hub/Adobe-Target-in-a-Mobile-App-Without-the-Adobe-SDK/ta-p/26753) | 本指南向您展示如何在不安装Adobe Target SDK的情况下在移动应用程序中设置Adobe。 此解决方案使用Tealium SDK Webview和远程命令模块向Adobe访客API(Experience Cloud)和Adobe Target API发送请求并进行接收。 |
 | [在Experience Platform Launch和实施Target API中配置Target扩展](https://developer.adobe.com/client-sdks/documentation/adobe-target/) | 在Experience Platform Launch中配置Target扩展、将Target扩展添加到您的应用程序以及实施Target API以请求活动、预取选件和进入可视化预览模式的步骤。 |
 | [Adobe Target节点客户端](https://www.npmjs.com/package/@adobe/target-nodejs-sdk) | 开源Target Node.js SDK v1.0 |
 | [服务器端概述](../../implement/server-side/server-side-overview.md) | 有关Adobe Target服务器端交付API、服务器端批量交付API、Node.js SDK和Adobe Target Recommendations API的信息。 |
-| [电子邮件中的Adobe Campaign Content Recommendations](https://medium.com/adobetech/adobe-campaign-content-recommendations-in-email-b51ced771d7f) | 介绍如何在Adobe Campaign中通过Adobe Target和Adobe I/O Runtime利用电子邮件中的内容推荐的博客。 |
+| 电子邮件中的[Adobe Campaign Content Recommendations](https://medium.com/adobetech/adobe-campaign-content-recommendations-in-email-b51ced771d7f) | 介绍如何在Adobe Campaign中通过Adobe Target和Adobe I/O Runtime利用电子邮件中的内容推荐的博客。 |
 
 ## 使用API管理Recommendations设置
 
-大多数情况下，出于以上部分所述的原因，推荐是在Adobe Target UI中配置，然后通过Target API使用或访问。 这种UI-API协调是常见的。 但是，有时，用户可能希望通过API执行所有操作 — 包括设置和结果使用。 尽管不太常见，但用户可以完全配置、执行 *和* 完全使用API来利用推荐的结果。
+大多数情况下，出于以上部分所述的原因，推荐是在Adobe Target UI中配置，然后通过Target API使用或访问。 这种UI-API协调是常见的。 但是，有时，用户可能希望通过API执行所有操作 — 包括设置和结果使用。 尽管不太常见，但用户可以完全使用API配置、执行&#x200B;*和*&#x200B;并利用推荐的结果。
 
-我们在 [上一节](manage-catalog.md) 如何管理Adobe Target Recommendations实体并在服务器端交付它们。 同样地， [Adobe Developer控制台](https://developer.adobe.com/console/home) 让您无需登录Adobe Target即可管理标准、促销活动、收藏集和设计模板。 可以找到所有Recommendations API的完整列表 [此处](https://developer.adobe.com/target/administer/recommendations-api/)，但此处提供了一份摘要以供参考。
+我们在[前面的部分](manage-catalog.md)中了解了如何管理Adobe Target Recommendations实体并在服务器端交付它们。 同样，[Adobe Developer Console](https://developer.adobe.com/console/home)允许您在不登录Adobe Target的情况下管理标准、促销活动、收藏集和设计模板。 您可以在[此处](https://developer.adobe.com/target/administer/recommendations-api/)找到所有Recommendations API的完整列表，但此处是供参考的摘要。
 
 | 资源 | 详细信息 |
 | --- | --- |
 | [收藏集](https://developer.adobe.com/target/administer/recommendations-api/#tag/Collections) | 列出、创建、获取、编辑和删除收藏集。 |
 | [标准](https://developer.adobe.com/target/administer/recommendations-api/#tag/Criteria) | 列出并获取条件。 |
 | [设计](https://developer.adobe.com/target/administer/recommendations-api/#tag/Designs) | 列出、创建、获取、编辑、删除和验证设计。 |
-| [实体](https://developer.adobe.com/target/administer/recommendations-api/#tag/Entities) | 保存、删除和获取实体。 |
+| [个实体](https://developer.adobe.com/target/administer/recommendations-api/#tag/Entities) | 保存、删除和获取实体。 |
 | [促销活动](https://developer.adobe.com/target/administer/recommendations-api/#tag/Promotions) | 列出、创建、获取、编辑和删除促销活动。 |
-| [类别标准](https://developer.adobe.com/target/administer/recommendations-api/#tag/Category-Criteria) | 列出、创建、获取、编辑和删除类别标准。 |
+| [类别条件](https://developer.adobe.com/target/administer/recommendations-api/#tag/Category-Criteria) | 列出、创建、获取、编辑和删除类别标准。 |
 | [自定义标准](https://developer.adobe.com/target/administer/recommendations-api/#tag/Custom-Criteria) | 列出、创建、获取、编辑和删除自定义标准。 |
-| [项目条件](https://developer.adobe.com/target/administer/recommendations-api/#tag/Item-Criteria) | 列出、创建、获取、编辑和删除项目标准。 |
-| [热门程度标准](https://developer.adobe.com/target/administer/recommendations-api/#tag/Popularity-Criteria) | 列出、创建、获取、编辑和删除热门程度标准。 |
+| [项条件](https://developer.adobe.com/target/administer/recommendations-api/#tag/Item-Criteria) | 列出、创建、获取、编辑和删除项目标准。 |
+| [人气标准](https://developer.adobe.com/target/administer/recommendations-api/#tag/Popularity-Criteria) | 列出、创建、获取、编辑和删除热门程度标准。 |
 | [配置文件属性标准](https://developer.adobe.com/target/administer/recommendations-api/#tag/Profile-Attribute-Criteria) | 列出、创建、获取、编辑和删除配置文件属性标准。 |
-| [最新标准](https://developer.adobe.com/target/administer/recommendations-api/#tag/Recent-Criteria) | 列出、创建、获取、编辑和删除最近使用的标准。 |
-| [序列标准](https://developer.adobe.com/target/administer/recommendations-api/#tag/Sequence-Criteria) | 列出、创建、获取、编辑和删除序列标准。 |
+| [最近的标准](https://developer.adobe.com/target/administer/recommendations-api/#tag/Recent-Criteria) | 列出、创建、获取、编辑和删除最近使用的标准。 |
+| [序列条件](https://developer.adobe.com/target/administer/recommendations-api/#tag/Sequence-Criteria) | 列出、创建、获取、编辑和删除序列标准。 |
 
 ## 参考文档
 

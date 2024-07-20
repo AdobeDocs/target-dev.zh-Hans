@@ -1,30 +1,30 @@
 ---
 title: Adobe Target交付API客户端提示
-description: 如何在中使用客户端提示 [!DNL Adobe Target] 投放API？
+description: 如何在 [!DNL Adobe Target] 交付API中使用客户端提示？
 exl-id: 317b9d7d-5b98-464e-9113-08b899ee1455
 feature: APIs/SDKs
 source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
 workflow-type: tm+mt
-source-wordcount: '272'
+source-wordcount: '268'
 ht-degree: 0%
 
 ---
 
-# 客户端提示和 [!UICONTROL Adobe Target交付API]
+# 客户端提示和[!UICONTROL Adobe Target Delivery API]
 
-客户端提示必须发送至 [!DNL Adobe Target] ，该选件位于“选件”请求中。
+必须根据优惠请求将客户端提示发送到[!DNL Adobe Target]。
 
-通常，建议将所有可用的客户端提示发送到 [!DNL Target]. 有关更多信息，请参阅 [用户代理和客户端提示](/help/dev/implement/client-side/atjs/user-agent-and-client-hints.md) 在 [客户端实施](../../implement/client-side/overview.md) 部分。
+通常，建议将所有可用的客户端提示发送到[!DNL Target]。 有关详细信息，请参阅[客户端实现](../../implement/client-side/overview.md)部分中的[用户代理和客户端提示](/help/dev/implement/client-side/atjs/user-agent-and-client-hints.md)。
 
 ## 投放API直接调用
 
 ### 从浏览器
 
-在这种情况下，浏览器会将低熵客户端提示发送至 [!DNL Target] 自动通过请求标头。 但是，此实施存在一些浏览器级别的限制。 第一 — 除非通过https发出请求，否则将不会从浏览器发送任何客户端提示标头。 第二 — 客户端提示不会在首次请求时发送到 [!DNL Target] 在页面上。 客户端提示标头将仅在第二次请求时发送，并且其后会发送所有请求。 这意味着无法执行受众分段和个性化 [!DNL Target] 在首次访问页面时。 为了绕过这两个限制，我们强烈建议在浏览器中使用用户代理客户端提示API直接收集客户端提示，并在请求有效负载上发送它们。
+在这种情况下，浏览器将通过请求标头自动向[!DNL Target]发送低熵客户端提示。 但是，此实施存在一些浏览器级别的限制。 第一 — 除非通过https发出请求，否则将不会从浏览器发送任何客户端提示标头。 第二 — 客户端提示不会在首次请求时发送到页面上的[!DNL Target]。 客户端提示标头将仅在第二次请求时发送，并且其后会发送所有请求。 这意味着[!DNL Target]在首次访问页面时无法执行受众分段和个性化。 为了绕过这两个限制，我们强烈建议在浏览器中使用用户代理客户端提示API直接收集客户端提示，并在请求有效负载上发送它们。
 
 ### 从服务器
 
-在这种情况下，必须手动将客户端提示从浏览器转发到 [!DNL Target] 在投放API请求中。
+在这种情况下，必须在交付API请求上手动将客户端提示从浏览器转发到[!DNL Target]。
 
 ```
 curl -X POST 'http://mboxedge28.tt.omtrdc.net/rest/v1/delivery?client=myClientCode&sessionId=abcdefghijkl00014' -d '{

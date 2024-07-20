@@ -1,19 +1,19 @@
 ---
 keywords: 全局mbox参数， targetPageParams，查询字符串，数组， json， dtm
-description: 了解如何使用 [!UICONTROL targetPageParams] 函数以将其他定位或上下文信息传递到 [!DNL Adobe Target] 全局mbox。
+description: 了解如何使用[!UICONTROL targetPageParams]函数将其他定位或上下文信息传递到 [!DNL Adobe Target] 全局mbox。
 title: 如何将参数传递到全局mbox？
 feature: at.js
 exl-id: 2a6be3e4-a618-4812-9e87-b01789705c40
 source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
 workflow-type: tm+mt
-source-wordcount: '372'
-ht-degree: 63%
+source-wordcount: '370'
+ht-degree: 61%
 
 ---
 
 # 将参数传递到全局 mbox
 
-JavaScript `targetPageParams` 函数用于将参数传递到中的全局mbox [!DNL Adobe Target]. 在将其他定位/上下文信息传递到的任何场景中，都需要此项 [!DNL Target].
+JavaScript `targetPageParams`函数用于将参数传递到[!DNL Adobe Target]中的全局mbox。 任何要将其他定位/上下文信息传递到[!DNL Target]的方案都需要此项。
 
 例如，在“推荐”活动中，使用相应参数来表示当前正在查看的产品或类别。
 
@@ -21,7 +21,7 @@ JavaScript `targetPageParams` 函数用于将参数传递到中的全局mbox [!D
 
 >[!NOTE]
 >
->如果要将参数添加到页面上的所有mbox，而不仅仅添加到全局mbox，请使用 [targetPageParamsAll()](/help/dev/implement/client-side/atjs/atjs-functions/targetpageparamsall.md) 函数。
+>如果要将参数添加到页面上的所有mbox，而不只是添加到全局mbox，请使用[targetPageParamsAll()](/help/dev/implement/client-side/atjs/atjs-functions/targetpageparamsall.md)函数。
 
 您可以按照以下任一方式使用 `targetPageParams()` 函数将参数传递到 `target-global-mbox`：
 
@@ -88,7 +88,7 @@ p1=v1&p2=v2&p3=hello%20world
 
 ## JSON
 
-JSON 是传递参数的有效方式。[!DNL Target] 使用 JSON 对象键将复杂的结构精简为简单的参数。
+JSON 是传递参数的有效方式。[!DNL Target]使用JSON对象键将复杂结构扁平化为简单参数。
 
 ```json {line-numbers="true"}
 <!--window.-->targetPageParams = function() { 

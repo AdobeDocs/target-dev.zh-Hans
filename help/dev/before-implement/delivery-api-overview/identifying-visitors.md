@@ -1,32 +1,32 @@
 ---
 title: 识别访客的Adobe Target交付API
-description: 如何在中识别用户 [!DNL Adobe Target]？
+description: 如何识别 [!DNL Adobe Target]中的用户？
 keywords: 投放api
 exl-id: 5b8c28aa-caad-44a9-880a-3c5f844e47b2
 feature: APIs/SDKs
 source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
 workflow-type: tm+mt
-source-wordcount: '785'
-ht-degree: 9%
+source-wordcount: '751'
+ht-degree: 7%
 
 ---
 
 # 识别访客
 
-可以通过多种方式在中识别访客 [!DNL Adobe Target].
+在[!DNL Adobe Target]中，可通过多种方法来识别访客。
 
 Target使用三个标识符：
 
 | 字段名称 | 描述 |
 | --- | --- |
-| `tntId` | 此 `tntId` 是中的主要标识符 [!DNL Target] 对于用户。 您可以提供此ID或 [!DNL Target] 如果请求中不包含密码，则将自动生成密码。 |
-| `thirdPartyId` | 此 `thirdPartyId` 是您公司的标识符，表示您可以在每次调用时发送该标识符。 当用户登录到某个公司的网站时，该公司通常会创建一个ID，并将其绑定到访客的帐户、会员卡、会员编号或该公司的其他适用标识符。 |
-| `marketingCloudVisitorId` | 此 `marketingCloudVisitorId` 用于在不同的Adobe解决方案之间合并和共享数据。 此 `marketingCloudVisitorId` 要与Adobe Analytics和Adobe Audience Manager集成，需要使用。 |
-| `customerIds` | 除了Experience Cloud访客ID之外， [客户ID](https://experienceleague.adobe.com/docs/id-service/using/reference/authenticated-state.html) 并且可以利用每个访客的身份验证状态。 |
+| `tntId` | `tntId`是用户[!DNL Target]中的主要标识符。 您可以提供此ID，否则[!DNL Target]将在请求中不包含此ID时自动生成此ID。 |
+| `thirdPartyId` | `thirdPartyId`是您公司的用户标识符，您可在每次调用时发送该标识符。 当用户登录到某个公司的网站时，该公司通常会创建一个ID，并将其绑定到访客的帐户、会员卡、会员编号或该公司的其他适用标识符。 |
+| `marketingCloudVisitorId` | `marketingCloudVisitorId`用于在不同Adobe解决方案之间合并和共享数据。 要与Adobe Analytics和Adobe Audience Manager集成，需要`marketingCloudVisitorId`。 |
+| `customerIds` | 除了Experience Cloud访客ID之外，还可以使用其他[客户ID](https://experienceleague.adobe.com/docs/id-service/using/reference/authenticated-state.html)以及每个访客的身份验证状态。 |
 
 ## [!DNL Target] ID
 
-此 [!DNL Target] ID或 `tntId` 可视为设备ID。 此 `tntId` 自动生成者 [!DNL Target] 请求中未提供。 此后，后续请求需要包含此项 `tntId` 以便向用户使用的设备交付正确的内容。
+[!DNL Target] ID或`tntId`可视为设备ID。 如果未在请求中提供，此`tntId`将由[!DNL Target]自动生成。 此后，后续请求需要包括此`tntId`，以便将正确内容交付给用户使用的设备。
 
 ```http {line-numbers="true"}
 curl -X POST \
@@ -58,7 +58,7 @@ curl -X POST \
 }'
 ```
 
-上面的示例调用表明 `tntId` 无需传入。 在此方案中， [!DNL Target]  生成 `tntId` 并在响应中提供，如下所示：
+以上示例调用表明`tntId`不需要传入。 在此方案中，[!DNL Target]生成一个`tntId`并在响应中提供它，如下所示：
 
 ```URI {line-numbers="true"}
 {
@@ -73,11 +73,11 @@ curl -X POST \
 }
 ```
 
-生成的 `tntId` 是 `10abf6304b2714215b1fd39a870f01afc.28_20`. 请注意此 `tntId` 需要在调用 [!UICONTROL Adobe Target交付API] 对于同一用户，跨会话。
+生成的`tntId`是`10abf6304b2714215b1fd39a870f01afc.28_20`。 请注意，在跨会话为同一用户调用[!UICONTROL Adobe Target Delivery API]时，需要使用此`tntId`。
 
 ## Marketing Cloud 访客 ID
 
-此 `marketingCloudVisitorId` 是一个通用的永久性ID，用于在Experience Cloud的所有解决方案中标识您的访客。 当您的组织实施ID服务时，此ID允许您在不同的Experience Cloud解决方案(如Adobe Target、Adobe Analytics或Adobe Audience Manager)中识别同一网站访客及其数据。 请注意 `marketingCloudVisitorId` 当利用并与Analytics和Audience Manager集成时，需要使用。
+`marketingCloudVisitorId`是一个通用的永久性ID，用于在Experience Cloud的所有解决方案中标识您的访客。 当您的组织实施ID服务时，此ID允许您在不同的Experience Cloud解决方案(如Adobe Target、Adobe Analytics或Adobe Audience Manager)中识别同一网站访客及其数据。 请注意，在利用和与Analytics和Audience Manager集成时，需要`marketingCloudVisitorId`。
 
 ```
 curl -X POST \
@@ -112,11 +112,11 @@ curl -X POST \
 }'
 ```
 
-上述示例调用演示了如何 `marketingCloudVisitorId` 从Experience CloudID服务检索到的内容将传递到Adobe Target。 在此方案中， [!DNL Target] 生成 `tntId` 因为它未传递到原始调用，而原始调用将映射到提供的 `marketingCloudVisitorId` 如下面的响应所示。
+上述示例调用演示了如何将从Experience CloudID服务检索到的`marketingCloudVisitorId`传递到Adobe Target。 在此方案中，[!DNL Target]生成一个`tntId`，因为它未传递到将映射到提供的`marketingCloudVisitorId`的原始调用，如下面的响应中所示。
 
 ## 第三方ID
 
-如果您的组织使用ID来识别访客，则可以使用 `thirdPartyID` 以投放内容。 但是，您必须提供 `thirdPartyID` 每隔 [!UICONTROL Adobe Target交付API] 打电话给你。
+如果您的组织使用ID来识别访客，则可以使用`thirdPartyID`来交付内容。 但是，您必须为每[!UICONTROL Adobe Target Delivery API]次调用提供`thirdPartyID`。
 
 ```
 curl -X POST \
@@ -151,7 +151,7 @@ curl -X POST \
 }'
 ```
 
-上面的示例调用显示了 `thirdPartyId`，这是一个永久ID，您的企业可以利用此ID来识别最终用户，无论他们通过Web、移动还是物联网渠道与您的企业进行交互。 换句话说， `thirdPartyId` 将引用可以跨渠道使用的用户配置文件数据。 在此方案中， [!DNL Target] 生成 `tntId`，因为它未传递到原始调用，而原始调用将映射到提供的 `thirdPartyId` 如下面的响应所示。
+上述示例调用显示了`thirdPartyId`，这是您的企业用于识别最终用户的永久ID，无论他们是否通过Web、移动或物联网渠道与您的企业进行交互。 换句话说，`thirdPartyId`将引用可以跨渠道使用的用户配置文件数据。 在此方案中，[!DNL Target]生成一个`tntId`，因为它未传递到原始调用，而原始调用将映射到提供的`thirdPartyId`，如下面的响应中所示。
 
 ```
 {
@@ -169,15 +169,15 @@ curl -X POST \
 
 ## Customer ID
 
-[客户ID](https://experienceleague.adobe.com/docs/id-service/using/reference/authenticated-state.html) 可添加并与Experience Cloud访客ID关联。 无论何时发送 `customerIds` 该 `marketingCloudVisitorId` 还必须提供。 此外，认证状态可以与每个认证状态一起提供 `customerId` 每个访客的开销。 可考虑以下身份验证状态：
+可以添加[客户ID](https://experienceleague.adobe.com/docs/id-service/using/reference/authenticated-state.html)并将其与Experience Cloud的访客ID关联。 无论何时发送`customerIds`，都必须提供`marketingCloudVisitorId`。 此外，可以为每个访客随每个`customerId`提供身份验证状态。 可考虑以下身份验证状态：
 
 | 身份验证状态 | 用户状态 |
 | --- | --- |
-| `unknown` | 未知或从未验证。此状态可用于诸如访客通过单击显示广告登录到您的网站等场景。 |
+| `unknown` | 未知或从未验证。 此状态可用于诸如访客通过单击显示广告登录到您的网站等场景。 |
 | `authenticated` | 用户目前通过了您网站或应用程序上活动会话的身份验证。 |
 | `logged_out` | 用户已经过身份验证，但已主动注销。用户想要并打算与已经过身份验证状态断开连接。用户不想再被当为已经过身份验证处理。 |
 
-请注意，仅当客户ID为 `authenticated` state将Target引用存储和链接到客户ID的用户配置文件数据。 如果客户ID位于 `unknown` 或 `logged_out` ，则客户id将被忽略，并且任何可能与其关联的用户配置文件数据都不会用于受众定位。
+请注意，仅当客户ID处于`authenticated`状态时，Target才会引用已存储并链接到客户ID的用户配置文件数据。 如果客户ID处于`unknown`或`logged_out`状态，则将忽略客户ID，并且任何可能与其关联的用户配置文件数据都不会用于受众定位。
 
 ```
 curl -X POST \
@@ -220,11 +220,11 @@ curl -X POST \
     }'
 ```
 
-上面的示例调用演示了如何发送 `customerId` 带有 `authenticatedState`. 发送时 `customerId`， `integrationCode`， `id`、和 `authenticatedState` 以及 `marketingCloudVisitorId` 是必需的。 此 `integrationCode` 的别名 [客户属性文件](https://experienceleague.adobe.com/docs/target/using/audiences/visitor-profiles/working-with-customer-attributes.html?lang=zh-Hans) 你通过CRS提供的。
+以上示例调用演示了如何使用`authenticatedState`发送`customerId`。 发送`customerId`时，`integrationCode`、`id`、`authenticatedState`以及`marketingCloudVisitorId`是必需的。 `integrationCode`是您通过CRS提供的[客户属性文件](https://experienceleague.adobe.com/docs/target/using/audiences/visitor-profiles/working-with-customer-attributes.html?lang=zh-Hans)的别名。
 
 ## 合并的配置文件
 
-您可以合并 `tntId`， `thirdPartyID`、和 `marketingCloudVisitorId` 在同一请求中。 在此方案中，Adobe Target将维护所有这些ID的映射，并将其固定到访客中。 了解用户档案如何 [实时合并和同步](https://experienceleague.adobe.com/docs/target/using/audiences/visitor-profiles/3rd-party-id.html) 使用不同的标识符。
+您可以在同一请求中合并`tntId`、`thirdPartyID`和`marketingCloudVisitorId`。 在此方案中，Adobe Target将维护所有这些ID的映射，并将其固定到访客中。 了解如何使用不同的标识符实时[合并和同步配置文件](https://experienceleague.adobe.com/docs/target/using/audiences/visitor-profiles/3rd-party-id.html)。
 
 ```
 curl -X POST \
@@ -271,4 +271,4 @@ curl -X POST \
     }'
 ```
 
-上面的示例调用演示了如何将 `tntId`， `thirdPartyID`、和 `marketingCloudVisitorId` 在同一请求中。 响应中还会返回所有三个ID。
+以上示例调用演示了如何在同一个请求中组合`tntId`、`thirdPartyID`和`marketingCloudVisitorId`。 响应中还会返回所有三个ID。

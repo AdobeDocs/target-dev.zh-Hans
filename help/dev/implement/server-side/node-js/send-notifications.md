@@ -1,11 +1,11 @@
 ---
-title: 将显示通知或单击通知发送到 [!DNL Adobe Target] 使用Node.js SDK
-description: 了解如何使用sendNotifications()将显示通知或单击通知发送至 [!DNL Adobe Target] 用于衡量和报告。
+title: 使用Node.js SDK向 [!DNL Adobe Target] 发送显示或单击通知
+description: 了解如何使用sendNotifications()向 [!DNL Adobe Target] 发送显示通知或单击通知以进行测量和报告。
 feature: APIs/SDKs
 exl-id: 84bb6a28-423c-457f-8772-8e3f70e06a6c
 source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
 workflow-type: tm+mt
-source-wordcount: '251'
+source-wordcount: '248'
 ht-degree: 4%
 
 ---
@@ -14,18 +14,18 @@ ht-degree: 4%
 
 ## 描述
 
-`[!UICONTROL sendNotifications()]` 用于将显示通知或单击通知发送至 [!DNL Adobe Target] 用于衡量和报告。
+`[!UICONTROL sendNotifications()]`用于向[!DNL Adobe Target]发送显示或单击通知以进行测量和报告。
 
 >[!NOTE]
 >
->当 `execute` 具有所需参数的对象位于请求本身中，展示次数将自动递增以用于符合条件的活动。
+>当具有所需参数的`execute`对象位于请求本身中时，展示次数将自动递增，以用于符合条件的活动。
 
 将自动增加展示次数的SDK方法为：
 
 * `getOffers()`
 * `getAttributes()`
 
-当 `prefetch` 对象在请求中传递，则对于具有mbox的活动，展示次数不会自动递增 `prefetch` 对象。 `sendNotifications()` 必须用于预获取的体验，以增加展示次数和转化次数。
+在请求中传递`prefetch`对象时，对具有`prefetch`对象中的mbox的活动，展示次数不会自动递增。 `sendNotifications()`必须用于预获取的体验，以增加展示次数和转化次数。
 
 ## 方法
 
@@ -37,7 +37,7 @@ TargetClient.sendNotifications(options: Object): Promise
 
 ### 参数
 
-`options` 具有以下结构：
+`options`具有以下结构：
 
 | 名称 | 类型 | 必需 | 默认 |
 | --- | --- | --- | --- |
@@ -45,7 +45,7 @@ TargetClient.sendNotifications(options: Object): Promise
 
 ## 示例
 
-首先，我们构建Target D用于预取内容的投放API请求 `home` 和 `product1` mbox。
+首先，我们构建Target D投放API请求以预取`home`和`product1` mbox的内容。
 
 ### Node.js
 
@@ -62,7 +62,7 @@ const prefetchMboxesRequest = {
 const targetResponse = await targetClient.getOffers({ request: prefetchMboxesRequest });
 ```
 
-成功的响应将包含 [!UICONTROL Target投放API] 响应对象，其中包含所请求mbox的预获取内容。 示例 `targetResponse.response` 对象可能如下所示：
+成功的响应将包含[!UICONTROL Target Delivery API]响应对象，其中包含所请求mbox的预获取内容。 示例`targetResponse.response`对象可能如下所示：
 
 ### Node.js
 
@@ -120,7 +120,7 @@ const targetResponse = await targetClient.getOffers({ request: prefetchMboxesReq
 }
 ```
 
-记下mbox `name` 和 `state` 字段以及 `eventToken` 字段，位于 [!DNL Target] 内容选项。 这些文件应在 `sendNotifications()` 请求，以便在显示每个内容选项后立即发送。 假设 `product1` mbox已在非浏览器设备上显示。 通知请求将显示如下：
+记下[!DNL Target]内容选项中的每个mbox `name`和`state`字段以及`eventToken`字段。 每个内容选项显示后，即应在`sendNotifications()`请求中提供这些选项。 假设`product1` mbox已显示在非浏览器设备上。 通知请求将显示如下：
 
 ### Node.js
 
@@ -139,7 +139,7 @@ const mboxNotificationRequest = {
 };
 ```
 
-请注意，我们已经包括了与 [!DNL Target] 在预获取响应中投放的选件。 构建通知请求后，我们可以将其发送至 [!DNL Target] 通过 `sendNotifications()` API方法：
+请注意，我们已在预获取响应中包含与投放的[!DNL Target]选件相对应的mbox状态和事件令牌。 生成通知请求后，我们可以通过`sendNotifications()` API方法将其发送给[!DNL Target]：
 
 ### Node.js
 

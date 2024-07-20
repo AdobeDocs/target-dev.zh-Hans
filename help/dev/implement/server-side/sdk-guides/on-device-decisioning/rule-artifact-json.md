@@ -5,8 +5,8 @@ feature: APIs/SDKs
 exl-id: 4ccfb455-f813-4bdb-a9c1-d576a110a9bb
 source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
 workflow-type: tm+mt
-source-wordcount: '291'
-ht-degree: 1%
+source-wordcount: '292'
+ht-degree: 0%
 
 ---
 
@@ -24,7 +24,7 @@ ht-degree: 1%
 
 >[!BEGINTABS]
 
->[!TAB npm]
+>[!TAB NPM]
 
 ```javascript {line-numbers="true"}
 npm i @adobe/target-nodejs-sdk -P
@@ -113,9 +113,9 @@ npm i @adobe/target-nodejs-sdk -P
    TargetClient targetClient = TargetClient.create(config);
    ```
 
-1. 客户端和 `organizationId` 可以从中检索 [!DNL Adobe Target]导航到 **[!UICONTROL 管理]** > **[!UICONTROL 实现]**，如下所示。
+1. 通过导航到&#x200B;**[!UICONTROL Administration]** > **[!UICONTROL Implementation]**，可从[!DNL Adobe Target]中检索客户端和`organizationId`，如下所示。
 
-   &lt;! — 插入image-client-code.png —>
+   &lt;！ — 插入image-client-code.png —>
    ![替代图像](assets/asset-rule-artifact-3.png)
 
 ## 3.存储和重设JSON有效负载
@@ -162,7 +162,7 @@ TargetDeliveryResponse response = targetClient.getOffers(request);
 
 >[!NOTE]
 >
->通过初始化 [!DNL Adobe Target]通过JSON有效负载的SDK，您的服务器可以立即为设备上决策活动提供请求，因为 [!DNL Adobe Target]SDK无需等待规则工件被下载。
+>通过通过JSON有效负载初始化[!DNL Adobe Target]SDK，您的服务器可以立即为设备上决策活动提供请求，因为[!DNL Adobe Target]SDK无需等待规则工件下载完成。
 
 以下示例演示了JSON有效负载初始化功能。
 

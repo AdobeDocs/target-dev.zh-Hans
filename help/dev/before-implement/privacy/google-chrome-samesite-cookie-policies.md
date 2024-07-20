@@ -1,19 +1,19 @@
 ---
 keywords: google、samesite、cookie、chrome 80、ietf
-description: 了解  [!DNL Adobe Target] 如何处理 Google Chrome 版本 80 引入的 SameSite IETF 标准以及您需要完成哪些操作来遵守这些策略。
+description: 了解 [!DNL Adobe Target] 如何处理Google Chrome版本80引入的SameSite IETF标准，以及遵守这些策略需要做些什么。
 title: ' [!DNL Target] 如何处理 Google 的 Samesite Cookie 策略？'
 feature: Privacy & Security
 exl-id: 58a83def-9625-4d44-914f-203509c6c434
 source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
 workflow-type: tm+mt
-source-wordcount: '1950'
-ht-degree: 70%
+source-wordcount: '1973'
+ht-degree: 68%
 
 ---
 
 # Google Chrome SameSite Cookie 策略
 
-Google 将从 Chrome 80 开始，默认对用户实施新的 Cookie 策略，该版本计划在 2020 年初发布。本文说明了您需要了解的有关新SameSite Cookie策略的所有信息，以及方法 [!DNL Adobe Target] 支持这些策略以及如何使用 [!DNL Target] 以符合Google Chrome的新SameSite Cookie策略。
+Google 将从 Chrome 80 开始，默认对用户实施新的 Cookie 策略，该版本计划在 2020 年初发布。本文说明了您需要了解的有关新SameSite Cookie策略的所有信息，[!DNL Adobe Target]如何支持这些策略，以及如何使用[!DNL Target]来遵守Google Chrome的新SameSite Cookie策略。
 
 从 Chrome 80 开始，Web 开发人员必须明确指定哪些 Cookie 可以跨网站工作。这是 Google 为改进网络上的隐私和安全而计划发布的众多公告中的第一个。
 
@@ -31,7 +31,7 @@ Cookie之所以非常重要，是因为它们可以增强用户在浏览Web时�
 
 要做到这一点，浏览器在加载新文章时从 `platform.friends.com` 提取 Friends 的“分享”按钮。在此流程中，浏览器附加包含用户的登录凭据的 Friends Cookie，用于向 Friends 服务器发出请求。这允许Friends代表用户在其新闻源中发布新闻文章，而无需用户登录。
 
-实现这一功能依靠的是第三方 Cookie。在本例中，第三方Cookie保存在浏览器上，用于 `platform.friends.com`，以便 `platform.friends.com` 可以代表用户在Friends应用程序中发布帖子。
+实现这一功能依靠的是第三方 Cookie。在本例中，第三方Cookie保存在`platform.friends.com`的浏览器上，这样`platform.friends.com`就可以代表用户在Friends应用程序中发帖。
 
 您可以想象，如果没有第三方 Cookie 该如何实现这种用例，用户将需要完成多个手动步骤。首先，用户需要复制新文章的链接。其次，用户必须单独登录 Friends 应用程序。然后，用户单击“发布文章”按钮。接下来，用户在文本字段中复制粘贴链接，最后再单击“发布”。如您所见，第三方 Cookie 极大地帮助改善了用户体验，因为可以大量减少手动步骤。
 
@@ -43,9 +43,9 @@ Cookie之所以非常重要，是因为它们可以增强用户在浏览Web时�
 
 ## [!DNL Target] 如何使用 Cookie？
 
-说了这么多，让我们看看 [!DNL Target] 使用Cookie。 首先，要使用 [!DNL Target]，您需要在网站上安装 [!DNL Target] JavaScript 库。对于访问您网站的用户，这让您可以在其浏览器中放置一个第三方 Cookie。在用户与您的网站互动时，您可以将用户的行为和兴趣数据传递到 [!DNL Target] 通过JavaScript库。 此 [!DNL Target] JavaScript库使用第一方Cookie提取有关用户的身份信息，用于映射用户的行为和兴趣数据。 然后，[!DNL Target] 使用此数据来支持您打造个性化的行动。
+说了这么多，让我们看看[!DNL Target]如何使用Cookie。 首先，要使用 [!DNL Target]，您需要在网站上安装 [!DNL Target] JavaScript 库。对于访问您网站的用户，这让您可以在其浏览器中放置一个第三方 Cookie。在用户与您的网站互动时，您可以通过JavaScript库将用户的行为和兴趣数据传递给[!DNL Target]。 [!DNL Target] JavaScript库使用第一方Cookie提取有关用户的标识信息，以映射到用户的行为和兴趣数据。 然后，[!DNL Target] 使用此数据来支持您打造个性化的行动。
 
-Target 还会（有时）使用第三方 Cookie。如果您拥有在不同域上线的多个网站，并且希望跨这些网站跟踪用户旅程，您可以利用跨域跟踪使用第三方 Cookie。通过在 [!DNL Target] JavaScript 库中启用跨域跟踪，您的帐户将开始使用第三方 Cookie。当用户从一个域跳转到另一个域时，浏览器与Target的后端服务器通信，在此过程中，将创建第三方Cookie并放置在用户的浏览器中。 通过位于用户浏览器上的第三方Cookie， [!DNL Target] 能够为单个用户提供跨不同域的一致体验。
+Target 还会（有时）使用第三方 Cookie。如果您拥有在不同域上线的多个网站，并且希望跨这些网站跟踪用户旅程，您可以利用跨域跟踪使用第三方 Cookie。通过在 [!DNL Target] JavaScript 库中启用跨域跟踪，您的帐户将开始使用第三方 Cookie。当用户从一个域跳转到另一个域时，浏览器与Target的后端服务器通信，在此过程中，将创建第三方Cookie并放置在用户的浏览器中。 通过在用户浏览器中活动的第三方Cookie，[!DNL Target]可以为单个用户跨不同域提供一致的体验。
 
 ## Google的新Cookie方法
 
@@ -63,16 +63,16 @@ Target 还会（有时）使用第三方 Cookie。如果您拥有在不同域上
 
 ![SameSite 对话框](../assets/samesite.png)
 
-* **默认为Cookie设置SameSite**：设置后，所有未指定SameSite属性的Cookie将自动强制使用 `SameSite = Lax`.
+* 默认为Cookie设置&#x200B;**SameSite**：设置后，所有未指定SameSite属性的Cookie将自动强制使用`SameSite = Lax`。
 * **不具有 SameSite 的 Cookie 必须是安全的**：在设置时，没有 SameSite 属性或者使用 `SameSite = None` 的 Cookie 必须是安全的。在此上下文中，安全是指所有浏览器请求都必须遵循 HTTPS 协议。不符合此要求的 Cookie 将被拒绝。所有网站应使用 HTTPS 来满足此要求。
 
-## [!DNL Target] 遵循 Google 安全最佳实践
+## [!DNL Target]遵循Google的安全最佳实践
 
 对于Adobe，我们始终希望支持业界最新的安全和隐私最佳实践。 我们非常高兴地宣布，[!DNL Target] 支持 Google 引入的新安全和隐私设置。
 
 对于“默认为 Cookie 设置 SameSite”设置，[!DNL Target] 将继续提供个性化功能，没有任何影响，也无需您的干预。[!DNL Target] 会使用第一方 Cookie，并在 Google Chrome 应用标记 `SameSite = Lax` 时继续正常运行。
 
-对于“不具有SameSite的Cookie必须是安全的”选项，如果您没有在Target中选择使用跨域跟踪功能，则 [!DNL Target] 将继续工作。
+对于“不具有SameSite的Cookie必须是安全的”选项，如果您没有在Target中选择使用跨域跟踪功能，则[!DNL Target]中的第一方Cookie将继续正常使用。
 
 但是，当您选择使用跨域跟踪来跨多个域利用 [!DNL Target] 时，Chrome 要求为第三方 Cookie 使用 `SameSite = None` 和 Secure 标记。这意味着必须确保网站使用 HTTPS 协议。[!DNL Target] 中的客户端库将使用 HTTPS 协议并附加 `SameSite = None` 和 Secure 标记到 [!DNL Target] 中的第三方 Cookie，以确保继续提供所有活动。
 
@@ -86,8 +86,8 @@ Target 还会（有时）使用第三方 Cookie。如果您拥有在不同域上
 
 | Target JavaScript 库 | 默认为 Cookie 设置 SameSite = 已启用 | 不具有 SameSite 的 Cookie 必须是安全的 = 已启用 |
 | --- | --- | --- |
-| at.js 1.*x* 与第一方 Cookie | 无影响。 | 如果您没有使用跨域跟踪，则没有影响。 |
-| at.js 1.*x* 且启用了跨域跟踪。 | 无影响。 | 您必须为网站启用 HTTPS 协议。<br />Target使用第三方Cookie来跟踪用户，而Google要求第三方Cookie具有 `SameSite = None` 和Secure标志。 Secure 标记要求网站必须使用 HTTPS 协议。 |
+| at.js 1.*x*&#x200B;与第一方Cookie。 | 无影响。 | 如果您没有使用跨域跟踪，则没有影响。 |
+| at.js 1.*x*&#x200B;启用了跨域跟踪。 | 无影响。 | 您必须为网站启用 HTTPS 协议。<br />Target使用第三方Cookie来跟踪用户，Google要求第三方Cookie具有`SameSite = None`和Secure标志。 Secure 标记要求网站必须使用 HTTPS 协议。 |
 | at.js 2.*x* | 无影响。 | 无影响。 |
 
 ## [!DNL Target] 需要做什么？
@@ -96,8 +96,8 @@ Target 还会（有时）使用第三方 Cookie。如果您拥有在不同域上
 
 | Target JavaScript 库 | 默认为 Cookie 设置 SameSite = 已启用 | 不具有 SameSite 的 Cookie 必须是安全的 = 已启用 |
 | --- | --- | --- |
-| at.js 1.*x* 与第一方 Cookie | 无影响。 | 如果您没有使用跨域跟踪，则没有影响。 |
-| at.js 1.*x* 且启用了跨域跟踪。 | 无影响。 | at.js 1.*x* 且启用了跨域跟踪。 |
+| at.js 1.*x*&#x200B;与第一方Cookie。 | 无影响。 | 如果您没有使用跨域跟踪，则没有影响。 |
+| at.js 1.*x*&#x200B;启用了跨域跟踪。 | 无影响。 | at.js 1.*x*&#x200B;启用了跨域跟踪。 |
 | at.js 2.*x* | 无影响。 | 无影响。 |
 
 ## 如果您转为使用HTTPS协议会有什么影响？
@@ -106,4 +106,4 @@ Target 还会（有时）使用第三方 Cookie。如果您拥有在不同域上
 
 ## 结论
 
-当整个行业都在努力为消费者创建更加安全的Web时，Adobe也不遗余力地帮助我们的客户以确保最终用户安全和隐私的方式向其提供个性化体验。 您所要做的就是遵循前述最佳实践并利用 [!DNL Target] 以符合Google Chrome的新SameSite Cookie策略。
+当整个行业都在努力为消费者创建更加安全的Web时，Adobe也不遗余力地帮助我们的客户以确保最终用户安全和隐私的方式向其提供个性化体验。 您所要做的就是遵循上述最佳实践，并利用[!DNL Target]来遵循Google Chrome的新SameSite Cookie政策。

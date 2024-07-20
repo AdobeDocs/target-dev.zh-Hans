@@ -1,6 +1,6 @@
 ---
-title: 如何在中使用异步请求 [!DNL Adobe Target] Java SDK
-description: 了解如何 [!DNL Target] Java SDK支持异步请求，这可以将有效目标时间减少为零。
+title: 如何在 [!DNL Adobe Target] Java SDK中使用异步请求
+description: 了解 [!DNL Target] Java SDK如何支持异步请求，这可以将有效目标时间减少为零。
 feature: APIs/SDKs
 exl-id: e11f8d16-76f6-4d39-822a-34a1cf7f623f
 source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
@@ -28,7 +28,7 @@ CompletableFuture<Attributes> getAttributesAsync(TargetDeliveryRequest targetReq
 
 ## 示例
 
-示例 `Spring` application Controller可能如下所示：
+示例`Spring`应用程序控制器可能如下所示：
 
 ### 示例控制器
 
@@ -73,6 +73,6 @@ public class TargetRestController {
 }
 ```
 
-此示例假设您拥有 [已初始化SDK](initialize-sdk.md) 就象个春豆，你有 [实用工具方法](utility-methods.md) 可用。
+此示例假定您已[将SDK](initialize-sdk.md)初始化为Spring Bean，并且您有[可用的实用工具方法](utility-methods.md)。
 
-此 [!DNL Target] 请求触发于 `simulateIO` 到执行时，目标结果也应准备就绪。 即使不是这样，在大多数情况下您仍可节省大量成本。
+[!DNL Target]请求在`simulateIO`之前触发，到执行时，目标结果也应准备就绪。 即使不是这样，在大多数情况下您仍可节省大量成本。

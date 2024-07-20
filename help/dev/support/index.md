@@ -3,8 +3,8 @@ title: 支持 — Adobe Analytics
 description: 这是Adobe Analytics的支持页面
 source-git-commit: a5bcf98b586c655a36a9ae8800a8f31978d68646
 workflow-type: tm+mt
-source-wordcount: '97'
-ht-degree: 8%
+source-wordcount: '92'
+ht-degree: 6%
 
 ---
 
@@ -21,7 +21,7 @@ ht-degree: 8%
 
 ### 开发人员论坛
 
-[开始使用](https://adobe.io)
+[开始](https://adobe.io)
 
 与社区专家和Adobe员工进行公开讨论和提供支持。
 

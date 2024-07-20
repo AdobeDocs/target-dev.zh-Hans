@@ -1,11 +1,11 @@
 ---
 title: 管理功能测试的转出
-description: 了解如何使用管理功能测试的转出 [!UICONTROL 设备上决策].
+description: 了解如何使用[!UICONTROL on-device decisioning]管理功能测试的转出。
 feature: APIs/SDKs
 exl-id: caa91728-6ac0-4583-a594-0c8fe616342d
 source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
 workflow-type: tm+mt
-source-wordcount: '556'
+source-wordcount: '513'
 ht-degree: 0%
 
 ---
@@ -14,63 +14,63 @@ ht-degree: 0%
 
 ## 步骤摘要
 
-1. 启用 [!UICONTROL 设备上决策] （贵组织）
-1. 创建 [!UICONTROL A/B测试] 活动
+1. 为您的组织启用[!UICONTROL on-device decisioning]
+1. 创建[!UICONTROL A/B Test]活动
 1. 定义您的功能和转出设置
 1. 在应用程序中实施和渲染功能
 1. 对应用程序中的事件实施跟踪
 1. 激活A/B活动
 1. 根据需要调整转出和流量分配
 
-## 1.启用 [!UICONTROL 设备上决策] （贵组织）
+## 1.为您的组织启用[!UICONTROL on-device decisioning]
 
-启用设备上决策可确保在几乎零延迟的情况下执行A/B活动。 要启用此功能，请导航到 **[!UICONTROL 管理]** > **[!UICONTROL 实现]** > **[!UICONTROL 帐户详细信息]** 在 [!DNL Adobe Target]，并启用 **[!UICONTROL 设备上决策]** 切换。
+启用设备上决策可确保在几乎零延迟的情况下执行A/B活动。 要启用此功能，请在[!DNL Adobe Target]中导航到&#x200B;**[!UICONTROL Administration]** > **[!UICONTROL Implementation]** > **[!UICONTROL Account details]**，并启用&#x200B;**[!UICONTROL On-Device Decisioning]**&#x200B;切换开关。
 
 ![替代图像](assets/asset-odd-toggle.png)
 
 >[!NOTE]
 >
->您必须具有管理员或审批者 [用户角色](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/user-management.html) 启用或禁用 [!UICONTROL 设备上决策] 切换。
+>您必须具有管理员或审批者[用户角色](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/user-management.html)才能启用或禁用[!UICONTROL On-Device Decisioning]切换开关。
 
-启用 [!UICONTROL 设备上决策] 切换， [!DNL Adobe Target] 开始生成 *规则对象* 你的委托人。
+启用[!UICONTROL On-Device Decisioning]切换后，[!DNL Adobe Target]开始为您的客户端生成&#x200B;*规则工件*。
 
-## 2.创建一个 [!UICONTROL A/B测试] 活动
+## 2.创建[!UICONTROL A/B Test]活动
 
-1. 在 [!DNL Adobe Target]，导航到 **[!UICONTROL 活动]** 页面，然后选择 **[!UICONTROL 创建活动]** > **[!UICONTROL A/B测试]**.
+1. 在[!DNL Adobe Target]中，导航到&#x200B;**[!UICONTROL Activities]**&#x200B;页面，然后选择&#x200B;**[!UICONTROL Create Activity]** > **[!UICONTROL A/B test]**。
 
    ![替代图像](assets/asset-ab.png)
 
-1. 在 **[!UICONTROL 创建A/B测试活动]** 模式，保留默认值 **[!UICONTROL Web]** 已选择选项(1)，选择 **[!UICONTROL 表单]** 作为体验编辑器(2)，选择 **[!UICONTROL 默认工作区]** 替换为 **[!UICONTROL 无属性限制]** (3)，然后单击 **[!UICONTROL 下一个]** （四）。
+1. 在&#x200B;**[!UICONTROL Create A/B Test Activity]**&#x200B;模式中，保留默认的&#x200B;**[!UICONTROL Web]**&#x200B;选项(1)，选择&#x200B;**[!UICONTROL Form]**&#x200B;作为体验编辑器(2)，选择带有&#x200B;**[!UICONTROL No Property Restrictions]** (3)的&#x200B;**[!UICONTROL Default Workspace]**，然后单击&#x200B;**[!UICONTROL Next]** (4)。
 
    ![替代图像](assets/asset-form.png)
 
 ## 3.定义您的功能和转出设置
 
-在 **[!UICONTROL 体验]** 在活动创建步骤中，为您的活动提供一个名称(1)。 输入应用程序中要管理功能转出的位置(2)的名称。 例如，  `ondevice-rollout` 或 `homepage-addtocart-rollout` 是指示管理功能转出的目标的位置名称。 在以下示例中， `ondevice-rollout` 是为体验A定义的位置。您可以选择添加受众细化(4)以限制活动的资格。
+在活动创建的&#x200B;**[!UICONTROL Experiences]**&#x200B;步骤中，提供活动(1)的名称。 输入应用程序中要管理功能转出的位置(2)的名称。 例如，`ondevice-rollout`或`homepage-addtocart-rollout`是位置名称，指示管理功能转出的目标。 在下面显示的示例中，`ondevice-rollout`是为体验A定义的位置。您可以选择添加受众细化(4)以限制活动的资格。
 
 ![替代图像](assets/asset-location-rollout.png)
 
-1. 在 **[!UICONTROL 内容]** 部分，选择 **[!UICONTROL 创建JSON选件]** (1)中进行归因、筛选、流程、流失等。
+1. 在同一页面的&#x200B;**[!UICONTROL Content]**&#x200B;部分中，从下拉列表(1)中选择&#x200B;**[!UICONTROL Create JSON Offer]**，如图所示。
 
    ![替代图像](assets/asset-offer.png)
 
-1. 在 **[!UICONTROL JSON数据]** 在显示的文本框中，为您打算在体验A (1)中使用此活动推出的功能输入功能标志变量，并使用有效的JSON对象(2)。
+1. 在出现的&#x200B;**[!UICONTROL JSON Data]**&#x200B;文本框中，为您打算在体验A (1)中与此活动一起推出的功能输入功能标志变量，使用有效的JSON对象(2)。
 
    ![替代图像](assets/asset-json-a-rollout.png)
 
-1. 单击 **[!UICONTROL 下一个]** (1)垫付予本公司股东，作为本 **[!UICONTROL 定位]** 活动创建步骤。
+1. 单击&#x200B;**[!UICONTROL Next]** (1)以进入活动创建的&#x200B;**[!UICONTROL Targeting]**&#x200B;步骤。
 
    ![替代图像](assets/asset-next-2-t-rollout.png)
 
-1. 在 **[!UICONTROL 定位]** 步骤，保留 **[!UICONTROL 所有访客]** 受众(1)，为简单起见。 但是将流量分配(2)调整为10%。 这将限制此功能仅访问您网站访客的10%。 单击“下一步”(3)以前进到 **[!UICONTROL 目标和设置]** 步骤。
+1. 在&#x200B;**[!UICONTROL Targeting]**&#x200B;步骤中，保留&#x200B;**[!UICONTROL All Visitors]**&#x200B;受众(1)，以简化操作。 但是将流量分配(2)调整为10%。 这将限制此功能仅访问您网站访客的10%。 单击下一步(3)以前进到&#x200B;**[!UICONTROL Goals & Settings]**&#x200B;步骤。
 
    ![替代图像](assets/asset-next-2-g-rollout.png)
 
-1. 在 **[!UICONTROL 目标和设置]** 步骤，选择 **[!UICONTROL Adobe Target]** (1)作为 **[!UICONTROL 报表源]** 要在中查看活动结果，请执行以下操作 [!DNL Adobe Target] UI。
+1. 在&#x200B;**[!UICONTROL Goals & Settings]**&#x200B;步骤中，选择&#x200B;**[!UICONTROL Adobe Target]** (1)作为&#x200B;**[!UICONTROL Reporting Source]**，以便在[!DNL Adobe Target] UI中查看您的活动结果。
 
-1. 选择 **[!UICONTROL 目标量度]** 以测量活动。 在此示例中，成功的转换基于用户是否购买商品，如用户是否到达orderConfirm(2)位置所示。
+1. 选择&#x200B;**[!UICONTROL Goal Metric]**&#x200B;以测量该活动。 在此示例中，成功的转换基于用户是否购买商品，如用户是否到达orderConfirm(2)位置所示。
 
-1. 单击 **[!UICONTROL 保存并关闭]** (3)保存活动。
+1. 单击&#x200B;**[!UICONTROL Save & Close]** (3)以保存活动。
 
    ![替代图像](assets/asset-conv-rollout.png)
 

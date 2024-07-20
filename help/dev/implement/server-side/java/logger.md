@@ -1,11 +1,11 @@
 ---
-title: 初始化 [!DNL Adobe Target] 用于记录请求的Java SDK
-description: 了解如何在中记录请求 [!DNL Adobe Target] Java SDK。
+title: 初始化 [!DNL Adobe Target] Java SDK以记录请求
+description: 了解如何在 [!DNL Adobe Target] Java SDK中记录请求。
 feature: APIs/SDKs
 exl-id: 85d1a6ef-0b08-4948-8133-740b7d6141dd
 source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
 workflow-type: tm+mt
-source-wordcount: '124'
+source-wordcount: '118'
 ht-degree: 4%
 
 ---
@@ -14,18 +14,18 @@ ht-degree: 4%
 
 ## 描述
 
-时间 [初始化SDK](initialize-sdk.md)，上提供了多个选项 `ClientConfig` 对象，可设置为记录请求。
+当[初始化SDK](initialize-sdk.md)时，`ClientConfig`对象上有多个选项，这些选项可以设置为记录请求。
 
 | 选项 | 描述 |
 | --- | --- |
 | `logRequests` | 记录整个请求正文以及响应正文。 |
 | `logRequestStatus` | 记录请求的URL、状态以及响应时间。 |
 
-[!DNL Target] Java SDK使用 `slf4j` 日志记录。 您需要提供记录器的实施，例如 `java.util.logging`， `logback`、和 `log4j`. 请参阅 [http://www.slf4j.org/manual.html](http://www.slf4j.org/manual.html) 以了解更多信息。 所有日志将打印在 `debug`.
+[!DNL Target] Java SDK使用`slf4j`日志记录。 您需要提供记录器的实现，如`java.util.logging`、`logback`和`log4j`。 有关详细信息，请参阅[http://www.slf4j.org/manual.html](http://www.slf4j.org/manual.html)。 所有日志都将在`debug`中打印。
 
 ## 示例
 
-添加 `slf4j` 依赖关系。
+添加`slf4j`依赖项。
 
 >[!BEGINTABS]
 
@@ -49,7 +49,7 @@ compile 'org.slf4j:slf4j-simple:2.0.0-alpha0'
 
 >[!ENDTABS]
 
-启用 `DEBUG` 日志，并标记请求日志标记符。
+基于您的实施启用`DEBUG`日志，并标记请求日志记录标志。
 
 ### 调试
 

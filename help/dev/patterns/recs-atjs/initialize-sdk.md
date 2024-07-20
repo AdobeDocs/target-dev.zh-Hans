@@ -1,19 +1,20 @@
 ---
 title: 初始化SDK
-description: 确保加载 [!DNL Adobe Target] at.js JavaScript库以正确的顺序执行。
+description: 请确保以正确的顺序执行加载 [!DNL Adobe Target] at.js JavaScript库的所有必要步骤。
 feature: APIs/SDKs
 level: Experienced
 role: Developer
-source-git-commit: 723bb2f33a011995757009193ee9c48757ae1213
+exl-id: 250a8382-1fdd-4a70-b712-a25af5adad71
+source-git-commit: 50ee7e66e30c0f8367763a63b6fde5977d30cfe7
 workflow-type: tm+mt
-source-wordcount: '1820'
-ht-degree: 8%
+source-wordcount: '1558'
+ht-degree: 5%
 
 ---
 
 # 初始化SDK
 
-请按照 *初始化SDK* 确保加载 [!DNL Adobe Target] at.js JavaScript库以正确的顺序执行。
+请按照&#x200B;*初始化SDK*&#x200B;图中的步骤进行操作，以确保以正确的顺序执行加载[!DNL Adobe Target] at.js JavaScript库所需的所有必要任务。
 
 >[!TIP]
 >
@@ -25,9 +26,9 @@ ht-degree: 8%
 
 >[!NOTE]
 >
->下图中的步骤编号与以下部分相对应。 步骤编号没有特定顺序，并且不反映中执行的步骤顺序 [!DNL Target] 创建活动时的UI。
+>下图中的步骤编号与以下部分相对应。 步骤编号没有特定顺序，也不反映创建活动时在[!DNL Target] UI中执行的步骤顺序。
 
-![初始化SDK图](/help/dev/patterns/recs-atjs/assets/diagram-initiaze-sdk.png){width="600" zoomable="yes"}
+![初始化SDK关系图](/help/dev/patterns/recs-atjs/assets/diagram-initiaze-sdk.png){width="600" zoomable="yes"}
 
 单击以下链接以导航到所需的部分：
 
@@ -50,35 +51,35 @@ ht-degree: 8%
 
 ## 1.1：加载访客API SDK {#load}
 
-此步骤有助于确保 `VisitorAPI.js` 库已正确加载、配置和初始化。
+此步骤有助于确保正确加载、配置和初始化`VisitorAPI.js`库。
 
 +++查看详细信息
 
-![加载访客API SDK图](/help/dev/patterns/recs-atjs/assets/load-visitor-combined.png){width="400" zoomable="yes"}
+![加载访客API SDK关系图](/help/dev/patterns/recs-atjs/assets/load-visitor-combined.png){width="400" zoomable="yes"}
 
 **先决条件**
 
-* 要使用访客ID/API服务，您的公司必须启用 [!DNL Adobe Experience Cloud] 并拥有 [!UICONTROL 组织ID]. 有关更多信息，请参阅 [Experience Cloud要求：组织ID](https://experienceleague.adobe.com/docs/id-service/using/reference/requirements.html?){target=_blank} 在 *Identity服务帮助* 指南。
-* 您需要 `VisitorAPI.js` 文件。 如果您拥有，则应该已经拥有此文件 [!DNL Adobe Analytics] 已实施。 此文件也可以通过 [[!DNL Adobe Experience Platform] 标记扩展](https://experienceleague.adobe.com/docs/tags.html){target=_blank} or can be downloaded from the [Adobe Analytics Code Manager](https://experienceleague.adobe.com/docs/id-service/using/implementation/setup-analytics.html){target=_blank}.
+* 若要使用访客ID/API服务，贵公司必须启用[!DNL Adobe Experience Cloud]并拥有[!UICONTROL Organization ID]。 有关详细信息，请参阅&#x200B;*Identity Service帮助*&#x200B;指南中的[Experience Cloud要求：](https://experienceleague.adobe.com/docs/id-service/using/reference/requirements.html?){target=_blank}。
+* 您需要`VisitorAPI.js`文件。 如果您实施了[!DNL Adobe Analytics]，则应该已经拥有此文件。 此文件也可以通过[[!DNL Adobe Experience Platform] 标记扩展](https://experienceleague.adobe.com/docs/tags.html){target=_blank}添加，也可以从[Adobe Analytics代码管理器](https://experienceleague.adobe.com/docs/id-service/using/implementation/setup-analytics.html){target=_blank}下载。
 
-**配置和引用VisitorAPI.js**
+**配置并引用VisitorAPI.js**
 
-有关更多信息，请参阅 [实施适用于Target的Experience Cloud服务](https://experienceleague.adobe.com/docs/id-service/using/implementation/setup-target.html){target=_blank}.
+有关详细信息，请参阅[为Target实施Experience Cloud服务](https://experienceleague.adobe.com/docs/id-service/using/implementation/setup-target.html){target=_blank}。
 
 **读数**
 
-* [Experience CloudIdentity Service概述](https://experienceleague.adobe.com/docs/id-service/using/intro/overview.html){target=_blank}
+* [Experience Cloud标识服务概述](https://experienceleague.adobe.com/docs/id-service/using/intro/overview.html){target=_blank}
 * [关于ID服务](https://experienceleague.adobe.com/docs/id-service/using/intro/about-id-service.html){target=_blank}
-* [Cookie 和 Experience Cloud 标识服务](https://experienceleague.adobe.com/docs/id-service/using/intro/cookies.html){target=_blank}
+* [Cookie和Experience Cloud标识服务](https://experienceleague.adobe.com/docs/id-service/using/intro/cookies.html){target=_blank}
 * [Experience CloudIdentity服务如何请求和设置ID](https://experienceleague.adobe.com/docs/id-service/using/intro/id-request.html){target=_blank}
 * [了解ID同步和匹配率](https://experienceleague.adobe.com/docs/id-service/using/intro/match-rates.html){target=_blank}
 
 **操作**
 
-* 嵌入 `VisitorAPI.js` 文件。
-* 了解 [访客ID/API服务的可用配置](https://experienceleague.adobe.com/docs/id-service/using/reference/requirements.html){target=_blank}.
-* 在 `VisitorAPI.js` 文件已加载，请使用 `Visitor.getInstance` 方法，以使用所需的配置进行初始化。
-* 熟悉 [可用方法](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/get-set.html){target=_blank}.
+* 在网页上嵌入`VisitorAPI.js`文件。
+* 了解访客ID/API服务](https://experienceleague.adobe.com/docs/id-service/using/reference/requirements.html){target=_blank}的[可用配置。
+* 加载`VisitorAPI.js`文件后，使用`Visitor.getInstance`方法以您需要的必要配置进行初始化。
+* 熟悉[可用方法](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/get-set.html){target=_blank}。
 
 +++
 
@@ -86,7 +87,7 @@ ht-degree: 8%
 
 ## 1.2：设置客户Id {#set}
 
-此步骤可帮助确保将访客的已知ID（CRM ID、用户ID等）与的匿名ID绑定 [!DNL Adobe] 用于跨设备个性化。
+此步骤可帮助确保将访客的已知ID（CRM ID、用户ID等）与[!DNL Adobe]的匿名ID关联以进行跨设备个性化。
 
 +++查看详细信息
 
@@ -97,15 +98,15 @@ ht-degree: 8%
 * 访客的已知ID应该可以在Data Layer中使用。
 
 **设置客户ID**
-有关更多信息，请参阅 [setCustomerIds](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/setcustomerids.html){target=_blank}.
+有关详细信息，请参阅[setCustomerIDs](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/setcustomerids.html){target=_blank}。
 
 **读数**
 
-* [mbox3rdPartyId 的实时配置文件同步](https://experienceleague.adobe.com/docs/target/using/audiences/visitor-profiles/3rd-party-id.html){target=_blank}
+* mbox3rdPartyId的[实时配置文件同步](https://experienceleague.adobe.com/docs/target/using/audiences/visitor-profiles/3rd-party-id.html){target=_blank}
 
 **操作**
 
-* 使用 `visitor.setCustomerIDs` 设置访客已知ID。
+* 使用`visitor.setCustomerIDs`设置访客已知ID。
 
 +++
 
@@ -121,8 +122,8 @@ ht-degree: 8%
 
 **先决条件**
 
-* 并非数据层中的所有数据都必须发送到 [!DNL Target]. 请咨询您的业务团队（数字营销团队），确定哪些数据对于实验、优化和个性化很有价值。 仅应将此数据发送至 [!DNL Target].
-* 确保您不会将任何个人身份信息(PII)数据发送至 [!DNL Target].
+* 并非数据层中的所有数据都必须发送到[!DNL Target]。 请咨询您的业务团队（数字营销团队），确定哪些数据对于实验、优化和个性化很有价值。 仅此数据应发送到[!DNL Target]。
+* 确保您不会向[!DNL Target]发送任何个人身份信息(PII)数据。
 
 **配置自动页面加载请求**
 
@@ -130,11 +131,11 @@ ht-degree: 8%
 
 **读数**
 
-了解 `pageLoadEnabled` 在中设置 [targetGlobalSettings()](/help/dev/implement/client-side/atjs/atjs-functions/targetglobalsettings.md).
+了解[targetGlobalSettings()](/help/dev/implement/client-side/atjs/atjs-functions/targetglobalsettings.md)中的`pageLoadEnabled`设置。
 
 **操作**
 
-* 修改 `window.targetGlobalSettings` 对象以启用自动页面加载请求。
+* 修改`window.targetGlobalSettings`对象以启用自动页面加载请求。
 
 +++
 
@@ -156,18 +157,18 @@ ht-degree: 8%
 
 有关更多信息，请参阅 [targetGlobalSettings()](/help/dev/implement/client-side/atjs/atjs-functions/targetglobalsettings.md)。
 
-设置 `bodyHidingEnabled` 到 `true` 在页面加载请求进行中时隐藏整个页面正文。 如果出于任何原因（例如，数据稍后未准备就绪）未启用自动页面加载请求，则最好将此设置设置为 `false`.
+将`bodyHidingEnabled`设置为`true`会在页面加载请求正在进行时隐藏整个页面主体。 如果您出于任何原因（例如，稍后数据尚未准备就绪）未启用自动页面加载请求，则最好将此设置设置为`false`。
 
-如果您已禁用 `bodyHidingEnabled` 由于您不希望触发APLR并希望稍后触发页面请求，或者您不需要进行闪烁处理，因此必须实施自己的闪烁处理。 您可以通过两种方式处理闪烁：隐藏受测试区域，或在受测试区域上显示引发器。
+如果您禁用了`bodyHidingEnabled`，因为您不希望触发APLR并且希望稍后触发页面请求，或者您不需要处理闪烁，则必须实施自己的闪烁处理。 您可以通过两种方式处理闪烁：隐藏受测试区域，或在受测试区域上显示引发器。
 
 **读数**
 
 * [at.js 如何管理闪烁](/help/dev/implement/client-side/atjs/how-atjs-works/manage-flicker-with-atjs.md)
-* 了解bodyHiddenStyle和bodyHidingEnabled对象 [targetGlobalSettings()](/help/dev/implement/client-side/atjs/atjs-functions/targetglobalsettings.md).
+* 了解[targetGlobalSettings()](/help/dev/implement/client-side/atjs/atjs-functions/targetglobalsettings.md)中的bodyHiddenStyle和bodyHidingEnabled对象。
 
 **操作**
 
-* 修改 `window.targetGlobalSettings` 要设置的对象 `bodyHiddenStyle` 和 `bodyHidingEnabled`.
+* 修改`window.targetGlobalSettings`对象以设置`bodyHiddenStyle`和`bodyHidingEnabled`。
 
 +++
 
@@ -175,26 +176,26 @@ ht-degree: 8%
 
 ## 1.5：配置数据映射 {#data-mapping}
 
-此步骤有助于确保必须发送到的所有 [!DNL Target] 设置。
+此步骤有助于确保设置必须发送到[!DNL Target]的所有数据。
 
 +++查看详细信息
 
-![数据映射图](/help/dev/patterns/recs-atjs/assets/data-mapping-combined.png){width="400" zoomable="yes"}
+![数据映射关系图](/help/dev/patterns/recs-atjs/assets/data-mapping-combined.png){width="400" zoomable="yes"}
 
 **先决条件**
 
-* 数据层应准备好所有必须发送到的数据 [!DNL Target].
+* 数据层应准备好必须发送给[!DNL Target]的所有数据。
 * Recommendations：扩充用户档案。
-   * 通过 `entity.id` 用于根据基于上次查看产品的标准，捕获最近查看标准和项目的数据。
-   * 通过 `entity.id` 用于根据最喜爱的类别捕获热门程度标准的数据。
+   * 传递`entity.id`以根据基于上次查看产品的条件捕获最近查看的条件和项的数据。
+   * 传递`entity.id`以根据最喜爱的类别捕获热门程度标准的数据。
    * 如果自定义标准基于配置文件属性，或者在任何标准的包含规则筛选中使用配置文件属性，请传递该属性。
 * Recommendations：摄取产品数据。
-   * 可以传递其他实体参数（保留和自定义）以摄取或更新中的产品目录 [!DNL Recommendations].
-   * 产品目录也可以通过使用实体源进行更新。 [!DNL Target] ui或API。
+   * 可以传递其他实体参数（保留和自定义）以摄取或更新[!DNL Recommendations]中的产品目录。
+   * 还可以使用[!DNL Target] UI或API使用实体源更新产品目录。
 
 **将数据映射到[!DNL Target]**
 
-有关更多信息，请参阅 [targetPageParams()](/help/dev/implement/client-side/atjs/atjs-functions/targetpageparams.md).
+有关详细信息，请参阅[targetPageParams()](/help/dev/implement/client-side/atjs/atjs-functions/targetpageparams.md)。
 
 **读数**
 
@@ -204,7 +205,7 @@ ht-degree: 8%
 
 **操作**
 
-* 使用 `targetPageParams()` 函数，用于设置必须发送到的全部必需数据 [!DNL Target].
+* 使用`targetPageParams()`函数设置必须发送到[!DNL Target]的所有必需数据。
 
 +++
 
@@ -212,7 +213,7 @@ ht-degree: 8%
 
 ## 1.6：促销活动 {#promotion}
 
-添加促销项目并控制它们在中的位置 [!DNL Target Recommendations] [设计](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations-design/create-design.html){target=_blank}.
+添加促销项目并控制它们在您的[!DNL Target Recommendations] [设计](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations-design/create-design.html){target=_blank}中的位置。
 
 +++查看详细信息
 
@@ -238,9 +239,9 @@ ht-degree: 8%
 
 **可用标准**
 
-* [!UICONTROL 查看了这些项目，也查看了这些项目的人]
-* [!UICONTROL 查看了这些商品的人们购买了那些商品]
-* [!UICONTROL 购买了这些商品的人们也购买了这些商品]
+* [!UICONTROL People Who Viewed These, Viewed Those]
+* [!UICONTROL People Who Viewed These, Bought Those]
+* [!UICONTROL People Who Bought These, Bought Those]
 
 **需要实体参数**
 
@@ -262,17 +263,17 @@ ht-degree: 8%
 
 **可用标准**
 
-* [!UICONTROL 全网站查看的次数最多]
-* [!UICONTROL 同类中查看次数最多]
-* [!UICONTROL 按项目属性查看的次数最多]
-* [!UICONTROL 全网站最畅销商品]
-* [!UICONTROL 按类别划分的畅销商品排名]
-* [!UICONTROL 按项目属性排名的最畅销商品]
-* [!UICONTROL 按Analytics量度排名]
+* [!UICONTROL Most Viewed Across the Site]
+* [!UICONTROL Most Viewed by Category]
+* [!UICONTROL Most Viewed by Item Attribute]
+* [!UICONTROL Top Sellers Across the Site]
+* [!UICONTROL Top Sellers by Category]
+* [!UICONTROL Top Sellers by Item Attribute]
+* [!UICONTROL Top by Analytics Metric]
 
 **需要实体参数**
 
-* `entity.categoryId` 或基于热门程度的项目属性（如果标准基于当前项目或项目属性）。
+* `entity.categoryId`或基于热门程度的项目属性（如果标准基于当前项目或项目属性）。
 * 对于网站中的“查看次数最多”/“销售最高”页面，无需传递任何内容。
 
 **读数**
@@ -291,18 +292,18 @@ ht-degree: 8%
 
 **可用标准**
 
-* [!UICONTROL 查看了这个项目，也查看了那个项目的人]
-* [!UICONTROL 查看了这个项目，但购买了那个项目的人]
-* [!UICONTROL 购买了这个项目，也购买了那个项目的人]
-* [!UICONTROL 具有相似属性的项目]
+* [!UICONTROL People Who Viewed This, Viewed That]
+* [!UICONTROL People Who Viewed This, Bought That]
+* [!UICONTROL People Who Bought This, Bought That]
+* [!UICONTROL Items with Similar Attributes]
 
 **需要实体参数**
 
-* `entity.id` 或任何用作键的配置文件属性
+* `entity.id`或任何用作键的配置文件属性
 
 **读数**
 
-* [基于项目](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/algorithms.html?lang=en#section_885B3BB1B43048A88A8926F6B76FC482){target=_blank}
+* 基于[项](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/algorithms.html?lang=en#section_885B3BB1B43048A88A8926F6B76FC482){target=_blank}
 
 +++
 
@@ -316,8 +317,8 @@ ht-degree: 8%
 
 **可用标准**
 
-* [!UICONTROL 最近查看的项目]
-* [!UICONTROL 为您推荐]
+* [!UICONTROL Recently Viewed Items]
+* [!UICONTROL Recommended for You]
 
 **需要实体参数**
 
@@ -339,11 +340,11 @@ ht-degree: 8%
 
 **可用标准**
 
-* [!UICONTROL 自定义算法]
+* [!UICONTROL Custom algorithm]
 
 **需要实体参数**
 
-`entity.id` 或用作自定义算法键的属性
+`entity.id`或用作自定义算法键的属性
 
 **读数**
 
@@ -373,15 +374,15 @@ ht-degree: 8%
 
 **读数**
 
-* [能否动态地排除实体？](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations-faq/recommendations-faq.html?lang=en#exclude){target=_blank}
+* [我可以动态排除实体吗？](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations-faq/recommendations-faq.html?lang=en#exclude){target=_blank}
 
 +++
 
 [返回此页面顶部的图表。](#diagram)
 
-## 1.14：通过 `entity.event.detailsOnly=true` 参数 {#true}
+## 1.14：传递`entity.event.detailsOnly=true`参数 {#true}
 
-可使用实体属性，将产品或内容信息传递到 [!DNL Target Recommendations].
+使用实体属性将产品或内容信息传递到[!DNL Target Recommendations]。
 
 +++查看详细信息
 
@@ -395,7 +396,7 @@ ht-degree: 8%
 
 ## 1.15：配置远程数据映射（远程）
 
-此步骤可确保必须发送到的所有 [!DNL Target] 设置。
+此步骤可确保设置必须发送到[!DNL Target]的所有数据。
 
 +++查看详细信息
 
@@ -403,11 +404,11 @@ ht-degree: 8%
 
 **先决条件**
 
-* 数据层应准备好所有必须发送到的数据 [!DNL Target].
+* 数据层应准备好所有必须发送到[!DNL Target]的数据。
 
 **设置数据提供程序**
 
-有关更多信息，请参阅 [数据提供程序](/help/dev/implement/client-side/atjs/atjs-functions/targetglobalsettings.md#data-providers).
+有关详细信息，请参阅[数据提供程序](/help/dev/implement/client-side/atjs/atjs-functions/targetglobalsettings.md#data-providers)。
 
 **读数**
 
@@ -415,7 +416,7 @@ ht-degree: 8%
 
 **操作**
 
-使用 `targetPageParams()` 函数，用于设置必须发送到的全部必需数据 [!DNL Target].
+使用`targetPageParams()`函数设置必须发送到[!DNL Target]的所有必需数据。
 
 +++
 
@@ -427,15 +428,15 @@ ht-degree: 8%
 
 +++查看详细信息
 
-![加载Adobe Target at.js图](/help/dev/patterns/recs-atjs/assets/load-atjs-combined.png){width="400" zoomable="yes"}
+![加载Adobe Target at.js关系图](/help/dev/patterns/recs-atjs/assets/load-atjs-combined.png){width="400" zoomable="yes"}
 
 **先决条件**
 
-* 下载或请求您的数字营销团队获得 `at.js 2.*x*` javascript库文件。
+* 下载或请求您的数字营销团队获取`at.js 2.*x*` JavaScript库文件。
 
 *读数*
 
-* [Target 的工作方式](https://experienceleague.adobe.com/docs/target/using/introduction/how-target-works.html){target=_blank}
+* [Target的工作方式](https://experienceleague.adobe.com/docs/target/using/introduction/how-target-works.html){target=_blank}
 * [at.js 的工作原理](/help/dev/implement/client-side/atjs/how-atjs-works/how-atjs-works.md)
 * [不通过标记管理器实施 Target](/help/dev/implement/client-side/atjs/how-to-deployatjs/implement-target-without-a-tag-manager.md)
 
@@ -447,33 +448,4 @@ ht-degree: 8%
 
 [返回此页面顶部的图表。](#diagram)
 
-继续执行步骤2： [配置数据收集](/help/dev/patterns/recs-atjs/data-collection.md).
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+继续执行步骤2：[配置数据收集](/help/dev/patterns/recs-atjs/data-collection.md)。

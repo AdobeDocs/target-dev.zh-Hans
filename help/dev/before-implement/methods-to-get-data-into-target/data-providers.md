@@ -1,19 +1,19 @@
 ---
 keywords: 实施，实施，设置，设置，数据提供程序
-description: 将数据导入 [!DNL Target] 使用数据提供程序。
-title: 如何将数据导入 [!DNL Target] 使用数据提供程序？
+description: 使用数据提供程序将数据导入 [!DNL Target] 。
+title: 如何使用数据提供程序将数据导入 [!DNL Target] ？
 feature: Implementation
 exl-id: 9971bd96-f736-4965-afe2-b4901c12d006
 source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
 workflow-type: tm+mt
-source-wordcount: '298'
-ht-degree: 53%
+source-wordcount: '287'
+ht-degree: 55%
 
 ---
 
 # 数据提供程序
 
-数据提供程序是一项功能，允许您轻松地将数据从第三方传递到 [!DNL Adobe Target].
+数据提供程序是一种功能，可让您轻松地将数据从第三方传递到[!DNL Adobe Target]。
 
 >[!NOTE]
 >
@@ -31,7 +31,7 @@ ht-degree: 53%
 
 ## 方法的优势
 
-通过此设置，客户可以从第三方数据提供商（如Demandbase、BlueKai和自定义服务）收集数据，并将这些数据传递到 [!DNL Target] 作为mbox参数。
+此设置允许客户从第三方数据提供商（如Demandbase、BlueKai和自定义服务）收集数据，并将这些数据作为全局mbox请求中的mbox参数传递给[!DNL Target]。
 
 支持通过异步和同步请求从多个提供程序收集数据。
 
@@ -39,7 +39,7 @@ ht-degree: 53%
 
 ## 注意事项
 
-如果数据提供程序添加到 `window.targetGlobalSettings.dataProviders` 是异步的，它们将并行执行。 访客API请求与添加到中的函数并行执行 `window.targetGlobalSettings.dataProviders` 允许最小等待时间。
+如果添加到`window.targetGlobalSettings.dataProviders`的数据提供程序是异步的，则它们将并行执行。 访客API请求与添加到`window.targetGlobalSettings.dataProviders`的函数并行执行，以将等待时间最小化。
 
 at.js不尝试缓存数据。 如果数据提供程序仅提取一次数据，则应确保数据已缓存，并且在调用提供程序函数时为第二次调用提供缓存的数据。
 
