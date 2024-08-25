@@ -82,7 +82,7 @@ TargetDeliveryResponse offers = targetClient.getOffers(request);
 
 >[!ENDTABS]
 
-在缺少`tntId`的情况下，[!DNL Adobe Target]生成一个`tntId`并在响应中提供它，如下所示。
+在缺少`tntId`的情况下，[!DNL Adobe Target]将生成`tntId`并在响应中提供它，如下所示。
 
 ```json {line-numbers="true"}
 {
@@ -101,9 +101,9 @@ TargetDeliveryResponse offers = targetClient.getOffers(request);
 
 ## 第三方ID (thirdPartyId)
 
-如果您的组织使用ID来识别访客，则可以使用`thirdPartyID`来交付内容。 `thirdPartyID`是您的企业用于识别最终用户的永久ID，无论他们通过Web、移动还是物联网渠道与您的企业进行交互。 换句话说，`thirdPartyId`引用了可以跨渠道使用的用户配置文件数据。 但是，您必须为发出的每个[!DNL Adobe Target]交付API调用提供`thirdPartyID`。
+如果您的组织使用ID来标识访客，则可以使用`thirdPartyID`来传递内容。 `thirdPartyID`是您的企业用来标识最终用户的永久ID，无论最终用户是从Web、移动还是IoT渠道与您的企业进行交互。 换言之，`thirdPartyId`引用了可在各频道间使用的用户配置文件数据。 但是，您必须为发出的每个[!DNL Adobe Target]传递API调用提供`thirdPartyID`。
 
-以下示例调用演示了`thirdPartyId`的使用。
+以下示例调用演示如何使用`thirdPartyId`。
 
 >[!BEGINTABS]
 
@@ -414,9 +414,9 @@ TargetDeliveryResponse offers = targetClient.getOffers(request);
 1. 使用MurmurHash3计算哈希
 1. 获取哈希的绝对值
 1. 将散列绝对值除以10000
-1. 将余数除以10000，这会生成一个介于0和1之间的值
+1. 将余数除以10000，这将生成一个介于0和1之间的值
 1. 将结果乘以活动中的体验总数
-1. 舍入结果。 这会生成体验索引。
+1. 对结果进行四舍五入。 这应该会产生经验指数。
 
 ### 示例
 
@@ -431,10 +431,10 @@ TargetDeliveryResponse offers = targetClient.getOffers(request);
 1. 设备ID `702ff4d0-83b1-4e2e-a0a6-22cbe460eb15`
 1. 客户端代码`acmeclient`
 1. 活动ID `1111`
-1. 加盐`experience`
+1. 盐`experience`
 1. 哈希`acmeclient.1111.702ff4d0-83b1-4e2e-a0a6-22cbe460eb15.experience`的值，哈希值`-919077116`
 1. 哈希`919077116`的绝对值
-1. 除以10000后的余数，`7116`
-1. 余数后的值除以10000， `0.7116`
-1. 将该值与体验总数`3 * 0.7116 = 2.1348`相乘后的结果
-1. 体验索引是`2`，这表示第三次体验，因为我们使用的是基于`0`的索引。
+1. 按10000除后的剩余数，`7116`
+1. 余数之后的值除以10000， `0.7116`
+1. 将值与体验总数`3 * 0.7116 = 2.1348`相乘后的结果
+1. 体验索引为`2`，这意味着第三次体验，因为我们正在使用基于`0`的索引。

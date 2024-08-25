@@ -17,27 +17,27 @@ ht-degree: 39%
 
 ## 与mbox.js相比，使用at.js具有哪些优势？
 
-at.js库将取代mbox.js。 不再支持mbox.js库。 但是，对于大多数人来说，at.js将能够比mbox.js提供更大的优势。
+at.js库将取代mbox.js。 不再支持mbox.js库。 但是，对大多数人来说， at.js比mbox.js提供了优势。
 
-使用at.js具有许多好处，包括缩短Web实施的页面加载时间，增强安全性，以及为单页应用程序提供更好的实施选项，等等。
+除其他优点外， at.js还可改进Web实现的页面加载时间、提高安全性，并为单页应用程序提供更好的实施选项。
 
 下图说明了使用 mbox.js 与使用 at.js 时的页面加载性能。
 
-（单击图像可展开至全宽。）
+（单击图像可展开为全角。）
 
-![比较mbox.js与at.js的页面性能图](/help/dev/implement/client-side/atjs/assets/atjs_versus_mboxjs.png "比较mbox.js与at.js的页面性能图"){zoomable="yes"}
+![页面性能图比较mbox.js与at.js](/help/dev/implement/client-side/atjs/assets/atjs_versus_mboxjs.png "页面性能图比较mbox.js与at.js"){zoomable="yes"}
 
-如上图所示，使用mbox.js时，在[!DNL Target]调用完成后才会开始加载页面内容。 使用 at.js 时，在 [!DNL Target] 调用启动后即会开始加载页面内容，而不会等到调用完成才开始加载。
+如上所述，使用mbox.js时，页面内容直到[!DNL Target]调用完成后才开始加载。 使用 at.js 时，在 [!DNL Target] 调用启动后即会开始加载页面内容，而不会等到调用完成才开始加载。
 
 ## at.js和mbox.js对页面加载时间有何影响？
 
 许多客户和顾问都想了解at.js和mbox.js对页面加载时间的影响，尤其是对于新用户与旧用户的情况。 遗憾的是，由于每位客户的实施不尽相同，因此很难评测at.js或mbox.js对页面加载时间的影响并给出具体的数字。
 
-但是，如果页面上存在访客API，则[!DNL Target]可以更好地了解at.js和mbox.js对页面加载时间有何影响。
+但是，如果页面上存在访客API，[!DNL Target]可以更好地了解at.js和mbox.js如何影响页面加载时间。
 
 >[!NOTE]
 >
->仅当您使用全局mbox时，访客API以及at.js或mbox.js才会对页面加载时间造成影响（由于采用了主体隐藏技术）。 区域 mbox 不受访客 API 集成的影响。
+>只有在使用全局mbox时（由于body-hiding技术）， Visitor API和at.js或mbox.js才会影响页面加载时间。 区域 mbox 不受访客 API 集成的影响。
 
 下表介绍了为新访客和旧访客执行的一系列操作：
 
@@ -130,19 +130,19 @@ at.js 文件在下载后大约为 109 KB。但是，由于大多数服务器会�
 
 ## at.js为何比mbox.js大？
 
-at.js实施使用单个库( at.js)，而mbox.js实施则实际使用两个库（ mbox.js和target.js）。 因此，更公平的比较方式是将 at.js 与 mbox.js *和* `target.js` 进行比较。若比较两个版本的 gzip 压缩文件大小，at.js 版本 1.2 的大小为 34 KB，而 mbox.js 版本 63 的大小则为 26.2 KB。
+at.js实现使用单个库( at.js)，而mbox.js实现实际使用两个库（ mbox.js和target.js）。 因此，更公平的比较方式是将 at.js 与 mbox.js *和* `target.js` 进行比较。若比较两个版本的 gzip 压缩文件大小，at.js 版本 1.2 的大小为 34 KB，而 mbox.js 版本 63 的大小则为 26.2 KB。
 
-at.js 更大，因为与 mbox.js 相比，它执行更多的 DOM 解析。该解析是必需的，因为 at.js 会在 JSON 响应中获取“原始”数据，并且必须了解这些数据的含义。mbox.js使用了`document.write()`，所有解析均由浏览器完成。
+at.js 更大，因为与 mbox.js 相比，它执行更多的 DOM 解析。该解析是必需的，因为 at.js 会在 JSON 响应中获取“原始”数据，并且必须了解这些数据的含义。mbox.js使用了`document.write()`，并且所有分析均由浏览器完成。
 
-尽管文件较大，但我们的测试表明，与使用 mbox.js 相比，使用 at.js 可加快页面加载速度。此外，at.js的安全性也更高，因为它不会动态加载其他文件或使用`document.write`。
+尽管文件较大，但我们的测试表明，与使用 mbox.js 相比，使用 at.js 可加快页面加载速度。另外，从安全角度看， at.js具有优势，因为它不会动态加载其他文件或使用`document.write`。
 
 ## at.js 中是否有 jQuery？如果我的网站上已有jQuery，我是否可以删除at.js中的这一部分？
 
 at.js当前使用部分jQuery，因此您会在at.js顶部看到MIT许可证通知。 jQuery 不会显示，且不会影响您的页面上已有的 jQuery 库，页面上已有的 jQuery 版本可能不同。不支持删除 at.js 内的 jQuery 代码。
 
-## at.js是否支持Safari和将跨域设置为“仅限x”？
+## at.js是否支持Safari并将跨域设置为仅x？
 
-不需要，如果跨域设置为x-only且Safari禁用了第三方Cookie，则mbox.js和at.js会设置一个禁用的Cookie，并且不会为该特定客户端的域执行任何mbox请求。
+否，如果跨域设置为x-only，并且Safari禁用了第三方Cookie，则mbox.js和at.js都会设置禁用的Cookie，并且不会为该特定客户端的域执行任何mbox请求。
 
 为了支持Safari访客，更好的X-Domain应该是“禁用”（仅设置第一方Cookie）或“启用”（仅在Safari上设置第一方Cookie，在其他浏览器上设置第一方和第三方Cookie）。
 
@@ -232,11 +232,11 @@ HttpOnly 只能通过服务器端代码进行设置。[!DNL Target] Cookie（如
 
 可以强制实施已在客户端页面中使用的所有标头。 一种常用的方法是通过“HTTP请求标头授权”。 Adobe客户关怀团队可以就最佳方法和实践提供进一步的建议。
 
-此外，对Adobe Edge网络的请求是公开的（因为它们设计为从访客的浏览器中发出），并且不包含可见的访客详细信息（它们仅包含访客ID）。 这些请求为访客提供体验，并包含有关访客应在页面上看到的内容的详细信息。
+此外，对Adobe Edge Network的请求是公开的（因为它们设计为从访客的浏览器中发出），并且不包含可见的访客详细信息（它们仅包含访客ID）。 这些请求为访问者提供了体验，并且包含有关访问者应在页面上看到的内容的详细信息。
 
-请注意，对于在这些请求中传输的响应令牌和会话ID：
+请注意，对于这些请求中传输的响应令牌和会话ID：
 
-* 他们跟踪通信会话
+* 他们跟踪沟通会话
 * 它们由随机字符组成
 * 会话ID的有效期为30分钟
 * 可以禁用响应令牌（[响应令牌](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html)）
@@ -244,7 +244,7 @@ HttpOnly 只能通过服务器端代码进行设置。[!DNL Target] Cookie（如
 
 在at.js请求中，应该会看到值为“*”的`Access-Control-Allow-Origin`标头，因为它们是公共的，无需身份验证，并且需要通过JavaScript调用从任何域访问Adobe Edge网络。
 
-但是，需要在页面上实施内容安全策略(CSP)。 有关at.js的CSP要求的详细信息，请参阅[内容安全策略](/help/dev/before-implement/privacy/content-security-policy.md)和[targetGlobalSettings](/help/dev/implement/client-side/atjs/atjs-functions/targetglobalsettings.md)。
+但是，需要在页面上强制实施内容安全策略(CSP)。 有关at.js的CSP要求的详细信息，请参阅[内容安全策略](/help/dev/before-implement/privacy/content-security-policy.md)和[targetGlobalSettings](/help/dev/implement/client-side/atjs/atjs-functions/targetglobalsettings.md)。
 
 ## at.js 多久触发一次网络请求？
 
@@ -261,8 +261,8 @@ at.js会试图避免长时间预先隐藏HTMLBODY或其他DOM元素，但这具�
 1. 页面加载。
 1. at.js 预先隐藏 HTML 主体。有一个设置可用来预先隐藏特定容器而不是 HTML 主体。
 1. at.js 请求触发。
-1. 收到[!DNL Target]响应后，[!DNL Target]提取CSS选择器。
-1. 使用CSS选择器，[!DNL Target]创建STYLE标记以预隐藏将自定义的DOM元素。
+1. 在收到[!DNL Target]响应后，[!DNL Target]将提取CSS选择器。
+1. 使用CSS选择器，[!DNL Target]创建STYLE标签以预先隐藏要自定义的DOM元素。
 1. 删除 HTML 主体预先隐藏 STYLE。
 1. [!DNL Target]开始轮询DOM元素。
 1. 如果找到DOM元素，[!DNL Target]将应用DOM更改并删除元素预隐藏STYLE。

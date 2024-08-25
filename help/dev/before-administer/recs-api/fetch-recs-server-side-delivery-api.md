@@ -76,7 +76,7 @@ Adobe Target和Adobe Target Recommendations API可用于提供对网页的响应
    ![server-side-create-recs-json-response2.png](assets/server-side-create-recs-json-response2.png)
 响应包括键ID以及推荐实体的实体ID。
 
-通过这种方式将投放API与Recommendations结合使用，您可以在向非HTML设备上的访客显示推荐之前，执行其他步骤。 例如，您可以在显示最终结果之前，从投放API获得响应，以从另一个系统（例如CMS、PIM或电子商务平台）执行额外的实体属性详细信息（库存、价格、评级等）实时查找。
+通过这种方式将投放API与Recommendations结合使用，您可以在向非HTML设备上的访客显示推荐之前，执行其他步骤。 例如，您可以在显示最终结果之前，从投放API获得响应，以从其他系统(例如CMS、PIM或电子商务平台)执行额外的实体属性详细信息（库存、价格、评级等）实时查找。
 
 使用本指南中概述的方法，您可以获得任何应用程序来利用Target的响应提供个性化推荐！
 
