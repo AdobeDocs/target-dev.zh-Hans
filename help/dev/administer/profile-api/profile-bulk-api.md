@@ -4,9 +4,9 @@ description: 了解如何使用 [!DNL Adobe Target] [!UICONTROL Bulk Profile Upd
 feature: APIs/SDKs
 contributors: https://github.com/icaraps
 exl-id: 0f38d109-5273-4f73-9488-80eca115d44d
-source-git-commit: 2934fbaa1dc3cd92bc5a434937e5db9a617009a9
+source-git-commit: bee8752dd212a14f8414879e03565867eb87f6b9
 workflow-type: tm+mt
-source-wordcount: '828'
+source-wordcount: '829'
 ht-degree: 8%
 
 ---
@@ -64,7 +64,7 @@ batch=pcId,param1,param2,param3,param4
 * 如果您使用[!UICONTROL Bulk Profile Update API] v2，则不需要为每个`pcId`指定所有参数值。 已为[!DNL Target]中未找到的任何`pcId`或`mbox3rdPartyId`创建配置文件。 如果您使用的是v1，则不会为缺少的pcIds或mbox3rdPartyIds创建配置文件。
 * 批处理文件必须小于 50 MB。此外，总行数不应超过500,000。 此限制可确保服务器不会因请求过多而泛滥。
 * 您可以发送多个文件。 但是，您一天内发送的所有文件的行总数不应超过每个客户端的100万。
-* 您上传的属性数量没有限制。 但是，配置文件的整体大小（包括系统数据）不应超过2000 KB。 [!DNL Adobe]建议您将小于1000 KB的存储空间用于配置文件属性。
+* 您可以上传的属性数量没有限制。 但是，外部配置文件数据（包括客户属性、配置文件API、Mbox内配置文件参数和配置文件脚本输出）的总大小不得超过64 KB。
 * 参数和值区分大小写。
 
 ## HTTPPOST请求

@@ -4,10 +4,10 @@ description: 查看有关 [!DNL Adobe Target] at.js JavaScript库每个版本中
 title: at.js的每个版本均包括什么内容？
 feature: at.js
 exl-id: 609dacba-2ab8-45e9-b189-928d59938c98
-source-git-commit: 9999c1b5f603e6607bd81f6ad6a06a7f74e76acb
+source-git-commit: bee8752dd212a14f8414879e03565867eb87f6b9
 workflow-type: tm+mt
-source-wordcount: '4904'
-ht-degree: 64%
+source-wordcount: '4967'
+ht-degree: 63%
 
 ---
 
@@ -25,7 +25,16 @@ ht-degree: 64%
 >
 >您应该升级到1的最新版本。*x*&#x200B;或2。*x*&#x200B;以获取错误修复和安全修补程序，以解决在相应主版本的任何先前次版本中发现的问题。
 
-[Adobe Experience Platform](/help/dev/implement/client-side/atjs/how-to-deployatjs/implement-target-using-adobe-launch.md)中的标记是升级at.js的首选方法。 扩展开发人员会不断向其扩展中添加新功能，并且还经常修复错误。 这些更新将打包到扩展的新版本中，并在Adobe Experience Platform目录中作为升级提供。 有关详细信息，请参阅&#x200B;*标记概述*&#x200B;指南中的[扩展升级](https://experienceleague.adobe.com/docs/experience-platform/tags/ui/extensions/extension-upgrade.html)。6+
+[Adobe Experience Platform](/help/dev/implement/client-side/atjs/how-to-deployatjs/implement-target-using-adobe-launch.md)中的标记是升级at.js的首选方法。 扩展开发人员会不断向其扩展中添加新功能，并且还经常修复错误。 这些更新将打包到扩展的新版本中，并在Adobe Experience Platform目录中作为升级提供。 有关详细信息，请参阅&#x200B;*标记概述*&#x200B;指南中的[扩展升级](https://experienceleague.adobe.com/docs/experience-platform/tags/ui/extensions/extension-upgrade.html)。
+
+## at.js版本2.11.6（2024年9月29日）
+
+* 修复了导致[!DNL Target]无法通过[!UICONTROL Visual Experience Composer] (VEC)或[!UICONTROL Form-Based Experience Composer]中的重定向选件正确运行的问题。
+
+## at.js版本2.11.5（2024年8月14日）
+
+* 实施了Cookie读写操作的缓存，以减少重复、代价高昂的字符串解析和操作的开销。
+* 实施了较新的URL Search Params API（在可用时），因为它比手动解析和处理字符串更快。
 
 ## at.js版本2.11.4（2024年1月24日）
 
