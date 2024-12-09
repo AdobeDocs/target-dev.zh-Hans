@@ -4,10 +4,10 @@ description: 对 [!DNL Adobe Target] at.js JavaScript库使用adobe.target.trigg
 title: 如何使用adobe.target.triggerView()函数？
 feature: at.js
 exl-id: d6130c56-4e77-4668-ad21-a5b335f8b234
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+source-git-commit: fe4e607173c760f782035a10f52936d96e9db300
 workflow-type: tm+mt
-source-wordcount: '326'
-ht-degree: 26%
+source-wordcount: '406'
+ht-degree: 21%
 
 ---
 
@@ -69,3 +69,29 @@ adobe.target.getOffers({
     console.log('AT: View triggered on : ' + pageView);
 });
 ```
+
+## 示例：`triggerView()`与[!UICONTROL Adobe Visual Editing Helper extension]的最佳兼容性
+
+使用[Adobe可视化编辑帮助程序扩展](https://experienceleague.adobe.com/en/docs/target/using/experiences/vec/troubleshoot-composer/visual-editing-helper-extension){target=_blank}时，请考虑以下事项：
+
+由于[!DNL Googl]e为[!DNL Chrome]扩展添加了新的V3清单策略，[!UICONTROL Visual Editing Helper extension]必须等待`DOMContentLoaded`事件才能在VEC中加载[!DNL Target]库。 此延迟可能会导致网页在创作库准备就绪之前触发`triggerView()`调用，从而导致在加载时未填充视图。
+
+要缓解此问题，请为页面`load`事件使用侦听器。
+
+以下是实施示例：
+
+```javascript
+function triggerViewIfLoaded() {
+    adobe.target.triggerView("homeView");
+}
+
+if (document.readyState === "complete") {
+    // If the page is already loaded
+    triggerViewIfLoaded();
+} else {
+    // If the page is not yet loaded, set up an event listener
+    window.addEventListener("load", triggerViewIfLoaded);
+}
+```
+
+
