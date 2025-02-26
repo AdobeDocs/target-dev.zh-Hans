@@ -4,9 +4,9 @@ description: 查看有关 [!DNL Adobe Target] at.js JavaScript库每个版本中
 title: at.js的每个版本均包括什么内容？
 feature: at.js
 exl-id: 609dacba-2ab8-45e9-b189-928d59938c98
-source-git-commit: bee8752dd212a14f8414879e03565867eb87f6b9
+source-git-commit: 3deeee2838d02d578bb653a4911313463b962050
 workflow-type: tm+mt
-source-wordcount: '4967'
+source-wordcount: '4994'
 ht-degree: 63%
 
 ---
@@ -26,6 +26,10 @@ ht-degree: 63%
 >您应该升级到1的最新版本。*x*&#x200B;或2。*x*&#x200B;以获取错误修复和安全修补程序，以解决在相应主版本的任何先前次版本中发现的问题。
 
 [Adobe Experience Platform](/help/dev/implement/client-side/atjs/how-to-deployatjs/implement-target-using-adobe-launch.md)中的标记是升级at.js的首选方法。 扩展开发人员会不断向其扩展中添加新功能，并且还经常修复错误。 这些更新将打包到扩展的新版本中，并在Adobe Experience Platform目录中作为升级提供。 有关详细信息，请参阅&#x200B;*标记概述*&#x200B;指南中的[扩展升级](https://experienceleague.adobe.com/docs/experience-platform/tags/ui/extensions/extension-upgrade.html)。
+
+## at.js版本2.11.7（2025年2月26日）
+
+* 修复了`localStorage`不可用时的遥测日志记录。 遥测导致某些客户在其浏览器中禁用`localStorage`时出现问题。
 
 ## at.js版本2.11.6（2024年9月29日）
 
@@ -100,7 +104,7 @@ ht-degree: 63%
 
 此版本包含以下更改：
 
-* 删除了`reactor-window`和`reactor-document` Adobe Experience Platform Launch模块，以确保已设置`window.default`或`document-default`的客户的Platform launch生成正常运行。
+* 删除了`reactor-window`和`reactor-document` Adobe Experience Platform Launch模块，以确保已设置`window.default`或`document-default`的客户的Platform Launch生成正常运行。
 * at.js 1.8.3现在显式设置`Samesite=None`和`Secure`以确保正确设置了第三方域Cookie。
 
 ## at.js 2.6.1（2021 年 8 月 16 日）
@@ -185,7 +189,7 @@ at.js 的此版本是一个维护版本，其中包括以下修复：
 此版本的at.js包括以下增强功能和修复：
 
 * 修复了以下问题：当页面元素上不存在[!DNL Adobe Analytics]代码时，点击跟踪不报告[!DNL Analytics for Target] (A4T)中的转化。
-* 提高了在网页上同时使用Experience CloudID服务(ECID) v4.4和at.js 2.2时的性能。
+* 在网页上同时使用Experience Cloud ID服务(ECID) v4.4和at.js 2.2时，提高了性能。
 * 以前，只有在 ECID 作出两次阻塞调用之后，at.js 才能获取体验。此过程已减少为单次调用，从而显著提高性能。
 * 修复了错误的预获取视图处理，其中来自默认选件的事件令牌未包含在已发送通知中。
 
@@ -193,13 +197,13 @@ at.js 的此版本是一个维护版本，其中包括以下修复：
 >
 >将您的ECID扩展升级到v4.4以实现此性能提升。
 
-* at.js版本2.2还提供了一个名为`serverState`的新设置。 当实现[!DNL Target]的混合集成时，此设置可用于优化页面性能。 混合集成意味着您同时在客户端使用at.js 2.2和更高版本，在服务器端使用交付API或[!DNL Target] SDK来交付体验。 `serverState`让at.js 2.2和更高版本可直接从在服务器端获取并作为所提供的页面的一部分返回客户端的内容应用体验。 有关详细信息，请参阅[targetGlobalSettings](/help/dev/implement/client-side/atjs/atjs-functions/targetglobalsettings.md#serverstate)中的“serverState”。
+* at.js版本2.2还提供了一个名为`serverState`的新设置。 当实现[!DNL Target]的混合集成时，此设置可用于优化页面性能。 混合集成意味着您在客户端同时使用at.js 2.2和更高版本以及交付API或服务器端的[!DNL Target] SDK来交付体验。 `serverState`让at.js 2.2和更高版本可直接从在服务器端获取并作为所提供的页面的一部分返回客户端的内容应用体验。 有关详细信息，请参阅[targetGlobalSettings](/help/dev/implement/client-side/atjs/atjs-functions/targetglobalsettings.md#serverstate)中的“serverState”。
 
 ## at.js版本1.8.0（2019年10月10日）
 
 此版本的at.js包括以下增强功能和修复：
 
-* 在网页上同时使用Experience CloudID服务(ECID) v4.4和at.js 1.8时，提高了性能。
+* 在网页上同时使用Experience Cloud ID服务(ECID) v4.4和at.js 1.8时，提高了性能。
 * 以前，只有在 ECID 作出两次阻塞调用之后，at.js 才能获取体验。此过程已减少为单次调用，从而显著提高性能。
 
 >[!NOTE]
@@ -213,12 +217,12 @@ at.js 的此版本是一个维护版本，其中包括以下修复：
 （括号中的问题编号供 Adobe 内部使用。）
 
 * 修复了在可视化体验编辑器 (VEC) 中的“目标和设置”页面上使用“点击跟踪”量度时导致多个信标触发的问题。(TNT-32812)
-* 修复了导致 `triggerView()` 无法多次渲染选件的问题。(TNT-32780)
+* 修复了导致 `triggerView()` 无法多次渲染产品建议的问题。(TNT-32780)
 * 修复了 `triggerView()` 存在的一个问题，以确保请求包含 Marketing Cloud ID (MCID) 信息。(TNT-32776)
 * 修复了即使没有保存的视图，也无法触发 `triggerView()` 通知的问题。(TNT-32614)
 * 修复了由于使用 decodeURIcomponent 而导致错误的问题，当 URL 包含格式不正确的查询字符串参数时，decodeURIcomponent 会引发问题。(TNT-32710)
 * 在通过 `Navigator.sendBeacon()` API 发送交付请求的上下文中，信标标志现在被设置为“true”。(TNT-32683)
-* 修复了导致无法在网站上向少数客户显示“推荐”选件的问题。客户可以在交付API调用中看到选件内容，但该选件未在网站上应用。 (TNT-32680)
+* 修复了导致无法在网站上向少数客户显示“推荐”产品建议的问题。客户可以在交付API调用中看到选件内容，但该选件未在网站上应用。 (TNT-32680)
 * 修复了导致多个体验中的点击跟踪无法按预期工作的问题。(TNT-32644)
 * 修复了导致 at.js 在第一个量度渲染失败后无法应用第二个量度的问题。(TNT-32628)
 * 修复了使用 `mbox3rdPartyId` 函数传递 `targetPageParams` 时出现的问题，该问题导致请求有效负载不存在于查询参数或请求有效负载中。(TNT-32613)
@@ -268,8 +272,8 @@ at.js 2.x 提供了丰富的功能集，使您的企业能够在下一代客户�
 
 以下是使用 at.js 2.x 的一些好处，这些好处在以前的版本中未提供：
 
-* 能够在页面加载时缓存所有选件，将多次服务器调用减少至一次服务器调用。
-* 由于选件是通过缓存立即显示的，不存在传统服务器调用引入的任何时间延迟，因此极大地提升了最终用户在您网站上的体验。
+* 能够在页面加载时缓存所有产品建议，将多次服务器调用减少至一次服务器调用。
+* 由于产品建议是通过缓存立即显示的，不存在传统服务器调用引入的任何时间延迟，因此极大地提升了最终用户在您网站上的体验。
 * 通过简单的单行代码和一次性开发人员设置，您的营销人员能够通过可视化体验编辑器 (VEC) 在单页应用程序上创建和运行 A/B 和体验 (XT) 活动。
 
 at.js 2.x 引入了以下新函数：
@@ -306,14 +310,14 @@ at.js 1.7.0 提供了 Adobe 选择加入支持。通过 Adobe 选择加入，可
 
 at.js 1.6.4 是一个维护版本，该版本解决了以下问题：
 
-* 修复了 Microsoft Internet Explorer 11 中出现的导致应用重复选件的争用条件问题。
+* 修复了 Microsoft Internet Explorer 11 中出现的导致应用重复产品建议的争用条件问题。
 
 ## at.js 版本 1.6.3
 
 at.js 版本 1.6.3 包含以下修复和增强功能：
 
 * 如果选择器包含 ID 或以数字、双连字符或后跟数字的连字符（例如 ＃-123）开头的 CSS 类，则它们现在会对 CSS 进行转义。(TNT-31061)
-* 修复了 at.js 1.6.2 出现的问题：不同活动中应用于同一 CSS 选择器的可视化体验编辑器 (VEC) 选件不遵循活动优先级。(TNT-31052)
+* 修复了 at.js 1.6.2 出现的问题：不同活动中应用于同一 CSS 选择器的可视化体验编辑器 (VEC) 产品建议不遵循活动优先级。(TNT-31052)
 * 修复了在对 promise 没有本地支持的环境中 promise 超时的问题。(TNT-30974)
 * 现在可以通过内容渲染失败事件正确捕获和报告问题。以前，可能会报告 JavaScript 已成功运行，即使情况并非如此。(TNT-30599)
 
@@ -382,10 +386,10 @@ at.js 版本 1.3.0 现已可用。
 
   有关更多信息，请参阅[数据提供程序](atjs-functions/targetglobalsettings.md#data-providers)。
 
-* at.js 请求现在使用 GET，但当 URL 大小超过 2048 个字符时，它会转为使用 POST。新增了一个名为 `urlSizeLimit` 的属性，如有必要，您可以在此属性中提高大小限制。此更改允许[!DNL Target]将at.js与使用相同技术的AppMeasurement对齐。
+* at.js 请求现在使用 GET，但当 URL 大小超过 2048 个字符时，它会转为使用 POST。新增了一个名为 `urlSizeLimit` 的属性，如有必要，您可以在此属性中提高大小限制。此更改允许[!DNL Target]将at.js与使用相同技术的AppMeasurement保持一致。
 * [!DNL Target]现在强制使用`adobe.target.applyOffer(options)`函数中的`mbox`键。 此键在过去是必需的，但现在[!DNL Target]强制使用它以确保[!DNL Target]具有正确的验证并且客户正确使用该函数。
 * at.js 改进了事件和点击跟踪功能。at.js 会使用 `navigator.sendBeacon()` 发送事件跟踪数据，如果 `navigator.sendBeacon()` 不受支持，则将回退到同步 XHR。此回退行为主要影响 Internet Explorer 10 和 11 以及 Safari 的某些版本。Safari 在即将发布的 iOS 11.3 版本中将添加对 `navigator.sendBeacon()` 的支持。
-* 现在，即使页面在后台选项卡中打开，at.js 也能渲染选件。有些[!DNL Target]客户遇到`requestAnimationFrame()`因浏览器对后台选项卡的限制行为而被禁用的问题。
+* 现在，即使页面在后台选项卡中打开，at.js 也能渲染产品建议。有些[!DNL Target]客户遇到`requestAnimationFrame()`因浏览器对后台选项卡的限制行为而被禁用的问题。
 * 此版本执行了许多性能方面的改进，包括缩短了检查 Chrome CPU 配置文件时的调用堆栈。
 * at.js 1.3.0 不再支持在 Microsoft Internet Explorer 9 上交付内容。有关支持的浏览器列表，请参阅[支持的浏览器](/help/dev/before-implement/supported-browsers.md)。今后，所有请求都将通过支持 CORS 的 `XMLHttpRequest` 来执行，而不使用 JSONP 请求。这项更改显著提高了安全性。
 
@@ -457,7 +461,7 @@ at.js 版本 1.0 中包含以下增强功能和修复：
 
 at.js版本0.9.7中包含以下增强功能和修复：
 
-* 修复了与可视化体验编辑器 (VEC) 的 `insertAfter` 和 `insertBefore` 操作中缺少的资产键有关的问题。此类问题与从可视化选件迁移到选件模板有关。
+* 修复了与可视化体验编辑器 (VEC) 的 `insertAfter` 和 `insertBefore` 操作中缺少的资产键有关的问题。此类问题与从可视化产品建议迁移到产品建议模板有关。
 
 ## at.js 版本 0.9.6
 
@@ -465,7 +469,7 @@ at.js版本0.9.7中包含以下增强功能和修复：
 
 at.js版本0.9.6中包含以下增强功能和修复：
 
-* 对 A4T 的重定向选件支持。下载并安装at.js版本0.9.6后，您可以在使用[!UICONTROL Adobe Analytics as the Reporting Source for Target] (A4T)的活动中使用重定向选件。 除了at.js版本0.9.6之外，您的实施还必须满足其他最低要求，才能使用重定向选件和A4T。 有关更多信息以及其他应了解的重要信息，请参阅[重定向选件 - A4T 常见问题解答](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t-faq/a4t-faq-redirect-offers.html)。
+* 对 A4T 的重定向产品建议支持。下载并安装at.js版本0.9.6后，您可以在使用[!UICONTROL Adobe Analytics as the Reporting Source for Target] (A4T)的活动中使用重定向选件。 除了at.js版本0.9.6之外，您的实施还必须满足其他最低要求，才能使用重定向选件和A4T。 有关更多信息以及其他应了解的重要信息，请参阅[重定向产品建议 - A4T 常见问题解答](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t-faq/a4t-faq-redirect-offers.html)。
 * 在at.js 0.9.6发布之前，如果页面上存在访客API，且`visitorApiTimeout`设置过于短促，[!DNL Target]可能会出现以下情况：在[!DNL Target]请求中未发送任何MCID数据。 使用 A4T 时，这可能会导致诸如 [!DNL Analytics] 中的点击无法整合的问题。
 
   at.js 0.9.6已更改此行为，即便`visitorApiTimeout`设置为假设1毫秒，[!DNL Target]将尝试收集SDID、跟踪服务器和客户ID数据，并在[!DNL Target]请求中发送这些数据。
