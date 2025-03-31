@@ -4,10 +4,10 @@ description: 查看有关 [!DNL Adobe Target] at.js JavaScript库每个版本中
 title: at.js的每个版本均包括什么内容？
 feature: at.js
 exl-id: 609dacba-2ab8-45e9-b189-928d59938c98
-source-git-commit: 3deeee2838d02d578bb653a4911313463b962050
+source-git-commit: 1a9b43142319ace8fa04aff209b8b639c7512e3f
 workflow-type: tm+mt
-source-wordcount: '4994'
-ht-degree: 63%
+source-wordcount: '5018'
+ht-degree: 62%
 
 ---
 
@@ -26,6 +26,10 @@ ht-degree: 63%
 >您应该升级到1的最新版本。*x*&#x200B;或2。*x*&#x200B;以获取错误修复和安全修补程序，以解决在相应主版本的任何先前次版本中发现的问题。
 
 [Adobe Experience Platform](/help/dev/implement/client-side/atjs/how-to-deployatjs/implement-target-using-adobe-launch.md)中的标记是升级at.js的首选方法。 扩展开发人员会不断向其扩展中添加新功能，并且还经常修复错误。 这些更新将打包到扩展的新版本中，并在Adobe Experience Platform目录中作为升级提供。 有关详细信息，请参阅&#x200B;*标记概述*&#x200B;指南中的[扩展升级](https://experienceleague.adobe.com/docs/experience-platform/tags/ui/extensions/extension-upgrade.html)。
+
+## at.js版本2.11.8（2025年3月31日）
+
+* 解决了字符串后缀验证中CodeQL识别的漏洞，以防止在调整大小和移动操作期间出现边缘情况。 (TNT-51516)
 
 ## at.js版本2.11.7（2025年2月26日）
 
