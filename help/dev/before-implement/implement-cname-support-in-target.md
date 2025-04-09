@@ -4,9 +4,9 @@ description: 使用[!UICONTROL Adobe Client Care]在 [!DNL Adobe Target] 中实�
 title: 如何在Target中使用CNAME？
 feature: Privacy & Security
 exl-id: 5709df5b-6c21-4fea-b413-ca2e4912d6cb
-source-git-commit: a36826202c5baa47f95a88c7b29c0d114901e6fa
+source-git-commit: 1a78a1e2750ae906338e91ff24ac16cdc99323ba
 workflow-type: tm+mt
-source-wordcount: '1164'
+source-wordcount: '1165'
 ht-degree: 1%
 
 ---
@@ -29,19 +29,19 @@ ht-degree: 1%
 
    >[!WARNING]
    >
-   >在此步骤完成之前，Adobe的证书颁发机构DigiCert无法颁发证书。 因此，在此步骤完成之前，Adobe无法完成您对CNAME实施的请求。
+   >在此步骤完成之前，Adobe的证书颁发机构DigiCert无法颁发证书。 因此，在此步骤完成之前，Adobe无法满足您对CNAME实现的要求。
 
-1. [填写此表单](assets/FPC_Request_Form.xlsx)，并在您[打开请求CNAME支持的Adobe客户关怀票证](https://experienceleague.adobe.com/docs/target/using/cmp-resources-and-contact-information.html?#reference_ACA3391A00EF467B87930A450050077C)时包含此表单：
+1. [填写此表单](assets/FPC_Request_Form.xlsx)，并在您[打开请求CNAME支持的Adobe客户关怀票证](https://experienceleague.adobe.com/docs/target/using/cmp-resources-and-contact-information.html?#reference_ACA3391A00EF467B87930A450050077C)时包括它：
 
    * [!DNL Adobe Target]客户端代码：
    * SSL证书主机名（示例： `target.example.com target.example.org`）：
    * SSL证书购买者(强烈推荐Adobe，请参阅常见问题解答)：Adobe/客户
    * 如果客户正在购买证书(也称为“自带证书”(BYOC))，请填写以下其他详细信息：
       * 证书组织（示例：Example Company Inc）：
-      * 证书组织单位（可选，例如：营销）：
+      * 证书组织单位（可选，例如：Marketing）：
       * 证书国家/地区（例如：美国）：
-      * 证书所在州/地区（示例：加利福尼亚）：
-      * 证书城市（示例：圣何塞）：
+      * 证书省/市/自治区（示例：加利福尼亚州）：
+      * 证书城市（示例：San Jose）：
 
 1. 如果Adobe正在购买证书，Adobe将与DigiCert合作以购买证书并将其部署到Adobe的生产服务器上。
 
@@ -57,11 +57,11 @@ ht-degree: 1%
 
 ### 我可以提供我自己的证书（自带证书或BYOC）吗？
 
-您可以提供自己的证书。 但是，Adobe不建议这样做。 如果Adobe购买并控制证书，则Adobe和您都更轻松地管理SSL证书生命周期。 SSL证书必须每年续订。 因此，Adobe客户关怀团队每年都必须与您联系，才能及时获取新证书。 有些客户可能难以及时生成续订的证书。 当证书过期时，由于浏览器拒绝连接，您的[!DNL Target]实施会受损。
+您可以提供自己的证书。 但是，Adobe不建议这样做。 如果Adobe购买并控制证书，则Adobe和您都更轻松地管理SSL证书生命周期。 SSL证书必须每年续订。 因此，Adobe客户关怀团队每年都必须与您联系，才能及时获取新证书。 有些客户可能难以及时生成续订的证书。 证书过期时，由于浏览器拒绝连接，您的[!DNL Target]实现将受到影响。
 
 >[!WARNING]
 >
->如果您请求[!DNL Target]自带证书CNAME实施，则需每年向Adobe客户关怀团队提供续订证书。 在Adobe部署续订的证书之前，允许您的CNAME证书过期，会导致您的特定[!DNL Target]实施中断。
+>如果您请求[!DNL Target]自带证书CNAME实现，则您每年负责向Adobe客户关怀部门提供续订的证书。 在Adobe部署续订的证书之前，允许您的CNAME证书过期，会导致您的特定[!DNL Target]实施中断。
 
 ### 我的新SSL证书需要多久才能过期？
 
@@ -69,9 +69,9 @@ ht-degree: 1%
 
 ### 我应该选择哪些主机名？ 每个域应选择多少主机名？
 
-Target CNAME实施仅要求SSL证书和客户的DNS中的每个域使用一个主机名。 Adobe建议每个域使用一个主机名。 某些客户出于其自身的用途（例如，在暂存环境中测试）需要每个域提供更多主机名，这是受支持的。
+目标CNAME实现在SSL证书和客户的DNS中只需要一个域的主机名。 Adobe建议每个域使用一个主机名。 某些客户出于自身目的（例如，在试运行中测试）要求每个域具有更多主机名，这是受支持的。
 
-大多数客户都会选择类似`target.example.com`的主机名。 Adobe建议遵循此做法，但最终将由您来做出选择。 请勿请求现有DNS记录的主机名。 这样做会导致冲突并延迟解决[!DNL Target] CNAME请求的时间。
+大多数客户选择类似`target.example.com`的主机名。 Adobe建议遵循这一实践，但最终选择权在您。 请勿请求现有DNS记录的主机名。 这样做会导致冲突，并延迟解决[!DNL Target] CNAME请求的时间。
 
 ### 我已经有了Adobe Analytics的CNAME实施，我可以使用相同的证书或主机名吗？
 
@@ -83,19 +83,19 @@ Apple智能防跟踪(ITP) 2.3版引入了其CNAME遮蔽缓解功能，此功能�
 
 ### 部署我的CNAME实施时，可能会出现哪种服务中断？
 
-部署证书时没有服务中断（包括证书续订）。
+部署证书时（包括证书续订），服务不会中断。
 
-但是，在将[!DNL Target]实施代码（ at.js中的`serverDomain`）中的主机名更改为新的CNAME主机名(`target.example.com`)后，Web浏览器会将回访访客视为新访客。 回访访客的配置文件数据丢失，因为旧主机名(`clientcode.tt.omtrdc.net`)下的上一个Cookie不可访问。 由于浏览器安全模型，无法访问上一个Cookie。 此中断仅在初次切换到新CNAME时发生。 证书续订的效果并不相同，因为主机名不会更改。
+但是，在将[!DNL Target]实现代码（ at.js中的`serverDomain`）中的主机名更改为新的CNAME主机名(`target.example.com`)后，Web浏览器会将返回的访问者视为新的访问者。 回访访客的配置文件数据丢失，因为旧主机名(`clientcode.tt.omtrdc.net`)下的上一个Cookie不可访问。 由于浏览器安全模型的原因，无法访问以前的Cookie。 此中断仅在初次切换到新CNAME时发生。 证书续订的效果并不相同，因为主机名不会更改。
 
 ### 我的CNAME实施使用什么密钥类型和证书签名算法？
 
-默认情况下，所有证书均为RSA SHA-256，密钥为RSA 2048位。 当前不支持大于2048位的密钥大小。
+默认情况下，所有证书均为RSA SHA-256，密钥为RSA 2048位。 应通过[!UICONTROL Customer Care]显式请求大于2048位的密钥大小。
 
-### 如何验证我的CNAME实施是否已准备好进行流量？
+### 如何验证我的CNAME实施是否做好了流量准备？
 
 使用以下命令集(在macOS或Linux命令行终端中，使用bash和curl >=7.49)：
 
-1. 将此bash函数复制并粘贴到您的终端中，或者将该函数粘贴到bash启动脚本文件（通常为`~/.bash_profile`或`~/.bashrc`）中，以便该函数在终端会话间可用：
+1. 将此bash函数复制并粘贴到您的终端中，或者将该函数粘贴到您的bash启动脚本文件（通常为`~/.bash_profile`或`~/.bashrc`）中，以便该函数可在终端会话间使用：
 
    ```
    function adobeTargetCnameValidation {
@@ -240,7 +240,7 @@ Apple智能防跟踪(ITP) 2.3版引入了其CNAME遮蔽缓解功能，此功能�
    }
    ```
 
-1. 粘贴以下命令（将`target.example.com`替换为您的主机名）：
+1. 粘贴此命令（将`target.example.com`替换为您的主机名）：
 
    ```
    adobeTargetCnameValidation target.example.com
@@ -325,4 +325,4 @@ Apple智能防跟踪(ITP) 2.3版引入了其CNAME遮蔽缓解功能，此功能�
 ## 已知限制
 
 * 当您具有CNAME和at.js 1.x时，QA模式无粘性，因为它基于第三方Cookie。 解决方法是将预览参数添加到您导航到的每个URL中。 当您具有CNAME和at.js 2.x时，QA模式具有粘滞性。
-* 使用CNAME时，[!DNL Target]调用的Cookie标头大小更有可能增加。 Adobe建议将Cookie大小保持在8 KB以下。
+* 使用CNAME时，更有可能增加[!DNL Target]调用的Cookie标头的大小。 Adobe建议将Cookie大小保持在8 KB以下。
