@@ -25,12 +25,12 @@ ht-degree: 7%
 
 ### 添加Adobe Experience Cloud Debugger扩展![概述徽章](../../assets/overview.png)
 
->[!VIDEO](https://video.tv.adobe.com/v/23114/?quality=12)
+>[!VIDEO](https://video.tv.adobe.com/v/33301/?quality=12&captions=chi_hans)
 
 ### 使用Adobe Target Debugger ![概述徽章进行基本的Adobe Experience Cloud调试](../../assets/overview.png)
 
->[!VIDEO](https://video.tv.adobe.com/v/23115/?quality=12)
+>[!VIDEO](https://video.tv.adobe.com/v/33302/?quality=12&captions=chi_hans)
 
 ### Mbox跟踪![概述徽章](../../assets/overview.png)
 
->[!VIDEO](https://video.tv.adobe.com/v/23113/?quality=12)
+>[!VIDEO](https://video.tv.adobe.com/v/33303/?quality=12&captions=chi_hans)
