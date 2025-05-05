@@ -17,7 +17,7 @@ ht-degree: 1%
 
 ## 我应该使用[!DNL Adobe Experience Platform]中的标记来部署SDK，还是可以在不使用Launch的情况下部署SDK？
 
-SDK在[Adobe Marketing Cloud Git](https://github.com/Adobe-Marketing-Cloud/acp-sdks/){target=_blank}上可用。 如果您未使用Adobe Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/tags/home.html){target=_blank}中的[标记，则必须在您的应用程序中管理您自己的设置文件并管理它。
+SDK在[Adobe Marketing Cloud Git](https://github.com/Adobe-Marketing-Cloud/acp-sdks/){target=_blank}上可用。 如果您未使用Adobe Experience Platform[&#128279;](https://experienceleague.adobe.com/docs/experience-platform/tags/home.html){target=_blank}中的标记，则必须在您的应用程序中管理您自己的设置文件并管理它。
 
 ## 目前提供哪些SDK？
 

@@ -17,7 +17,7 @@ ht-degree: 10%
 
 您可以使用以下方法部署 at.js：
 
-* 使用Adobe Experience Platform中的标记&#x200B;](/help/dev/implement/client-side/atjs/how-to-deployatjs/implement-target-using-adobe-launch.md)**实施**[&#x200B;标记 [!DNL Target] ： [!DNL Adobe Experience Platform]中的标记是Adobe推出的新一代标记管理功能。 标记为客户提供了一种简单的方式来部署和管理用来加强相关客户体验的分析、营销和广告标记。
+* 使用Adobe Experience Platform中的标记&#x200B;[&#128279;](/help/dev/implement/client-side/atjs/how-to-deployatjs/implement-target-using-adobe-launch.md)**实施**&#x200B;标记 [!DNL Target] ： [!DNL Adobe Experience Platform]中的标记是Adobe推出的新一代标记管理功能。 标记为客户提供了一种简单的方式来部署和管理用来加强相关客户体验的分析、营销和广告标记。
 
 >[!NOTE]
 >

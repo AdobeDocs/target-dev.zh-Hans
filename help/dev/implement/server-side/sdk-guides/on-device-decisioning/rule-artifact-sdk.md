@@ -146,7 +146,7 @@ TargetDeliveryResponse response = targetClient.getOffers(request);
 
 >[!NOTE]
 >
->在上述代码示例中，`TargetClient`对象保留对内存中规则工件的引用。 当您使用此对象来调用标准SDK方法时，它会使用内存中规则工件进行决策。 如果您的应用程序的结构决定了您需要在其他文件中调用SDK方法，而这些文件需要初始化和侦听客户端请求，并且如果这些文件无权访问TargetClient对象，则您可以下载JSON有效负载并将其存储在本地JSON文件中，以供其他文件使用，这些文件需要初始化SDK。 有关使用JSON有效负载](rule-artifact-json.md)下载规则工件的[部分，将对此进行说明。
+>在上述代码示例中，`TargetClient`对象保留对内存中规则工件的引用。 当您使用此对象来调用标准SDK方法时，它会使用内存中规则工件进行决策。 如果您的应用程序的结构决定了您需要在其他文件中调用SDK方法，而这些文件需要初始化和侦听客户端请求，并且如果这些文件无权访问TargetClient对象，则您可以下载JSON有效负载并将其存储在本地JSON文件中，以供其他文件使用，这些文件需要初始化SDK。 有关使用JSON有效负载[&#128279;](rule-artifact-json.md)下载规则工件的部分，将对此进行说明。
 
 以下是初始化[!DNL Adobe Target] SDK后启动Web应用程序的示例。
 

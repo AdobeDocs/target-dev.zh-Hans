@@ -26,7 +26,7 @@ ht-degree: 43%
 在iOS和Android Mobile SDK中使用预取方法时，请考虑以下限制：
 
 * 在启动时，预取内容不会持久保留。只要应用程序处于活动状态，或者在调用 `clearPrefetchCache()` 方法之前，都会一直缓存预取内容。
-* 不支持对[!UICONTROL Auto-Allocate]和[!UICONTROL Auto-Target]流量分配方法、[!UICONTROL Automated Personalization]或[!UICONTROL Recommendations]活动类型或A/B或XT活动](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations-as-an-offer.html)中的[推荐选件使用预取功能。
+* 不支持对[!UICONTROL Auto-Allocate]和[!UICONTROL Auto-Target]流量分配方法、[!UICONTROL Automated Personalization]或[!UICONTROL Recommendations]活动类型或A/B或XT活动[&#128279;](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations-as-an-offer.html)中的推荐选件使用预取功能。
 
 有关更多信息（包括预取方法、公共类和代码示例），请参阅：
 

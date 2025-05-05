@@ -38,7 +38,7 @@ ht-degree: 4%
 * 受众定位
 * 分配方法
 
-有关详细信息，请参阅[!UICONTROL on-device decisioning]](/help/dev/implement/client-side/atjs/on-device-decisioning/supported-features.md)的[支持的功能。
+有关详细信息，请参阅[!UICONTROL on-device decisioning][&#128279;](/help/dev/implement/client-side/atjs/on-device-decisioning/supported-features.md)的支持的功能。
 
 ## [!UICONTROL on-device decisioning]的工作原理是什么？
 
@@ -93,7 +93,7 @@ ht-degree: 4%
 
 [!UICONTROL On-device decisioning]能够以惊人的速度交付您的体验和个性化活动，因为决策是从包含您所有符合[!UICONTROL on-device decisioning]条件的活动的缓存规则工件做出的。
 
-要了解有关哪些活动符合[!UICONTROL on-device decisioning]条件的更多信息，请参阅[!UICONTROL on-device decisioning]](/help/dev/implement/client-side/atjs/on-device-decisioning/supported-features.md)中的[支持的功能。
+要了解有关哪些活动符合[!UICONTROL on-device decisioning]条件的更多信息，请参阅[!UICONTROL on-device decisioning][&#128279;](/help/dev/implement/client-side/atjs/on-device-decisioning/supported-features.md)中的支持的功能。
 
 仅当在所有需要Target决策的页面上的性能都非常关键时，才应使用此决策方法。 此外，请记住，选择此决策方法时，将不会交付或执行您不符合[!UICONTROL on-device decisioning]条件的[!DNL Target]活动。 at.js库2.5.0及更高版本配置为仅查找缓存的规则工件以做出决策。
 
@@ -334,6 +334,6 @@ Target表示您的活动符合[!UICONTROL on-device decisioning]作为包含元�
 
    首个JSON规则工件生成操作最多可能需要10分钟。
 
-1. 创建并激活[!UICONTROL on-device decisioning]](/help/dev/implement/client-side/atjs/on-device-decisioning/supported-features.md)支持的[活动类型，并验证它是否符合[!UICONTROL on-device decisioning]条件。
+1. 创建并激活[!UICONTROL on-device decisioning][&#128279;](/help/dev/implement/client-side/atjs/on-device-decisioning/supported-features.md)支持的活动类型，并验证它是否符合[!UICONTROL on-device decisioning]条件。
 1. 通过at.js设置UI将&#x200B;**[!UICONTROL Decisioning Method]**&#x200B;设置为&#x200B;**[!UICONTROL "Hybrid"]**&#x200B;或&#x200B;**[!UICONTROL "On-device only"]**。
 1. 下载At.js 2.5.0及更高版本并将其部署到您的页面。

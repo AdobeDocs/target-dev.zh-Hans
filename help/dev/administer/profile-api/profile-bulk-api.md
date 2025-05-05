@@ -43,13 +43,13 @@ ht-degree: 8%
 
 要批量更新用户档案数据，请创建批处理文件。 批处理文件是一个文本文件，其值由逗号分隔，类似于以下示例文件。
 
-``````
+``` ```
 batch=pcId,param1,param2,param3,param4
 123,value1
 124,value1,,,value4
 125,,value2
 126,value1,value2,value3,value4
-``````
+``` ```
 
 >[!NOTE]
 >
@@ -71,9 +71,9 @@ batch=pcId,param1,param2,param3,param4
 
 向[!DNL Target]边缘服务器发出HTTPPOST请求以处理该文件。 以下是使用curl命令获取文件batch.txt的示例HTTPPOST请求：
 
-``````
+``` ```
 curl -X POST --data-binary @BATCH.TXT http://CLIENTCODE.tt.omtrdc.net/m2/CLIENTCODE/v2/profile/batchUpdate
-``````
+``` ```
 
 其中：
 

@@ -215,7 +215,7 @@ ht-degree: 45%
    + [Adobe Experience PlatformEdge Network服务器API](/help/dev/before-implement/delivery-api-overview/aep-edge-network-server-api.md)
 + 实施模式{#implementation-patterns}
    + [实施模式概述](/help/dev/patterns/pattern-overview.md)
-   + 使用at.js {#atjs}的Recommendations实施模式
+   + 使用at.js的Recommendations实施模式 {#atjs}
       + [使用at.js的Recommendations实施模式概述](/help/dev/patterns/recs-atjs/recs-implementation-pattern-atjs.md)
       + [初始化SDK](/help/dev/patterns/recs-atjs/initialize-sdk.md)
       + [配置数据收集](/help/dev/patterns/recs-atjs/data-collection.md)

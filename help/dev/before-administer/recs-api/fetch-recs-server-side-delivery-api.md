@@ -62,12 +62,13 @@ Adobe Target和Adobe Target Recommendations API可用于提供对网页的响应
 
 `POST https://{{CLIENT_CODE}}.tt.omtrdc.net/rest/v1/delivery`
 
-1. 请注意，客户端代码为必填项。 提醒一下，通过导航到&#x200B;**[!UICONTROL Recommendations]** > **[!UICONTROL Settings]**，可以在Adobe Target中找到您的客户端代码。 请注意&#x200B;**推荐API令牌**&#x200B;部分中的&#x200B;**客户端代码**值。
+1. 请注意，客户端代码为必填项。 提醒一下，通过导航到&#x200B;**[!UICONTROL Recommendations]** > **[!UICONTROL Settings]**，可以在Adobe Target中找到您的客户端代码。 请注意&#x200B;**推荐API令牌**&#x200B;部分中的&#x200B;**客户端代码**&#x200B;值。
    ![client-code.png](assets/client-code.png)
 1. 获得客户端代码后，即可构建投放API调用。 以下示例以[投放API Postman集合](../../implement/delivery-api/overview.md/#section/Getting-Started/Postman-Collection)中提供的&#x200B;**[!UICONTROL Web Batched Mboxes Delivery API Call]**&#x200B;开头，进行了相关修改。 例如：
    * 已从&#x200B;**正文**&#x200B;中移除&#x200B;**浏览器**&#x200B;和&#x200B;**地址**&#x200B;对象，因为非HTML用例不需要这些对象
    * 在此示例中，*api_charter*&#x200B;被列为位置名称
    * 指定了entity.id，因为此推荐基于内容相似度，它要求将当前项目键传递到Target。
+
      ![server-side-Delivery-API-call.png](assets/server-side-delivery-api-call2.png)
 请记住正确配置查询参数。 例如，请确保根据需要指定`{{CLIENT_CODE}}`。 &lt;！— Q：在更新的调用语法中，entity.id作为profileParameter列出，而不作为mboxParameter在旧版本中列出。 —> &lt;！ — 问：旧图像![server-side-create-recs-post.png](assets/server-side-create-recs-post.png)旧的随附文本：“请注意，此推荐基于通过mboxParameters发送的entity.id的‘内容类似’产品。” —>
      ![client-code3](assets/client-code3.png)

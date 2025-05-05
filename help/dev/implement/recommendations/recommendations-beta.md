@@ -127,7 +127,7 @@ function targetPageParams() {
 
 ### 购买/订单确认页面
 
-发生购买事件时，传递购买项目的身份。 请参阅[如何部署at.js >在不使用标签管理器的情况下实施[!UICONTROL Target]一文中的[跟踪转化](../client-side/atjs/how-to-deployatjs/implement-target-without-a-tag-manager.md#track-conversions)](../client-side/atjs/how-to-deployatjs/implement-target-without-a-tag-manager.md)。
+发生购买事件时，传递购买项目的身份。 请参阅[&#128279;](../client-side/atjs/how-to-deployatjs/implement-target-without-a-tag-manager.md)如何部署at.js >在不使用标签管理器的情况下实施[!UICONTROL Target]一文中的[跟踪转化](../client-side/atjs/how-to-deployatjs/implement-target-without-a-tag-manager.md#track-conversions)。
 
 ## 4.配置全局排除项
 

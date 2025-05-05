@@ -77,7 +77,7 @@ ht-degree: 5%
 **操作**
 
 * 在网页上嵌入`VisitorAPI.js`文件。
-* 了解访客ID/API服务](https://experienceleague.adobe.com/docs/id-service/using/reference/requirements.html){target=_blank}的[可用配置。
+* 了解访客ID/API服务[&#128279;](https://experienceleague.adobe.com/docs/id-service/using/reference/requirements.html){target=_blank}的可用配置。
 * 加载`VisitorAPI.js`文件后，使用`Visitor.getInstance`方法以您需要的必要配置进行初始化。
 * 熟悉[可用方法](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/get-set.html){target=_blank}。
 

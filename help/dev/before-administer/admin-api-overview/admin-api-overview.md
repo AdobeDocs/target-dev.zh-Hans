@@ -16,7 +16,7 @@ ht-degree: 2%
 
 >[!NOTE]
 >
->如果您希望通过UI管理[!DNL Target]，请参阅&#x200B;*Adobe Target商业从业者指南*](https://experienceleague.adobe.com/docs/target/using/administer/administrating-target.html?lang=en)的[管理部分。
+>如果您希望通过UI管理[!DNL Target]，请参阅&#x200B;*Adobe Target商业从业者指南*[&#128279;](https://experienceleague.adobe.com/docs/target/using/administer/administrating-target.html?lang=en)的管理部分。
 >
 >管理员API和配置文件API通常统称为“管理员API和配置文件API”)，但也可以单独称为（“管理员API”和“配置文件API”）。 Recommendations API是[!DNL Target]管理员API的特定实现。
 

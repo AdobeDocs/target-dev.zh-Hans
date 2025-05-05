@@ -1,6 +1,6 @@
 ---
 keywords: 服务器端，服务器端， sdk， sdk，设备上，决策，设备上， ondevice，零延迟，延迟，近零， node.js，服务器端3
-description: 了解如何使用[!UICONTROL [!UICONTROL on-device decisioning]在服务器上缓存 [!DNL Target] A/B和MVT活动，以近乎零延迟的方式执行内存中决策。
+description: 了解如何使用[!UICONTROL on-device decisioning]在服务器上缓存 [!DNL Target] A/B和MVT活动，以近乎零延迟的方式执行内存中决策。
 title: 什么是设备上决策？
 feature: Implement Server-side
 exl-id: 22ed3072-56f0-4075-9d1a-d642afe3b649

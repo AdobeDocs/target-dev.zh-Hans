@@ -23,6 +23,6 @@ ht-degree: 38%
 
 **问题：**&#x200B;如果您使用这些域，新式浏览器不会保存 Cookie。
 
-at.js JavaScript库使用Cookie来跟踪用户，以确保[！DNL [!DNL Target]]始终提供一致的体验。 如果[!DNL Target] JavaScript库无法保存Cookie，则Target请求将被禁用。
+at.js JavaScript库使用Cookie来跟踪用户，以确保[!DNL [!DNL Target]]始终提供一致的体验。 如果[!DNL Target] JavaScript库无法保存Cookie，则Target请求将被禁用。
 
 **解决方案：**&#x200B;最佳做法是，如果您打算将基于云的实例与公共后缀列表中包含的域结合使用，请务必自定义 `cookieDomain` 设置。有关更多信息，请参阅 [targetGlobalSettings()](/help/dev/implement/client-side/atjs/atjs-functions/targetglobalsettings.md)。

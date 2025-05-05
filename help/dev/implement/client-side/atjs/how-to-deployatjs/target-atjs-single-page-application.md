@@ -317,7 +317,7 @@ at.js 2.x API允许您通过多种方式自定义您的[!DNL Target]实施，但
 
 >[!VIDEO](https://video.tv.adobe.com/v/26248/?quality=12)
 
-有关详细信息，请参阅[在单页应用程序(SPA)中实施Adobe Target的at.js 2.x}](https://experienceleague.adobe.com/docs/target-learn/tutorials/experiences/use-the-visual-experience-composer-for-single-page-applications.html)。
+有关详细信息，请参阅[在单页应用程序(SPA)中实施Adobe Target的at.js 2.x&rbrace;](https://experienceleague.adobe.com/docs/target-learn/tutorials/experiences/use-the-visual-experience-composer-for-single-page-applications.html)。
 
 ### 在[!DNL Adobe Target]中使用SPA的VEC
 

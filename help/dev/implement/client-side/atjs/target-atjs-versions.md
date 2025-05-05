@@ -123,7 +123,7 @@ ht-degree: 62%
 * 使用 `prefetch` 请求时，正确返回了 [!UICONTROL Analytics for Target] (A4T) 单击指标详细信息。
 * UUID 生成功能不再使用 `Math.random()`，而是依赖于 `window.crypto`。
 * 在每次网络调用时都会正确延长 `sessionId` Cookie 到期日。
-* 单页应用程序(SPA)视图缓存初始化现在可以被正确处理并遵循`viewsEnabled`设置。 现在将`viewsEnabled`设置为`false`值将禁用`triggerView()`函数。 查看初始页面加载](/help/dev/implement/client-side/atjs/how-to-deployatjs/target-atjs-single-page-application.md#order)的[操作顺序。
+* 单页应用程序(SPA)视图缓存初始化现在可以被正确处理并遵循`viewsEnabled`设置。 现在将`viewsEnabled`设置为`false`值将禁用`triggerView()`函数。 查看初始页面加载[&#128279;](/help/dev/implement/client-side/atjs/how-to-deployatjs/target-atjs-single-page-application.md#order)的操作顺序。
 
 ## at.js 2.5.0（2021年5月13日）
 

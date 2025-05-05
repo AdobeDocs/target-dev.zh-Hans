@@ -19,7 +19,7 @@ ht-degree: 0%
 
 ## 预取Mbox的通知
 
-可以通过单个投放调用发送一个或多个通知。 确定需要跟踪的量度是每个mbox的`click`还是`display`，以便能够正确反映通知的`type`。 此外，请为每个通知传入`id`，以便可以确定是否通过[!UICONTROL  Adobe Target Delivery API]正确发送了通知。 `timestamp`转发到[!DNL Target]也很重要，以指示给定mbox何时发生`click`或`display`以用于报告。
+可以通过单个投放调用发送一个或多个通知。 确定需要跟踪的量度是每个mbox的`click`还是`display`，以便能够正确反映通知的`type`。 此外，请为每个通知传入`id`，以便可以确定是否通过[!UICONTROL &#x200B; Adobe Target Delivery API]正确发送了通知。 `timestamp`转发到[!DNL Target]也很重要，以指示给定mbox何时发生`click`或`display`以用于报告。
 
 ```
 curl -X POST \

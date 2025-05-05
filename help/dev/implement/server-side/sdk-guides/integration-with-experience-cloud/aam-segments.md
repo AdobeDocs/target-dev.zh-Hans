@@ -57,7 +57,7 @@ Cookie用于将[!DNL Adobe Audience Manager]请求与[!DNL Adobe Target]请求�
 
 #### Node.js
 
-此示例依赖于Node.js Web框架](https://expressjs.com/) [express。
+此示例依赖于Node.js Web框架[&#128279;](https://expressjs.com/) express。
 
 >[!BEGINTABS]
 

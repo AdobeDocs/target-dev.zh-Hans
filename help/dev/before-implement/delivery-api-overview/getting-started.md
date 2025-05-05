@@ -49,6 +49,6 @@ curl -X POST \
 
 在进行[!UICONTROL Target Delivery API]调用之前，请按照以下步骤操作，以确保响应包含向最终用户显示的相关体验：
 
-1. 使用基于表单的编辑器[或[可视化体验编辑器](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html)创建[!DNL Target]活动(A/B、XT、AP或Recommendations)。](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html?lang=en)
+1. 使用基于表单的编辑器[&#128279;](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html?lang=en)或[可视化体验编辑器](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html)创建[!DNL Target]活动(A/B、XT、AP或Recommendations)。
 1. 使用投放API获取在步骤2中创建的[!DNL Target]活动中使用的mbox的响应。
 1. 向访客展示体验。
