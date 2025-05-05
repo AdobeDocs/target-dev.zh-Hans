@@ -17,7 +17,7 @@ ht-degree: 7%
 
 您可以快速查看库配置，检查请求以确保正确传递自定义参数，打开控制台日志记录，并禁用所有[!DNL Target]请求。 向[!DNL Experience Cloud]进行身份验证，您可以使用功能强大的Mbox跟踪工具检查活动和受众资格以及访客配置文件。
 
-查看[Adobe Experience Cloud调试器概述](https://experienceleague.adobe.com/docs/experience-platform/debugger/home.html){target=_blank}。
+查看[Adobe Experience Cloud调试器概述](https://experienceleague.adobe.com/docs/experience-platform/debugger/home.html?lang=zh-Hans){target=_blank}。
 
 ## 培训视频
 

@@ -25,7 +25,7 @@ ht-degree: 62%
 >
 >您应该升级到1的最新版本。*x*&#x200B;或2。*x*&#x200B;以获取错误修复和安全修补程序，以解决在相应主版本的任何先前次版本中发现的问题。
 
-[Adobe Experience Platform](/help/dev/implement/client-side/atjs/how-to-deployatjs/implement-target-using-adobe-launch.md)中的标记是升级at.js的首选方法。 扩展开发人员会不断向其扩展中添加新功能，并且还经常修复错误。 这些更新将打包到扩展的新版本中，并在Adobe Experience Platform目录中作为升级提供。 有关详细信息，请参阅&#x200B;*标记概述*&#x200B;指南中的[扩展升级](https://experienceleague.adobe.com/docs/experience-platform/tags/ui/extensions/extension-upgrade.html)。
+[Adobe Experience Platform](/help/dev/implement/client-side/atjs/how-to-deployatjs/implement-target-using-adobe-launch.md)中的标记是升级at.js的首选方法。 扩展开发人员会不断向其扩展中添加新功能，并且还经常修复错误。 这些更新将打包到扩展的新版本中，并在Adobe Experience Platform目录中作为升级提供。 有关详细信息，请参阅&#x200B;*标记概述*&#x200B;指南中的[扩展升级](https://experienceleague.adobe.com/docs/experience-platform/tags/ui/extensions/extension-upgrade.html?lang=zh-Hans)。
 
 ## at.js版本2.11.8（2025年3月31日）
 
@@ -130,7 +130,7 @@ ht-degree: 62%
 此版本的 at.js 包括以下增强功能和更改：
 
 * 对 at.js 的[设备上决策](/help/dev/implement/client-side/atjs/on-device-decisioning/on-device-decisioning.md)支持。
-* 对 Automated Personalization 活动的[预览链接](https://experienceleague.adobe.com/docs/target/using/activities/activity-qa/activity-qa.html)支持。
+* 对 Automated Personalization 活动的[预览链接](https://experienceleague.adobe.com/docs/target/using/activities/activity-qa/activity-qa.html?lang=zh-Hans)支持。
 
 此版本还移除了对 Microsoft Internet Explorer 10 及更高版本的支持。
 
@@ -242,7 +242,7 @@ at.js 的此版本是一个维护版本，其中包括以下修复：
 
 * **客户端分析日志记录**：无论是在客户端还是服务器端，均允许客户完全控制如何将分析数据发送到[!DNL Adobe Analytics]。
 
-  有关详细信息，请参阅[客户端 [!DNL Analytics] 日志记录](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/before-implement.html#client-side)。
+  有关详细信息，请参阅[客户端 [!DNL Analytics] 日志记录](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/before-implement.html?lang=zh-Hans#client-side)。
 
 * **发送通知**：允许开发人员在通过代码而不是使用 `applyOffer()` 或 `applyOffers()` 呈现体验时发送通知。
 
@@ -359,7 +359,7 @@ at.js 版本 1.5.0 现已可用。
 * `at-request-succeeded` 事件的详细信息中包含重定向标记。此标记可用于确定是否会将页面重定向到其他 URL。如果您要了解该 URL，请订阅 `at-content-rendering-redirect`。(TNT-29834)
 * 修复了将 `window.targetGlobalSettings.enabled` 设置为 false 时，导致其失败并引发运行时异常的问题。(TNT-29829)
 * 修复了如果对触发全局 mbox 请求使用自定义代码并使用主体隐藏，则在可视化体验编辑器 (VEC) 中加载页面时导致页面失败的问题。(TNT-29795)
-* 添加了对 `screenOrientation`、`devicePixelRatio` 和 `webGLRenderer` 的支持。这些新的[!DNL Target]请求参数用于iPhone X和其他新型设备检测。 有关更多信息，请参阅[移动设备](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/mobile.html)。(TNT-29781)
+* 添加了对 `screenOrientation`、`devicePixelRatio` 和 `webGLRenderer` 的支持。这些新的[!DNL Target]请求参数用于iPhone X和其他新型设备检测。 有关更多信息，请参阅[移动设备](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/mobile.html?lang=zh-Hans)。(TNT-29781)
 * 修复了并非总是发送 Adobe Audience Manager (AAM) 位置提示的问题。(TNT-29695)
 * 对于支持 at.js 1.5.0 的浏览器，at.js 1.5.0 会切换到 MutationObserver 以进行选择器轮询。at.js 1.0.0 之前的版本使用 MutationObserver polyfill，而这被证明是有问题的。为避免出现 polyfill 问题，版本 1.5.0 使用以下伪代码来确定使用哪种计划机制：
 
@@ -401,7 +401,7 @@ at.js 版本 1.3.0 现已可用。
 
 at.js 版本 1.2.3 现已可用。
 
-* 添加了对 JSON 选件的支持。JSON 选件仅在使用基于表单的体验编辑器创建的活动中受支持。目前只能通过直接 API 调用来使用 JSON 选件。请参阅[创建JSON选件](https://experienceleague.adobe.com/docs/target/using/experiences/offers/create-json-offer.html)。
+* 添加了对 JSON 选件的支持。JSON 选件仅在使用基于表单的体验编辑器创建的活动中受支持。目前只能通过直接 API 调用来使用 JSON 选件。请参阅[创建JSON选件](https://experienceleague.adobe.com/docs/target/using/experiences/offers/create-json-offer.html?lang=zh-Hans)。
 
 ## at.js 版本 1.2.2
 
@@ -439,7 +439,7 @@ at.js版本1.2现已作为维护版本提供，其中包含大多数错误修复
 
 at.js版本1.1中包含以下增强功能和修复：
 
-* 添加了响应令牌处理功能。有关更多信息，请参阅[响应令牌](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html)。
+* 添加了响应令牌处理功能。有关更多信息，请参阅[响应令牌](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html?lang=zh-Hans)。
 * 解决了相应问题，以便 `document.currentScript polyfill` 不会妨碍 Angular 1.X。
 * 进行了相应更改，以确保点击跟踪不会妨碍可见性属性。点击跟踪元素使用 `at-element-click-tracking` CSS 类进行标记，而不使用 `at-element-marker`。
 
@@ -473,7 +473,7 @@ at.js版本0.9.7中包含以下增强功能和修复：
 
 at.js版本0.9.6中包含以下增强功能和修复：
 
-* 对 A4T 的重定向产品建议支持。下载并安装at.js版本0.9.6后，您可以在使用[!UICONTROL Adobe Analytics as the Reporting Source for Target] (A4T)的活动中使用重定向选件。 除了at.js版本0.9.6之外，您的实施还必须满足其他最低要求，才能使用重定向选件和A4T。 有关更多信息以及其他应了解的重要信息，请参阅[重定向产品建议 - A4T 常见问题解答](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t-faq/a4t-faq-redirect-offers.html)。
+* 对 A4T 的重定向产品建议支持。下载并安装at.js版本0.9.6后，您可以在使用[!UICONTROL Adobe Analytics as the Reporting Source for Target] (A4T)的活动中使用重定向选件。 除了at.js版本0.9.6之外，您的实施还必须满足其他最低要求，才能使用重定向选件和A4T。 有关更多信息以及其他应了解的重要信息，请参阅[重定向产品建议 - A4T 常见问题解答](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t-faq/a4t-faq-redirect-offers.html?lang=zh-Hans)。
 * 在at.js 0.9.6发布之前，如果页面上存在访客API，且`visitorApiTimeout`设置过于短促，[!DNL Target]可能会出现以下情况：在[!DNL Target]请求中未发送任何MCID数据。 使用 A4T 时，这可能会导致诸如 [!DNL Analytics] 中的点击无法整合的问题。
 
   at.js 0.9.6已更改此行为，即便`visitorApiTimeout`设置为假设1毫秒，[!DNL Target]将尝试收集SDID、跟踪服务器和客户ID数据，并在[!DNL Target]请求中发送这些数据。

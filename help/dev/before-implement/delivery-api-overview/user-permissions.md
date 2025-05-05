@@ -1,7 +1,7 @@
 ---
 title: Adobe Target Delivery API用户权限
 description: Adobe Target Delivery API用户权限
-badgePremium: label="Premium" type="Positive" url="https://experienceleague.adobe.com/docs/target/using/introduction/intro.html?lang=en#premium newtab=true" tooltip="查看Target Premium中包含的内容。"
+badgePremium: label="Premium" type="Positive" url="https://experienceleague.adobe.com/docs/target/using/introduction/intro.html?lang=zh-Hans#premium newtab=true" tooltip="查看Target Premium中包含的内容。"
 keywords: 投放api
 exl-id: 332f90bd-4079-4653-aa38-b35837631c94
 feature: APIs/SDKs
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # 用户权限(Premium)
 
-[!DNL Adobe]允许客户在使用Adobe Target时管理其用户的权限。 为了成功进行[!UICONTROL Adobe Target Delivery API]调用，必须在API调用中传递具有正确权限的令牌。 要了解有关用户权限以及如何检索令牌的更多信息，请访问[本文档](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/enterprise/properties-overview.html)。
+[!DNL Adobe]允许客户在使用Adobe Target时管理其用户的权限。 为了成功进行[!UICONTROL Adobe Target Delivery API]调用，必须在API调用中传递具有正确权限的令牌。 要了解有关用户权限以及如何检索令牌的更多信息，请访问[本文档](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/enterprise/properties-overview.html?lang=zh-Hans)。
 
 ```
 curl -X POST \

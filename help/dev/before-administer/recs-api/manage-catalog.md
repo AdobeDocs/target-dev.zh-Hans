@@ -149,7 +149,7 @@ GET https://mc.adobe.io/{{TENANT_ID}}/target/recs/entities/[entity.id]
 
    >[!NOTE]
    >
-   >如果未明确指定任何环境，则获取实体仅尝试从[默认环境](https://experienceleague.adobe.com/docs/target/using/administer/environments.html)获取实体。 如果要从默认环境以外的任何环境提取，则必须指定环境ID。
+   >如果未明确指定任何环境，则获取实体仅尝试从[默认环境](https://experienceleague.adobe.com/docs/target/using/administer/environments.html?lang=zh-Hans)获取实体。 如果要从默认环境以外的任何环境提取，则必须指定环境ID。
 
 1. 如有必要，请添加`environmentId`参数，然后重新发送请求。
 

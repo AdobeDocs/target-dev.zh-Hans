@@ -12,7 +12,7 @@ ht-degree: 0%
 
 # Target API概述
 
-在重点介绍特定于管理员和配置文件API的需求之前，本文通常介绍了不同的Target API。 如果要通过UI管理Target，请参阅&#x200B;*Adobe Target商业用户指南*[&#128279;](https://experienceleague.adobe.com/docs/target/using/administer/administrating-target.html?lang=en)的管理部分。
+在重点介绍特定于管理员和配置文件API的需求之前，本文通常介绍了不同的Target API。 如果要通过UI管理Target，请参阅&#x200B;*Adobe Target商业用户指南*[&#128279;](https://experienceleague.adobe.com/docs/target/using/administer/administrating-target.html?lang=zh-Hans)的管理部分。
 
 ## API类型
 

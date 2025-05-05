@@ -17,7 +17,7 @@ ht-degree: 0%
 
 有时，Recommendations提供的算法无法显示您要促销的特定项目。 在这种情况下，自定义标准为您提供了一种方法，可以为给定的关键项目或类别提供一组特定的推荐项目。
 
-要创建自定义标准，请定义并导入关键项目或类别与推荐项目之间的所需映射。 [自定义标准文档](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/recommendations-csv.html)中介绍了此过程。 如该文档中所述，您可以通过Target用户界面(UI)创建、编辑和删除自定义标准。 但是，Target还提供了一组自定义标准API，允许对自定义标准进行更详细的管理。
+要创建自定义标准，请定义并导入关键项目或类别与推荐项目之间的所需映射。 [自定义标准文档](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/recommendations-csv.html?lang=zh-Hans)中介绍了此过程。 如该文档中所述，您可以通过Target用户界面(UI)创建、编辑和删除自定义标准。 但是，Target还提供了一组自定义标准API，允许对自定义标准进行更详细的管理。
 
 >[!WARNING]
 >
@@ -31,7 +31,7 @@ ht-degree: 0%
 
 >[!WARNING]
 >
->使用创建自定义标准API创建的自定义标准（如本练习中所述）将显示在UI中，并将保留这些标准。 您将无法从UI中编辑或删除它们。 您可以通过API **编辑或删除它们**，但无论哪种方式，它们将继续显示在Target UI中。 要保留从UI编辑或删除的选项，请使用[文档](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/recommendations-csv.html)的UI创建自定义标准，而不是使用创建自定义标准API。
+>使用创建自定义标准API创建的自定义标准（如本练习中所述）将显示在UI中，并将保留这些标准。 您将无法从UI中编辑或删除它们。 您可以通过API **编辑或删除它们**，但无论哪种方式，它们将继续显示在Target UI中。 要保留从UI编辑或删除的选项，请使用[文档](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/recommendations-csv.html?lang=zh-Hans)的UI创建自定义标准，而不是使用创建自定义标准API。
 
 只有在阅读了上述警告并熟悉了如何创建新自定义标准且无法随后从UI中删除后，才应继续执行以下步骤。
 

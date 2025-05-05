@@ -68,8 +68,8 @@ targetPageParams（将参数附加到页面上的全局 mbox）：
 
 ## 相关信息的链接
 
-推荐：[按照页面类型实施](https://experienceleague.adobe.com/docs/target/using/recommendations/plan-implement.html)
+推荐：[按照页面类型实施](https://experienceleague.adobe.com/docs/target/using/recommendations/plan-implement.html?lang=zh-Hans)
 
 订单确认：[跟踪转化](../../implement/client-side/atjs/how-to-deployatjs/implement-target-without-a-tag-manager.md#track-conversions)
 
-类别亲和度：[类别亲和度](https://experienceleague.adobe.com/docs/target/using/audiences/visitor-profiles/category-affinity.html)
+类别亲和度：[类别亲和度](https://experienceleague.adobe.com/docs/target/using/audiences/visitor-profiles/category-affinity.html?lang=zh-Hans)

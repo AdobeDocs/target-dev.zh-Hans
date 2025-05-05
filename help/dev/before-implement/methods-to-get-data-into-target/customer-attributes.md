@@ -43,8 +43,8 @@ Target Standard客户可以应用五个属性，[!DNL Target Premium]客户可�
 
 ## 代码示例
 
-详细信息可在[创建客户属性来源并上传数据文件](https://experienceleague.adobe.com/docs/core-services/interface/customer-attributes/t-crs-usecase.html)中找到。
+详细信息可在[创建客户属性来源并上传数据文件](https://experienceleague.adobe.com/docs/core-services/interface/customer-attributes/t-crs-usecase.html?lang=zh-Hans)中找到。
 
 ### 相关信息的链接
 
-[创建客户属性源并上传数据文件](https://experienceleague.adobe.com/docs/core-services/interface/customer-attributes/t-crs-usecase.html)。
+[创建客户属性源并上传数据文件](https://experienceleague.adobe.com/docs/core-services/interface/customer-attributes/t-crs-usecase.html?lang=zh-Hans)。

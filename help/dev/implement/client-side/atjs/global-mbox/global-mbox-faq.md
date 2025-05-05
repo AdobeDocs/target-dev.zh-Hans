@@ -19,7 +19,7 @@ ht-degree: 39%
 
 您的帐户仅支持一个全局 mbox。
 
-您可以通过向活动中添加 URL 规则来限制活动运行的位置。有关详细信息，请参阅[在相似页面上包含相同体验](https://experienceleague.adobe.com/docs/target/using/experiences/vec/temtest.html)。
+您可以通过向活动中添加 URL 规则来限制活动运行的位置。有关详细信息，请参阅[在相似页面上包含相同体验](https://experienceleague.adobe.com/docs/target/using/experiences/vec/temtest.html?lang=zh-Hans)。
 
 您还可以在页面上使用[targetPageParams](/help/dev/implement/client-side/atjs/atjs-functions/targetpageparams.md)来传递参数，然后在[!UICONTROL Visual Experience Composer] (VEC)的“配置URL”部分选择这些参数，或者通过在[!UICONTROL Form-Based Experience Composer]中将参数添加为“细化”来选择这些参数。
 

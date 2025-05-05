@@ -15,13 +15,13 @@ ht-degree: 66%
 
 在客户端实施 [!DNL Adobe Target] 必须使用 at.js JavaScript 库。
 
-在 [!DNL Adobe Target] 的客户端实施中，[!DNL Target] 会将与活动相关联的体验直接交付给客户端浏览器。浏览器将决定要显示的体验，然后显示该体验。借助客户端实施，您可以使用 WYSIWYG 编辑器、[可视化体验编辑器](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html) (VEC)，或者非可视化界面（[基于表单的体验编辑器](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html)）来创建测试和个性化体验。
+在 [!DNL Adobe Target] 的客户端实施中，[!DNL Target] 会将与活动相关联的体验直接交付给客户端浏览器。浏览器将决定要显示的体验，然后显示该体验。借助客户端实施，您可以使用 WYSIWYG 编辑器、[可视化体验编辑器](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html?lang=zh-Hans) (VEC)，或者非可视化界面（[基于表单的体验编辑器](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html?lang=zh-Hans)）来创建测试和个性化体验。
 
 ## 什么是 at.js？
 
 at.js库是[!DNL Adobe Target]的客户端实施的实施库。 使用 at.js 库可缩短 Web 实施的页面加载时间，并为单页应用程序提供更好的实施选项。at.js 是推荐使用的实施库，会经常更新功能。我们建议所有客户实施或迁移到[最新版本的at.js](/help/dev/implement/client-side/atjs/target-atjs-versions.md)。
 
-有关更多信息，请参阅 [Target JavaScript 库](https://experienceleague.adobe.com/docs/target/using/introduction/how-target-works.html#libraries)。
+有关更多信息，请参阅 [Target JavaScript 库](https://experienceleague.adobe.com/docs/target/using/introduction/how-target-works.html?lang=zh-Hans#libraries)。
 
 在下图所示的[!DNL Target]实现中，已实现以下Adobe Experience Cloud解决方案： [!DNL Analytics]、Target和[!DNL Audience Manager]。 此外，还实施了以下[!DNL Experience Cloud]个核心服务： [!DNL Adobe Experience Platform]、[!UICONTROL Audiences]和[!UICONTROL Visitor ID Service]。
 
@@ -74,7 +74,7 @@ at.js 2.x 增强了 Adobe Target 对 SPA 的支持，并与其他 Experience Clo
 
 >[!VIDEO](https://video.tv.adobe.com/v/26250/?quality=12)
 
-有关更多信息，请参阅[了解 at.js 2.x 的工作方式](https://experienceleague.adobe.com/docs/target-learn/tutorials/implementation/understanding-how-atjs-20-works.html)。
+有关更多信息，请参阅[了解 at.js 2.x 的工作方式](https://experienceleague.adobe.com/docs/target-learn/tutorials/implementation/understanding-how-atjs-20-works.html?lang=zh-Hans)。
 
 ## at.js 1.x 流程图
 

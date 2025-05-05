@@ -56,13 +56,13 @@ ht-degree: 64%
 
    >[!WARNING]
    >
-   >请注意，使用重定向器，您可能会面临开放重定向漏洞的风险。 为避免第三方未经授权即使用重定向程序链接，Adobe建议您使用“授权的主机”来允许列表默认的重定向URL域。 [!DNL Target]使用主机允许列表您要允许重定向的域。 有关详细信息，请参阅[创建允许列表，指定有权将mbox调用发送到&#x200B;*主机*&#x200B;中的 [!DNL Target]](https://experienceleague.adobe.com/docs/target/using/administer/hosts.html#allowlist)的主机。
+   >请注意，使用重定向器，您可能会面临开放重定向漏洞的风险。 为避免第三方未经授权即使用重定向程序链接，Adobe建议您使用“授权的主机”来允许列表默认的重定向URL域。 [!DNL Target]使用主机允许列表您要允许重定向的域。 有关详细信息，请参阅[创建允许列表，指定有权将mbox调用发送到&#x200B;*主机*&#x200B;中的 [!DNL Target]](https://experienceleague.adobe.com/docs/target/using/administer/hosts.html?lang=zh-Hans#allowlist)的主机。
 
 1. 验证重定向器。
    1. 列入允许列表 *安全最佳实践*：确保重定向器中使用的域已，如上所述。 如果您使用未列入允许列表的域，则Adobe将阻止对该域的任何调用，以防止恶意行为者使用重定向器重定向到潜在的恶意域。
    2. 将重定向器 URL 插入到浏览器中并刷新。
    3. 登录到您的帐户，刷新 mbox 列表，然后验证以 mbox 形式列出的新的重定向器。
-1. 如果您要为一个广告测试不同目标，则请为每个版本创建[重定向选件](https://experienceleague.adobe.com/docs/target/using/experiences/vec/redirect-offer.html)。
+1. 如果您要为一个广告测试不同目标，则请为每个版本创建[重定向选件](https://experienceleague.adobe.com/docs/target/using/experiences/vec/redirect-offer.html?lang=zh-Hans)。
 1. 创建营销活动。
 
    请参阅[不基于 JavaScript 的实施](/help/dev/implement/email/overview.md)，以了解如何正确设置来实现您的目标。

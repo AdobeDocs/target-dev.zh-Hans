@@ -14,7 +14,7 @@ ht-degree: 2%
 
 模型API(也称为阻止列表API)使用户能够查看和管理机器学习模型中用于[!UICONTROL Automated Personalization] (AP)和[!DNL Auto-Target] (AT)活动的功能的列表。 列入阻止列表如果用户希望排除模型用于AP或AT活动的功能，可以使用模型API将该功能添加到“”中。
 
-**[!UICONTROL blocklist]**&#x200B;定义将由[!DNL Adobe Target]从其机器学习模型中排除的功能集。 有关功能的详细信息，请参阅[机器学习算法 [!DNL Target] 使用的数据](https://experienceleague.adobe.com/docs/target/using/activities/automated-personalization/ap-data.html)。
+**[!UICONTROL blocklist]**&#x200B;定义将由[!DNL Adobe Target]从其机器学习模型中排除的功能集。 有关功能的详细信息，请参阅[机器学习算法 [!DNL Target] 使用的数据](https://experienceleague.adobe.com/docs/target/using/activities/automated-personalization/ap-data.html?lang=zh-Hans)。
 
 可以按活动（活动级别）定义阻止列表，也可以为[!DNL Target]帐户内的所有活动（全局级别）定义活动。
 
@@ -100,7 +100,7 @@ GET https://mc.adobe.io/<tenant>/target/models/features/<campaignId>
 >
 >要查找您活动的活动ID，请导航到[!DNL Target] UI中的活动列表。 单击感兴趣的活动。 活动ID将显示在生成的活动概述页面的正文中，以及此页面URL的末尾。
 
-**[!UICONTROL externalName]**&#x200B;是某个功能的用户友好名称。 它由[!DNL Target]创建，此值可能会随着时间的推移而改变。 用户可以在[Personalization Insights报表](https://experienceleague.adobe.com/docs/target/using/reports/insights/personalization-insights-reports.html)中查看这些用户友好的名称。
+**[!UICONTROL externalName]**&#x200B;是某个功能的用户友好名称。 它由[!DNL Target]创建，此值可能会随着时间的推移而改变。 用户可以在[Personalization Insights报表](https://experienceleague.adobe.com/docs/target/using/reports/insights/personalization-insights-reports.html?lang=zh-Hans)中查看这些用户友好的名称。
 
 **[!UICONTROL internalName]**&#x200B;是功能的实际标识符。 它也是由[!DNL Target]创建的，但无法更改。 为了确定要阻止列表的特征，需要参照此值。
 

@@ -15,4 +15,4 @@ ht-degree: 3%
 
 [!DNL Adobe Target]提供了用于个性化的独特混合部署模型 — 将客户端和服务器端实现混合在一起。 此混合模型允许非技术用户使用WYSIWYG [!UICONTROL Visual Experience Composer] (VEC)创作实验或个性化活动，并让服务器端执行、交付和渲染体验，以实现高性能交付。
 
-有关详细信息，请参阅[Adobe TargetTutorials](https://experienceleague.adobe.com/docs/target-learn/tutorials/overview.html?lang=zh-Hans)中的[Adobe混合部署](https://experienceleague.adobe.com/docs/target-learn/tutorials/implementation/hybrid-deployment.html)。
+有关详细信息，请参阅[Adobe TargetTutorials](https://experienceleague.adobe.com/docs/target-learn/tutorials/overview.html?lang=zh-Hans)中的[Adobe混合部署](https://experienceleague.adobe.com/docs/target-learn/tutorials/implementation/hybrid-deployment.html?lang=zh-Hans)。

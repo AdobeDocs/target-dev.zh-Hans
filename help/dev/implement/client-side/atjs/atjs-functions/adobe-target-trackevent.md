@@ -15,7 +15,7 @@ ht-degree: 62%
 
 此函数会触发用户操作（例如点击和转化）报告请求。它不会在响应中交付活动。
 
-这些事件跟踪 mbox 调用可以用来定义活动中的量度。有关更多信息，请参阅[成功量度](https://experienceleague.adobe.com/docs/target/using/activities/success-metrics/success-metrics.html)和[跟踪转化](../how-to-deployatjs/implement-target-without-a-tag-manager.md#track-conversions)。
+这些事件跟踪 mbox 调用可以用来定义活动中的量度。有关更多信息，请参阅[成功量度](https://experienceleague.adobe.com/docs/target/using/activities/success-metrics/success-metrics.html?lang=zh-Hans)和[跟踪转化](../how-to-deployatjs/implement-target-without-a-tag-manager.md#track-conversions)。
 
 以下是该 API 的详细信息：
 

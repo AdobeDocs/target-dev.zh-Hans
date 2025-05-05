@@ -42,7 +42,7 @@ ht-degree: 9%
 
 ### 活动
 
-设备上决策支持由[基于表单的体验编辑器](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html)创建的以下活动类型：
+设备上决策支持由[基于表单的体验编辑器](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html?lang=zh-Hans)创建的以下活动类型：
 
 * [!UICONTROL A/B Test]
 * [!UICONTROL Experience Targeting] (XT)
@@ -59,17 +59,17 @@ ht-degree: 9%
 
 | 受众规则 | 设备上决策 |
 | --- | --- |
-| [地域](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/geo.html) | 是<P>使用设备上决策时，支持以下地理属性：<ul><li>国家/地区</li><li>城市</li><li>纬度</li><li>经度</li></ul> |
-| [网络](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/network.html) | 否 |
-| [移动设备](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/mobile.html) | 否 |
-| [自定义参数](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/custom-parameters.html) | 是 |
-| [操作系统](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/operating-system.html) | 是 |
-| [网页](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/site-pages.html) | 是 |
-| [浏览器](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/browser.html) | 是 |
-| [访客资料](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/visitor-profile.html) | 否 |
-| [流量源](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/traffic-sources.html) | 否 |
-| [时间范围](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/time-frame.html) | 是 |
-| [Experience Cloud受众](https://experienceleague.adobe.com/docs/target/using/integrate/mmp.html)(来自Adobe Audience Manager、Adobe Analytics和Adobe Experience Manager的受众) | 否 |
+| [地域](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/geo.html?lang=zh-Hans) | 是<P>使用设备上决策时，支持以下地理属性：<ul><li>国家/地区</li><li>城市</li><li>纬度</li><li>经度</li></ul> |
+| [网络](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/network.html?lang=zh-Hans) | 否 |
+| [移动设备](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/mobile.html?lang=zh-Hans) | 否 |
+| [自定义参数](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/custom-parameters.html?lang=zh-Hans) | 是 |
+| [操作系统](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/operating-system.html?lang=zh-Hans) | 是 |
+| [网页](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/site-pages.html?lang=zh-Hans) | 是 |
+| [浏览器](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/browser.html?lang=zh-Hans) | 是 |
+| [访客资料](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/visitor-profile.html?lang=zh-Hans) | 否 |
+| [流量源](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/traffic-sources.html?lang=zh-Hans) | 否 |
+| [时间范围](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/time-frame.html?lang=zh-Hans) | 是 |
+| [Experience Cloud受众](https://experienceleague.adobe.com/docs/target/using/integrate/mmp.html?lang=zh-Hans)(来自Adobe Audience Manager、Adobe Analytics和Adobe Experience Manager的受众) | 否 |
 
 ## 如何配置我的客户端以使用[!UICONTROL on-device decisioning]？
 

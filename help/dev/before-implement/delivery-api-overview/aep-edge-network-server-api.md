@@ -17,4 +17,4 @@ ht-degree: 0%
 
 [!UICONTROL Edge Network Server API]可用于各种数据收集、个性化、广告和营销用例。 服务器API可用于服务器、IoT设备、机顶盒和其他各种设备。
 
-有关详细信息，请参阅&#x200B;*Edge Server API文档*&#x200B;中的[Edge Network服务器API概述](https://experienceleague.adobe.com/docs/experience-platform/edge-network-server-api/overview.html){target=_blank}。
+有关详细信息，请参阅&#x200B;*Edge Server API文档*&#x200B;中的[Edge Network服务器API概述](https://experienceleague.adobe.com/docs/experience-platform/edge-network-server-api/overview.html?lang=zh-Hans){target=_blank}。

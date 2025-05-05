@@ -17,15 +17,15 @@ ht-degree: 4%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch已更名为[!DNL Adobe Experience Platform]中的一套数据收集技术。 因此，产品文档中的术语有一些改动。 有关术语更改的综合参考，请参阅以下[文档](https://experienceleague.adobe.com/docs/experience-platform/tags/term-updates.html?)。
+>Adobe Experience Platform Launch已更名为[!DNL Adobe Experience Platform]中的一套数据收集技术。 因此，产品文档中的术语有一些改动。 有关术语更改的综合参考，请参阅以下[文档](https://experienceleague.adobe.com/docs/experience-platform/tags/term-updates.html?lang=zh-Hans&)。
 
 下表列出了可在其中获取更多信息的各种源：
 
 | 资源 | 详细信息 |
 |--- |--- |
-| [添加Adobe Target](https://experienceleague.adobe.com/docs/launch-learn/implementing-in-websites-with-launch/implement-solutions/target.html#implement-solutions) | 本教程提供了在网站中通过[!DNL Adobe Experience Platform]中的标记实施[!DNL Target]的分步说明。 主题包括添加 at.js JavaScript 库、触发全局 mbox、添加参数，以及与其他解决方案集成。本文是一个庞大教程的一部分，该教程向您介绍了如何实施Adobe Experience Platform及其他Adobe Experience Cloud解决方案。 |
-| [快速入门指南](https://experienceleague.adobe.com/docs/experience-platform/tags/get-started/quick-start.html) | 有关部署和管理为相关客户体验提供支持所需的分析、营销和广告标记的信息。 |
-| [Adobe [!DNL Target] 扩展概述](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/adobe/target/overview.html) | 有关使用[!DNL Adobe Experience Platform]实现[!DNL Target]的信息。 |
+| [添加Adobe Target](https://experienceleague.adobe.com/docs/launch-learn/implementing-in-websites-with-launch/implement-solutions/target.html?lang=zh-Hans#implement-solutions) | 本教程提供了在网站中通过[!DNL Adobe Experience Platform]中的标记实施[!DNL Target]的分步说明。 主题包括添加 at.js JavaScript 库、触发全局 mbox、添加参数，以及与其他解决方案集成。本文是一个庞大教程的一部分，该教程向您介绍了如何实施Adobe Experience Platform及其他Adobe Experience Cloud解决方案。 |
+| [快速入门指南](https://experienceleague.adobe.com/docs/experience-platform/tags/get-started/quick-start.html?lang=zh-Hans) | 有关部署和管理为相关客户体验提供支持所需的分析、营销和广告标记的信息。 |
+| [Adobe [!DNL Target] 扩展概述](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/adobe/target/overview.html?lang=zh-Hans) | 有关使用[!DNL Adobe Experience Platform]实现[!DNL Target]的信息。 |
 
 ## 使用[!DNL Target]扩展实施at.js的优势
 

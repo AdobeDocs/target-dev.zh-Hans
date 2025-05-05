@@ -30,7 +30,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->您必须具有管理员或审批者[用户角色](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/user-management.html)才能启用或禁用[!UICONTROL On-Device Decisioning]切换开关。
+>您必须具有管理员或审批者[用户角色](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/user-management.html?lang=zh-Hans)才能启用或禁用[!UICONTROL On-Device Decisioning]切换开关。
 
 启用[!UICONTROL On-Device Decisioning]切换后，[!DNL Adobe Target]开始为您的客户端生成&#x200B;*规则工件*。
 

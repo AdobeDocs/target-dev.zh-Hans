@@ -52,7 +52,7 @@ TargetClient.getOffers(options: Object): Promise
 | targetCookie | 对象 | [!DNL Target] Cookie |
 | targetLocationHintCookie | 对象 | [!DNL Target]位置提示Cookie |
 | analyticsDetails | 数组 | 在使用客户端Analytics的情况下，使用Analytics有效负载 |
-| responseTokens | 数组 | [响应令牌](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html?)的列表。 |
+| responseTokens | 数组 | [响应令牌](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html?lang=zh-Hans&)的列表。 |
 | trace | 数组 | 所有请求mbox/视图的汇总跟踪数据 |
 | status | 对象 | 包含响应状态的对象。 |
 | 决策方法 | 字符串 | 确定要使用的决策方法（[设备上](/help/dev/implement/server-side/sdk-guides/on-device-decisioning/overview.md)，服务器端，混合） |

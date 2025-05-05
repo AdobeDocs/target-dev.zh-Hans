@@ -71,11 +71,11 @@ ht-degree: 2%
 
 **读数**
 
-* [实体属性](https://experienceleague.adobe.com/docs/target/using/recommendations/entities/entity-attributes.html){target=_blank}
+* [实体属性](https://experienceleague.adobe.com/docs/target/using/recommendations/entities/entity-attributes.html?lang=zh-Hans){target=_blank}
 
 **注意事项**
 
-* 传递实体属性的另一种方法是更新[!DNL Target] UI中的产品目录以使用[Recommendations产品馈送](https://experienceleague.adobe.com/docs/target/using/recommendations/entities/feeds.html){target=_blank}。
+* 传递实体属性的另一种方法是更新[!DNL Target] UI中的产品目录以使用[Recommendations产品馈送](https://experienceleague.adobe.com/docs/target/using/recommendations/entities/feeds.html?lang=zh-Hans){target=_blank}。
 * 传递实体属性仅适用于数据层中有产品目录数据的页面。
 * 在任何调用中传递`entity.event.detailsOnly=true`参数具有优先权。
 

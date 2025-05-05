@@ -36,11 +36,11 @@ ht-degree: 28%
 
    * 管理员角色或至少具有审批者权限
 
-     有关Target Standard客户的详细信息，请参阅&#x200B;*用户*&#x200B;中的[指定角色和权限](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/users/user-management.html#roles-permissions)。 有关 [!DNL Target Premium] 客户的详细信息，请参阅[配置企业权限](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/enterprise/properties-overview.html)。
+     有关Target Standard客户的详细信息，请参阅&#x200B;*用户*&#x200B;中的[指定角色和权限](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/users/user-management.html?lang=zh-Hans#roles-permissions)。 有关 [!DNL Target Premium] 客户的详细信息，请参阅[配置企业权限](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/enterprise/properties-overview.html?lang=zh-Hans)。
 
    * 工作区/产品配置文件级别的管理员角色
 
-     工作区仅对 [!DNL Target Premium] 客户可用。有关更多信息，请参阅[配置企业权限](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/enterprise/properties-overview.html)。
+     工作区仅对 [!DNL Target Premium] 客户可用。有关更多信息，请参阅[配置企业权限](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/enterprise/properties-overview.html?lang=zh-Hans)。
 
    * [!DNL Adobe Target] 产品级别的管理员权限（系统管理员权限）
 

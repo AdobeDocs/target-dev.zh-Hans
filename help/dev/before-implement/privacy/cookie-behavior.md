@@ -17,7 +17,7 @@ Cookie 行为取决于它是第一方 Cookie、第三方和第一方 Cookie，�
 
 >[!NOTE]
 >
->有关[!DNL Target]使用的其他Cookie的详细信息，请参阅&#x200B;*Experience Cloud中央接口组件指南*&#x200B;中的[[!DNL Adobe Target] Cookie](https://experienceleague.adobe.com/docs/core-services/interface/administration/ec-cookies/cookies-target.html){target=_blank}。
+>有关[!DNL Target]使用的其他Cookie的详细信息，请参阅&#x200B;*Experience Cloud中央接口组件指南*&#x200B;中的[[!DNL Adobe Target] Cookie](https://experienceleague.adobe.com/docs/core-services/interface/administration/ec-cookies/cookies-target.html?lang=zh-Hans){target=_blank}。
 >
 >本主题包含有关 `mboxSession` 和 `mboxPC` 的信息。实施最佳实践建议您不要使用Cookie数据链接或存储敏感信息：`mboxSession`或`mboxPC`。
 
@@ -25,7 +25,7 @@ Cookie 行为取决于它是第一方 Cookie、第三方和第一方 Cookie，�
 
 ## 何时使用第一方或第三方Cookie
 
-您的网站设置决定了您要使用的 Cookie。在尝试了解第一方和第三方Cookie时，了解[!DNL Target]的工作方式会很有帮助。 有关详细信息，请参阅[工作方式 [!DNL Adobe] [!DNL Target]](https://experienceleague.adobe.com/docs/target/using/introduction/how-target-works.html)。
+您的网站设置决定了您要使用的 Cookie。在尝试了解第一方和第三方Cookie时，了解[!DNL Target]的工作方式会很有帮助。 有关详细信息，请参阅[工作方式 [!DNL Adobe] [!DNL Target]](https://experienceleague.adobe.com/docs/target/using/introduction/how-target-works.html?lang=zh-Hans)。
 
 下面提供了 Cookie 的三个主要用例：
 
@@ -140,4 +140,4 @@ Cookie会保留各种值以管理访客体验促销活动的方式：
 | 受影响的功能 | 详细信息 |
 |--- |--- |
 | 选择退出支持 | Apple 的 WebKit 跟踪更改会中断选择退出支持。<br />Target 选择退出使用 `clientcode.tt.omtrdc.net` 域中的一个 Cookie。有关更多详细信息，请参阅[隐私](privacy.md)。<br />Target 支持两种选择退出方式：<ul><li>一种是按客户端退出（客户端管理选择退出链接）。</li><li>一个通过[!DNL Adobe]选择用户退出所有客户的所有[!DNL Target]功能。</li></ul>这两种方法都使用第三方 Cookie。 |
-| Target 活动 | 客户可以为其[!DNL Target]帐户（最长90天）选择其[配置文件生命周期长度](https://experienceleague.adobe.com/docs/target/using/audiences/visitor-profiles/visitor-profile-lifetime.html)。 问题在于如果帐户的配置文件生命周期超过30天，并且由于客户的域已被标记为跨站点跟踪用户而清除了第一方Cookie，则Safari访客的行为将在Target的以下区域中受到影响：<br />**Target报表**：如果Safari用户进入活动，30天后返回活动，然后进行转化，则该用户将会被计为两个访客和一次转化。<br />对于使用 Analytics 作为报表源 (A4T) 的活动，此行为是相同的。<br />**配置文件和活动成员资格**：<ul><li>第一方 Cookie 过期后会擦除配置文件数据。</li><li>第一方 Cookie 过期后会擦除活动成员资格。</li><li> 对于使用第三方Cookie实施或第一方和第三方Cookie实施的帐户，[!DNL Target]在Safari中不起作用。 这不是一种新的行为。Safari暂时不允许使用第三方Cookie。</li></ul><br />**建议**：如果担心客户域可能会被标记为跨会话跟踪访客，则最安全的做法是将Target中的配置文件生命周期设置为等于或少于30天。 此限制可确保在Safari和所有其他浏览器中以类似的方式对用户进行跟踪。 |
+| Target 活动 | 客户可以为其[!DNL Target]帐户（最长90天）选择其[配置文件生命周期长度](https://experienceleague.adobe.com/docs/target/using/audiences/visitor-profiles/visitor-profile-lifetime.html?lang=zh-Hans)。 问题在于如果帐户的配置文件生命周期超过30天，并且由于客户的域已被标记为跨站点跟踪用户而清除了第一方Cookie，则Safari访客的行为将在Target的以下区域中受到影响：<br />**Target报表**：如果Safari用户进入活动，30天后返回活动，然后进行转化，则该用户将会被计为两个访客和一次转化。<br />对于使用 Analytics 作为报表源 (A4T) 的活动，此行为是相同的。<br />**配置文件和活动成员资格**：<ul><li>第一方 Cookie 过期后会擦除配置文件数据。</li><li>第一方 Cookie 过期后会擦除活动成员资格。</li><li> 对于使用第三方Cookie实施或第一方和第三方Cookie实施的帐户，[!DNL Target]在Safari中不起作用。 这不是一种新的行为。Safari暂时不允许使用第三方Cookie。</li></ul><br />**建议**：如果担心客户域可能会被标记为跨会话跟踪访客，则最安全的做法是将Target中的配置文件生命周期设置为等于或少于30天。 此限制可确保在Safari和所有其他浏览器中以类似的方式对用户进行跟踪。 |

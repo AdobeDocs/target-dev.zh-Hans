@@ -51,7 +51,7 @@ target_client_instance.get_offers(options)
 | target_location_hint_cookie | dict | [!DNL Target]位置提示Cookie |
 | analytics_details | 列表[AnalyticsResponse] | 在使用客户端Analytics的情况下，使用Analytics有效负载 |
 | trace | 列表[dict] | 所有请求mbox/视图的汇总跟踪数据 |
-| response_tokens | 列表[dict] | [&#x200B;响应令牌](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html)的列表 |
+| response_tokens | 列表[dict] | [&#x200B;响应令牌](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html?lang=zh-Hans)的列表 |
 | meta | dict | 用于设备上决策的其他决策元数据 |
 
 用于将数据传递回浏览器的`target_cookie`和`target_location_hint_cookie`对象具有以下结构：

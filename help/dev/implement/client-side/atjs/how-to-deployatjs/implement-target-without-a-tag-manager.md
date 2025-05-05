@@ -59,7 +59,7 @@ ht-degree: 35%
 | [!UICONTROL Page load enabled (Auto-create global mbox)] | 选择是否要将全局 mbox 调用嵌入到 at.js 文件中，以使其在每次加载页面时自动触发。 |
 | [!UICONTROL Global mbox] | 为全局 mbox 选择一个名称。默认情况下，此名称为 target-global-mbox。<p>对于at.js，mbox名称中可以使用特殊字符，包括与号(&amp;)。 |
 | [!UICONTROL Timeout (seconds)] | 如果 [!DNL Target] 未在定义的时间段内做出响应并显示相应内容，则服务器调用会超时，此时会显示默认内容。在访客会话期间会继续尝试发起其他调用。默认时间为 5 秒。<p>at.js库使用`XMLHttpRequest`中的超时设置。 超时从请求被触发时开始，并在[!DNL Target]从服务器获得响应时停止。 有关详细信息，请参阅Mozilla开发人员网络上的[XMLHttpRequest.timeout](https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/timeout)。<p>如果在指定的超时内未收到响应，则会显示默认内容，且访客可能会被计为活动的参与者，因为所有数据收集都发生在[!DNL Target]边缘。 如果请求到达[!DNL Target]边缘，则访客被计为参加者。<p>配置超时设置时，请考虑以下事项：<ul><li>如果超时值过低，则用户大部分时间可能都会看到默认内容，即使访客可被计为活动参加者也是如此。</li><li>如果超时值过高，则在延长的时间段内，访客可能会在您的网页上看到空白区域，如果您使用了主体隐藏技术，则可能还会看到空白页面。</li></ul>要更好地了解 mbox 响应时间，请查看浏览器“开发人员工具”中的“网络”选项卡。您还可以使用第三方 Web 性能监测工具，例如 Catchpoint。<p>**注意**： [visitorApiTimeout](/help/dev/implement/client-side/atjs/atjs-functions/targetglobalsettings.md#visitorapitimeout)设置可确保[!DNL Target]等待访客API响应的时间不会太长。 此设置和此处介绍的 at.js 中的“超时”设置不会相互影响。 |
-| [!UICONTROL Profile Lifetime] | 此设置可决定访客配置文件的存储时长。默认情况下，配置文件会存储两周时间。此设置最多可增加90天。<p>要更改配置文件生命周期设置，请联系[客户关怀团队](https://experienceleague.adobe.com/docs/target/using/cmp-resources-and-contact-information.html#reference_ACA3391A00EF467B87930A450050077C)。 |
+| [!UICONTROL Profile Lifetime] | 此设置可决定访客配置文件的存储时长。默认情况下，配置文件会存储两周时间。此设置最多可增加90天。<p>要更改配置文件生命周期设置，请联系[客户关怀团队](https://experienceleague.adobe.com/docs/target/using/cmp-resources-and-contact-information.html?lang=zh-Hans#reference_ACA3391A00EF467B87930A450050077C)。 |
 
 ### 主要实现方法
 
@@ -73,7 +73,7 @@ ht-degree: 35%
 
 >[!WARNING]
 >
->在更改这些默认设置之前，请咨询[客户关怀团队](https://experienceleague.adobe.com/docs/target/using/cmp-resources-and-contact-information.html#reference_ACA3391A00EF467B87930A450050077C)，以免影响当前的实施。
+>在更改这些默认设置之前，请咨询[客户关怀团队](https://experienceleague.adobe.com/docs/target/using/cmp-resources-and-contact-information.html?lang=zh-Hans#reference_ACA3391A00EF467B87930A450050077C)，以免影响当前的实施。
 
 除了上述设置之外，还提供以下特定的at.js设置：
 

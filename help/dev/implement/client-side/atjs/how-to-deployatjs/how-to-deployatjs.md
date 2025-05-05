@@ -21,7 +21,7 @@ ht-degree: 10%
 
 >[!NOTE]
 >
-> [!DNL Adobe Experience Platform Launch] 已更名为 [!DNL Adobe Experience Platform] 中的一套数据收集技术。因此，产品文档中的术语有一些改动。 有关术语更改的综合参考，请参阅以下[文档](https://experienceleague.adobe.com/docs/experience-platform/tags/term-updates.html)。
+> [!DNL Adobe Experience Platform Launch] 已更名为 [!DNL Adobe Experience Platform] 中的一套数据收集技术。因此，产品文档中的术语有一些改动。 有关术语更改的综合参考，请参阅以下[文档](https://experienceleague.adobe.com/docs/experience-platform/tags/term-updates.html?lang=zh-Hans)。
 
 * **[不使用标签管理器实施 [!DNL Target] ](/help/dev/implement/client-side/atjs/how-to-deployatjs/implement-target-without-a-tag-manager.md)**：您可以不使用标签管理器（例如，[!DNL Adobe Experience Platform]中的标签）实施[!DNL Target]。
 * **使用第三方标签管理器实施[!DNL Target]**： Adobe Experience Platform中的[标签是实施[!DNL Target]的首选方法；但是，您也可以使用第三方标签管理器(包括Tealium、Ensighten和Google标签)实施[!DNL Target]。 ](/help/dev/implement/client-side/atjs/how-to-deployatjs/implement-target-using-adobe-launch.md)有关使用Launch的好处列表，请参阅[使用 [!DNL Adobe Target] 扩展实施at.js的优势](/help/dev/implement/client-side/atjs/how-to-deployatjs/implement-target-using-adobe-launch.md#advantages-of-implementing-atjs-using-the-target-extension)。

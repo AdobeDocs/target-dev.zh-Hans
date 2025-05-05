@@ -37,7 +37,7 @@ Adobe未在“adobe.tt.omtrdc.net”指向的[!DNL Adobe Target]边缘服务器�
 
 ### 如何允许或阻止我的站点被嵌入为外部域下的iFrame？
 
-要允许[可视化体验编辑器](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html){target=_blank} (VEC)将您的网站嵌入到iFrame中，必须在您的Web服务器设置上更改CSP（如果已设置）。 必须将[!DNL Adobe]个域列入白名单并进行配置。
+要允许[可视化体验编辑器](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html?lang=zh-Hans){target=_blank} (VEC)将您的网站嵌入到iFrame中，必须在您的Web服务器设置上更改CSP（如果已设置）。 必须将[!DNL Adobe]个域列入白名单并进行配置。
 
 出于安全原因，您可能希望阻止将站点作为iFrame嵌入到外部域下。
 

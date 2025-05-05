@@ -298,4 +298,4 @@ public class TargetClientService {
 
 >[!ENDTABS]
 
-有关`TargetRequestUtils.java`的详细信息，请参阅[实用工具方法(Java)](https://experienceleague.adobe.com/docs/target-dev/developer/server-side/java/utility-methods.html){target=_blank}
+有关`TargetRequestUtils.java`的详细信息，请参阅[实用工具方法(Java)](https://experienceleague.adobe.com/docs/target-dev/developer/server-side/java/utility-methods.html?lang=zh-Hans){target=_blank}

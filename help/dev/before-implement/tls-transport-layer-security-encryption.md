@@ -29,7 +29,7 @@ ht-degree: 42%
 
 Adobe 会分阶段地将客户移到 TLS 1.2。针对域已经符合 1.2 的客户，我们会将其移到 TLS 1.2，而不需要您做出任何更改。大多数客户域已支持TLS 1.2；但是，如果您的域不支持TLS 1.2，我们会像现在一样将这些域保留在TLS 1.1上（直到2020年3月）。
 
-在此迁移阶段，您应该不会遇到任何问题。如果VEC已停止加载之前运行的站点，请[打开客户关怀票证](https://experienceleague.adobe.com/docs/target/using/cmp-resources-and-contact-information.html?#reference_ACA3391A00EF467B87930A450050077C)，将此迁移作为可能的原因。
+在此迁移阶段，您应该不会遇到任何问题。如果VEC已停止加载之前运行的站点，请[打开客户关怀票证](https://experienceleague.adobe.com/docs/target/using/cmp-resources-and-contact-information.html?lang=zh-Hans&#reference_ACA3391A00EF467B87930A450050077C)，将此迁移作为可能的原因。
 
 但是，如果您是使用TSL 1.1但不支持TLS 1.2的客户之一，则您应该规划域/基础架构到TLS 1.2的迁移。我们将继续支持TLS 1.1协议，直到2020年3月1日。 从2020年3月1日开始，[!DNL Target]将不再支持通过增强型体验编辑器功能用于VEC的TLS 1.1协议。
 

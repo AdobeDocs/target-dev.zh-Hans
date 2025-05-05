@@ -21,4 +21,4 @@ ht-degree: 22%
 
 有关在移动设备应用程序上实施[!DNL Target]的更多信息，请参阅适用于移动设备应用程序的[Adobe Experience Platform SDK](https://developer.adobe.com/client-sdks/documentation/){target=_blank}文档。 特定于[!DNL Target]的信息可在[Adobe Target](https://developer.adobe.com/client-sdks/documentation/adobe-target/){target=_blank}下找到。
 
-了解如何使用[!DNL Adobe Experience Platform Mobile SDK]在移动应用程序中实施[!DNL Adobe Experience Cloud]应用程序。 有关详细信息，请参阅[!DNL Experience Platform] *移动应用教程*&#x200B;中的[在移动应用中实施Adobe Experience Cloud教程](https://experienceleague.adobe.com/docs/platform-learn/implement-mobile-sdk/overview.html){target=_blank}。
+了解如何使用[!DNL Adobe Experience Platform Mobile SDK]在移动应用程序中实施[!DNL Adobe Experience Cloud]应用程序。 有关详细信息，请参阅[!DNL Experience Platform] *移动应用教程*&#x200B;中的[在移动应用中实施Adobe Experience Cloud教程](https://experienceleague.adobe.com/docs/platform-learn/implement-mobile-sdk/overview.html?lang=zh-Hans){target=_blank}。

@@ -33,8 +33,8 @@ Apple ITP 2.x在以下方面影响[!DNL Target]：
 | --- | --- |
 | 潜在增加独特访客计数 | 由于过期时间窗口分别设置为七天（使用ITP 2.1）和一天（使用ITP 2.2和ITP 2.3），您可能会看到来自Safari浏览器的独特访客数量增加。 如果您的访客在七天后(ITP 2.1)或一天后（ITP 2.2和ITP 2.3）重新访问域，[!DNL Target]将强制在您的域上放置新的[!DNL Target] Cookie来替换过期的Cookie。 即便是同一用户，新 [!DNL Target] Cookie 仍会转换为新的独特访客。 |
 | 缩短了 [!DNL Target] 活动的回溯期限 | [!DNL Target] 活动的访客配置文件可能会缩短决策的回溯期限。利用 [!DNL Target] Cookie 可识别访客和存储用于个性化的用户配置文件属性。鉴于[!DNL Target] Cookie可以在7天(ITP 2.1)或一天（ITP 2.2和2.3）后Safari过期，与已清除的[!DNL Target] Cookie绑定的用户配置文件数据无法用于决策。 |
-| 基于 3rdPartyID 的个人资料脚本 | 由于过期时间窗口分别设置为七天（使用ITP 2.1）和一天（使用ITP 2.2和ITP 2.3），基于3rdPartyID Cookie的[配置文件脚本](https://experienceleague.adobe.com/docs/target/using/audiences/visitor-profiles/profile-parameters.html)将在过期后停止运行。 |
-| iOS 设备中的 QA/预览 URL | 由于过期时间窗口分别设置为七天（使用ITP 2.1）和一天（使用ITP 2.2和ITP 2.3），[QA/预览URL](https://experienceleague.adobe.com/docs/target/using/activities/activity-qa/activity-qa.html)将在过期时停止运行，因为这些URL基于3rdPartyID Cookie。 |
+| 基于 3rdPartyID 的个人资料脚本 | 由于过期时间窗口分别设置为七天（使用ITP 2.1）和一天（使用ITP 2.2和ITP 2.3），基于3rdPartyID Cookie的[配置文件脚本](https://experienceleague.adobe.com/docs/target/using/audiences/visitor-profiles/profile-parameters.html?lang=zh-Hans)将在过期后停止运行。 |
+| iOS 设备中的 QA/预览 URL | 由于过期时间窗口分别设置为七天（使用ITP 2.1）和一天（使用ITP 2.2和ITP 2.3），[QA/预览URL](https://experienceleague.adobe.com/docs/target/using/activities/activity-qa/activity-qa.html?lang=zh-Hans)将在过期时停止运行，因为这些URL基于3rdPartyID Cookie。 |
 
 ## 我当前已实施的 [!DNL Target] 是否会受到影响？
 

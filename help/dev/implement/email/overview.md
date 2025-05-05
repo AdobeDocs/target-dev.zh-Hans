@@ -28,7 +28,7 @@ AdBox 广告和重定向器可用于任何类型的活动。下表比较了 Adbo
 
 ## 安全最佳实践
 
-请注意，使用重定向器，您可能会面临开放重定向漏洞的风险。 为避免第三方未经授权即使用重定向程序链接，我们建议您使用“授权的主机”来允许列表默认的重定向URL域。 [!DNL Target]使用主机允许列表您要允许重定向的域。 有关详细信息，请参阅[创建允许列表，指定有权将mbox调用发送到&#x200B;*主机*&#x200B;中的 [!DNL Target]](https://experienceleague.adobe.com/docs/target/using/administer/hosts.html#allowlist)的主机。
+请注意，使用重定向器，您可能会面临开放重定向漏洞的风险。 为避免第三方未经授权即使用重定向程序链接，我们建议您使用“授权的主机”来允许列表默认的重定向URL域。 [!DNL Target]使用主机允许列表您要允许重定向的域。 有关详细信息，请参阅[创建允许列表，指定有权将mbox调用发送到&#x200B;*主机*&#x200B;中的 [!DNL Target]](https://experienceleague.adobe.com/docs/target/using/administer/hosts.html?lang=zh-Hans#allowlist)的主机。
 
 ## 限制
 

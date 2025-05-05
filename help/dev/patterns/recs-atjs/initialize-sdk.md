@@ -59,27 +59,27 @@ ht-degree: 5%
 
 **先决条件**
 
-* 若要使用访客ID/API服务，贵公司必须启用[!DNL Adobe Experience Cloud]并拥有[!UICONTROL Organization ID]。 有关详细信息，请参阅&#x200B;*Identity Service帮助*&#x200B;指南中的[Experience Cloud要求：](https://experienceleague.adobe.com/docs/id-service/using/reference/requirements.html?){target=_blank}。
-* 您需要`VisitorAPI.js`文件。 如果您实施了[!DNL Adobe Analytics]，则应该已经拥有此文件。 此文件也可以通过[[!DNL Adobe Experience Platform] 标记扩展](https://experienceleague.adobe.com/docs/tags.html){target=_blank}添加，也可以从[Adobe Analytics代码管理器](https://experienceleague.adobe.com/docs/id-service/using/implementation/setup-analytics.html){target=_blank}下载。
+* 若要使用访客ID/API服务，贵公司必须启用[!DNL Adobe Experience Cloud]并拥有[!UICONTROL Organization ID]。 有关详细信息，请参阅&#x200B;*Identity Service帮助*&#x200B;指南中的[Experience Cloud要求：](https://experienceleague.adobe.com/docs/id-service/using/reference/requirements.html?lang=zh-Hans&){target=_blank}。
+* 您需要`VisitorAPI.js`文件。 如果您实施了[!DNL Adobe Analytics]，则应该已经拥有此文件。 此文件也可以通过[[!DNL Adobe Experience Platform] 标记扩展](https://experienceleague.adobe.com/docs/tags.html?lang=zh-Hans){target=_blank}添加，也可以从[Adobe Analytics代码管理器](https://experienceleague.adobe.com/docs/id-service/using/implementation/setup-analytics.html?lang=zh-Hans){target=_blank}下载。
 
 **配置并引用VisitorAPI.js**
 
-有关详细信息，请参阅[为Target实施Experience Cloud服务](https://experienceleague.adobe.com/docs/id-service/using/implementation/setup-target.html){target=_blank}。
+有关详细信息，请参阅[为Target实施Experience Cloud服务](https://experienceleague.adobe.com/docs/id-service/using/implementation/setup-target.html?lang=zh-Hans){target=_blank}。
 
 **读数**
 
-* [Experience Cloud标识服务概述](https://experienceleague.adobe.com/docs/id-service/using/intro/overview.html){target=_blank}
-* [关于ID服务](https://experienceleague.adobe.com/docs/id-service/using/intro/about-id-service.html){target=_blank}
-* [Cookie和Experience Cloud标识服务](https://experienceleague.adobe.com/docs/id-service/using/intro/cookies.html){target=_blank}
-* [Experience CloudIdentity服务如何请求和设置ID](https://experienceleague.adobe.com/docs/id-service/using/intro/id-request.html){target=_blank}
-* [了解ID同步和匹配率](https://experienceleague.adobe.com/docs/id-service/using/intro/match-rates.html){target=_blank}
+* [Experience Cloud标识服务概述](https://experienceleague.adobe.com/docs/id-service/using/intro/overview.html?lang=zh-Hans){target=_blank}
+* [关于ID服务](https://experienceleague.adobe.com/docs/id-service/using/intro/about-id-service.html?lang=zh-Hans){target=_blank}
+* [Cookie和Experience Cloud标识服务](https://experienceleague.adobe.com/docs/id-service/using/intro/cookies.html?lang=zh-Hans){target=_blank}
+* [Experience CloudIdentity服务如何请求和设置ID](https://experienceleague.adobe.com/docs/id-service/using/intro/id-request.html?lang=zh-Hans){target=_blank}
+* [了解ID同步和匹配率](https://experienceleague.adobe.com/docs/id-service/using/intro/match-rates.html?lang=zh-Hans){target=_blank}
 
 **操作**
 
 * 在网页上嵌入`VisitorAPI.js`文件。
-* 了解访客ID/API服务[&#128279;](https://experienceleague.adobe.com/docs/id-service/using/reference/requirements.html){target=_blank}的可用配置。
+* 了解访客ID/API服务[&#128279;](https://experienceleague.adobe.com/docs/id-service/using/reference/requirements.html?lang=zh-Hans){target=_blank}的可用配置。
 * 加载`VisitorAPI.js`文件后，使用`Visitor.getInstance`方法以您需要的必要配置进行初始化。
-* 熟悉[可用方法](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/get-set.html){target=_blank}。
+* 熟悉[可用方法](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/get-set.html?lang=zh-Hans){target=_blank}。
 
 +++
 
@@ -98,11 +98,11 @@ ht-degree: 5%
 * 访客的已知ID应该可以在Data Layer中使用。
 
 **设置客户ID**
-有关详细信息，请参阅[setCustomerIDs](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/setcustomerids.html){target=_blank}。
+有关详细信息，请参阅[setCustomerIDs](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/setcustomerids.html?lang=zh-Hans){target=_blank}。
 
 **读数**
 
-* mbox3rdPartyId的[实时配置文件同步](https://experienceleague.adobe.com/docs/target/using/audiences/visitor-profiles/3rd-party-id.html){target=_blank}
+* mbox3rdPartyId的[实时配置文件同步](https://experienceleague.adobe.com/docs/target/using/audiences/visitor-profiles/3rd-party-id.html?lang=zh-Hans){target=_blank}
 
 **操作**
 
@@ -213,15 +213,15 @@ ht-degree: 5%
 
 ## 1.6：促销活动 {#promotion}
 
-添加促销项目并控制它们在您的[!DNL Target Recommendations] [设计](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations-design/create-design.html){target=_blank}中的位置。
+添加促销项目并控制它们在您的[!DNL Target Recommendations] [设计](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations-design/create-design.html?lang=zh-Hans){target=_blank}中的位置。
 
 +++查看详细信息
 
 **可用选项**
 
 * 按ID提升
-* [按收藏集促销](https://experienceleague.adobe.com/docs/target/using/recommendations/entities/collections.html){target=_blank}
-* [按属性促销](https://experienceleague.adobe.com/docs/target/using/recommendations/entities/entity-attributes.html){target=_blank}
+* [按收藏集促销](https://experienceleague.adobe.com/docs/target/using/recommendations/entities/collections.html?lang=zh-Hans){target=_blank}
+* [按属性促销](https://experienceleague.adobe.com/docs/target/using/recommendations/entities/entity-attributes.html?lang=zh-Hans){target=_blank}
 
 **需要实体参数**
 
@@ -249,7 +249,7 @@ ht-degree: 5%
 
 **读数**
 
-* [基于购物车](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/algorithms.html?lang=en#section_885B3BB1B43048A88A8926F6B76FC482){target=_blank}
+* [基于购物车](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/algorithms.html?lang=zh-Hans#section_885B3BB1B43048A88A8926F6B76FC482){target=_blank}
 
 +++
 
@@ -278,7 +278,7 @@ ht-degree: 5%
 
 **读数**
 
-* [基于热门程度](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/algorithms.html?lang=en#section_885B3BB1B43048A88A8926F6B76FC482){target=_blank}
+* [基于热门程度](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/algorithms.html?lang=zh-Hans#section_885B3BB1B43048A88A8926F6B76FC482){target=_blank}
 
 +++
 
@@ -303,7 +303,7 @@ ht-degree: 5%
 
 **读数**
 
-* 基于[项](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/algorithms.html?lang=en#section_885B3BB1B43048A88A8926F6B76FC482){target=_blank}
+* 基于[项](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/algorithms.html?lang=zh-Hans#section_885B3BB1B43048A88A8926F6B76FC482){target=_blank}
 
 +++
 
@@ -326,7 +326,7 @@ ht-degree: 5%
 
 **读数**
 
-* [基于用户](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/algorithms.html?lang=en#section_885B3BB1B43048A88A8926F6B76FC482){target=_blank}
+* [基于用户](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/algorithms.html?lang=zh-Hans#section_885B3BB1B43048A88A8926F6B76FC482){target=_blank}
 
 +++
 
@@ -348,7 +348,7 @@ ht-degree: 5%
 
 **读数**
 
-* [自定义标准](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/algorithms.html?lang=en#section_885B3BB1B43048A88A8926F6B76FC482){target=_blank}
+* [自定义标准](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/algorithms.html?lang=zh-Hans#section_885B3BB1B43048A88A8926F6B76FC482){target=_blank}
 
 +++
 
@@ -360,7 +360,7 @@ ht-degree: 5%
 
 **读数**
 
-* [使用动态和静态包含规则](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/dynamic-static/use-dynamic-and-static-inclusion-rules.html){target=_blank}
+* [使用动态和静态包含规则](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/dynamic-static/use-dynamic-and-static-inclusion-rules.html?lang=zh-Hans){target=_blank}
 
 +++
 
@@ -374,7 +374,7 @@ ht-degree: 5%
 
 **读数**
 
-* [我可以动态排除实体吗？](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations-faq/recommendations-faq.html?lang=en#exclude){target=_blank}
+* [我可以动态排除实体吗？](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations-faq/recommendations-faq.html?lang=zh-Hans#exclude){target=_blank}
 
 +++
 
@@ -388,7 +388,7 @@ ht-degree: 5%
 
 **读数**
 
-* [实体属性](https://experienceleague.adobe.com/docs/target/using/recommendations/entities/entity-attributes.html?lang=en){target=_blank}
+* [实体属性](https://experienceleague.adobe.com/docs/target/using/recommendations/entities/entity-attributes.html?lang=zh-Hans){target=_blank}
 
 +++
 
@@ -436,7 +436,7 @@ ht-degree: 5%
 
 *读数*
 
-* [Target的工作方式](https://experienceleague.adobe.com/docs/target/using/introduction/how-target-works.html){target=_blank}
+* [Target的工作方式](https://experienceleague.adobe.com/docs/target/using/introduction/how-target-works.html?lang=zh-Hans){target=_blank}
 * [at.js 的工作原理](/help/dev/implement/client-side/atjs/how-atjs-works/how-atjs-works.md)
 * [不通过标记管理器实施 Target](/help/dev/implement/client-side/atjs/how-to-deployatjs/implement-target-without-a-tag-manager.md)
 

@@ -405,7 +405,7 @@ at.js 1.*x*&#x200B;能够使用vst。* mbox参数以创建受众。 这是at.js 
 
 ## 响应令牌
 
-at.js 2.*x*（与 at.js 1.*x* 一样）使用自定义事件 `at-request-succeeded` 来显示响应令牌。有关使用 `at-request-succeeded` 自定义事件的代码示例，请参阅[响应令牌](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html)。
+at.js 2.*x*（与 at.js 1.*x* 一样）使用自定义事件 `at-request-succeeded` 来显示响应令牌。有关使用 `at-request-succeeded` 自定义事件的代码示例，请参阅[响应令牌](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html?lang=zh-Hans)。
 
 ## at.js 1.*x*&#x200B;参数到at.js 2.*x*&#x200B;有效负载映射
 
@@ -772,4 +772,4 @@ at.js 2.*x*&#x200B;增强了Adobe[!DNL Target]对SPA的支持并与其他Experie
 
 >[!VIDEO](https://video.tv.adobe.com/v/26250/?quality=12)
 
-请参阅[了解at.js 2.*x*&#x200B;工作](https://experienceleague.adobe.com/docs/target-learn/tutorials/implementation/understanding-how-atjs-20-works.html)以了解更多信息。
+请参阅[了解at.js 2.*x*&#x200B;工作](https://experienceleague.adobe.com/docs/target-learn/tutorials/implementation/understanding-how-atjs-20-works.html?lang=zh-Hans)以了解更多信息。

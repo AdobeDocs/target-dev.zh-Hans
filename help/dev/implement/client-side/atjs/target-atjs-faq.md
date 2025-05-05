@@ -148,7 +148,7 @@ at.js当前使用部分jQuery，因此您会在at.js顶部看到MIT许可证通�
 
 ## 我可以在单页应用程序中使用Target [!UICONTROL Visual Experience Composer] (VEC)吗？
 
-能，如果您使用at.js 2.x，则可以将VEC用于SPA。有关详细信息，请参阅[单页(SPA)可视化体验编辑器](https://experienceleague.adobe.com/docs/target/using/experiences/spa-visual-experience-composer.html)。
+能，如果您使用at.js 2.x，则可以将VEC用于SPA。有关详细信息，请参阅[单页(SPA)可视化体验编辑器](https://experienceleague.adobe.com/docs/target/using/experiences/spa-visual-experience-composer.html?lang=zh-Hans)。
 
 ## 我能否将 Adobe Experience Cloud 调试器与 at.js 实施结合使用？
 
@@ -239,7 +239,7 @@ HttpOnly 只能通过服务器端代码进行设置。[!DNL Target] Cookie（如
 * 他们跟踪沟通会话
 * 它们由随机字符组成
 * 会话ID的有效期为30分钟
-* 可以禁用响应令牌（[响应令牌](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html)）
+* 可以禁用响应令牌（[响应令牌](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html?lang=zh-Hans)）
 * 它们仅在Adobe解决方案的环境中有用。
 
 在at.js请求中，应该会看到值为“*”的`Access-Control-Allow-Origin`标头，因为它们是公共的，无需身份验证，并且需要通过JavaScript调用从任何域访问Adobe Edge网络。

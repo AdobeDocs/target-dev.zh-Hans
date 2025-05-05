@@ -19,7 +19,7 @@ ht-degree: 13%
 >
 >如果您的实施在客户端使用at.js和[!DNL AppMeasurement]，则您应该使用下面讨论的[!UICONTROL Target Delivery API]和服务器端SDK。
 >
->如果您的实施使用[!UICONTROL Adobe Experience Platform Web SDK]，您应该使用[[!UICONTROL Adobe Experience Platform] [!UICONTROL Edge Network Server API]](https://experienceleague.adobe.com/en/docs/experience-platform/edge-network-server-api/overview){target=_blank}。
+>如果您的实施使用[!UICONTROL Adobe Experience Platform Web SDK]，您应该使用[[!UICONTROL Adobe Experience Platform] [!UICONTROL Edge Network Server API]](https://experienceleague.adobe.com/zh-hans/docs/experience-platform/edge-network-server-api/overview){target=_blank}。
 
 以下过程会在 [!DNL Target] 的服务器端实施中发生：
 

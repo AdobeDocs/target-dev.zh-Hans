@@ -61,7 +61,7 @@ target_client.send_notifications(options)
 | target_location_hint_cookie | dict | [!DNL Target]位置提示Cookie |
 | analytics_details | 列表[AnalyticsResponse] | [!DNL Analytics]有效负载，适用于客户端[!DNL Analytics] |
 | trace |  | 列表[dict] | 所有请求mbox/视图的汇总跟踪数据 |
-| response_tokens | 列表[dict] | [&#x200B;响应令牌](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html)列表 |
+| response_tokens | 列表[dict] | [&#x200B;响应令牌](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html?lang=zh-Hans)列表 |
 | meta | dict | 用于设备上决策的其他决策元数据 |
 
 ## 示例
