@@ -1,9 +1,9 @@
 ---
-title: '[!DNL &#x200B; Adobe Experience Platform Web SDK]的单页应用程序实施'
+title: '[!DNL Adobe Experience Platform Web SDK]的单页应用程序实施'
 description: 了解如何使用 [!DNL Adobe Experience Platform Web SDK]创建 [!DNL Target]的单页应用程序(SPA)实现。
 keywords: target；adobe target；xdm视图；视图；单页应用程序；SPA；SPA生命周期；客户端；AB测试；AB；体验定位；XT；VEC
 feature: AEP Web SDK
-source-git-commit: f4e0e1b202863eb9fddb40836cf53d2df7cdbebe
+source-git-commit: 9a2c35b2d150638fbda00be866f84d2a6faa4300
 workflow-type: tm+mt
 source-wordcount: '1680'
 ht-degree: 2%
@@ -61,7 +61,7 @@ SPA [!UICONTROL Adobe Target] VEC利用了名为[!UICONTROL Views]的概念：�
 
 [!UICONTROL XDM Views]可在[!DNL Target]中使用，以使营销人员能够通过[!UICONTROL Visual Experience Composer]在SPA上运行A/B和XT测试。 要执行此操作，需要执行以下步骤以完成一次性开发人员设置：
 
-1. 安装[Adobe Experience Platform Web SDK](https://experienceleague.adobe.com/zh-hans/docs/experience-platform/web-sdk/install/overview)。
+1. 安装[Adobe Experience Platform Web SDK](https://experienceleague.adobe.com/en/docs/experience-platform/web-sdk/install/overview)。
 2. 确定单页应用程序中要个性化的所有[!UICONTROL XDM Views]。
 3. 定义[!UICONTROL XDM Views]后，要交付A/B或XT VEC活动，请在单页应用程序中实施`sendEvent()`函数，并将`renderDecisions`设置为`true`以及相应的[!UICONTROL XDM View]。 必须在[!UICONTROL XDM View]中传递`xdm.web.webPageDetails.viewName`。 此步骤允许营销人员利用[!UICONTROL Visual Experience Composer]为这些XDM启动A/B和XT测试。
 
@@ -221,7 +221,7 @@ class Checkout extends Component {
 
 >[!NOTE]
 >
->要将VEC用于SPA，您必须安装并激活[Firefox](https://addons.mozilla.org/en-US/firefox/addon/adobe-target-vec-helper/)或[Chrome VEC助手扩展](https://experienceleague.adobe.com/zh-hans/docs/target/using/experiences/vec/troubleshoot-composer/visual-editing-helper-extension)。
+>要将VEC用于SPA，您必须安装并激活[Firefox](https://addons.mozilla.org/en-US/firefox/addon/adobe-target-vec-helper/)或[Chrome VEC助手扩展](https://experienceleague.adobe.com/en/docs/target/using/experiences/vec/troubleshoot-composer/visual-editing-helper-extension)。
 
 ### [!UICONTROL Modifications]面板
 
