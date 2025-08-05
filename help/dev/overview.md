@@ -14,7 +14,7 @@ ht-degree: 6%
 
 # [!DNL Adobe Target] 开发人员指南
 
-**（[查看 [!DNL Target] 文档更新](https://experienceleague.adobe.com/docs/target/using/release-notes/doc-change.html){target=_blank}）**
+**（[查看 [!DNL Target] 文档更新](https://experienceleague.adobe.com/docs/target/using/release-notes/doc-change.html?lang=zh-Hans){target=_blank}）**
 
 此&#x200B;*[!DNL Adobe Target]开发人员指南*&#x200B;为[!DNL Target]开发人员提供实施和管理[!DNL Target]所需的资源和指南，包括API和SDK文档。
 
@@ -26,7 +26,7 @@ ht-degree: 6%
 >
 >* [*[!DNL Adobe Target]教程&#x200B;*](https://experienceleague.adobe.com/docs/target-learn/tutorials/overview.html?lang=zh-Hans){target=_blank}
 >
->有关发行信息，请参阅[商业从业者指南](https://experienceleague.adobe.com/docs/target/using/release-notes/release-notes.html){target=_blank}中的&#x200B;*[!DNL Adobe Target]Target发行说明（当前版本）*。
+>有关发行信息，请参阅[商业从业者指南](https://experienceleague.adobe.com/docs/target/using/release-notes/release-notes.html?lang=zh-Hans){target=_blank}中的&#x200B;*[!DNL Adobe Target]Target发行说明（当前版本）*。
 
 ## 实施入门
 
@@ -86,7 +86,7 @@ ht-degree: 6%
 
 [**Admin Console API**](https://developer.adobe.com/umapi/)：通过Adobe User Management和User Sync API管理用户和产品权限。
 
-[**[!DNL Adobe Experience Platform Edge Network Server API]**](https://experienceleague.adobe.com/docs/experience-platform/edge-network-server-api/overview.html)：将[!DNL Adobe Experience Platform Edge Network Server] API用于各种数据收集、个性化、广告和营销用例。
+[**[!DNL Adobe Experience Platform Edge Network Server API]**](https://experienceleague.adobe.com/docs/experience-platform/edge-network-server-api/overview.html?lang=zh-Hans)：将[!DNL Adobe Experience Platform Edge Network Server] API用于各种数据收集、个性化、广告和营销用例。
 
 ## 资源
 
@@ -98,6 +98,6 @@ ht-degree: 6%
 * [Target实施](./before-implement/prepare-to-implement-target.md)
 * [Target管理](./before-administer/target-api-overview.md)
 * [Adobe Target开发文档GitHub存储库](https://github.com/AdobeDocs/target-developers)
-* [Adobe Target发行说明](https://experienceleague.adobe.com/docs/target/using/release-notes/release-notes.html)
+* [Adobe Target发行说明](https://experienceleague.adobe.com/docs/target/using/release-notes/release-notes.html?lang=zh-Hans)
 * [Adobe Target商业用户指南](https://experienceleague.adobe.com/docs/target/using/target-home.html?lang=zh-Hans)
 
