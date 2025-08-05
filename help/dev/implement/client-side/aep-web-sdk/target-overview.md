@@ -162,7 +162,7 @@ alloy("sendEvent",
 
 * 基于[!DNL Form-based Composer]的`propositions`，其中`renderAttempted`标志设置为`false`
 * 基于[!DNL Visual Experience Composer]的建议，其中`renderAttempted`标志设置为`false`
-* 基于[!DNL Visual Experience Composer]的单页应用程序视图建议，且标志设置为`renderAttempted``false`
+* 基于[!DNL Visual Experience Composer]的单页应用程序视图建议，且标志设置为`renderAttempted` `false`
 
 #### 查看时 — 更改（对于缓存的视图）：
 
