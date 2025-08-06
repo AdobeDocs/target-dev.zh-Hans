@@ -12,7 +12,7 @@ ht-degree: 0%
 
 # 访问响应令牌
 
-从[!DNL Adobe Target]返回的Personalization内容包括[响应令牌](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html)，这些令牌包含有关活动、选件、体验、用户配置文件、地理信息等的详细信息。 这些详细信息可与第三方工具共享或用于调试。 可在[!DNL Target]用户界面中配置响应令牌。
+从[!DNL Adobe Target]返回的Personalization内容包括[响应令牌](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html?lang=zh-Hans)，这些令牌包含有关活动、选件、体验、用户配置文件、地理信息等的详细信息。 这些详细信息可与第三方工具共享或用于调试。 可在[!DNL Target]用户界面中配置响应令牌。
 
 要访问任何个性化内容，请在发送事件时提供回调函数。 SDK收到来自服务器的成功响应后，将调用此回调。 为您的回调提供了`result`对象，该对象可能包含包含包含任何返回的个性化内容的`propositions`属性。 以下是提供回调函数的示例。
 
@@ -27,7 +27,7 @@ alloy("sendEvent", {
   });
 ```
 
-在此示例中，`result.propositions`（如果存在）是一个数组，其中包含与事件相关的个性化建议。 有关[内容的更多信息，请参阅](https://experienceleague.adobe.com/en/docs/experience-platform/web-sdk/personalization/rendering-personalization-content)渲染个性化内容`result.propositions.`
+在此示例中，`result.propositions`（如果存在）是一个数组，其中包含与事件相关的个性化建议。 有关[内容的更多信息，请参阅](https://experienceleague.adobe.com/zh-hans/docs/experience-platform/web-sdk/personalization/rendering-personalization-content)渲染个性化内容`result.propositions.`
 
 假设您要从Web SDK自动渲染的所有建议中收集所有活动名称，并将它们推入单个数组中。 然后，您可以将单个阵列发送给第三方。 在本例中：
 

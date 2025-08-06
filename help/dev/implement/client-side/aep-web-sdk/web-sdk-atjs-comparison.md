@@ -26,7 +26,7 @@ ht-degree: 5%
 
 预建版本在CDN上可用。 您可以在页面上直接在CDN上引用库，也可以将其下载并托管在您自己的基础架构上。 它以缩小和未缩小的格式提供。 未缩小的版本有助于进行调试。
 
-有关详细信息，请参阅[使用JavaScript库安装Web SDK](https://experienceleague.adobe.com/en/docs/experience-platform/web-sdk/install/library)。
+有关详细信息，请参阅[使用JavaScript库安装Web SDK](https://experienceleague.adobe.com/zh-hans/docs/experience-platform/web-sdk/install/library)。
 
 ## 配置库
 
@@ -72,7 +72,7 @@ window.adobe.target.init(window, document, {
 
 ### 配置平台Web SDK
 
-使用[`configure`](https://experienceleague.adobe.com/en/docs/experience-platform/web-sdk/commands/configure/overview)命令完成SDK的配置。 `configure`命令是首先调用的&#x200B;*始终*。
+使用[`configure`](https://experienceleague.adobe.com/zh-hans/docs/experience-platform/web-sdk/commands/configure/overview)命令完成SDK的配置。 `configure`命令是首先调用的&#x200B;*始终*。
 
 ## 如何请求和自动渲染页面加载[!DNL Target]选件
 
@@ -82,7 +82,7 @@ window.adobe.target.init(window, document, {
 
 ### 使用[!DNL PLatform Web SDK]
 
-SDK可以自动检索和渲染[!DNL Target] [可视化体验编辑器](https://experienceleague.adobe.com/en/docs/target/using/experiences/vec/visual-experience-composer)中创建的内容。
+SDK可以自动检索和渲染[!DNL Target] [可视化体验编辑器](https://experienceleague.adobe.com/zh-hans/docs/target/using/experiences/vec/visual-experience-composer)中创建的内容。
 
 要请求并自动呈现[!DNL Target]优惠，请使用`sendEvent`命令并将`renderDecisions`选项设置为`true.`。这样做会强制SDK自动呈现任何有资格自动呈现的个性化内容。
 
@@ -182,7 +182,7 @@ alloy("sendEvent", {
 }
 ```
 
-[了解详情](https://experienceleague.adobe.com/en/docs/experience-platform/web-sdk/personalization/rendering-personalization-content)
+[了解详情](https://experienceleague.adobe.com/zh-hans/docs/experience-platform/web-sdk/personalization/rendering-personalization-content)
 
 ## 如何请求和&#x200B;*NOT*&#x200B;自动渲染页面加载目标选件
 
@@ -214,7 +214,7 @@ adobe.target.getOffers({
 .catch(console.error);
 ```
 
-[了解详情](https://experienceleague.adobe.com/en/docs/target-dev/developer/client-side/at-js-implementation/functions-overview/atjs-functions)
+[了解详情](https://experienceleague.adobe.com/zh-hans/docs/target-dev/developer/client-side/at-js-implementation/functions-overview/atjs-functions)
 
 ### 使用[!DNL Platform Web SDK]
 
@@ -261,7 +261,7 @@ alloy("sendEvent", {
   });
 ```
 
-[了解详情](https://experienceleague.adobe.com/en/docs/experience-platform/web-sdk/personalization/rendering-personalization-content)
+[了解详情](https://experienceleague.adobe.com/zh-hans/docs/experience-platform/web-sdk/personalization/rendering-personalization-content)
 
 ## 如何请求特定的基于表单的Target mbox
 
@@ -297,7 +297,7 @@ adobe.target.getOffers({
 .catch(console.error);
 ```
 
-[了解详情](https://experienceleague.adobe.com/docs/target-dev/developer/client-side/at-js-implementation/functions-overview/atjs-functions.html)
+[了解详情](https://experienceleague.adobe.com/docs/target-dev/developer/client-side/at-js-implementation/functions-overview/atjs-functions.html?lang=zh-Hans)
 
 ### 使用[!DNL Platform Web SDK]
 
@@ -418,7 +418,7 @@ alloy("sendEvent", {
 });
 ```
 
-[了解详情](https://experienceleague.adobe.com/en/docs/experience-platform/web-sdk/personalization/rendering-personalization-content)
+[了解详情](https://experienceleague.adobe.com/zh-hans/docs/experience-platform/web-sdk/personalization/rendering-personalization-content)
 
 ## 如何应用[!DNL Target]活动
 
@@ -435,7 +435,7 @@ adobe.target.getOffers({...})
   .catch(error => console.log("Error", error));
 ```
 
-从`applyOffers`专用文档[了解有关](https://experienceleague.adobe.com/en/docs/target-dev/developer/client-side/at-js-implementation/functions-overview/adobe-target-applyoffers-atjs-2)命令的更多信息。
+从`applyOffers`专用文档[了解有关](https://experienceleague.adobe.com/zh-hans/docs/target-dev/developer/client-side/at-js-implementation/functions-overview/adobe-target-applyoffers-atjs-2)命令的更多信息。
 
 ### 使用[!DNL Platform Web SDK]
 
@@ -449,7 +449,7 @@ alloy("applyPropositions", {
 });
 ```
 
-从`applyPropositions`专用文档[了解有关](https://experienceleague.adobe.com/en/docs/experience-platform/web-sdk/personalization/rendering-personalization-content)命令的更多信息。
+从`applyPropositions`专用文档[了解有关](https://experienceleague.adobe.com/zh-hans/docs/experience-platform/web-sdk/personalization/rendering-personalization-content)命令的更多信息。
 
 ## 如何跟踪事件
 
@@ -485,7 +485,7 @@ adobe.target.sendNotifications({
 });
 ```
 
-[了解详情](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/adobe-target-trackevent.html)
+[了解详情](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/adobe-target-trackevent.html?lang=zh-Hans)
 
 ### 使用[!DNL Platform Web SDK]
 
@@ -603,7 +603,7 @@ alloy("sendEvent", {
 });
 ```
 
-[了解详情](https://experienceleague.adobe.com/en/docs/experience-platform/web-sdk/personalization/rendering-personalization-content#manual)
+[了解详情](https://experienceleague.adobe.com/zh-hans/docs/experience-platform/web-sdk/personalization/rendering-personalization-content#manual)
 
 **示例3 — 跟踪执行操作后触发的事件**
 
@@ -685,7 +685,7 @@ alloy("sendEvent", {
 
 ## 如何利用[!UICONTROL Response Tokens]
 
-从[!DNL Target]返回的Personalization内容包含[响应令牌](https://experienceleague.adobe.com/en/docs/target/using/administer/response-tokens)。 响应令牌包含有关活动、选件、体验、用户配置文件、地理信息等的详细信息。 这些详细信息可与第三方工具共享或用于调试。 可在[!DNL Target]用户界面中配置响应令牌。
+从[!DNL Target]返回的Personalization内容包含[响应令牌](https://experienceleague.adobe.com/zh-hans/docs/target/using/administer/response-tokens)。 响应令牌包含有关活动、选件、体验、用户配置文件、地理信息等的详细信息。 这些详细信息可与第三方工具共享或用于调试。 可在[!DNL Target]用户界面中配置响应令牌。
 
 ### 使用at.js
 
@@ -699,7 +699,7 @@ document.addEventListener(adobe.target.event.REQUEST_SUCCEEDED, function(e) {
 }); 
 ```
 
-[了解详情](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html)
+[了解详情](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html?lang=zh-Hans)
 
 ### 使用[!DNL Platform Web SDK]
 
@@ -707,7 +707,7 @@ document.addEventListener(adobe.target.event.REQUEST_SUCCEEDED, function(e) {
 >
 >确保您使用的是[!DNL Experience Platform Web SDK]版本2.6.0或更高版本。
 
-响应令牌作为`propositions`的一部分返回，在`sendEvent`命令的结果中公开。 每个建议包含一个由`items,`组成的数组，并且每个项目都有一个使用响应令牌填充的`meta`对象（如果在[!DNL Target]管理UI中启用了响应令牌）。 [了解详情](https://experienceleague.adobe.com/en/docs/target/using/administer/response-tokens)
+响应令牌作为`propositions`的一部分返回，在`sendEvent`命令的结果中公开。 每个建议包含一个由`items,`组成的数组，并且每个项目都有一个使用响应令牌填充的`meta`对象（如果在[!DNL Target]管理UI中启用了响应令牌）。 [了解详情](https://experienceleague.adobe.com/zh-hans/docs/target/using/administer/response-tokens)
 
 **示例**
 
@@ -878,7 +878,7 @@ adobe.target.getOffers({
 
 ![显示Analytics服务器端日志记录工作流的图表](/help/dev/implement/client-side/aep-web-sdk/assets/a4t-server-side-atjs.png)
 
-[了解更多](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4timplementation.html)
+[了解更多](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4timplementation.html?lang=zh-Hans)
 
 ### 使用[!DNL Platform Web SDK]
 
@@ -960,7 +960,7 @@ window.targetGlobalSettings = {
 };
 ```
 
-[了解详情](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/targetgobalsettings.html)
+[了解详情](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/targetgobalsettings.html?lang=zh-Hans)
 
 ### 使用[!DNL Platform Web SDK]
 
@@ -1060,7 +1060,7 @@ adobe.target.getOffers({
 .catch(console.error);
 ```
 
-[了解详情](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/adobe-target-getoffers-atjs-2.html)
+[了解详情](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/adobe-target-getoffers-atjs-2.html?lang=zh-Hans)
 
 ### 使用[!DNL Platform Web SDK]
 
@@ -1140,7 +1140,7 @@ window.targetPageParams = function() {
 };
 ```
 
-[了解详情](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/targetpageparams.html)
+[了解详情](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/targetpageparams.html?lang=zh-Hans)
 
 ### 使用[!DNL Platform Web SDK]
 
@@ -1260,5 +1260,5 @@ at.js库会显示以下调试功能：
 * 使用[Assurance](https://experienceleague.adobe.com/zh-hans/docs/experience-platform/assurance/home)
 * [已启用Web SDK调试](https://experienceleague.adobe.com/zh-hans/docs/experience-platform/assurance/home)
 * 使用[Web SDK监视挂接](https://github.com/adobe/alloy/wiki/Monitoring-Hooks)
-* 使用[Adobe Experience Platform Debugger](https://experienceleague.adobe.com/en/docs/experience-platform/debugger/home)
+* 使用[Adobe Experience Platform Debugger](https://experienceleague.adobe.com/zh-hans/docs/experience-platform/debugger/home)
 * 目标跟踪
