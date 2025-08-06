@@ -2,10 +2,10 @@
 user-guide-title: Adobe Target开发人员指南
 breadcrumb-title: Target开发人员指南
 user-guide-description: 了解如何定制和个性化客户体验，从而最大限度地提升网站和移动网站、应用程序、社交媒体和其他数字渠道的收入。
-source-git-commit: 524eb6aea6141d69eb7f30795d6b16a3f07cccd9
+source-git-commit: 697822cd7c5afcaac988d61035af56491301dc74
 workflow-type: tm+mt
-source-wordcount: '777'
-ht-degree: 44%
+source-wordcount: '789'
+ht-degree: 42%
 
 ---
 
@@ -45,48 +45,49 @@ ht-degree: 44%
    + [概述：为客户端 Web 实施 Target](implement/client-side/overview.md)
    + Adobe Experience Platform Web SDK实施 {#aep}
       + [Adobe Experience Platform Web SDK实施概述](/help/dev/implement/client-side/aep-web-sdk/aep-web-sdk-overview.md)
+      + [使用Adobe Target和Platform Web SDK进行个性化](/help/dev/implement/client-side/aep-web-sdk/target-overview.md)
       + [单页应用程序实施](/help/dev/implement/client-side/aep-web-sdk/spa-implementation.md)
       + [访问响应令牌](/help/dev/implement/client-side/aep-web-sdk/accessing-response-tokens.md)
-      + [将at.js库与Platform Web SDK进行比较](/help/dev/implement/client-side/aep-web-sdk/web-sdk-atjs-comparison.md)
-   + at.js 实施 {#at-js-implementation}
-      + [at.js概述](implement/client-side/atjs/how-atjs-works/overview.md)
-      + at.js 的工作原理 {#at-js}
-         + [at.js 的工作原理概述](implement/client-side/atjs/how-atjs-works/how-atjs-works.md)
-         + [at.js 如何管理闪烁](implement/client-side/atjs/how-atjs-works/manage-flicker-with-atjs.md)
-         + [at.js 集成](implement/client-side/atjs/how-atjs-works/target-atjs-integrations.md)
-      + 如何部署 at.js {#deploy-at-js}
-         + [如何部署 at.js](implement/client-side/atjs/how-to-deployatjs/how-to-deployatjs.md)
-         + [使用 Adobe Experience Platform 实施 Target](implement/client-side/atjs/how-to-deployatjs/implement-target-using-adobe-launch.md)
-         + [不通过标记管理器实施 Target](implement/client-side/atjs/how-to-deployatjs/implement-target-without-a-tag-manager.md)
-         + [使用动态标记管理器 (DTM) 实施 Target](implement/client-side/atjs/how-to-deployatjs/implement-target-using-dtm.md)
-         + [为单页面应用程序 (SPA) 实施 Target](implement/client-side/atjs/how-to-deployatjs/target-atjs-single-page-application.md)
-      + 设备上决策 {#on-device-decisioning}
-         + [设备上决策概述](implement/client-side/atjs/on-device-decisioning/on-device-decisioning.md)
-         + [受支持的功能](implement/client-side/atjs/on-device-decisioning/supported-features.md)
-         + [规则构件](implement/client-side/atjs/on-device-decisioning/rule-artifact.md)
-         + [故障排除](implement/client-side/atjs/on-device-decisioning/troubleshooting-on-device-decisioning.md)
-      + at.js 函数 {#functions-overview}
-         + [at.js 函数概述](implement/client-side/atjs/atjs-functions/atjs-functions.md)
-         + [adobe.target.getOffer()](implement/client-side/atjs/atjs-functions/adobe-target-getoffer.md)
-         + [adobe.target.getOffers() - at.js 2.x](implement/client-side/atjs/atjs-functions/adobe-target-getoffers-atjs-2.md)
-         + [adobe.target.applyOffer()](implement/client-side/atjs/atjs-functions/adobe-target-applyoffer.md)
-         + [adobe.target.applyOffers() - at.js 2.x](implement/client-side/atjs/atjs-functions/adobe-target-applyoffers-atjs-2.md)
-         + [adobe.target.triggerView() - at.js 2.x](implement/client-side/atjs/atjs-functions/adobe-target-triggerview-atjs-2.md)
-         + [adobe.target.trackEvent()](implement/client-side/atjs/atjs-functions/adobe-target-trackevent.md)
-         + [mboxCreate() - at.js 1.x](implement/client-side/atjs/atjs-functions/mboxcreate-atjs.md)
-         + [targetGlobalSettings()](implement/client-side/atjs/atjs-functions/targetglobalsettings.md)
-         + [mboxDefine() 和 mboxUpdate() - at.js 1.x](implement/client-side/atjs/atjs-functions/mboxdefine-mboxupdate-atjs-1x.md)
-         + [targetPageParams()](implement/client-side/atjs/atjs-functions/targetpageparams.md)
-         + [targetPageParamsAll()](implement/client-side/atjs/atjs-functions/targetpageparamsall.md)
-         + [registerExtension() - at.js 1.x](implement/client-side/atjs/atjs-functions/registerextension-atjs-1x.md)
-         + [sendNotifications() - at.js 2.1](implement/client-side/atjs/atjs-functions/adobe-target-sendnotifications-atjs-21.md)
-         + [at.js 自定义事件](implement/client-side/atjs/atjs-functions/atjs-custom-events.md)
-         + [使用 Adobe Experience Cloud Debugger 调试 at.js](implement/client-side/target-debugging-atjs/target-debugging-atjs.md)
-         + [结合使用基于云的实例和 Target](implement/client-side/target-debugging-atjs/targeting-using-cloud-based-instances.md)
-      + [at.js 常见问题解答](implement/client-side/atjs/target-atjs-faq.md)
-      + [at.js 版本详细信息](implement/client-side/atjs/target-atjs-versions.md)
-      + [从 at.js 1.x 升级到 at.js 2.x](implement/client-side/atjs/upgrading-from-atjs-1x-to-atjs-20.md)
-      + [at.js Cookie](implement/client-side/atjs/atjs-cookies.md)
+      + [使用mbox第三方ID](/help/dev/implement/client-side/aep-web-sdk/using-mbox-3rdpartyid.md)
+      + [将at.js库与Web SDK进行比较](/help/dev/implement/client-side/aep-web-sdk/web-sdk-atjs-comparison.md)
+   + at.js 的工作原理 {#at-js}
+      + [at.js JavaScript库概述](/help/dev/implement/client-side/atjs/how-atjs-works/overview.md)
+      + [at.js的工作方式概述](/help/dev/implement/client-side/atjs/how-atjs-works/how-atjs-works.md)
+      + [at.js 如何管理闪烁](/help/dev/implement/client-side/atjs/how-atjs-works/manage-flicker-with-atjs.md)
+      + [at.js 集成](/help/dev/implement/client-side/atjs/how-atjs-works/target-atjs-integrations.md)
+   + 如何部署 at.js {#deploy-at-js}
+      + [如何部署 at.js](implement/client-side/atjs/how-to-deployatjs/how-to-deployatjs.md)
+      + [使用 Adobe Experience Platform 实施 Target](implement/client-side/atjs/how-to-deployatjs/implement-target-using-adobe-launch.md)
+      + [不通过标记管理器实施 Target](implement/client-side/atjs/how-to-deployatjs/implement-target-without-a-tag-manager.md)
+      + [使用动态标记管理器 (DTM) 实施 Target](implement/client-side/atjs/how-to-deployatjs/implement-target-using-dtm.md)
+      + [为单页面应用程序 (SPA) 实施 Target](implement/client-side/atjs/how-to-deployatjs/target-atjs-single-page-application.md)
+   + 设备上决策 {#on-device-decisioning}
+      + [设备上决策概述](implement/client-side/atjs/on-device-decisioning/on-device-decisioning.md)
+      + [受支持的功能](implement/client-side/atjs/on-device-decisioning/supported-features.md)
+      + [规则构件](implement/client-side/atjs/on-device-decisioning/rule-artifact.md)
+      + [故障排除](implement/client-side/atjs/on-device-decisioning/troubleshooting-on-device-decisioning.md)
+   + at.js 函数 {#functions-overview}
+      + [at.js 函数概述](implement/client-side/atjs/atjs-functions/atjs-functions.md)
+      + [adobe.target.getOffer()](implement/client-side/atjs/atjs-functions/adobe-target-getoffer.md)
+      + [adobe.target.getOffers() - at.js 2.x](implement/client-side/atjs/atjs-functions/adobe-target-getoffers-atjs-2.md)
+      + [adobe.target.applyOffer()](implement/client-side/atjs/atjs-functions/adobe-target-applyoffer.md)
+      + [adobe.target.applyOffers() - at.js 2.x](implement/client-side/atjs/atjs-functions/adobe-target-applyoffers-atjs-2.md)
+      + [adobe.target.triggerView() - at.js 2.x](implement/client-side/atjs/atjs-functions/adobe-target-triggerview-atjs-2.md)
+      + [adobe.target.trackEvent()](implement/client-side/atjs/atjs-functions/adobe-target-trackevent.md)
+      + [mboxCreate() - at.js 1.x](implement/client-side/atjs/atjs-functions/mboxcreate-atjs.md)
+      + [targetGlobalSettings()](implement/client-side/atjs/atjs-functions/targetglobalsettings.md)
+      + [mboxDefine() 和 mboxUpdate() - at.js 1.x](implement/client-side/atjs/atjs-functions/mboxdefine-mboxupdate-atjs-1x.md)
+      + [targetPageParams()](implement/client-side/atjs/atjs-functions/targetpageparams.md)
+      + [targetPageParamsAll()](implement/client-side/atjs/atjs-functions/targetpageparamsall.md)
+      + [registerExtension() - at.js 1.x](implement/client-side/atjs/atjs-functions/registerextension-atjs-1x.md)
+      + [sendNotifications() - at.js 2.1](implement/client-side/atjs/atjs-functions/adobe-target-sendnotifications-atjs-21.md)
+      + [at.js 自定义事件](implement/client-side/atjs/atjs-functions/atjs-custom-events.md)
+      + [使用 Adobe Experience Cloud Debugger 调试 at.js](implement/client-side/target-debugging-atjs/target-debugging-atjs.md)
+      + [结合使用基于云的实例和 Target](implement/client-side/target-debugging-atjs/targeting-using-cloud-based-instances.md)
+   + [at.js 常见问题解答](implement/client-side/atjs/target-atjs-faq.md)
+   + [at.js 版本详细信息](implement/client-side/atjs/target-atjs-versions.md)
+   + [从 at.js 1.x 升级到 at.js 2.x](implement/client-side/atjs/upgrading-from-atjs-1x-to-atjs-20.md)
+   + [at.js Cookie](implement/client-side/atjs/atjs-cookies.md)
    + [用户代理和客户端提示](implement/client-side/atjs/user-agent-and-client-hints.md)
    + 了解全局 mbox {#global-mbox}
       + [了解全局 mbox 概述](implement/client-side/atjs/global-mbox/global-mbox-overview.md)

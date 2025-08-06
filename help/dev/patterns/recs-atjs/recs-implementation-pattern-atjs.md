@@ -1,11 +1,11 @@
 ---
-title: 使用at.js的Recommendations实施模式
-description: 了解如何将Recommendations的实施模式与at.js结合使用
+title: 使用at.js的“推荐”实施模式
+description: 了解如何将Recommendations实施模式用于at.js
 feature: APIs/SDKs
 level: Experienced
 role: Developer
 exl-id: d568cd1d-acc3-42e0-ae2c-5787e6f361f8
-source-git-commit: 50ee7e66e30c0f8367763a63b6fde5977d30cfe7
+source-git-commit: 3b0bc0b67800ed4b1da6ba2bfa05c677147a78ba
 workflow-type: tm+mt
 source-wordcount: '151'
 ht-degree: 0%
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # 使用at.js的[!DNL Recommendations]实施模式概述
 
-使用[at.js JavaScript库](/help/dev/implement/client-side/atjs/how-atjs-works/overview.md)时，此实施模式可帮助您了解和创建您的[!DNL Adobe Target Recommendations]实施。
+使用[!DNL Adobe Target Recommendations]at.js JavaScript库[时，此实施模式可帮助您了解和创建您的](/help/dev/implement/client-side/atjs/how-atjs-works/how-atjs-works.md)实施。
 
 单击图像可展开到全屏。
 
