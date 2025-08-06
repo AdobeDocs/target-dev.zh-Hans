@@ -2,10 +2,10 @@
 user-guide-title: Adobe Target开发人员指南
 breadcrumb-title: Target开发人员指南
 user-guide-description: 了解如何定制和个性化客户体验，从而最大限度地提升网站和移动网站、应用程序、社交媒体和其他数字渠道的收入。
-source-git-commit: ac5531cfda1c47248160d18ffc501bf2e70c9d0e
+source-git-commit: 524eb6aea6141d69eb7f30795d6b16a3f07cccd9
 workflow-type: tm+mt
-source-wordcount: '765'
-ht-degree: 45%
+source-wordcount: '777'
+ht-degree: 44%
 
 ---
 
@@ -46,6 +46,8 @@ ht-degree: 45%
    + Adobe Experience Platform Web SDK实施 {#aep}
       + [Adobe Experience Platform Web SDK实施概述](/help/dev/implement/client-side/aep-web-sdk/aep-web-sdk-overview.md)
       + [单页应用程序实施](/help/dev/implement/client-side/aep-web-sdk/spa-implementation.md)
+      + [访问响应令牌](/help/dev/implement/client-side/aep-web-sdk/accessing-response-tokens.md)
+      + [将at.js库与Platform Web SDK进行比较](/help/dev/implement/client-side/aep-web-sdk/web-sdk-atjs-comparison.md)
    + at.js 实施 {#at-js-implementation}
       + [at.js概述](implement/client-side/atjs/how-atjs-works/overview.md)
       + at.js 的工作原理 {#at-js}
