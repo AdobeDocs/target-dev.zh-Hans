@@ -14,13 +14,13 @@ ht-degree: 0%
 
 # [!DNL Experience Platform Web SDK]中A4T数据的客户端日志记录
 
-[!DNL Adobe Experience Platform Web SDK]允许您在Web应用程序的客户端收集[Adobe Analytics for Target (A4T)](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t.html)数据。
+[!DNL Adobe Experience Platform Web SDK]允许您在Web应用程序的客户端收集[Adobe Analytics for Target (A4T)](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t.html?lang=zh-Hans)数据。
 
-客户端日志记录意味着在客户端返回相关的[!DNL Target]数据，允许您收集数据并与[!DNL Analytics]共享。 如果您打算使用[数据插入API](https://experienceleague.adobe.com/docs/analytics/import/c-data-insertion-api.html)手动将数据发送到Analytics，则应启用此选项。
+客户端日志记录意味着在客户端返回相关的[!DNL Target]数据，允许您收集数据并与[!DNL Analytics]共享。 如果您打算使用[数据插入API](https://experienceleague.adobe.com/docs/analytics/import/c-data-insertion-api.html?lang=zh-Hans)手动将数据发送到Analytics，则应启用此选项。
 
 >[!NOTE]
 >
->使用[AppMeasurement.js](https://experienceleague.adobe.com/docs/analytics/implementation/js/overview.html)执行此操作的方法目前正在开发中，将在不久的将来提供。
+>使用[AppMeasurement.js](https://experienceleague.adobe.com/docs/analytics/implementation/js/overview.html?lang=zh-Hans)执行此操作的方法目前正在开发中，将在不久的将来提供。
 
 本文档介绍了为[!DNL Platform Web SDK]设置客户端A4T日志记录的步骤，并提供常见用例的实施示例。
 
@@ -28,9 +28,9 @@ ht-degree: 0%
 
 本教程假设您熟悉与将[!DNL Platform Web SDK]用于个性化目的相关的基本概念和流程。 如果您需要了解简介，请查看以下文档：
 
-* [配置Web SDK](https://experienceleague.adobe.com/en/docs/experience-platform/web-sdk/commands/configure/overview)
-* [正在发送事件](https://experienceleague.adobe.com/en/docs/experience-platform/web-sdk/commands/sendevent/overview)
-* [呈现个性化内容](https://experienceleague.adobe.com/en/docs/experience-platform/web-sdk/personalization/rendering-personalization-content)
+* [配置Web SDK](https://experienceleague.adobe.com/zh-hans/docs/experience-platform/web-sdk/commands/configure/overview)
+* [正在发送事件](https://experienceleague.adobe.com/zh-hans/docs/experience-platform/web-sdk/commands/sendevent/overview)
+* [呈现个性化内容](https://experienceleague.adobe.com/zh-hans/docs/experience-platform/web-sdk/personalization/rendering-personalization-content)
 
 ## 设置[!DNL Analytics]客户端日志记录 {#set-up-client-side-logging}
 
@@ -38,13 +38,13 @@ ht-degree: 0%
 
 ### 启用[!DNL Analytics]客户端日志记录 {#enable-analytics-client-side-logging}
 
-若要考虑为您的实施启用[!DNL Analytics]客户端日志记录，您必须在[!DNL Adobe Analytics]数据流[中禁用](https://experienceleague.adobe.com/en/docs/experience-platform/datastreams/overview)配置。
+若要考虑为您的实施启用[!DNL Analytics]客户端日志记录，您必须在[!DNL Adobe Analytics]数据流[中禁用](https://experienceleague.adobe.com/zh-hans/docs/experience-platform/datastreams/overview)配置。
 
 ![已禁用Analytics数据流配置](/help/dev/implement/a4t/assets/disable-analytics-datastream.png)
 
 ### 从SDK检索[!DNL A4T]数据并将其发送给[!DNL Analytics] {#a4t-to-analytics}
 
-为了使此报告方法正常工作，您必须发送从[!DNL A4T]点击中的[`sendEvent`](https://experienceleague.adobe.com/en/docs/experience-platform/web-sdk/commands/sendevent/overview)命令检索到的[!DNL Analytics]相关数据。
+为了使此报告方法正常工作，您必须发送从[!DNL A4T]点击中的[`sendEvent`](https://experienceleague.adobe.com/zh-hans/docs/experience-platform/web-sdk/commands/sendevent/overview)命令检索到的[!DNL Analytics]相关数据。
 
 当[!DNL Target] Edge计算建议响应时，它会检查是否启用了[!DNL Analytics]客户端日志记录（例如，数据流中是否禁用了[!DNL Analytics]）。 如果启用了客户端日志记录，则系统会向响应中的每个建议添加[!DNL Analytics]令牌。
 
@@ -225,7 +225,7 @@ ht-degree: 0%
 
 ### [!UICONTROL Form-Based Experience Composer]活动 {#form-based-composer}
 
-您可以使用[!DNL Platform Web SDK]来控制从[Adobe Target基于表单的体验编辑器](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html)活动中执行建议。
+您可以使用[!DNL Platform Web SDK]来控制从[Adobe Target基于表单的体验编辑器](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html?lang=zh-Hans)活动中执行建议。
 
 在为特定决策范围请求建议时，返回的建议包含其相应的[!DNL Analytics]令牌。 最佳实践是链[!DNL Experience Platform Web SDK] `sendEvent`命令并在同时收集[!DNL Analytics]令牌时循环遍历返回的建议以执行它们。
 
@@ -465,7 +465,7 @@ alloy("sendEvent", {
 
 ### [!UICONTROL Visual Experience Composer] (VEC)活动 {#visual-experience-composer-acitivties}
 
-[!DNL Platform Web SDK]允许您处理使用[可视化体验编辑器(VEC)](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html)创作的选件。
+[!DNL Platform Web SDK]允许您处理使用[可视化体验编辑器(VEC)](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html?lang=zh-Hans)创作的选件。
 
 >[!NOTE]
 >
