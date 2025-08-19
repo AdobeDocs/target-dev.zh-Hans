@@ -4,7 +4,7 @@ description: 了解如何使用 [!DNL Adobe Target] [!UICONTROL Bulk Profile Upd
 feature: APIs/SDKs
 contributors: https://github.com/icaraps
 exl-id: 0f38d109-5273-4f73-9488-80eca115d44d
-source-git-commit: 39f0ab4a6b06d0b3415be850487552714f51b4a2
+source-git-commit: 8cab20a7842b0a05c5b2a845662a7ab5f60393bd
 workflow-type: tm+mt
 source-wordcount: '929'
 ht-degree: 7%
@@ -26,7 +26,7 @@ ht-degree: 7%
 >
 >[!DNL Bulk Profile Update API]的版本2 (v2)是当前版本。 但是，[!DNL Target]仍支持版本1 (v1)。
 >
->* **不依赖于`PCID`的独立实施，请使用版本2**：如果您的[!DNL Target]实施使用[!DNL Experience Cloud ID] (ECID)作为匿名访客的配置文件标识符之一，则不得在版本2 (v2)批处理文件中使用`pcId`作为密钥。 将`pcId`与[!DNL Bulk Profile Update API]的版本2一起使用专用于不依赖于[!DNL Target]的独立`ECID`实施。
+>* **不依赖于`ECID`的独立实施，请使用版本2**：如果您的[!DNL Target]实施使用[!DNL Experience Cloud ID] (ECID)作为匿名访客的配置文件标识符之一，则不得在版本2 (v2)批处理文件中使用`pcId`作为密钥。 将`pcId`与[!DNL Bulk Profile Update API]的版本2一起使用专用于不依赖于[!DNL Target]的独立`ECID`实施。
 >
 >* **依赖于`thirdPartID`的实施，使用版本1**：如果要将`ECID`用作批处理文件中的密钥，则使用`pcId`进行配置文件标识的实施应使用API版本1 (v1)。 如果您的实施使用`thirdPartyId`进行配置文件标识，则建议使用版本2 (v2)作为密钥`thirdPartyId`。
 
@@ -47,13 +47,13 @@ ht-degree: 7%
 
 要批量更新用户档案数据，请创建批处理文件。 批处理文件是一个文本文件，其值由逗号分隔，类似于以下示例文件。
 
-``` ```
+``````
 batch=pcId,param1,param2,param3,param4
 123,value1
 124,value1,,,value4
 125,,value2
 126,value1,value2,value3,value4
-``` ```
+``````
 
 >[!NOTE]
 >
@@ -75,9 +75,9 @@ batch=pcId,param1,param2,param3,param4
 
 向[!DNL Target]边缘服务器发出HTTP POST请求以处理该文件。 以下是使用curl命令对文件batch.txt发出的HTTP POST请求示例：
 
-``` ```
+``````
 curl -X POST --data-binary @BATCH.TXT http://CLIENTCODE.tt.omtrdc.net/m2/CLIENTCODE/v2/profile/batchUpdate
-``` ```
+``````
 
 其中：
 
