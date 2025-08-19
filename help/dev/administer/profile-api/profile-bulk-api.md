@@ -4,10 +4,10 @@ description: 了解如何使用 [!DNL Adobe Target] [!UICONTROL Bulk Profile Upd
 feature: APIs/SDKs
 contributors: https://github.com/icaraps
 exl-id: 0f38d109-5273-4f73-9488-80eca115d44d
-source-git-commit: bee8752dd212a14f8414879e03565867eb87f6b9
+source-git-commit: 39f0ab4a6b06d0b3415be850487552714f51b4a2
 workflow-type: tm+mt
-source-wordcount: '829'
-ht-degree: 8%
+source-wordcount: '929'
+ht-degree: 7%
 
 ---
 
@@ -24,9 +24,13 @@ ht-degree: 8%
 
 >[!NOTE]
 >
->[!UICONTROL Bulk Profile Update API]的版本2 (v2)是当前版本。 但是，[!DNL Target]仍支持版本1 (v1)。
+>[!DNL Bulk Profile Update API]的版本2 (v2)是当前版本。 但是，[!DNL Target]仍支持版本1 (v1)。
+>
+>* **不依赖于`PCID`的独立实施，请使用版本2**：如果您的[!DNL Target]实施使用[!DNL Experience Cloud ID] (ECID)作为匿名访客的配置文件标识符之一，则不得在版本2 (v2)批处理文件中使用`pcId`作为密钥。 将`pcId`与[!DNL Bulk Profile Update API]的版本2一起使用专用于不依赖于[!DNL Target]的独立`ECID`实施。
+>
+>* **依赖于`thirdPartID`的实施，使用版本1**：如果要将`ECID`用作批处理文件中的密钥，则使用`pcId`进行配置文件标识的实施应使用API版本1 (v1)。 如果您的实施使用`thirdPartyId`进行配置文件标识，则建议使用版本2 (v2)作为密钥`thirdPartyId`。
 
-## 批量配置文件更新API的优势
+## [!UICONTROL Bulk Profile Update API]的优势
 
 * 配置文件属性的数量没有限制。
 * 通过网站发送的用户档案属性可以通过API更新，反之亦然。
@@ -43,13 +47,13 @@ ht-degree: 8%
 
 要批量更新用户档案数据，请创建批处理文件。 批处理文件是一个文本文件，其值由逗号分隔，类似于以下示例文件。
 
-``` ```
+``````
 batch=pcId,param1,param2,param3,param4
 123,value1
 124,value1,,,value4
 125,,value2
 126,value1,value2,value3,value4
-``` ```
+``````
 
 >[!NOTE]
 >
@@ -58,22 +62,22 @@ batch=pcId,param1,param2,param3,param4
 您在[!DNL Target]服务器的POST调用中引用此文件以处理该文件。 创建批处理文件时，请考虑以下事项：
 
 * 文件的第一行必须指定列标题。
-* 第一个标头应为`pcId`或`thirdPartyId`。 不支持[!UICONTROL Marketing Cloud visitor ID]。 [!UICONTROL pcId]是[!DNL Target]生成的访客ID。 `thirdPartyId`是由客户端应用程序指定的ID，它通过mbox调用作为`mbox3rdPartyId`传递给[!DNL Target]。 它必须在此作为`thirdPartyId`引用。
+* 第一个标头应为`pcId`或`thirdPartyId`。 不支持[!UICONTROL Marketing Cloud visitor ID]。 [!UICONTROL pcId]是[!DNL Target]生成的访客ID。 `thirdPartyId`是由客户端应用程序指定的ID，它通过mbox调用作为[!DNL Target]传递给`mbox3rdPartyId`。 它必须在此作为`thirdPartyId`引用。
 * 出于安全原因，您在批处理文件中指定的参数和值必须使用UTF-8进行URL编码。 参数和值可以转发到其他边缘节点以供通过HTTP请求进行处理。
 * 参数必须仅采用`paramName`格式。 参数在[!DNL Target]中显示为`profile.paramName`。
-* 如果您使用[!UICONTROL Bulk Profile Update API] v2，则不需要为每个`pcId`指定所有参数值。 已为[!DNL Target]中未找到的任何`pcId`或`mbox3rdPartyId`创建配置文件。 如果您使用的是v1，则不会为缺少的pcIds或mbox3rdPartyIds创建配置文件。
+* 如果您使用[!UICONTROL Bulk Profile Update API] v2，则不需要为每个`pcId`指定所有参数值。 已为`pcId`中未找到的任何`mbox3rdPartyId`或[!DNL Target]创建配置文件。 如果您使用的是v1，则不会为缺少的pcIds或mbox3rdPartyIds创建配置文件。
 * 批处理文件必须小于 50 MB。此外，总行数不应超过500,000。 此限制可确保服务器不会因请求过多而泛滥。
 * 您可以发送多个文件。 但是，您一天内发送的所有文件的行总数不应超过每个客户端的100万。
 * 您可以上传的属性数量没有限制。 但是，外部配置文件数据（包括客户属性、配置文件API、Mbox内配置文件参数和配置文件脚本输出）的总大小不得超过64 KB。
 * 参数和值区分大小写。
 
-## HTTPPOST请求
+## HTTP POST请求
 
-向[!DNL Target]边缘服务器发出HTTPPOST请求以处理该文件。 以下是使用curl命令获取文件batch.txt的示例HTTPPOST请求：
+向[!DNL Target]边缘服务器发出HTTP POST请求以处理该文件。 以下是使用curl命令对文件batch.txt发出的HTTP POST请求示例：
 
-``` ```
+``````
 curl -X POST --data-binary @BATCH.TXT http://CLIENTCODE.tt.omtrdc.net/m2/CLIENTCODE/v2/profile/batchUpdate
-``` ```
+``````
 
 其中：
 
@@ -81,7 +85,7 @@ BATCH.TXT是文件名。 CLIENTCODE是[!DNL Target]客户端代码。
 
 如果您不知道客户端代码，请在[!DNL Target]用户界面中单击&#x200B;**[!UICONTROL Administration]** > **[!UICONTROL Implementation]**。 客户端代码显示在[!UICONTROL Account Details]部分中。
 
-### Inspect响应
+### 检查响应
 
 配置文件API可返回批处理的提交状态，以及“batchStatus”下的链接以指向显示特定批处理作业整体状态的其他URL。
 
