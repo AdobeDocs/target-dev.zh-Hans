@@ -31,7 +31,7 @@ ht-degree: 1%
    >
    >在此步骤完成之前，Adobe的证书颁发机构DigiCert无法颁发证书。 因此，在此步骤完成之前，Adobe无法完成您对CNAME实施的请求。
 
-1. [填写此表单](assets/FPC_Request_Form.xlsx)，并在您[打开请求CNAME支持的Adobe客户关怀票证](https://experienceleague.adobe.com/docs/target/using/cmp-resources-and-contact-information.html?#reference_ACA3391A00EF467B87930A450050077C)时包含此表单：
+1. [填写此表单](assets/FPC_Request_Form.xlsx)，并在您[打开请求CNAME支持的Adobe客户关怀票证](https://experienceleague.adobe.com/docs/target/using/cmp-resources-and-contact-information.html?lang=zh-Hans&#reference_ACA3391A00EF467B87930A450050077C)时包含此表单：
 
    * [!DNL Adobe Target]客户端代码：
    * SSL证书主机名（示例： `target.example.com target.example.org`）：
