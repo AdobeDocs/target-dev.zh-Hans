@@ -315,7 +315,7 @@ Apple智能防跟踪(ITP) 2.3版引入了其CNAME遮蔽缓解功能，此功能�
        🔎  DNS CNAME record:  https://whatsmydns.net/#CNAME/target.example.com 
    ```
 
-+++
+   +++
 
 >[!NOTE]
 >
