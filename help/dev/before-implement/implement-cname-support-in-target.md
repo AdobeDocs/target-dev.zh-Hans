@@ -4,9 +4,9 @@ description: 使用[!UICONTROL Adobe Client Care]在 [!DNL Adobe Target] 中实�
 title: 如何在Target中使用CNAME？
 feature: Privacy & Security
 exl-id: 5709df5b-6c21-4fea-b413-ca2e4912d6cb
-source-git-commit: f894122217529cb40369c003a3b4ed5419fb0505
+source-git-commit: 353597cbbd3478e9598bd42303619440b3b478fd
 workflow-type: tm+mt
-source-wordcount: '1582'
+source-wordcount: '1580'
 ht-degree: 0%
 
 ---
@@ -31,7 +31,7 @@ ht-degree: 0%
    >
    >在此步骤完成之前，Adobe的证书颁发机构DigiCert无法颁发证书。 因此，在此步骤完成之前，Adobe无法完成您对CNAME实施的请求。
 
-1. [填写此表单](assets/FPC_Request_Form.xlsx)，并在您[打开请求CNAME支持的Adobe客户关怀票证](https://experienceleague.adobe.com/docs/target/using/cmp-resources-and-contact-information.html?lang=zh-Hans&#reference_ACA3391A00EF467B87930A450050077C)时包含此表单：
+1. [填写此表单](assets/FPC_Request_Form.xlsx)，并在您[打开请求CNAME支持的Adobe客户关怀票证](https://experienceleague.adobe.com/docs/target/using/cmp-resources-and-contact-information.html?#reference_ACA3391A00EF467B87930A450050077C)时包含此表单：
 
    * [!DNL Adobe Target]客户端代码：
    * SSL证书主机名（示例： `target.example.com target.example.org`）：
@@ -96,8 +96,6 @@ Apple智能防跟踪(ITP) 2.3版引入了其CNAME遮蔽缓解功能，此功能�
 使用以下命令集(在macOS或Linux命令行终端中，使用bash和curl >=7.49)：
 
 1. 将此bash函数复制并粘贴到您的终端中，或者将该函数粘贴到bash启动脚本文件（通常为`~/.bash_profile`或`~/.bashrc`）中，以便该函数在终端会话间可用：
-
-   +++ 查看详细信息
 
    ```bash {line-numbers="true"}
     function adobeTargetCnameValidation {
@@ -243,8 +241,6 @@ Apple智能防跟踪(ITP) 2.3版引入了其CNAME遮蔽缓解功能，此功能�
    }
    ```
 
-   +++
-
 1. 粘贴以下命令（将`target.example.com`替换为您的主机名）：
 
    ```adobeTargetCnameValidation target.example.com```
@@ -276,7 +272,7 @@ Apple智能防跟踪(ITP) 2.3版引入了其CNAME遮蔽缓解功能，此功能�
     *到期日期： Feb 20 23✅59 2026 GMT
     *颁发者： C=US； O=US digiCert Inc； CN=DigiCert Global G2 TLS RSA SHA256 2020 CA1:59:*主题： C=US； ST=California； L=San Jose； O=Adobe Systems Incorporated； CN=target.example.com===== 
      [edge shard： SYD-pool.data.adobedc.net] =====
-    *过期日期： Feb0233&lbrace;359 2026 GMT✅*颁发者： C=US； O=DigiCert Inc； CN=DigiCert Global G2 TLS RSA SHA256 2020 CA1
+    *过期日期： Feb0233{359 2026 GMT✅*颁发者： C=US； O=DigiCert Inc； CN=DigiCert Global G2 TLS RSA SHA256 2020 CA1
     *主题： C=US； ST=California； L=San Jose； O=Adobe Systems Incorporated； CN=target.example.com===== :59: [edge shard： VA-pool.data.adobedc.net] =====
     *到期日期：Feb 20 23
     59 2026 GMT✅*发行者：C=US；O=DigiCert Inc；CN=DigiCert Global G2 TLS RSA SHA256 2020 CA1
@@ -285,7 +281,7 @@ Apple智能防跟踪(ITP) 2.3版引入了其CNAME遮蔽缓解功能，此功能�
     59 2026 GMT✅*颁发者： C=US； O=DigiCert Inc； CN=DigiCert Global G2 TLS RSA SHA256 20 CA1
     *主体： C=US； ST l=San Jose； O=Adobe Systems Incorporated； CN=target.example.com==========================================================有关其他TLS/SSL验证，请参阅SSL购物者：    :59: https://www.sslshopper.com/ssl-checker.html#hostname=target.example.com要检查全球的DNS传播，请参阅whatsmydns.net：    
      DNS A记录：     https://whatsmydns.net/#A/target.example.com
-     +++DNS CNAME记录： https://whatsmydns.net/#CNAME/target.example.com🔎“🔎
+     DNS CNAME记录： https://whatsmydns.net/#CNAME/target.example.com🔎“🔎+++
     🔎
     
     
