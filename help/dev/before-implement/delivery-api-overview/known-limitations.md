@@ -4,14 +4,16 @@ description: 使用[!UICONTROL Adobe Target Delivery API]时应该考虑哪些�
 keywords: 投放api
 exl-id: 49fe13b0-efcb-4b1c-a4cb-03b64fbd9214
 feature: APIs/SDKs
-source-git-commit: 49acf92bbe06dbcee36fef2b7394acd7ce37baad
+source-git-commit: 413b16ed0b098de6914558fa29b9ca59aaba958e
 workflow-type: tm+mt
-source-wordcount: '134'
-ht-degree: 6%
+source-wordcount: '242'
+ht-degree: 3%
 
 ---
 
 # 注意事项和已知限制
+
+以下信息列出了使用[!DNL Adobe Target] [!DNL Delivery API]的注意事项和已知限制。
 
 * [!DNL Target]投放API没有身份验证。
 * 此 API 不处理 Cookie 或重定向调用。
@@ -20,3 +22,15 @@ ht-degree: 6%
   如果您使用通过我们的新负载平衡器基础架构路由访客的端点，则其连接会自动升级到HTTP/2。 此升级过程会将请求标头转换为小写标头，以便它们不会被视为格式不正确。
 
   如果客户的库设置为查找区分大小写（尤其是小写）的请求/响应标头，则此问题可能会为客户带来问题。
+
+* 通过[!DNL Recommendations]更新[!UICONTROL Catalog] [!DNL Delivery API]时请务必谨慎。 [!DNL Delivery API]是公共的，因此请避免使用它来填充推荐目录中的可点击项。 这样做可能会引入失效的内容并污染您的目录。
+
+  **最佳实践**：
+
+  仅使用[!DNL Delivery API]来更新符合以下条件的目录属性：
+   * 经常更改（例如，价格、库存水平）。
+   * 遵循可在您的网站上轻松验证的预定义格式。
+   * 请勿将其用于添加或修改可单击项目或其他未经验证的内容。
+   * 如果需要，您可以通过交付API请求客户支持禁用目录更新。
+
+  有关详细信息，请参阅[[!UICONTROL Adobe Target Delivery API]](https://developer.adobe.com/target/implement/delivery-api/){target=_blank}文档。
