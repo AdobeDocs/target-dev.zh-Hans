@@ -17,7 +17,7 @@ ht-degree: 21%
 
 >[!NOTE]
 >
->除了本文之外，[Adobe Target商业从业者指南](https://experienceleague.adobe.com/docs/target/using/target-home.html?lang=zh-Hans){target=_blank}还包含有关[Target推荐](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations.html){target=_blank}的深入信息。
+>除了本文之外，[Adobe Target商业从业者指南](https://experienceleague.adobe.com/docs/target/using/target-home.html?lang=zh-Hans){target=_blank}还包含有关[Target推荐](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations.html?lang=zh-Hans){target=_blank}的深入信息。
 
 在[!UICONTROL Recommendations]中设置第一个[!DNL Adobe Target]活动之前，请完成以下步骤：
 
@@ -44,7 +44,7 @@ ht-degree: 21%
 
 | 方法 | 内容 | 何时使用 | 其他信息 |
 | --- | --- | --- | --- |
-| 目录信息源 | 计划每天上传和摄取信息源(CSV、Google Product XML或Analytics Product Classifications)。 | 用于一次发送有关多个项目的信息。 用于发送不经常更改的信息。 | 请参阅[信息源](https://experienceleague.adobe.com/docs/target/using/recommendations/entities/feeds.html)。 |
+| 目录信息源 | 计划每天上传和摄取信息源(CSV、Google Product XML或Analytics Product Classifications)。 | 用于一次发送有关多个项目的信息。 用于发送不经常更改的信息。 | 请参阅[信息源](https://experienceleague.adobe.com/docs/target/using/recommendations/entities/feeds.html?lang=zh-Hans)。 |
 | 实体API | 调用API以发送单个项目的最新更新。 | 用于在更新发生时一次发送一个项目的更新。 用于发送经常更改的信息（例如价格、库存/库存水平）。 | 请参阅[实体API开发人员文档](https://developer.adobe.com/target/administer/recommendations-api/#tag/Entities)。 |
 | 在页面上传递更新 | 使用页面上的JavaScript或使用投放API发送单个项目的即时更新。 | 用于在更新发生时一次发送一个项目的更新。 用于发送经常更改的信息（例如价格、库存/库存水平）。 | 请参阅下面的[项目查看次数/产品页面](#item-views-or-product-pages)。 |
 
@@ -123,7 +123,7 @@ function targetPageParams() {
 }
 ```
 
-有关基于购物车的推荐的更多信息，请参阅[商业从业者指南](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/base-the-recommendation-on-a-recommendation-key.html?lang=en#cart-based)中的&#x200B;*[!DNL Adobe Target]基于购物车的推荐*。
+有关基于购物车的推荐的更多信息，请参阅[商业从业者指南](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/base-the-recommendation-on-a-recommendation-key.html?lang=zh-Hans#cart-based)中的&#x200B;*[!DNL Adobe Target]基于购物车的推荐*。
 
 ### 排除访客购物车中已有的项目
 
@@ -145,7 +145,7 @@ function targetPageParams() {
 
 ## 4.配置全局排除项
 
-排除全局级别上您绝不希望向访客推荐的任何项目。 请参阅[商业从业者指南](https://experienceleague.adobe.com/docs/target/using/recommendations/entities/exclusions.html)中的&#x200B;*[!DNL Adobe Target]排除项*。
+排除全局级别上您绝不希望向访客推荐的任何项目。 请参阅[商业从业者指南](https://experienceleague.adobe.com/docs/target/using/recommendations/entities/exclusions.html?lang=zh-Hans)中的&#x200B;*[!DNL Adobe Target]排除项*。
 
 ## 5.配置[!UICONTROL Recommendations]设置
 
@@ -161,8 +161,8 @@ function targetPageParams() {
 |--- |--- |
 | 自定义全局 Mbox | （可选）指定要用于提供 [!UICONTROL Target] 活动的自定义全局 mbox。默认情况下，[!UICONTROL Target]使用的全局mbox已用于[!UICONTROL Recommendations]。<P>注意：此选项是在[!UICONTROL Target] **[!UICONTROL Administration]**&#x200B;页面上设置的。 打开[!UICONTROL Target]，然后单击&#x200B;**[!UICONTROL Administration]** > **[!UICONTROL Visual Experience Composer]**。 |
 | 垂直行业 | 垂直行业用来帮助对您的推荐标准进行分类。此信息可帮助您的团队成员找到适合特定页面的标准，例如最适合购物车页面或媒体页面的标准。 |
-| 筛选不兼容的标准 | 启用此选项，可仅显示要求选定页面传递所需数据的标准。并非每个标准都在每个页面上正确运行。 页面或mbox必须传入`entity.id`或`entity.categoryId`，当前项目/当前类别推荐才能兼容。 一般来说，最好只显示兼容的标准。但是，如果您希望将不兼容的标准用于活动，请取消选中此选项。<P>如果使用标签管理解决方案，建议您禁用此选项。<P>有关此选项的详细信息，请参阅[[!UICONTROL Recommendations]商业从业者指南](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations-faq/recommendations-faq.html)中的&#x200B;*[!DNL Adobe Target]常见问题解答*。 |
-| 默认主机组 | 选择默认主机组。<P>主机组可用于为不同用途而分隔目录中的可用项。例如，您可以将主机组用于“开发和生产”环境、不同的品牌或不同的地理位置。默认情况下，“目录搜索”、“收藏集”和“排除项”中的预览结果均基于默认的主机组。（也可以使用“环境”筛选器选择其他主机组来预览结果。） 默认情况下，新添加的项目在所有主机组中都可用，除非在创建或更新项目时指定了环境ID。 交付的“推荐”取决于请求中指定的主机组。<P>如果您看不到产品，请确保您使用的是正确的主机组。例如，如果您将推荐设置为使用测试环境并将您的主机组设置为“测试”，则您可能需要在测试环境中重新创建收藏集，之后才会显示产品。要查看每个环境中提供了哪些产品，请在每个环境中使用“目录搜索”。您还可以预览选定环境（主机组）的[!UICONTROL Recommendations]收藏集和排除项内容。<P>**注意：**&#x200B;更改选定的环境后，必须单击“搜索”以更新返回的结果。<P> **[!UICONTROL The Environment]**&#x200B;筛选器可从Target UI中的以下位置访问：<ul><li>目录搜索(**[!UICONTROL Recommendations]** > **[!UICONTROL Catalog Search]**)</li><li>“创建收藏集”对话框(**[!UICONTROL Recommendations]** > **[!UICONTROL Collections]** > **[!UICONTROL Create New]**)</li><li>“更新收藏集”对话框(**[!UICONTROL Recommendations]** > **[!UICONTROL Collections]** > **[!UICONTROL Edit]**)</li><li>“创建排除项”对话框(**[!UICONTROL Recommendations]** > **[!UICONTROL Exclusions]** > **[!UICONTROL Create New]**)</li><li>“更新排除项”对话框(**[!UICONTROL Recommendations]** > **[!UICONTROL Exclusions]** > **[!UICONTROL Edit]**)</li></ul>有关详细信息，请参阅[商业从业者指南](https://experienceleague.adobe.com/docs/target/using/administer/hosts.html)中的&#x200B;*[!DNL Adobe Target]主机*。 |
+| 筛选不兼容的标准 | 启用此选项，可仅显示要求选定页面传递所需数据的标准。并非每个标准都在每个页面上正确运行。 页面或mbox必须传入`entity.id`或`entity.categoryId`，当前项目/当前类别推荐才能兼容。 一般来说，最好只显示兼容的标准。但是，如果您希望将不兼容的标准用于活动，请取消选中此选项。<P>如果使用标签管理解决方案，建议您禁用此选项。<P>有关此选项的详细信息，请参阅[[!UICONTROL Recommendations]商业从业者指南](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations-faq/recommendations-faq.html?lang=zh-Hans)中的&#x200B;*[!DNL Adobe Target]常见问题解答*。 |
+| 默认主机组 | 选择默认主机组。<P>主机组可用于为不同用途而分隔目录中的可用项。例如，您可以将主机组用于“开发和生产”环境、不同的品牌或不同的地理位置。默认情况下，“目录搜索”、“收藏集”和“排除项”中的预览结果均基于默认的主机组。（也可以使用“环境”筛选器选择其他主机组来预览结果。） 默认情况下，新添加的项目在所有主机组中都可用，除非在创建或更新项目时指定了环境ID。 交付的“推荐”取决于请求中指定的主机组。<P>如果您看不到产品，请确保您使用的是正确的主机组。例如，如果您将推荐设置为使用测试环境并将您的主机组设置为“测试”，则您可能需要在测试环境中重新创建收藏集，之后才会显示产品。要查看每个环境中提供了哪些产品，请在每个环境中使用“目录搜索”。您还可以预览选定环境（主机组）的[!UICONTROL Recommendations]收藏集和排除项内容。<P>**注意：**&#x200B;更改选定的环境后，必须单击“搜索”以更新返回的结果。<P> **[!UICONTROL The Environment]**&#x200B;筛选器可从Target UI中的以下位置访问：<ul><li>目录搜索(**[!UICONTROL Recommendations]** > **[!UICONTROL Catalog Search]**)</li><li>“创建收藏集”对话框(**[!UICONTROL Recommendations]** > **[!UICONTROL Collections]** > **[!UICONTROL Create New]**)</li><li>“更新收藏集”对话框(**[!UICONTROL Recommendations]** > **[!UICONTROL Collections]** > **[!UICONTROL Edit]**)</li><li>“创建排除项”对话框(**[!UICONTROL Recommendations]** > **[!UICONTROL Exclusions]** > **[!UICONTROL Create New]**)</li><li>“更新排除项”对话框(**[!UICONTROL Recommendations]** > **[!UICONTROL Exclusions]** > **[!UICONTROL Edit]**)</li></ul>有关详细信息，请参阅[商业从业者指南](https://experienceleague.adobe.com/docs/target/using/administer/hosts.html?lang=zh-Hans)中的&#x200B;*[!DNL Adobe Target]主机*。 |
 | 缩览图基本 URL | 为您的产品目录设置基本 URL 后，可以在指定产品缩览图以及传递缩览图 URL 时使用相对 URL。<P>例如：<P>`"entity.thumbnailURL=/Images/Homepage/product1.jpg"`<P>设置的便是相对于缩览图基本 URL 的 URL。 |
 | [!UICONTROL Recommendations] API令牌 | 在[!UICONTROL Recommendations] API调用（如下载API）中使用此令牌。 |
 
