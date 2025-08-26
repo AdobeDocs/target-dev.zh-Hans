@@ -4,7 +4,7 @@ description: 使用[!UICONTROL Adobe Client Care]在 [!DNL Adobe Target] 中实�
 title: 如何在Target中使用CNAME？
 feature: Privacy & Security
 exl-id: 5709df5b-6c21-4fea-b413-ca2e4912d6cb
-source-git-commit: d803ee9ddb58c73e089e938773ba264e03ef9b1b
+source-git-commit: 71a8a2d9d324cd31452a4400d76052432efbfdd4
 workflow-type: tm+mt
 source-wordcount: '1169'
 ht-degree: 1%
@@ -31,7 +31,7 @@ ht-degree: 1%
    >
    >在此步骤完成之前，Adobe的证书颁发机构DigiCert无法颁发证书。 因此，在此步骤完成之前，Adobe无法完成您对CNAME实施的请求。
 
-1. [填写此表单](assets/FPC_Request_Form.xlsx)，并在您[打开请求CNAME支持的Adobe客户关怀票证](https://experienceleague.adobe.com/docs/target/using/cmp-resources-and-contact-information.html?lang=zh-Hans&#reference_ACA3391A00EF467B87930A450050077C)时包含此表单：
+1. [填写此表单](assets/FPC_Request_Form.xlsx)，并在您[打开请求CNAME支持的Adobe客户关怀票证](https://experienceleague.adobe.com/docs/target/using/cmp-resources-and-contact-information.html?#reference_ACA3391A00EF467B87930A450050077C)时包含此表单：
 
    * [!DNL Adobe Target]客户端代码：
    * SSL证书主机名（示例： `target.example.com target.example.org`）：
