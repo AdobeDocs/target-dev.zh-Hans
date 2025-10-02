@@ -19,7 +19,7 @@ ht-degree: 1%
 ## 在[!DNL Target]中请求CNAME支持
 
 1. 确定您的SSL证书所需的主机名列表（请参阅下面的常见问题解答）。
-1. [填写此表单](/help/dev/implement/assets/FPC_Request_Form.xlsx)并在您[打开请求CNAME支持的 [!DNL Adobe] 客户关怀票证](https://experienceleague.adobe.com/en/docs/target/using/cmp-resources-and-contact-information#reference_ACA3391A00EF467B87930A450050077C)时包含它：
+1. [填写此表单](/help/dev/implement/assets/FPC_Request_Form.xlsx)并在您[打开请求CNAME支持的 [!DNL Adobe] 客户关怀票证](https://experienceleague.adobe.com/zh-hans/docs/target/using/cmp-resources-and-contact-information#reference_ACA3391A00EF467B87930A450050077C)时包含它：
 
    * [!DNL Adobe Target]客户端代码：
    * SSL证书主机名（示例： `target.example.com target.example.org`）：
