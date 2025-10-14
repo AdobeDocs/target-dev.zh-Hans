@@ -42,7 +42,7 @@ at.js 会生成一个会话 ID 并将其存储在 Cookie 中。第一个响应�
 
 ### 何时使用第一方或第三方 Cookie
 
-您的网站设置决定了您要使用的 Cookie。在尝试了解第一方和第三方Cookie时，了解[!DNL Target]的工作方式会很有帮助。 有关详细信息，请参阅[工作方式 [!DNL Adobe Target] ](https://experienceleague.adobe.com/docs/target/using/introduction/how-target-works.html?lang=zh-Hans)。
+您的网站设置决定了您要使用的 Cookie。在尝试了解第一方和第三方Cookie时，了解[!DNL Target]的工作方式会很有帮助。 有关详细信息，请参阅[工作方式 [!DNL Adobe Target] &#x200B;](https://experienceleague.adobe.com/docs/target/using/introduction/how-target-works.html?lang=zh-Hans)。
 
 下面提供了 Cookie 的三个主要用例：
 
