@@ -17,7 +17,7 @@ ht-degree: 62%
 
 ## 隐私和通用数据保护条例 (GDPR) 概述
 
-2018 年 5 月 25 日，欧盟的 GDPR 已正式生效。有关此法规对您影响的更多信息，请参阅 [GDPR 和您的业务](https://business.adobe.com/privacy/general-data-protection-regulation.html)。
+2018 年 5 月 25 日，欧盟的 GDPR 已正式生效。有关此法规对您影响的更多信息，请参阅 [GDPR 和您的业务](https://business.adobe.com/cn/privacy/general-data-protection-regulation.html)。
 
 当 Adobe 向企业提供软件和服务时，作为提供这些服务的一部分，Adobe 将充当其处理并存储的任何个人数据的“数据处理方”。作为“数据处理方”，Adobe 将根据贵公司授予的权限及指示（例如，遵照您与 Adobe 签署的协议中的规定）处理个人数据。
 

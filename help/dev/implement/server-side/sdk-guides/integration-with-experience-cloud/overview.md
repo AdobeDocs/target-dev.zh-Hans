@@ -12,7 +12,7 @@ ht-degree: 9%
 
 # 与[!DNL Experience Cloud]的集成概述
 
-[!DNL Adobe Target]服务器端SDK支持与[Adobe Analytics](https://business.adobe.com/products/analytics/adobe-analytics.html)和[Adobe Audience Manager](https://business.adobe.com/products/audience-manager/adobe-audience-manager.html)的无缝集成，以便您可以利用[!DNL Adobe Experience Cloud]的强大功能。
+[!DNL Adobe Target]服务器端SDK支持与[Adobe Analytics](https://business.adobe.com/cn/products/analytics/adobe-analytics.html)和[Adobe Audience Manager](https://business.adobe.com/cn/products/audience-manager/adobe-audience-manager.html)的无缝集成，以便您可以利用[!DNL Adobe Experience Cloud]的强大功能。
 
 要了解有关这些集成的更多信息，请浏览以下引用：
 
