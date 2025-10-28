@@ -4,9 +4,9 @@ description: 了解如何使用 [!DNL Adobe Target] [!UICONTROL Bulk Profile Upd
 feature: APIs/SDKs
 contributors: https://github.com/icaraps
 exl-id: 0f38d109-5273-4f73-9488-80eca115d44d
-source-git-commit: 38ed32560170e5a8f472aa191bb5a24d4e13cde7
+source-git-commit: 76b4add132d3e98f241b887dbce4170c90445be2
 workflow-type: tm+mt
-source-wordcount: '1078'
+source-wordcount: '1076'
 ht-degree: 6%
 
 ---
@@ -49,13 +49,13 @@ ht-degree: 6%
 
 要批量更新用户档案数据，请创建批处理文件。 批处理文件是一个文本文件，其值由逗号分隔，类似于以下示例文件。
 
-``` ```
+``````
 batch=pcId,param1,param2,param3,param4
 123,value1
 124,value1,,,value4
 125,,value2
 126,value1,value2,value3,value4
-``` ```
+``````
 
 >[!NOTE]
 >
@@ -77,9 +77,9 @@ batch=pcId,param1,param2,param3,param4
 
 向[!DNL Target]边缘服务器发出HTTP POST请求以处理该文件。 以下是使用curl命令对文件batch.txt发出的HTTP POST请求示例：
 
-``` ```
+``````
 curl -X POST --data-binary @BATCH.TXT http://CLIENTCODE.tt.omtrdc.net/m2/CLIENTCODE/v2/profile/batchUpdate
-``` ```
+``````
 
 其中：
 
@@ -145,7 +145,7 @@ http://mboxedge45.tt.omtrdc.net/m2/demo/profile/batchStatus?batchId=demo-1701473
 </response>
 ```
 
-## 关于在[!DNL Bulk Profile Update API]中处理空值的说明
+## 处理[!DNL Bulk Profile Update API]中的空值
 
 使用[!DNL Target] [!DNL Bulk Profile Update API] （v1或v2）时，了解系统如何处理空参数或属性值非常重要。
 
@@ -153,7 +153,7 @@ http://mboxedge45.tt.omtrdc.net/m2/demo/profile/batchStatus?batchId=demo-1701473
 
 发送现有参数或属性的空值（“”、null或缺少字段）不会重置或删除配置文件存储中的这些值。 这是特意设计的。
 
-忽略空值： API在处理期间过滤掉空值，以避免不必要的或无意义的更新。
+**忽略空值**： API在处理期间过滤掉空值，以避免不必要或无意义的更新。
 
 **不清除现有数据**：如果参数已有值，则发送空值会使其保持不变。
 
