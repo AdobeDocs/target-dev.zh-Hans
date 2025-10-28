@@ -4,9 +4,9 @@ description: 了解如何使用 [!DNL Adobe Target] [!UICONTROL Bulk Profile Upd
 feature: APIs/SDKs
 contributors: https://github.com/icaraps
 exl-id: 0f38d109-5273-4f73-9488-80eca115d44d
-source-git-commit: 76b4add132d3e98f241b887dbce4170c90445be2
+source-git-commit: 892de7c241a165b55a5cf85ce8f472ad8e200ac3
 workflow-type: tm+mt
-source-wordcount: '1076'
+source-wordcount: '1086'
 ht-degree: 6%
 
 ---
@@ -49,13 +49,13 @@ ht-degree: 6%
 
 要批量更新用户档案数据，请创建批处理文件。 批处理文件是一个文本文件，其值由逗号分隔，类似于以下示例文件。
 
-``` ```
+``````
 batch=pcId,param1,param2,param3,param4
 123,value1
 124,value1,,,value4
 125,,value2
 126,value1,value2,value3,value4
-``` ```
+``````
 
 >[!NOTE]
 >
@@ -67,7 +67,7 @@ batch=pcId,param1,param2,param3,param4
 * 第一个标头应为`pcId`或`thirdPartyId`。 不支持[!UICONTROL Marketing Cloud visitor ID]。 [!UICONTROL pcId]是[!DNL Target]生成的访客ID。 `thirdPartyId`是由客户端应用程序指定的ID，它通过mbox调用作为[!DNL Target]传递给`mbox3rdPartyId`。 它必须在此作为`thirdPartyId`引用。
 * 出于安全原因，您在批处理文件中指定的参数和值必须使用UTF-8进行URL编码。 参数和值可以转发到其他边缘节点以供通过HTTP请求进行处理。
 * 参数必须仅采用`paramName`格式。 参数在[!DNL Target]中显示为`profile.paramName`。
-* 如果您使用[!UICONTROL Bulk Profile Update API] v2，则不需要为每个`pcId`指定所有参数值。 已为`pcId`中未找到的任何`mbox3rdPartyId`或[!DNL Target]创建配置文件。 如果您使用的是v1，则不会为缺少的pcIds或mbox3rdPartyIds创建配置文件。
+* 如果您使用[!UICONTROL Bulk Profile Update API] v2，则不需要为每个`pcId`指定所有参数值。 已为`pcId`中未找到的任何`mbox3rdPartyId`或[!DNL Target]创建配置文件。 如果您使用的是v1，则不会为缺少的pcIds或mbox3rdPartyIds创建配置文件。 有关详细信息，请参阅以下[中的 [!DNL Bulk Profile Update API]](#empty)处理空值。
 * 批处理文件必须小于 50 MB。此外，总行数不应超过500,000。 此限制可确保服务器不会因请求过多而泛滥。
 * 您可以发送多个文件。 但是，您一天内发送的所有文件的行总数不应超过每个客户端的100万。
 * 您可以上传的属性数量没有限制。 但是，外部配置文件数据（包括客户属性、配置文件API、Mbox内配置文件参数和配置文件脚本输出）的总大小不得超过64 KB。
@@ -77,9 +77,9 @@ batch=pcId,param1,param2,param3,param4
 
 向[!DNL Target]边缘服务器发出HTTP POST请求以处理该文件。 以下是使用curl命令对文件batch.txt发出的HTTP POST请求示例：
 
-``` ```
+``````
 curl -X POST --data-binary @BATCH.TXT http://CLIENTCODE.tt.omtrdc.net/m2/CLIENTCODE/v2/profile/batchUpdate
-``` ```
+``````
 
 其中：
 
@@ -145,7 +145,7 @@ http://mboxedge45.tt.omtrdc.net/m2/demo/profile/batchStatus?batchId=demo-1701473
 </response>
 ```
 
-## 处理[!DNL Bulk Profile Update API]中的空值
+## 处理[!DNL Bulk Profile Update API]中的空值 {#empty}
 
 使用[!DNL Target] [!DNL Bulk Profile Update API] （v1或v2）时，了解系统如何处理空参数或属性值非常重要。
 
@@ -153,11 +153,11 @@ http://mboxedge45.tt.omtrdc.net/m2/demo/profile/batchStatus?batchId=demo-1701473
 
 发送现有参数或属性的空值（“”、null或缺少字段）不会重置或删除配置文件存储中的这些值。 这是特意设计的。
 
-**忽略空值**： API在处理期间过滤掉空值，以避免不必要或无意义的更新。
+* **忽略空值**： API在处理期间过滤掉空值，以避免不必要或无意义的更新。
 
-**不清除现有数据**：如果参数已有值，则发送空值会使其保持不变。
+* **不清除现有数据**：如果参数已有值，则发送空值会使其保持不变。
 
-**跳过了仅含Empty的批次**：如果某个批次仅包含空值或Null值，则将完全忽略该批次，并且不应用任何更新。
+* **跳过了仅含Empty的批次**：如果某个批次仅包含空值或Null值，则将完全忽略该批次，并且不应用任何更新。
 
 ### 其他说明
 
