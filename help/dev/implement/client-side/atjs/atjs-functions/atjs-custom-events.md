@@ -4,7 +4,7 @@ description: 使用适用于 [!DNL Adobe Target] at.js JavaScript库的自定义
 title: 如何使用at.js自定义事件？
 feature: at.js
 exl-id: a4baed9a-9eb8-4343-9834-709b03e44ca2
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+source-git-commit: 67cc93cf697f8d5bca6fedb3ae974e4012347a0b
 workflow-type: tm+mt
 source-wordcount: '655'
 ht-degree: 71%
@@ -13,7 +13,7 @@ ht-degree: 71%
 
 # at.js 自定义事件
 
-有关 `at.js custom events` 的信息，可让您知道 mbox 请求或选件何时失败或成功。
+有关 `at.js custom events` 的信息，可让您知道 mbox 请求或产品建议何时失败或成功。
 
 以前，mbox.js（现已弃用）不会让页面上运行的其他JavaScript代码知道后台的情况。 随着 at.js 的进步，我们有一个难得的机会来解决此问题。
 
@@ -50,4 +50,4 @@ document.addEventListener(adobe.target.event.REQUEST_SUCCEEDED, function(event) 
 
 观看以下视频，了解如何使用响应令牌和at.js自定义事件将[!DNL Target]中的配置文件信息共享到第三方系统。
 
->[!VIDEO](https://video.tv.adobe.com/v/33361/?quality=12&captions=chi_hans)
+>[!VIDEO](https://video.tv.adobe.com/v/23253/?quality=12)

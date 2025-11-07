@@ -4,7 +4,7 @@ description: 了解如何使用at.js库执行[!UICONTROL on-device decisioning]
 title: “设备上决策”如何与at.js JavaScript库一起使用？
 feature: at.js
 exl-id: bd0e062f-c259-46f3-adba-e380af058ac8
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+source-git-commit: 67cc93cf697f8d5bca6fedb3ae974e4012347a0b
 workflow-type: tm+mt
 source-wordcount: '3478'
 ht-degree: 4%
@@ -13,7 +13,7 @@ ht-degree: 4%
 
 # 用于at.js的[!UICONTROL On-device decisioning]
 
-从版本2.5.0开始，at.js提供[!UICONTROL on-device decisioning]。 [!UICONTROL On-device decisioning]允许您在浏览器上缓存[A/B测试](https://experienceleague.adobe.com/docs/target/using/activities/abtest/test-ab.html?lang=zh-Hans)和[体验定位](https://experienceleague.adobe.com/docs/target/using/activities/experience-targeting/experience-target.html?lang=zh-Hans) (XT)活动以执行内存中决策，而不会向[!DNL Adobe Target]Edge Network发送阻止网络请求。
+从版本2.5.0开始，at.js提供[!UICONTROL on-device decisioning]。 [!UICONTROL On-device decisioning]允许您在浏览器上缓存[A/B测试](https://experienceleague.adobe.com/docs/target/using/activities/abtest/test-ab.html)和[体验定位](https://experienceleague.adobe.com/docs/target/using/activities/experience-targeting/experience-target.html) (XT)活动以执行内存中决策，而无需向[!DNL Adobe Target] Edge Network发送阻止网络请求。
 
 >[!NOTE]
 >
@@ -28,17 +28,17 @@ ht-degree: 4%
 * **提供超快的决策和体验。**&#x200B;在内存中和浏览器上执行分段和决策，以避免阻止网络请求。
 * **增强应用程序性能。**&#x200B;在不影响最终用户体验的情况下运行实验并向您的客户和用户提供个性化。
 * **提高Google网站质量分数。**&#x200B;由于决策在内存中进行，请提高您在线业务的Google网站质量分数，以使消费者更容易发现它。
-* **从实时分析中学习。**&#x200B;通过[Analytics for Target](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t.html?lang=zh-Hans) (A4T)报表实时了解您的活动表现。 A4T允许您在关键时刻调整策略。
+* **从实时分析中学习。**&#x200B;通过[Analytics for Target](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t.html) (A4T)报表实时了解您的活动表现。 A4T允许您在关键时刻调整策略。
 
 ## 受支持的功能
 
-[!DNL Adobe Target] JS SDK使客户能够灵活地选择数据的性能和新鲜度以供决策。 换言之，如果通过机器学习提供最相关且最引人入胜的个性化内容对您来说最重要，则应进行实时服务器调用。 但是，当性能更加关键时，应该做出设备上决策和内存决策。 要使[!UICONTROL on-device decisioning]正常工作，请参阅支持的功能列表：
+[!DNL Adobe Target] JS SDK允许客户灵活选择数据的性能和新鲜度以供决策。 换言之，如果通过机器学习提供最相关且最引人入胜的个性化内容对您来说最重要，则应进行实时服务器调用。 但是，当性能更加关键时，应该做出设备上决策和内存决策。 要使[!UICONTROL on-device decisioning]正常工作，请参阅支持的功能列表：
 
 * 活动类型
 * 受众定位
 * 分配方法
 
-有关详细信息，请参阅[!UICONTROL on-device decisioning][&#128279;](/help/dev/implement/client-side/atjs/on-device-decisioning/supported-features.md)的支持的功能。
+有关详细信息，请参阅[的[!UICONTROL on-device decisioning]](/help/dev/implement/client-side/atjs/on-device-decisioning/supported-features.md)支持的功能。
 
 ## [!UICONTROL on-device decisioning]的工作原理是什么？
 
@@ -56,7 +56,7 @@ ht-degree: 4%
 
 仅服务器端是在您的Web资产上实施和部署at.js 2.5.0及更高版本时开箱即用的默认决策方法。
 
-仅将服务器端用作默认配置意味着在[!DNL Target]边缘网络上做出所有决策，其中涉及阻止服务器调用。 此方法可能会引入增量延迟，但它还提供了显着的优势，例如让您能够应用[!DNL Target]的机器学习功能，包括[Recommendations](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations.html?lang=zh-Hans)、[Automated Personalization](https://experienceleague.adobe.com/docs/target/using/activities/automated-personalization/automated-personalization.html?lang=zh-Hans) (AP)和[自动定位](https://experienceleague.adobe.com/docs/target/using/activities/auto-target/auto-target-to-optimize.html?lang=zh-Hans)活动。
+仅将服务器端用作默认配置意味着在[!DNL Target]边缘网络上做出所有决策，其中涉及阻止服务器调用。 此方法可能会引入增量延迟，但它也提供了显着的优势，例如允许您应用[!DNL Target]的机器学习功能，包括[推荐](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations.html)、[Automated Personalization](https://experienceleague.adobe.com/docs/target/using/activities/automated-personalization/automated-personalization.html) (AP)和[自动定位](https://experienceleague.adobe.com/docs/target/using/activities/auto-target/auto-target-to-optimize.html)活动。
 
 此外，通过使用[!DNL Target]的用户配置文件（跨会话和渠道保留）增强您的个性化体验，可为您的业务带来强大的成果。
 
@@ -72,16 +72,16 @@ ht-degree: 4%
 
 | 步骤 | 描述 |
 | --- | --- |
-| 1 | 从[Adobe Experience Cloud Identity Service](https://experienceleague.adobe.com/docs/id-service/using/home.html?lang=zh-Hans&)检索Experience Cloud访客ID。 |
+| 1 | Experience Cloud访客ID是从[Adobe Experience Cloud Identity Service](https://experienceleague.adobe.com/docs/id-service/using/home.html?)中检索的。 |
 | 2 | at.js 库会同步加载，并隐藏文档正文。<br />   也可以选择在页面上实施预先隐藏的代码片段，以异步方式加载at.js库。 |
 | 3 | at.js库会隐藏正文以防止闪烁。 |
 | 4 | 将会发出页面加载请求，其中包括已配置的所有参数，例如（ECID、客户ID、自定义参数、用户配置文件等）。 |
-| 5 | 配置文件脚本在执行后进入配置文件存储区。<br />配置文件存储区从受众库请求符合条件的受众(例如，从Adobe Analytics、Adobe Audience Manager等共享的受众)。<br />客户属性会以批量过程发送到配置文件存储区。 |
+| 5 | 配置文件脚本在执行后进入配置文件存储区。<br />配置文件存储区从受众库请求符合条件的受众(例如，从Adobe Analytics、Adobe Audience Manager等共享的受众)。<br />客户属性会以批量过程发送到轮廓存储区。 |
 | 6 | 配置文件存储区用于受众资格和分段以筛选活动。 |
 | 7 | 在从实时[!DNL Target]活动中确定体验后，将选择生成的内容。 |
 | 8 | at.js库会隐藏页面上与必须呈现的体验关联的相应元素。 |
 | 9 | at.js库会显示主体，以便可以加载页面的其余部分以供访客查看。 |
-| 10 | at.js库操作DOM以呈现来自[!DNL Target]Edge Network的体验。 |
+| 10 | at.js库操作DOM以呈现来自[!DNL Target] Edge Network的体验。 |
 | 11 | 体验会呈现给访客。 |
 | 12 | 加载整个网页。 |
 | 13 | Analytics 数据会发送到数据收集服务器。 |
@@ -93,9 +93,9 @@ ht-degree: 4%
 
 [!UICONTROL On-device decisioning]能够以惊人的速度交付您的体验和个性化活动，因为决策是从包含您所有符合[!UICONTROL on-device decisioning]条件的活动的缓存规则工件做出的。
 
-要了解有关哪些活动符合[!UICONTROL on-device decisioning]条件的更多信息，请参阅[!UICONTROL on-device decisioning][&#128279;](/help/dev/implement/client-side/atjs/on-device-decisioning/supported-features.md)中的支持的功能。
+要了解有关哪些活动符合[!UICONTROL on-device decisioning]条件的更多信息，请参阅[中的[!UICONTROL on-device decisioning]](/help/dev/implement/client-side/atjs/on-device-decisioning/supported-features.md)支持的功能。
 
-仅当在所有需要Target决策的页面上的性能都非常关键时，才应使用此决策方法。 此外，请记住，选择此决策方法时，将不会交付或执行您不符合[!UICONTROL on-device decisioning]条件的[!DNL Target]活动。 at.js库2.5.0及更高版本配置为仅查找缓存的规则工件以做出决策。
+仅当在所有需要Target决策的页面上的性能都非常关键时，才应使用此决策方法。 此外，请记住，选择此决策方法时，将不会交付或执行您不符合[!DNL Target]条件的[!UICONTROL on-device decisioning]活动。 at.js库2.5.0及更高版本配置为仅查找缓存的规则工件以做出决策。
 
 下图说明了您的访客、浏览器、at.js 2.5.0+和Akamai CDN之间的交互。 Akamai CDN将在访客首次访问时缓存规则构件。 对于新访客进行的首次页面访问，必须从Akamai CDN下载JSON规则构件，才能在访客的浏览器中缓存到本地。 下载JSON规则工件后，将立即做出决策，而无需阻止网络调用。 以下流程图可捕获新访客。
 
@@ -111,7 +111,7 @@ ht-degree: 4%
 
 | 步骤 | 描述 |
 | --- | --- |
-| 1 | 从[Adobe Experience Cloud Identity Service](https://experienceleague.adobe.com/docs/id-service/using/home.html?lang=zh-Hans)检索Experience Cloud访客ID。 |
+| 1 | Experience Cloud访客ID是从[Adobe Experience Cloud Identity Service](https://experienceleague.adobe.com/docs/id-service/using/home.html)中检索的。 |
 | 2 | at.js 库会同步加载，并隐藏文档正文。<br />也可以使用页面上实施的可选预隐藏代码片段异步加载at.js库。 |
 | 3 | at.js库会隐藏正文以防止闪烁。 |
 | 4 | at.js库会发出请求，请求从距离访客最近的Akamai CDN检索JSON规则构件。 |
@@ -138,7 +138,7 @@ ht-degree: 4%
 
 | 步骤 | 描述 |
 | --- | --- |
-| 1 | 从[Adobe Experience Cloud Identity Service](https://experienceleague.adobe.com/docs/id-service/using/home.html?lang=zh-Hans)检索Experience Cloud访客ID。 |
+| 1 | Experience Cloud访客ID是从[Adobe Experience Cloud Identity Service](https://experienceleague.adobe.com/docs/id-service/using/home.html)中检索的。 |
 | 2 | at.js 库会同步加载，并隐藏文档正文。<br />也可以使用页面上实施的可选预隐藏代码片段异步加载at.js库。 |
 | 3 | at.js库会隐藏正文以防止闪烁。 |
 | 4 | at.js库解释JSON规则工件并在内存中执行决策以检索体验。 |
@@ -157,7 +157,7 @@ ht-degree: 4%
 
 JSON规则工件包含元数据，用于通知at.js mbox是正在运行的服务器端活动还是[!UICONTROL on-device decisioning]活动。 此决策方法可确保通过[!UICONTROL on-device decisioning]快速完成您想要交付的活动，对于需要更强大的ML驱动型个性化的活动，这些活动将通过[!DNL Adobe Target] Edge网络完成。
 
-下图说明了您的访客、浏览器、at.js 2.5.0及更高版本、Akamai CDN以及首次访问您页面的新访客的[!DNL Adobe Target]Edge Network之间的交互。 此图的要点是，在通过[!DNL Adobe Target] Edge网络做出决策时，将异步下载JSON规则构件。
+下图说明了访客与浏览器、at.js 2.5.0及更高版本、Akamai CDN和[!DNL Adobe Target]Edge Network之间的交互，其中新访客是首次访问您的页面。 此图的要点是，在通过[!DNL Adobe Target] Edge网络做出决策时，将异步下载JSON规则构件。
 
 此方法可确保包含许多活动的工件大小不会对决策的延迟产生负面影响。 同步下载JSON规则工件并在此后进行决策也会对延迟产生不利影响，并且可能不一致。 因此，混合决策方法是一种最佳实践建议，始终为新访客决策进行服务器端调用，并且并行缓存JSON规则构件。 对于任何后续页面访问和回访，将通过JSON规则工件从缓存和内存中做出决策。
 
@@ -173,18 +173,18 @@ JSON规则工件包含元数据，用于通知at.js mbox是正在运行的服务
 
 | 步骤 | 描述 |
 | --- | --- |
-| 1 | 从[Adobe Experience Cloud Identity Service](https://experienceleague.adobe.com/docs/id-service/using/home.html?lang=zh-Hans)检索Experience Cloud访客ID。 |
+| 1 | Experience Cloud访客ID是从[Adobe Experience Cloud Identity Service](https://experienceleague.adobe.com/docs/id-service/using/home.html)中检索的。 |
 | 2 | at.js 库会同步加载，并隐藏文档正文。<br />也可以使用页面上实施的可选预隐藏代码片段异步加载at.js库。 |
 | 3 | at.js库会隐藏正文以防止闪烁。 |
-| 4 | 向[!DNL Adobe Target]Edge Network发出页面加载请求，其中包括已配置的所有参数，例如（ECID、客户ID、自定义参数、用户配置文件等）。 |
+| 4 | 向[!DNL Adobe Target] Edge Network发出页面加载请求，其中包括已配置的所有参数，例如（ECID、客户ID、自定义参数、用户配置文件等）。 |
 | 5 | 同时，at.js会发出请求，请求从最接近访客的Akamai CDN检索JSON规则构件。 |
-| 6 | ([!DNL Adobe Target]个Edge Network)配置文件脚本在执行后进入配置文件存储区。 配置文件存储区从受众库请求符合条件的受众(例如，从Adobe Analytics、Adobe Audience Manager等共享的受众)。 |
+| 6 | ([!DNL Adobe Target] Edge Network)配置文件脚本在执行后进入配置文件存储区。 配置文件存储区从受众库请求符合条件的受众(例如，从Adobe Analytics、Adobe Audience Manager等共享的受众)。 |
 | 7 | Akamai CDN使用JSON规则工件进行响应。 |
 | 8 | 配置文件存储区用于受众资格和分段以筛选活动。 |
 | 9 | 在从实时[!DNL Target]活动中确定体验后，将选择生成的内容。 |
 | 10 | at.js库会隐藏页面上与必须呈现的体验关联的相应元素。 |
 | 11 | at.js库会显示主体，以便可以加载页面的其余部分以供访客查看。 |
-| 12 | at.js库操作DOM以呈现来自[!DNL Target]Edge Network的体验。 |
+| 12 | at.js库操作DOM以呈现来自[!DNL Target] Edge Network的体验。 |
 | 13 | 体验会呈现给访客。 |
 | 14 | 加载整个网页。 |
 | 15 | Analytics数据会发送到数据收集服务器。 目标数据会通过SDID匹配到Analytics数据，并且会进行相应处理以保存到Analytics报表存储中。 然后，便可以在Analytics和[!DNL Target]中通过[!UICONTROL Analytics for Target] (A4T)报表查看Analytics数据。 |
@@ -203,7 +203,7 @@ JSON规则工件包含元数据，用于通知at.js mbox是正在运行的服务
 
 | 步骤 | 描述 |
 | --- | --- |
-| 1 | 从[Adobe Experience Cloud Identity Service](https://experienceleague.adobe.com/docs/id-service/using/home.html?lang=zh-Hans)检索Experience Cloud访客ID。 |
+| 1 | Experience Cloud访客ID是从[Adobe Experience Cloud Identity Service](https://experienceleague.adobe.com/docs/id-service/using/home.html)中检索的。 |
 | 2 | at.js 库会同步加载，并隐藏文档正文。<br />也可以使用页面上实施的可选预隐藏代码片段异步加载at.js库。 |
 | 3 | at.js库会隐藏正文以防止闪烁。 |
 | 4 | 系统会提出检索体验的请求。 |
@@ -223,7 +223,7 @@ JSON规则工件包含元数据，用于通知at.js mbox是正在运行的服务
 
 >[!NOTE]
 >
->您必须具有管理员或审批者[用户角色](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/user-management.html?lang=zh-Hans)才能启用或禁用“设备端决策”切换开关。
+>您必须具有管理员或审批者[用户角色](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/user-management.html)才能启用或禁用“设备端决策”切换开关。
 
 1. 单击&#x200B;**[!UICONTROL Administration]** > **[!UICONTROL Implementation]** > **[!UICONTROL Account details]**。
 1. 在&#x200B;**[!UICONTROL Account details]**&#x200B;下，将&#x200B;**[!UICONTROL On-Device Decisioning]**&#x200B;切换开关滑动到“开”位置。
@@ -231,7 +231,7 @@ JSON规则工件包含元数据，用于通知at.js mbox是正在运行的服务
    ![[!UICONTROL On-device decisioning]切换](assets/on-device-decisioning-toggle.png)
 
    如果启用了[!UICONTROL on-device decisioning]，则会显示“将所有现有的[!UICONTROL on-device decisioning]合格活动包含在项目中”选项。
-1. （视情况而定）如果您希望所有符合[!UICONTROL on-device decisioning]条件的实时[!DNL Target]活动自动包含在项目中，请将切换开关滑动到“开”位置。
+1. （视情况而定）如果您希望所有符合[!DNL Target]条件的实时[!UICONTROL on-device decisioning]活动自动包含在项目中，请将切换开关滑动到“开”位置。
 
    将此切换保留为关闭表示您必须重新创建和激活任何[!UICONTROL on-device decisioning]活动，才能将其包含在生成的规则工件中。 换言之，在打开设备上决策切换开关之前处于实时状态的任何活动均不包含在规则工件中。
 
@@ -262,7 +262,7 @@ JSON规则工件包含元数据，用于通知at.js mbox是正在运行的服务
 
 ### 全局设置
 
-您可以为所有[!DNL Target]决策配置默认决策方法。 各种决策方法是仅服务器端、仅设备上和混合。 在[!DNL Target] UI中选择的决策方法在`decisioningMethod`字段下的`window.targetGlobalSettings`中配置。 在[targetGlobalSettings()](/help/dev/implement/client-side/atjs/atjs-functions/targetglobalsettings.md#decisioningmethod)中了解有关`decisioningMethod`的更多信息。
+您可以为所有[!DNL Target]决策配置默认决策方法。 各种决策方法是仅服务器端、仅设备上和混合。 在[!DNL Target] UI中选择的决策方法在`window.targetGlobalSettings`字段下的`decisioningMethod`中配置。 在`decisioningMethod`targetGlobalSettings()[中了解有关](/help/dev/implement/client-side/atjs/atjs-functions/targetglobalsettings.md#decisioningmethod)的更多信息。
 
 ```javascript {line-numbers="true"}
 <head> 
@@ -282,7 +282,7 @@ JSON规则工件包含元数据，用于通知at.js mbox是正在运行的服务
 
 ### 自定义设置
 
-如果您在`window.targetGlobalSettings`中设置了`decisioningMethod`，但想要根据用例覆盖每个[!DNL Adobe Target]决策的`decisioningMethod`，则可以通过在At.js2.5.0+的[getOffers()](/help/dev/implement/client-side/atjs/atjs-functions/adobe-target-getoffers-atjs-2.md)调用中指定`decisioningMethod`来执行此过程。
+如果您在`decisioningMethod`中设置了`window.targetGlobalSettings`，但想要根据用例覆盖每个`decisioningMethod`决策的[!DNL Adobe Target]，则可以通过在At.js2.5.0+的`decisioningMethod`getOffers()[调用中指定](/help/dev/implement/client-side/atjs/atjs-functions/adobe-target-getoffers-atjs-2.md)来执行此过程。
 
 ```javascript {line-numbers="true"}
 adobe.target.getOffers({ 
@@ -334,6 +334,6 @@ Target表示您的活动符合[!UICONTROL on-device decisioning]作为包含元�
 
    首个JSON规则工件生成操作最多可能需要10分钟。
 
-1. 创建并激活[!UICONTROL on-device decisioning][&#128279;](/help/dev/implement/client-side/atjs/on-device-decisioning/supported-features.md)支持的活动类型，并验证它是否符合[!UICONTROL on-device decisioning]条件。
+1. 创建并激活[支持的[!UICONTROL on-device decisioning]](/help/dev/implement/client-side/atjs/on-device-decisioning/supported-features.md)活动类型，并验证它是否符合[!UICONTROL on-device decisioning]条件。
 1. 通过at.js设置UI将&#x200B;**[!UICONTROL Decisioning Method]**&#x200B;设置为&#x200B;**[!UICONTROL "Hybrid"]**&#x200B;或&#x200B;**[!UICONTROL "On-device only"]**。
 1. 下载At.js 2.5.0及更高版本并将其部署到您的页面。

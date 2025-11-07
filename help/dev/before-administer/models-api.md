@@ -3,7 +3,7 @@ title: Adobe模型API概述
 description: 模型API的概述，用户可以使用它阻止将功能包含在机器学习模型中。
 exl-id: e34b9b03-670b-4f7c-a94e-0c3cb711d8e4
 feature: APIs/SDKs, Recommendations, Administration & Configuration
-source-git-commit: 09a50aa67ccd5c687244a85caad24df56c0d78f5
+source-git-commit: 67cc93cf697f8d5bca6fedb3ae974e4012347a0b
 workflow-type: tm+mt
 source-wordcount: '1288'
 ht-degree: 2%
@@ -14,7 +14,7 @@ ht-degree: 2%
 
 模型API(也称为阻止列表API)使用户能够查看和管理机器学习模型中用于[!UICONTROL Automated Personalization] (AP)和[!DNL Auto-Target] (AT)活动的功能的列表。 列入阻止列表如果用户希望排除模型用于AP或AT活动的功能，可以使用模型API将该功能添加到“”中。
 
-**[!UICONTROL blocklist]**&#x200B;定义将由[!DNL Adobe Target]从其机器学习模型中排除的功能集。 有关功能的详细信息，请参阅[机器学习算法 [!DNL Target] 使用的数据](https://experienceleague.adobe.com/docs/target/using/activities/automated-personalization/ap-data.html?lang=zh-Hans)。
+**[!UICONTROL blocklist]**&#x200B;定义将由[!DNL Adobe Target]从其机器学习模型中排除的功能集。 有关功能的详细信息，请参阅[机器学习算法 [!DNL Target] 使用的数据](https://experienceleague.adobe.com/docs/target/using/activities/automated-personalization/ap-data.html)。
 
 可以按活动（活动级别）定义阻止列表，也可以为[!DNL Target]帐户内的所有活动（全局级别）定义活动。
 
@@ -100,7 +100,7 @@ GET https://mc.adobe.io/<tenant>/target/models/features/<campaignId>
 >
 >要查找您活动的活动ID，请导航到[!DNL Target] UI中的活动列表。 单击感兴趣的活动。 活动ID将显示在生成的活动概述页面的正文中，以及此页面URL的末尾。
 
-**[!UICONTROL externalName]**&#x200B;是某个功能的用户友好名称。 它由[!DNL Target]创建，此值可能会随着时间的推移而改变。 用户可以在[Personalization Insights报表](https://experienceleague.adobe.com/docs/target/using/reports/insights/personalization-insights-reports.html?lang=zh-Hans)中查看这些用户友好的名称。
+**[!UICONTROL externalName]**&#x200B;是某个功能的用户友好名称。 它由[!DNL Target]创建，此值可能会随着时间的推移而改变。 用户可以在[Personalization Insights报表](https://experienceleague.adobe.com/docs/target/using/reports/insights/personalization-insights-reports.html)中查看这些用户友好的名称。
 
 **[!UICONTROL internalName]**&#x200B;是功能的实际标识符。 它也是由[!DNL Target]创建的，但无法更改。 为了确定要阻止列表的特征，需要参照此值。
 
@@ -143,10 +143,10 @@ GET https://mc.adobe.io/<tenant>/target/models/features/blockList/<campaignId>
 
 ## 步骤3：将功能添加到活动的阻止列表 {#step3}
 
-若要向PUT添加功能，请将请求从GET更改为阻止列表，并修改请求正文以根据需要指定`blockedFeatureSources`或`blockedFeatures`。
+要将功能添加到GET，请将请求从PUT更改为列入阻止列表，并修改请求正文以根据需要指定`blockedFeatureSources`或`blockedFeatures`。
 
 * 请求正文需要`blockedFeatures`或`blockedFeatureSources`。 两者均可包括在内。
-* 使用从`internalName`中标识的值填充`blockedFeatures`。 请参阅[步骤1](#step1)。
+* 使用从`blockedFeatures`中标识的值填充`internalName`。 请参阅[步骤1](#step1)。
 * 使用下表中的值填充`blockedFeatureSources`。
 
 请注意，`blockedFeatureSources`指示某个功能来自何处。 为了进行列入阻止列表，它们用作功能组或功能类别，使用户能够一次阻止整个功能集。 `blockedFeatureSources`的值匹配功能标识符的第一个字符（`blockedFeatures`或`internalName`值）；因此它们也可能被视为“功能前缀”。
@@ -158,7 +158,7 @@ GET https://mc.adobe.io/<tenant>/target/models/features/blockList/<campaignId>
 | BOX | Mbox 参数 |
 | URL | 自定义 — URL参数 |
 | 环境 | 环境 |
-| SES | 访客个人资料 |
+| SES | 访客轮廓 |
 | 地域 | 地理位置 |
 | PRO | 自定义 — 配置文件 |
 | SEG | 自定义 — 报表区段 |
@@ -166,7 +166,7 @@ GET https://mc.adobe.io/<tenant>/target/models/features/blockList/<campaignId>
 | 暴徒 | 移动设备 |
 | CRS | 自定义 — 客户属性 |
 | UPA | 自定义 — RT-CDP配置文件属性 |
-| IAC | 访客兴趣区域 |  |
+| IAC | 访客兴趣区域 |
 
 >[!BEGINTABS]
 
@@ -201,7 +201,7 @@ PUT https://mc.adobe.io/<tenant>/target/models/features/blockList/<campaignId>
 
 ![步骤 3](assets/models-api-step-3.png)
 
-请注意，在列入阻止列表列入阻止列表功能后，建议您再次执行[步骤2](#step2)(GET列入阻止列表)来验证更新的。 验证结果是否按预期显示(验证结果是否包含从最新PUT请求添加的功能)。
+请注意，在列入阻止列表功能后，建议您再次执行[步骤2](#step2) (GET列入阻止列表 阻止列表)来验证更新的。 验证结果是否按预期显示(验证结果是否包含从最新PUT请求添加的功能)。
 
 ## 步骤4：（可选）取消阻止 {#step4}
 
@@ -235,7 +235,7 @@ PUT https://mc.adobe.io/<tenant>/target/models/features/blockList/<campaignId>
 
 ![步骤 4](assets/models-api-step-4.png)
 
-列入阻止列表与往常一样，修改列表后，建议您再次执行[步骤2](#step2)(GET列入阻止列表列表以验证是否按预期包含功能)。 在此处的示例中，用户正在验证其阻止列表现在是否为空。
+列入阻止列表与往常一样，修改后，建议您再次执行[步骤2](#step2) (GET列入阻止列表的验证列表包含预期的功能)。 在此处的示例中，用户正在验证其阻止列表现在是否为空。
 
 ![步骤4b](assets/models-api-step-4b.png)
 
@@ -278,11 +278,11 @@ PUT https://mc.adobe.io/<tenant>/target/models/features/blockList/global
 
 >[!ENDTABS]
 
-在上面显示的请求示例中，用户在其[!DNL Target]帐户中的所有活动中阻止两项功能：“AAM_FEATURE_1”和“AAM_FEATURE_2”。 这意味着无论活动如何，“AAM_FEATURE_1”和“AAM_FEATURE_2”都不会包含在此帐户的机器学习模型中。 此外，用户还全局阻止前缀为“AAM”、“PRO”或“ENV”的所有功能。
+在上面显示的请求示例中，用户在其[!DNL Target]帐户中的所有活动中阻止两项功能：“AAM_FEATURE_1”和“AAM_FEATURE_2”。 这意味着，无论活动如何，“AAM_FEATURE_1”和“AAM_FEATURE_2”都不会包含在此帐户的机器学习模型中。 此外，用户还全局阻止前缀为“AAM”、“PRO”或“ENV”的所有功能。
 
 问题：以上代码示例不是多余的吗？
 
-回答：是。 对于以“AAM”开头的值阻止功能，同时阻止源为“AAM”的所有功能，这是多余的。 最终结果是所有源自AAM(Experience Cloud区段)的功能都将被阻止。 因此，如果目标是阻止Experience Cloud区段中的所有功能，则在上例中，无需以“AAM”开头单独指定某些功能。
+回答：是。 对于以值开头为“AAM”的功能，如果同时阻止源为“AAM”的所有功能，则是多余的。 最终结果是所有源自AAM (Experience Cloud区段)的功能都将被阻止。 因此，如果目标是阻止来自Experience Cloud区段的所有功能，则无需在上例中以“AAM”开头单独指定某些功能。
 
 列入阻止列表最后步骤：无论是在活动级别还是全局级别，都建议您在修改活动后验证URL，以确保该URL包含所需的值。 将`PUT`更改为`GET`以执行此操作。
 

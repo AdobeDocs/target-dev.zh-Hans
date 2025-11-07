@@ -2,7 +2,7 @@
 title: 与Experience Cloud集成
 description: 与Experience Cloud集成
 keywords: 投放api
-source-git-commit: f16903556954d2b1854acd429f60fbf6fc2920de
+source-git-commit: 67cc93cf697f8d5bca6fedb3ae974e4012347a0b
 workflow-type: tm+mt
 source-wordcount: '467'
 ht-degree: 7%
@@ -26,7 +26,7 @@ ht-degree: 7%
 如果提供了以下标识符，Adobe Target则可以通过服务器端自动将analytics有效负载转发到Adobe Analytics：
 
 1. `supplementalDataId` — 用于在Adobe Analytics和Adobe Target之间拼接的ID
-1. `trackingServer` - Analytics服务器Adobe为使Adobe Target和Adobe Analytics能够正确地将数据拼合在一起，需要将相同的`supplementalDataId`传递到Adobe Target和Adobe Analytics。
+1. `trackingServer` - Adobe Analytics服务器为了使Adobe Target和Adobe Analytics能够正确地将数据拼合在一起，需要将相同的`supplementalDataId`传递到Adobe Target和Adobe Analytics。
 
 ```
 curl -X POST \
@@ -176,7 +176,7 @@ curl -X POST \
 }
 ```
 
-如果来自Target的响应在`analytics` -> `payload`属性中包含任何内容，请将其转发到Adobe Analytics。 Analytics知道如何处理此有效负载。 这可以在GET请求中完成，可使用以下格式：
+如果来自Target的响应在`analytics` -> `payload`属性中包含任何内容，请将其转发到Adobe Analytics。 Analytics知道如何处理此有效负载。 这可以在GET请求中完成，使用以下格式：
 
 ```
 https://{datacollectionhost.sc.omtrdc.net}/b/ss/{rsid}/0/CODEVERSION?pe=tnt&tnta={payload}&mid={mid}&vid={vid}&aid={aid}
@@ -189,7 +189,7 @@ https://{datacollectionhost.sc.omtrdc.net}/b/ss/{rsid}/0/CODEVERSION?pe=tnt&tnta
 | `rsid` | 是 | 点击 |
 | `pe` | 是 | 页面事件。 始终设置为`tnt` |
 | `tnta` | 是 | Target服务器在`analytics` -> `payload` -> `tnta`中返回的分析有效负载 |
-| `mid` | Marketing Cloud 访客 ID |
+| `mid` | Marketing Cloud 访客 ID |  |
 
 ### 必需的标头值
 

@@ -4,7 +4,7 @@ description: 了解 [!DNL Adobe Target] 以及旨在保护Safari用户隐私的A
 title: ' [!DNL Target] 如何处理Apple ITP支持？'
 feature: Privacy & Security
 exl-id: 6deee03b-df86-4d0d-999c-b11855ddfda5
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+source-git-commit: 67cc93cf697f8d5bca6fedb3ae974e4012347a0b
 workflow-type: tm+mt
 source-wordcount: '606'
 ht-degree: 30%
@@ -25,17 +25,17 @@ ht-degree: 30%
 
 ## 这对作为[!DNL Target]客户的我有何影响？
 
-Target提供了JavaScript库可供您在页面上部署，以便[!DNL Target]可以为访客提供实时个性化。 有三个[!DNL Target]JavaScript库at.js 1.*x*，at.js 2.*x*，通过`document.cookie` API将客户端[!DNL Target] Cookie放置到访客浏览器上的[!DNL Adobe Experience Cloud Web SDK]。 因此，[!DNL Target] Cookie将会受到Apple ITP 2.1、2.2和2.3的影响，并且会在七天（使用ITP 2.1）和一天（使用ITP 2.2和ITP 2.3）后过期。
+Target提供了JavaScript库可供您在页面上部署，以便[!DNL Target]可以为访客提供实时个性化。 有三个[!DNL Target]JavaScript库at.js 1.*x*，at.js 2.*x*，通过[!DNL Adobe Experience Cloud Web SDK] API将客户端[!DNL Target] Cookie放置到访客浏览器上的`document.cookie`。 因此，[!DNL Target] Cookie将会受到Apple ITP 2.1、2.2和2.3的影响，并且会在七天（使用ITP 2.1）和一天（使用ITP 2.2和ITP 2.3）后过期。
 
 Apple ITP 2.x在以下方面影响[!DNL Target]：
 
 | 影响 | 详细信息 |
 | --- | --- |
 | 潜在增加独特访客计数 | 由于过期时间窗口分别设置为七天（使用ITP 2.1）和一天（使用ITP 2.2和ITP 2.3），您可能会看到来自Safari浏览器的独特访客数量增加。 如果您的访客在七天后(ITP 2.1)或一天后（ITP 2.2和ITP 2.3）重新访问域，[!DNL Target]将强制在您的域上放置新的[!DNL Target] Cookie来替换过期的Cookie。 即便是同一用户，新 [!DNL Target] Cookie 仍会转换为新的独特访客。 |
-| 缩短了 [!DNL Target] 活动的回溯期限 | [!DNL Target] 活动的访客配置文件可能会缩短决策的回溯期限。利用 [!DNL Target] Cookie 可识别访客和存储用于个性化的用户配置文件属性。鉴于[!DNL Target] Cookie可以在7天(ITP 2.1)或一天（ITP 2.2和2.3）后Safari过期，与已清除的[!DNL Target] Cookie绑定的用户配置文件数据无法用于决策。 |
-| 基于 3rdPartyID 的个人资料脚本 | 由于过期时间窗口分别设置为七天（使用ITP 2.1）和一天（使用ITP 2.2和ITP 2.3），基于3rdPartyID Cookie的[配置文件脚本](https://experienceleague.adobe.com/docs/target/using/audiences/visitor-profiles/profile-parameters.html?lang=zh-Hans)将在过期后停止运行。 |
-| iOS 设备中的 QA/预览 URL | 由于过期时间窗口分别设置为七天（使用ITP 2.1）和一天（使用ITP 2.2和ITP 2.3），[QA/预览URL](https://experienceleague.adobe.com/docs/target/using/activities/activity-qa/activity-qa.html?lang=zh-Hans)将在过期时停止运行，因为这些URL基于3rdPartyID Cookie。 |
+| 缩短了 [!DNL Target] 活动的回溯期限 | [!DNL Target] 活动的访客轮廓可能会缩短决策的回溯期限。利用 [!DNL Target] Cookie 可识别访客和存储用于个性化的用户轮廓属性。鉴于[!DNL Target] Cookie可以在7天(ITP 2.1)或一天（ITP 2.2和2.3）后Safari过期，与已清除的[!DNL Target] Cookie绑定的用户配置文件数据无法用于决策。 |
+| 基于 3rdPartyID 的轮廓脚本 | 由于过期时间窗口分别设置为七天（使用ITP 2.1）和一天（使用ITP 2.2和ITP 2.3），基于3rdPartyID Cookie的[配置文件脚本](https://experienceleague.adobe.com/docs/target/using/audiences/visitor-profiles/profile-parameters.html)将在过期后停止运行。 |
+| iOS 设备中的 QA/预览 URL | 由于过期时间窗口分别设置为七天（使用ITP 2.1）和一天（使用ITP 2.2和ITP 2.3），[QA/预览URL](https://experienceleague.adobe.com/docs/target/using/activities/activity-qa/activity-qa.html)将在过期时停止运行，因为这些URL基于3rdPartyID Cookie。 |
 
 ## 我当前已实施的 [!DNL Target] 是否会受到影响？
 
-如果除了[!DNL Target] JavaScript库之外，您还在使用Experience CloudID (ECID)库，则您的实施会受到下文所述的影响：[Safari ITP 2.1对Adobe Experience Cloud和Experience Platform客户的影响](https://medium.com/adobetech/safari-itp-2-1-impact-on-adobe-experience-cloud-customers-9439cecb55ac)。
+如果除了[!DNL Target] JavaScript库之外，您还在使用Experience Cloud ID (ECID)库，则您的实施会受到下文所述的影响：[Safari ITP 2.1对Adobe Experience Cloud和Experience Platform客户的影响](https://medium.com/adobetech/safari-itp-2-1-impact-on-adobe-experience-cloud-customers-9439cecb55ac)。

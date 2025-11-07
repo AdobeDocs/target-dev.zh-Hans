@@ -6,7 +6,7 @@ kt: 3815
 thumbnail: null
 author: Judy Kim
 exl-id: 9b391f42-2922-48e0-ad7e-10edd6125be6
-source-git-commit: 526445fccee9b778b7ac0d7245338f235f11d333
+source-git-commit: 67cc93cf697f8d5bca6fedb3ae974e4012347a0b
 workflow-type: tm+mt
 source-wordcount: '1286'
 ht-degree: 1%
@@ -42,9 +42,9 @@ Adobe Target和Adobe Target Recommendations API可用于提供对网页的响应
 
 ## 使用基于表单的体验编辑器创建推荐
 
-要创建可与投放API一起使用的推荐，请使用[基于表单的编辑器](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html?lang=zh-Hans)。
+要创建可与投放API一起使用的推荐，请使用[基于表单的编辑器](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html)。
 
-1. 首先，创建并保存要在推荐中使用的基于JSON的设计。 有关示例JSON以及有关在配置基于表单的活动时如何返回JSON响应的背景信息，请参阅有关[创建推荐设计](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations-design/create-design.html?lang=zh-Hans)的文档。 在此示例中，设计名为&#x200B;*简单JSON。*
+1. 首先，创建并保存要在推荐中使用的基于JSON的设计。 有关示例JSON以及有关在配置基于表单的活动时如何返回JSON响应的背景信息，请参阅有关[创建推荐设计](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations-design/create-design.html)的文档。 在此示例中，设计名为&#x200B;*简单JSON。*
    ![server-side-create-recs-json-design.png](assets/server-side-create-recs-json-design.png)
 
 1. 在Target中，导航到&#x200B;**[!UICONTROL Activities]** > **[!UICONTROL Create Activity]** > **[!UICONTROL Recommendations]**，然后选择&#x200B;**[!UICONTROL Form]**。
@@ -54,7 +54,7 @@ Adobe Target和Adobe Target Recommendations API可用于提供对网页的响应
 1. 选择一个属性，然后单击&#x200B;**[!UICONTROL Next]**。
 1. 定义您希望用户收到推荐响应的位置。 以下示例使用名为&#x200B;*api_charter*&#x200B;的位置。 选择您之前创建的基于JSON的名为&#x200B;*简单JSON.*的设计
    ![server-side-create-recs-form.png](assets/server-side-create-recs-form1.png)
-1. 保存并激活推荐。 那个产生结果。 [结果准备就绪后](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations-activity/previewing-and-launching-your-recommendations-activity.html?lang=zh-Hans)，您可以使用投放API检索它们。
+1. 保存并激活推荐。 那个产生结果。 [结果准备就绪后](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations-activity/previewing-and-launching-your-recommendations-activity.html)，您可以使用投放API检索它们。
 
 ## 使用投放API
 
@@ -62,13 +62,12 @@ Adobe Target和Adobe Target Recommendations API可用于提供对网页的响应
 
 `POST https://{{CLIENT_CODE}}.tt.omtrdc.net/rest/v1/delivery`
 
-1. 请注意，客户端代码为必填项。 提醒一下，通过导航到&#x200B;**[!UICONTROL Recommendations]** > **[!UICONTROL Settings]**，可以在Adobe Target中找到您的客户端代码。 请注意&#x200B;**推荐API令牌**&#x200B;部分中的&#x200B;**客户端代码**&#x200B;值。
+1. 请注意，客户端代码为必填项。 提醒一下，通过导航到&#x200B;**[!UICONTROL Recommendations]** > **[!UICONTROL Settings]**，可以在Adobe Target中找到您的客户端代码。 请注意&#x200B;**推荐API令牌**&#x200B;部分中的&#x200B;**客户端代码**值。
    ![client-code.png](assets/client-code.png)
-1. 获得客户端代码后，即可构建投放API调用。 以下示例以[投放API Postman集合](../../implement/delivery-api/overview.md/#section/Getting-Started/Postman-Collection)中提供的&#x200B;**[!UICONTROL Web Batched Mboxes Delivery API Call]**&#x200B;开头，进行了相关修改。 例如：
+1. 获得客户端代码后，即可构建投放API调用。 以下示例以&#x200B;**[!UICONTROL Web Batched Mboxes Delivery API Call]**&#x200B;投放API Postman集合[中提供的](../../implement/delivery-api/overview.md#section/Getting-Started/Postman-Collection)开头，进行了相关修改。 例如：
    * 已从&#x200B;**正文**&#x200B;中移除&#x200B;**浏览器**&#x200B;和&#x200B;**地址**&#x200B;对象，因为非HTML用例不需要这些对象
    * 在此示例中，*api_charter*&#x200B;被列为位置名称
    * 指定了entity.id，因为此推荐基于内容相似度，它要求将当前项目键传递到Target。
-
      ![server-side-Delivery-API-call.png](assets/server-side-delivery-api-call2.png)
 请记住正确配置查询参数。 例如，请确保根据需要指定`{{CLIENT_CODE}}`。 &lt;！— Q：在更新的调用语法中，entity.id作为profileParameter列出，而不作为mboxParameter在旧版本中列出。 —> &lt;！ — 问：旧图像![server-side-create-recs-post.png](assets/server-side-create-recs-post.png)旧的随附文本：“请注意，此推荐基于通过mboxParameters发送的entity.id的‘内容类似’产品。” —>
      ![client-code3](assets/client-code3.png)
@@ -116,7 +115,7 @@ Adobe Target和Adobe Target Recommendations API可用于提供对网页的响应
 ## 参考文档
 
 * [Adobe Target交付API文档](/help/dev/implement/delivery-api/overview.md)
-* [将“推荐”与电子邮件集成](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations-faq/integrating-recs-email.html?lang=zh-Hans)
+* [将“推荐”与电子邮件集成](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations-faq/integrating-recs-email.html)
 
 ## 摘要和审查
 

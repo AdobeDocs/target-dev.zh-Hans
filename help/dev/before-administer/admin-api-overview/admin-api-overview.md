@@ -3,26 +3,26 @@ title: Adobe Target管理API概述
 description: ' [!DNL Adobe Target Admin API]概述'
 exl-id: 1168d376-c95b-4c5a-b7a2-c7815799a787
 feature: APIs/SDKs
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+source-git-commit: 67cc93cf697f8d5bca6fedb3ae974e4012347a0b
 workflow-type: tm+mt
-source-wordcount: '1312'
+source-wordcount: '1305'
 ht-degree: 2%
 
 ---
 
 # Target管理员API概述
 
-本文概述成功理解和使用[!DNL Adobe Target Admin API]所需的背景信息。 以下内容假设您了解如何[为[!DNL Adobe Target Admin API]配置身份验证](../configure-authentication.md)。
+本文概述成功理解和使用[!DNL Adobe Target Admin API]所需的背景信息。 以下内容假设您了解如何[为](../configure-authentication.md)配置身份验证[!DNL Adobe Target Admin API]。
 
 >[!NOTE]
 >
->如果您希望通过UI管理[!DNL Target]，请参阅&#x200B;*Adobe Target商业从业者指南*[&#128279;](https://experienceleague.adobe.com/docs/target/using/administer/administrating-target.html?lang=zh-Hans)的管理部分。
+>如果您希望通过UI管理[!DNL Target]，请参阅[Adobe Target商业从业者指南&#x200B;**&#x200B;的](https://experienceleague.adobe.com/docs/target/using/administer/administrating-target.html?lang=en)管理部分。
 >
->管理员API和配置文件API通常统称为“管理员API和配置文件API”)，但也可以单独称为（“管理员API”和“配置文件API”）。 Recommendations API是[!DNL Target]管理员API的特定实现。
+>管理员API和配置文件API通常统称为“管理员API和配置文件API”)，但也可以单独称为（“管理员API”和“配置文件API”）。 推荐API是[!DNL Target]管理员API的特定实施。
 
 ## 开始之前
 
-在为[管理员API](../../administer/admin-api/admin-api-overview-new.md)提供的所有代码示例中，将{tenant}替换为您的租户值，`your-bearer-token`替换为您使用JWT生成的访问令牌，将`your-api-key`替换为您从[Adobe Developer Console](https://developer.adobe.com/console/home)生成的API密钥。 有关租户和JWT的详细信息，请参阅关于如何[为Adobe[!DNL Target]管理员API配置身份验证](../configure-authentication.md)的文章。
+在为[管理员API](../../administer/admin-api/admin-api-overview-new.md)提供的所有代码示例中，将{tenant}替换为您的租户值，`your-bearer-token`替换为您使用JWT生成的访问令牌，将`your-api-key`替换为您从[Adobe Developer Console](https://developer.adobe.com/console/home)生成的API密钥。 有关租户和JWT的详细信息，请参阅关于如何[为Adobe ](../configure-authentication.md)管理员API配置身份验证[!DNL Target]的文章。
 
 ## 版本控制
 
@@ -64,21 +64,21 @@ Postman是一款能够轻松触发API调用的应用程序。 此[Target管理�
 
 | 状态 | 含义 | 描述 |
 | --- | --- | --- |
-| 200 | [确定](https://www.rfc-editor.org/rfc/rfc7231#section-6.3.1) | 确定 |  |
-| 400 | [错误请求](https://www.rfc-editor.org/rfc/rfc7231#section-6.5.1) | 错误请求。 请求中提供的数据很可能无效。 |  |
-| 401 | [未授权](https://www.rfc-editor.org/rfc/rfc7235#section-3.1) | 不允许用户执行此操作。 |  |
-| 403 | [禁止访问](https://www.rfc-editor.org/rfc/rfc7231#section-6.5.3) | 禁止访问此资源。 |  |
-| 404 | [未找到](https://www.rfc-editor.org/rfc/rfc7231#section-6.5.4) | 未找到引用的资源。 |  |
+| 200 | [确定](https://www.rfc-editor.org/rfc/rfc7231#section-6.3.1) | 确定 |
+| 400 | [错误请求](https://www.rfc-editor.org/rfc/rfc7231#section-6.5.1) | 错误请求。 请求中提供的数据很可能无效。 |
+| 401 | [未授权](https://www.rfc-editor.org/rfc/rfc7235#section-3.1) | 不允许用户执行此操作。 |
+| 403 | [禁止访问](https://www.rfc-editor.org/rfc/rfc7231#section-6.5.3) | 禁止访问此资源。 |
+| 404 | [未找到](https://www.rfc-editor.org/rfc/rfc7231#section-6.5.4) | 未找到引用的资源。 |
 
 ## 活动
 
 利用活动，可测试或个性化用户的内容。 活动可以是以下类型之一：
 
-* [A/B](https://experienceleague.adobe.com/docs/target/using/activities/abtest/test-ab.html?lang=zh-Hans)
-* [体验定位 (XT)](https://experienceleague.adobe.com/docs/target/using/activities/experience-targeting/experience-target.html?lang=zh-Hans)
-* [Recommendations](https://experienceleague.adobe.com/docs/target/using/activities/recommendations-activity.html?lang=zh-Hans)
-* [Automated Personalization](https://experienceleague.adobe.com/docs/target/using/activities/automated-personalization/automated-personalization.html?lang=zh-Hans)
-* [多变量测试(MVT)](https://experienceleague.adobe.com/docs/target/using/activities/multivariate-test/multivariate-testing.html?lang=zh-Hans)
+* [A/B](https://experienceleague.adobe.com/docs/target/using/activities/abtest/test-ab.html)
+* [体验定位 (XT)](https://experienceleague.adobe.com/docs/target/using/activities/experience-targeting/experience-target.html)
+* [推荐](https://experienceleague.adobe.com/docs/target/using/activities/recommendations-activity.html)
+* [Automated Personalization](https://experienceleague.adobe.com/docs/target/using/activities/automated-personalization/automated-personalization.html)
+* [多变量测试(MVT)](https://experienceleague.adobe.com/docs/target/using/activities/multivariate-test/multivariate-testing.html)
 
 ## 批量更新
 
@@ -92,7 +92,7 @@ Postman是一款能够轻松触发API调用的应用程序。 此[Target管理�
 
 批量处理允许您在一个HTTP请求中传递多个操作的说明。 还可以指定相关操作之间的从属关系（如下节所述）。 TNT将处理每个独立的操作（可能并行），并将按顺序处理从属操作。 完成所有操作后，将传递回整合的响应，并关闭HTTP连接。
 
-批处理API采用以JSON数组表示的逻辑HTTP请求数组 — 每个请求都有一个方法(对应于HTTP方法GET/PUT/POST/DELETE等)、相对URL（admin/rest/之后URL的部分）、可选标头数组（对应于HTTP标头）和一个可选正文(用于POST和PUT请求)。 批处理API返回一个以JSON数组表示的逻辑HTTP响应数组 — 每个响应都有一个状态代码、一个可选标头数组和一个可选正文（是一个JSON编码字符串）。 要使请求进行批处理，请构建一个JSON对象，该对象描述要执行的各个操作。 允许的最大操作数为256（从0到255）。
+批处理API采用以JSON数组表示的逻辑HTTP请求数组 — 每个请求都有一个方法(对应于HTTP方法GET/PUT/POST/DELETE等)、相对URL（admin/rest/之后URL的部分）、可选标头数组（对应于HTTP标头）和一个可选正文(适用于POST和PUT请求)。 批处理API返回一个以JSON数组表示的逻辑HTTP响应数组 — 每个响应都有一个状态代码、一个可选标头数组和一个可选正文（是一个JSON编码字符串）。 要使请求进行批处理，请构建一个JSON对象，该对象描述要执行的各个操作。 允许的最大操作数为256（从0到255）。
 
 指定请求中操作之间的依赖关系默认情况下，批处理API请求中指定的操作是独立的 — 它们可以在服务器上以任意顺序执行，并且一个操作中的错误不会影响其他操作的执行。
 
@@ -110,15 +110,15 @@ Postman是一款能够轻松触发API调用的应用程序。 此[Target管理�
 
 | 属性 | 描述 | 限制 | 默认 |
 | --- | --- | --- | --- |
-| 正文 | HTTP批处理操作的主体。 将忽略除POST和PUT之外的所有操作。 可以引用来自以前的批处理操作的ID，例如：“offerId”：“{operationIdResponse：0}”，“segmentId”：“{operationIdResponse：1}” | 应为有效的JSON；在引用operationIdResponse时，引用的operationId响应应为有效的ID，并且该操作的方法应POST | 空对象{} |  |
-| dependsOnOperationIds | 约束ID的列表，将确保仅在指定的操作成功完成时才执行当前操作。 可用于实现连锁操作。 | 最多允许255个操作；仅允许唯一值；应指向数组中的有效operationId；不允许循环依赖关系 |  |  |
-| 标头 | 要通过特定操作发送的键值标头数组。 如果已通过授权标头执行批处理API的身份验证，则还会为各个操作复制该标头。 | 数组中允许的最大标头数为50 | Content-Type： application/json |  |
-| 标头 — >名称 | 标头名称 | 应在其他标头名称中唯一。 rfc的标头不区分大小写，否则值将相互覆盖。 |  |  |
-| 标头 — >值 | 标头值 | 不适用 | 空字符串 |  |
-| 方法 | 要使用的HTTP方法。 可用选项：GET、POST、PUT、PATCH、DELETE | 仅允许GET、POST、PUT、PATCH、DELETE方法 |  |  |
-| operationId | 操作ID，用于在用于响应和引用结果的其他操作中标识某个操作。 | 在其他操作中唯一；值介于0至255之间 |  |  |
-| 操作 | 要在批次中执行的操作列表。 顺序不相关。 | 最多允许256个操作 |  |  |
-| relativeUrl | 管理员rest API的相对URL，位于“/admin/rest/”之后。 可以包含查询字符串参数，如：&quot;/v2/campaigns？limit=10&amp;offset=10&quot;。 可以引用具有来自先前批处理操作的包含ID的URL，例如：“/v1/offers/{operationIdResponse：0}”。 如果发送查询参数，则这些参数必须进行URL编码。 | 应当以/（相对）开头；仅支持新的有效JSON API；如果relativeURL无效，则将返回特定操作的404响应；如果引用operationIdResponse，则引用的operationId响应应当为有效ID，并且此操作的方法应当为POST |  |  |
+| 正文 | HTTP批处理操作的主体。 将忽略除POST和PUT之外的所有操作。 可以引用来自以前的批处理操作的ID，例如：“offerId”：“{operationIdResponse:0}”，“segmentId”：“{operationIdResponse:1}” | 应为有效的JSON；在引用operationIdResponse时，引用的operationId响应应为有效的ID，并且该操作的方法应为POST | 空对象{} |
+| dependsOnOperationIds | 约束ID的列表，将确保仅在指定的操作成功完成时才执行当前操作。 可用于实现连锁操作。 | 最多允许255个操作；仅允许唯一值；应指向数组中的有效operationId；不允许循环依赖关系 |  |
+| 标头 | 要通过特定操作发送的键值标头数组。 如果已通过授权标头执行批处理API的身份验证，则还会为各个操作复制该标头。 | 数组中允许的最大标头数为50 | Content-Type： application/json |
+| 标头 — >名称 | 标头名称 | 应在其他标头名称中唯一。 rfc的标头不区分大小写，否则值将相互覆盖。 |  |
+| 标头 — >值 | 标头值 | 不适用 | 空字符串 |
+| 方法 | 要使用的HTTP方法。 可用选项：GET、POST、PUT、PATCH、DELETE | 仅允许GET、POST、PUT、PATCH、DELETE方法 |  |
+| operationId | 操作ID，用于在用于响应和引用结果的其他操作中标识某个操作。 | 在其他操作中唯一；值介于0至255之间 |  |
+| 操作 | 要在批次中执行的操作列表。 顺序不相关。 | 最多允许256个操作 |  |
+| relativeUrl | 管理员rest API的相对URL，位于“/admin/rest/”之后。 可以包含查询字符串参数，如：&quot;/v2/campaigns？limit=10&amp;offset=10&quot;。 可以引用具有来自先前批次操作的包含ID的URL，例如：“/v1/offers/{operationIdResponse:0}”。 如果发送查询参数，则这些参数必须进行URL编码。 | 应当以/（相对）开头；仅支持新的有效JSON API；如果relativeURL无效，则将返回特定操作的404响应；如果引用operationIdResponse，则引用的operationId响应应当为有效ID，并且该操作的方法应当为POST |  |
 
 #### 示例请求对象
 
@@ -148,13 +148,13 @@ Postman是一款能够轻松触发API调用的应用程序。 此[Target管理�
 
 | 参数 | 描述 |
 | --- | --- |
-| operationId | 用于标识其他操作中的操作的操作ID，与在POST请求中发送的操作相同ID。 |  |
-| 已跳过 | 布尔标记，用于标记操作是否已执行或跳过。 如果当前操作依赖于已失败的操作（返回了与2xx不同的statusCode值），则为true。 |  |
-| 状态代码 | 返回，则将跳过（不执行）所有依赖的操作。 |  |
-| 标头 | 键值标头数组，将作为特定操作的响应发送。 |  |
-| 标头 — >名称 | 标头名称 |  |
-| 标头 — >值 | 标头值 |  |
-| 正文 | HTTP批处理响应操作的主体 |  |
+| operationId | 用于标识其他操作中的操作的操作ID，该ID与在POST请求中发送的操作相同。 |
+| 已跳过 | 布尔标记，用于标记操作是否已执行或跳过。 如果当前操作依赖于已失败的操作（返回了与2xx不同的statusCode值），则为true。 |
+| 状态代码 | 返回，则将跳过（不执行）所有依赖的操作。 |
+| 标头 | 键值标头数组，将作为特定操作的响应发送。 |
+| 标头 — >名称 | 标头名称 |
+| 标头 — >值 | 标头值 |
+| 正文 | HTTP批处理响应操作的主体 |
 
 #### 示例响应对象
 

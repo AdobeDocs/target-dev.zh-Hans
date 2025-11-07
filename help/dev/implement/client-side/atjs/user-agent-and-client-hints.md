@@ -4,7 +4,7 @@ description: 了解Adobe Target如何使用用户代理和客户端提示，使�
 title: 用户代理和客户端提示
 feature: at.js
 exl-id: e0d87d95-ee95-4ca9-8632-222ae1fb9a91
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+source-git-commit: 67cc93cf697f8d5bca6fedb3ae974e4012347a0b
 workflow-type: tm+mt
 source-wordcount: '1162'
 ht-degree: 72%
@@ -144,11 +144,11 @@ Target 中的以下用例需要客户端提示：
 * 操作系统
 * 移动设备
 
-### 个人资料脚本
+### 轮廓脚本
 
-如果使用个人资料脚本并引用 `user.browser` 属性（指用户代理），则可能需要更新个人资料脚本以同时检查一个或多个客户端提示。您可以使用功能 `user.clientHint('sec-ch-ua-xxxxx')` 访问任何客户端提示。客户端提示标头名称必须全部小写。
+如果使用轮廓脚本并引用 `user.browser` 属性（指用户代理），则可能需要更新轮廓脚本以同时检查一个或多个客户端提示。您可以使用功能 `user.clientHint('sec-ch-ua-xxxxx')` 访问任何客户端提示。客户端提示标头名称必须全部小写。
 
-以下示例显示如何在个人资料脚本中正确检测 Windows 操作系统：
+以下示例显示如何在轮廓脚本中正确检测 Windows 操作系统：
 
 ```
 "return (((user.browser != null) && (user.browser.indexOf(\"Windows\") > -1)) || " + 
@@ -175,7 +175,7 @@ Target 中的以下用例需要客户端提示：
 
 ### at.js 2.9.0 或更高版本
 
-从at.js 2.9.0开始，用户代理客户端提示将从浏览器自动收集，并在调用`getOffer/getOffers()`时发送到Target。 默认情况下，at.js 只收集“低熵”客户端提示。如果执行受众分段或使用基于前几节中归类为“高熵”的数据的个人资料脚本，则需要配置 at.js，以通过 `targetGlobalSettings` 从浏览器收集“高熵”客户端提示。
+从at.js 2.9.0开始，用户代理客户端提示将从浏览器自动收集，并在调用`getOffer/getOffers()`时发送到Target。 默认情况下，at.js 只收集“低熵”客户端提示。如果执行受众分段或使用基于前几节中归类为“高熵”的数据的轮廓脚本，则需要配置 at.js，以通过 `targetGlobalSettings` 从浏览器收集“高熵”客户端提示。
 
 ```
 window.targetGlobalSettings = { allowHighEntropyClientHints: true };
