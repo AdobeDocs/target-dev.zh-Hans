@@ -262,7 +262,7 @@ JSON规则工件包含元数据，用于通知at.js mbox是正在运行的服务
 
 ### 全局设置
 
-您可以为所有[!DNL Target]决策配置默认决策方法。 各种决策方法是仅服务器端、仅设备上和混合。 在[!DNL Target] UI中选择的决策方法在`window.targetGlobalSettings`字段下的`decisioningMethod`中配置。 在`decisioningMethod`targetGlobalSettings()[中了解有关](/help/dev/implement/client-side/atjs/atjs-functions/targetglobalsettings.md#decisioningmethod)的更多信息。
+您可以为所有[!DNL Target]决策配置默认决策方法。 各种决策方法是仅服务器端、仅设备上和混合。 在[!DNL Target] UI中选择的决策方法在`window.targetGlobalSettings`字段下的`decisioningMethod`中配置。 在`decisioningMethod`targetGlobalSettings() [中了解有关](/help/dev/implement/client-side/atjs/atjs-functions/targetglobalsettings.md#decisioningmethod)的更多信息。
 
 ```javascript {line-numbers="true"}
 <head> 
@@ -282,7 +282,7 @@ JSON规则工件包含元数据，用于通知at.js mbox是正在运行的服务
 
 ### 自定义设置
 
-如果您在`decisioningMethod`中设置了`window.targetGlobalSettings`，但想要根据用例覆盖每个`decisioningMethod`决策的[!DNL Adobe Target]，则可以通过在At.js2.5.0+的`decisioningMethod`getOffers()[调用中指定](/help/dev/implement/client-side/atjs/atjs-functions/adobe-target-getoffers-atjs-2.md)来执行此过程。
+如果您在`decisioningMethod`中设置了`window.targetGlobalSettings`，但想要根据用例覆盖每个`decisioningMethod`决策的[!DNL Adobe Target]，则可以通过在At.js2.5.0+的`decisioningMethod`getOffers() [调用中指定](/help/dev/implement/client-side/atjs/atjs-functions/adobe-target-getoffers-atjs-2.md)来执行此过程。
 
 ```javascript {line-numbers="true"}
 adobe.target.getOffers({ 

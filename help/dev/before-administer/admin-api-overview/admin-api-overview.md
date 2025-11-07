@@ -22,7 +22,7 @@ ht-degree: 2%
 
 ## 开始之前
 
-在为[管理员API](../../administer/admin-api/admin-api-overview-new.md)提供的所有代码示例中，将{tenant}替换为您的租户值，`your-bearer-token`替换为您使用JWT生成的访问令牌，将`your-api-key`替换为您从[Adobe Developer Console](https://developer.adobe.com/console/home)生成的API密钥。 有关租户和JWT的详细信息，请参阅关于如何[为Adobe ](../configure-authentication.md)管理员API配置身份验证[!DNL Target]的文章。
+在为[管理员API](../../administer/admin-api/admin-api-overview-new.md)提供的所有代码示例中，将{tenant}替换为您的租户值，`your-bearer-token`替换为您使用JWT生成的访问令牌，将`your-api-key`替换为您从[Adobe Developer Console](https://developer.adobe.com/console/home)生成的API密钥。 有关租户和JWT的详细信息，请参阅关于如何[为Adobe &#x200B;](../configure-authentication.md)管理员API配置身份验证[!DNL Target]的文章。
 
 ## 版本控制
 
