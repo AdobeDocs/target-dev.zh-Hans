@@ -50,4 +50,4 @@ document.addEventListener(adobe.target.event.REQUEST_SUCCEEDED, function(event) 
 
 观看以下视频，了解如何使用响应令牌和at.js自定义事件将[!DNL Target]中的配置文件信息共享到第三方系统。
 
->[!VIDEO](https://video.tv.adobe.com/v/23253/?quality=12)
+>[!VIDEO](https://video.tv.adobe.com/v/33361/?captions=chi_hans&quality=12)
