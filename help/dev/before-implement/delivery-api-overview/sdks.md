@@ -29,7 +29,7 @@ SDK可帮助您遵循管理会话和Cookie的最佳实践。 强烈建议利用S
 
 有关详细信息，请参阅[Java SDK概述](/help/dev/implement/server-side/java/overview.md)。
 
-[Java SDK](https://github.com/adobe/target-java-sdk)在Github中开源和维护，您可以在其中查找文档和使用说明。
+[Java SDK](https://github.com/adobe/target-java-sdk)是开源的，并在Github中进行维护，您可以在其中查找文档和使用说明。
 
 阅读Java SDK的[changelog](https://github.com/adobe/target-java-sdk/blob/main/CHANGELOG.md)。
 
@@ -37,7 +37,7 @@ SDK可帮助您遵循管理会话和Cookie的最佳实践。 强烈建议利用S
 
 有关详细信息，请参阅[.Net SDK概述](/help/dev/implement/server-side/net/overview.md)。
 
-[.NET SDK](https://github.com/adobe/target-dotnet-sdk)在Github中是开源的，并进行维护，您可以在其中查找文档和使用说明。
+[.NET SDK](https://github.com/adobe/target-dotnet-sdk)在Github中开源和维护，您可以在其中查找文档和使用说明。
 
 有关.NET SDK [版本](https://github.com/adobe/target-dotnet-sdk/releases)的信息
 
