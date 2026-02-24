@@ -5,16 +5,16 @@ feature: APIs/SDKs
 level: Experienced
 role: Developer
 exl-id: efccadab-d139-4423-8613-c2743d87b3a0
-source-git-commit: 50ee7e66e30c0f8367763a63b6fde5977d30cfe7
+source-git-commit: 3301d88bc47208ab5439c1a9f7933e99c22a4521
 workflow-type: tm+mt
 source-wordcount: '346'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
 # 通知[!DNL Target]
 
-完成此步骤可确保使用`trackEvent`方法发送所有必须发送到[!DNL Adobe Target]的事件。
+完成此步骤可确保使用[!DNL Adobe Target]方法发送所有必须发送到`trackEvent`的事件。
 
 任何需要在[!DNL Target]中跟踪的事件都可以是主要转化事件或成功量度。
 
@@ -40,6 +40,8 @@ ht-degree: 1%
 
 您无需在此调用中包含订单转化属性。 这些调用最好记录一些成功量度，这些量度可以被视为主转化事件之前的小型转化事件。 `CardIds`必须包含在基于`Add to Cart`事件的基于购物车的推荐中。
 
++++
+
 **先决条件**
 
 * 与您的业务团队会面，以确定可被视为转化或成功量度的所有事件。 您还必须确定生成收入的转化事件，以便将这些详细信息与事件数据一起发送到[!DNL Target]。
@@ -49,7 +51,7 @@ ht-degree: 1%
    * `orderTotal`：购买的订单总计。
    * `orderId`：购买的订单ID。
 
-  下图显示了 [!DNL Experience Platform][&#128279;](https://experienceleague.adobe.com/docs/tags.html?lang=zh-Hans){target=_blank}中 [!DNL tags] 的规则，该规则应仅在[!UICONTROL Confirmation]页面上触发。
+  下图显示了[ [!DNL tags] 中 [!DNL Experience Platform]的](https://experienceleague.adobe.com/docs/tags.html){target=_blank}规则，该规则应仅在[!UICONTROL Confirmation]页面上触发。
 
   ![操作配置页面](/help/dev/patterns/recs-atjs/assets/action-configuration.png){width="400" zoomable="yes"}
 
@@ -58,7 +60,7 @@ ht-degree: 1%
 **读数**
 
 * [adobe.target.trackEvent()方法](/help/dev/implement/client-side/atjs/atjs-functions/adobe-target-trackevent.md)
-* 基于购物车的标准的[cartIds](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/base-the-recommendation-on-a-recommendation-key.html?lang=zh-Hans#cart-based){target=_blank}
+* 基于购物车的标准的[cartIds](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/base-the-recommendation-on-a-recommendation-key.html?lang=en#cart-based){target=_blank}
 
 **操作**
 
