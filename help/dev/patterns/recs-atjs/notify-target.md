@@ -51,7 +51,7 @@ ht-degree: 0%
    * `orderTotal`：购买的订单总计。
    * `orderId`：购买的订单ID。
 
-  下图显示了[ [!DNL tags] 中 [!DNL Experience Platform]的](https://experienceleague.adobe.com/docs/tags.html){target=_blank}规则，该规则应仅在[!UICONTROL Confirmation]页面上触发。
+  下图显示了[&#x200B; [!DNL tags] 中 [!DNL Experience Platform]的](https://experienceleague.adobe.com/docs/tags.html){target=_blank}规则，该规则应仅在[!UICONTROL Confirmation]页面上触发。
 
   ![操作配置页面](/help/dev/patterns/recs-atjs/assets/action-configuration.png){width="400" zoomable="yes"}
 
