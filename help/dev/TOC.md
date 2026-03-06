@@ -174,7 +174,7 @@ ht-degree: 41%
    + [Experience Platform Web SDK中的A4T数据的客户端日志记录](/help/dev/implement/a4t/client-side-logging.md)
    + [Experience Platform Web SDK中的A4T数据的服务器端日志记录](/help/dev/implement/a4t/server-side-a4t.md)
 + [Recommendations实施](implement/recommendations/recommendations.md)
-+ {hide-from-toc}[Recommendations实施测试版](/help/dev/implement/recommendations/recommendations-beta.md)
++ [hide-from-tocRecommendations实施测试版](/help/dev/implement/recommendations/recommendations-beta.md)
 + 移动应用程序实施 {#mobile-apps}
    + [适用于移动应用程序的 Target 概述](implement/mobile/overview.md)
    + [Target 移动设备预览](implement/mobile/target-mobile-preview.md)
