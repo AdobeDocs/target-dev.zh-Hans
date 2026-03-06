@@ -2,7 +2,7 @@
 user-guide-title: Adobe Target开发人员指南
 breadcrumb-title: Target开发人员指南
 user-guide-description: 了解如何定制和个性化客户体验，从而最大限度地提升网站和移动网站、应用程序、社交媒体和其他数字渠道的收入。
-source-git-commit: b1b0424bfe61fb8b4e88723e6bb2c565d75f8351
+source-git-commit: d161a60be0e9acbdd217f1acde5987b839dd78de
 workflow-type: tm+mt
 source-wordcount: '827'
 ht-degree: 41%
@@ -174,7 +174,7 @@ ht-degree: 41%
    + [Experience Platform Web SDK中的A4T数据的客户端日志记录](/help/dev/implement/a4t/client-side-logging.md)
    + [Experience Platform Web SDK中的A4T数据的服务器端日志记录](/help/dev/implement/a4t/server-side-a4t.md)
 + [Recommendations实施](implement/recommendations/recommendations.md)
-+ [Recommendations实施测试版](/help/dev/implement/recommendations/recommendations-beta.md)
++ [hide-from-tocRecommendations实施测试版](/help/dev/implement/recommendations/recommendations-beta.md)
 + 移动应用程序实施 {#mobile-apps}
    + [适用于移动应用程序的 Target 概述](implement/mobile/overview.md)
    + [Target 移动设备预览](implement/mobile/target-mobile-preview.md)
