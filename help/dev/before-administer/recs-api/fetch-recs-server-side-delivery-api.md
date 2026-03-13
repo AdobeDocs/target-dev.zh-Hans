@@ -6,9 +6,9 @@ kt: 3815
 thumbnail: null
 author: Judy Kim
 exl-id: 9b391f42-2922-48e0-ad7e-10edd6125be6
-source-git-commit: 67cc93cf697f8d5bca6fedb3ae974e4012347a0b
+source-git-commit: 0681f89bbebb9e79ab042ae6cfbab989d846cb70
 workflow-type: tm+mt
-source-wordcount: '1286'
+source-wordcount: '1243'
 ht-degree: 1%
 
 ---
@@ -69,14 +69,14 @@ Adobe Target和Adobe Target Recommendations API可用于提供对网页的响应
    * 在此示例中，*api_charter*&#x200B;被列为位置名称
    * 指定了entity.id，因为此推荐基于内容相似度，它要求将当前项目键传递到Target。
      ![server-side-Delivery-API-call.png](assets/server-side-delivery-api-call2.png)
-请记住正确配置查询参数。 例如，请确保根据需要指定`{{CLIENT_CODE}}`。 &lt;！— Q：在更新的调用语法中，entity.id作为profileParameter列出，而不作为mboxParameter在旧版本中列出。 —> &lt;！ — 问：旧图像![server-side-create-recs-post.png](assets/server-side-create-recs-post.png)旧的随附文本：“请注意，此推荐基于通过mboxParameters发送的entity.id的‘内容类似’产品。” —>
+请记住正确配置查询参数。 例如，请确保根据需要指定`{{CLIENT_CODE}}`。<!-- Q: In the updated call syntax, entity.id is listed as a profileParameter instead of an mboxParameter as in older versions. Q: Old image ![server-side-create-recs-post.png](assets/server-side-create-recs-post.png) Old accompanying text: "Note this recommendation is based on Content Similar products based on the entity.id sent via mboxParameters." -->
      ![client-code3](assets/client-code3.png)
 1. 发送请求。 此操作将针对&#x200B;*api_charter*&#x200B;位置执行，该位置上运行有活动推荐，并使用您的JSON设计定义它，该设计将输出推荐实体列表。
 1. 接收基于JSON设计的响应。
    ![server-side-create-recs-json-response2.png](assets/server-side-create-recs-json-response2.png)
 响应包括键ID以及推荐实体的实体ID。
 
-通过这种方式将交付API与推荐结合使用，您可以在向非HTML设备上的访客显示推荐之前，执行其他步骤。 例如，您可以在显示最终结果之前，从投放API获得响应，以从其他系统(例如CMS、PIM或电子商务平台)执行额外的实体属性详细信息（库存、价格、评级等）实时查找。
+通过这种方式将交付API与推荐结合使用，您可以在向非HTML设备上的访客显示推荐之前，执行其他步骤。 例如，您可以在显示最终结果之前，从投放API获得响应，以从其他系统（例如CMS、PIM或电子商务平台）执行额外的实体属性详细信息（库存、价格、评级等）实时查找。
 
 使用本指南中概述的方法，您可以获得任何应用程序来利用Target的响应提供个性化推荐！
 
