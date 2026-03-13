@@ -42,9 +42,9 @@ Adobe Target和Adobe Target Recommendations API可用于提供对网页的响应
 
 ## 使用基于表单的体验编辑器创建推荐
 
-要创建可与投放API一起使用的推荐，请使用[基于表单的编辑器](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html)。
+要创建可与投放API一起使用的推荐，请使用[基于表单的编辑器](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html?lang=zh-Hans)。
 
-1. 首先，创建并保存要在推荐中使用的基于JSON的设计。 有关示例JSON以及有关在配置基于表单的活动时如何返回JSON响应的背景信息，请参阅有关[创建推荐设计](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations-design/create-design.html)的文档。 在此示例中，设计名为&#x200B;*简单JSON。*
+1. 首先，创建并保存要在推荐中使用的基于JSON的设计。 有关示例JSON以及有关在配置基于表单的活动时如何返回JSON响应的背景信息，请参阅有关[创建推荐设计](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations-design/create-design.html?lang=zh-Hans)的文档。 在此示例中，设计名为&#x200B;*简单JSON。*
    ![server-side-create-recs-json-design.png](assets/server-side-create-recs-json-design.png)
 
 1. 在Target中，导航到&#x200B;**[!UICONTROL Activities]** > **[!UICONTROL Create Activity]** > **[!UICONTROL Recommendations]**，然后选择&#x200B;**[!UICONTROL Form]**。
@@ -54,7 +54,7 @@ Adobe Target和Adobe Target Recommendations API可用于提供对网页的响应
 1. 选择一个属性，然后单击&#x200B;**[!UICONTROL Next]**。
 1. 定义您希望用户收到推荐响应的位置。 以下示例使用名为&#x200B;*api_charter*&#x200B;的位置。 选择您之前创建的基于JSON的名为&#x200B;*简单JSON.*的设计
    ![server-side-create-recs-form.png](assets/server-side-create-recs-form1.png)
-1. 保存并激活推荐。 那个产生结果。 [结果准备就绪后](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations-activity/previewing-and-launching-your-recommendations-activity.html)，您可以使用投放API检索它们。
+1. 保存并激活推荐。 那个产生结果。 [结果准备就绪后](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations-activity/previewing-and-launching-your-recommendations-activity.html?lang=zh-Hans)，您可以使用投放API检索它们。
 
 ## 使用投放API
 
@@ -115,7 +115,7 @@ Adobe Target和Adobe Target Recommendations API可用于提供对网页的响应
 ## 参考文档
 
 * [Adobe Target交付API文档](/help/dev/implement/delivery-api/overview.md)
-* [将“推荐”与电子邮件集成](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations-faq/integrating-recs-email.html)
+* [将“推荐”与电子邮件集成](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations-faq/integrating-recs-email.html?lang=zh-Hans)
 
 ## 摘要和审查
 
