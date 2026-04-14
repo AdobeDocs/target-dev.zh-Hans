@@ -5,7 +5,7 @@ title: 如何实施[!UICONTROL Recommendations]活动？
 feature: Recommendations
 hide: true
 exl-id: 0a9c9649-195b-44e2-987e-d02eaf98cc54
-source-git-commit: d161a60be0e9acbdd217f1acde5987b839dd78de
+source-git-commit: 760e6425fc2a32ec5c405094d144f173de1b6c07
 workflow-type: tm+mt
 source-wordcount: '1550'
 ht-degree: 18%
@@ -18,7 +18,7 @@ ht-degree: 18%
 
 >[!NOTE]
 >
->除了本文之外，[Adobe Target商业从业者指南](https://experienceleague.adobe.com/zh-hans/docs/target/using/target-home){target=_blank}还包含有关[Target推荐](https://experienceleague.adobe.com/zh-hans/docs/target/using/recommendations/recommendations){target=_blank}的深入信息。
+>除了本文之外，[Adobe Target商业从业者指南](https://experienceleague.adobe.com/en/docs/target/using/target-home){target=_blank}还包含有关[Target推荐](https://experienceleague.adobe.com/en/docs/target/using/recommendations/recommendations){target=_blank}的深入信息。
 
 在[!UICONTROL Recommendations]中设置第一个[!DNL Adobe Target]活动之前，请完成以下步骤：
 
@@ -45,7 +45,7 @@ ht-degree: 18%
 
 | 方法 | 内容 | 何时使用 | 其他信息 |
 | --- | --- | --- | --- |
-| 目录信息源 | 计划每天上传和摄取信息源（CSV、[!DNL Google]产品XML或[!UICONTROL Analytics Product Classifications]）。 | 用于一次发送有关多个项目的信息。 用于发送不经常更改的信息。 | 请参阅[信息源](https://experienceleague.adobe.com/zh-hans/docs/target/using/recommendations/entities/feeds)。 |
+| 目录信息源 | 计划每天上传和摄取信息源（CSV、[!DNL Google]产品XML或[!UICONTROL Analytics Product Classifications]）。 | 用于一次发送有关多个项目的信息。 用于发送不经常更改的信息。 | 请参阅[信息源](https://experienceleague.adobe.com/en/docs/target/using/recommendations/entities/feeds)。 |
 | 实体API | 调用API以发送单个项目的最新更新。 | 用于在更新发生时一次发送一个项目的更新。 用于发送经常更改的信息（例如价格、库存/库存水平）。 | 请参阅[实体API开发人员文档](https://developer.adobe.com/target/administer/recommendations-api/#tag/Entities)。 |
 | 在页面上传递更新 | 使用页面上的JavaScript或使用投放API发送单个项目的即时更新。 | 用于在更新发生时一次发送一个项目的更新。 用于发送经常更改的信息（例如价格、库存/库存水平）。 | 请参阅下面的[项目查看次数/产品页面](#item-views-or-product-pages)。 |
 
@@ -108,7 +108,7 @@ function targetPageParams() {
 }
 ```
 
-有关基于购物车的推荐的更多信息，请参阅[商业从业者指南](https://experienceleague.adobe.com/zh-hans/docs/target/using/recommendations/criteria/base-the-recommendation-on-a-recommendation-key#cart-based)中的&#x200B;*[!DNL Adobe Target]基于购物车的推荐*。
+有关基于购物车的推荐的更多信息，请参阅[商业从业者指南](https://experienceleague.adobe.com/en/docs/target/using/recommendations/criteria/base-the-recommendation-on-a-recommendation-key#cart-based)中的&#x200B;*[!DNL Adobe Target]基于购物车的推荐*。
 
 ### 排除访客购物车中已有的项目
 
@@ -130,7 +130,7 @@ function targetPageParams() {
 
 ## 4.配置全局排除项
 
-排除全局级别上您绝不希望向访客推荐的任何项目。 请参阅[商业从业者指南](https://experienceleague.adobe.com/zh-hans/docs/target/using/recommendations/entities/exclusions)中的&#x200B;*[!DNL Adobe Target]排除项*。
+排除全局级别上您绝不希望向访客推荐的任何项目。 请参阅[商业从业者指南](https://experienceleague.adobe.com/en/docs/target/using/recommendations/entities/exclusions)中的&#x200B;*[!DNL Adobe Target]排除项*。
 
 ## 5.配置[!UICONTROL Recommendations]设置
 
@@ -168,7 +168,7 @@ function targetPageParams() {
 
 [!DNL Recommendations]中的标准即规则，可根据预先确定的一组访客行为来确定要推荐的产品或内容。 标准可以基于流行趋势、访客当前和过去的行为或类似产品和内容。 您可以添加多个标准，以便对多个推荐类型进行相互测试。
 
-有关详细信息，请参阅[Adobe Target商业从业者指南](https://experienceleague.adobe.com/zh-hans/docs/target/using/recommendations/criteria/algorithms){target=_blank}中的&#x200B;*标准*。
+有关详细信息，请参阅[Adobe Target商业从业者指南](https://experienceleague.adobe.com/en/docs/target/using/recommendations/criteria/algorithms){target=_blank}中的&#x200B;*标准*。
 
 [!UICONTROL Criteria]部分中有以下设置：
 
@@ -191,7 +191,7 @@ function targetPageParams() {
 
 如果使用标签管理解决方案，Adobe建议您禁用此选项。
 
-有关此选项的详细信息，请参阅[[!UICONTROL Recommendations]商业从业者指南](https://experienceleague.adobe.com/zh-hans/docs/target/using/recommendations/recommendations-faq/recommendations-faq){target=_blank}中的&#x200B;*[!DNL Adobe Target]常见问题解答*。
+有关此选项的详细信息，请参阅[[!UICONTROL Recommendations]商业从业者指南](https://experienceleague.adobe.com/en/docs/target/using/recommendations/recommendations-faq/recommendations-faq){target=_blank}中的&#x200B;*[!DNL Adobe Target]常见问题解答*。
 
 ### [!UICONTROL Product Catalog]
 
@@ -218,7 +218,7 @@ function targetPageParams() {
 * “创建排除项”对话框(**[!UICONTROL Recommendations]** > **[!UICONTROL Exclusions]** > **[!UICONTROL Create exclusion]**)
 * “更新排除项”对话框(**[!UICONTROL Recommendations]** > **[!UICONTROL Exclusions]** > **[!UICONTROL Edit]**)
 
-有关详细信息，请参阅[商业从业者指南](https://experienceleague.adobe.com/zh-hans/docs/target/using/administer/hosts){target=_blank}中的&#x200B;*[!DNL Adobe Target]主机*。
+有关详细信息，请参阅[商业从业者指南](https://experienceleague.adobe.com/en/docs/target/using/administer/hosts){target=_blank}中的&#x200B;*[!DNL Adobe Target]主机*。
 
 #### [!UICONTROL Thumbnail Base]
 
