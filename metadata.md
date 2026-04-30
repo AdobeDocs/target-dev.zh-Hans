@@ -1,23 +1,24 @@
 ---
 cloud: Experience Cloud
 solution: Target
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
 product: target
 type: Documentation
 feature-set: Target
 mini-toc-levels: 2
-git-repo: https://github.com/AdobeDocs/target-dev.zh-Hans
+git-repo: https://github.com/AdobeDocs/target-dev.en
 index: true
 role: Developer
-source-git-commit: babe8b1bc7b689eae179249c7e6e1ed25c51d542
+source-git-commit: e8da864f64a2ed8444af59a73fb7a1b12b006aff
 workflow-type: tm+mt
-source-wordcount: '53'
-ht-degree: 71%
+source-wordcount: 69
+ht-degree: 0%
 
 ---
 
 
-# 供内部使用的元数据
+# 元数据供内部使用
 
-metadata.md 文件包括存储库级元数据，这些元数据会传递给存储库中的用户指南 TOC.md 文件。如果要更改任意用户指南的 metadata.md 内容，请在任意 TOC.md 文件中执行此操作。
+metadata.md文件包含存储库级别的元数据，这些元数据会传送到存储库中的用户指南TOC.md文件。 如果要更改任何用户指南的metadata.md内容，请在任何TOC.md文件中进行更改。
 
 查看[元数据](https://experienceleague.adobe.com/docs/authoring-guide-exl/using/editing/user-guide-setup/metadata.html)以获取&#x200B;**解决方案**、**产品**&#x200B;和&#x200B;**类型**&#x200B;的有效值列表。
