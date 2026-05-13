@@ -57,7 +57,7 @@ Adobe开发了“通过设计保护隐私”设置，用户可以为Adobe [!DNL 
 
 使用[!DNL Platform Web SDK]（版本23.4或更高版本）时，数据流级别的IP模糊处理设置优先于[!DNL Target]中设置的任何IP模糊处理选项。 例如，如果数据流级别的IP模糊处理选项设置为[!UICONTROL Full]，而[!DNL Target] IP模糊处理选项设置为[!UICONTROL Last octet obfuscation]，则[!DNL Target]接收完全模糊处理的IP。
 
-有关详细信息，请参阅&#x200B;*[!DNL Adobe Experience Platfrom]数据流指南*&#x200B;中的[配置数据流](https://experienceleague.adobe.com/docs/experience-platform/datastreams/configure.html#){target=_blank}中的[!UICONTROL IP Obfuscation]。
+有关详细信息，请参阅&#x200B;*[!DNL Adobe Experience Platfrom]数据流指南*&#x200B;中的[配置数据流](https://experienceleague.adobe.com/docs/experience-platform/datastreams/configure.html?lang=zh-Hans#){target=_blank}中的[!UICONTROL IP Obfuscation]。
 
 ## 地域划分
 

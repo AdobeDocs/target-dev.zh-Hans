@@ -50,7 +50,7 @@ AdBox 与 mbox 类似，但它由 URL 控制而非 JavaScript。 创建的 AdBox
 
      这必须是进行了编码的 URL，且必须是绝对引用。 您可以使用[HTML URL编码引用](https://www.w3schools.com/tags/ref_urlencode.asp)来快速对您的URL进行编码。
 
-1. 为每个替代图像创建[重定向产品建议](https://experienceleague.adobe.com/docs/target/using/experiences/offers/offer-redirect.html)。
+1. 为每个替代图像创建[重定向产品建议](https://experienceleague.adobe.com/docs/target/using/experiences/offers/offer-redirect.html?lang=zh-Hans)。
 
    >[!NOTE]
    >
