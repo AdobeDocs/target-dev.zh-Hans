@@ -1,11 +1,15 @@
 ---
 title: 使用create方法初始化Java SDK
-description: 了解如何使用create方法初始化Java SDK并实例化[!UICONTROL TargetClient]以调用 [!DNL Adobe Target] 进行实验和个性化体验。
+description: 了解如何使用create方法初始化Java SDK并实例化[!UICONTROL TargetClient]以调用 [!DNL Adobe Target] 进行实验及个性化体验。
 feature: APIs/SDKs
 exl-id: 0e0ddead-7de8-4549-b81c-e72598558e4b
-source-git-commit: 1d080b5e402e5d55039bf06611b44678cc6c36de
+TQID: https://experienceleague.adobe.com/B1Ev7NnjlFMg4VoicF6Z4whyqfJYDjCwPeYRKEk2viY
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: d3cdead0-685a-4489-9250-4bb709942f66
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '452'
+source-wordcount: 460
 ht-degree: 17%
 
 ---
@@ -14,7 +18,7 @@ ht-degree: 17%
 
 ## 描述
 
-使用`create`方法初始化Java SDK并实例化[!UICONTROL Target Client]以调用[!DNL Adobe Target]进行实验和个性化体验。
+使用`create`方法初始化Java SDK并实例化[!UICONTROL Target Client]以调用[!DNL Adobe Target]进行实验及个性化体验。
 
 ## 方法
 
@@ -52,7 +56,7 @@ ClientConfigBuilder ClientConfig.builder()
 | Logrequestatus | 布尔值 | 否 | false | 记录[!DNL Target]响应时间、状态和URL |
 | serverDomain | 字符串 | 否 | `*client*.tt.omtrdc.net` | 覆盖默认主机名 |
 | secure | 布尔值 | 否 | true | 取消设置以强制HTTP方案 |
-| requestInterceptor | HttpRequestInterceptor | 否 | 空 | 添加自定义请求侦听器 |
+| requestInterceptor | HttpRequestInterceptor | 否 | Null | 添加自定义请求侦听器 |
 | defaultPropertyToken | 字符串 | 否 | 无 | 为每个`getOffers`调用设置默认属性令牌。 **对于设备上决策**，SDK将仅下载包含在`defaultPropertyToken`中设置的属性令牌的合格活动的项目 |
 | defaultDecisioningMethod | DecisioningMethod枚举 | 否 | 服务器端 | 必须设置为ON_DEVICE或HYBRID才能启用设备上决策 |
 | telemetryEnable | 布尔值 | 否 | true | 允许客户在请求[!DNL Target]服务器期间选择退出其他数据收集 |

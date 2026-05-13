@@ -1,35 +1,39 @@
 ---
-title: 如何使用API管理Recommendations目录
-description: 使用Adobe Target API创建、更新、保存、获取和删除Recommendations目录中的实体所需的步骤。
+title: 如何使用API管理您的推荐目录
+description: 使用Adobe Target API创建、更新、保存、获取和删除推荐目录中的实体所需的步骤。
 feature: APIs/SDKs, Recommendations, Administration & Configuration
 kt: 3815
 thumbnail: null
 author: Judy Kim
 exl-id: aea82607-cde4-456a-8dfb-2967badce455
-source-git-commit: 2fba03b3882fd23a16342eaab9406ae4491c9044
+TQID: https://experienceleague.adobe.com/9uKu-mX9xzz-sG4-peyfzrwogo27nF8TZ4zFXBi6TaU
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '857'
+source-wordcount: 905
 ht-degree: 0%
 
 ---
 
-# 使用API管理Recommendations目录
+# 使用API管理您的推荐目录
 
-在确保您满足[使用Recommendations API](/help/dev/before-administer/recs-api/overview.md#prerequisites)的要求时，您已了解如何[使用JWT身份验证流生成访问令牌](/help/dev/before-administer/configure-authentication.md)以使用[Adobe Developer Console](https://developer.adobe.com/console/home)上的[!DNL Adobe Target]管理员API。
+在确保您符合[使用推荐API](/help/dev/before-administer/recs-api/overview.md#prerequisites)的要求时，您已了解如何[使用JWT身份验证流生成访问令牌](/help/dev/before-administer/configure-authentication.md)，以便在[Adobe Developer Console](https://developer.adobe.com/console/home)上使用[!DNL Adobe Target]管理员API。
 
-您现在可以使用[Recommendations API](https://developer.adobe.com/target/administer/recommendations-api/)添加、更新或删除推荐目录中的项目。 与其他Adobe Target管理员API一样，Recommendations API需要身份验证。
+您现在可以使用[推荐API](https://developer.adobe.com/target/administer/recommendations-api/)添加、更新或删除推荐目录中的项目。 与其他Adobe Target管理员API一样，推荐API需要身份验证。
 
 >[!NOTE]
 >
->每当您需要刷新访问令牌以进行身份验证时，请发送&#x200B;**[!UICONTROL IMS: JWT Generate + Auth via User Token]**&#x200B;请求，因为它在24小时后过期。 有关说明，请参阅[配置AdobeAPI身份验证](../configure-authentication.md)。
+>每当您需要刷新访问令牌以进行身份验证时，请发送&#x200B;**[!UICONTROL IMS: JWT Generate + Auth via User Token]**&#x200B;请求，因为它在24小时后过期。 有关说明，请参阅[配置Adobe API身份验证](../configure-authentication.md)。
 
 ![JWT3ff](assets/configure-io-target-jwt3ff.png)
 
-在继续之前，请获取[Recommendations Postman收藏集](https://developer.adobe.com/target/administer/recommendations-api/#section/Postman)。
+在继续之前，请获取[推荐Postman收藏集](https://developer.adobe.com/target/administer/recommendations-api/#section/Postman)。
 
 ## 使用保存实体API创建和更新项目
 
-要使用API而不是CSV产品馈送或在产品页面上触发的Target请求填充您的Recommendations产品数据库，请使用[保存实体API](https://developer.adobe.com/target/administer/recommendations-api/#operation/saveEntities)。 此请求在单一Target环境中添加或更新项目。 语法为：
+要使用API（而不是CSV产品信息源或产品页面上触发的Target请求）填充推荐产品数据库，请使用[保存实体API](https://developer.adobe.com/target/administer/recommendations-api/#operation/saveEntities)。 此请求在单一Target环境中添加或更新项目。 语法为：
 
 ```
 POST https://mc.adobe.io/{{TENANT_ID}}/target/recs/entities
@@ -72,7 +76,7 @@ POST https://mc.adobe.io/{{TENANT_ID}}/target/recs/entities
        }
    ```
 
-1. 单击&#x200B;**[!UICONTROL Send]**。 您应会收到以下响应。
+1. 单击 **[!UICONTROL Send]**。 您应会收到以下响应。
 
    ![SaveEntities5.png](assets/SaveEntities05.png)
 
@@ -149,7 +153,7 @@ GET https://mc.adobe.io/{{TENANT_ID}}/target/recs/entities/[entity.id]
 
    >[!NOTE]
    >
-   >如果未明确指定任何环境，则获取实体仅尝试从[默认环境](https://experienceleague.adobe.com/docs/target/using/administer/environments.html?lang=zh-Hans)获取实体。 如果要从默认环境以外的任何环境提取，则必须指定环境ID。
+   >如果未明确指定任何环境，则获取实体仅尝试从[默认环境](https://experienceleague.adobe.com/docs/target/using/administer/environments.html)获取实体。 如果要从默认环境以外的任何环境提取，则必须指定环境ID。
 
 1. 如有必要，请添加`environmentId`参数，然后重新发送请求。
 
@@ -199,6 +203,6 @@ DELETE https://mc.adobe.io/{{TENANT_ID}}/target/recs/entities?ids=[comma-delimit
 
    ![DeleteEntities6](assets/DeleteEntities7.png)
 
-恭喜！您现在可以使用Recommendations API创建、更新、删除和获取有关目录中的实体的详细信息。 在下一部分中，您将了解如何管理自定义标准。
+恭喜！ 您现在可以使用推荐API创建、更新、删除和获取有关目录中的实体的详细信息。 在下一部分中，您将了解如何管理自定义标准。
 
 &lt;！— [下一课程“管理自定义标准”>](manage-custom-criteria.md) —>

@@ -5,22 +5,28 @@ seo-title: Client-side logging for A4T data in the Experience Platform Web SDK
 seo-description: Learn how to enable client-side logging for Adobe Analytics for Target (A4T) using the Experience Platform Web SDK.
 keywords: target；a4t；日志记录；Web SDK；体验；平台；
 feature: Implementation
-source-git-commit: 4d4ca7dcffdbaee5770084bd85c3109df0d6a8d4
+exl-id: fef34eec-128f-4433-a557-42f1347cf2c3
+TQID: https://experienceleague.adobe.com/A-6Z757zzqoIW12ICTs9WBwXjHbapgLArhGSoIgMulo
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2: id: c93393a4-e558-47e1-992e-c91ed4d480ce
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: aa2f3246-cb95-4b30-8899-fdf7d73550ccid: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: c2be0313-b3ae-45e0-b454-d20bf54b23f2id: e0eb8757-182f-49f3-94a4-1587d16f5094
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '996'
+source-wordcount: 1139
 ht-degree: 0%
 
 ---
 
 # [!DNL Experience Platform Web SDK]中A4T数据的客户端日志记录
 
-[!DNL Adobe Experience Platform Web SDK]允许您在Web应用程序的客户端收集[Adobe Analytics for Target (A4T)](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t.html?lang=zh-Hans)数据。
+[!DNL Adobe Experience Platform Web SDK]允许您在Web应用程序的客户端收集[Adobe Analytics for Target (A4T)](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t.html)数据。
 
-客户端日志记录意味着在客户端返回相关的[!DNL Target]数据，允许您收集数据并与[!DNL Analytics]共享。 如果您打算使用[数据插入API](https://experienceleague.adobe.com/docs/analytics/import/c-data-insertion-api.html?lang=zh-Hans)手动将数据发送到Analytics，则应启用此选项。
+客户端日志记录意味着在客户端返回相关的[!DNL Target]数据，允许您收集数据并与[!DNL Analytics]共享。 如果您打算使用[数据插入API](https://experienceleague.adobe.com/docs/analytics/import/c-data-insertion-api.html)手动将数据发送到Analytics，则应启用此选项。
 
 >[!NOTE]
 >
->使用[AppMeasurement.js](https://experienceleague.adobe.com/docs/analytics/implementation/js/overview.html?lang=zh-Hans)执行此操作的方法目前正在开发中，将在不久的将来提供。
+>使用[AppMeasurement.js](https://experienceleague.adobe.com/docs/analytics/implementation/js/overview.html)执行此操作的方法目前正在开发中，将在不久的将来提供。
 
 本文档介绍了为[!DNL Platform Web SDK]设置客户端A4T日志记录的步骤，并提供常见用例的实施示例。
 
@@ -28,23 +34,23 @@ ht-degree: 0%
 
 本教程假设您熟悉与将[!DNL Platform Web SDK]用于个性化目的相关的基本概念和流程。 如果您需要了解简介，请查看以下文档：
 
-* [配置Web SDK](https://experienceleague.adobe.com/zh-hans/docs/experience-platform/web-sdk/commands/configure/overview)
-* [正在发送事件](https://experienceleague.adobe.com/zh-hans/docs/experience-platform/web-sdk/commands/sendevent/overview)
-* [呈现个性化内容](https://experienceleague.adobe.com/zh-hans/docs/experience-platform/web-sdk/personalization/rendering-personalization-content)
+* [配置Web SDK](https://experienceleague.adobe.com/en/docs/experience-platform/web-sdk/commands/configure/overview)
+* [发送事件](https://experienceleague.adobe.com/en/docs/experience-platform/web-sdk/commands/sendevent/overview)
+* [呈现个性化内容](https://experienceleague.adobe.com/en/docs/experience-platform/web-sdk/personalization/rendering-personalization-content)
 
 ## 设置[!DNL Analytics]客户端日志记录 {#set-up-client-side-logging}
 
-以下子部分概述了如何为您的[!DNL Analytics]实施启用[!DNL Platform Web SDK]客户端日志记录。
+以下子部分概述了如何为您的[!DNL Platform Web SDK]实施启用[!DNL Analytics]客户端日志记录。
 
 ### 启用[!DNL Analytics]客户端日志记录 {#enable-analytics-client-side-logging}
 
-若要考虑为您的实施启用[!DNL Analytics]客户端日志记录，您必须在[!DNL Adobe Analytics]数据流[中禁用](https://experienceleague.adobe.com/zh-hans/docs/experience-platform/datastreams/overview)配置。
+若要考虑为您的实施启用[!DNL Analytics]客户端日志记录，您必须在[数据流](https://experienceleague.adobe.com/en/docs/experience-platform/datastreams/overview)中禁用[!DNL Adobe Analytics]配置。
 
 ![已禁用Analytics数据流配置](/help/dev/implement/a4t/assets/disable-analytics-datastream.png)
 
 ### 从SDK检索[!DNL A4T]数据并将其发送给[!DNL Analytics] {#a4t-to-analytics}
 
-为了使此报告方法正常工作，您必须发送从[!DNL A4T]点击中的[`sendEvent`](https://experienceleague.adobe.com/zh-hans/docs/experience-platform/web-sdk/commands/sendevent/overview)命令检索到的[!DNL Analytics]相关数据。
+为了使此报告方法正常工作，您必须发送从[!DNL Analytics]点击中的[`sendEvent`](https://experienceleague.adobe.com/en/docs/experience-platform/web-sdk/commands/sendevent/overview)命令检索到的[!DNL A4T]相关数据。
 
 当[!DNL Target] Edge计算建议响应时，它会检查是否启用了[!DNL Analytics]客户端日志记录（例如，数据流中是否禁用了[!DNL Analytics]）。 如果启用了客户端日志记录，则系统会向响应中的每个建议添加[!DNL Analytics]令牌。
 
@@ -52,7 +58,7 @@ ht-degree: 0%
 
 ![客户端日志记录流程](/help/dev/implement/a4t/assets/analytics-client-side-logging.png)
 
-以下是启用`interact`客户端日志记录时的[!DNL Analytics]响应示例。 如果建议针对具有[!DNL Analytics]报表的活动，则它将具有`scopeDetails.characteristics.analyticsToken`属性。
+以下是启用[!DNL Analytics]客户端日志记录时的`interact`响应示例。 如果建议针对具有[!DNL Analytics]报表的活动，则它将具有`scopeDetails.characteristics.analyticsToken`属性。
 
 ```json
 {
@@ -134,7 +140,7 @@ ht-degree: 0%
 }
 ```
 
-[!UICONTROL Form-based Experience Composer]活动的建议可以同时包含相同建议下的内容和点击量度项目。 因此，它们可以相应地在`scopeDetails.characteristics.analyticsToken`和`scopeDetails.characteristics.analyticsDisplayToken`属性中同时指定显示和点击分析令牌，而不是在`scopeDetails.characteristics.analyticsClickToken`属性中只显示一个分析令牌。
+[!UICONTROL Form-based Experience Composer]活动的建议可以同时包含相同建议下的内容和点击量度项目。 因此，它们可以相应地在`scopeDetails.characteristics.analyticsDisplayToken`和`scopeDetails.characteristics.analyticsClickToken`属性中同时指定显示和点击分析令牌，而不是在`scopeDetails.characteristics.analyticsToken`属性中只显示一个分析令牌。
 
 ```json
 {
@@ -225,11 +231,11 @@ ht-degree: 0%
 
 ### [!UICONTROL Form-Based Experience Composer]活动 {#form-based-composer}
 
-您可以使用[!DNL Platform Web SDK]来控制从[Adobe Target基于表单的体验编辑器](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html?lang=zh-Hans)活动中执行建议。
+您可以使用[!DNL Platform Web SDK]来控制从[Adobe Target基于表单的体验编辑器](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html)活动中执行建议。
 
 在为特定决策范围请求建议时，返回的建议包含其相应的[!DNL Analytics]令牌。 最佳实践是链[!DNL Experience Platform Web SDK] `sendEvent`命令并在同时收集[!DNL Analytics]令牌时循环遍历返回的建议以执行它们。
 
-您可以为`sendEvent`活动范围触发[!UICONTROL Form-Based Experience Composer]命令，如下所示：
+您可以为[!UICONTROL Form-Based Experience Composer]活动范围触发`sendEvent`命令，如下所示：
 
 ```javascript
 alloy("sendEvent", {
@@ -419,16 +425,16 @@ function getClickAnalyticsPayload(proposition) {
 
 #### 实施摘要 {#implementation-summary}
 
-总之，在使用[!UICONTROL Form-Based Experience Composer]应用[!DNL Experience Platform Web SDK]活动时必须执行以下步骤：
+总之，在使用[!DNL Experience Platform Web SDK]应用[!UICONTROL Form-Based Experience Composer]活动时必须执行以下步骤：
 
 1. 发送获取[!UICONTROL Form-Based Experience Composer]活动选件的事件；
 1. 将内容更改应用到页面；
 1. 发送`decisioning.propositionDisplay`通知事件；
 1. 从SDK响应中收集[!DNL Analytics]显示令牌并构建[!DNL Analytics]点击的有效负载；
-1. 使用[!DNL Analytics]数据插入API[将有效负载发送到](https://github.com/AdobeDocs/analytics-1.4-apis/blob/master/docs/data-insertion-api/index.md)；
+1. 使用[数据插入API](https://github.com/AdobeDocs/analytics-1.4-apis/blob/master/docs/data-insertion-api/index.md)将有效负载发送到[!DNL Analytics]；
 1. 如果投放的建议中包含任何点击量度，则应设置点击侦听器，以便在执行点击时，发送`decisioning.propositionInteract`通知事件。 应配置`onBeforeEventSend`处理程序，以便在拦截`decisioning.propositionInteract`事件时执行以下操作：
-   1. 正在从[!DNL Analytics]收集点击`xdm._experience.decisioning.propositions`令牌
-   1. 通过[!DNL Analytics]数据插入API[!DNL Analytics]，使用收集的[有效负载发送点击](https://github.com/AdobeDocs/analytics-1.4-apis/blob/master/docs/data-insertion-api/index.md)点击；
+   1. 正在从`xdm._experience.decisioning.propositions`收集点击[!DNL Analytics]令牌
+   1. 通过[数据插入API](https://github.com/AdobeDocs/analytics-1.4-apis/blob/master/docs/data-insertion-api/index.md)，使用收集的[!DNL Analytics]有效负载发送点击[!DNL Analytics]点击；
 
 ```javascript
 alloy("sendEvent", {
@@ -465,7 +471,7 @@ alloy("sendEvent", {
 
 ### [!UICONTROL Visual Experience Composer] (VEC)活动 {#visual-experience-composer-acitivties}
 
-[!DNL Platform Web SDK]允许您处理使用[可视化体验编辑器(VEC)](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html?lang=zh-Hans)创作的选件。
+[!DNL Platform Web SDK]允许您处理使用[可视化体验编辑器(VEC)](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html)创作的选件。
 
 >[!NOTE]
 >
@@ -511,7 +517,7 @@ alloy("sendEvent", {
 
 使用[!DNL Adobe Target]活动，您可以在页面上设置不同的量度，手动附加到DOM或自动附加到DOM（VEC创作的活动）。 这两种类型都是网页上延迟的最终用户交互。
 
-要解决此问题，最佳实践是使用[!DNL Analytics] `onBeforeEventSend`挂接收集[!DNL Adobe Experience Platform Web SDK]有效负载。 `onBeforeEventSend`挂接应使用`configure`命令进行配置，并反映在通过数据流发送的所有事件中。
+要解决此问题，最佳实践是使用`onBeforeEventSend` [!DNL Adobe Experience Platform Web SDK]挂接收集[!DNL Analytics]有效负载。 `onBeforeEventSend`挂接应使用`configure`命令进行配置，并反映在通过数据流发送的所有事件中。
 
 以下是如何将`onBeforeEventSent`配置为触发[!DNL Analytics]点击的示例：
 

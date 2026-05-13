@@ -3,10 +3,15 @@ title: 如何为 [!DNL Adobe Target] API配置身份验证
 description: 如何生成成功与 [!DNL Adobe Target] API交互所需的身份验证令牌？
 feature: APIs/SDKs, Administration & Configuration
 exl-id: fc67363c-6527-40aa-aff1-350b5af884ab
-source-git-commit: 2fba03b3882fd23a16342eaab9406ae4491c9044
+TQID: https://experienceleague.adobe.com/sgdBKse1b-0kPKjzDx4fDoFsNpnIzXAT8TpDUkQ7fGw
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2: id: c93393a4-e558-47e1-992e-c91ed4d480ce
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '1785'
-ht-degree: 0%
+source-wordcount: 1937
+ht-degree: 1%
 
 ---
 
@@ -36,15 +41,15 @@ ht-degree: 0%
 | 资源 | 详细信息 |
 | --- | --- |
 | Postman | 为了成功完成这些步骤，请获取适用于您的操作系统的[Postman应用程序](https://www.postman.com/downloads/)。 Postman basic可在创建帐户时免费使用。 虽然使用[!DNL Adobe Target] API通常不是必需的，但Postman使API工作流更简单，并且[!DNL Adobe Target]提供了多个Postman收藏集以帮助执行其API并了解其操作方式。 本指南的其余部分假定您了解Postman的工作知识。 有关帮助，请参阅[Postman文档](https://learning.getpostman.com/)。 |
-| 引用 | 在本指南的其余部分中，均假定您已熟悉以下资源：<ul><li>[Adobe I/OGithub](https://github.com/adobeio)</li><li>[Target管理员和配置文件API文档](../administer/admin-api/admin-api-overview-new.md)</li><li>[Recommendations API文档](https://developer.adobe.com/target/administer/recommendations-api/)</li></ul> |
+| 引用 | 在本指南的其余部分中，均假定您已熟悉以下资源：<ul><li>[Adobe I/O Github](https://github.com/adobeio)</li><li>[Target管理员和配置文件API文档](../administer/admin-api/admin-api-overview-new.md)</li><li>[推荐API文档](https://developer.adobe.com/target/administer/recommendations-api/)</li></ul> |
 
 ## 创建Adobe I/O项目
 
 在此部分中，您将访问[!DNL Adobe Developer Console]并为[!DNL Adobe Target]创建项目。 有关详细信息，请参考[有关项目](https://developer.adobe.com/developer-console/docs/guides/projects/)的文档。
 
-&lt;！—(1. 根据[关于身份验证](https://developer.adobe.com/developer-console/docs/guides/authentication/)的文档生成私钥和公共证书。 // [//]： # （如[的&#x200B;**步骤1**&#x200B;中所述）如何设置AdobeIO：身份验证 — 分步](https://helpx.adobe.com/marketing-cloud-core/kb/adobe-io-authentication-step-by-step.html)。 完成步骤1后，返回本指南并继续执行下面的步骤2。//此步骤的结果应该是创建`private.key`文件和`certificate_pub.crt`文件。 生成这两个文件后，请返回本指南。)—>
+&lt;!---(1. 根据有关身份验证](https://developer.adobe.com/developer-console/docs/guides/authentication/)的[文档，生成您的私钥和公共证书。 // [//]： # （如[的&#x200B;**步骤1**&#x200B;中所述）如何设置Adobe IO：身份验证 — 分步](https://helpx.adobe.com/marketing-cloud-core/kb/adobe-io-authentication-step-by-step.html)。 完成步骤1后，返回本指南并继续执行下面的步骤2。 //此步骤的结果应该是创建`private.key`文件和`certificate_pub.crt`文件。 生成这两个文件后，请返回本指南。)—>
 
-1. 在[Adobe Admin Console](https://adminconsole.adobe.com/)中，确保您的[!DNL Adobe]用户帐户已被授予[!DNL Target]的[产品管理员](https://helpx.adobe.com/cn/enterprise/using/admin-roles.html)和[开发人员](https://helpx.adobe.com/cn/enterprise/using/manage-developers.html)级别访问权限。
+1. 在[Adobe Admin Console](https://adminconsole.adobe.com/)中，确保您的[!DNL Adobe]用户帐户已被授予[!DNL Target]的[产品管理员](https://helpx.adobe.com/enterprise/using/admin-roles.html)和[开发人员](https://helpx.adobe.com/enterprise/using/manage-developers.html)级别访问权限。
 
 1. 在[Adobe Developer Console](https://developer.adobe.com/console/home)中，选择要为其创建此集成的[!UICONTROL Experience Cloud Organization]。 （请注意，您可能只能访问单个[!UICONTROL Experience Cloud Organization]。）
 
@@ -74,28 +79,28 @@ ht-degree: 0%
 
    ![configure-io-target-createproject8](assets/configure-io-target-createproject8.png)
 
-1. 返回Adobe Developer Console，选择与您使用Adobe Recommendations的属性对应的[产品配置文件](https://helpx.adobe.com/cn/enterprise/using/manage-products-and-profiles.html)。 (如果您未使用资产，请选择“默认Workspace”选项。) 单击 **[!UICONTROL Save configured API]**。
+1. 返回Adobe Developer Console，选择与您使用Adobe Recommendations的属性对应的[产品配置文件](https://helpx.adobe.com/enterprise/using/manage-products-and-profiles.html)。 （如果您未使用资产，请选择“默认Workspace”选项。） 单击 **[!UICONTROL Save configured API]**。
 
    ![configure-io-target-createproject9](assets/configure-io-target-createproject9.png)
 
-1. 单击&#x200B;**[!UICONTROL Create Integration]**。 您应会收到一条临时消息，指示您的API已成功配置。
+1. 单击 **[!UICONTROL Create Integration]**。 您应会收到一条临时消息，指示您的API已成功配置。
 1. 最后，将项目重命名为比原始`Project 1`更有意义的名称。 为此，请使用显示形式的导航路径导航到项目，单击&#x200B;**[!UICONTROL Edit project]**&#x200B;以访问&#x200B;**[!UICONTROL Edit Project]**&#x200B;模式窗口，然后重命名项目。
 
    ![configure-io-target-createproject11](assets/configure-io-target-createproject11.png)
 
 >[!NOTE]
 >
->在此示例中，我们将项目命名为“[!DNL Target]集成”。 如果您预计使用项目的时间将超过[!DNL Adobe Target]，则可能需要相应地命名该项目。 例如，您可以选择将其命名为“AdobeAPI”或“Experience CloudAPI”，因为它可与Adobe Experience Cloud中的其他解决方案一起使用。
+>在此示例中，我们将项目命名为“[!DNL Target]集成”。 如果您预计使用项目的时间将超过[!DNL Adobe Target]，则可能需要相应地命名该项目。 例如，您可以选择将其命名为“Adobe API”或“Experience Cloud API”，因为它可与Adobe Experience Cloud中的其他解决方案一起使用。
 
 ## 导出项目详细信息
 
-现在您拥有了一个可用于访问[!DNL Target]的Adobe项目，您需要确保将该项目的详细信息与AdobeAPI请求一起发送。 要与多个AdobeAPI（包括多个[!DNL Target] API）交互，需要这些详细信息。 例如，集成详细信息包括[!DNL Target]管理员API所需的授权和身份验证信息。 因此，要将API与Postman结合使用，您需要将这些详细信息导入Postman。
+现在您拥有可用于访问[!DNL Target]的Adobe项目，您需要确保将该项目的详细信息与Adobe API请求一起发送。 要与多个Adobe API（包括多个[!DNL Target] API）交互，需要这些详细信息。 例如，集成详细信息包括[!DNL Target]管理员API所需的授权和身份验证信息。 因此，要将API与Postman结合使用，您需要将这些详细信息导入Postman。
 
 可通过多种方式在Postman中指定项目的详细信息，但在本节中，我们利用了某些预建的功能和集合。 首先（在此部分中），您将把集成详情导出到Postman环境中。 接下来（在以下部分中），您将生成持有者访问令牌，以授予您访问必要Adobe资源的权限。
 
 >[!NOTE]
 >
->有关适用于任何Experience Cloud解决方案（包括[!DNL Target]）的视频说明，请参阅[将Postman与Experience PlatformAPI结合使用](https://experienceleague.adobe.com/docs/platform-learn/tutorials/platform-api-authentication.html?lang=zh-Hans)。 以下部分与[!DNL Target] API相关： 1. 创建Experience PlatformAPI并将其导出到Postman 2。 使用Postman生成访问令牌。 以下也提供了这些步骤。
+>有关适用于任何Experience Cloud解决方案（包括[!DNL Target]）的视频说明，请参阅[将Postman与Experience Platform API结合使用](https://experienceleague.adobe.com/docs/platform-learn/tutorials/platform-api-authentication.html)。 以下部分与[!DNL Target] API相关： 1. 创建Experience Platform API并将其导出到Postman 2。 使用Postman生成访问令牌。 以下也提供了这些步骤。
 
 1. 仍在[Adobe Developer Console](https://developer.adobe.com/console/home)中，导航以查看新项目的&#x200B;**[!UICONTROL Service Account (JWT)]**&#x200B;凭据。 使用左侧导航或&#x200B;**[!UICONTROL Credentials]**&#x200B;部分，如图所示。
 
@@ -129,7 +134,7 @@ ht-degree: 0%
 
    ![JWT6](assets/configure-io-target-jwt6.png)
 
-1. 注意`CLIENT_SECRET`和`API_KEY`（以及其他变量）已预填充其值，这些值取自Adobe Developer Console中定义的集成。 (Postman `CLIENT_SECRET`变量应与Developer Console中显示的`CLIENT SECRET`Adobe凭据匹配，Postman中的`API_KEY`应与Developer Console中的`CLIENT ID`同样匹配。) 相反，注释`PRIVATE_KEY`、`JWT_TOKEN`和`ACCESS_TOKEN`为空。 让我们从提供`PRIVATE_KEY`值开始。
+1. 注意`CLIENT_SECRET`和`API_KEY`（以及其他变量）已预填充其值，这些值取自Adobe Developer Console中定义的集成。 （Postman `CLIENT_SECRET`变量应与Developer Console中显示的`CLIENT SECRET` Adobe凭据匹配，Postman中的`API_KEY`应与Developer Console中的`CLIENT ID`同样匹配。） 相反，注释`PRIVATE_KEY`、`JWT_TOKEN`和`ACCESS_TOKEN`为空。 让我们从提供`PRIVATE_KEY`值开始。
 
    ![JWT7](assets/configure-io-target-jwt7.png)
 
@@ -149,9 +154,9 @@ ht-degree: 0%
 
 ## 生成持有者访问令牌
 
-在此部分中，您生成持有者访问令牌，这是验证您与[!DNL Adobe Target] API的交互所必需的。 要生成持有者访问令牌，您需要将集成详细信息（在前面部分中建立）发送到[AdobeIdentity Management服务(IMS)](https://www.adobe.io/authentication/auth-methods.html#!AdobeDocs/adobeio-auth/master/AuthenticationOverview/AuthenticationGuide.md)。 有几种方法可以实现这一点，但在本指南中，我们利用了包含预建IMS调用的Postman集合，该调用可让过程直接而轻松。 导入收藏集后，您可以根据需要重复使用它，以便不仅为[!DNL Adobe Target]，而且还为其他AdobeAPI生成新令牌。
+在此部分中，您生成持有者访问令牌，这是验证您与[!DNL Adobe Target] API的交互所必需的。 要生成持有者访问令牌，您需要将集成详细信息（在前面部分中建立）发送到[Adobe Identity Management服务(IMS)](https://www.adobe.io/authentication/auth-methods.html#!AdobeDocs/adobeio-auth/master/AuthenticationOverview/AuthenticationGuide.md)。 有几种方法可以实现这一点，但在本指南中，我们利用了包含预建IMS调用的Postman集合，该调用可让过程直接而轻松。 导入收藏集后，您可以根据需要重复使用它，以便不仅为[!DNL Adobe Target]，而且还为其他Adobe API生成新令牌。
 
-1. 导航到[AdobeIdentity Management服务API示例调用](https://github.com/adobe/experience-platform-postman-samples/tree/master/apis/ims)。
+1. 导航到[Adobe Identity Management服务API示例调用](https://github.com/adobe/experience-platform-postman-samples/tree/master/apis/ims)。
 
    ![令牌1](assets/configure-io-target-generatetoken1.png)
 
@@ -185,7 +190,7 @@ ht-degree: 0%
 
 问题：我是否需要使用Adobe I/O访问令牌生成Postman集合来生成JSON Web令牌(JWT)和持有者访问令牌？
 
-回答：否。 Adobe I/O访问令牌生成Postman集合可方便地在Postman中更轻松地生成JWT和持有者访问令牌。 或者，您可以使用Adobe Developer Console中的功能手动生成持有者访问令牌。
+回答：否。 Adobe I/O访问令牌生成Postman集合可方便地在Postman中生成JWT和持有者访问令牌。 或者，您可以使用Adobe Developer Console中的功能手动生成持有者访问令牌。
 
 ## 测试持有者访问令牌
 
@@ -199,7 +204,7 @@ ht-degree: 0%
 
    ![testtoken1](assets/configure-io-target-testtoken1.png)
 
-1. 请注意，变量（如`{{access_token}}`）最初未解析。 您可以通过多种方式解决此问题 — 例如，您可以定义名为`{{access_token}}`的新收藏集变量 — 但在本指南中，您将改为更改API请求以利用您之前使用的Postman环境。 这将使环境能够继续作为跨AdobeAPI共有的所有变量的单一、一致整合。
+1. 请注意，变量（如`{{access_token}}`）最初未解析。 您可以通过多种方式解决此问题 — 例如，您可以定义名为`{{access_token}}`的新收藏集变量 — 但在本指南中，您将改为更改API请求以利用您之前使用的Postman环境。 这将使环境能够继续作为跨Adobe API共有的所有变量的单一、一致整合。
 
    ![testtoken2](assets/configure-io-target-testtoken2.png)
 
@@ -231,4 +236,4 @@ ht-degree: 0%
 
    ![testtoken6](assets/configure-io-target-testtoken6.png)
 
-现在您已验证Adobe身份验证，可以使用该身份验证与[!DNL Adobe Target] API(以及其他AdobeAPI)交互。 例如，您可以[使用Recommendations API](recs-api/overview.md)创建或管理推荐，也可以将其与[Target投放API](/help/dev/implement/delivery-api/overview.md)一起使用。
+现在您已验证Adobe身份验证，可以使用该身份验证与[!DNL Adobe Target] API（以及其他Adobe API）交互。 例如，您可以[使用推荐API](recs-api/overview.md)来创建或管理推荐，也可以将其与[Target投放API](/help/dev/implement/delivery-api/overview.md)一起使用。

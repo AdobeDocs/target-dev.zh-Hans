@@ -5,10 +5,15 @@ feature: APIs/SDKs
 level: Experienced
 role: Developer
 exl-id: 66e0f18d-c78c-463b-8c47-132ef6332927
-source-git-commit: 50ee7e66e30c0f8367763a63b6fde5977d30cfe7
+TQID: https://experienceleague.adobe.com/fg3xJnwYAVyz-N-xzT5Piu35Ajd2UMEvuTvTQs2wj3c
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2: id: c93393a4-e558-47e1-992e-c91ed4d480ce
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: d3cdead0-685a-4489-9250-4bb709942f66
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '384'
-ht-degree: 2%
+source-wordcount: 401
+ht-degree: 1%
 
 ---
 
@@ -22,7 +27,7 @@ ht-degree: 2%
 
 数据层在页面加载期间准备就绪，或者数据层在页面加载后发生更改。
 
-如果您已在[初始化SDK阶段](/help/dev/patterns/recs-atjs/initialize-sdk.md)期间映射数据，则在下列情况下必须执行此图中的步骤：
+如果在[初始化SDK阶段](/help/dev/patterns/recs-atjs/initialize-sdk.md)期间已映射数据，则在下列情况下必须执行此图中的步骤：
 
 * 您的数据层在同一页面上以任何方式增加，并且您想要将该附加数据发送到[!DNL Target]
 * 要将产品目录数据发送到[!DNL Target Recommendations]
@@ -71,11 +76,11 @@ ht-degree: 2%
 
 **读数**
 
-* [实体属性](https://experienceleague.adobe.com/docs/target/using/recommendations/entities/entity-attributes.html?lang=zh-Hans){target=_blank}
+* [实体属性](https://experienceleague.adobe.com/docs/target/using/recommendations/entities/entity-attributes.html){target=_blank}
 
 **注意事项**
 
-* 传递实体属性的另一种方法是更新[!DNL Target] UI中的产品目录以使用[Recommendations产品馈送](https://experienceleague.adobe.com/docs/target/using/recommendations/entities/feeds.html?lang=zh-Hans){target=_blank}。
+* 传递实体属性的另一种方法是更新[!DNL Target] UI中的产品目录以使用[Recommendations产品馈送](https://experienceleague.adobe.com/docs/target/using/recommendations/entities/feeds.html){target=_blank}。
 * 传递实体属性仅适用于数据层中有产品目录数据的页面。
 * 在任何调用中传递`entity.event.detailsOnly=true`参数具有优先权。
 

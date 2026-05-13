@@ -4,10 +4,16 @@ description: 了解如何指定设置（帐户详细信息、实施方法等） 
 title: 我可以在没有标签管理器的情况下实施 [!DNL Target] 吗？
 feature: Implement Server-side
 exl-id: f675ae21-105d-4aa3-9926-59291f1136b5
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+TQID: https://experienceleague.adobe.com/UkFhxuka6uds6NVcJlZqo7soQlg4kqr7Z-rvuJPuRKk
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2: id: c93393a4-e558-47e1-992e-c91ed4d480ce
+subfeature_v2: id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: aa2f3246-cb95-4b30-8899-fdf7d73550ccid: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: bce87dde-a4ab-44c9-8a18-ad66e4ddb377id: d3cdead0-685a-4489-9250-4bb709942f66id: e0eb8757-182f-49f3-94a4-1587d16f5094id: eddd9b14-83bd-4ff4-9072-54a4a484abb7id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '1693'
-ht-degree: 35%
+source-wordcount: 1739
+ht-degree: 33%
 
 ---
 
@@ -57,15 +63,15 @@ ht-degree: 35%
 | 设置 | 描述 |
 | --- | --- |
 | [!UICONTROL Page load enabled (Auto-create global mbox)] | 选择是否要将全局 mbox 调用嵌入到 at.js 文件中，以使其在每次加载页面时自动触发。 |
-| [!UICONTROL Global mbox] | 为全局 mbox 选择一个名称。默认情况下，此名称为 target-global-mbox。<p>对于at.js，mbox名称中可以使用特殊字符，包括与号(&amp;)。 |
-| [!UICONTROL Timeout (seconds)] | 如果 [!DNL Target] 未在定义的时间段内做出响应并显示相应内容，则服务器调用会超时，此时会显示默认内容。在访客会话期间会继续尝试发起其他调用。默认时间为 5 秒。<p>at.js库使用`XMLHttpRequest`中的超时设置。 超时从请求被触发时开始，并在[!DNL Target]从服务器获得响应时停止。 有关详细信息，请参阅Mozilla开发人员网络上的[XMLHttpRequest.timeout](https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/timeout)。<p>如果在指定的超时内未收到响应，则会显示默认内容，且访客可能会被计为活动的参与者，因为所有数据收集都发生在[!DNL Target]边缘。 如果请求到达[!DNL Target]边缘，则访客被计为参加者。<p>配置超时设置时，请考虑以下事项：<ul><li>如果超时值过低，则用户大部分时间可能都会看到默认内容，即使访客可被计为活动参加者也是如此。</li><li>如果超时值过高，则在延长的时间段内，访客可能会在您的网页上看到空白区域，如果您使用了主体隐藏技术，则可能还会看到空白页面。</li></ul>要更好地了解 mbox 响应时间，请查看浏览器“开发人员工具”中的“网络”选项卡。您还可以使用第三方 Web 性能监测工具，例如 Catchpoint。<p>**注意**： [visitorApiTimeout](/help/dev/implement/client-side/atjs/atjs-functions/targetglobalsettings.md#visitorapitimeout)设置可确保[!DNL Target]等待访客API响应的时间不会太长。 此设置和此处介绍的 at.js 中的“超时”设置不会相互影响。 |
-| [!UICONTROL Profile Lifetime] | 此设置可决定访客配置文件的存储时长。默认情况下，配置文件会存储两周时间。此设置最多可增加90天。<p>要更改配置文件生命周期设置，请联系[客户关怀团队](https://experienceleague.adobe.com/docs/target/using/cmp-resources-and-contact-information.html?lang=zh-Hans#reference_ACA3391A00EF467B87930A450050077C)。 |
+| [!UICONTROL Global mbox] | 为全局 mbox 选择一个名称。 默认情况下，此名称为 target-global-mbox。<p>对于at.js，mbox名称中可以使用特殊字符，包括与号(&amp;)。 |
+| [!UICONTROL Timeout (seconds)] | 如果 [!DNL Target] 未在定义的时间段内做出响应并显示相应内容，则服务器调用会超时，此时会显示默认内容。 在访客会话期间会继续尝试发起其他调用。 默认时间为 5 秒。<p>at.js库使用`XMLHttpRequest`中的超时设置。 超时从请求被触发时开始，并在[!DNL Target]从服务器获得响应时停止。 有关详细信息，请参阅Mozilla开发人员网络上的[XMLHttpRequest.timeout](https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/timeout)。<p>如果在指定的超时内未收到响应，则会显示默认内容，且访客可能会被计为活动的参与者，因为所有数据收集都发生在[!DNL Target]边缘。 如果请求到达[!DNL Target]边缘，则访客被计为参加者。<p>配置超时设置时，请考虑以下事项：<ul><li>如果超时值过低，则用户大部分时间可能都会看到默认内容，即使访客可被计为活动参加者也是如此。</li><li>如果超时值过高，则在延长的时间段内，访客可能会在您的网页上看到空白区域，如果您使用了主体隐藏技术，则可能还会看到空白页面。</li></ul>要更好地了解 mbox 响应时间，请查看浏览器“开发人员工具”中的“网络”选项卡。 您还可以使用第三方 Web 性能监测工具，例如 Catchpoint。<p>**注意**： [visitorApiTimeout](/help/dev/implement/client-side/atjs/atjs-functions/targetglobalsettings.md#visitorapitimeout)设置可确保[!DNL Target]等待访客API响应的时间不会太长。 此设置和此处介绍的 at.js 中的“超时”设置不会相互影响。 |
+| [!UICONTROL Profile Lifetime] | 此设置可决定访客配置文件的存储时长。 默认情况下，配置文件会存储两周时间。 此设置最多可增加90天。<p>要更改配置文件生命周期设置，请联系[客户关怀团队](https://experienceleague.adobe.com/docs/target/using/cmp-resources-and-contact-information.html#reference_ACA3391A00EF467B87930A450050077C)。 |
 
 ### 主要实现方法
 
 >[!NOTE]
 >
->[!DNL Adobe Target]同时支持at.js 1。*x* 和 at.js 2 中的“隐藏主体”和“显示主体”调用。*x* 使用跨域跟踪功能时。升级到at.js任一主要版本的最新更新，以确保您运行的是受支持的版本。
+>[!DNL Adobe Target]同时支持at.js 1.*x*&#x200B;和at.js 2.*x*。 升级到at.js任一主要版本的最新更新，以确保您运行的是受支持的版本。
 
 要下载所需的at.js版本，请单击相应的&#x200B;**下载**&#x200B;按钮。
 
@@ -73,19 +79,19 @@ ht-degree: 35%
 
 >[!WARNING]
 >
->在更改这些默认设置之前，请咨询[客户关怀团队](https://experienceleague.adobe.com/docs/target/using/cmp-resources-and-contact-information.html?lang=zh-Hans#reference_ACA3391A00EF467B87930A450050077C)，以免影响当前的实施。
+>在更改这些默认设置之前，请咨询[客户关怀团队](https://experienceleague.adobe.com/docs/target/using/cmp-resources-and-contact-information.html#reference_ACA3391A00EF467B87930A450050077C)，以免影响当前的实施。
 
 除了上述设置之外，还提供以下特定的at.js设置：
 
 | 设置 | 描述 |
 |--- |--- |
-| 跨域 | 对于at.js v1.*x*，通过选择`enabled`（浏览器同时设置第一方Cookie和第三方Cookie），指定跨域功能是`disabled` (浏览器仅在您的域中设置Cookie（第一方Cookie）)、`x only` （浏览器仅在Target的域中设置Cookie）还是同时设置这两者。 对于at.js v2.10及更高版本，请指定跨域功能是`enabled` （浏览器同时设置第一方Cookie和第三方Cookie）还是`disabled` （浏览器不设置第三方Cookie）。 |
+| 跨域 | 对于at.js v1.*x*，通过选择`enabled` （浏览器同时设置第一方Cookie和第三方Cookie），指定跨域功能是`disabled` (浏览器在您的域中设置Cookie（仅第一方Cookie）)、`x only` （浏览器在Target的域中设置Cookie）还是同时使用两者。 对于at.js v2.10及更高版本，请指定跨域功能是`enabled` （浏览器同时设置第一方Cookie和第三方Cookie）还是`disabled` （浏览器不设置第三方Cookie）。 |
 | 自定义库标头 | 将任何自定义 JavaScript 添加到库顶部。 |
 | 自定义库页脚 | 将任何自定义 JavaScript 添加到库底部。 |
 
 ### 配置文件API
 
-可为通过 API 进行的批量更新启用或禁用身份验证，并生成配置文件身份验证令牌。
+可为通过 API 进行的批量更新启用或禁用身份验证，并生成轮廓身份验证令牌。
 
 有关详细信息，请参阅[配置文件API设置](/help/dev/before-implement/methods-to-get-data-into-target/profile-api-settings.md)。
 
@@ -109,7 +115,7 @@ ht-degree: 35%
 
 >[!NOTE]
 >
->at.js版本0.9.3及更低版本中提供了“旧版浏览器支持”选项。 at.js 版本 0.9.4 中已删除此选项。要获取 at.js 支持的浏览器列表，请参阅[受支持的浏览器](/help/dev/before-implement/supported-browsers.md)。<p>旧版浏览器是指早期推出的不完全支持 CORS（跨域资源共享）的浏览器。这些浏览器包括：Internet Explorer 版本 11 之前的浏览器，以及 Safari 版本 6 及更低版本。如果禁用了旧版浏览器支持，则[!DNL Target]不会在这些浏览器的报表中提供内容或计算访客数。 如果已启用此选项，则建议在旧版浏览器中执行质量保证操作，以确保获得良好的客户体验。
+>at.js版本0.9.3及更低版本中提供了“旧版浏览器支持”选项。 此选项在 at.js 版本 0.9.4 中已删除。 有关at.js支持的浏览器列表，请参阅[支持的浏览器](/help/dev/before-implement/supported-browsers.md)。<p>旧版浏览器是指早期推出的不完全支持 CORS（跨域资源共享）的浏览器。 这些浏览器包括：Internet Explorer 版本 11 之前的浏览器，以及 Safari 版本 6 及更低版本。 如果禁用了旧版浏览器支持，则[!DNL Target]不会在这些浏览器的报表中提供内容或计算访客数。 如果已启用此选项，则建议在旧版浏览器中执行质量保证操作，以确保获得良好的客户体验。
 
 ## 下载 at.js
 
@@ -119,7 +125,7 @@ ht-degree: 35%
 >
 >[Adobe Experience Platform](/help/dev/implement/client-side/atjs/how-to-deployatjs/implement-target-using-adobe-launch.md)是实现[!DNL Target]和at.js库的首选方法。 使用[!DNL Adobe Experience Platform]中的标记实施[!DNL Target]时，以下信息不适用。
 >
->[!DNL Adobe Target]同时支持at.js 1。*x* 和 at.js 2 中的“隐藏主体”和“显示主体”调用。*x* 使用跨域跟踪功能时。请升级到任一主要版本的at.js的最新更新，以确保您运行的是受支持的版本。 有关每个版本中功能的更多信息，请参阅 [at.js 版本详细信息](/help/dev/implement/client-side/atjs/target-atjs-versions.md)。
+>[!DNL Adobe Target]同时支持at.js 1.*x*&#x200B;和at.js 2.*x*。 请升级到任一主要版本的at.js的最新更新，以确保您运行的是受支持的版本。 有关每个版本中功能的更多信息，请参阅 [at.js 版本详细信息](/help/dev/implement/client-side/atjs/target-atjs-versions.md)。
 
 ### 使用[!DNL Target]界面下载at.js
 
@@ -233,19 +239,19 @@ at.js 应该在您网站每个页面的 `<head>` 元素中实施。
 请注意以下重要说明：
 
 * 应使用HTML5 Doctype（例如，`<!doctype html>`）。 不支持或更早的doctypes可能会导致[!DNL Target]无法发出请求。
-* “预连接”和“预提取”选项可帮助提升网页加载速度。如果您使用这些配置，请确保将`<client code>`替换为您自己的客户端代码，此代码可从&#x200B;**[!UICONTROL Administration]** > **[!UICONTROL Implementation]**&#x200B;页面中获取。
-* 如果您拥有数据层，那么在 at.js 加载之前，最好在页面的 `<head>` 中定义尽可能多的数据层。此位置提供了在[!DNL Target]中使用此信息进行个性化的最大能力。
+* “预连接”和“预提取”选项可帮助提升网页加载速度。 如果您使用这些配置，请确保将`<client code>`替换为您自己的客户端代码，此代码可从&#x200B;**[!UICONTROL Administration]** > **[!UICONTROL Implementation]**&#x200B;页面中获取。
+* 如果您拥有数据层，那么在 at.js 加载之前，最好在页面的 `<head>` 中定义尽可能多的数据层。 此位置提供了在[!DNL Target]中使用此信息进行个性化的最大能力。
 * 特殊[!DNL Target]函数（如`targetPageParams()`、`targetPageParamsAll()`、数据提供程序和`targetGlobalSettings()`）应在数据层加载之后和at.js加载之前定义。 或者，这些函数也可以保存在“编辑at.js设置”页面的“库标题”部分中，并保存为at.js库本身的一部分。 有关这些函数的更多信息，请参阅[at.js函数](/help/dev/implement/client-side/atjs/atjs-functions/atjs-functions.md)。
 * 如果您使用JavaScript帮助程序库（如jQuery），请在[!DNL Target]之前包含它们，以便在构建[!DNL Target]体验时可以使用它们的语法和方法。
 * 将 at.js 包含在您页面的 `<head>` 中。
 
 ## 跟踪转化
 
-订单确认 mbox 将记录您网站上订单的详细信息，并能够基于收入和订单生成报表。订单确认 mbox 还可驱动推荐算法，例如“购买了产品 x，也购买了产品 y 的人”。
+订单确认 mbox 将记录您网站上订单的详细信息，并能够基于收入和订单生成报表。 订单确认 mbox 还可驱动推荐算法，例如“购买了产品 x，也购买了产品 y 的人”。
 
 >[!NOTE]
 >
->如果用户在您的网站上进行购买，Adobe建议实施订单确认mbox，即使您使用Analytics for [!DNL Target] (A4T)进行报表也是如此。
+>如果用户在您的网站上进行购买，Adobe建议实施订单确认mbox，即使您将Analytics for [!DNL Target] (A4T)用于报表也是如此。
 
 1. 在订单详细信息页面，按照以下模式插入 mbox 脚本。
 1. 使用您目录中的动态或静态值替换大写的文字。
@@ -275,6 +281,6 @@ at.js 应该在您网站每个页面的 `<head>` 元素中实施。
 
 | 参数 | 描述 |
 |--- |--- |
-| orderId | 针对转化计数标识订单的唯一值。<p>`orderId` 必须是唯一的。报表中会忽略重复订单。 |
-| orderTotal | 所购产品的币值。<p>请勿传递货币符号。使用小数点（而非逗号）表示小数值。 |
+| orderId | 针对转化计数标识订单的唯一值。<p>`orderId` 必须是唯一的。 报表中会忽略重复订单。 |
+| orderTotal | 所购产品的币值。<p>请勿传递货币符号。 使用小数点（而非逗号）表示小数值。 |
 | productPurchasedId（可选） | 订单中所购产品的产品 ID（逗号分隔）列表。<p>这些产品 ID 显示在审计报告中以支持其他报告分析。 |

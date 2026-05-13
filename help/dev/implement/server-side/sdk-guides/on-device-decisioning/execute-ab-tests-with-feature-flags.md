@@ -3,10 +3,15 @@ title: 使用功能标志和设备上决策执行A/B测试
 description: 使用设备上决策通过功能标志执行A/B测试。
 feature: APIs/SDKs
 exl-id: abf66e00-742d-4d40-9b6e-9bd71638c31a
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+TQID: https://experienceleague.adobe.com/OnRFP7WgNvPy-9v8Ea8te3v5QAUlcR2WUlD7yGB-QzQ
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2: id: adee20bd-51f4-461d-b9db-d215f8756eebid: c93393a4-e558-47e1-992e-c91ed4d480ce
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: aa2f3246-cb95-4b30-8899-fdf7d73550ccid: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '726'
-ht-degree: 0%
+source-wordcount: 749
+ht-degree: 1%
 
 ---
 
@@ -29,7 +34,7 @@ ht-degree: 0%
 >
 >假设您想确定您的主页的秋季主题重新设计能否被用户接受。 您决定通过在[!DNL Adobe Target]中运行A/B试验来测试它。 此外，您还需要确保交付试验时性能良好，以免负面或缓慢的用户体验扭曲结果。
 
-## 1.为您的组织启用[!UICONTROL on-device decisioning]
+## &#x200B;1. 为您的组织启用[!UICONTROL on-device decisioning]
 
 启用设备上决策可确保在几乎零延迟的情况下执行A/B活动。 要启用此功能，请在[!DNL Adobe Target]中导航到&#x200B;**[!UICONTROL Administration]** > **[!UICONTROL Implementation]** > **[!UICONTROL Account details]**，并启用&#x200B;**[!UICONTROL On-Device Decisioning]**&#x200B;切换开关。
 
@@ -38,11 +43,11 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->您必须具有管理员或审批者[用户角色](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/user-management.html?lang=zh-Hans)才能启用或禁用“设备端决策”切换开关。
+>您必须具有管理员或审批者[用户角色](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/user-management.html)才能启用或禁用“设备端决策”切换开关。
 
 启用&#x200B;**[!UICONTROL On-Device Decisioning]**&#x200B;切换后，[!DNL Adobe Target]开始为您的客户端生成规则工件。
 
-## 2.创建[!UICONTROL A/B Test]活动
+## &#x200B;2. 创建[!UICONTROL A/B Test]活动
 
 在[!DNL Adobe Target]中，导航到&#x200B;**[!UICONTROL Activities]**&#x200B;页面，然后选择&#x200B;**[!UICONTROL Create Activity]** > **[!UICONTROL A/B test]**。
 
@@ -52,9 +57,9 @@ ht-degree: 0%
 
 ![替代图像](assets/asset-form.png)
 
-## 3.定义A和B
+## &#x200B;3. 定义A和B
 
-1. 在活动创建&#x200B;**[!UICONTROL Experiences]**&#x200B;步骤中，提供活动(1)的名称，然后单击&#x200B;**[!UICONTROL Add Experience]** (2)按钮以添加第二个体验，即体验B。 输入应用程序中要执行A/B测试的位置(3)的名称。 在下面显示的示例中，主页是为体验A定义的位置（也是为体验B定义的位置）。
+1. 在活动创建&#x200B;**[!UICONTROL Experiences]**&#x200B;步骤中，提供活动(1)的名称，然后单击&#x200B;**[!UICONTROL Add Experience]** (2)按钮以添加第二个体验，即体验B。 输入应用程序中要执行A/B测试的位置(3)的名称。 在以下示例中，主页是为体验A定义的位置。 （也是为体验B定义的位置。）
 
    体验A定义控制，这是当前的主页设计。
 
@@ -77,7 +82,7 @@ ht-degree: 0%
 
    ![替代图像](assets/asset-homepage.png)
 
-## 4.添加受众
+## &#x200B;4. 添加受众
 
 假设您要首先针对忠诚客户测试重新设计，可以根据他们是否已登录来识别这些客户。
 
@@ -89,29 +94,29 @@ ht-degree: 0%
 
    ![替代图像](assets/asset-audience.png)
 
-## 5.设置流量分配
+## &#x200B;5. 设置流量分配
 
 定义登录用户的百分比，您要针对该百分比来测试新主页重新设计。 换言之，您希望将此测试转出到用户中的哪个百分比？ 在本例中，要将此测试部署到所有登录用户，请将流量分配保持在100%。
 
 ![替代图像](assets/asset-allocation.png)
 
-## 6.将流量分配设置为变体
+## &#x200B;6. 将流量分配设置为变量
 
 定义您的登录用户中将会看到主页当前设计或全新重新设计的百分比。 在此示例中，将流量分配保持为体验A和B之间的50/50比例。
 
 ![替代图像](assets/asset-traffic-distribution.png)
 
-## 7.设置报表
+## &#x200B;7. 设置报表
 
 在&#x200B;**[!UICONTROL Goals & Settings]**&#x200B;步骤中，选择&#x200B;**[!UICONTROL Adobe Target]**&#x200B;作为&#x200B;**[!UICONTROL Reporting Source]**&#x200B;以在[!DNL Adobe Target] UI中查看活动结果，或选择&#x200B;**[!UICONTROL Adobe Analytics]**&#x200B;以在Adobe Analytics UI中查看这些结果。
 
 ![替代图像](assets/asset-reporting.png)
 
-## 8.添加用于跟踪KPI的量度
+## &#x200B;8. 添加用于跟踪KPI的量度
 
 选择&#x200B;**[!UICONTROL Goal Metric]**&#x200B;以测量A/B测试。 在本例中，成功的转化取决于用户是否到达页面底部，指示参与度。 因此，将根据用户是否查看了名为bottom-of-the-page的位置来确定&#x200B;**[!UICONTROL Conversion]**。
 
-## 9.实施代码以在应用程序中执行带有功能标记的A/B测试
+## &#x200B;9. 实施代码以在应用程序中执行带有功能标记的A/B测试
 
 >[!BEGINTABS]
 
@@ -165,6 +170,6 @@ String flag = attributes.getString("homepage", "feature-flag");
 
 >[!ENDTABS]
 
-## 10.使用功能标记激活A/B测试
+## &#x200B;10. 使用功能标记激活A/B测试
 
 ![替代图像](assets/asset-activate.png)

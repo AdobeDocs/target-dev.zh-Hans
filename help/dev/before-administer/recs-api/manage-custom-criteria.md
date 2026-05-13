@@ -1,23 +1,27 @@
 ---
 title: 如何管理自定义标准
-description: 使用Adobe Target API管理、创建、列出、编辑、获取和删除Adobe Target Recommendations标准所需的步骤。
+description: 使用Adobe Target API管理、创建、列出、编辑、获取和删除Adobe Target推荐标准所需的步骤。
 feature: APIs/SDKs, Recommendations, Administration & Configuration
 kt: 3815
 thumbnail: null
 author: Judy Kim
 exl-id: 51a67a49-a92d-4377-9a9f-27116e011ab1
-source-git-commit: 2fba03b3882fd23a16342eaab9406ae4491c9044
+TQID: https://experienceleague.adobe.com/sRzck0uJDaJdFZ9nG4Ijrbw31iX3M8WY5nIW2x4nl-0
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '869'
+source-wordcount: 930
 ht-degree: 0%
 
 ---
 
 # 管理自定义标准
 
-有时，Recommendations提供的算法无法显示您要促销的特定项目。 在这种情况下，自定义标准为您提供了一种方法，可以为给定的关键项目或类别提供一组特定的推荐项目。
+有时，推荐提供的算法无法显示您要促销的特定项目。 在这种情况下，自定义标准为您提供了一种方法，可以为给定的关键项目或类别提供一组特定的推荐项目。
 
-要创建自定义标准，请定义并导入关键项目或类别与推荐项目之间的所需映射。 [自定义标准文档](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/recommendations-csv.html?lang=zh-Hans)中介绍了此过程。 如该文档中所述，您可以通过Target用户界面(UI)创建、编辑和删除自定义标准。 但是，Target还提供了一组自定义标准API，允许对自定义标准进行更详细的管理。
+要创建自定义标准，请定义并导入关键项目或类别与推荐项目之间的所需映射。 [自定义标准文档](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/recommendations-csv.html)中介绍了此过程。 如该文档中所述，您可以通过Target用户界面(UI)创建、编辑和删除自定义标准。 但是，Target还提供了一组自定义标准API，允许对自定义标准进行更详细的管理。
 
 >[!WARNING]
 >
@@ -31,7 +35,7 @@ ht-degree: 0%
 
 >[!WARNING]
 >
->使用创建自定义标准API创建的自定义标准（如本练习中所述）将显示在UI中，并将保留这些标准。 您将无法从UI中编辑或删除它们。 您可以通过API **编辑或删除它们**，但无论哪种方式，它们将继续显示在Target UI中。 要保留从UI编辑或删除的选项，请使用[文档](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/recommendations-csv.html?lang=zh-Hans)的UI创建自定义标准，而不是使用创建自定义标准API。
+>使用创建自定义标准API创建的自定义标准（如本练习中所述）将显示在UI中，并将保留这些标准。 您将无法从UI中编辑或删除它们。 您可以通过API **编辑或删除它们**，但无论哪种方式，它们将继续显示在Target UI中。 要保留从UI编辑或删除的选项，请使用[文档](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/recommendations-csv.html)的UI创建自定义标准，而不是使用创建自定义标准API。
 
 只有在阅读了上述警告并熟悉了如何创建新自定义标准且无法随后从UI中删除后，才应继续执行以下步骤。
 
@@ -114,6 +118,6 @@ ht-degree: 0%
 >
 >提醒一下，即使标准被删除，也不会从Target UI中删除，因为它是使用创建自定义标准API创建的。
 
-恭喜！您现在可以使用Recommendations API创建、列出、编辑、删除自定义标准并获取其详细信息。 在下一部分中，您将使用Target投放API检索推荐。
+恭喜！ 您现在可以使用推荐API创建、列出、编辑、删除自定义标准并获取其详细信息。 在下一部分中，您将使用Target投放API检索推荐。
 
-&lt;！—[下一课程“使用服务器端交付API获取Recommendations”>](fetch-recs-server-side-delivery-api.md) —>
+&lt;！— [下一课程“使用服务器端交付API获取推荐”>](fetch-recs-server-side-delivery-api.md) —>

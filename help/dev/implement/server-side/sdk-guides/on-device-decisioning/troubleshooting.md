@@ -3,9 +3,14 @@ title: 设备上决策疑难解答
 description: 了解如何对[!UICONTROL on-device decisioning]进行故障排除
 exl-id: e76f95ce-afae-48e0-9dbb-2097133574dc
 feature: APIs/SDKs
-source-git-commit: 1d892d4d4d6f370f7772d0308ee0dd0d5c12e700
+TQID: https://experienceleague.adobe.com/Fp25tLDtuk-CqqcbofshX2-0MzQzayE2xN8OvNT3zVo
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2: id: c93393a4-e558-47e1-992e-c91ed4d480ce
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: c1579802-ddd4-4214-8a91-97b2066abe11id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '1155'
+source-wordcount: 1158
 ht-degree: 0%
 
 ---
@@ -20,9 +25,9 @@ ht-degree: 0%
 1. 确保启用[!DNL Target]跟踪
 1. 验证是否已根据定义的轮询间隔检索和缓存[!UICONTROL on-device decisioning] *规则项目*。
 1. 通过基于表单的体验编辑器创建测试[!UICONTROL on-device decisioning]活动，验证通过缓存的规则工件进行的内容交付。
-1. Inspect发送通知错误
+1. 检查发送通知错误
 
-## 1.确保已配置日志程序
+## &#x200B;1. 确保已配置日志程序
 
 初始化SDK时，请确保启用日志记录。
 
@@ -40,7 +45,7 @@ const CONFIG = {
 
 **Java SDK**
 
-应该启用`ClientConfig`上的For Java SDK `logRequests`。
+对于Java SDK，应启用`ClientConfig`上的`logRequests`。
 
 ```js {line-numbers="true"}
 ClientConfig config = ClientConfig.builder()
@@ -56,7 +61,7 @@ ClientConfig config = ClientConfig.builder()
 java -Dorg.slf4j.simpleLogger.defaultLogLevel=DEBUG ...
 ```
 
-## 2.确保启用[!DNL Target]跟踪
+## &#x200B;2. 确保启用[!DNL Target]跟踪
 
 启用跟踪将输出[!DNL Adobe Target]中有关规则工件的其他信息。
 
@@ -113,7 +118,7 @@ java -Dorg.slf4j.simpleLogger.defaultLogLevel=DEBUG ...
      AT: LD.ArtifactProvider artifact received - status=200
    ```
 
-## 3.验证是否已根据定义的轮询间隔检索和缓存[!UICONTROL on-device decisioning] *规则构件*。
+## &#x200B;3. 验证是否已根据定义的轮询间隔检索和缓存[!UICONTROL on-device decisioning] *规则项目*。
 
 1. 等待轮询间隔的持续时间（默认值为20分钟），并确保SDK正在获取构件。 将输出相同的终端日志。
 
@@ -135,7 +140,7 @@ java -Dorg.slf4j.simpleLogger.defaultLogLevel=DEBUG ...
      },
    ```
 
-## 4.通过基于表单的体验编辑器创建测试[!UICONTROL on-device decisioning]活动，通过缓存的规则工件验证内容交付
+## &#x200B;4. 通过基于表单的体验编辑器创建测试[!UICONTROL on-device decisioning]活动，通过缓存的规则工件验证内容交付
 
 1. 导航到Experience Cloud中的[!DNL Target]用户界面
 
@@ -201,7 +206,7 @@ java -Dorg.slf4j.simpleLogger.defaultLogLevel=DEBUG ...
    Response:  <div>test</div>
    ```
 
-## Inspect发送通知错误
+## 检查发送通知错误
 
 使用设备上决策时，会自动发送getOffers执行请求的通知。 这些请求将在后台静默发送。 通过订阅名为`sendNotificationError`的事件可以检查任何错误。 以下代码示例显示了如何使用Node.js SDK订阅通知错误。
 
@@ -490,4 +495,4 @@ TargetDeliveryResponse response = targetClient.getOffers(request);
 
 * 当用于“符合设备上决策资格”活动的mbox也用于不符合“符合设备上决策资格”的其他活动时，该mbox将列在`rules.json`工件的`remoteMboxes`部分下。 当mbox列在`remoteMboxes`下时，对该mbox的任何`getOffer(s)`调用都会导致服务器调用。
 
-* 如果您在工作区/属性下设置了活动，并且在配置SDK时未包含该活动，则可能会导致下载默认工作区的`rules.josn`，该默认工作区可以使用`remoteMboxes`部分下的mbox。
+* 如果您在工作区/属性下设置活动，并且在配置SDK时不包含该活动，则可能会导致下载默认工作区的`rules.josn`，该默认工作区可以使用`remoteMboxes`部分下的mbox。

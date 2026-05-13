@@ -3,9 +3,12 @@ title: 如何在 [!DNL Adobe Target] Java SDK中使用异步请求
 description: 了解 [!DNL Target] Java SDK如何支持异步请求，这可以将有效目标时间减少为零。
 feature: APIs/SDKs
 exl-id: e11f8d16-76f6-4d39-822a-34a1cf7f623f
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+TQID: https://experienceleague.adobe.com/Y9oTl8aU4-4HpMajdmy5KfvAwEFOpV0y9vUg7BdBRk8
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '130'
+source-wordcount: 130
 ht-degree: 3%
 
 ---
@@ -14,7 +17,7 @@ ht-degree: 3%
 
 ## 描述
 
-服务器端集成的一个好处是，通过使用并行机制，您可以利用服务器端提供的巨大带宽和计算资源。 [!DNL Target] Java SDK支持异步请求，这可以将有效目标时间减少为零。
+服务器端集成的一个好处是，通过使用并行机制，您可以利用服务器端提供的巨大带宽和计算资源。[!DNL Target] Java SDK支持异步请求，这可以将有效定位时间减少为零。
 
 ## 支持的方法
 
@@ -73,6 +76,6 @@ public class TargetRestController {
 }
 ```
 
-此示例假定您已[将SDK](initialize-sdk.md)初始化为Spring Bean，并且您有[可用的实用工具方法](utility-methods.md)。
+此示例假定您已[将SDK](initialize-sdk.md)初始化为spring bean，并且您有[可用的实用工具方法](utility-methods.md)。
 
 [!DNL Target]请求在`simulateIO`之前触发，到执行时，目标结果也应准备就绪。 即使不是这样，在大多数情况下您仍可节省大量成本。

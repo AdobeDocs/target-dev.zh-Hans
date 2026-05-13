@@ -3,10 +3,14 @@ title: 使用设备上决策时的最佳实践
 description: 了解在 [!DNL Adobe Target]中使用[!UICONTROL on-device decisioning]时的最佳实践
 feature: Implement Server-side
 exl-id: a0ca014d-ad9f-4ecc-961d-cb7ba236507f
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+TQID: https://experienceleague.adobe.com/GgVJaAal4uS1RqpCK3wNCVwPjAOaXzjXNV7EoqWhwcY
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: c1579802-ddd4-4214-8a91-97b2066abe11
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '378'
-ht-degree: 0%
+source-wordcount: 393
+ht-degree: 3%
 
 ---
 
@@ -21,7 +25,7 @@ ht-degree: 0%
 * 取消激活不在工件中的支持“设备端”的活动。
 * 如果您拥有Target Premium，则可以使用[属性/工作区](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/enterprise/property-channel.html?lang=zh-Hans)为不同的工作区创建不同的工件文件。
 * 如果工件文件由于合法原因变得非常大，则可以使用“混合”决策方法。 此方法允许您并行下载工件，所有Target API调用都会通过在线进行，直到下载工件为止。 请阅读下面有关“混合”决策模式的最佳实践部分，了解有关此方法的更多信息。
-* 如果您有单页应用程序(SPA)，[!DNL Adobe]建议您在首次加载页面期间先加载并初始化at.js，然后再加载应用程序的主JavaScript文件。 这种方法可以更早地启动工件下载，从而提供更快的体验渲染。
+* 如果您有单页应用程序(SPA)，[!DNL Adobe]建议您在首次加载页面期间加载应用程序的主JavaScript文件之前，先加载并初始化at.js。 这种方法可以更早地启动工件下载，从而提供更快的体验渲染。
 
 ## 当决策方法为“混合”时的最佳实践
 

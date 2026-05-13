@@ -3,18 +3,21 @@ title: 订阅 [!DNL Adobe Target] Java SDK中的事件
 description: 了解如何使用[!UICONTROL OnDeviceDecisioningHandler]对象订阅在Java SDK中发生的各种事件。
 feature: APIs/SDKs
 exl-id: f2d56762-6bf7-4c6b-9c14-fb20e5cfd60d
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+TQID: https://experienceleague.adobe.com/x3aig-jM-GXzmLNcUNclZUK9Y49tuSF9-sdkxzJFtiM
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '135'
+source-wordcount: 134
 ht-degree: 5%
 
 ---
 
-# SDK事件(Java)
+# SDK Events (Java)
 
 ## 描述
 
-当[初始化SDK](initialize-sdk.md)时，可以在`ClientConfig`对象中提供可选的`OnDeviceDecisioningHandler`对象。 它可用于订阅SDK内发生的各种事件。 例如，`onDeviceDecisioningReady`事件可与回调函数一起使用，在SDK准备好进行方法调用时，将调用该回调函数。
+当[初始化SDK](initialize-sdk.md)时，可在`ClientConfig`对象中提供可选的`OnDeviceDecisioningHandler`对象。 它可用于订阅在SDK内发生的各种事件。 例如，`onDeviceDecisioningReady`事件可与回调函数一起使用，在SDK准备好进行方法调用时将调用该回调函数。
 
 ## 事件
 

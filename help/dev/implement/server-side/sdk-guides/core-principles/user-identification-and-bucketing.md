@@ -3,10 +3,14 @@ title: 用户标识和分段
 description: 用户标识和分段
 exl-id: 4fcf235b-6a58-442c-ae13-9d05ec1033fc
 feature: Implement Server-side
-source-git-commit: 09a50aa67ccd5c687244a85caad24df56c0d78f5
+TQID: https://experienceleague.adobe.com/V9hK5oj7F-SV2wou2sz-Ve3RVJ1EMsFJDmcNF4ctV5o
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2: id: adee20bd-51f4-461d-b9db-d215f8756eebid: f7c7de77-382f-4f48-8b36-61a170f06d3d
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '1130'
-ht-degree: 3%
+source-wordcount: 1172
+ht-degree: 4%
 
 ---
 
@@ -20,8 +24,8 @@ ht-degree: 3%
 | --- | --- |
 | `tntID` | `tntId`是用户[!DNL Target]中的主要标识符。 您可以提供此ID，否则[!DNL Target]将在请求中不包含此ID时自动生成此ID。 |
 | `thirdPartyId` | `thirdPartyId`是您公司的用户标识符，您可以随每次调用发送该标识符。 当用户登录到某个公司的网站时，该公司通常会创建一个ID，并将其绑定到访客的帐户、会员卡、会员编号或该公司的其他适用标识符。 |
-| `marketingCloudVisitorId` | `marketingCloudVisitorId`用于在不同Adobe解决方案之间合并和共享数据。 要与Adobe Analytics和Adobe Audience Manager集成，需要marketingCloudVisitorId。 |
-| `customerIds` | 除了Experience Cloud访客ID之外，还可以使用其他[客户ID](https://experienceleague.adobe.com/docs/id-service/using/reference/authenticated-state.html?lang=zh-Hans)以及每个访客的身份验证状态。 |
+| `marketingCloudVisitorId` | `marketingCloudVisitorId`用于在不同的Adobe解决方案之间合并和共享数据。 要与Adobe Analytics和Adobe Audience Manager集成，需要marketingCloudVisitorId。 |
+| `customerIds` | 除了Experience Cloud访客ID之外，还可以使用其他[客户ID](https://experienceleague.adobe.com/docs/id-service/using/reference/authenticated-state.html)以及每个访客的身份验证状态。 |
 
 ## [!DNL Target] ID (tntID)
 
@@ -82,7 +86,7 @@ TargetDeliveryResponse offers = targetClient.getOffers(request);
 
 >[!ENDTABS]
 
-在缺少`tntId`的情况下，[!DNL Adobe Target]将生成`tntId`并在响应中提供它，如下所示。
+在缺少`tntId`的情况下，[!DNL Adobe Target]生成一个`tntId`并在响应中提供它，如下所示。
 
 ```json {line-numbers="true"}
 {
@@ -101,9 +105,9 @@ TargetDeliveryResponse offers = targetClient.getOffers(request);
 
 ## 第三方ID (thirdPartyId)
 
-如果您的组织使用ID来标识访客，则可以使用`thirdPartyID`来传递内容。 `thirdPartyID`是您的企业用来标识最终用户的永久ID，无论最终用户是从Web、移动还是IoT渠道与您的企业进行交互。 换言之，`thirdPartyId`引用了可在各频道间使用的用户配置文件数据。 但是，您必须为发出的每个[!DNL Adobe Target]传递API调用提供`thirdPartyID`。
+如果您的组织使用ID来识别访客，则可以使用`thirdPartyID`来交付内容。 `thirdPartyID`是您的企业用于识别最终用户的永久ID，无论他们通过Web、移动还是物联网渠道与您的企业进行交互。 换句话说，`thirdPartyId`引用了可以跨渠道使用的用户配置文件数据。 但是，您必须为发出的每个[!DNL Adobe Target]交付API调用提供`thirdPartyID`。
 
-以下示例调用演示如何使用`thirdPartyId`。
+以下示例调用演示了`thirdPartyId`的使用。
 
 >[!BEGINTABS]
 
@@ -167,9 +171,9 @@ TargetDeliveryResponse offers = targetClient.getOffers(request);
 
 ## Marketing Cloud访客ID (marketingCloudVisitorId)
 
-`marketingCloudVisitorId`是一个通用的永久性ID，用于在Adobe Experience Cloud的所有解决方案中标识您的访客。 当您的组织实施ID服务时，此ID允许您在不同的Experience Cloud解决方案(包括[!DNL Adobe Target]、Adobe Analytics和Adobe Audience Manager)中识别同一网站访客及其数据。 请注意，将[!DNL Target]与[!DNL Adobe Analytics]和[!DNL Adobe Audience Manager]集成时需要`marketingCloudVisitorId`。
+`marketingCloudVisitorId`是一个通用的永久性ID，用于在Adobe Experience Cloud的所有解决方案中标识您的访客。 当您的组织实施ID服务时，此ID允许您在不同的Experience Cloud解决方案（包括[!DNL Adobe Target]、Adobe Analytics和Adobe Audience Manager）中识别同一网站访客及其数据。 请注意，将[!DNL Target]与[!DNL Adobe Analytics]和[!DNL Adobe Audience Manager]集成时需要`marketingCloudVisitorId`。
 
-以下示例调用演示了如何将从Experience CloudID服务检索的`marketingCloudVisitorId`传递到[!DNL Target]。
+以下示例调用演示了如何将从Experience Cloud ID服务检索到的`marketingCloudVisitorId`传递到[!DNL Target]。
 
 >[!BEGINTABS]
 
@@ -233,13 +237,13 @@ TargetDeliveryResponse offers = targetClient.getOffers(request);
 
 ## 客户ID (customerIds)
 
-[客户ID](https://experienceleague.adobe.com/docs/id-service/using/reference/authenticated-state.html?lang=zh-Hans)可以添加到Experience Cloud访客ID或与其关联。 无论何时发送`customerIds`，都必须提供`marketingCloudVisitorId`。 此外，可以为每个访客随每个`customerId`提供身份验证状态。 可以使用以下身份验证状态：
+[客户ID](https://experienceleague.adobe.com/docs/id-service/using/reference/authenticated-state.html)可以添加到Experience Cloud访客ID或与其关联。 无论何时发送`customerIds`，都必须提供`marketingCloudVisitorId`。 此外，可以为每个访客随每个`customerId`提供身份验证状态。 可以使用以下身份验证状态：
 
 | 身份验证状态 | 用户状态 |
 | --- | --- |
 | `unknown` | 未知或从未验证。 此状态可用于访客通过单击显示广告而登陆您的网站等场景。 |
 | `authenticated` | 用户目前通过了您网站或应用程序上活动会话的身份验证。 |
-| `logged_out` | 用户已经过身份验证，但已主动注销。用户打算断开与已验证状态的连接。 用户不想再被当为已经过身份验证处理。 |
+| `logged_out` | 用户已经过身份验证，但已主动注销。 用户打算断开与已验证状态的连接。 用户不想再被当为已经过身份验证处理。 |
 
 请注意，只有当`customerId`处于身份验证状态时，[!DNL Target]才引用已存储并链接到customerId的用户配置文件数据。 如果`customerId`处于未知或`logged_out`状态，则将忽略它，并且任何可能与该`customerId`关联的用户配置文件数据都不会用于受众定位。
 
@@ -315,7 +319,7 @@ TargetDeliveryResponse offers = targetClient.getOffers(request);
 
 ## 合并的配置文件
 
-您可以在同一请求中合并`tntId`、`thirdPartyID`和`marketingCloudVisitorId`。 在此方案中，[!DNL Adobe Target]将维护所有这些ID的映射，并将其固定到访客。 了解如何使用不同的标识符实时[合并和同步配置文件](https://experienceleague.adobe.com/docs/target/using/audiences/visitor-profiles/3rd-party-id.html?lang=zh-Hans)。
+您可以在同一请求中合并`tntId`、`thirdPartyID`和`marketingCloudVisitorId`。 在此方案中，[!DNL Adobe Target]将维护所有这些ID的映射，并将其固定到访客。 了解如何使用不同的标识符实时[合并和同步配置文件](https://experienceleague.adobe.com/docs/target/using/audiences/visitor-profiles/3rd-party-id.html)。
 
 >[!BEGINTABS]
 
@@ -414,9 +418,9 @@ TargetDeliveryResponse offers = targetClient.getOffers(request);
 1. 使用MurmurHash3计算哈希
 1. 获取哈希的绝对值
 1. 将散列绝对值除以10000
-1. 将余数除以10000，这将生成一个介于0和1之间的值
+1. 将余数除以10000，这会生成一个介于0和1之间的值
 1. 将结果乘以活动中的体验总数
-1. 对结果进行四舍五入。 这应该会产生经验指数。
+1. 舍入结果。 这会生成体验索引。
 
 ### 示例
 
@@ -431,10 +435,10 @@ TargetDeliveryResponse offers = targetClient.getOffers(request);
 1. 设备ID `702ff4d0-83b1-4e2e-a0a6-22cbe460eb15`
 1. 客户端代码`acmeclient`
 1. 活动ID `1111`
-1. 盐`experience`
+1. 加盐`experience`
 1. 哈希`acmeclient.1111.702ff4d0-83b1-4e2e-a0a6-22cbe460eb15.experience`的值，哈希值`-919077116`
 1. 哈希`919077116`的绝对值
-1. 按10000除后的剩余数，`7116`
-1. 余数之后的值除以10000， `0.7116`
-1. 将值与体验总数`3 * 0.7116 = 2.1348`相乘后的结果
-1. 体验索引为`2`，这意味着第三次体验，因为我们正在使用基于`0`的索引。
+1. 除以10000后的余数，`7116`
+1. 余数后的值除以10000， `0.7116`
+1. 将该值与体验总数`3 * 0.7116 = 2.1348`相乘后的结果
+1. 体验索引是`2`，这表示第三次体验，因为我们使用的是基于`0`的索引。

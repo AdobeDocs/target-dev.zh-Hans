@@ -1,13 +1,19 @@
 ---
 keywords: 移动应用程序，aep sdk，本机应用程序，Web视图，本机；swift，adobe experience platform移动sdk，移动sdk，本机代码
 description: 了解如何在具有Web视图的本机应用程序中使用 [!DNL AEP Mobile SDK] 实施 [!DNL Adobe Target] 。
-title: 在使用带有Web视图的本机代码的移动应用程序中实施 [!DNL Adobe Target]
+title: '在使用带有Web视图的本机代码的移动应用程序中实施 [!DNL Adobe Target] '
 feature: Implement Mobile
 role: Developer
 exl-id: 3dd2e1d7-c744-4ba8-aaa4-6c2fe64d01fa
-source-git-commit: 50ee7e66e30c0f8367763a63b6fde5977d30cfe7
+TQID: https://experienceleague.adobe.com/JrbjPpq3ds0sl4rkMnuzF9SYk2PI4r676hHqN-Pvn78
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2: id: c93393a4-e558-47e1-992e-c91ed4d480ce
+subfeature_v2: id: d051910f-2bda-47ea-a969-6ade9fcd71f1
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '561'
+source-wordcount: 611
 ht-degree: 0%
 
 ---
@@ -16,7 +22,7 @@ ht-degree: 0%
 
 本文分享在移动应用程序中实施[!DNL Adobe Target]的最佳实践，该应用程序使用[!DNL Adobe Experience Platform Mobile SDK]在Web视图中使用本机代码。
 
-本文使用来自GitHub存储库[&#128279;](https://github.com/adobe/aep-sdk-app/){target=_blank}的[[!DNL Adobe Experience Platform Mobile SDK]](https://developer.adobe.com/client-sdks/documentation/getting-started/){target=_blank}和在Swift中编写的[!DNL Target]集成作为示例iOS应用程序。
+本文使用GitHub存储库](https://github.com/adobe/aep-sdk-app/){target=_blank}中以[Swift格式编写的[[!DNL Adobe Experience Platform Mobile SDK]](https://developer.adobe.com/client-sdks/documentation/getting-started/){target=_blank}和[!DNL Target]集成，使用示例iOS应用程序。
 
 在现实中，您的企业应用程序可能会使用移动应用程序中的Web视图。 Web视图是一个使用URL加载网页的容器。 该容器类似于没有控件的浏览器窗口。 在iOS中，处理网页时，Web视图容器可充当Safari浏览器。
 

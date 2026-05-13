@@ -4,9 +4,15 @@ description: 对 [!DNL Adobe Target] at.js JavaScript库使用[!UICONTROL adobe.
 title: 如何使用[!UICONTROL adobe.target.applyOffer()]函数？
 feature: at.js
 exl-id: 957bbe92-8012-4bd5-95d6-1ae38b72bb16
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+TQID: https://experienceleague.adobe.com/lrjsIl-gKu1SnrZapxYcoDObvUCGG2ht58QtWbQkYts
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2: id: c93393a4-e558-47e1-992e-c91ed4d480ce
+subfeature_v2: id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '172'
+source-wordcount: 169
 ht-degree: 69%
 
 ---
@@ -17,15 +23,15 @@ ht-degree: 69%
 
 >[!NOTE]
 >
->`applyOffer` 需要使用 `mbox` 参数。如果未指定 mbox 名称，则会发生错误。
+>`applyOffer` 需要使用 `mbox` 参数。 如果未指定 mbox 名称，则会发生错误。
 
 options 参数是强制性的，具有以下结构：
 
 | 键 | 类型 | 必需 | 描述 |
 |--- |--- |--- |--- |
-| mbox | 字符串 | 是 | Mbox 名称<br />使用 at.js 1.3.0（及更高版本）的 Target 强制使用 mbox 键值。以往，这些键值是要求使用的，但现在，Target 强制使用该键值以确保 Target 正确验证并且客户正确地使用该函数。 |
-| selector | 字符串或 DOM 元素 | 否 | HTML 元素或 CSS 选择器，用于标识 Target 应将选件内容放置在其中的 HTML 元素。如果未提供选择器，则Target会假定HTML元素应使用HTMLHEAD。 |
-| 优惠 | 数组 | 是 | 应用于元素的数组操作。 |
+| mbox | 字符串 | 是 | Mbox 名称<br />使用 at.js 1.3.0（及更高版本）的 Target 强制使用 mbox 键值。 以往，这些键值是要求使用的，但现在，Target 强制使用该键值以确保 Target 正确验证并且客户正确地使用该函数。 |
+| selector | 字符串或 DOM 元素 | 否 | HTML 元素或 CSS 选择器，用于标识 Target 应将选件内容放置在其中的 HTML 元素。 如果未提供选择器，则Target会假定HTML元素应使用HTML HEAD。 |
+| 产品建议 | 数组 | 是 | 应用于元素的数组操作。 |
 
 ## 示例
 

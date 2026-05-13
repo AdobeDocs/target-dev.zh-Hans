@@ -4,10 +4,15 @@ description: 了解如何从 [!DNL Adobe Target Classic] API转换到 [!DNL Adob
 title: 如何从 [!DNL Adobe Developer Console]上的 [!DNL Target Classic] API转换到 [!DNL Target] API？
 feature: APIs/SDKs
 exl-id: b84e3767-89ad-4e2d-9bb4-7e31bffbc285
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+TQID: https://experienceleague.adobe.com/cIWcraU0O9Ut1VBbD5ScKOyBrXniyIEM5XEVZMJvffk
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2: id: c93393a4-e558-47e1-992e-c91ed4d480ceid: f7c7de77-382f-4f48-8b36-61a170f06d3d
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: aa2f3246-cb95-4b30-8899-fdf7d73550ccid: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '493'
-ht-degree: 38%
+source-wordcount: 595
+ht-degree: 32%
 
 ---
 
@@ -23,17 +28,17 @@ ht-degree: 38%
 
 | 术语 | 描述 |
 |--- |--- |
-| 经典API | 链接到您的[!DNL Target Classic]帐户的API。 这些 API 调用以基于用户名和密码的身份验证为基础，且使用主机名 `testandtarget.omniture.com`。如果API调用在请求URL中包含用户名和密码，则必须转换到[!DNL Adobe Developer Console] API。 |
+| 经典API | 链接到您的[!DNL Target Classic]帐户的API。 这些 API 调用以基于用户名和密码的身份验证为基础，且使用主机名 `testandtarget.omniture.com`。 如果API调用在请求URL中包含用户名和密码，则必须转换到[!DNL Adobe Developer Console] API。 |
 | [[!DNL Adobe Developer Console]](https://developer.adobe.com/console/home) | [!DNL Adobe Developer Console]是[!DNL Target] API的网关。 这些API已连接到您的[!DNL Target Standard/Premium]帐户。 [!DNL Adobe Developer Console]上的[!DNL Target] API使用基于[JWT的身份验证](../../before-administer/configure-authentication.md)，这是安全企业API的行业标准。 |
 
-## 时间表
+## 时间线
 
 [!DNL Target Classic]停用时，以下API被停用：
 
 | 日期 | 详细信息 |
 |--- |--- |
 | 2017 年 10 月 17 日 | 所有执行写入操作的 API 方法（`saveCampaign`、`copyCampaign`、`saveHTMLOfferContent` 和 `setCampaignState`）都已停用。<P>在这一天，所有[!DNL Target Classic]用户帐户都设置为只读状态。 |
-| 2017 年 11 月 14 日 | 其余 API 都停用。这是停用[!DNL Target Classic]用户界面的日期 |
+| 2017 年 11 月 14 日 | 其余 API 都停用。 这是停用[!DNL Target Classic]用户界面的日期 |
 
 [!DNL Recommendations Classic] API不受此时间线影响。
 
@@ -41,7 +46,7 @@ ht-degree: 38%
 
 下表列出了经典API方法的等效的[!DNL Adobe Developer Console] API方法。 [!DNL Adobe Developer Console] API返回JSON，而经典API返回XML。
 
-[!DNL Adobe Developer Console] API方法链接到API文档网站中的相应部分。 每个 API 方法都提供有相关示例。您还可以使用[!DNL Target]管理员API Postman集合，该集合包含[!DNL Adobe Developer Console]上所有AdobeAPI方法的示例API调用。
+[!DNL Adobe Developer Console] API方法链接到API文档网站中的相应部分。 每个 API 方法都提供有相关示例。 您还可以使用[!DNL Target]管理员API Postman收藏集，该收藏集包含[!DNL Adobe Developer Console]上所有Adobe API方法的示例API调用。
 
 | 分组 | 经典API方法 | [!DNL Adobe Developer Console] API方法 | 注释 |
 |--- |--- |--- |--- |
@@ -52,7 +57,7 @@ ht-degree: 38%
 |  | 营销活动状态 | [更新活动状态](https://developers.adobetarget.com/api/#update-activity-state) |  |
 |  | 营销活动查看 | [按 ID 获取 AB 活动](https://developers.adobetarget.com/api/#get-ab-activity-by-id)<P>[按 ID 获取 XT 活动](https://developers.adobetarget.com/api/#get-xt-activity-by-id) |  |
 |  | 第三方营销活动 ID | 不适用 | 如果您使用的是 thirdpartyID，则可以使用相关的活动方法。 |
-| 选件 | 选件创建 | [创建选件](https://developers.adobetarget.com/api/#create-offer) |  |
+| 产品建议 | 选件创建 | [创建选件](https://developers.adobetarget.com/api/#create-offer) |  |
 |  | 选件获取 | [按 ID 获取选件](https://developers.adobetarget.com/api/#get-offer-by-id) |  |
 |  | 选件列表 | [列出选件](https://developers.adobetarget.com/api/#list-offers) |  |
 |  | 文件夹列表 | 不适用 | [!DNL Target Standard/Premium]不支持文件夹 |

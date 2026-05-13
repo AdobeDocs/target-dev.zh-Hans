@@ -1,13 +1,19 @@
 ---
 keywords: 推荐、设置、首选项、垂直行业、筛选不兼容的标准、默认主机组、缩览图基本URL、推荐API令牌、
-description: 了解如何在[!UICONTROL Recommendations]中实施 [!DNL Adobe Target]活动。
+description: 了解如何在 [!DNL Adobe Target]中实施[!UICONTROL Recommendations]活动。
 title: 如何实施[!UICONTROL Recommendations]活动？
 feature: Recommendations
 hide: true
 exl-id: 0a9c9649-195b-44e2-987e-d02eaf98cc54
-source-git-commit: 760e6425fc2a32ec5c405094d144f173de1b6c07
+TQID: https://experienceleague.adobe.com/A7j0oJbyO3oei-a2l02I58o9I0vCPrRcqWC-QgQUxBo
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2: id: c93393a4-e558-47e1-992e-c91ed4d480ce
+subfeature_v2: id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: e0eb8757-182f-49f3-94a4-1587d16f5094id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+source-git-commit: 929e1f10bc5dd0741f0fe28cd46435e680a4a308
 workflow-type: tm+mt
-source-wordcount: '1550'
+source-wordcount: 1644
 ht-degree: 18%
 
 ---
@@ -18,9 +24,9 @@ ht-degree: 18%
 
 >[!NOTE]
 >
->除了本文之外，[Adobe Target商业从业者指南](https://experienceleague.adobe.com/zh-hans/docs/target/using/target-home){target=_blank}还包含有关[Target推荐](https://experienceleague.adobe.com/zh-hans/docs/target/using/recommendations/recommendations){target=_blank}的深入信息。
+>除了本文之外，[Adobe Target商业从业者指南](https://experienceleague.adobe.com/en/docs/target/using/target-home){target=_blank}还包含有关[Target推荐](https://experienceleague.adobe.com/en/docs/target/using/recommendations/recommendations){target=_blank}的深入信息。
 
-在[!UICONTROL Recommendations]中设置第一个[!DNL Adobe Target]活动之前，请完成以下步骤：
+在[!DNL Adobe Target]中设置第一个[!UICONTROL Recommendations]活动之前，请完成以下步骤：
 
 1. [在要用于捕获用户行为和交付推荐的Web和移动应用表面上实施[!UICONTROL Target]](#implement-target)。
 1. [设置您要向用户推荐的产品或内容的[!UICONTROL Recommendations]目录](#set-up-your-recommendations-catalog)。
@@ -29,29 +35,29 @@ ht-degree: 18%
 1. [配置[!UICONTROL Recommendations]设置](#configure-recommendations-settings)。
 1. （可选） [使用管理员API管理[!UICONTROL Recommendations]](#administer-recommendations-using-admin-apis)。
 
-## 1.实施[!UICONTROL Target]
+## &#x200B;1. 实施[!UICONTROL Target]
 
 [!DNL Target Recommendations]要求您实施[!DNL Adobe Experience Platform Web SDK]或at.js 0.9.2（或更高版本）。 有关详细信息，请参阅[[!UICONTROL Target]客户端实施指南](../client-side/overview.md)。
 
-## 2.设置您的[!UICONTROL Recommendations]目录
+## &#x200B;2. 设置您的[!UICONTROL Recommendations]目录
 
 要提供高质量的推荐，[!UICONTROL Target]必须了解您要推荐的产品或内容。 目录通常包括有关推荐项目的三种类型的信息。 假设您正在推荐电影。 包括以下内容：
 
-1. 要向收到推荐的用户显示的数据。例如，您可以显示电影的名称以及电影海报的缩略图图像的URL。
-1. 用于应用营销和销售控制的数据。例如，您可以显示电影的分级，这样就不会推荐评级为NC-17的电影。
+1. 要向收到推荐的用户显示的数据。 例如，您可以显示电影的名称以及电影海报的缩略图图像的URL。
+1. 用于应用营销和销售控制的数据。 例如，您可以显示电影的分级，这样就不会推荐评级为NC-17的电影。
 1. 用于确定项目与其他项目段相似度的数据。 例如，您可以显示电影的流派和电影的导演。
 
 [!UICONTROL Target]提供了多个集成选项来填充您的目录。 这些选项可以组合使用，以更新目录中的不同项目或更新不同频率上的不同项目属性。
 
 | 方法 | 内容 | 何时使用 | 其他信息 |
 | --- | --- | --- | --- |
-| 目录信息源 | 计划每天上传和摄取信息源（CSV、[!DNL Google]产品XML或[!UICONTROL Analytics Product Classifications]）。 | 用于一次发送有关多个项目的信息。 用于发送不经常更改的信息。 | 请参阅[信息源](https://experienceleague.adobe.com/zh-hans/docs/target/using/recommendations/entities/feeds)。 |
+| 目录信息源 | 计划每天上传和摄取信息源（CSV、[!DNL Google]产品XML或[!UICONTROL Analytics Product Classifications]）。 | 用于一次发送有关多个项目的信息。 用于发送不经常更改的信息。 | 请参阅[信息源](https://experienceleague.adobe.com/en/docs/target/using/recommendations/entities/feeds)。 |
 | 实体API | 调用API以发送单个项目的最新更新。 | 用于在更新发生时一次发送一个项目的更新。 用于发送经常更改的信息（例如价格、库存/库存水平）。 | 请参阅[实体API开发人员文档](https://developer.adobe.com/target/administer/recommendations-api/#tag/Entities)。 |
 | 在页面上传递更新 | 使用页面上的JavaScript或使用投放API发送单个项目的即时更新。 | 用于在更新发生时一次发送一个项目的更新。 用于发送经常更改的信息（例如价格、库存/库存水平）。 | 请参阅下面的[项目查看次数/产品页面](#item-views-or-product-pages)。 |
 
 大多数客户应至少实施一个信息源。 然后，您可以选择使用实体API或页面上的方法通过经常更改属性或项目的更新来补充馈送。
 
-## 3.传递行为信息和上下文
+## &#x200B;3. 传递行为信息和上下文
 
 您应传递给[!UICONTROL Target]的行为信息和上下文取决于访客正在执行的操作，该操作通常与访客与之交互的页面类型相关联。
 
@@ -108,7 +114,7 @@ function targetPageParams() {
 }
 ```
 
-有关基于购物车的推荐的更多信息，请参阅[商业从业者指南](https://experienceleague.adobe.com/zh-hans/docs/target/using/recommendations/criteria/base-the-recommendation-on-a-recommendation-key#cart-based)中的&#x200B;*[!DNL Adobe Target]基于购物车的推荐*。
+有关基于购物车的推荐的更多信息，请参阅&#x200B;*[!DNL Adobe Target]商业从业者指南*&#x200B;中的[基于购物车的推荐](https://experienceleague.adobe.com/en/docs/target/using/recommendations/criteria/base-the-recommendation-on-a-recommendation-key#cart-based)。
 
 ### 排除访客购物车中已有的项目
 
@@ -126,17 +132,17 @@ function targetPageParams() {
 
 ### 购买/订单确认页面
 
-发生购买事件时，传递购买项目的身份。 请参阅[如何部署at.js >在不使用标签管理器的情况下实施](../client-side/atjs/how-to-deployatjs/implement-target-without-a-tag-manager.md#track-conversions)一文中的[跟踪转化[!UICONTROL Target]](../client-side/atjs/how-to-deployatjs/implement-target-without-a-tag-manager.md)。
+发生购买事件时，传递购买项目的身份。 请参阅[如何部署at.js >在不使用标签管理器的情况下实施[!UICONTROL Target]一文中的[跟踪转化](../client-side/atjs/how-to-deployatjs/implement-target-without-a-tag-manager.md#track-conversions)](../client-side/atjs/how-to-deployatjs/implement-target-without-a-tag-manager.md)。
 
-## 4.配置全局排除项
+## &#x200B;4. 配置全局排除项
 
-排除全局级别上您绝不希望向访客推荐的任何项目。 请参阅[商业从业者指南](https://experienceleague.adobe.com/zh-hans/docs/target/using/recommendations/entities/exclusions)中的&#x200B;*[!DNL Adobe Target]排除项*。
+排除全局级别上您绝不希望向访客推荐的任何项目。 请参阅&#x200B;*[!DNL Adobe Target]商业从业者指南*&#x200B;中的[排除项](https://experienceleague.adobe.com/en/docs/target/using/recommendations/entities/exclusions)。
 
-## 5.配置[!UICONTROL Recommendations]设置
+## &#x200B;5. 配置[!UICONTROL Recommendations]设置
 
 可使用一些设置来管理 [!UICONTROL Recommendations] 实施。
 
-要访问&#x200B;**[!UICONTROL Recommendations Settings]**&#x200B;选项，请在[!DNL Target]中打开[!DNL Adobe Experience Cloud]，然后单击&#x200B;**[!UICONTROL Administration]** > **[!UICONTROL Recommendations]**。
+要访问&#x200B;**[!UICONTROL Recommendations Settings]**&#x200B;选项，请在[!DNL Adobe Experience Cloud]中打开[!DNL Target]，然后单击&#x200B;**[!UICONTROL Administration]** > **[!UICONTROL Recommendations]**。
 
 ![推荐设置页面](/help/dev/implement/recommendations/assets/recs-settings-new.png)
 
@@ -166,15 +172,15 @@ function targetPageParams() {
 
 了解您网站的垂直行业有助于Target为您的推荐选择标准。
 
-[!DNL Recommendations]中的标准即规则，可根据预先确定的一组访客行为来确定要推荐的产品或内容。 标准可以基于流行趋势、访客当前和过去的行为或类似产品和内容。 您可以添加多个标准，以便对多个推荐类型进行相互测试。
+[!DNL Recommendations]中的标准即规则，可根据预先确定的一组访客行为来确定要推荐的产品或内容。 标准可基于流行趋势、访客的当前与过去行为，或相似的产品和内容。 您可以添加多个标准，以便对多个推荐类型进行相互测试。
 
-有关详细信息，请参阅[Adobe Target商业从业者指南](https://experienceleague.adobe.com/zh-hans/docs/target/using/recommendations/criteria/algorithms){target=_blank}中的&#x200B;*标准*。
+有关详细信息，请参阅&#x200B;*Adobe Target商业从业者指南*&#x200B;中的[标准](https://experienceleague.adobe.com/en/docs/target/using/recommendations/criteria/algorithms){target=_blank}。
 
 [!UICONTROL Criteria]部分中有以下设置：
 
 #### [!UICONTROL Industry/Vertical]
 
-垂直行业用来帮助对您的推荐标准进行分类。此信息可帮助您的团队成员找到适合特定页面的标准，例如最适合购物车页面或媒体页面的标准。
+垂直行业用来帮助对您的推荐标准进行分类。 此信息可帮助您的团队成员找到适合特定页面的标准，例如最适合购物车页面或媒体页面的标准。
 
 下拉列表中提供以下类别：
 
@@ -185,13 +191,13 @@ function targetPageParams() {
 
 #### [!UICONTROL Filter Incompatible Criteria]
 
-启用此选项，可仅显示要求选定页面传递所需数据的标准。并非每个标准都在每个页面上正确运行。 页面或mbox必须传入`entity.id`或`entity.categoryId`，当前项目/当前类别推荐才能兼容。
+启用此选项，可仅显示要求选定页面传递所需数据的标准。 并非每个标准都在每个页面上正确运行。 页面或mbox必须传入`entity.id`或`entity.categoryId`，当前项目/当前类别推荐才能兼容。
 
-一般来说，最好只显示兼容的标准。但是，如果您希望不兼容的标准也可用于活动，请不要启用此选项。
+一般来说，最好只显示兼容的标准。 但是，如果您希望不兼容的标准也可用于活动，请不要启用此选项。
 
 如果使用标签管理解决方案，Adobe建议您禁用此选项。
 
-有关此选项的详细信息，请参阅[[!UICONTROL Recommendations]商业从业者指南](https://experienceleague.adobe.com/zh-hans/docs/target/using/recommendations/recommendations-faq/recommendations-faq){target=_blank}中的&#x200B;*[!DNL Adobe Target]常见问题解答*。
+有关此选项的详细信息，请参阅&#x200B;*[!DNL Adobe Target]商业从业者指南*&#x200B;中的[[!UICONTROL Recommendations]常见问题解答](https://experienceleague.adobe.com/en/docs/target/using/recommendations/recommendations-faq/recommendations-faq){target=_blank}。
 
 ### [!UICONTROL Product Catalog]
 
@@ -199,11 +205,11 @@ function targetPageParams() {
 
 #### [!UICONTROL Default Host Group]
 
-选择默认主机组。
+选择您的默认主机组。
 
-主机组可用于为不同用途而分隔目录中的可用项。例如，您可以将主机组用于“开发和生产”环境、不同的品牌或不同的地理位置。默认情况下，“目录搜索”、“收藏集”和“排除项”中的预览结果均基于默认的主机组。（也可以使用“环境”筛选器选择其他主机组来预览结果。） 默认情况下，新添加的项目在所有主机组中都可用，除非在创建或更新项目时指定了环境ID。 交付的“推荐”取决于请求中指定的主机组。
+主机组可用于为不同用途而分隔目录中的可用项。 例如，您可以将主机组用于“开发和生产”环境、不同的品牌或不同的地理位置。 默认情况下，“目录搜索”、“收藏集”和“排除项”中的预览结果均基于默认的主机组。 （也可以使用“环境”筛选器选择其他主机组来预览结果。） 默认情况下，新添加的项目在所有主机组中都可用，除非在创建或更新项目时指定了环境ID。 交付的“推荐”取决于请求中指定的主机组。
 
-如果您看不到产品，请确保您使用的是正确的主机组。例如，如果您将推荐设置为使用测试环境并将您的主机组设置为“测试”，则您可能需要在测试环境中重新创建收藏集，之后才会显示产品。要查看每个环境中提供了哪些产品，请在每个环境中使用“目录搜索”。您还可以预览选定环境（主机组）的[!UICONTROL Recommendations]收藏集和排除项内容。
+如果您看不到产品，请确保您使用的是正确的主机组。 例如，如果您将推荐设置为使用测试环境并将您的主机组设置为“测试”，则您可能需要在测试环境中重新创建收藏集，之后才会显示产品。 要查看每个环境中提供了哪些产品，请在每个环境中使用“目录搜索”。 您还可以预览选定环境（主机组）的[!UICONTROL Recommendations]收藏集和排除项内容。
 
 >[!NOTE]
 >
@@ -218,7 +224,7 @@ function targetPageParams() {
 * “创建排除项”对话框(**[!UICONTROL Recommendations]** > **[!UICONTROL Exclusions]** > **[!UICONTROL Create exclusion]**)
 * “更新排除项”对话框(**[!UICONTROL Recommendations]** > **[!UICONTROL Exclusions]** > **[!UICONTROL Edit]**)
 
-有关详细信息，请参阅[商业从业者指南](https://experienceleague.adobe.com/zh-hans/docs/target/using/administer/hosts){target=_blank}中的&#x200B;*[!DNL Adobe Target]主机*。
+有关详细信息，请参阅&#x200B;*[!DNL Adobe Target]商业从业者指南*&#x200B;中的[主机](https://experienceleague.adobe.com/en/docs/target/using/administer/hosts){target=_blank}。
 
 #### [!UICONTROL Thumbnail Base]
 
@@ -238,4 +244,4 @@ function targetPageParams() {
 
 ## &#x200B;6. （可选）使用管理员API管理[!UICONTROL Recommendations]
 
-请参阅[使用[!UICONTROL Recommendations] API](../../before-administer/recs-api/overview.md)实践指南，了解如何为[!UICONTROL Target]配置和使用[!UICONTROL Recommendations]管理和交付API。
+请参阅[使用[!UICONTROL Recommendations] API](../../before-administer/recs-api/overview.md)实践指南，了解如何为[!UICONTROL Recommendations]配置和使用[!UICONTROL Target]管理和交付API。

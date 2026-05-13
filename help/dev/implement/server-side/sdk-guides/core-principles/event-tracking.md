@@ -3,9 +3,13 @@ title: 事件跟踪
 description: 使用 [!DNL Adobe Target]的事件跟踪功能有效地测量对您的业务和用例最重要的量度。
 exl-id: a47fa692-c633-4c53-82da-878b1e451a3f
 feature: Implement Server-side
-source-git-commit: 09a50aa67ccd5c687244a85caad24df56c0d78f5
+TQID: https://experienceleague.adobe.com/swckm7EdKlSkC2xl1P57EAyiuGz18rucZOAxcudzYpo
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: aa2f3246-cb95-4b30-8899-fdf7d73550ccid: bcc5edb5-84c3-4940-9f84-ed88b6c16274id: e0eb8757-182f-49f3-94a4-1587d16f5094
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '527'
+source-wordcount: 528
 ht-degree: 1%
 
 ---
@@ -34,7 +38,7 @@ ht-degree: 1%
 
 ## 如何触发展示
 
-Target SDK调用基础[交付API](/help/dev/implement/delivery-api/overview.md)。 当具有所需参数的执行对象位于请求本身中时，展示次数将自动递增，以用于符合条件的活动。 自动递增展示次数的SDK方法为：
+Target SDK调用基础[交付API](/help/dev/implement/delivery-api/overview.md)。 当具有所需参数的执行对象位于请求本身中时，展示次数将自动递增，以用于符合条件的活动。 自动递增展示的SDK方法为：
 
 * getOffers()
 * getAttributes()

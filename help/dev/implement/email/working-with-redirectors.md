@@ -4,10 +4,16 @@ description: 了解如何在电子邮件实施中使用重定向器，就像在 
 title: 如何使用重定向器？
 feature: Implement Email
 exl-id: 072368ff-9f17-4709-ac2d-c9e1f0d888bb
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+TQID: https://experienceleague.adobe.com/3SUsZl1y9tk97sWgdB3iB7wrAXNb2LfN3hObJM14caE
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2: id: c93393a4-e558-47e1-992e-c91ed4d480ce
+subfeature_v2: id: c94a34eb-b51c-4dd1-a6a4-46b0d84ccccd
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: d095671a-1355-40aa-8b5f-06c33c68080bid: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '668'
-ht-degree: 64%
+source-wordcount: 689
+ht-degree: 63%
 
 ---
 
@@ -15,7 +21,7 @@ ht-degree: 64%
 
 使用重定向器的方法和您在测试中使用 mbox 的方法类似。
 
-重定向器是使用一种特定的重定向器 URL 创建的，该重定向器 URL 将重定向器 mbox（重定向器）加载到您的帐户中。使用此重定向器的方法和您在测试中使用 mbox 的方法类似。将重定向器 URL 以广告目标链接的形式提交到您的广告网络。
+重定向器是使用一种特定的重定向器 URL 创建的，该重定向器 URL 将重定向器 mbox（重定向器）加载到您的帐户中。 使用此重定向器的方法和您在测试中使用 mbox 的方法类似。 将重定向器 URL 以广告目标链接的形式提交到您的广告网络。
 
 使用重定向器执行以下操作：
 
@@ -42,33 +48,33 @@ ht-degree: 64%
    &mboxDefault=http%3A%2F%2Fwww%2Eyourcompany%2Ecom%2Fusualdestination%2Ehtm
    ```
 
-   * 其中，`yourclientcode` 是您公司的客户端代码。您公司的客户端代码全部为小写字母，且不含任何特殊字符。
+   * 其中，`yourclientcode` 是您公司的客户端代码。 您公司的客户端代码全部为小写字母，且不含任何特殊字符。
 
      您的客户端代码位于[!DNL Target]界面的&#x200B;**[!UICONTROL Administration]** > **[!UICONTROL Implementation]**&#x200B;页面顶部。
 
    * `redirectorlink_456` 是出现在您帐户中并在营销活动和测试中使用的重定向器 mbox 的名称。
 
-     重定向器与其他 mbox 的运行方式不同，但是与其他任何 mbox 一样，都会显示在您的帐户中。为重定向器命名，以便能够轻松地将它与您帐户中其他标准类型的 mbox 区分开来。作为最佳实践，重定向器 mbox 的名称应该以“redirectorlink”开头。
+     重定向器与其他 mbox 的运行方式不同，但是与其他任何 mbox 一样，都会显示在您的帐户中。 为重定向器命名，以便能够轻松地将它与您帐户中其他标准类型的 mbox 区分开来。  作为最佳实践，重定向器 mbox 的名称应该以“redirectorlink”开头。
 
    * 其中，`http%3A%2F%2Fwww%2Eyourcompany%2Ecom%2Fusualdestination%2Ehtm` 是默认目标。
 
-     这必须是进行了编码的 URL，且必须是绝对引用。您可以使用[HTMLURL编码引用](https://www.w3schools.com/tags/ref_urlencode.asp)来快速对您的URL进行编码。
+     这必须是进行了编码的 URL，且必须是绝对引用。 您可以使用[HTML URL编码引用](https://www.w3schools.com/tags/ref_urlencode.asp)来快速对您的URL进行编码。
 
    >[!WARNING]
    >
-   >请注意，使用重定向器，您可能会面临开放重定向漏洞的风险。 为避免第三方未经授权即使用重定向程序链接，Adobe建议您使用“授权的主机”来允许列表默认的重定向URL域。 [!DNL Target]使用主机允许列表您要允许重定向的域。 有关详细信息，请参阅[创建允许列表，指定有权将mbox调用发送到&#x200B;*主机*&#x200B;中的 [!DNL Target]](https://experienceleague.adobe.com/docs/target/using/administer/hosts.html?lang=zh-Hans#allowlist)的主机。
+   >请注意，使用重定向器，您可能会面临开放重定向漏洞的风险。 为避免第三方未经授权即使用重定向程序链接，Adobe建议您使用“授权的主机”来允许列表默认的重定向URL域。 [!DNL Target]使用主机允许列表您要允许重定向的域。 有关详细信息，请参阅[创建允许列表，指定有权将mbox调用发送到&#x200B;*主机*&#x200B;中的 [!DNL Target]](https://experienceleague.adobe.com/docs/target/using/administer/hosts.html#allowlist)的主机。
 
 1. 验证重定向器。
-   1. 列入允许列表 *安全最佳实践*：确保重定向器中使用的域已，如上所述。 如果您使用未列入允许列表的域，则Adobe将阻止对该域的任何调用，以防止恶意行为者使用重定向器重定向到潜在的恶意域。
+   1. *安全最佳实践*：确保重定向器中使用的域已，如上所述。 如果您使用未列入允许列表的域，Adobe将阻止对该域的任何调用，以防止恶意行为者使用重定向器重定向到潜在的恶意域。
    2. 将重定向器 URL 插入到浏览器中并刷新。
    3. 登录到您的帐户，刷新 mbox 列表，然后验证以 mbox 形式列出的新的重定向器。
-1. 如果您要为一个广告测试不同目标，则请为每个版本创建[重定向选件](https://experienceleague.adobe.com/docs/target/using/experiences/vec/redirect-offer.html?lang=zh-Hans)。
+1. 如果您要为一个广告测试不同目标，则请为每个版本创建[重定向产品建议](https://experienceleague.adobe.com/docs/target/using/experiences/vec/redirect-offer.html)。
 1. 创建营销活动。
 
    请参阅[不基于 JavaScript 的实施](/help/dev/implement/email/overview.md)，以了解如何正确设置来实现您的目标。
 1. 完成营销活动质量保证工作。
 
-   使用包含重定向器 URL 的 `<a href>` 创建一个虚拟页面。示例：
+   使用包含重定向器 URL 的 `<a href>` 创建一个虚拟页面。 示例：
 
    ```
    <a href=https://<your_clientcode>.tt.omtrdc.net/​m2/yourclientcode/ubox/​page?mbox=
@@ -80,7 +86,7 @@ ht-degree: 64%
 
    >[!NOTE]
    >
-   >“选件预览”或“浏览 mbox”功能不支持重定向器。直接在浏览器中预览体验。 此外，`mboxDebug`不适用于重定向器。
+   >“产品建议预览”或“浏览 mbox”功能不支持重定向器。 请在浏览器中直接预览体验。 此外，`mboxDebug`不适用于重定向器。
 
 1. 将整个重定向 URL 作为广告的目标链接提交给您的展示广告网络。
 
@@ -96,7 +102,7 @@ ht-degree: 64%
 >
 >最佳实践是使用&#x200B;**[!UICONTROL Score per visit]**&#x200B;参与度量度确定成本值。
 
-将 `&mboxPageValue=-value` 添加到 URL。请注意负值。
+将 `&mboxPageValue=-value` 添加到 URL。 请注意负值。
 
 例如，每次点击成本为 .10 美分时，如下所示：
 

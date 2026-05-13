@@ -3,10 +3,15 @@ title: Target SDK快速入门
 description: 如何使用Adobe Target SDK？
 feature: APIs/SDKs
 exl-id: a5ae9826-7bb5-41de-8796-76edc4f5b281
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+TQID: https://experienceleague.adobe.com/oW9op2s6buvt5Jp18DYzrwh7aBXSNEPAikq9EPISaWQ
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2: id: adee20bd-51f4-461d-b9db-d215f8756eebid: c93393a4-e558-47e1-992e-c91ed4d480ce
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: aa2f3246-cb95-4b30-8899-fdf7d73550ccid: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '595'
-ht-degree: 0%
+source-wordcount: 622
+ht-degree: 1%
 
 ---
 
@@ -29,7 +34,7 @@ ht-degree: 0%
 1. 对应用程序中的事件实施跟踪
 1. 激活您的[!UICONTROL A/B Test]活动
 
-## 1.为您的组织启用设备上决策
+## &#x200B;1. 为您的组织启用设备上决策
 
 启用设备上决策可确保在几乎零延迟的情况下执行[!UICONTROL A/B Test]活动。 要启用此功能，请导航到&#x200B;**[!UICONTROL Administration]** > **[!UICONTROL Implementation]** > **[!UICONTROL Account details]**&#x200B;并启用&#x200B;**[!UICONTROL On-Device Decisioning]**&#x200B;切换开关。
 
@@ -37,11 +42,11 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->您必须具有&#x200B;**[!UICONTROL Admin]**&#x200B;或&#x200B;**[!UICONTROL Approver]** [用户角色](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/user-management.html?lang=zh-Hans)才能启用或禁用&#x200B;**[!UICONTROL On-Device Decisioning]**&#x200B;切换。
+>您必须具有&#x200B;**[!UICONTROL Admin]**&#x200B;或&#x200B;**[!UICONTROL Approver]** [用户角色](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/user-management.html)才能启用或禁用&#x200B;**[!UICONTROL On-Device Decisioning]**&#x200B;切换。
 
 启用&#x200B;**[!UICONTROL On-Device Decisioning]**&#x200B;切换后，[!DNL Adobe Target]开始为您的客户端生成[规则工件](../on-device-decisioning/rule-artifact-overview.md)。
 
-## 2.安装SDK
+## &#x200B;2. 安装SDK
 
 对于Node.js、Java和Python，请在终端的项目目录中运行以下命令。 对于.NET，通过[从NuGet](https://www.nuget.org/packages/Adobe.Target.Client)安装将其添加为依赖项。
 
@@ -77,7 +82,7 @@ pip install target-python-sdk
 
 >[!ENDTABS]
 
-## 3.初始化SDK
+## &#x200B;3. 初始化SDK
 
 规则工件将在SDK初始化步骤中下载。 您可以自定义初始化步骤以确定如何下载和使用工件。
 
@@ -146,7 +151,7 @@ target_client = TargetClient.create(CONFIG)
 
 >[!ENDTABS]
 
-## 4.在[!DNL Adobe Target] [!UICONTROL A/B Test]活动中设置功能标记
+## &#x200B;4. 在[!DNL Adobe Target] [!UICONTROL A/B Test]活动中设置功能标记
 
 1. 在[!DNL Target]中，导航到&#x200B;**[!UICONTROL Activities]**&#x200B;页面，然后选择&#x200B;**[!UICONTROL Create Activity]** > **[!UICONTROL A/B test]**。
 
@@ -196,7 +201,7 @@ target_client = TargetClient.create(CONFIG)
 
    ![替代图像](assets/asset-next_2_t.png)
 
-1. 为了简单起见，在下面显示的&#x200B;**[!UICONTROL Targeting]**&#x200B;步骤示例中，“受众定位”(2)保留在“所有访客”的默认集中。 这意味着该活动未定位。 但是，请注意Adobe建议您始终将目标定位到生产活动的受众。 单击&#x200B;**[!UICONTROL Next]** (3)以进入活动创建的&#x200B;**[!UICONTROL Goals & Settings]**&#x200B;步骤。
+1. 为了简单起见，在下面显示的&#x200B;**[!UICONTROL Targeting]**&#x200B;步骤示例中，“受众定位”(2)保留在“所有访客”的默认集中。 这意味着该活动未定位。 但是，请注意，Adobe建议您始终将目标定位到生产活动的受众。 单击&#x200B;**[!UICONTROL Next]** (3)以进入活动创建的&#x200B;**[!UICONTROL Goals & Settings]**&#x200B;步骤。
 
    ![替代图像](assets/asset-next_2_g.png)
 
@@ -204,7 +209,7 @@ target_client = TargetClient.create(CONFIG)
 
    ![替代图像](assets/asset-conv.png)
 
-## 5.在应用程序中实施并渲染功能
+## &#x200B;5. 在应用程序中实施和渲染功能
 
 在[!DNL Target]中设置功能标志变量后，请修改应用程序代码以使用它们。 例如，在应用程序中获取功能标志后，您可以使用该标志启用功能并呈现访客符合条件的体验。
 
@@ -272,7 +277,7 @@ def target_client_ready():
 
 >[!ENDTABS]
 
-## 6.对应用程序中的事件实施其他跟踪
+## &#x200B;6. 对应用程序中的事件实施其他跟踪
 
 或者，您也可以使用sendNotification()函数发送用于跟踪转换的其他事件。
 
@@ -382,12 +387,12 @@ target_client.send_notifications({
 
 >[!ENDTABS]
 
-## 7.激活您的[!UICONTROL A/B Test]活动
+## &#x200B;7. 激活您的[!UICONTROL A/B Test]活动
 
 1. 单击&#x200B;**[!UICONTROL Activate]** (1)以激活您的[!UICONTROL A/B Test]活动。
 
    >[!NOTE]
    >
-   >您必须具有&#x200B;**[!UICONTROL Approver]**&#x200B;或&#x200B;**[!UICONTROL Publisher]** [用户角色](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/user-management.html?lang=zh-Hans)才能执行此步骤。
+   >您必须具有&#x200B;**[!UICONTROL Approver]**&#x200B;或&#x200B;**[!UICONTROL Publisher]** [用户角色](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/user-management.html)才能执行此步骤。
 
    ![替代图像](assets/asset-activate.png)

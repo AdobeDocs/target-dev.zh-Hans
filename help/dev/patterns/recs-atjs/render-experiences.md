@@ -5,10 +5,16 @@ feature: APIs/SDKs
 level: Experienced
 role: Developer
 exl-id: 7cf0c70b-a4bc-46f4-9b33-099bdb7dd9a9
-source-git-commit: 50ee7e66e30c0f8367763a63b6fde5977d30cfe7
+TQID: https://experienceleague.adobe.com/uHFbc8JEhjjGYIulJUvhkH7cXXht6Rht9rY43HjuNqg
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2: id: adee20bd-51f4-461d-b9db-d215f8756eebid: c93393a4-e558-47e1-992e-c91ed4d480ce
+subfeature_v2: id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: d3cdead0-685a-4489-9250-4bb709942f66
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '908'
-ht-degree: 4%
+source-wordcount: 1060
+ht-degree: 3%
 
 ---
 
@@ -44,7 +50,7 @@ ht-degree: 4%
 * [3.6：自定义标准](#custom)
 * [3.7：提供包含规则中使用的属性](#inclusion)
 * [3.8：提供excludedIds](#exclude)
-* [3.9：提供实体属性以更新Recommendations的产品目录](#entity-attributes)
+* [3.9：提供实体属性以更新“推荐”的产品目录](#entity-attributes)
 * [3.10：提供用作包含规则键的配置文件属性](#keys)
 * [3.11：触发页面加载请求](#fire)
 * [3.12：消防区域定位请求](#location)
@@ -58,8 +64,8 @@ ht-degree: 4%
 **可用选项**
 
 * 按ID提升
-* [按收藏集促销](https://experienceleague.adobe.com/docs/target/using/recommendations/entities/collections.html?lang=zh-Hans){target=_blank}
-* [按属性促销](https://experienceleague.adobe.com/docs/target/using/recommendations/entities/entity-attributes.html?lang=zh-Hans){target=_blank}
+* [按收藏集促销](https://experienceleague.adobe.com/docs/target/using/recommendations/entities/collections.html){target=_blank}
+* [按属性促销](https://experienceleague.adobe.com/docs/target/using/recommendations/entities/entity-attributes.html){target=_blank}
 
 **需要实体参数**
 
@@ -67,7 +73,7 @@ ht-degree: 4%
 
 **读数**
 
-* [添加促销活动](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations-activity/adding-promotions.html?lang=zh-Hans){target=_blank}
+* [添加促销活动](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations-activity/adding-promotions.html){target=_blank}
 
 +++
 
@@ -91,7 +97,7 @@ ht-degree: 4%
 
 **读数**
 
-* [基于购物车](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/algorithms.html?lang=zh-Hans#section_885B3BB1B43048A88A8926F6B76FC482){target=_blank}
+* [基于购物车](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/algorithms.html?lang=en#section_885B3BB1B43048A88A8926F6B76FC482){target=_blank}
 
 +++
 
@@ -120,7 +126,7 @@ ht-degree: 4%
 
 **读数**
 
-* [基于热门程度](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/algorithms.html?lang=zh-Hans#section_885B3BB1B43048A88A8926F6B76FC482){target=_blank}
+* [基于热门程度](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/algorithms.html?lang=en#section_885B3BB1B43048A88A8926F6B76FC482){target=_blank}
 
 +++
 
@@ -146,7 +152,7 @@ ht-degree: 4%
 
 **读数**
 
-* 基于[项](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/algorithms.html?lang=zh-Hans#section_885B3BB1B43048A88A8926F6B76FC482){target=_blank}
+* [基于项目](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/algorithms.html?lang=en#section_885B3BB1B43048A88A8926F6B76FC482){target=_blank}
 
 +++
 
@@ -169,7 +175,7 @@ ht-degree: 4%
 
 **读数**
 
-* [基于用户](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/algorithms.html?lang=zh-Hans#section_885B3BB1B43048A88A8926F6B76FC482){target=_blank}
+* [基于用户](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/algorithms.html?lang=en#section_885B3BB1B43048A88A8926F6B76FC482){target=_blank}
 
 +++
 
@@ -191,7 +197,7 @@ ht-degree: 4%
 
 **读数**
 
-* [自定义标准](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/algorithms.html?lang=zh-Hans#section_885B3BB1B43048A88A8926F6B76FC482){target=_blank}
+* [自定义标准](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/algorithms.html?lang=en#section_885B3BB1B43048A88A8926F6B76FC482){target=_blank}
 
 +++
 
@@ -203,7 +209,7 @@ ht-degree: 4%
 
 **读数**
 
-* [使用动态和静态包含规则](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/dynamic-static/use-dynamic-and-static-inclusion-rules.html?lang=zh-Hans){target=_blank}
+* [使用动态和静态包含规则](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/dynamic-static/use-dynamic-and-static-inclusion-rules.html){target=_blank}
 
 +++
 
@@ -217,7 +223,7 @@ ht-degree: 4%
 
 **读数**
 
-* [我可以动态排除实体吗？](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations-faq/recommendations-faq.html?lang=zh-Hans#exclude){target=_blank}
+* [我可以动态排除实体吗？](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations-faq/recommendations-faq.html?lang=en#exclude){target=_blank}
 
 +++
 
@@ -229,9 +235,9 @@ ht-degree: 4%
 
 **读数**
 
-* [实体属性](https://experienceleague.adobe.com/docs/target/using/recommendations/entities/entity-attributes.html?lang=zh-Hans){target=_blank}
+* [实体属性](https://experienceleague.adobe.com/docs/target/using/recommendations/entities/entity-attributes.html){target=_blank}
 
-您还可以通过使用[!DNL Target] UI创建[产品馈送](https://experienceleague.adobe.com/docs/target/using/recommendations/entities/feeds.html?lang=zh-Hans){target=_blank}来更新[!DNL Recommendations]的产品目录，从而完成此步骤。
+您还可以通过使用[!DNL Target] UI创建[产品馈送](https://experienceleague.adobe.com/docs/target/using/recommendations/entities/feeds.html){target=_blank}来更新[!DNL Recommendations]的产品目录，从而完成此步骤。
 
 +++
 
@@ -239,13 +245,13 @@ ht-degree: 4%
 
 ## 3.10：提供用作包含规则键的配置文件属性 {#keys}
 
-提供用作上述任何Recommendations标准中包含规则的键的配置文件属性。
+提供用作上述任何推荐标准中包含规则的键的配置文件属性。
 
 +++ 查看详细信息
 
 **读数**
 
-* [配置文件属性](https://experienceleague.adobe.com/docs/target/using/audiences/visitor-profiles/profile-parameters.html?lang=zh-Hans){target=_blank}
+* [轮廓属性](https://experienceleague.adobe.com/docs/target/using/audiences/visitor-profiles/profile-parameters.html){target=_blank}
 
 +++
 
@@ -253,7 +259,7 @@ ht-degree: 4%
 
 ## 3.11：触发页面加载请求 {#fire}
 
-此步骤在请求中触发具有`execute` > `pageLoad`有效负载的[!DNL Delivery API]调用。 `getOffers()`方法提取体验，`applyOffers()`渲染页面上的体验。 在[可视化体验编辑器](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html?lang=zh-Hans){target=_blank} (VEC)中创作的呈现体验需要`pageLoad`请求。
+此步骤在请求中触发具有`execute` > `pageLoad`有效负载的[!DNL Delivery API]调用。 `getOffers()`方法提取体验，`applyOffers()`渲染页面上的体验。 在[可视化体验编辑器](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html){target=_blank} (VEC)中创作的呈现体验需要`pageLoad`请求。
 
 +++查看详细信息
 
