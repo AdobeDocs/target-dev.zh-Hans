@@ -4,25 +4,37 @@ description: 对 [!DNL Adobe Target] at.js JavaScript库使用[!UICONTROL adobe.
 title: 如何使用[!UICONTROL adobe.target.applyOffers()]函数？
 feature: at.js
 exl-id: c391e3f4-fdf1-4e33-8dcb-6bf46e390538
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+TQID: https://experienceleague.adobe.com/9WIJvPZIlrtLkv-vv-HRkctgwHn3nX-jrE4-4usXW0Y
+product_v2:
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2:
+  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+subfeature_v2:
+  - id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '808'
-ht-degree: 80%
+source-wordcount: 820
+ht-degree: 78%
 
 ---
 
 # [!UICONTROL adobe.target.applyOffers(options)] - at.js 2.x
 
-此函数允许您应用 `adobe.target.getOffers()` 检索到的多个选件。
+此函数允许您应用 `adobe.target.getOffers()` 检索到的多个产品建议。
 
 >[!NOTE]
 >
->此函数已在at.js 2.*x* 使用跨域跟踪功能时。此函数不适用于at.js版本1.*x*。
+>此函数已在at.js 2.*x*&#x200B;中引入。 此函数不适用于at.js版本1.*x*。
 
 | 键 | 类型 | 必需？ | 描述 |
 | --- | --- | --- | --- |
-| selector | 字符串 | 否 | HTML 元素或 CSS 选择器，用于标识 [!DNL Target] 应将选件内容放置在其中的 HTML 元素。如果未提供选择器，[!DNL Target]将假定要使用的HTML元素为HTMLHEAD。 |
-| 响应 | 对象 | 是 | 来自 `getOffers()` 的响应对象。<br />请参阅下文的“请求”表。 |
+| selector | 字符串 | 否 | HTML 元素或 CSS 选择器，用于标识 [!DNL Target] 应将产品建议内容放置在其中的 HTML 元素。 如果未提供选择器，[!DNL Target]会假定要使用的HTML元素是HTML HEAD。 |
+| 响应 | 对象 | 是 | 来自`getOffers()`.<br />的响应对象，请参见下面的“请求”表。 |
 
 ## 响应
 
@@ -33,14 +45,14 @@ ht-degree: 80%
 | 字段名称 | 描述 |
 | --- | --- |
 | response > prefetch > views > options > content | 请注意，“options”内容的定义不明确，将直接取决于选项类型/模板结构。 |
-| response > prefetch > views > options > type | 选项类型。反映“content”字段的类型。受支持的类型是“action”。 |
+| response > prefetch > views > options > type | 选项类型。 反映“content”字段的类型。 受支持的类型是“action”。 |
 | response > prefetch > views > state | 应该与视图的显示通知一起转发的不透明视图状态令牌 |
 | response > prefetch > views > options > responseTokens | 包含在处理当前选项时收集的 `responseTokens` 映射。 |
 | response > prefetch > views > analytics > payload | 用于客户端集成的[!DNL Analytics]有效负荷，应在应用视图后将其发送到[!DNL Analytics]。 |
 | response > prefetch > views > trace | 包含每个视图预取调用的所有跟踪数据的对象。<br />跟踪对象还将包含跟踪的版本。<br />跟踪对象还将包含当前视图的详细信息。 |
-| response > prefetch > views > options > eventToken | 按选项完成事件日志记录。对于已应用的选项，应将相应的事件令牌添加到通知令牌列表。请注意，一个视图由多个选项组成。如果已应用并可看到所有选项，则需要将所有 `eventTokens` 包含在通知中。 |
+| response > prefetch > views > options > eventToken | 按选项完成事件日志记录。 对于已应用的选项，应将相应的事件令牌添加到通知令牌列表。 请注意，一个视图由多个选项组成。 如果已应用并可看到所有选项，则需要将所有 `eventTokens` 包含在通知中。 |
 | response > prefetch > views > name | 可读的视图名称。 |
-| response > prefetch > views > metrics | 应监视并通知 [!DNL Target] 的报告量度。目前，仅支持点击量度。如果发生点击该元素的情况，则应收集相应的 `eventTokens` 并发送通知。 |
+| response > prefetch > views > metrics | 应监视并通知 [!DNL Target] 的报告量度。 目前，仅支持点击量度。 如果发生点击该元素的情况，则应收集相应的 `eventTokens` 并发送通知。 |
 | response > prefetch > views > key | 可标识视图的键值或指纹。 |
 | response > prefetch > views > id | 视图的 ID。 |
 | response > notifications > id | 通知 ID。 |
@@ -54,7 +66,7 @@ ht-degree: 80%
 | response > execute > mboxes > mbox > trace | 包含单个 mbox 请求的所有跟踪数据的对象。 |
 | response > execute > mboxes > mbox > responseTokens | 包含针对特定 mbox 请求执行的 `responseTokens` 映射。 |
 | response > execute > mboxes > mbox > option > content | 请注意，“options”内容的定义不明确，将直接取决于选项类型/模板结构。 |
-| response > execute > mboxes > mbox > option > type | 选项类型。反映“content”字段的类型。支持的类型包括：html、重定向、JSON 和动态。 |
+| response > execute > mboxes > mbox > option > type | 选项类型。 反映“content”字段的类型。 支持的类型包括：html、重定向、JSON 和动态。 |
 | response > execute > mboxes > mbox > options | 响应选项。 |
 | response > execute > mboxes > mbox > metrics > eventToken | 点击事件的令牌。 |
 | response > execute > mboxes > mbox > metrics > type | &quot;click&quot; |
@@ -64,7 +76,7 @@ ht-degree: 80%
 | response > execute > mboxes > mbox > analytics > payload | 用于客户端集成的[!DNL Analytics]有效负荷，应在应用mbox后将其发送到[!DNL Analytics]。 （请参阅“启用 A4T 的营销活动”部分。） |
 | response > execute > mboxes | 已执行的 mbox 列表。 |
 | response > execute > pageLoad > options > content | 请注意，“options”内容的定义不明确，将直接取决于选项类型/模板结构。 |
-| response > execute > pageLoad > options > type | 选项类型。反映“content”字段的类型。支持的类型包括：html、重定向、JSON、动态和操作。 |
+| response > execute > pageLoad > options > type | 选项类型。 反映“content”字段的类型。 支持的类型包括：html、重定向、JSON、动态和操作。 |
 | response > execute > pageLoad > options | 未按视图进行分组的选项（target-global-mbox + 活动中的选项，这些活动包含未按视图进行分组的视图）。 |
 | response > execute > pageLoad > metrics | 未设置为属于特定视图的点击量度。 |
 | response > execute > pageLoad > trace | 包含 pageLoad 请求的所有跟踪数据的对象。 |

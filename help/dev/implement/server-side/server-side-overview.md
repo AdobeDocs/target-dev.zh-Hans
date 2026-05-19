@@ -4,10 +4,26 @@ description: 了解 [!DNL Adobe Target] 服务器端交付API、SDK和 [!DNL Tar
 title: 可在何处了解 [!DNL Target] 服务器端交付API和SDK？
 feature: Implement Server-side
 exl-id: 3eb0a789-cf1a-4d02-acf7-3c895bcb662f
-source-git-commit: 75af30045684b95d5989b0a1f877ba95bb8cd883
+TQID: https://experienceleague.adobe.com/x5WKb9Eenz2bw-idOnxlpWdtiivTx05n38sNXEt3DNc
+product_v2:
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2:
+  - id: b050e0cd-2ddd-42cd-a71b-5d9e1fdf75e0
+  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+subfeature_v2:
+  - id: a6cc21b9-1a36-4fa6-9c61-4acd04d9c88c
+  - id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+  - id: c2be0313-b3ae-45e0-b454-d20bf54b23f2
+  - id: d095671a-1355-40aa-8b5f-06c33c68080b
+  - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '569'
-ht-degree: 13%
+source-wordcount: 603
+ht-degree: 12%
 
 ---
 
@@ -44,11 +60,11 @@ ht-degree: 13%
 
 通过[!DNL Target]投放API，您可以：
 
-* 跨Web(包括SPA)和移动频道以及非基于浏览器的物联网设备（例如联网电视、网亭或店内数字屏幕）交付体验。
+* 跨Web（包括SPA）和移动频道以及非基于浏览器的物联网设备（如联网电视、网亭或店内数字屏幕）交付体验。
 * 从任何可进行HTTP/s调用的服务器端平台或应用程序交付体验。
 * 向访客提供一致的个性化体验，无论访客使用哪些渠道或设备与您的业务进行互动。
 * 将访客的体验缓存在服务器上的一个会话中，这样可以避免多个API调用，从而提高性能。
-* 从服务器端与Adobe Experience Cloud产品(如Adobe Analytics、Adobe Audience Manager (AAM)和Experience CloudID服务)无缝集成。
+* 从服务器端与Adobe Experience Cloud产品(如Adobe Analytics、Adobe Audience Manager (AAM)和Experience Cloud ID服务)无缝集成。
 
 ## 服务器端SDK
 
@@ -62,9 +78,9 @@ ht-degree: 13%
 通过[!DNL Adobe Target]的服务器端SDK，您可以：
 
 * 在&#x200B;**近零延迟**&#x200B;处执行并运行&#x200B;**功能标记**、**转出**&#x200B;和&#x200B;**A/B实验**。
-* 跨&#x200B;**Web**(包括&#x200B;**SPA**&#x200B;和&#x200B;**移动频道**)以及非基于浏览器的&#x200B;**物联网(IoT)设备**（例如联网电视、网亭或店内数字屏幕）交付体验。
+* 跨&#x200B;**Web**&#x200B;交付体验，包括&#x200B;**SPA**&#x200B;和&#x200B;**移动渠道**，以及基于非浏览器的&#x200B;**物联网(IoT)设备**，例如联网电视、网亭或店内数字屏幕。
 * 向该用户提供&#x200B;**机器学习(ML)驱动的个性化体验**，无论该用户与您的业务使用哪个渠道或设备。
-* **从服务器端无缝地与Adobe Experience Cloud**&#x200B;产品(如&#x200B;**Adobe Analytics**、**Adobe Audience Manager**&#x200B;和&#x200B;**Experience CloudID服务**)集成。
+* **从服务器端无缝地与Adobe Experience Cloud**&#x200B;产品（如&#x200B;**Adobe Analytics**、**Adobe Audience Manager**&#x200B;和&#x200B;**Experience Cloud ID服务**）集成。
 
 请参阅[快速入门](sdk-guides/getting-started/getting-started.md)页面，了解如何通过[设备上决策](sdk-guides/on-device-decisioning/overview.md)运行简单的功能标记用例。
 
@@ -72,6 +88,6 @@ ht-degree: 13%
 
 ## [!DNL Target Recommendations] API
 
-链接： [Target Recommendations API](https://developers.adobetarget.com/api/recommendations)和[Adobe Recommendations API概述](../../before-administer/recs-api/overview.md)。
+链接： [Target推荐API](https://developers.adobetarget.com/api/recommendations)和[Adobe Recommendations API概述](../../before-administer/recs-api/overview.md)。
 
-Recommendations API允许您以编程方式与[!DNL Target]推荐服务器交互。 这些API可与一系列应用程序栈集成，以执行通常将通过[!DNL Target]用户界面执行的功能。
+推荐API允许您以编程方式与[!DNL Target]推荐服务器交互。 这些API可与一系列应用程序栈集成，以执行通常将通过[!DNL Target]用户界面执行的功能。

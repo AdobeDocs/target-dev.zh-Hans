@@ -3,9 +3,18 @@ title: 使用Java SDK时，在 [!DNL Adobe Target] 中使用getOffers()
 description: 了解如何使用getOffers()执行决策并从 [!DNL Adobe Target]检索体验。
 feature: APIs/SDKs
 exl-id: 9d7bf956-9d6a-4b4f-a401-2e6814f17f3d
-source-git-commit: 67cc93cf697f8d5bca6fedb3ae974e4012347a0b
+TQID: https://experienceleague.adobe.com/2oYkwezf-GkZnybeQUKUbCE6sPAHNQkg3Z1KH8s2a-g
+product_v2:
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2:
+  - id: f7c7de77-382f-4f48-8b36-61a170f06d3d
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '635'
+source-wordcount: 652
 ht-degree: 13%
 
 ---
@@ -63,7 +72,7 @@ TargetDeliveryRequestBuilder TargetDeliveryRequest.builder()
 | tntId | 字符串 | 否 | [!DNL Target]中用户的主要标识符。 已从targetCookies获取。 如果未提供，则自动生成。 |
 | mcId | 字符串 | 否 | 用于在不同的[!DNL Adobe]解决方案(ECID)之间合并和共享数据。 已从targetCookies获取。 如果未提供，则自动生成。 |
 | trackingServer | 字符串 | 否 | Adobe Analytics服务器，以便[!DNL Adobe Target]和[!DNL Adobe Analytics]将数据正确拼合在一起。 |
-| trackingServerSecure | 字符串 | 否 | 为了[!UICONTROL Adobe Analytics Secure Server]和[!DNL Adobe Target]将数据正确拼合在一起，请使用[!DNL Adobe Analytics]。 |
+| trackingServerSecure | 字符串 | 否 | 为了[!DNL Adobe Target]和[!DNL Adobe Analytics]将数据正确拼合在一起，请使用[!UICONTROL Adobe Analytics Secure Server]。 |
 | 决策方法 | 决策方法 | 否 | 可用于为设备上决策明确设置ON_DEVICE或HYBRID决策方法 |
 
 每个字段的值应符合&#x200B;*[!UICONTROL Target View Delivery API]*&#x200B;请求规范。 若要了解有关&#x200B;*[!UICONTROL Target View Delivery API]*&#x200B;的更多信息，请参阅[http://developers.adobetarget.com/api/#view-delivery-overview](http://developers.adobetarget.com/api/#view-delivery-overview)
@@ -71,7 +80,7 @@ TargetDeliveryRequestBuilder TargetDeliveryRequest.builder()
 
 ## 响应
 
-`TargetDeliveryResponse`返回的`TargetClient.getOffers(`具有以下结构：
+`TargetClient.getOffers(`返回的`TargetDeliveryResponse`具有以下结构：
 
 | 名称 | 类型 | 描述 |
 | --- | --- | --- |

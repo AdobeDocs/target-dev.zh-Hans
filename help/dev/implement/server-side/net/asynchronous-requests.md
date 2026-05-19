@@ -3,9 +3,14 @@ title: 如何在 [!DNL Adobe Target] .NET SDK中使用异步请求
 description: 了解 [!DNL Target] Java SDK如何支持异步请求，这可以将有效目标时间减少为零。
 feature: APIs/SDKs
 exl-id: fd36cc7b-a884-4e57-93c2-8aff8256109a
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+TQID: https://experienceleague.adobe.com/E9rNmPdXe7HYg7XlIffpC4opGM9X6fFoHK-u0oLI-XE
+product_v2:
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '91'
+source-wordcount: 91
 ht-degree: 4%
 
 ---
@@ -14,7 +19,7 @@ ht-degree: 4%
 
 ## 描述
 
-服务器端集成的一个好处是，通过使用并行性，可以利用服务器端提供的巨大带宽和计算资源。 [!DNL Target] .NET SDK支持异步请求，从而可轻松将[!DNL Target]集成到应用程序的现有异步工作流中。
+服务器端集成的一个好处是，通过使用并行性，可以利用服务器端提供的巨大带宽和计算资源。[!DNL Target] .NET SDK支持异步请求，从而可轻松将[!DNL Target]集成到应用程序的现有异步工作流中。
 
 ## 支持的方法
 
@@ -28,7 +33,7 @@ Task<TargetAttributes> GetAttributesAsync(TargetDeliveryRequest request, params 
 
 ## 示例
 
-异步SDK API用法示例可能如下所示：
+异步SDK API用法的示例可能如下所示：
 
 ### \.NET
 

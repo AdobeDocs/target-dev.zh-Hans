@@ -3,9 +3,20 @@ title: 使用Adobe Experience Platform Web SDK访问响应令牌
 description: 了解如何使用 [!DNL Adobe Experience Platform Web SDK]访问响应令牌。
 keywords: 个性化；target；adobe target；renderDecisions；sendEvent；decisionScopes；result.decisions，响应令牌；
 feature: AEP Web SDK
-source-git-commit: f010ca54aac3c2a644a77fb2f88aff1996f6ddfe
+exl-id: b125017c-c257-4f2f-a479-dd0f20e76a9a
+TQID: https://experienceleague.adobe.com/kqa-HY5-dOvNq-yGqthunYDdyTKkiiFdsHquyN34ERg
+product_v2:
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2:
+  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '253'
+source-wordcount: 273
 ht-degree: 0%
 
 ---
@@ -27,7 +38,7 @@ alloy("sendEvent", {
   });
 ```
 
-在此示例中，`result.propositions`（如果存在）是一个数组，其中包含与事件相关的个性化建议。 有关[内容的更多信息，请参阅](https://experienceleague.adobe.com/zh-hans/docs/experience-platform/web-sdk/personalization/rendering-personalization-content)渲染个性化内容`result.propositions.`
+在此示例中，`result.propositions`（如果存在）是一个数组，其中包含与事件相关的个性化建议。 有关`result.propositions.`内容的更多信息，请参阅[渲染个性化内容](https://experienceleague.adobe.com/zh-hans/docs/experience-platform/web-sdk/personalization/rendering-personalization-content)
 
 假设您要从Web SDK自动渲染的所有建议中收集所有活动名称，并将它们推入单个数组中。 然后，您可以将单个阵列发送给第三方。 在本例中：
 

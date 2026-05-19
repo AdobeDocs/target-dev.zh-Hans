@@ -3,9 +3,20 @@ title: 初始化 [!DNL Adobe Target] Python SDK以记录请求
 description: 了解如何在 [!DNL Adobe Target] Python SDK中记录请求。
 feature: APIs/SDKs
 exl-id: 0b3792a5-a9a7-4768-a429-598b49f1fd93
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+TQID: https://experienceleague.adobe.com/9LSln8V3QIG9GTok2yTTnKvhlpQhaed3a-qJyA4jErg
+product_v2:
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2:
+  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+subfeature_v2:
+  - id: a94ced60-8199-4549-b453-ede2acb4101e
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '99'
+source-wordcount: 97
 ht-degree: 3%
 
 ---

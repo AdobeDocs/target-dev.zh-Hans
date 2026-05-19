@@ -4,10 +4,20 @@ description: 使用页面参数将数据导入 [!DNL Target] 。
 title: 如何使用页面参数将数据导入 [!DNL Target] ？
 feature: Implementation
 exl-id: 9bb7157e-a938-4150-8a15-c9bf0a0e2296
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+TQID: https://experienceleague.adobe.com/CYhZOFnli-DmREOOZGE2aGNn3x7BJ7uwGA2vfwUSnOk
+product_v2:
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2:
+  - id: adee20bd-51f4-461d-b9db-d215f8756eeb
+  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '369'
-ht-degree: 32%
+source-wordcount: 397
+ht-degree: 31%
 
 ---
 
@@ -29,7 +39,7 @@ ht-degree: 32%
 
 ## 示例用例
 
-* **产品页面**：发送有关已查看的特定产品的信息(此方法是Recommendations的工作方式)
+* **产品页面**：发送有关已查看的特定产品的信息（此方法是“推荐”的工作方式）
 * **订单详细信息**：发送订单ID、orderTotal等用于订单收集
 * **类别亲和度**：将已查看的类别信息发送到[!DNL Target]，以了解用户对特定站点类别的亲和度
 * **第三方数据**：发送来自第三方数据源的信息，例如天气定位提供程序、帐户数据（例如 DemandBase）、人口统计数据（例如 Experian）等。
@@ -46,9 +56,9 @@ ht-degree: 32%
 
   除了IETF站点上提到的那些字符之外，[!DNL Target]还允许在查询字符串中使用以下字符：
 
-  ```< > # % " { } | \ ^ [ ] ` ``` {line-numbers=&quot;true&quot;}
+  ```< > # % " { } | \ ^ [ ] ` ``` {line-numbers="true"}
 
-  其他所有字符都必须采用 URL 编码。该标准指定了以下格式( [https://www.ietf.org/rfc/rfc1738.txt](https://www.ietf.org/rfc/rfc1738.txt) )，如下图所示：
+  其他所有字符都必须采用 URL 编码。 该标准指定了以下格式( [https://www.ietf.org/rfc/rfc1738.txt](https://www.ietf.org/rfc/rfc1738.txt) )，如下图所示：
 
   ![替代图像](assets/ietf1.png)
 

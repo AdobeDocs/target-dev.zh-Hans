@@ -4,16 +4,34 @@ description: 了解如何使用[!UICONTROL on-device decisioning]在服务器上
 title: 什么是设备上决策？
 feature: Implement Server-side
 exl-id: 22ed3072-56f0-4075-9d1a-d642afe3b649
-source-git-commit: ff0becf3fe3a6fd6694e13243b6a93b910316434
+TQID: https://experienceleague.adobe.com/-HHGn3lG5fOh2GLXQ6jOLRQmX7H24lN-2fseOg4y5H4
+product_v2:
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2:
+  - id: adee20bd-51f4-461d-b9db-d215f8756eeb
+  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+  - id: bcc5edb5-84c3-4940-9f84-ed88b6c16274
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+  - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
+  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+  - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '1020'
-ht-degree: 9%
+source-wordcount: 1233
+ht-degree: 8%
 
 ---
 
 # 设备上决策概述
 
-新一代[!DNL Adobe Target] SDK现在提供[!UICONTROL on-device decisioning]，它能够在您的服务器上缓存A/B和Experience Targeting (XT)营销活动并以接近零延迟的速度执行内存中决策，而不会阻止对[!DNL Adobe Target]的Edge Network的网络请求。
+新一代[!DNL Adobe Target] SDK现在提供[!UICONTROL on-device decisioning]，它能够在您的服务器上缓存A/B和体验定位(XT)营销活动并以接近零延迟的速度执行内存中决策，而不会阻止对[!DNL Adobe Target]的Edge Network的网络请求。
 
 [!DNL Adobe Target]还提供了灵活性，通过实时服务器调用从您的实验和ML驱动的个性化营销活动中提供最相关和最新的体验。 换言之，当性能最重要时，您可以选择使用[!UICONTROL on-device decisioning]，但在需要最相关的最新体验时，可以改为进行服务器调用。 查看[何时使用设备上决策与边缘决策](../../sdk-guides/on-device-decisioning/supported-features.md)，以了解支持使用一种方案而非另一种方案的用例。
 
@@ -23,7 +41,7 @@ ht-degree: 9%
 
 ## 它是如何工作的？
 
-当您安装和初始化启用了[!UICONTROL on-device decisioning]的[!DNL Adobe Target] SDK时，将从距离您服务器最近的Akamai CDN下载&#x200B;*规则工件*&#x200B;并将其缓存在您的服务器上。 当在服务器端应用程序中提出检索[!DNL Adobe Target]体验的请求时，将根据缓存规则工件中编码的元数据在内存中做出有关返回哪个内容的决策，这将定义您的所有[!UICONTROL on-device decisioning] A/B和XT活动。
+当您安装和初始化启用了[!UICONTROL on-device decisioning]的[!DNL Adobe Target] SDK时，将从离您服务器最近的Akamai CDN下载&#x200B;*规则工件*&#x200B;并将其缓存在您的服务器上。 当在服务器端应用程序中提出检索[!DNL Adobe Target]体验的请求时，将根据缓存规则工件中编码的元数据在内存中做出有关返回哪个内容的决策，这将定义您的所有[!UICONTROL on-device decisioning] A/B和XT活动。
 
 下图显示了[!UICONTROL on-device decisioning]架构。 单击以展开图像。
 
@@ -33,10 +51,10 @@ ht-degree: 9%
 
 ## 有哪些好处？
 
-* **提供几乎零延迟的决策。**&#x200B;在内存中和设备上执行分段和决策，以避免阻止网络请求。
-* **增强应用程序性能。**&#x200B;在不影响最终用户体验的情况下运行实验并向您的客户和用户提供个性化。
-* **提高Google网站质量分数。**&#x200B;由于决策在内存中和服务器端进行，因此请提高您在线业务的Google网站质量分数，使其更易于消费者发现。
-* **从实时分析中学习。**&#x200B;通过[!DNL Adobe Target]或A4T报表实时获取有关您的活动表现的洞察，从而使您能够在关键时刻旋转策略。
+* **提供几乎零延迟的决策。** 在内存中和设备上执行分段和决策，以避免阻塞网络请求。
+* **增强应用程序性能。** 在不影响最终用户体验的情况下运行实验并向客户和用户提供个性化。
+* **提高Google网站质量分数。** 由于决策发生在内存和服务器端，因此可提高您在线业务的Google网站质量分数，使消费者更容易发现它。
+* **从实时分析中学习。** 通过[!DNL Adobe Target]或A4T报表实时了解您的活动表现，让您能够在关键时刻旋转策略。
 
 ## 支持的功能
 
@@ -66,10 +84,10 @@ ht-degree: 9%
 | [操作系统](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/operating-system.html?lang=zh-Hans) | 是 |
 | [网页](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/site-pages.html?lang=zh-Hans) | 是 |
 | [浏览器](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/browser.html?lang=zh-Hans) | 是 |
-| [访客资料](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/visitor-profile.html?lang=zh-Hans) | 否 |
+| [访客轮廓](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/visitor-profile.html?lang=zh-Hans) | 否 |
 | [流量源](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/traffic-sources.html?lang=zh-Hans) | 否 |
 | [时间范围](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/time-frame.html?lang=zh-Hans) | 是 |
-| [Experience Cloud受众](https://experienceleague.adobe.com/docs/target/using/integrate/mmp.html?lang=zh-Hans)(来自Adobe Audience Manager、Adobe Analytics和Adobe Experience Manager的受众) | 否 |
+| [Experience Cloud受众](https://experienceleague.adobe.com/docs/target/using/integrate/mmp.html?lang=zh-Hans)（来自Adobe Audience Manager、Adobe Analytics和Adobe Experience Manager的受众） | 否 |
 
 ## 如何配置我的客户端以使用[!UICONTROL on-device decisioning]？
 
@@ -123,7 +141,7 @@ ht-degree: 9%
 
 ### 网络研讨会：通过 [!DNL Adobe Target] 的设备上决策进行无延迟的个性化和测试
 
-相比以往，营销人员、产品所有者和开发人员需要更多地在网站上、应用程序中以及他们与客户联系的其他各个环节优化整体客户体验。具有数据孤岛和复杂实现的多种工具是不够的。
+相比以往，营销人员、产品所有者和开发人员需要更多地在网站上、应用程序中以及他们与客户联系的其他各个环节优化整体客户体验。 具有数据孤岛和复杂实现的多种工具是不够的。
 
 在此录制的网络研讨会中，[!DNL Adobe Target]产品专家讨论了将关键体验优化决策转移到设备上以便在几乎无延迟的情况下在本地执行，在为客户提高网站性能的同时创造激动人心的新用例。
 
@@ -144,9 +162,9 @@ ht-degree: 9%
 
 >[!VIDEO](https://video.tv.adobe.com/v/329032/?quality=12)
 
-有关更多视频和教程，请参阅[[!DNL Adobe Target] Tutorials](https://experienceleague.adobe.com/docs/target-learn/tutorials/overview.html?lang=zh-Hans)。
+有关更多视频和教程，请参阅[[!DNL Adobe Target] 教程](https://experienceleague.adobe.com/docs/target-learn/tutorials/overview.html?lang=zh-Hans)。
 
-### Adobe技术博客 — 第1部分：在Edge平台上运行[!DNL Adobe Target] NodeJS SDK以提供试验性和个性化(Akamai Edge工作者)
+### Adobe Tech Blog — 第1部分：在Edge平台上运行[!DNL Adobe Target] NodeJS SDK以提供试验性和个性化（Akamai Edge员工）
 
 [单击此处访问博客帖子](https://medium.com/adobetech/part-1-run-adobe-target-nodejs-sdk-for-experimentation-and-personalization-on-edge-platforms-4d8660964ed9)。
 

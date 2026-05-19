@@ -4,10 +4,24 @@ description: 了解如何在非JavaScript环境中实施 [!DNL Adobe Target] ，
 title: 如何为电子邮件实施 [!DNL Target] ？
 feature: Implement Email
 exl-id: dda00b75-5d58-4405-ae58-75e7883a30ed
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+TQID: https://experienceleague.adobe.com/NeITIa97pW-yiB6EB-ajqRuBgp9mx-uzdwlREdgotj8
+product_v2:
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2:
+  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+subfeature_v2:
+  - id: c94a34eb-b51c-4dd1-a6a4-46b0d84ccccd
+  - id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+  - id: d095671a-1355-40aa-8b5f-06c33c68080b
+  - id: e9001ce2-5245-4a8e-8601-dd958009072f
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '429'
-ht-degree: 63%
+source-wordcount: 441
+ht-degree: 62%
 
 ---
 
@@ -15,11 +29,11 @@ ht-degree: 63%
 
 有关在非JavaScript方案（如使用AdBox或重定向器）中实现[!DNL Target]的信息。
 
-您可以跟踪对广告和其他站外内容的访问次数。您还能识别您站内和站外的同一用户，并根据其全部的网络活动情况展示符合其特点的体验。AdBox通过使用单个URL来进行测试，而无需使用JavaScript或at.js。
+您可以跟踪对广告和其他站外内容的访问次数。 您还能识别您站内和站外的同一用户，并根据其全部的网络活动情况展示符合其特点的体验。 AdBox通过使用单个URL来进行测试，而无需使用JavaScript或at.js。
 
 AdBox对于没有at.js的网站（例如联属网站）非常有用。 如果您的活动需要动态创意（例如，您需要在广告中显示已从购物车中放弃的产品），那么您将不能使用 AdBox。
 
-AdBox 广告和重定向器可用于任何类型的活动。下表比较了 Adbox 和重定向器，同时还介绍了二者分别在何时使用：
+AdBox 广告和重定向器可用于任何类型的活动。 下表比较了 Adbox 和重定向器，同时还介绍了二者分别在何时使用：
 
 | | 用途 | 何时使用 | URL 结构 | 选件类型 | 选件内容 |
 |--- |--- |--- |--- |--- |--- |
@@ -32,8 +46,8 @@ AdBox 广告和重定向器可用于任何类型的活动。下表比较了 Adbo
 
 ## 限制
 
-* 标准 mbox 不存在客户端超时。如果[!DNL Target]完全关闭，则广告访客将不会看到内容，甚至不会看到默认内容。
-* 使用第三方 Cookie 来跟踪访问次数。如果 PCID 不相同，则默认情况下会将访客的第三方配置文件与任何现有的第一方配置文件合并到一起。
-* 要在 AdBox 自身中使用第一方 Cookie，您需要在 URL 中传递 mBox 会话。请咨询您的客服专员以实现此操作。
-* 要使用第一方 Cookie 来跟踪广告点击次数，需在 URL 中传递 mbox 会话。请咨询您的客服专员以实现此操作。
-* 您必须在 URL 中传递 Mbox 会话才能在同一页面上使用多个 AdBox。请咨询您的客服专员以实现此操作。同一个页面上可能会具有一个 AdBox 和一个重定向器链接（因为重定向器实际上位于另一个页面上）。
+* 标准 mbox 不存在客户端超时。 如果[!DNL Target]完全关闭，则广告访客将不会看到内容，甚至不会看到默认内容。
+* 使用第三方 Cookie 来跟踪访问次数。 如果 PCID 不相同，则默认情况下会将访客的第三方配置文件与任何现有的第一方配置文件合并到一起。
+* 要在 AdBox 自身中使用第一方 Cookie，您需要在 URL 中传递 mBox 会话。 请咨询您的客服专员以实现此操作。
+* 要使用第一方 Cookie 来跟踪广告点击次数，需在 URL 中传递 mbox 会话。 请咨询您的客服专员以实现此操作。
+* 您必须在 URL 中传递 Mbox 会话才能在同一页面上使用多个 AdBox。 请咨询您的客服专员以实现此操作。 同一个页面上可能会具有一个 AdBox 和一个重定向器链接（因为重定向器实际上位于另一个页面上）。

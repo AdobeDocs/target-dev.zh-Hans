@@ -5,16 +5,25 @@ feature: APIs/SDKs
 level: Experienced
 role: Developer
 exl-id: efccadab-d139-4423-8613-c2743d87b3a0
-source-git-commit: 3301d88bc47208ab5439c1a9f7933e99c22a4521
+TQID: https://experienceleague.adobe.com/u-RPLXjG8UBI7bDu2HgPFFnNBU--Yr0UydVX-Q-dcTc
+product_v2:
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2:
+  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '346'
+source-wordcount: 368
 ht-degree: 0%
 
 ---
 
 # 通知[!DNL Target]
 
-完成此步骤可确保使用[!DNL Adobe Target]方法发送所有必须发送到`trackEvent`的事件。
+完成此步骤可确保使用`trackEvent`方法发送所有必须发送到[!DNL Adobe Target]的事件。
 
 任何需要在[!DNL Target]中跟踪的事件都可以是主要转化事件或成功量度。
 
@@ -51,7 +60,7 @@ ht-degree: 0%
    * `orderTotal`：购买的订单总计。
    * `orderId`：购买的订单ID。
 
-  下图显示了[&#x200B; [!DNL tags] 中 [!DNL Experience Platform]的](https://experienceleague.adobe.com/docs/tags.html?lang=zh-Hans){target=_blank}规则，该规则应仅在[!UICONTROL Confirmation]页面上触发。
+  下图显示了 [!DNL Experience Platform][&#128279;](https://experienceleague.adobe.com/docs/tags.html?lang=zh-Hans){target=_blank}中 [!DNL tags] 的规则，该规则应仅在[!UICONTROL Confirmation]页面上触发。
 
   ![操作配置页面](/help/dev/patterns/recs-atjs/assets/action-configuration.png){width="400" zoomable="yes"}
 
@@ -60,7 +69,7 @@ ht-degree: 0%
 **读数**
 
 * [adobe.target.trackEvent()方法](/help/dev/implement/client-side/atjs/atjs-functions/adobe-target-trackevent.md)
-* 基于购物车的标准的[cartIds](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/base-the-recommendation-on-a-recommendation-key.html?lang=zh-Hans#cart-based){target=_blank}
+* [基于购物车的标准的cartIds](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/base-the-recommendation-on-a-recommendation-key.html?lang=zh-Hans#cart-based){target=_blank}
 
 **操作**
 

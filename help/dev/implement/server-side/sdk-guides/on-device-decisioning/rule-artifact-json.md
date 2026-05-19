@@ -1,18 +1,29 @@
 ---
 title: 通过JSON有效负载下载、存储和更新设备上决策规则构件
-description: 如果应用程序的结构方式要求SDK在使用SDK方法的每个文件中初始化，则此方法将最为有效。
+description: 如果应用程序的结构方式要求在其使用SDK方法的每个文件中初始化SDK，则此方法将是最佳的。
 feature: APIs/SDKs
 exl-id: 4ccfb455-f813-4bdb-a9c1-d576a110a9bb
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+TQID: https://experienceleague.adobe.com/knFQFgPKL-DBOtBnWUIz2-7usi35DPtxd-FSINqHHhY
+product_v2:
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2:
+  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+  - id: e7840a7b-a94f-4256-aed0-4e94b08e157b
+  - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '292'
-ht-degree: 0%
+source-wordcount: 298
+ht-degree: 1%
 
 ---
 
 # 通过JSON有效负载下载、存储和更新规则构件
 
-如果应用程序的结构方式要求SDK在使用SDK方法的每个文件中初始化，则此方法将最为有效。 在SDK初始化期间，Web应用程序可以使用规则工件的JSON有效负载之前，您应确保已下载JSON有效负载并且可供应用程序使用。
+如果应用程序的结构方式要求在其使用SDK方法的每个文件中初始化SDK，则此方法将是最佳的。 在SDK初始化期间，Web应用程序可以使用规则工件的JSON有效负载之前，您应该确保已下载JSON有效负载并且可供应用程序使用。
 
 ## 步骤摘要
 
@@ -20,7 +31,7 @@ ht-degree: 0%
 1. 初始化SDK
 1. 存储和使用JSON有效负载
 
-## 1.安装SDK
+## &#x200B;1. 安装SDK
 
 >[!BEGINTABS]
 
@@ -42,7 +53,7 @@ npm i @adobe/target-nodejs-sdk -P
 
 >[!ENDTABS]
 
-## 2.初始化SDK
+## &#x200B;2. 初始化SDK
 
 1. 首先，导入SDK。 导入到用于控制服务器启动的同一文件。
 
@@ -118,7 +129,7 @@ npm i @adobe/target-nodejs-sdk -P
    &lt;！ — 插入image-client-code.png —>
    ![替代图像](assets/asset-rule-artifact-3.png)
 
-## 3.存储和重设JSON有效负载
+## &#x200B;3. 存储并回复JSON有效负载
 
 用于存储JSON有效负载的机制取决于您的系统架构。 您可以使用本地文件、数据库或内存对象缓存系统，如Memcached。 您需要能够从应用程序读取此JSON以供使用。 在本指南中，我们使用本地文件作为存储。
 

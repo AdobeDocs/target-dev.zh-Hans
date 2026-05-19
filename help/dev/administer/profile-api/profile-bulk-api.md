@@ -4,10 +4,22 @@ description: 了解如何使用 [!DNL Adobe Target] [!UICONTROL Bulk Profile Upd
 feature: APIs/SDKs
 contributors: https://github.com/icaraps
 exl-id: 0f38d109-5273-4f73-9488-80eca115d44d
-source-git-commit: 23cbece45828cf057594445b010a353d865d36ed
+TQID: https://experienceleague.adobe.com/EVlP71oFI-NIFoTe9fyx2Xzsr9v-sZq0JGdpti1XI64
+product_v2:
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2:
+  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+  - id: d095671a-1355-40aa-8b5f-06c33c68080b
+  - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '1056'
-ht-degree: 6%
+source-wordcount: 1063
+ht-degree: 7%
 
 ---
 
@@ -39,7 +51,7 @@ ht-degree: 6%
 
 ## 注意事项
 
-* 批处理文件必须小于 50 MB。另外，每次上传的总行数不应超过 500,000 行。
+* 批处理文件必须小于 50 MB。 另外，每次上传的总行数不应超过 500,000 行。
 * 更新通常在一小时内发生，但可能需要24小时才能反映出来。
 * 对于在后续批次中可以在24小时内上传的一个或多个行数没有限制。 但是，为了确保其他进程能够高效运行，这些数据的吸收过程在工作时间可能会受到节流限制。
 * 对于相同thirdPartyId，如果连续的v2批量更新调用之间没有mbox调用，则会覆盖在第一次批量更新调用中更新的属性。
@@ -64,11 +76,11 @@ batch=pcId,param1,param2,param3,param4
 您在[!DNL Target]服务器的POST调用中引用此文件以处理该文件。 创建批处理文件时，请考虑以下事项：
 
 * 文件的第一行必须指定列标题。
-* 第一个标头应为`pcId`或`thirdPartyId`。 不支持[!UICONTROL Marketing Cloud visitor ID]。 [!UICONTROL pcId]是[!DNL Target]生成的访客ID。 `thirdPartyId`是由客户端应用程序指定的ID，它通过mbox调用作为[!DNL Target]传递给`mbox3rdPartyId`。 它必须在此作为`thirdPartyId`引用。
+* 第一个标头应为`pcId`或`thirdPartyId`。 不支持[!UICONTROL Marketing Cloud visitor ID]。 [!UICONTROL pcId]是[!DNL Target]生成的访客ID。 `thirdPartyId`是由客户端应用程序指定的ID，它通过mbox调用作为`mbox3rdPartyId`传递给[!DNL Target]。 它必须在此作为`thirdPartyId`引用。
 * 出于安全原因，您在批处理文件中指定的参数和值必须使用UTF-8进行URL编码。 参数和值可以转发到其他边缘节点以供通过HTTP请求进行处理。
 * 参数必须仅采用`paramName`格式。 参数在[!DNL Target]中显示为`profile.paramName`。
-* 如果您使用[!UICONTROL Bulk Profile Update API] v2，则不需要为每个`pcId`指定所有参数值。 已为`pcId`中未找到的任何`mbox3rdPartyId`或[!DNL Target]创建配置文件。 如果您使用的是v1，则不会为缺少的pcIds或mbox3rdPartyIds创建配置文件。 有关详细信息，请参阅以下[中的 [!DNL Bulk Profile Update API]](#empty)处理空值。
-* 批处理文件必须小于 50 MB。此外，总行数不应超过500,000。 此限制可确保服务器不会因请求过多而泛滥。
+* 如果您使用[!UICONTROL Bulk Profile Update API] v2，则不需要为每个`pcId`指定所有参数值。 已为[!DNL Target]中未找到的任何`pcId`或`mbox3rdPartyId`创建配置文件。 如果您使用的是v1，则不会为缺少的pcIds或mbox3rdPartyIds创建配置文件。 有关详细信息，请参阅以下 [!DNL Bulk Profile Update API][&#128279;](#empty)中的处理空值。
+* 批处理文件必须小于 50 MB。 此外，总行数不应超过500,000。 此限制可确保服务器不会因请求过多而泛滥。
 * 您可以上传的属性数量没有限制。 但是，外部配置文件数据（包括客户属性、配置文件API、Mbox内配置文件参数和配置文件脚本输出）的总大小不得超过64 KB。
 * 参数和值区分大小写。
 

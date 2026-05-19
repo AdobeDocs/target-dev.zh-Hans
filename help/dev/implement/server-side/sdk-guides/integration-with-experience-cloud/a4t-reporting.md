@@ -4,9 +4,17 @@ description: 与Experience Cloud、A4T报表、Analytics for Target的集成
 keywords: 投放api，服务器端，服务器端，集成， a4t
 exl-id: 0d09d7a1-528d-4e6a-bc6c-f7ccd61f5b75
 feature: Implement Server-side
-source-git-commit: cbae0f1758fb0dee4837e8c237f8617ecb46eb25
+TQID: https://experienceleague.adobe.com/Qx5xwszkQLumkFhGJDbvyIofPe7qxUDN922iqmhsClk
+product_v2:
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+  - id: d3cdead0-685a-4489-9250-4bb709942f66
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '372'
+source-wordcount: 392
 ht-degree: 6%
 
 ---
@@ -115,7 +123,7 @@ TargetDeliveryResponse offers = targetClient.getOffers(request);
 
 ## 用户从[!DNL Adobe Target]中检索分析有效负载
 
-用户可以检索给定mbox的[!DNL Adobe Analytics]有效负荷，然后通过[!DNL Adobe Analytics]数据插入API[将其发送给](https://github.com/AdobeDocs/analytics-1.4-apis/blob/master/docs/data-insertion-api/index.md)。 触发[!DNL Adobe Target]请求时，将`client_side`传递到请求中的`logging`字段。 如果指定的mbox存在于使用[!DNL Analytics]作为报表源的活动中，则此请求将返回有效负载。
+用户可以检索给定mbox的[!DNL Adobe Analytics]有效负荷，然后通过[数据插入API](https://github.com/AdobeDocs/analytics-1.4-apis/blob/master/docs/data-insertion-api/index.md)将其发送给[!DNL Adobe Analytics]。 触发[!DNL Adobe Target]请求时，将`client_side`传递到请求中的`logging`字段。 如果指定的mbox存在于使用[!DNL Analytics]作为报表源的活动中，则此请求将返回有效负载。
 
 >[!BEGINTABS]
 
@@ -206,7 +214,7 @@ https://{datacollectionhost.sc.omtrdc.net}/b/ss/{rsid}/{content_type_num}/{code_
 | `code_ver` | 是 | 始终设置为“MOBILE-1.0” |
 | `session` | 是 | 始终设置为“0” |
 | `pe` | 是 | 页面事件。 始终设置为`tnt` |
-| `tnta` | 是 | [!DNL Analytics]中的[!DNL Target]服务器返回了`analytics -> payload -> tnta`有效负载 |
+| `tnta` | 是 | `analytics -> payload -> tnta`中的[!DNL Target]服务器返回了[!DNL Analytics]有效负载 |
 | `sessionId` | 是 | 正在进行会话的[!DNL Target]会话ID |
 | `mid` | 是 | Marketing Cloud 访客 ID |
 

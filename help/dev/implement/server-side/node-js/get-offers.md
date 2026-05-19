@@ -3,10 +3,15 @@ title: 使用Node.js SDK时，在 [!DNL Adobe Target] 中使用[!UICONTROL getOf
 description: 了解如何使用[!UICONTROL getOffers()]执行决策并从 [!DNL Adobe Target]检索体验。
 feature: APIs/SDKs
 exl-id: 3c4125ea-68d4-405e-9b9a-5fa832743153
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+TQID: https://experienceleague.adobe.com/WRGy74F1kUobRl1Pakse0VnXt3cT3-ntCljm4bHtiZ4
+product_v2:
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '313'
-ht-degree: 21%
+source-wordcount: 326
+ht-degree: 20%
 
 ---
 
@@ -52,7 +57,7 @@ TargetClient.getOffers(options: Object): Promise
 | targetCookie | 对象 | [!DNL Target] Cookie |
 | targetLocationHintCookie | 对象 | [!DNL Target]位置提示Cookie |
 | analyticsDetails | 数组 | 在使用客户端Analytics的情况下，使用Analytics有效负载 |
-| responseTokens | 数组 | [响应令牌](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html?lang=zh-Hans&)的列表。 |
+| responseTokens | 数组 | [响应令牌](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html?lang=zh-Hans？)的列表。 |
 | trace | 数组 | 所有请求mbox/视图的汇总跟踪数据 |
 | status | 对象 | 包含响应状态的对象。 |
 | 决策方法 | 字符串 | 确定要使用的决策方法（[设备上](/help/dev/implement/server-side/sdk-guides/on-device-decisioning/overview.md)，服务器端，混合） |

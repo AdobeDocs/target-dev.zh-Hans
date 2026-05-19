@@ -4,10 +4,21 @@ description: 对 [!DNL Adobe Target] at.js JavaScript库使用[!UICONTROL regist
 title: 如何使用[!UICONTROL registerExtension()]函数？
 feature: at.js
 exl-id: 71decf00-84c5-4914-b0cd-bb061fa6265f
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+TQID: https://experienceleague.adobe.com/qTWubp0dNesN-8vsooz8pdbjfSw1W1ktm-0bG6YRzJw
+product_v2:
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2:
+  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+subfeature_v2:
+  - id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '265'
-ht-degree: 69%
+source-wordcount: 274
+ht-degree: 63%
 
 ---
 
@@ -17,7 +28,7 @@ ht-degree: 69%
 
 >[!NOTE]
 >
->此函数仅可用于 at.js 版本 1.*x*。此函数已在at.js 2版本中弃用。*x* 使用跨域跟踪功能时。如果与at.js 2.x一起使用，此函数将返回默认内容。
+>此函数仅适用于at.js 1.*x*&#x200B;版。 at.js 2.*x*&#x200B;版本已弃用此函数。 如果与at.js 2.x一起使用，此函数将返回默认内容。
 
 options 参数是强制性的，具有以下结构：
 
@@ -25,7 +36,7 @@ options 参数是强制性的，具有以下结构：
 |--- |--- |--- |--- |
 | name | 字符串 | 是 | 扩展名。 |
 | modules | Array[String] | 是 | 一个字符串数组，表示请求的模块名称。 |
-| register | 函数 | 是 | 用于初始化和构建扩展的函数。该函数接收基于模块数组的参数。 |
+| register | 函数 | 是 | 用于初始化和构建扩展的函数。 该函数接收基于模块数组的参数。 |
 
 注释:
 
@@ -48,5 +59,5 @@ options 参数是强制性的，具有以下结构：
 
 | 键 | 类型 | 描述 |
 |--- |--- |--- |
-| log | 函数 | 将参数变量列表记录到浏览器控制台（如果存在）。只有当 `mboxDebug=true` 传递到 URL 时才会激活它。 |
-| error | 函数 | 将参数变量列表记录到浏览器控制台。只有在出现严重错误（如网络超时、未找到 HTML 节点等）时才会激活它。 |
+| log | 函数 | 将参数变量列表记录到浏览器控制台（如果存在）。 只有当 `mboxDebug=true` 传递到 URL 时才会激活它。 |
+| error | 函数 | 将参数变量列表记录到浏览器控制台。 只有在出现严重错误（如网络超时、未找到 HTML 节点等）时才会激活它。 |

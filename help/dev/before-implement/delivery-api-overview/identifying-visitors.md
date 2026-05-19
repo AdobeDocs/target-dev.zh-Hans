@@ -4,10 +4,18 @@ description: 如何识别 [!DNL Adobe Target]中的用户？
 keywords: 投放api
 exl-id: 5b8c28aa-caad-44a9-880a-3c5f844e47b2
 feature: APIs/SDKs
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+TQID: https://experienceleague.adobe.com/ciTxaPn8odyuyHzrnqhPWzdmpcU2bknOATGCt-ZtAZw
+product_v2:
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2:
+  - id: adee20bd-51f4-461d-b9db-d215f8756eeb
+  - id: f7c7de77-382f-4f48-8b36-61a170f06d3d
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '751'
-ht-degree: 7%
+source-wordcount: 789
+ht-degree: 9%
 
 ---
 
@@ -21,7 +29,7 @@ Target使用三个标识符：
 | --- | --- |
 | `tntId` | `tntId`是用户[!DNL Target]中的主要标识符。 您可以提供此ID，否则[!DNL Target]将在请求中不包含此ID时自动生成此ID。 |
 | `thirdPartyId` | `thirdPartyId`是您公司的用户标识符，您可在每次调用时发送该标识符。 当用户登录到某个公司的网站时，该公司通常会创建一个ID，并将其绑定到访客的帐户、会员卡、会员编号或该公司的其他适用标识符。 |
-| `marketingCloudVisitorId` | `marketingCloudVisitorId`用于在不同Adobe解决方案之间合并和共享数据。 要与Adobe Analytics和Adobe Audience Manager集成，需要`marketingCloudVisitorId`。 |
+| `marketingCloudVisitorId` | `marketingCloudVisitorId`用于在不同的Adobe解决方案之间合并和共享数据。 要与Adobe Analytics和Adobe Audience Manager集成，需要`marketingCloudVisitorId`。 |
 | `customerIds` | 除了Experience Cloud访客ID之外，还可以使用其他[客户ID](https://experienceleague.adobe.com/docs/id-service/using/reference/authenticated-state.html?lang=zh-Hans)以及每个访客的身份验证状态。 |
 
 ## [!DNL Target] ID
@@ -77,7 +85,7 @@ curl -X POST \
 
 ## Marketing Cloud 访客 ID
 
-`marketingCloudVisitorId`是一个通用的永久性ID，用于在Experience Cloud的所有解决方案中标识您的访客。 当您的组织实施ID服务时，此ID允许您在不同的Experience Cloud解决方案(如Adobe Target、Adobe Analytics或Adobe Audience Manager)中识别同一网站访客及其数据。 请注意，在利用和与Analytics和Audience Manager集成时，需要`marketingCloudVisitorId`。
+`marketingCloudVisitorId`是一个通用的永久性ID，用于在Experience Cloud的所有解决方案中标识您的访客。 当您的组织实施ID服务时，此ID允许您在不同的Experience Cloud解决方案（如Adobe Target、Adobe Analytics或Adobe Audience Manager）中识别同一网站访客及其数据。 请注意，在利用和集成Analytics和Audience Manager时，需要`marketingCloudVisitorId`。
 
 ```
 curl -X POST \
@@ -112,7 +120,7 @@ curl -X POST \
 }'
 ```
 
-上述示例调用演示了如何将从Experience CloudID服务检索到的`marketingCloudVisitorId`传递到Adobe Target。 在此方案中，[!DNL Target]生成一个`tntId`，因为它未传递到将映射到提供的`marketingCloudVisitorId`的原始调用，如下面的响应中所示。
+上述示例调用演示了如何将从Experience Cloud ID服务检索到的`marketingCloudVisitorId`传递到Adobe Target。 在此方案中，[!DNL Target]生成一个`tntId`，因为它未传递到将映射到提供的`marketingCloudVisitorId`的原始调用，如下面的响应中所示。
 
 ## 第三方ID
 
@@ -169,13 +177,13 @@ curl -X POST \
 
 ## Customer ID
 
-可以添加[客户ID](https://experienceleague.adobe.com/docs/id-service/using/reference/authenticated-state.html?lang=zh-Hans)并将其与Experience Cloud的访客ID关联。 无论何时发送`customerIds`，都必须提供`marketingCloudVisitorId`。 此外，可以为每个访客随每个`customerId`提供身份验证状态。 可考虑以下身份验证状态：
+可以添加[客户ID](https://experienceleague.adobe.com/docs/id-service/using/reference/authenticated-state.html?lang=zh-Hans)并将其与Experience Cloud访客ID关联。 无论何时发送`customerIds`，都必须提供`marketingCloudVisitorId`。 此外，可以为每个访客随每个`customerId`提供身份验证状态。 可考虑以下身份验证状态：
 
 | 身份验证状态 | 用户状态 |
 | --- | --- |
 | `unknown` | 未知或从未验证。 此状态可用于诸如访客通过单击显示广告登录到您的网站等场景。 |
 | `authenticated` | 用户目前通过了您网站或应用程序上活动会话的身份验证。 |
-| `logged_out` | 用户已经过身份验证，但已主动注销。用户想要并打算与已经过身份验证状态断开连接。用户不想再被当为已经过身份验证处理。 |
+| `logged_out` | 用户已经过身份验证，但已主动注销。 用户想要并打算与已经过身份验证状态断开连接。 用户不想再被当为已经过身份验证处理。 |
 
 请注意，仅当客户ID处于`authenticated`状态时，Target才会引用已存储并链接到客户ID的用户配置文件数据。 如果客户ID处于`unknown`或`logged_out`状态，则将忽略客户ID，并且任何可能与其关联的用户配置文件数据都不会用于受众定位。
 

@@ -3,10 +3,22 @@ title: 设备上决策支持哪些功能？
 description: 了解如何使用实时服务器调用，通过机器学习提供最相关且最引人入胜的个性化内容。
 feature: APIs/SDKs
 exl-id: 15d9870f-6c58-4da0-bfe5-ef23daf7d273
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+TQID: https://experienceleague.adobe.com/Fgwu8Nh90i-tS1aCUVmQReGz6DYBP2GHdcNM7z17BSk
+product_v2:
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2:
+  - id: adee20bd-51f4-461d-b9db-d215f8756eeb
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
+  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
+  - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '474'
-ht-degree: 13%
+source-wordcount: 710
+ht-degree: 9%
 
 ---
 
@@ -20,7 +32,7 @@ ht-degree: 13%
 
 ## 活动类型
 
-下表指明了[!UICONTROL on-device decisioning]支持或不支持使用基于[表单的体验编辑器](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html?lang=zh-Hans&)创建的[活动类型](https://experienceleague.adobe.com/docs/target/using/activities/target-activities-guide.html?lang=zh-Hans)。
+下表指明了[!UICONTROL on-device decisioning]支持或不支持使用基于[表单的体验编辑器](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html?lang=zh-Hans？)创建的[活动类型](https://experienceleague.adobe.com/docs/target/using/activities/target-activities-guide.html?lang=zh-Hans)。
 
 | 活动类型 | 受支持 |
 | --- | --- |
@@ -47,14 +59,14 @@ ht-degree: 13%
 | [操作系统](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/operating-system.html?lang=zh-Hans) | 是 |
 | [网页](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/site-pages.html?lang=zh-Hans) | 是 |
 | [浏览器](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/browser.html?lang=zh-Hans) | 是 |
-| [访客资料](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/visitor-profile.html?lang=zh-Hans) | 否 |
+| [访客轮廓](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/visitor-profile.html?lang=zh-Hans) | 否 |
 | [流量源](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/traffic-sources.html?lang=zh-Hans) | 否 |
 | [时间范围](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/time-frame.html?lang=zh-Hans) | 是 |
-| [Experience Cloud受众](https://experienceleague.adobe.com/docs/target/using/integrate/mmp.html?lang=zh-Hans)(来自Adobe Audience Manager、Adobe Analytics和Adobe Experience Manager的受众) | 否 |
+| [Experience Cloud受众](https://experienceleague.adobe.com/docs/target/using/integrate/mmp.html?lang=zh-Hans)（来自Adobe Audience Manager、Adobe Analytics和Adobe Experience Manager的受众） | 否 |
 
 ### [!UICONTROL on-device decisioning]的地理定位
 
-为了对具有基于地理位置的Adobe的[!UICONTROL on-device decisioning]活动保持近零延迟，Audience建议您在对`getOffers`的调用中自己提供地理值。 为此，请在请求的`Context`中设置`Geo`对象。 这意味着您的服务器将需要一种方法来确定每个最终用户的位置。 例如，您的服务器可能会使用您配置的服务执行IP到地理位置的查找。 某些托管提供商(如Google Cloud)通过每个`HttpServletRequest`中的自定义标头提供此功能。
+为了对具有基于地理位置的受众的[!UICONTROL on-device decisioning]活动保持近零延迟，Adobe建议您在对`getOffers`的调用中自己提供地理值。 为此，请在请求的`Context`中设置`Geo`对象。 这意味着您的服务器将需要一种方法来确定每个最终用户的位置。 例如，您的服务器可能会使用您配置的服务执行IP到地理位置的查找。 某些托管提供商（如Google Cloud）通过每个`HttpServletRequest`中的自定义标头提供此功能。
 
 >[!BEGINTABS]
 
@@ -114,7 +126,7 @@ public class TargetRequestUtils {
 
 >[!ENDTABS]
 
-但是，如果您无法在服务器上执行IP到地理位置的查找，但仍希望对包含基于地理位置的受众的`getOffers`请求执行[!UICONTROL on-device decisioning]，则也支持此操作。 此方法的缺点是，它将使用远程IP到地理位置的查找，这将为每个`getOffers`调用添加延迟。 此延迟应低于远程`getOffers`调用，因为它点击了位于服务器附近的CDN。 您必须在请求的`Context`的`Geo`对象中仅提供`ipAddress`字段，以便SDK检索用户IP地址的地理位置。 如果除了`ipAddress`之外还提供了任何其他字段，则[!DNL Target] SDK将不会获取地理位置元数据以进行解析。
+但是，如果您无法在服务器上执行IP到地理位置的查找，但仍希望对包含基于地理位置的受众的`getOffers`请求执行[!UICONTROL on-device decisioning]，则也支持此操作。 此方法的缺点是，它将使用远程IP到地理位置的查找，这将为每个`getOffers`调用添加延迟。 此延迟应低于远程`getOffers`调用，因为它点击了位于服务器附近的CDN。 您必须在请求的`Context`的`Geo`对象中仅提供`ipAddress`字段，以便SDK检索用户IP地址的地理位置。 如果提供除`ipAddress`之外的任何其他字段，[!DNL Target] SDK将不会获取地理位置元数据以进行解析。
 
 
 >[!BEGINTABS]

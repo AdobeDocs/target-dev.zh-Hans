@@ -4,14 +4,24 @@ description: 使用脚本配置文件属性将数据导入 [!DNL Target] 。
 title: 如何使用脚本配置文件属性将数据导入 [!DNL Target] ？
 feature: Implementation
 exl-id: ba11f1de-e68b-4505-8e3e-cd4d46ef59a2
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+TQID: https://experienceleague.adobe.com/bRsl4ipgw0OeuVD0d69wmnHmrVvcGt9o0KmkhrEECZQ
+product_v2:
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2:
+  - id: adee20bd-51f4-461d-b9db-d215f8756eeb
+  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '283'
-ht-degree: 74%
+source-wordcount: 292
+ht-degree: 71%
 
 ---
 
-# 脚本配置文件属性
+# 脚本轮廓属性
 
 脚本配置文件属性是在[!DNL Adobe Target]解决方案中定义的名称/值对。 该值是在每个服务器调用时，通过在 Target 服务器上执行一段 JavaScript 代码来确定。
 
@@ -19,13 +29,13 @@ ht-degree: 74%
 
 ## 格式
 
-脚本配置文件属性在 Target 的“受众”区域中创建。任何属性名称都有效，该值是[!DNL Target]用户编写的JavaScript函数的结果。 该属性名称自动在 Target 中添加“user. [!DNL Target]中的&quot;，以将其与页面内配置文件属性区分开。
+脚本配置文件属性在 Target 的“受众”区域中创建。 任何属性名称都有效，该值是[!DNL Target]用户编写的JavaScript函数的结果。 该属性名称自动在 Target 中添加“user. [!DNL Target]中的&quot;，以将其与页面内配置文件属性区分开。
 
 代码片段以 Rhino JS 语言编写，可引用令牌和其他值。
 
 ## 使用示例
 
-* **购物车放弃**：当访客到达购物车时，将配置文件脚本设为 1。当访客转化后，将其重置为 0。如果值 = 1，则访客在购物车中有一个商品。
+* **购物车放弃**：当访客到达购物车时，将轮廓脚本设为 1。 当访客转化后，将其重置为 0。 如果值 = 1，则访客在购物车中有一个商品。
 * **访问计数**：每新增一次访问，计数将增加 1，以跟踪访客返回网站的频率。
 
 ## 方法的优势
@@ -34,7 +44,7 @@ ht-degree: 74%
 
 在受众和活动成员资格决策之前执行，这样这些配置文件脚本属性会影响单个服务器调用的成员资格。
 
-此方法操作容量非常大。每个脚本可以执行多达 2,000 条指令。
+此方法操作容量非常大。 每个脚本可以执行多达 2,000 条指令。
 
 ## 注意事项
 
@@ -46,7 +56,7 @@ ht-degree: 74%
 
 ## 代码示例
 
-配置文件脚本非常灵活：
+轮廓脚本非常灵活：
 
 ```
 user.purchase_recency: var dayInMillis = 3600 * 24 * 1000; if (mbox.name == 'orderThankyouPage') {  user.setLocal('lastPurchaseTime', new Date().getTime()); } var lastPurchaseTime = user.getLocal('lastPurchaseTime'); if (lastPurchaseTime) {  return ((new Date()).getTime()-lastPurchaseTime)/dayInMillis; }

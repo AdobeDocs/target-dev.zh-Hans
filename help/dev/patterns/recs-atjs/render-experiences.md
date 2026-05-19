@@ -5,10 +5,23 @@ feature: APIs/SDKs
 level: Experienced
 role: Developer
 exl-id: 7cf0c70b-a4bc-46f4-9b33-099bdb7dd9a9
-source-git-commit: 50ee7e66e30c0f8367763a63b6fde5977d30cfe7
+TQID: https://experienceleague.adobe.com/uHFbc8JEhjjGYIulJUvhkH7cXXht6Rht9rY43HjuNqg
+product_v2:
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2:
+  - id: adee20bd-51f4-461d-b9db-d215f8756eeb
+  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+subfeature_v2:
+  - id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+  - id: d3cdead0-685a-4489-9250-4bb709942f66
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '908'
-ht-degree: 4%
+source-wordcount: 1060
+ht-degree: 3%
 
 ---
 
@@ -44,7 +57,7 @@ ht-degree: 4%
 * [3.6：自定义标准](#custom)
 * [3.7：提供包含规则中使用的属性](#inclusion)
 * [3.8：提供excludedIds](#exclude)
-* [3.9：提供实体属性以更新Recommendations的产品目录](#entity-attributes)
+* [3.9：提供实体属性以更新“推荐”的产品目录](#entity-attributes)
 * [3.10：提供用作包含规则键的配置文件属性](#keys)
 * [3.11：触发页面加载请求](#fire)
 * [3.12：消防区域定位请求](#location)
@@ -146,7 +159,7 @@ ht-degree: 4%
 
 **读数**
 
-* 基于[项](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/algorithms.html?lang=zh-Hans#section_885B3BB1B43048A88A8926F6B76FC482){target=_blank}
+* [基于项目](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/algorithms.html?lang=zh-Hans#section_885B3BB1B43048A88A8926F6B76FC482){target=_blank}
 
 +++
 
@@ -239,13 +252,13 @@ ht-degree: 4%
 
 ## 3.10：提供用作包含规则键的配置文件属性 {#keys}
 
-提供用作上述任何Recommendations标准中包含规则的键的配置文件属性。
+提供用作上述任何推荐标准中包含规则的键的配置文件属性。
 
 +++ 查看详细信息
 
 **读数**
 
-* [配置文件属性](https://experienceleague.adobe.com/docs/target/using/audiences/visitor-profiles/profile-parameters.html?lang=zh-Hans){target=_blank}
+* [轮廓属性](https://experienceleague.adobe.com/docs/target/using/audiences/visitor-profiles/profile-parameters.html?lang=zh-Hans){target=_blank}
 
 +++
 

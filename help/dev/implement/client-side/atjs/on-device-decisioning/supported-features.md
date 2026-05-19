@@ -4,16 +4,31 @@ description: 了解[!UICONTROL on-device decisioning]支持哪些功能。
 title: 设备上决策支持哪些功能
 feature: at.js
 exl-id: bdd65658-6c4a-41ae-a222-59c00a11bdac
-source-git-commit: 79ffa3f58d780f587fe1202b82d3860395504dfe
+TQID: https://experienceleague.adobe.com/ummFURb6WnrNCbiQNDtzWmtZq05am9CMn9UXL0SPaXo
+product_v2:
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2:
+  - id: adee20bd-51f4-461d-b9db-d215f8756eeb
+  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+subfeature_v2:
+  - id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
+  - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '478'
-ht-degree: 12%
+source-wordcount: 720
+ht-degree: 8%
 
 ---
 
 # [!UICONTROL on-device decisioning]支持的功能
 
-[!DNL Adobe Target] JS SDK使客户能够灵活地选择数据的性能和新鲜度以供决策。 换言之，如果通过机器学习提供最相关且最引人入胜的个性化内容对您来说最重要，则应进行实时服务器调用。 但是，当性能更加关键时，应该做出设备上决策和内存决策。 要使[!UICONTROL on-device decisioning]正常工作，请参阅以下部分，其中列出了支持的功能。
+[!DNL Adobe Target] JS SDK允许客户灵活选择数据的性能和新鲜度以供决策。 换言之，如果通过机器学习提供最相关且最引人入胜的个性化内容对您来说最重要，则应进行实时服务器调用。 但是，当性能更加关键时，应该做出设备上决策和内存决策。 要使[!UICONTROL on-device decisioning]正常工作，请参阅以下部分，其中列出了支持的功能。
 
 ## 支持的活动类型
 
@@ -27,8 +42,8 @@ ht-degree: 12%
 | [多变量测试](https://experienceleague.adobe.com/docs/target/using/activities/multivariate-test/multivariate-testing.html?lang=zh-Hans) (MVT) | 否 |
 | [体验定位](https://experienceleague.adobe.com/docs/target/using/activities/experience-targeting/experience-target.html?lang=zh-Hans) (XT) | 是 |
 | [Automated Personalization](https://experienceleague.adobe.com/docs/target/using/activities/automated-personalization/automated-personalization.html?lang=zh-Hans) ![高级版](../../../assets/premium.png) | 否 |
-| [Recommendations](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations.html?lang=zh-Hans) ![高级版](../../../assets/premium.png) | 否 |
-| 使用Analytics for Target [&#128279;](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t.html?lang=zh-Hans&) (A4T)的活动 | 是 |
+| [推荐](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations.html?lang=zh-Hans) ![高级版](../../../assets/premium.png) | 否 |
+| 使用Analytics for Target [&#128279;](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t.html?lang=zh-Hans？) (A4T)的活动 | 是 |
 
 ## 受众定位
 
@@ -43,14 +58,14 @@ ht-degree: 12%
 | [操作系统](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/operating-system.html?lang=zh-Hans) | 是 |
 | [网页](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/site-pages.html?lang=zh-Hans) | 是 |
 | [浏览器](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/browser.html?lang=zh-Hans) | 是 |
-| [访客资料](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/visitor-profile.html?lang=zh-Hans) | 否 |
+| [访客轮廓](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/visitor-profile.html?lang=zh-Hans) | 否 |
 | [流量源](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/traffic-sources.html?lang=zh-Hans) | 否 |
 | [时间范围](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/time-frame.html?lang=zh-Hans) | 是 |
 | Adobe Experience Cloud受众<P>（[!DNL Audiences from Adobe Analytics]、[!DNL Adobe Audience Manager]和[!DNL Adobe Experience Manager]） | 否 |
 
 ### [!UICONTROL on-device decisioning]的地理定位
 
-为了保持对基于地理位置的Adobe的[!UICONTROL on-device decisioning]活动延迟最短，建议您在调用[getOffers](/help/dev/implement/client-side/atjs/atjs-functions/adobe-target-getoffers-atjs-2.md)时自行提供地理位置值。 在请求的上下文中设置地理对象。 这意味着通过浏览器来确定每个访客的位置。 例如，您可以使用配置的服务执行IP到地理位置的查找。 某些托管提供商(如Google Cloud)通过每个`HttpServletRequest`中的自定义标头提供此功能。
+为了尽可能缩短具有基于地理位置的受众的[!UICONTROL on-device decisioning]活动的延迟，Adobe建议您在调用[getOffers](/help/dev/implement/client-side/atjs/atjs-functions/adobe-target-getoffers-atjs-2.md)时自行提供地理值。 在请求的上下文中设置地理对象。 这意味着通过浏览器来确定每个访客的位置。 例如，您可以使用配置的服务执行IP到地理位置的查找。 某些托管提供商（如Google Cloud）通过每个`HttpServletRequest`中的自定义标头提供此功能。
 
 ```javascript {line-numbers="true"}
 window.adobe.target.getOffers({ 

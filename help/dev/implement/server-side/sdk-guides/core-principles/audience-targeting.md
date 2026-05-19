@@ -1,12 +1,23 @@
 ---
 title: 受众定位
-description: 受众可用于定向您的试验性和个性化活动。 [!DNL Adobe Target] 支持多种现成的强大受众定位功能。
+description: 可以使用受众来定位您的实验和个性化活动。 [!DNL Adobe Target] 支持各种现成的强大受众定位功能。
 exl-id: df1bd856-e848-452c-90a0-abf29e7a2313
 feature: Implement Server-side
-source-git-commit: 09a50aa67ccd5c687244a85caad24df56c0d78f5
+TQID: https://experienceleague.adobe.com/BmKrCmWIkEkNHiipZ-DqDlhzOT7bVmKHl9de5uXhJQU
+product_v2:
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2:
+  - id: adee20bd-51f4-461d-b9db-d215f8756eeb
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+  - id: bcc5edb5-84c3-4940-9f84-ed88b6c16274
+  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '702'
-ht-degree: 22%
+source-wordcount: 1069
+ht-degree: 15%
 
 ---
 
@@ -19,7 +30,7 @@ ht-degree: 22%
 ### [!DNL Target]库
 
 有关详细信息，请参阅[[!DNL Target] 库](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/target-library.html?lang=zh-Hans)。
-&#x200B;AEM
+ 
 * 反向链接来自Bing
 * Chrome Browser
 * Firefox浏览器
@@ -36,8 +47,8 @@ ht-degree: 22%
 
 ### 地域
 
-有关详细信息，请参阅[地域](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/geo.html?lang=zh-Hans)。
-&#x200B;&#x200B;
+有关更多信息，请参阅[地域](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/geo.html?lang=zh-Hans)。
+&#x200B;
 * 国家/地区
 * 省/自治区/直辖市
 * 城市
@@ -100,7 +111,7 @@ ht-degree: 22%
 * 语言
 * 版本
 
-### 访客个人资料
+### 访客轮廓
 
 有关详细信息，请参阅[访客资料](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/visitor-profile.html?lang=zh-Hans)。
 
@@ -204,14 +215,14 @@ TargetDeliveryRequest request = TargetDeliveryRequest.builder()
 | [操作系统](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/operating-system.html?lang=zh-Hans) | 是 |
 | [网页](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/site-pages.html?lang=zh-Hans) | 是 |
 | [浏览器](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/browser.html?lang=zh-Hans) | 是 |
-| [访客资料](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/visitor-profile.html?lang=zh-Hans) | 否 |
+| [访客轮廓](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/visitor-profile.html?lang=zh-Hans) | 否 |
 | [流量源](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/traffic-sources.html?lang=zh-Hans) | 否 |
 | [时间范围](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/time-frame.html?lang=zh-Hans) | 是 |
-| [Experience Cloud受众](https://experienceleague.adobe.com/docs/target/using/integrate/mmp.html?lang=zh-Hans)(来自Adobe Audience Manager、Adobe Analytics和Adobe Experience Manager的受众) | 否 |
+| [Experience Cloud受众](https://experienceleague.adobe.com/docs/target/using/integrate/mmp.html?lang=zh-Hans)（来自Adobe Audience Manager、Adobe Analytics和Adobe Experience Manager的受众） | 否 |
 
 ### 针对设备上决策的地理定位
 
-为了保持基于地理位置的受众的设备上决策活动的几乎零延迟，Adobe建议您在对`getOffers`的调用中自己提供地理值。 为此，请在请求的`Context`中设置`Geo`对象。 这意味着您的服务器将需要一种方法来确定每个最终用户的位置。 例如，您的服务器可能会使用您配置的服务执行IP到地理位置的查找。 某些托管提供商(如Google Cloud)通过每个`HttpServletRequest`中的自定义标头提供此功能。
+为了对具有基于地理位置的受众的设备上决策活动保持近乎零的延迟，Adobe建议您在对`getOffers`的调用中自己提供地理值。 为此，请在请求的`Context`中设置`Geo`对象。 这意味着您的服务器将需要一种方法来确定每个最终用户的位置。 例如，您的服务器可能会使用您配置的服务执行IP到地理位置的查找。 某些托管提供商（如Google Cloud）通过每个`HttpServletRequest`中的自定义标头提供此功能。
 
 >[!BEGINTABS]
 
@@ -270,7 +281,7 @@ public class TargetRequestUtils {
 
 >[!ENDTABS]
 
-但是，如果您无法在服务器上执行IP到地理位置的查找，但仍希望对包含基于地理位置的受众的`getOffers`请求执行设备端决策，则也支持此操作。 此方法的缺点是，它将使用远程IP到地理位置的查找，这将为每个`getOffers`调用添加延迟。 此延迟应低于远程`getOffers`调用，因为它点击了位于服务器附近的CDN。 您必须&#x200B;**仅**&#x200B;在请求`Context`的`Geo`对象中提供`ipAddress`字段，SDK才能检索用户IP地址的地理位置。 如果除了`ipAddress`之外还提供了任何其他字段，则[!DNL Target] SDK将不会获取地理位置元数据以进行解析。
+但是，如果您无法在服务器上执行IP到地理位置的查找，但仍希望对包含基于地理位置的受众的`getOffers`请求执行设备端决策，则也支持此操作。 此方法的缺点是，它将使用远程IP到地理位置的查找，这将为每个`getOffers`调用添加延迟。 此延迟应低于远程`getOffers`调用，因为它点击了位于服务器附近的CDN。 您必须&#x200B;**仅**&#x200B;在请求`Context`的`Geo`对象中提供`ipAddress`字段，SDK才能检索用户IP地址的地理位置。 如果提供除`ipAddress`之外的任何其他字段，[!DNL Target] SDK将不会获取地理位置元数据以进行解析。
 
 >[!BEGINTABS]
 
@@ -331,7 +342,7 @@ public class TargetRequestUtils {
 | [操作系统](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/operating-system.html?lang=zh-Hans) | 是 |
 | [网页](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/site-pages.html?lang=zh-Hans) | 是 |
 | [浏览器](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/browser.html?lang=zh-Hans) | 是 |
-| [访客资料](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/visitor-profile.html?lang=zh-Hans) | 是 |
+| [访客轮廓](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/visitor-profile.html?lang=zh-Hans) | 是 |
 | [流量源](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/traffic-sources.html?lang=zh-Hans) | 是 |
 | [时间范围](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/time-frame.html?lang=zh-Hans) | 是 |
-| [Experience Cloud受众](https://experienceleague.adobe.com/docs/target/using/integrate/mmp.html?lang=zh-Hans)(来自Adobe Audience Manager、Adobe Analytics和Adobe Experience Manager的受众) | 是 |
+| [Experience Cloud受众](https://experienceleague.adobe.com/docs/target/using/integrate/mmp.html?lang=zh-Hans)（来自Adobe Audience Manager、Adobe Analytics和Adobe Experience Manager的受众） | 是 |

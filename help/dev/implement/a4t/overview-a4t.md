@@ -6,14 +6,28 @@ seo-description: Learn how to control the collection of Adobe Analytics for Targ
 keywords: a4t；日志记录；analytics；sdk；web sdk；
 feature: Implementation
 exl-id: 886588bf-4416-4f1e-aecc-467e48c8fb23
-source-git-commit: 67cc93cf697f8d5bca6fedb3ae974e4012347a0b
+TQID: https://experienceleague.adobe.com/cShqvj3wSialxA-ajnROnIpzjuz66pNg3CLM6l2xPLg
+product_v2:
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2:
+  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+subfeature_v2:
+  - id: a94ced60-8199-4549-b453-ede2acb4101e
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+  - id: c2be0313-b3ae-45e0-b454-d20bf54b23f2
+  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '235'
+source-wordcount: 262
 ht-degree: 1%
 
 ---
 
-# [!DNL Adobe Analytics for Target]中的[!DNL Experience Platform Web SDK] (A4T)日志记录
+# [!DNL Experience Platform Web SDK]中的[!DNL Adobe Analytics for Target] (A4T)日志记录
 
 当使用[!DNL Adobe Target]进行个性化时，您可以选择要用于性能测量的系统。 每个[Target活动](https://experienceleague.adobe.com/docs/target/using/activities/target-activities-guide.html?lang=zh-Hans)都允许您在[!DNL Target]报表和Adobe [!DNL Analytics]报表之间进行选择。
 
@@ -23,14 +37,14 @@ ht-degree: 1%
 * 他们看到的体验
 * 已达到哪个转化
 
-对于[!DNL Adobe Experience Platform Web SDK] (A4T)用例，[!DNL Analytics]支持两种类型的[!UICONTROL Analytics for Target]日志记录：
+对于[!UICONTROL Analytics for Target] (A4T)用例，[!DNL Adobe Experience Platform Web SDK]支持两种类型的[!DNL Analytics]日志记录：
 
 | 日志记录方法 | 描述 |
 | --- | --- |
 | 服务器端[!DNL Analytics]日志记录 | 通过Edge Network发送的所有[!DNL Analytics]点击量在服务器端都通过[!DNL Target]详细信息进行了增强，无需经历点击拼合过程。 |
-| 客户端[!DNL Analytics]日志记录 | [!DNL Target]数据在客户端返回，允许您使用[!DNL Analytics]数据插入API[手动扩充数据并将其发送到](https://experienceleague.adobe.com/docs/analytics/import/c-data-insertion-api.html?lang=zh-Hans)。 |
+| 客户端[!DNL Analytics]日志记录 | [!DNL Target]数据在客户端返回，允许您使用[数据插入API](https://experienceleague.adobe.com/docs/analytics/import/c-data-insertion-api.html?lang=zh-Hans)手动扩充数据并将其发送到[!DNL Analytics]。 |
 
-日志记录方法取决于您是否对配置的[!DNL Adobe Analytics]数据流[启用了](https://experienceleague.adobe.com/zh-hans/docs/experience-platform/datastreams/overview)：
+日志记录方法取决于您是否对配置的[数据流](https://experienceleague.adobe.com/zh-hans/docs/experience-platform/datastreams/overview)启用了[!DNL Adobe Analytics]：
 
 ![正在记录方法决策流程](/help/dev/implement/a4t/assets/analytics-logging.png)
 

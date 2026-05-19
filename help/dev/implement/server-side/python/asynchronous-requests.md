@@ -3,9 +3,14 @@ title: 如何在 [!DNL Adobe Target] Python SDK中使用异步请求
 description: 了解 [!DNL Target] Python SDK如何支持异步请求，这可以将有效目标时间减少为零。
 feature: APIs/SDKs
 exl-id: 44ab74e5-3c1a-49cf-9fff-fe523b0c2592
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+TQID: https://experienceleague.adobe.com/ZWRw2OlSbuEHorY0MXPOaBw3uePIW5dzpsuqho0Jtqk
+product_v2:
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '133'
+source-wordcount: 142
 ht-degree: 4%
 
 ---
@@ -14,7 +19,7 @@ ht-degree: 4%
 
 ## 描述
 
-服务器端集成的一个好处是，通过使用并行机制，您可以利用服务器端提供的巨大带宽和计算资源。 [!DNL Target] Python SDK支持异步请求，这可以将有效目标时间减少为零。
+服务器端集成的一个好处是，通过使用并行机制，您可以利用服务器端提供的巨大带宽和计算资源。[!DNL Target] Python SDK支持异步请求，这可以将有效定位时间减少为零。
 
 ## 支持的方法
 

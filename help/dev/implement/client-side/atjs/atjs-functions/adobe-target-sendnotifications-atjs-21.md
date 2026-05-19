@@ -4,9 +4,20 @@ description: 呈现体验时，使用at.js的[!UICONTROL adobe.target.sendNotifi
 title: 如何使用adobe.target.sendNotifications()函数？
 feature: at.js
 exl-id: 1a08da10-31a0-4b0b-af7d-91ed7d32c308
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+TQID: https://experienceleague.adobe.com/QprkTK-0WGq-fzJ9e3FUSAZAandaZFiUY62-zQ6ajY8
+product_v2:
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2:
+  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+subfeature_v2:
+  - id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '640'
+source-wordcount: 638
 ht-degree: 83%
 
 ---
@@ -21,7 +32,7 @@ ht-degree: 83%
 
 | 键 | 类型 | 必需？ | 描述 |
 | --- | --- | --- | --- |
-| consumerId | 字符串 | 否 | 如果未提供，则默认值为客户端的全局 mbox。可使用此键值生成用于 A4T 集成的补充数据 ID。 |
+| consumerId | 字符串 | 否 | 如果未提供，则默认值为客户端的全局 mbox。 可使用此键值生成用于 A4T 集成的补充数据 ID。 |
 | 请求 | 对象 | 是 | 请参阅下文的“请求”表。 |
 | timeout | 数值 | 否 | 请求超时. 如果未指定，将使用默认的 at.js 超时值。 |
 
@@ -43,7 +54,7 @@ ht-degree: 83%
 | Request > notifications > product > id | 字符串 | 否 | `<=` 128 个字符；不能为空。 | 产品 ID。 |
 | Request > notifications > product > categoryId | 字符串 | 否 | `<=` 128 个字符；不能为空。 | 类别 ID。 |
 | Request > notifications > id | 字符串 | 是 | `<=` 200 个字符。 | 通知 ID 将在响应中返回，并指示通知已成功处理。 |
-| Request > notifications > impressionId | 字符串 | 否 | `<= 128` 个字符。 | 展示 ID 用于将当前通知与先前的通知或执行请求拼合（链接）到一起。如果两者匹配，则第二个和其他后续请求不会生成活动或体验的新展示。 |
+| Request > notifications > impressionId | 字符串 | 否 | `<= 128` 个字符。 | 展示 ID 用于将当前通知与先前的通知或执行请求拼合（链接）到一起。 如果两者匹配，则第二个和其他后续请求不会生成活动或体验的新展示。 |
 | Request > notifications > type | 字符串 | 是 | 支持“click”或“display”。 | 通知类型。 |
 | Request > notifications > timestamp | 数值`<int64>` | 是 |  | 通知的时间戳（以自 UNIX 纪元以来所经过的毫秒数为单位）。 |
 | Request > notifications > tokens | 字符串数组 | 是 |  | 基于通知类型的已显示内容或已点击选择器的令牌列表。 |
@@ -51,9 +62,9 @@ ht-degree: 83%
 | Request > notifications > mbox > name | 字符串 | 否 | 不允许使用空值。<p>允许的字符：请参阅此表后面的注释。 | mbox 名称。 |
 | Request > notifications > mbox > state | 字符串 | 否 |  | mbox 状态令牌。 |
 | Request > notifications > view | 对象 | 否 |  |  |
-| Request > notifications > view > id | 整数 `<int64>` | 否 |  | 视图 ID。通过视图 API 创建视图时分配给视图的 ID。 |
+| Request > notifications > view > id | 整数 `<int64>` | 否 |  | 视图 ID。 通过视图 API 创建视图时分配给视图的 ID。 |
 | Request > notifications > view > name | 字符串 | 否 | `<= 128` 个字符。 | 视图的名称。 |
-| Request > notifications > view > key | 字符串 | 否 | `<=` 512 个字符。 | 视图键。通过 API 在视图中设置的键。 |
+| Request > notifications > view > key | 字符串 | 否 | `<=` 512 个字符。 | 视图键。 通过 API 在视图中设置的键。 |
 | Request > notifications > view > state | 字符串 | 否 |  | 视图状态令牌。 |
 
 **注意**： `Request > notifications > mbox > name`不允许使用以下字符&#x200B;**：

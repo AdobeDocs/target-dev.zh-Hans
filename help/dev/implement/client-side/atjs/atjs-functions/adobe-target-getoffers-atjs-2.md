@@ -1,27 +1,40 @@
 ---
 keywords: adobe.target.getOffers， getOffers， getoffers， get offers， at.js，函数，函数， $8
-description: 使用[!UICONTROL adobe.target.getOffers()]at.js库的 [!DNL Adobe Target] 函数及其选项触发获取多个 [!DNL Target] 选件的请求。 (at.js 2.x)
+description: 使用 [!DNL Adobe Target] at.js库的[!UICONTROL adobe.target.getOffers()]函数及其选项触发获取多个 [!DNL Target] 选件的请求。 (at.js 2.x)
 title: 如何使用[!UICONTROL adobe.target.getOffers()]函数？
 feature: at.js
 exl-id: b96a3018-93eb-49e7-9aed-b27bd9ae073a
-source-git-commit: 67cc93cf697f8d5bca6fedb3ae974e4012347a0b
+TQID: https://experienceleague.adobe.com/jJXcWyQzJ48GNCNcOT165vxcO-CLExTj-t-3kbR2FZ0
+product_v2:
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2:
+  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+subfeature_v2:
+  - id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+  - id: c2be0313-b3ae-45e0-b454-d20bf54b23f2
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '1317'
-ht-degree: 62%
+source-wordcount: 1340
+ht-degree: 60%
 
 ---
 
 # [!UICONTROL adobe.target.getOffers()] - at.js 2.x
 
-此函数允许您通过传递多个 mbox 来检索多个产品建议。此外，还可以针对活跃活动中的所有视图检索多个产品建议。
+此函数允许您通过传递多个 mbox 来检索多个产品建议。 此外，还可以针对活跃活动中的所有视图检索多个产品建议。
 
 >[!NOTE]
 >
->此函数已在 at.js 2.x 中引入。但此函数不适用于 at.js 版本 1.*x*。
+>此函数已在at.js 2.x中引入。 此函数不适用于at.js版本1.*x*。
 
 | 键 | 类型 | 必需？ | 描述 |
 | --- | --- | --- | --- |
-| `consumerId` | 字符串 | 否 | 如果未提供，则默认值为客户端的全局 mbox。可使用此键值生成用于A4T集成的补充数据ID (SDID)。<P>使用`getOffers()`时，每个调用都会生成一个新的SDID。 如果同一页面上有多个mbox请求，并且要保留SDID（以便它与target-global-mbox中的SDID和[!DNL Adobe Analytics] SDID匹配），请使用`consumerId`参数。<P>如果`getOffers()`包含三个mbox（分别命名为“mbox1”、“mbox2”和“mbox3”），请在`consumerId: "mbox1, mbox2, mbox3"`调用中包含`getOffers()`。 |
+| `consumerId` | 字符串 | 否 | 如果未提供，则默认值为客户端的全局 mbox。 可使用此键值生成用于A4T集成的补充数据ID (SDID)。<P>使用`getOffers()`时，每个调用都会生成一个新的SDID。 如果同一页面上有多个mbox请求，并且要保留SDID（以便它与target-global-mbox中的SDID和[!DNL Adobe Analytics] SDID匹配），请使用`consumerId`参数。<P>如果`getOffers()`包含三个mbox（分别命名为“mbox1”、“mbox2”和“mbox3”），请在`getOffers()`调用中包含`consumerId: "mbox1, mbox2, mbox3"`。 |
 | `decisioningMethod` | 字符串 | 否 | &quot;server-side&quot;、&quot;on-device&quot;、&quot;hybrid&quot; |
 | `request` | 对象 | 是 | 请参阅下文的“请求”表。 |
 | `timeout` | 数值 | 否 | 请求超时. 如果未指定，将使用默认的 at.js 超时值。 |
@@ -38,7 +51,7 @@ ht-degree: 62%
 | request > id > thirdPartyId | 否 | 最大大小= 128。 |  |
 | Request > experienceCloud | 否 |  |  |
 | Request > experienceCloud > analytics | 否 |  | Adobe Analytics 集成 |
-| Request > experienceCloud > analytics > logging | 否 | 必须在页面上实施以下内容：<ul><li>访客 ID 服务</li><li>Appmeasurement.js</li></ul> | 支持以下值：<P>**client_side**：指定后，将向调用方返回分析有效负载，该有效负载应该用于通过[!UICONTROL Adobe Analytics]发送到[!UICONTROL Data Insertion API]。<P>**server_side**：这是默认值，[!DNL Target]和[!DNL Analytics]后端将使用SDID将调用拼合在一起进行报告。 |
+| Request > experienceCloud > analytics > logging | 否 | 必须在页面上实施以下内容：<ul><li>访客 ID 服务</li><li>Appmeasurement.js</li></ul> | 支持以下值：<P>**client_side**：指定后，将向调用方返回分析有效负载，该有效负载应该用于通过[!UICONTROL Data Insertion API]发送到[!UICONTROL Adobe Analytics]。<P>**server_side**：这是默认值，[!DNL Target]和[!DNL Analytics]后端将使用SDID将调用拼合在一起进行报告。 |
 | request > prefetch | 否 |  |  |
 | request > prefetch > views | 否 | 最大计数50。<P>名称不为空。<P>名称长度`<=` 128。<P>值长度`<=` 5000。<P>名称不应以“profile”开头。<P>不允许的名称： “orderId”、“orderTotal”、“productPurchasedId”。 | 传递用于检索活跃活动中相关视图的参数。 |
 | request > prefetch > views > profileParameters | 否 | 最大计数50。<P>名称不为空。<P>名称长度`<=` 128。<P>值长度`<=` 5000。<P>仅接受字符串值。<P>名称不应以“profile”开头。 | 传递用于检索活跃活动中相关视图的轮廓参数。 |
@@ -62,7 +75,7 @@ ht-degree: 62%
 | request > execute > pageLoad > order > purchasedProductIds | 否 | 无空白值。<P>每个值的最大长度为50。<P>连接并以逗号分隔。<P>产品ID总长度`<=` 250。 | 页面加载时使用指定的已购产品 ID 检索产品建议。 |
 | request > execute > mboxes | 否 | 最大大小= 50。<P>无null元素。 |  |
 | request > execute > mboxes > mbox | 是 | 不为空。<P>无“ — clicked”后缀。<P>最大大小= 250。<P>允许的字符： mbox的`'-, ._\/=:;&!@#$%^&*()_+|?~[]{}'`\|名称。 |
-| request > execute > mboxes > mbox > index | 是 | 不为null。<P>唯一。<P>`>=` 0. | 请注意，index 并不表示 mbox 的处理顺序。与具有多个区域 mbox 的网页相同，无法指定这些 mbox 的处理顺序。 |
+| request > execute > mboxes > mbox > index | 是 | 不为null。<P>唯一。<P>`>=` 0. | 请注意，index 并不表示 mbox 的处理顺序。 与具有多个区域 mbox 的网页相同，无法指定这些 mbox 的处理顺序。 |
 | request > execute > mboxes > mbox > parameters | 否 | 最大计数= 50。<P>名称不为空。<P>名称长度`<=` 128。<P>仅接受字符串值。<P>值长度`<=` 5000。<P>名称不应以“profile”开头。<P>不允许的名称： “orderId”、“orderTotal”、“productPurchasedId”。 | 使用指定的参数针对给定 mbox 检索产品建议。 |
 | request > execute > mboxes > mbox > profileParameters | 否 | 最大计数= 50。<P>名称不为空。<P>名称长度`<=` 128。<P>仅接受字符串值。<P>值长度`<=`256。<P>名称不应以“profile”开头。 | 使用指定的轮廓参数检索给定 mbox 的产品建议。 |
 | request > execute > mboxes > mbox > product | 否 |  |  |
@@ -204,11 +217,11 @@ adobe.target.getOffers({
 }
 ```
 
-然后，可以通过[!DNL Adobe Analytics]数据插入API[将该有效负载转发到](https://github.com/AdobeDocs/analytics-1.4-apis/blob/master/docs/data-insertion-api/index.md)。
+然后，可以通过[数据插入API](https://github.com/AdobeDocs/analytics-1.4-apis/blob/master/docs/data-insertion-api/index.md)将该有效负载转发到[!DNL Adobe Analytics]。
 
 ## 通过[!UICONTROL getOffers()]和[!UICONTROL applyOffers()]从多个mbox获取并渲染数据
 
-at.js 2.x 允许您通过 `[!UICONTROL getOffers()]` API 获取多个 mbox。您还可以获取多个 mbox 的数据，然后使用 `[!UICONTROL applyOffers()]` 在 CSS 选择器标识的不同位置渲染数据。
+at.js 2.x 允许您通过 `[!UICONTROL getOffers()]` API 获取多个 mbox。 您还可以获取多个 mbox 的数据，然后使用 `[!UICONTROL applyOffers()]` 在 CSS 选择器标识的不同位置渲染数据。
 
 以下示例展示了实施了 at.js 2.x 的简单 HTML 页面：
 
@@ -230,7 +243,7 @@ at.js 2.x 允许您通过 `[!UICONTROL getOffers()]` API 获取多个 mbox。您
 </html>
 ```
 
-假设您有三个容器，并且想要通过从 [!DNL Target] 收到的内容对其进行修改。您可以为三个 mbox 构建一个请求，其中每个 mbox 都有一些内容要渲染到相应的容器中。
+假设您有三个容器，并且想要通过从 [!DNL Target] 收到的内容对其进行修改。 您可以为三个 mbox 构建一个请求，其中每个 mbox 都有一些内容要渲染到相应的容器中。
 
 请求和渲染代码可能类似于以下示例：
 
@@ -275,19 +288,19 @@ adobe.target.getOffers({
 });
 ```
 
-在 `request > prefetch > mboxes` 部分中，有三个不同的 mbox。如果请求成功完成，您将从 `response > prefetch > mboxes` 中收到每个 mbox 的响应。获得响应和要用于渲染的位置后，可以调用 `applyOffers()` 以渲染从 [!DNL Target] 中检索的内容。在本示例中，我们有以下映射：
+在 `request > prefetch > mboxes` 部分中，有三个不同的 mbox。 如果请求成功完成，您将从 `response > prefetch > mboxes` 中收到每个 mbox 的响应。 获得响应和要用于渲染的位置后，可以调用 `applyOffers()` 以渲染从 [!DNL Target] 中检索的内容。 在本示例中，我们有以下映射：
 
 * mbox1 > CSS 选择器 #container1
 * mbox2 > CSS 选择器 #container2
 * mbox3 > CSS 选择器 #container3
 
-此示例使用 count 变量来构建 CSS 选择器。在现实场景中，您可以使用 CSS 选择器和 mbox 之间的不同映射。
+此示例使用 count 变量来构建 CSS 选择器。 在现实场景中，您可以使用 CSS 选择器和 mbox 之间的不同映射。
 
-请注意，此示例使用了 `prefetch > mboxes`，但您也可以使用 `execute > mboxes`。请确保，如果在 `getOffers()` 中使用 prefetch，则在 `applyOffers()` 调用中也应使用 prefetch。
+请注意，此示例使用了 `prefetch > mboxes`，但您也可以使用 `execute > mboxes`。 请确保，如果在 `getOffers()` 中使用 prefetch，则在 `applyOffers()` 调用中也应使用 prefetch。
 
 ## 调用[!UICONTROL getOffers()]以执行pageLoad
 
-以下示例说明如何结合使用[!UICONTROL getOffers()]和at.js 2.*x*
+以下示例说明如何使用[!UICONTROL getOffers()]和at.js 2.*x*&#x200B;执行pageLoad
 
 ```javascript {line-numbers="true"}
 adobe.target.getOffers({

@@ -5,16 +5,32 @@ feature: APIs/SDKs
 level: Experienced
 role: Developer
 exl-id: 250a8382-1fdd-4a70-b712-a25af5adad71
-source-git-commit: 50ee7e66e30c0f8367763a63b6fde5977d30cfe7
+TQID: https://experienceleague.adobe.com/PxAKvxntUCdacBLopvANAI7-8OWe-ELQqFRJu-n3RWo
+product_v2:
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2:
+  - id: adee20bd-51f4-461d-b9db-d215f8756eeb
+  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+subfeature_v2:
+  - id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+  - id: bcc5edb5-84c3-4940-9f84-ed88b6c16274
+  - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
+  - id: d3cdead0-685a-4489-9250-4bb709942f66
+  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '1558'
-ht-degree: 5%
+source-wordcount: 1797
+ht-degree: 4%
 
 ---
 
 # 初始化SDK
 
-请按照&#x200B;*初始化SDK*&#x200B;图中的步骤进行操作，以确保以正确的顺序执行加载[!DNL Adobe Target] at.js JavaScript库所需的所有必要任务。
+请按照&#x200B;*初始化SDK*&#x200B;图中的步骤操作，以确保以正确的顺序执行加载[!DNL Adobe Target] at.js JavaScript库所需的所有必要任务。
 
 >[!TIP]
 >
@@ -59,7 +75,7 @@ ht-degree: 5%
 
 **先决条件**
 
-* 若要使用访客ID/API服务，贵公司必须启用[!DNL Adobe Experience Cloud]并拥有[!UICONTROL Organization ID]。 有关详细信息，请参阅&#x200B;*Identity Service帮助*&#x200B;指南中的[Experience Cloud要求：](https://experienceleague.adobe.com/docs/id-service/using/reference/requirements.html?lang=zh-Hans&){target=_blank}。
+* 若要使用访客ID/API服务，贵公司必须启用[!DNL Adobe Experience Cloud]并拥有[!UICONTROL Organization ID]。 有关详细信息，请参阅&#x200B;*Identity Service帮助*&#x200B;指南中的[Experience Cloud要求：组织ID](https://experienceleague.adobe.com/docs/id-service/using/reference/requirements.html?lang=zh-Hans？){target=_blank}。
 * 您需要`VisitorAPI.js`文件。 如果您实施了[!DNL Adobe Analytics]，则应该已经拥有此文件。 此文件也可以通过[[!DNL Adobe Experience Platform] 标记扩展](https://experienceleague.adobe.com/docs/tags.html?lang=zh-Hans){target=_blank}添加，也可以从[Adobe Analytics代码管理器](https://experienceleague.adobe.com/docs/id-service/using/implementation/setup-analytics.html?lang=zh-Hans){target=_blank}下载。
 
 **配置并引用VisitorAPI.js**
@@ -68,10 +84,10 @@ ht-degree: 5%
 
 **读数**
 
-* [Experience Cloud标识服务概述](https://experienceleague.adobe.com/docs/id-service/using/intro/overview.html?lang=zh-Hans){target=_blank}
+* [Experience Cloud Identity服务概述](https://experienceleague.adobe.com/docs/id-service/using/intro/overview.html?lang=zh-Hans){target=_blank}
 * [关于ID服务](https://experienceleague.adobe.com/docs/id-service/using/intro/about-id-service.html?lang=zh-Hans){target=_blank}
-* [Cookie和Experience Cloud标识服务](https://experienceleague.adobe.com/docs/id-service/using/intro/cookies.html?lang=zh-Hans){target=_blank}
-* [Experience CloudIdentity服务如何请求和设置ID](https://experienceleague.adobe.com/docs/id-service/using/intro/id-request.html?lang=zh-Hans){target=_blank}
+* [Cookie 和 Experience Cloud 标识服务](https://experienceleague.adobe.com/docs/id-service/using/intro/cookies.html?lang=zh-Hans){target=_blank}
+* [Experience Cloud Identity服务如何请求和设置ID](https://experienceleague.adobe.com/docs/id-service/using/intro/id-request.html?lang=zh-Hans){target=_blank}
 * [了解ID同步和匹配率](https://experienceleague.adobe.com/docs/id-service/using/intro/match-rates.html?lang=zh-Hans){target=_blank}
 
 **操作**
@@ -97,12 +113,12 @@ ht-degree: 5%
 
 * 访客的已知ID应该可以在Data Layer中使用。
 
-**设置客户ID**
+**设置客户标识**
 有关详细信息，请参阅[setCustomerIDs](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/setcustomerids.html?lang=zh-Hans){target=_blank}。
 
 **读数**
 
-* mbox3rdPartyId的[实时配置文件同步](https://experienceleague.adobe.com/docs/target/using/audiences/visitor-profiles/3rd-party-id.html?lang=zh-Hans){target=_blank}
+* [mbox3rdPartyId 的实时轮廓同步](https://experienceleague.adobe.com/docs/target/using/audiences/visitor-profiles/3rd-party-id.html?lang=zh-Hans){target=_blank}
 
 **操作**
 
@@ -185,11 +201,11 @@ ht-degree: 5%
 **先决条件**
 
 * 数据层应准备好必须发送给[!DNL Target]的所有数据。
-* Recommendations：扩充用户档案。
+* 推荐：丰富用户档案。
    * 传递`entity.id`以根据基于上次查看产品的条件捕获最近查看的条件和项的数据。
    * 传递`entity.id`以根据最喜爱的类别捕获热门程度标准的数据。
    * 如果自定义标准基于配置文件属性，或者在任何标准的包含规则筛选中使用配置文件属性，请传递该属性。
-* Recommendations：摄取产品数据。
+* 推荐：摄取产品数据。
    * 可以传递其他实体参数（保留和自定义）以摄取或更新[!DNL Recommendations]中的产品目录。
    * 还可以使用[!DNL Target] UI或API使用实体源更新产品目录。
 
@@ -201,7 +217,7 @@ ht-degree: 5%
 
 * [targetPageParams()](/help/dev/implement/client-side/atjs/atjs-functions/targetpageparams.md)
 * [计划和实施推荐](/help/dev/implement/recommendations/recommendations.md)
-* [设置您的Recommendations目录](/help/dev/implement/recommendations/recommendations.md)
+* [设置您的“推荐”目录](/help/dev/implement/recommendations/recommendations.md)
 
 **操作**
 
@@ -213,7 +229,7 @@ ht-degree: 5%
 
 ## 1.6：促销活动 {#promotion}
 
-添加促销项目并控制它们在您的[!DNL Target Recommendations] [设计](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations-design/create-design.html?lang=zh-Hans){target=_blank}中的位置。
+添加促销项目并控制它们在[!DNL Target Recommendations] [设计](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations-design/create-design.html?lang=zh-Hans){target=_blank}中的放置位置。
 
 +++查看详细信息
 
@@ -303,7 +319,7 @@ ht-degree: 5%
 
 **读数**
 
-* 基于[项](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/algorithms.html?lang=zh-Hans#section_885B3BB1B43048A88A8926F6B76FC482){target=_blank}
+* [基于项目](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/algorithms.html?lang=zh-Hans#section_885B3BB1B43048A88A8926F6B76FC482){target=_blank}
 
 +++
 
@@ -436,7 +452,7 @@ ht-degree: 5%
 
 *读数*
 
-* [Target的工作方式](https://experienceleague.adobe.com/docs/target/using/introduction/how-target-works.html?lang=zh-Hans){target=_blank}
+* [Target 的工作方式](https://experienceleague.adobe.com/docs/target/using/introduction/how-target-works.html?lang=zh-Hans){target=_blank}
 * [at.js 的工作原理](/help/dev/implement/client-side/atjs/how-atjs-works/how-atjs-works.md)
 * [不通过标记管理器实施 Target](/help/dev/implement/client-side/atjs/how-to-deployatjs/implement-target-without-a-tag-manager.md)
 

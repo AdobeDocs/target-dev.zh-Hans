@@ -4,14 +4,25 @@ description: 使用页面内配置文件属性将数据导入 [!DNL Target] 。
 title: 如何使用页面内配置文件属性将数据导入 [!DNL Target] ？
 feature: Implementation
 exl-id: c19fd746-21a2-4eb5-8c2a-c24806e09324
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+TQID: https://experienceleague.adobe.com/jXWNNl7HfrR03tEoMz7KApX3onc1Zc44IAuXy4QF2tU
+product_v2:
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2:
+  - id: adee20bd-51f4-461d-b9db-d215f8756eeb
+  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '283'
-ht-degree: 43%
+source-wordcount: 311
+ht-degree: 40%
 
 ---
 
-# 页面内个人资料属性
+# 页面内轮廓属性
 
 [!DNL Adobe Target]中的页面内配置文件属性（也称为“in-mbox”配置文件属性）是直接通过页面代码传递的名称/值对，这些名称/值对存储在访客的配置文件中以供将来使用。
 
@@ -42,7 +53,7 @@ ht-degree: 43%
 
 需要更新页面代码（直接或通过标记管理系统）。
 
-属性和值在服务器调用中可见，因此访客可以查看这些值。如果共享信息（如信用范围或其他潜在的私人信息），此方法可能不是最佳方法。
+属性和值在服务器调用中可见，因此访客可以查看这些值。 如果共享信息（如信用范围或其他潜在的私人信息），此方法可能不是最佳方法。
 
 ## 代码示例
 
@@ -62,4 +73,4 @@ mboxCreate 代码中的属性：
 
 [配置文件属性](https://experienceleague.adobe.com/docs/target/using/audiences/visitor-profiles/profile-parameters.html?lang=zh-Hans)
 
-[访客资料](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/visitor-profile.html?lang=zh-Hans)
+[访客轮廓](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/visitor-profile.html?lang=zh-Hans)

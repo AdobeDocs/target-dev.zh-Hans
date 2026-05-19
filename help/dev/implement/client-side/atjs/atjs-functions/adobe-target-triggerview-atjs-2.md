@@ -4,26 +4,37 @@ description: 对 [!DNL Adobe Target] at.js JavaScript库使用adobe.target.trigg
 title: 如何使用adobe.target.triggerView()函数？
 feature: at.js
 exl-id: d6130c56-4e77-4668-ad21-a5b335f8b234
-source-git-commit: fe4e607173c760f782035a10f52936d96e9db300
+TQID: https://experienceleague.adobe.com/pBC1GRKG0mxeaZ1hfaByKv2tu-XScrSJfm7lUw-3yKw
+product_v2:
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2:
+  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+subfeature_v2:
+  - id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '406'
-ht-degree: 21%
+source-wordcount: 423
+ht-degree: 20%
 
 ---
 
 # adobe.target.triggerView (viewName, options) - at.js 2.x
 
-每当加载新页面或重新渲染页面上的组件时，都可以调用此函数。应该为单页应用程序(SPA)实现`adobe.target.triggerView()`以使用[!UICONTROL Visual Experience Composer] (VEC)创建[!UICONTROL A/B Test]和[!UICONTROL Experience Targeting] (XT)活动。 如果未在站点上实现`[!UICONTROL adobe.target.triggerView()]`，则VEC无法用于SPA。 有关更多信息，请参阅[单页应用程序实施](/help/dev/implement/client-side/atjs/how-to-deployatjs/target-atjs-single-page-application.md)。
+每当加载新页面或重新渲染页面上的组件时，都可以调用此函数。 应为单页应用程序(SPA)实施`adobe.target.triggerView()`以使用[!UICONTROL Visual Experience Composer] (VEC)创建[!UICONTROL A/B Test]和[!UICONTROL Experience Targeting] (XT)活动。 如果未在网站上实施`[!UICONTROL adobe.target.triggerView()]`，则VEC无法用于SPA。 有关更多信息，请参阅[单页应用程序实施](/help/dev/implement/client-side/atjs/how-to-deployatjs/target-atjs-single-page-application.md)。
 
 >[!NOTE]
 >
->此函数已在at.js 2.*x* 使用跨域跟踪功能时。此函数不适用于at.js版本1.*x*。
+>此函数已在at.js 2.*x*&#x200B;中引入。 此函数不适用于at.js版本1.*x*。
 
 | 参数 | 类型 | 必需？ | 描述 |
 | --- | --- | --- | --- |
-| viewName | 字符串 | 是 | 将任何名称作为要显示视图的字符串类型传递。此视图名称显示在VEC的[!UICONTROL Modifications]面板中，供营销人员创建操作并运行其[!UICONTROL A/B Test]和[!UICONTROL Experience Targeting] XT活动。 |
+| viewName | 字符串 | 是 | 将任何名称作为要显示视图的字符串类型传递。 此视图名称显示在VEC的[!UICONTROL Modifications]面板中，供营销人员创建操作并运行其[!UICONTROL A/B Test]和[!UICONTROL Experience Targeting] XT活动。 |
 | options | 对象 | 否 |  |
-| options > page | 布尔值 | 否 | **TRUE：** page 的默认值为 true。当 page=true 时，将向 [!DNL Target] 后端发送增加展示次数计数的通知。<P>调用`[!UICONTROL triggerView]`时，默认情况下始终会发送通知，但options > page设置为false时除外。<P>**FALSE：**&#x200B;当page=false时，将不会发送增加展示次数计数的通知。 当您只想在具有选件的页面上重新呈现组件时，才应该使用此方法。<P>**注意**：在将`{page: false}`作为选项调用`[!UICONTROL triggerView()]`时，不会重新呈现VEC中的自定义代码选件。 |
+| options > page | 布尔值 | 否 | **TRUE：** page 的默认值为 true。 当 page=true 时，将向 [!DNL Target] 后端发送增加展示次数计数的通知。<P>调用`[!UICONTROL triggerView]`时，默认情况下始终会发送通知，但options > page设置为false时除外。<P>**FALSE：**&#x200B;当page=false时，将不会发送增加展示次数计数的通知。 当您只想在具有选件的页面上重新呈现组件时，才应该使用此方法。<P>**注意**：在将`{page: false}`作为选项调用`[!UICONTROL triggerView()]`时，不会重新呈现VEC中的自定义代码选件。 |
 
 ## 示例：True
 

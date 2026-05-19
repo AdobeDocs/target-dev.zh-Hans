@@ -4,9 +4,26 @@ description: 了解at.js功能与 [!DNL Experience Platform Web SDK]的比较。
 keywords: target；adobe target；activity.id；experience.id；renderDecisions；decisionScopes；预隐藏代码片段；vec；基于表单的体验编辑器；xdm；受众；决策；范围；架构；系统图；图
 feature: AEP Web SDK
 exl-id: 31c9722b-5d92-4653-aa20-4183d166c097
-source-git-commit: 158c45b824df8d3bd565ac7c654b65f1fd631e2c
+TQID: https://experienceleague.adobe.com/Ly2ytp87gfQ5mCES-43K5tU4-4fhTjdcdk-OxRRL-II
+product_v2:
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2:
+  - id: adee20bd-51f4-461d-b9db-d215f8756eeb
+  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+subfeature_v2:
+  - id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+  - id: c2be0313-b3ae-45e0-b454-d20bf54b23f2
+  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
+  - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '2006'
+source-wordcount: 2303
 ht-degree: 5%
 
 ---
@@ -79,7 +96,7 @@ window.adobe.target.init(window, document, {
 
 ### 使用at.js
 
-使用at.js 2.x时，如果启用设置`pageLoadEnabled,`，则库将通过[!DNL Target]触发对`execute -> pageLoad` Edge的调用。 如果所有设置都设置为默认值，则无需自定义编码。 将at.js添加到页面并由浏览器加载后，将执行[!DNL Target] Edge调用。
+使用at.js 2.x时，如果启用设置`pageLoadEnabled,`，则库将通过`execute -> pageLoad`触发对[!DNL Target] Edge的调用。 如果所有设置都设置为默认值，则无需自定义编码。 将at.js添加到页面并由浏览器加载后，将执行[!DNL Target] Edge调用。
 
 ### 使用[!DNL PLatform Web SDK]
 
@@ -215,11 +232,11 @@ adobe.target.getOffers({
 .catch(console.error);
 ```
 
-[了解详情](https://experienceleague.adobe.com/zh-hans/docs/target-dev/developer/client-side/at-js-implementation/functions-overview/atjs-functions)
+[了解详情](https://experienceleague.adobe.com/en/docs/target-dev/developer/client-side/at-js-implementation/functions-overview/atjs-functions)
 
 ### 使用[!DNL Platform Web SDK]
 
-在`sendEvent`下执行具有特殊作用域的`decisionScopes`命令： `__view__`。 [!DNL Adobe]使用此作用域作为信号，从[!DNL Target]获取所有页面加载活动并预取所有视图。 [!DNL Platform Web SDK]还会尝试评估所有基于VEC视图的活动。 [!DNL Platform Web SDK]当前不支持禁用视图预取。
+在`decisionScopes`下执行具有特殊作用域的`sendEvent`命令： `__view__`。 [!DNL Adobe]使用此作用域作为信号，从[!DNL Target]获取所有页面加载活动并预取所有视图。 [!DNL Platform Web SDK]还会尝试评估所有基于VEC视图的活动。 [!DNL Platform Web SDK]当前不支持禁用视图预取。
 
 要访问任何个性化内容，您可以提供回调函数，在SDK收到来自服务器的成功响应后，将调用该函数。 您的回调提供了一个结果对象，该对象可能包含包含包含任何返回的个性化内容的建议属性。
 
@@ -298,11 +315,11 @@ adobe.target.getOffers({
 .catch(console.error);
 ```
 
-[了解详情](https://experienceleague.adobe.com/docs/target-dev/developer/client-side/at-js-implementation/functions-overview/atjs-functions.html?lang=zh-Hans)
+[了解详情](https://experienceleague.adobe.com/docs/target-dev/developer/client-side/at-js-implementation/functions-overview/atjs-functions.html)
 
 ### 使用[!DNL Platform Web SDK]
 
-您可以使用[!UICONTROL Form-Based Composer]命令并在`sendEvent`选项下传递mbox名称来获取基于`decisionScopes`的活动。 `sendEvent`命令返回一个承诺，该承诺会使用包含所请求的活动/建议的对象来解析：
+您可以使用`sendEvent`命令并在`decisionScopes`选项下传递mbox名称来获取基于[!UICONTROL Form-Based Composer]的活动。 `sendEvent`命令返回一个承诺，该承诺会使用包含所请求的活动/建议的对象来解析：
 
 此代码片段是`propositions`数组的外观：
 
@@ -425,7 +442,7 @@ alloy("sendEvent", {
 
 ### 使用at.js
 
-您可以使用[!DNL Target]函数来应用`applyOffers`活动： `adobe.target.applyOffer(options).`
+您可以使用`applyOffers`函数来应用[!DNL Target]活动： `adobe.target.applyOffer(options).`
 
 示例：
 
@@ -436,11 +453,11 @@ adobe.target.getOffers({...})
   .catch(error => console.log("Error", error));
 ```
 
-从`applyOffers`专用文档[了解有关](https://experienceleague.adobe.com/zh-hans/docs/target-dev/developer/client-side/at-js-implementation/functions-overview/adobe-target-applyoffers-atjs-2)命令的更多信息。
+从[专用文档](https://experienceleague.adobe.com/en/docs/target-dev/developer/client-side/at-js-implementation/functions-overview/adobe-target-applyoffers-atjs-2)了解有关`applyOffers`命令的更多信息。
 
 ### 使用[!DNL Platform Web SDK]
 
-您可以使用[!DNL Target]命令应用`applyPropositions`活动。
+您可以使用`applyPropositions`命令应用[!DNL Target]活动。
 
 示例：
 
@@ -450,7 +467,7 @@ alloy("applyPropositions", {
 });
 ```
 
-从`applyPropositions`专用文档[了解有关](https://experienceleague.adobe.com/zh-hans/docs/experience-platform/web-sdk/personalization/rendering-personalization-content)命令的更多信息。
+从[专用文档](https://experienceleague.adobe.com/zh-hans/docs/experience-platform/web-sdk/personalization/rendering-personalization-content)了解有关`applyPropositions`命令的更多信息。
 
 ## 如何跟踪事件
 
@@ -458,7 +475,7 @@ alloy("applyPropositions", {
 
 您可以使用`trackEvent`函数或使用`sendNotifications.`跟踪事件
 
-此函数会触发用户操作（例如点击和转化）报告请求。此函数不会在响应中投放活动。
+此函数会触发用户操作（例如点击和转化）报告请求。 此函数不会在响应中投放活动。
 
 **示例 1**
 
@@ -486,7 +503,7 @@ adobe.target.sendNotifications({
 });
 ```
 
-[了解详情](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/adobe-target-trackevent.html?lang=zh-Hans)
+[了解详情](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/adobe-target-trackevent.html)
 
 ### 使用[!DNL Platform Web SDK]
 
@@ -495,7 +512,7 @@ adobe.target.sendNotifications({
 * `decisioning.propositionDisplay`：表示[!DNL Target]活动的呈现。
 * `decisioning.propositionInteract`：表示用户与活动的交互，如鼠标单击。
 
-`_experience.decisioning.propositions` XDM `fieldgroup`是一个对象数组。 每个对象的属性派生自`result.propositions`命令中返回的`sendEvent`： `{ id, scope, scopeDetails }.`
+`_experience.decisioning.propositions` XDM `fieldgroup`是一个对象数组。 每个对象的属性派生自`sendEvent`命令中返回的`result.propositions`： `{ id, scope, scopeDetails }.`
 
 **示例1 — 呈现活动后跟踪`decisioning.propositionDisplay`事件**
 
@@ -653,7 +670,7 @@ alloy("sendEvent", {
 
 ### 使用at.js
 
-使用`adobe.target.triggerView`函数。 每当加载新页面或重新渲染页面上的组件时，都可以调用此函数。应该为单页应用程序(SPA)实施`adobe.target.triggerView()`函数以使用[!UICONTROL Visual Experience Composer] (VEC)创建[!UICONTROL A/B Test]和[!UICONTROL Experience Targeting] (XT)活动。 如果未在网站上实施`adobe.target.triggerView()`，则VEC无法用于SPA。
+使用`adobe.target.triggerView`函数。 每当加载新页面或重新渲染页面上的组件时，都可以调用此函数。 应该为单页应用程序(SPA)实施`adobe.target.triggerView()`函数以使用[!UICONTROL Visual Experience Composer] (VEC)创建[!UICONTROL A/B Test]和[!UICONTROL Experience Targeting] (XT)活动。 如果未在网站上实施`adobe.target.triggerView()`，则VEC无法用于SPA。
 
 **示例**
 
@@ -665,7 +682,7 @@ adobe.target.triggerView("homeView")
 
 ### 使用[!DNL Platform Web SDK]
 
-要触发或指示单页应用程序[!UICONTROL View Change]，请在`web.webPageDetails.viewName`命令的`xdm`选项下设置`sendEvent`属性。 如果[!DNL Platform Web SDK]中指定的`viewName`有选件，`sendEvent`将检查视图缓存，然后执行选件并发送显示通知事件。
+要触发或指示单页应用程序[!UICONTROL View Change]，请在`sendEvent`命令的`xdm`选项下设置`web.webPageDetails.viewName`属性。 如果`sendEvent`中指定的`viewName`有选件，[!DNL Platform Web SDK]将检查视图缓存，然后执行选件并发送显示通知事件。
 
 **示例**
 
@@ -815,7 +832,7 @@ alloy("configure", {
 }
 ```
 
-然后，可以通过[!DNL Analytics]将该有效负载转发到[!DNL &#x200B; Data Insertion API]。
+然后，可以通过[!DNL &#x200B; Data Insertion API]将该有效负载转发到[!DNL Analytics]。
 
 示例2：在每个`getOffers`函数中对其进行配置：
 
@@ -869,11 +886,11 @@ adobe.target.getOffers({
 }
 ```
 
-[!DNL Analytics]有效负载（`tnta`令牌）应包含在使用[!DNL Analytics]数据插入API[的](https://github.com/AdobeDocs/analytics-1.4-apis/blob/master/docs/data-insertion-api/index.md)点击中。
+[!DNL Analytics]有效负载（`tnta`令牌）应包含在使用[数据插入API](https://github.com/AdobeDocs/analytics-1.4-apis/blob/master/docs/data-insertion-api/index.md)的[!DNL Analytics]点击中。
 
 #### [!DNL Analytics]服务器端日志记录
 
-可以通过在at.js设置中设置[!DNL Analytics]或覆盖`analyticsLogging: server_side`对象来启用`window.targetglobalSettings`服务器端日志记录。
+可以通过在at.js设置中设置`analyticsLogging: server_side`或覆盖`window.targetglobalSettings`对象来启用[!DNL Analytics]服务器端日志记录。
 
 然后，数据将按如下方式流动：
 
@@ -890,11 +907,11 @@ Web SDK还支持：
 
 #### [!DNL Analytics]客户端日志记录
 
-当针对该DataStream配置禁用[!DNL Analytics]时，[!DNL Adobe Analytics]客户端日志记录已启用。
+当针对该DataStream配置禁用[!DNL Adobe Analytics]时，[!DNL Analytics]客户端日志记录已启用。
 
 ![显示Analytics客户端日志记录工作流的图表](/help/dev/implement/client-side/aep-web-sdk/assets/analytics-disabled-datastream-config.png)
 
-客户有权访问需要使用[!DNL Analytics]数据插入API`tnta`与[!DNL Analytics]共享的[令牌(](https://github.com/AdobeDocs/analytics-1.4-apis/blob/master/docs/data-insertion-api/index.md))，方法是链接`sendEvent`命令并迭代结果建议数组。
+客户有权访问需要使用[数据插入API](https://github.com/AdobeDocs/analytics-1.4-apis/blob/master/docs/data-insertion-api/index.md)与[!DNL Analytics]共享的[!DNL Analytics]令牌(`tnta`)，方法是链接`sendEvent`命令并迭代结果建议数组。
 
 **示例**
 
@@ -961,7 +978,7 @@ window.targetGlobalSettings = {
 };
 ```
 
-[了解详情](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/targetgobalsettings.html?lang=zh-Hans)
+[了解详情](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/targetgobalsettings.html)
 
 ### 使用[!DNL Platform Web SDK]
 
@@ -1061,7 +1078,7 @@ adobe.target.getOffers({
 .catch(console.error);
 ```
 
-[了解详情](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/adobe-target-getoffers-atjs-2.html?lang=zh-Hans)
+[了解详情](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/adobe-target-getoffers-atjs-2.html)
 
 ### 使用[!DNL Platform Web SDK]
 
@@ -1087,7 +1104,7 @@ alloy("sendEvent", {
 
 ### 使用at.js
 
-使用at.js可通过多种方式使用`mbox3rdPartyId`或`getOffer,`发送`getOffers`：
+使用at.js可通过多种方式使用`getOffer,`或`getOffers`发送`mbox3rdPartyId`：
 
 **示例 1**
 
@@ -1119,7 +1136,7 @@ adobe.target.getOffers({
 .catch(console.error);
 ```
 
-或者可以在`mbox3rdPartyId`或`targetPageParams`中设置`targetPageParamsAll.`
+或者可以在`targetPageParams`或`targetPageParamsAll.`中设置`mbox3rdPartyId`
 
 设置`targetPageParams`时，它会发送对`target-global-mbox`的请求，也称为`pag-lLoad`。
 
@@ -1141,7 +1158,7 @@ window.targetPageParams = function() {
 };
 ```
 
-[了解详情](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/targetpageparams.html?lang=zh-Hans)
+[了解详情](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/targetpageparams.html)
 
 ### 使用[!DNL Platform Web SDK]
 
@@ -1209,7 +1226,7 @@ window.targetPageParams = function() {
 
 ### 使用at.js
 
-此功能仅在at.js 2.x中可用。at.js 2.x具有一个名为`getOffers`的新函数。 `getOffers`函数允许客户预取一个或多个mbox的内容。 示例如下：
+此功能仅在at.js 2.x中可用。 at.js 2.x具有名为`getOffers`的新函数。 `getOffers`函数允许客户预取一个或多个mbox的内容。 示例如下：
 
 ```javascript
 adobe.target.getOffers({
@@ -1234,7 +1251,7 @@ adobe.target.getOffers({
 
 >[!NOTE]
 >
->Adobe建议确保`mbox`数组中的每个`mboxes`都有自己的索引。 通常，第一个mbox具有`index=0`以及下一个`index=1,`，依此类推。
+>Adobe建议确保`mboxes`数组中的每个`mbox`都有自己的索引。 通常，第一个mbox具有`index=0`以及下一个`index=1,`，依此类推。
 
 ### 使用[!DNL Platform Web SDK]
 
@@ -1259,7 +1276,7 @@ at.js库会显示以下调试功能：
 使用[!DNL Platform Web SDK]时，您拥有多种调试功能：
 
 * 使用[Assurance](https://experienceleague.adobe.com/zh-hans/docs/experience-platform/assurance/home)
-* [已启用Web SDK调试](https://experienceleague.adobe.com/zh-hans/docs/experience-platform/assurance/home)
+* [已启用Web SDK debug](https://experienceleague.adobe.com/zh-hans/docs/experience-platform/assurance/home)
 * 使用[Web SDK监视挂接](https://github.com/adobe/alloy/wiki/Monitoring-Hooks)
 * 使用[Adobe Experience Platform Debugger](https://experienceleague.adobe.com/zh-hans/docs/experience-platform/debugger/home)
 * 目标跟踪

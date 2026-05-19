@@ -1,11 +1,23 @@
 ---
-title: Experience CloudID (ECID)服务
+title: Experience Cloud ID (ECID)服务
 description: 虽然使用 [!DNL Target] SDK从 [!DNL Target] 中提取内容可能非常强大，但使用[!UICONTROL Experience Cloud ID] (ECID)进行用户跟踪的附加价值不仅限于Adobe [!DNL Target]. The ECID enables you to leverage [!DNL Adobe Experience Cloud] 产品和功能，如A4T报表和 [!DNL Adobe Audience Manager] (AAM)区段。
 exl-id: fd7e5c3e-51c1-4965-ab6a-f50a6b0c910b
 feature: Implement Server-side
-source-git-commit: 09a50aa67ccd5c687244a85caad24df56c0d78f5
+TQID: https://experienceleague.adobe.com/751nWT-fW5Ct1rZ2DgnTz2Pkt9W7-JfcusQ6eqrDp1A
+product_v2:
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2:
+  - id: f7c7de77-382f-4f48-8b36-61a170f06d3d
+subfeature_v2:
+  - id: df62f171-ac37-440f-8f0f-f41a72ebdd34
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+  - id: c2be0313-b3ae-45e0-b454-d20bf54b23f2
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '264'
+source-wordcount: 261
 ht-degree: 0%
 
 ---
@@ -313,7 +325,7 @@ public class TargetControllerSample {
 
 通过使用跨ECID、[!DNL Analytics]和[!DNL Target]的集成，您可以：
 
-* 使用来自Adobe Audience Manager (AAM)的区段
+* 使用Adobe Audience Manager (AAM)中的区段
 * 根据从[!DNL Target]检索到的内容自定义用户体验
 * 确保在[!DNL Analytics]中收集所有事件和成功量度
 * 使用[!DNL Analytics]的强大查询并受益于其出色的报告可视化图表
