@@ -13,9 +13,9 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 topic_v2:
   - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
-source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
+source-git-commit: f05a93102cc0f9b86a6521ff8007aa59f2af3c1a
 workflow-type: tm+mt
-source-wordcount: 930
+source-wordcount: 921
 ht-degree: 0%
 
 ---
@@ -123,4 +123,4 @@ ht-degree: 0%
 
 恭喜！ 您现在可以使用推荐API创建、列出、编辑、删除自定义标准并获取其详细信息。 在下一部分中，您将使用Target投放API检索推荐。
 
-&lt;！— [下一课程“使用服务器端交付API获取推荐”>](fetch-recs-server-side-delivery-api.md) —>
+<!-- [Next "Fetch Recommendations with the Server-side Delivery API" >](fetch-recs-server-side-delivery-api.md) -->
