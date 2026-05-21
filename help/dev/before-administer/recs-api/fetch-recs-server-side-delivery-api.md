@@ -7,18 +7,13 @@ thumbnail: null
 author: Judy Kim
 exl-id: 9b391f42-2922-48e0-ad7e-10edd6125be6
 TQID: https://experienceleague.adobe.com/K94vITD8ZSDXLkC42Vm02eC5RmHudBvukXNcdPFVjzk
-product_v2:
-  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
-feature_v2:
-  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-  - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
-source-git-commit: 929e1f10bc5dd0741f0fe28cd46435e680a4a308
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2: id: c93393a4-e558-47e1-992e-c91ed4d480ce
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+source-git-commit: 129298289889a3b133eb07d0caeade2fd0b5568e
 workflow-type: tm+mt
-source-wordcount: 1449
+source-wordcount: 1366
 ht-degree: 1%
 
 ---
@@ -48,13 +43,13 @@ Adobe Target和Adobe Target Recommendations API可用于提供对网页的响应
 1. 使用基于表单的编辑器（而非可视化体验编辑器）创建Target活动（A/B、XT、AP或推荐）。
 1. 使用交付API获取对刚刚创建的Target活动生成的请求的响应。
 
-&lt;！—！ — 问：为什么需要执行这两个步骤？ 如果您为mbox定义了基于表单的推荐，那么也通过投放API步骤来检索结果有什么好处？ 为什么不能让基于表单的Rec将结果传送到目标设备……?? 答：请参阅下面的用例……这是您希望“拦截”待处理结果，以便在显示结果之前执行更多操作的情况。 与库存水平进行实时比较等。 --->
+<!-- Q: Why are BOTH steps necessary for this? If you have a Form-based recommendation defined for an mbox, what's the point/benefit of ALSO having the Delivery API step in to retrieve results? Why can't you just have the Form-based Rec deliver the results in the destination device...?? A: See use case below... it's when you want to "intercept" the pending results in order to do more stuff prior to displaying the results. Things like real-time comparisons to inventory levels. -->
 
 ## 使用基于表单的体验编辑器创建推荐
 
-要创建可与投放API一起使用的推荐，请使用[基于表单的编辑器](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html?lang=zh-Hans)。
+要创建可与投放API一起使用的推荐，请使用[基于表单的编辑器](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html)。
 
-1. 首先，创建并保存要在推荐中使用的基于JSON的设计。 有关示例JSON以及有关在配置基于表单的活动时如何返回JSON响应的背景信息，请参阅有关[创建推荐设计](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations-design/create-design.html?lang=zh-Hans)的文档。 在此示例中，该设计名为&#x200B;*简单JSON。*
+1. 首先，创建并保存要在推荐中使用的基于JSON的设计。 有关示例JSON以及有关在配置基于表单的活动时如何返回JSON响应的背景信息，请参阅有关[创建推荐设计](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations-design/create-design.html)的文档。 在此示例中，该设计名为&#x200B;*简单JSON。*
    ![server-side-create-recs-json-design.png](assets/server-side-create-recs-json-design.png)
 
 1. 在Target中，导航到&#x200B;**[!UICONTROL Activities]** > **[!UICONTROL Create Activity]** > **[!UICONTROL Recommendations]**，然后选择&#x200B;**[!UICONTROL Form]**。
@@ -64,7 +59,7 @@ Adobe Target和Adobe Target Recommendations API可用于提供对网页的响应
 1. 选择一个属性，然后单击&#x200B;**[!UICONTROL Next]**。
 1. 定义您希望用户收到推荐响应的位置。 以下示例使用名为&#x200B;*api_charter*&#x200B;的位置。 选择您之前创建的基于JSON的名为&#x200B;*简单JSON的设计。*
    ![server-side-create-recs-form.png](assets/server-side-create-recs-form1.png)
-1. 保存并激活推荐。 那个产生结果。 [结果准备就绪后](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations-activity/previewing-and-launching-your-recommendations-activity.html?lang=zh-Hans)，您可以使用投放API检索它们。
+1. 保存并激活推荐。 那个产生结果。 [结果准备就绪后](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations-activity/previewing-and-launching-your-recommendations-activity.html)，您可以使用投放API检索它们。
 
 ## 使用投放API
 
@@ -72,7 +67,7 @@ Adobe Target和Adobe Target Recommendations API可用于提供对网页的响应
 
 `POST https://{{CLIENT_CODE}}.tt.omtrdc.net/rest/v1/delivery`
 
-1. 请注意，客户端代码为必填项。 提醒一下，通过导航到&#x200B;**[!UICONTROL Recommendations]** > **[!UICONTROL Settings]**，可以在Adobe Target中找到您的客户端代码。 请注意&#x200B;**推荐API令牌**&#x200B;部分中的&#x200B;**客户端代码**&#x200B;值。
+1. 请注意，客户端代码为必填项。 提醒一下，通过导航到&#x200B;**[!UICONTROL Recommendations]** > **[!UICONTROL Settings]**，可以在Adobe Target中找到您的客户端代码。 请注意&#x200B;**推荐API令牌**&#x200B;部分中的&#x200B;**客户端代码**值。
    ![client-code.png](assets/client-code.png)
 1. 获得客户端代码后，即可构建投放API调用。 以下示例以[投放API Postman集合](../../implement/delivery-api/overview.md#section/Getting-Started/Postman-Collection)中提供的&#x200B;**[!UICONTROL Web Batched Mboxes Delivery API Call]**&#x200B;开头，进行了相关修改。 例如：
    * 已从&#x200B;**正文**&#x200B;中移除&#x200B;**浏览器**&#x200B;和&#x200B;**地址**&#x200B;对象，因为非HTML用例不需要这些对象
@@ -125,7 +120,7 @@ Adobe Target和Adobe Target Recommendations API可用于提供对网页的响应
 ## 参考文档
 
 * [Adobe Target交付API文档](/help/dev/implement/delivery-api/overview.md)
-* [将“推荐”与电子邮件集成](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations-faq/integrating-recs-email.html?lang=zh-Hans)
+* [将“推荐”与电子邮件集成](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations-faq/integrating-recs-email.html)
 
 ## 摘要和审查
 

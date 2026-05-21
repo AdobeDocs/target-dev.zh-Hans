@@ -4,19 +4,13 @@ description: 如果应用程序的结构方式要求在其使用SDK方法的每�
 feature: APIs/SDKs
 exl-id: 4ccfb455-f813-4bdb-a9c1-d576a110a9bb
 TQID: https://experienceleague.adobe.com/knFQFgPKL-DBOtBnWUIz2-7usi35DPtxd-FSINqHHhY
-product_v2:
-  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
-feature_v2:
-  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-  - id: e7840a7b-a94f-4256-aed0-4e94b08e157b
-  - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
-source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2: id: c93393a4-e558-47e1-992e-c91ed4d480ce
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: e7840a7b-a94f-4256-aed0-4e94b08e157bid: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+source-git-commit: 4131354373a42c475db9a4f8dcf8090dd0cbdfcd
 workflow-type: tm+mt
-source-wordcount: 298
+source-wordcount: 294
 ht-degree: 1%
 
 ---
@@ -126,7 +120,7 @@ npm i @adobe/target-nodejs-sdk -P
 
 1. 通过导航到&#x200B;**[!UICONTROL Administration]** > **[!UICONTROL Implementation]**，可从[!DNL Adobe Target]中检索客户端和`organizationId`，如下所示。
 
-   &lt;！ — 插入image-client-code.png —>
+   <!-- Insert image-client-code.png -->
    ![替代图像](assets/asset-rule-artifact-3.png)
 
 ## &#x200B;3. 存储并回复JSON有效负载

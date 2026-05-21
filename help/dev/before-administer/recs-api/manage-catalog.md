@@ -7,15 +7,12 @@ thumbnail: null
 author: Judy Kim
 exl-id: aea82607-cde4-456a-8dfb-2967badce455
 TQID: https://experienceleague.adobe.com/9uKu-mX9xzz-sG4-peyfzrwogo27nF8TZ4zFXBi6TaU
-product_v2:
-  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
-source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+source-git-commit: 0fe52344f654f22d1ff7aaace0ba5a99e92d036d
 workflow-type: tm+mt
-source-wordcount: 905
+source-wordcount: 901
 ht-degree: 0%
 
 ---
@@ -156,7 +153,7 @@ GET https://mc.adobe.io/{{TENANT_ID}}/target/recs/entities/[entity.id]
 
    >[!NOTE]
    >
-   >如果未明确指定任何环境，则获取实体仅尝试从[默认环境](https://experienceleague.adobe.com/docs/target/using/administer/environments.html?lang=zh-Hans)获取实体。 如果要从默认环境以外的任何环境提取，则必须指定环境ID。
+   >如果未明确指定任何环境，则获取实体仅尝试从[默认环境](https://experienceleague.adobe.com/docs/target/using/administer/environments.html)获取实体。 如果要从默认环境以外的任何环境提取，则必须指定环境ID。
 
 1. 如有必要，请添加`environmentId`参数，然后重新发送请求。
 
@@ -208,4 +205,4 @@ DELETE https://mc.adobe.io/{{TENANT_ID}}/target/recs/entities?ids=[comma-delimit
 
 恭喜！ 您现在可以使用推荐API创建、更新、删除和获取有关目录中的实体的详细信息。 在下一部分中，您将了解如何管理自定义标准。
 
-&lt;！— [下一课程“管理自定义标准”>](manage-custom-criteria.md) —>
+<!-- [Next "Manage Custom Criteria" >](manage-custom-criteria.md) -->
