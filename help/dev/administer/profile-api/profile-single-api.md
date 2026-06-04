@@ -5,15 +5,11 @@ feature: APIs/SDKs
 contributors: https://github.com/icaraps
 exl-id: 4e022db3-215f-461b-9222-38ce2f2dbc28
 TQID: https://experienceleague.adobe.com/HEjGkrgixufe9wQvaPAljSlZRSaF-idgwKYWs3cuoJ0
-product_v2:
-  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
-feature_v2:
-  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2: id: c93393a4-e558-47e1-992e-c91ed4d480ce
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+source-git-commit: 6fac79420aef0a73c109b2c19f363266c1f8027a
 workflow-type: tm+mt
 source-wordcount: 361
 ht-degree: 4%
@@ -46,15 +42,15 @@ ht-degree: 4%
 
 要更新`pcId`的配置文件，请使用：
 
-``````
+```
 https://<your-client-code>.tt.omtrdc.net/m2/client/profile/update?mboxPC=1368007744041-575948.01_00&profile.attr=0&profile.attr2=1...
-``````
+```
 
 要更新`mbox3rdPartyId`的配置文件，请使用：
 
-``````
+```
 shell http://<your-client-code>.tt.omtrdc.net/m2/client/profile/update?mbox3rdPartyId=123456&profile.attr=0&profile.attr2=1...
-``````
+```
 
 [!UICONTROL Single Profile Update API]仅供更新。 如果未找到任何内容，则不会创建配置文件。
 
@@ -64,8 +60,8 @@ shell http://<your-client-code>.tt.omtrdc.net/m2/client/profile/update?mbox3rdPa
 * 参数格式为`profile.paramName`。
 * 并非所有pcIds和mbox3rdPartyIds都必须存在所有参数值。
 * 参数和值区分大小写。
-* GET和POST均受支持。
-* GET当前的大小限制为8 KB，POST当前的大小限制为60 KB。
+* 同时支持GET和POST。
+* GET和POST当前的大小限制分别为8 KB和60 KB。
 
 ## 响应
 
