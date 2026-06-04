@@ -18,15 +18,15 @@ topic_v2:
   - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 101
+source-wordcount: 121
 ht-degree: 0%
 
 ---
 
-# [!UICONTROL Adobe Experience Platform Edge Network Server API] 概述
+# [!UICONTROL Adobe Experience Platform Edge Network Server API]概述
 
 [!UICONTROL Adobe Experience Platform Edge Network]为客户提供了与任何[!DNL Adobe Experience Cloud]或[!UICONTROL Adobe Experience Platform Edge]服务交互的优化方式。
 
-[!UICONTROL Edge Network Server API]可用于各种数据收集、个性化、广告和营销用例。 服务器API可用于服务器、IoT设备、机顶盒和其他各种设备。
+[!UICONTROL Edge Network服务器API]可用于各种数据收集、个性化、广告和营销用例。 服务器API可用于服务器、IoT设备、机顶盒和其他各种设备。
 
 有关详细信息，请参阅&#x200B;*Edge Network Server API文档*&#x200B;中的[Edge Server API概述](https://experienceleague.adobe.com/docs/experience-platform/edge-network-server-api/overview.html?lang=zh-Hans){target=_blank}。

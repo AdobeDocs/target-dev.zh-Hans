@@ -1,6 +1,6 @@
 ---
 keywords: adobe.target.sendNotifications， sendNotifications， sendnotifications，发送通知，通知， at.js，函数，函数， $9
-description: 呈现体验时，使用at.js的[!UICONTROL adobe.target.sendNotifications()]向 [!DNL Target] 边缘发送通知，而不使用[!UICONTROL applyOffer]。 (at.js.2.1 +)
+description: 如果呈现的体验未使用[!UICONTROL applyOffer]，请使用适用于at.js的[!UICONTROL adobe.target.sendNotifications()]将通知发送给 [!DNL Target] edge。 (at.js.2.1 +)
 title: 如何使用adobe.target.sendNotifications()函数？
 feature: at.js
 exl-id: 1a08da10-31a0-4b0b-af7d-91ed7d32c308
@@ -17,7 +17,7 @@ topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 638
+source-wordcount: 642
 ht-degree: 83%
 
 ---

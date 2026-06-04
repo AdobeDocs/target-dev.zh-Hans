@@ -22,7 +22,7 @@ topic_v2:
   - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 603
+source-wordcount: 618
 ht-degree: 12%
 
 ---
@@ -33,9 +33,9 @@ ht-degree: 12%
 
 >[!NOTE]
 >
->如果您的实施在客户端使用at.js和[!DNL AppMeasurement]，则您应该使用下面讨论的[!UICONTROL Target Delivery API]和服务器端SDK。
+>如果您的实施在客户端使用at.js和[!DNL AppMeasurement]，则您应该使用下面讨论的[!UICONTROL Target投放API]和服务器端SDK。
 >
->如果您的实施使用[!UICONTROL Adobe Experience Platform Web SDK]，您应该使用[[!UICONTROL Adobe Experience Platform] [!UICONTROL Edge Network Server API]](https://experienceleague.adobe.com/zh-hans/docs/experience-platform/edge-network-server-api/overview){target=_blank}。
+>如果您的实施使用[!UICONTROL Adobe Experience Platform Web SDK]，则您应该使用[[!UICONTROL Adobe Experience Platform] [!UICONTROL Edge Network服务器API]](https://experienceleague.adobe.com/zh-hans/docs/experience-platform/edge-network-server-api/overview){target=_blank}。
 
 以下过程会在 [!DNL Target] 的服务器端实施中发生：
 
@@ -64,7 +64,7 @@ ht-degree: 12%
 * 从任何可进行HTTP/s调用的服务器端平台或应用程序交付体验。
 * 向访客提供一致的个性化体验，无论访客使用哪些渠道或设备与您的业务进行互动。
 * 将访客的体验缓存在服务器上的一个会话中，这样可以避免多个API调用，从而提高性能。
-* 从服务器端与Adobe Experience Cloud产品(如Adobe Analytics、Adobe Audience Manager (AAM)和Experience Cloud ID服务)无缝集成。
+* 从服务器端无缝地与Adobe Experience Cloud产品(如Adobe Analytics、Adobe Audience Manager (AAM)和Experience Cloud ID服务)集成。
 
 ## 服务器端SDK
 

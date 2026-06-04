@@ -4,7 +4,7 @@ description: Adobe Target交付API更改日志
 keywords: 投放api
 source-git-commit: f16903556954d2b1854acd429f60fbf6fc2920de
 workflow-type: tm+mt
-source-wordcount: '25'
+source-wordcount: '36'
 ht-degree: 0%
 
 ---

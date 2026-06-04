@@ -17,8 +17,8 @@ topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 335
-ht-degree: 68%
+source-wordcount: 337
+ht-degree: 67%
 
 ---
 
@@ -40,7 +40,7 @@ AdBox 与 mbox 类似，但它由 URL 控制而非 JavaScript。 创建的 AdBox
 
    * 其中，`myClientCode` 是您公司的客户端代码。 您公司的客户端代码全部为小写字母，且不含任何特殊字符。
 
-     您的客户端代码位于[!DNL Target]界面的&#x200B;**[!UICONTROL Administation]** > **[!UICONTROL Implementation]**&#x200B;页面顶部。
+     您的客户端代码位于[!DNL Target]界面的&#x200B;**[!UICONTROL 管理]** > **[!UICONTROL 实现]**&#x200B;页面的顶部。
 
    * 其中，`image` 是调用类型。 在此例中为图像。
 

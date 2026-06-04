@@ -17,8 +17,8 @@ topic_v2:
   - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 347
-ht-degree: 33%
+source-wordcount: 363
+ht-degree: 31%
 
 ---
 
@@ -32,12 +32,12 @@ ht-degree: 33%
 
 **需要身份验证并使用[!DNL Target] UI生成访问令牌：**
 
-1. 单击&#x200B;**[!UICONTROL Administration]** > **[!UICONTROL Implementation]**。
-1. 在&#x200B;**[!UICONTROL Profile API]**&#x200B;下，将&#x200B;**[!UICONTROL Require Authentication]**&#x200B;切换开关滑动到“已启用”或“已禁用”位置。
+1. 单击&#x200B;**[!UICONTROL 管理]** > **[!UICONTROL 实现]**。
+1. 在&#x200B;**[!UICONTROL 配置文件API]**&#x200B;下，将&#x200B;**[!UICONTROL 需要身份验证]**&#x200B;切换到“已启用”或“已禁用”位置。
 
    ![替代图像](assets/profile_api_settings.png)
 
-1. （视情况而定）如果您已启用身份验证要求，请单击&#x200B;**[!UICONTROL Generate New Profile Authentication Token]**。
+1. （视情况而定）如果启用了身份验证要求，请单击&#x200B;**[!UICONTROL 生成新的配置文件身份验证令牌]**。
 
    ![替代图像](assets/profile_api_settings_2.png)
 
@@ -59,7 +59,7 @@ ht-degree: 33%
 
 1. 复制令牌并将其包含在请求的标头中，格式为：“授权”：“持有者”。
 
-1. 单击&#x200B;**[!UICONTROL Generate New Profile Authentication Token]**&#x200B;以根据需要重新生成令牌。
+1. 单击&#x200B;**[!UICONTROL 生成新的配置文件身份验证令牌]**&#x200B;以根据需要重新生成令牌。
 
 >[!WARNING]
 >

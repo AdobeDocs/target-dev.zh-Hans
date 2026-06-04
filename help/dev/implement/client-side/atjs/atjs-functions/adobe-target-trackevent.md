@@ -17,8 +17,8 @@ topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 324
-ht-degree: 61%
+source-wordcount: 336
+ht-degree: 59%
 
 ---
 
@@ -32,7 +32,7 @@ ht-degree: 61%
 
 | 键 | 类型 | 必需 | 描述 |
 |--- |--- |--- |--- |
-| mbox | 字符串 | 是 | Mbox 名称<P>**注意**：如果通过页面上已触发的mbox名称触发[!UICONTROL trackEvent()]调用，则[!UICONTROL trackEvent()]的SDID将重置，并且将与页面上的[!DNL Target]调用不同。 但是，使用不同的mbox名称触发[!UICONTROL trackEvent()]调用可使[!UICONTROL trackEvent()]调用的SDID与页面上的[!UICONTROL Page Load Request]/[!UICONTROL triggerView()]调用一致。 |
+| mbox | 字符串 | 是 | Mbox 名称<P>**注意**：如果[!UICONTROL trackEvent()]调用是使用页面上已触发的mbox名称触发的，则[!UICONTROL trackEvent()]的SDID将被重置，并且将与页面上的[!DNL Target]调用不同。 但是，使用不同的mbox名称触发[!UICONTROL trackEvent()]调用会使[!UICONTROL trackEvent()]调用的SDID与页面上的[!UICONTROL 页面加载请求]/[!UICONTROL triggerView()]调用一致。 |
 | selector | 字符串 | 否 | 用于查找 HTML 元素的 CSS 选择器。 事件监听程序将附加到找到的元素。 |
 | type | 字符串 | 否 | 表示已注册的事件类型。 它既可以是 HTML 已知的事件，如：click、mousedown 等，也可以是自定义 HTML 事件。 |
 | preventDefault | 布尔值 | 否 | 表示是否在事件监听程序回调中使用 `[!UICONTROL event.preventDefault()]`。 默认为 false。<P>**注释**：仅支持`[!UICONTROL form[submit]]`和`a[click]`。 由于复杂性和要支持的方案数量太多，因此其他方案不受支持。 |

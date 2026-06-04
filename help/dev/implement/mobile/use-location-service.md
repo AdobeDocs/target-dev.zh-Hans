@@ -11,12 +11,12 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 175
-ht-degree: 4%
+source-wordcount: 180
+ht-degree: 3%
 
 ---
 
-# 使用[!UICONTROL Location Service]
+# 使用[!UICONTROL 位置服务]
 
 位置是理解和吸引移动用户的重要上下文。 通过使用此上下文，移动应用程序开发人员可以增强应用程序设计，并使其成为更加个性化和引人入胜的体验。
 
@@ -24,4 +24,4 @@ ht-degree: 4%
 
 您可以使用带有[!DNL Target]的[!DNL Location Service]来利用Adobe Experience Platform中带有[标记的规则](https://experienceleague.adobe.com/docs/experience-platform/tags/home.html?lang=zh-Hans)，将您的[!UICONTROL Places]数据附加到[!DNL Adobe Target]个SDK事件。
 
-有关详细信息，请参阅[Adobe Experience Platform Location Service指南](https://experienceleague.adobe.com/docs/places/using/home.html?lang=zh-Hans)中的[结合使用[!UICONTROL Location Service]和 [!DNL Adobe Target]](https://experienceleague.adobe.com/docs/places/using/use-places-with-other-solutions/places-target/places-target.html?lang=zh-Hans)。
+有关详细信息，请参阅[Adobe Experience Platform Location Service指南](https://experienceleague.adobe.com/docs/places/using/home.html?lang=zh-Hans)中的[将[!UICONTROL Location Service]与 [!DNL Adobe Target]](https://experienceleague.adobe.com/docs/places/using/use-places-with-other-solutions/places-target/places-target.html?lang=zh-Hans)一起使用。

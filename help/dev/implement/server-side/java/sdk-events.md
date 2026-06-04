@@ -10,8 +10,8 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 134
-ht-degree: 5%
+source-wordcount: 144
+ht-degree: 4%
 
 ---
 
@@ -27,9 +27,9 @@ ht-degree: 5%
 
 | 名称 | 参数 | 描述 |
 | --- | --- | --- |
-| DevicedecisioningReady | 无 | 在客户端第一次为[!UICONTROL on-device decisioning]准备就绪时只调用一次 |
-| artifactDownloadSucceeded | 工件文件的字节[]内容 | 每次下载[!UICONTROL on-device decisioning]工件时调用 |
-| artifactDownloadFailed | 例外 | 每次下载[!UICONTROL on-device decisioning]工件失败时调用 |
+| DevicedecisioningReady | 无 | 在客户端首次准备[!UICONTROL 设备上决策]时只调用一次 |
+| artifactDownloadSucceeded | 工件文件的字节[]内容 | 每次下载[!UICONTROL 设备上决策]工件时调用 |
+| artifactDownloadFailed | 例外 | 每次未能下载[!UICONTROL 设备上决策]工件时调用 |
 
 ## 示例
 

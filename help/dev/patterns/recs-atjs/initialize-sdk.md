@@ -23,7 +23,7 @@ topic_v2:
   - id: e0eb8757-182f-49f3-94a4-1587d16f5094
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 1797
+source-wordcount: 1879
 ht-degree: 4%
 
 ---
@@ -75,7 +75,7 @@ ht-degree: 4%
 
 **先决条件**
 
-* 若要使用访客ID/API服务，贵公司必须启用[!DNL Adobe Experience Cloud]并拥有[!UICONTROL Organization ID]。 有关详细信息，请参阅&#x200B;*Identity Service帮助*&#x200B;指南中的[Experience Cloud要求：组织ID](https://experienceleague.adobe.com/docs/id-service/using/reference/requirements.html?lang=zh-Hans？){target=_blank}。
+* 若要使用访客ID/API服务，贵公司必须启用[!DNL Adobe Experience Cloud]并拥有[!UICONTROL 组织ID]。 有关详细信息，请参阅&#x200B;*Identity Service帮助*&#x200B;指南中的[Experience Cloud要求：组织ID](https://experienceleague.adobe.com/docs/id-service/using/reference/requirements.html?lang=zh-Hans？){target=_blank}。
 * 您需要`VisitorAPI.js`文件。 如果您实施了[!DNL Adobe Analytics]，则应该已经拥有此文件。 此文件也可以通过[[!DNL Adobe Experience Platform] 标记扩展](https://experienceleague.adobe.com/docs/tags.html?lang=zh-Hans){target=_blank}添加，也可以从[Adobe Analytics代码管理器](https://experienceleague.adobe.com/docs/id-service/using/implementation/setup-analytics.html?lang=zh-Hans){target=_blank}下载。
 
 **配置并引用VisitorAPI.js**
@@ -255,9 +255,9 @@ ht-degree: 4%
 
 **可用标准**
 
-* [!UICONTROL People Who Viewed These, Viewed Those]
-* [!UICONTROL People Who Viewed These, Bought Those]
-* [!UICONTROL People Who Bought These, Bought Those]
+* [!UICONTROL 查看了这些项目，也查看了这些项目的人]
+* [!UICONTROL 查看了这些项目，但购买了那些项目的人]
+* [!UICONTROL 购买了这些商品的人，也购买了这些商品]
 
 **需要实体参数**
 
@@ -279,13 +279,13 @@ ht-degree: 4%
 
 **可用标准**
 
-* [!UICONTROL Most Viewed Across the Site]
-* [!UICONTROL Most Viewed by Category]
-* [!UICONTROL Most Viewed by Item Attribute]
-* [!UICONTROL Top Sellers Across the Site]
-* [!UICONTROL Top Sellers by Category]
-* [!UICONTROL Top Sellers by Item Attribute]
-* [!UICONTROL Top by Analytics Metric]
+* 整个网站查看的次数最多
+* 按类别查看的次数最多
+* [!UICONTROL 按项目属性查看的次数最多]
+* [!UICONTROL 网站上的最畅销商品]
+* [!UICONTROL 按类别划分的最畅销商品]
+* 按项目属性[!UICONTROL 最畅销商品]
+* [!UICONTROL 按Analytics指标排名]
 
 **需要实体参数**
 
@@ -308,10 +308,10 @@ ht-degree: 4%
 
 **可用标准**
 
-* [!UICONTROL People Who Viewed This, Viewed That]
-* [!UICONTROL People Who Viewed This, Bought That]
-* [!UICONTROL People Who Bought This, Bought That]
-* [!UICONTROL Items with Similar Attributes]
+* [!UICONTROL 查看了这个项目，也查看了那个项目的人]
+* [!UICONTROL 查看了这个项目，但购买了那个项目的人]
+* [!UICONTROL 购买了这个项目，也购买了那个项目的人]
+* [!UICONTROL 具有相似属性的项目]
 
 **需要实体参数**
 
@@ -333,8 +333,8 @@ ht-degree: 4%
 
 **可用标准**
 
-* [!UICONTROL Recently Viewed Items]
-* [!UICONTROL Recommended for You]
+* [!UICONTROL 最近查看的项目]
+* [!UICONTROL 为您推荐]
 
 **需要实体参数**
 
@@ -356,7 +356,7 @@ ht-degree: 4%
 
 **可用标准**
 
-* [!UICONTROL Custom algorithm]
+* [!UICONTROL 自定义算法]
 
 **需要实体参数**
 

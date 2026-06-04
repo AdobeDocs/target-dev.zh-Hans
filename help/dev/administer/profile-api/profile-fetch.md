@@ -11,7 +11,7 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 294
+source-wordcount: 297
 ht-degree: 0%
 
 ---
@@ -22,7 +22,7 @@ ht-degree: 0%
 
 ## 使用[!DNL Experience Cloud Visitor ID] (ECID)
 
-您可以根据`ECID`获取配置文件。 HTTP方法必须是GET。
+您可以根据`ECID`获取配置文件。 HTTP方法必须为GET。
 
 该URL类似于以下示例：
 
@@ -30,7 +30,7 @@ ht-degree: 0%
 https://<clientCode>.tt.omtrdc.net/rest/v1/profiles/marketingCloudVisitorId/<ECID>?client=<clientCode>
 ```
 
-将`<clientCode>`替换为您的[!DNL Target] [!UICONTROL Client Code]，将`<ECID>`替换为您的[!DNL Experience Cloud Visitor ID] ([!DNL Marketing Cloud Visitor ID])。
+将`<clientCode>`替换为您的[!DNL Target] [!UICONTROL 客户端代码]，将`<ECID>`替换为您的[!DNL Experience Cloud Visitor ID] ([!DNL Marketing Cloud Visitor ID])。
 
 ## 使用tntid
 

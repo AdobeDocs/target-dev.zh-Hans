@@ -12,14 +12,14 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 180
+source-wordcount: 184
 ht-degree: 0%
 
 ---
 
 # 用户权限(Premium)
 
-[!DNL Adobe]允许客户在使用Adobe Target时管理其用户的权限。 为了成功进行[!UICONTROL Adobe Target Delivery API]调用，必须在API调用中传递具有正确权限的令牌。 要了解有关用户权限以及如何检索令牌的更多信息，请访问[本文档](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/enterprise/properties-overview.html?lang=zh-Hans)。
+[!DNL Adobe]允许客户在使用Adobe Target时管理其用户的权限。 为了成功进行[!UICONTROL Adobe Target交付API]调用，必须在API调用中传递具有正确权限的令牌。 要了解有关用户权限以及如何检索令牌的更多信息，请访问[本文档](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/enterprise/properties-overview.html?lang=zh-Hans)。
 
 ```
 curl -X POST \

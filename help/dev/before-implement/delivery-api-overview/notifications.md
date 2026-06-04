@@ -1,6 +1,6 @@
 ---
 title: Adobe Target投放API通知
-description: 如何使用[!UICONTROL Adobe Target Delivery API]触发通知？
+description: 如何使用[!UICONTROL Adobe Target投放API]触发通知？
 keywords: 投放api
 exl-id: 711388fd-2c1f-4ca4-939f-c56dc4bdc04a
 feature: APIs/SDKs
@@ -13,7 +13,7 @@ topic_v2:
   - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 414
+source-wordcount: 426
 ht-degree: 0%
 
 ---
@@ -26,7 +26,7 @@ ht-degree: 0%
 
 ## 预取Mbox的通知
 
-可以通过单个投放调用发送一个或多个通知。 确定需要跟踪的量度是每个mbox的`click`还是`display`，以便能够正确反映通知的`type`。 此外，请为每个通知传入`id`，以便可以确定是否通过[!UICONTROL &#x200B; Adobe Target Delivery API]正确发送了通知。 `timestamp`转发到[!DNL Target]也很重要，以指示给定mbox何时发生`click`或`display`以用于报告。
+可以通过单个投放调用发送一个或多个通知。 确定需要跟踪的量度是每个mbox的`click`还是`display`，以便能够正确反映通知的`type`。 此外，请为每个通知传入`id`，以便您能够确定是否通过[!UICONTROL &#x200B; Adobe Target投放API]正确发送了通知。 `timestamp`转发到[!DNL Target]也很重要，以指示给定mbox何时发生`click`或`display`以用于报告。
 
 ```
 curl -X POST \
@@ -117,7 +117,7 @@ curl -X POST \
 
 ## 预获取视图的通知
 
-可以通过单个投放调用发送一个或多个通知。 确定需要跟踪的指标是每个mbox的`click`还是`display`，以便正确反映通知的类型。 此外，请为每个通知传入`id`，以便可以确定是否通过[!UICONTROL Adobe Target Delivery API]正确发送了通知。 时间戳也很重要以转发到[!DNL Target]，以指示针对给定视图何时发生`click`或`display`以用于报告。
+可以通过单个投放调用发送一个或多个通知。 确定需要跟踪的指标是每个mbox的`click`还是`display`，以便正确反映通知的类型。 此外，请为每个通知传入`id`，以便您能够确定是否通过[!UICONTROL Adobe Target投放API]正确发送了通知。 时间戳也很重要以转发到[!DNL Target]，以指示针对给定视图何时发生`click`或`display`以用于报告。
 
 ```
 curl -X POST \

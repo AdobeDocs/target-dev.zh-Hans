@@ -1,6 +1,6 @@
 ---
 keywords: 实施， javascript库， js， atjs，设备上决策，设备上决策， at.js，设备上，设备实施0
-description: 了解如何使用at.js库执行[!UICONTROL on-device decisioning]
+description: 了解如何使用at.js库执行[!UICONTROL 设备上决策]
 title: “设备上决策”如何与at.js JavaScript库一起使用？
 feature: at.js
 exl-id: bd0e062f-c259-46f3-adba-e380af058ac8
@@ -26,24 +26,24 @@ topic_v2:
   - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 3621
+source-wordcount: 3835
 ht-degree: 4%
 
 ---
 
-# 用于at.js的[!UICONTROL On-device decisioning]
+# 针对at.js的[!UICONTROL 设备上决策]
 
-从版本2.5.0开始，at.js提供[!UICONTROL on-device decisioning]。 [!UICONTROL On-device decisioning]允许您在浏览器上缓存[A/B测试](https://experienceleague.adobe.com/docs/target/using/activities/abtest/test-ab.html?lang=zh-Hans)和[体验定位](https://experienceleague.adobe.com/docs/target/using/activities/experience-targeting/experience-target.html?lang=zh-Hans) (XT)活动以执行内存中决策，而无需向[!DNL Adobe Target] Edge Network发送阻止网络请求。
+从版本2.5.0开始，at.js提供[!UICONTROL 设备上决策]。 [!UICONTROL 设备上决策]允许您在浏览器上缓存[A/B测试](https://experienceleague.adobe.com/docs/target/using/activities/abtest/test-ab.html?lang=zh-Hans)和[体验定位](https://experienceleague.adobe.com/docs/target/using/activities/experience-targeting/experience-target.html?lang=zh-Hans) (XT)活动，以执行内存中决策，而无需向[!DNL Adobe Target] Edge Network发送阻止网络请求。
 
 >[!NOTE]
 >
->[!UICONTROL On-device decisioning]可用于客户端和服务器端实施。 本文介绍了客户端的[!UICONTROL on-device decisioning]。 有关服务器端的[!UICONTROL on-device decisioning]的信息，请参阅服务器端实施文档[此处](../../../server-side/sdk-guides/on-device-decisioning/overview.md)。
+>[!UICONTROL 设备上决策]可用于客户端和服务器端实施。 本文介绍了客户端的[!UICONTROL 设备上决策]。 有关服务器端的[!UICONTROL 设备上决策]的信息，请参阅服务器端实施文档[此处](../../../server-side/sdk-guides/on-device-decisioning/overview.md)。
 
-[!DNL Target]还可以通过实时服务器调用，灵活地从您的实验和机器学习驱动的（ML驱动的）个性化活动中提供最相关和最新的体验。 换句话说，当性能最重要时，您可以选择使用[!UICONTROL on-device decisioning]。 但是，当需要最相关、最新且ML驱动的体验时，可以改为进行服务器调用。
+[!DNL Target]还可以通过实时服务器调用，灵活地从您的实验和机器学习驱动的（ML驱动的）个性化活动中提供最相关和最新的体验。 换句话说，当性能最重要时，您可以选择使用[!UICONTROL 设备上决策]。 但是，当需要最相关、最新且ML驱动的体验时，可以改为进行服务器调用。
 
-## [!UICONTROL on-device decisioning]有哪些好处？
+## [!UICONTROL 设备上决策]有哪些好处？
 
-[!UICONTROL on-device decisioning]的优点包括：
+[!UICONTROL 设备上决策]的好处包括：
 
 * **提供超快的决策和体验。** 在内存中和浏览器上执行分段和决策，以避免阻止网络请求。
 * **增强应用程序性能。** 在不影响最终用户体验的情况下运行实验并向客户和用户提供个性化。
@@ -52,21 +52,21 @@ ht-degree: 4%
 
 ## 受支持的功能
 
-[!DNL Adobe Target] JS SDK允许客户灵活选择数据的性能和新鲜度以供决策。 换言之，如果通过机器学习提供最相关且最引人入胜的个性化内容对您来说最重要，则应进行实时服务器调用。 但是，当性能更加关键时，应该做出设备上决策和内存决策。 要使[!UICONTROL on-device decisioning]正常工作，请参阅支持的功能列表：
+[!DNL Adobe Target] JS SDK允许客户灵活选择数据的性能和新鲜度以供决策。 换言之，如果通过机器学习提供最相关且最引人入胜的个性化内容对您来说最重要，则应进行实时服务器调用。 但是，当性能更加关键时，应该做出设备上决策和内存决策。 要使[!UICONTROL 设备上决策]正常工作，请参阅支持的功能列表：
 
 * 活动类型
 * 受众定位
 * 分配方法
 
-有关详细信息，请参阅[!UICONTROL on-device decisioning][&#128279;](/help/dev/implement/client-side/atjs/on-device-decisioning/supported-features.md)的支持的功能。
+有关详细信息，请参阅[!UICONTROL 设备上决策][&#128279;](/help/dev/implement/client-side/atjs/on-device-decisioning/supported-features.md)的支持的功能。
 
-## [!UICONTROL on-device decisioning]的工作原理是什么？
+## [!UICONTROL 设备上决策]如何工作？
 
-在启用[!UICONTROL on-device decisioning]的情况下部署和初始化at.js时，将从最接近访客的Akamai CDN下载并缓存访客浏览器本地的一个[规则工件](/help/dev/implement/client-side/atjs/on-device-decisioning/rule-artifact.md)，其中包含用于A/B和XT活动、受众及资产的[!UICONTROL on-device decisioning]。 当从at.js发出检索体验的请求时，将根据在缓存的规则工件中编码的元数据，在内存中做出有关返回哪个体验的决策。
+在启用了[!UICONTROL 设备上决策]的情况下部署和初始化at.js时，将从距离访客最近的Akamai CDN下载并缓存访客浏览器本地的[规则工件](/help/dev/implement/client-side/atjs/on-device-decisioning/rule-artifact.md)，其中包括用于A/B和XT活动、受众及资产的[!UICONTROL 设备上决策]。 当从at.js发出检索体验的请求时，将根据在缓存的规则工件中编码的元数据，在内存中做出有关返回哪个体验的决策。
 
 ## 决策方法
 
-通过[!UICONTROL on-device decisioning]，[!DNL Target]引入了一个名为“决策方法”的新设置。 决策方法设置指示at.js如何交付您的体验。 决策方法具有三个值：
+通过[!UICONTROL 设备上决策]，[!DNL Target]引入了一个名为“决策方法”的新设置。 决策方法设置指示at.js如何交付您的体验。 决策方法具有三个值：
 
 * 仅服务器端
 * 仅限设备端
@@ -109,13 +109,13 @@ ht-degree: 4%
 
 ### 仅限设备端
 
-“仅限设备端”是必须在at.js 2.5.0及更高版本中设置的决策方法，当时[!UICONTROL on-device decisioning]只应在您的网页中使用。
+“仅限设备上”是必须在at.js 2.5.0及更高版本中设置的决策方法，而[!UICONTROL 设备上决策]只能在您的网页中使用。
 
-[!UICONTROL On-device decisioning]能够以惊人的速度交付您的体验和个性化活动，因为决策是从包含您所有符合[!UICONTROL on-device decisioning]条件的活动的缓存规则工件做出的。
+[!UICONTROL 设备上决策]能够以惊人的速度提供您的体验和个性化活动，因为决策来自缓存的规则构件，该构件包含您所有符合[!UICONTROL 设备上决策]条件的活动。
 
-要了解有关哪些活动符合[!UICONTROL on-device decisioning]条件的更多信息，请参阅[!UICONTROL on-device decisioning][&#128279;](/help/dev/implement/client-side/atjs/on-device-decisioning/supported-features.md)中的支持的功能。
+要了解哪些活动符合[!UICONTROL 设备上决策]的条件，请参阅[!UICONTROL 设备上决策][&#128279;](/help/dev/implement/client-side/atjs/on-device-decisioning/supported-features.md)中的支持的功能。
 
-仅当在所有需要Target决策的页面上的性能都非常关键时，才应使用此决策方法。 此外，请记住，选择此决策方法时，将不会交付或执行您不符合[!UICONTROL on-device decisioning]条件的[!DNL Target]活动。 at.js库2.5.0及更高版本配置为仅查找缓存的规则工件以做出决策。
+仅当在所有需要Target决策的页面上的性能都非常关键时，才应使用此决策方法。 此外，请记住，选择此决策方法时，您不符合[!UICONTROL 设备上决策]条件的[!DNL Target]活动将不会交付或执行。 at.js库2.5.0及更高版本配置为仅查找缓存的规则工件以做出决策。
 
 下图说明了您的访客、浏览器、at.js 2.5.0+和Akamai CDN之间的交互。 Akamai CDN将在访客首次访问时缓存规则构件。 对于新访客进行的首次页面访问，必须从Akamai CDN下载JSON规则构件，才能在访客的浏览器中缓存到本地。 下载JSON规则工件后，将立即做出决策，而无需阻止网络调用。 以下流程图可捕获新访客。
 
@@ -127,7 +127,7 @@ ht-degree: 4%
 
 >[!NOTE]
 >
->[!DNL Adobe Target]管理员服务器使所有符合[!UICONTROL on-device decisioning]条件的活动符合条件，生成JSON规则工件并将其传播到Akamai CDN。 系统持续监控您的活动是否有更新，以输出新的JSON规则工件并传播到Akamai CDN。
+>[!DNL Adobe Target]管理员服务器确定您所有符合[!UICONTROL 设备上决策]条件的活动的资格，生成JSON规则工件并将其传播到Akamai CDN。 系统持续监控您的活动是否有更新，以输出新的JSON规则工件并传播到Akamai CDN。
 
 | 步骤 | 描述 |
 | --- | --- |
@@ -154,7 +154,7 @@ ht-degree: 4%
 
 >[!NOTE]
 >
->[!DNL Adobe Target]管理员服务器使所有符合[!UICONTROL on-device decisioning]条件的活动符合条件，生成JSON规则工件并将其传播到Akamai CDN。 系统持续监控您的活动是否有更新，以输出新的JSON规则工件并传播到Akamai CDN。
+>[!DNL Adobe Target]管理员服务器确定您所有符合[!UICONTROL 设备上决策]条件的活动的资格，生成JSON规则工件并将其传播到Akamai CDN。 系统持续监控您的活动是否有更新，以输出新的JSON规则工件并传播到Akamai CDN。
 
 | 步骤 | 描述 |
 | --- | --- |
@@ -171,11 +171,11 @@ ht-degree: 4%
 
 ### 混合
 
-混合决策方法是必须在at.js 2.5.0及更高版本中设置的决策方法，当时[!UICONTROL on-device decisioning]和需要对[!DNL Adobe Target] Edge网络进行网络调用的活动都必须执行。
+混合决策方法必须在at.js 2.5.0及更高版本中设置，以便同时执行[!UICONTROL 设备上决策]和需要对[!DNL Adobe Target] Edge网络进行网络调用的活动。
 
-当您同时管理[!UICONTROL on-device decisioning]活动和服务器端活动时，考虑如何在您的页面上部署和预配[!DNL Target]时，可能会有点复杂和繁琐。 使用混合决策方法，[!DNL Target]知道何时必须对[!DNL Adobe Target] Edge网络进行服务器调用以执行需要服务器端执行的活动，以及何时仅执行设备上决策。
+当您同时管理[!UICONTROL 设备上决策]活动和服务器端活动时，考虑如何在您的页面上部署和预配[!DNL Target]时，可能会比较复杂和繁琐。 使用混合决策方法，[!DNL Target]知道何时必须对[!DNL Adobe Target] Edge网络进行服务器调用以执行需要服务器端执行的活动，以及何时仅执行设备上决策。
 
-JSON规则工件包含元数据，用于通知at.js mbox是正在运行的服务器端活动还是[!UICONTROL on-device decisioning]活动。 此决策方法可确保通过[!UICONTROL on-device decisioning]快速完成您想要交付的活动，对于需要更强大的ML驱动型个性化的活动，这些活动将通过[!DNL Adobe Target] Edge网络完成。
+JSON规则工件包含元数据，用于通知at.js mbox是正在运行的服务器端活动还是[!UICONTROL 设备上决策]活动。 此决策方法可确保通过[!UICONTROL 设备上决策]快速完成您想要交付的活动，对于需要更强大的ML驱动型个性化的活动，这些活动将通过[!DNL Adobe Target] Edge网络完成。
 
 下图说明了访客与浏览器、at.js 2.5.0及更高版本、Akamai CDN和[!DNL Adobe Target]Edge Network之间的交互，其中新访客是首次访问您的页面。 此图的要点是，在通过[!DNL Adobe Target] Edge网络做出决策时，将异步下载JSON规则构件。
 
@@ -189,7 +189,7 @@ JSON规则工件包含元数据，用于通知at.js mbox是正在运行的服务
 
 >[!NOTE]
 >
->[!DNL Adobe Target]管理员服务器使所有符合[!UICONTROL on-device decisioning]条件的活动符合条件，生成JSON规则工件并将其传播到Akamai CDN。 系统持续监控您的活动是否有更新，以输出新的JSON规则工件并传播到Akamai CDN。
+>[!DNL Adobe Target]管理员服务器确定您所有符合[!UICONTROL 设备上决策]条件的活动的资格，生成JSON规则工件并将其传播到Akamai CDN。 系统持续监控您的活动是否有更新，以输出新的JSON规则工件并传播到Akamai CDN。
 
 | 步骤 | 描述 |
 | --- | --- |
@@ -219,7 +219,7 @@ JSON规则工件包含元数据，用于通知at.js mbox是正在运行的服务
 
 >[!NOTE]
 >
->[!DNL Adobe Target]管理员服务器使所有符合[!UICONTROL on-device decisioning]条件的活动符合条件，生成JSON规则工件并将其传播到Akamai CDN。 系统持续监控您的活动是否有更新，以输出新的JSON规则工件并传播到Akamai CDN。
+>[!DNL Adobe Target]管理员服务器确定您所有符合[!UICONTROL 设备上决策]条件的活动的资格，生成JSON规则工件并将其传播到Akamai CDN。 系统持续监控您的活动是否有更新，以输出新的JSON规则工件并传播到Akamai CDN。
 
 | 步骤 | 描述 |
 | --- | --- |
@@ -235,36 +235,36 @@ JSON规则工件包含元数据，用于通知at.js mbox是正在运行的服务
 | 10 | 加载整个网页。 |
 | 11 | Analytics 数据会发送到数据收集服务器。 目标数据会通过SDID匹配到Analytics数据，并且会进行相应处理以保存到Analytics报表存储中。 然后，便可以在Analytics和[!DNL Target]中通过[!UICONTROL Analytics for Target] (A4T)报表查看Analytics数据。 |
 
-## 如何启用[!UICONTROL on-device decisioning]？
+## 如何启用[!UICONTROL 设备上决策]？
 
-[!UICONTROL On-device decisioning]适用于使用At.js 2.5.0及更高版本的所有[!DNL Target]客户。
+[!UICONTROL 设备上决策]适用于使用At.js 2.5.0及更高版本的所有[!DNL Target]客户。
 
-要启用[!UICONTROL on-device decisioning]：
+要启用[!UICONTROL 设备上决策]，请执行以下操作：
 
 >[!NOTE]
 >
 >您必须具有管理员或审批者[用户角色](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/user-management.html?lang=zh-Hans)才能启用或禁用“设备端决策”切换开关。
 
-1. 单击&#x200B;**[!UICONTROL Administration]** > **[!UICONTROL Implementation]** > **[!UICONTROL Account details]**。
-1. 在&#x200B;**[!UICONTROL Account details]**&#x200B;下，将&#x200B;**[!UICONTROL On-Device Decisioning]**&#x200B;切换开关滑动到“开”位置。
+1. 单击&#x200B;**[!UICONTROL 管理]** > **[!UICONTROL 实施]** > **[!UICONTROL 帐户详细信息]**。
+1. 在&#x200B;**[!UICONTROL 帐户详细信息]**&#x200B;下，将&#x200B;**[!UICONTROL 设备上决策]**&#x200B;切换开关滑动到“开”位置。
 
-   ![[!UICONTROL On-device decisioning]切换](assets/on-device-decisioning-toggle.png)
+   ![[!UICONTROL 设备上决策]切换](assets/on-device-decisioning-toggle.png)
 
-   如果启用了[!UICONTROL on-device decisioning]，则会显示“将所有现有的[!UICONTROL on-device decisioning]合格活动包含在项目中”选项。
-1. （视情况而定）如果您希望所有符合[!UICONTROL on-device decisioning]条件的实时[!DNL Target]活动自动包含在项目中，请将切换开关滑动到“开”位置。
+   如果启用了[!UICONTROL 设备上决策]，则会显示“将所有现有的[!UICONTROL 设备上决策]符合条件的活动包含在项目中”选项。
+1. （视情况而定）如果您希望所有符合[!UICONTROL 设备上决策]条件的实时[!DNL Target]活动自动包含在项目中，请将切换开关滑动到“开”位置。
 
-   将此切换保留为关闭表示您必须重新创建和激活任何[!UICONTROL on-device decisioning]活动，才能将其包含在生成的规则工件中。 换言之，在打开设备上决策切换开关之前处于实时状态的任何活动均不包含在规则工件中。
+   将此切换保留为关闭表示您必须重新创建和激活任何[!UICONTROL 设备上决策]活动，才能将其包含在生成的规则工件中。 换言之，在打开设备上决策切换开关之前处于实时状态的任何活动均不包含在规则工件中。
 
 启用“设备端决策”切换后，[!DNL Target]开始为您的客户端生成和传播[规则工件](/help/dev/implement/client-side/atjs/on-device-decisioning/rule-artifact.md)。
 
 >[!WARNING]
 >
->在初始化[!DNL Adobe Target] SDK以使用[!UICONTROL on-device decisioning]之前，请确保启用此切换功能。 规则工件首先需要生成并传播到Akamai CDN才能使[!UICONTROL on-device decisioning]正常工作。 第一个规则工件生成并传播到Akamai CDN可能需要五到十分钟。
+>在初始化[!DNL Adobe Target] SDK以使用[!UICONTROL 设备上决策]之前，请确保启用此切换功能。 规则工件首先需要生成并传播到Akamai CDN，以便[!UICONTROL 设备上决策]正常工作。 第一个规则工件生成并传播到Akamai CDN可能需要五到十分钟。
 
-## 如何配置at.js 2.5.0及更高版本以使用[!UICONTROL on-device decisioning]？
+## 如何配置at.js 2.5.0及更高版本以使用[!UICONTROL 设备上决策]？
 
-1. 单击&#x200B;**[!UICONTROL Administration]** > **[!UICONTROL Implementation]** > **[!UICONTROL Account details]**。
-1. 在&#x200B;**[!UICONTROL Implementation Methods]** > **[!UICONTROL Main Implementation Method]**&#x200B;下，单击您的at.js版本（必须是at.js 2.5.0或更高版本）旁边的&#x200B;**[!UICONTROL Edit]**。
+1. 单击&#x200B;**[!UICONTROL 管理]** > **[!UICONTROL 实施]** > **[!UICONTROL 帐户详细信息]**。
+1. 在&#x200B;**[!UICONTROL 实施方法]** > **[!UICONTROL 主要实施方法]**&#x200B;下，单击您的at.js版本（必须是at.js 2.5.0或更高版本）旁边的&#x200B;**[!UICONTROL 编辑]**。
 
    ![编辑主要实施方法设置](assets/main-implementation-method.png)
 
@@ -327,33 +327,33 @@ adobe.target.getOffers({
 
 ### 工件缓存TTL
 
-Target表示您的活动符合[!UICONTROL on-device decisioning]作为包含元数据、规则和条件的对象的条件。 此工件将缓存在Akamai CDN上。 在用户首次访问期间，用户的浏览器将下载并缓存表示您的[!UICONTROL on-device decisioning]活动的工件。
+Target将您符合[!UICONTROL 设备上决策]条件的活动表示为包含元数据、规则和条件的项目。 此工件将缓存在Akamai CDN上。 在用户首次访问期间，用户的浏览器将下载并缓存表示您的[!UICONTROL 设备上决策]活动的工件。
 
 在后续访问您的网站时，浏览器会自动检查它是否必须下载新版本的工件。 这项检查会增加延迟。 工件缓存TTL定义自上次成功下载以来，您不希望浏览器检查更新的工件的分钟数。 时间范围越长，性能越好。 时间范围越短，数据新鲜度越好，但代价是增加了延迟。
 
-## 我如何知道某个活动符合[!UICONTROL on-device decisioning]条件？
+## 我如何知道某个活动具有[!UICONTROL 设备上决策]的资格？
 
-创建符合[!UICONTROL on-device decisioning]条件的活动后，活动的“概述”页面中将显示一个标记为“符合设备上决策”的标签。
+创建符合[!UICONTROL 设备上决策]条件的活动后，活动的“概述”页面中将显示一个标记为“符合设备上决策”条件的标签。
 
 活动概述页面上的![设备上决策合格标签。](assets/on-device-decisioning-eligible-label.png)
 
-此标签并不意味着该活动将始终通过[!UICONTROL on-device decisioning]交付。 仅当at.js 2.5.0及更高版本配置为使用[!UICONTROL on-device decisioning]时，此活动才会在设备上执行。 如果at.js 2.5.0及更高版本未配置为使用设备端，则此活动仍将通过从at.js发出的服务器调用进行交付。
+此标签并不意味着将始终通过[!UICONTROL 设备上决策]交付活动。 仅当at.js 2.5.0及更高版本配置为使用[!UICONTROL 设备上决策]时，此活动才会在设备上执行。 如果at.js 2.5.0及更高版本未配置为使用设备端，则此活动仍将通过从at.js发出的服务器调用进行交付。
 
-您可以通过“符合设备端决策”筛选条件，筛选在“活动”页面上符合[!UICONTROL on-device decisioning]资格的所有活动。
+您可以通过“符合设备上决策”筛选条件，筛选符合“活动”页面上[!UICONTROL 设备上决策]资格的所有活动。
 
 ![符合设备端决策条件的活动页面筛选器。](assets/on-device-decisioning-filter.png)
 
 >[!NOTE]
 >
->创建和激活符合[!UICONTROL on-device decisioning]条件的活动后，可能需要五到十分钟才能将其包含在生成并传播到Akamai CDN存在点的规则工件中。
+>创建并激活符合[!UICONTROL 设备上决策]条件的活动后，可能需要五到十分钟，该活动才会包含在生成并传播到Akamai CDN存在点的规则工件中。
 
-## 确保通过At.js 2.5.0交付我的[!UICONTROL on-device decisioning]活动的步骤摘要+?
+## 确保通过At.js 2.5.0交付我的[!UICONTROL 设备上决策]活动的步骤摘要+?
 
-1. 访问[!DNL Adobe Target] UI并导航到&#x200B;**[!UICONTROL Administration]** > **[!UICONTROL Implementation]** > **[!UICONTROL Account Details]**&#x200B;以启用&#x200B;**[!UICONTROL On-Device Decisioning]**&#x200B;切换。
-1. 启用&#x200B;**[!UICONTROL "Include all existing [!UICONTROL on-device decisioning] qualified activities in the artifact"]**&#x200B;切换。
+1. 访问[!DNL Adobe Target] UI并导航到&#x200B;**[!UICONTROL 管理]** > **[!UICONTROL 实施]** > **[!UICONTROL 帐户详细信息]**&#x200B;以启用&#x200B;**[!UICONTROL 设备上决策]**&#x200B;切换开关。
+1. 启用&#x200B;**[!UICONTROL “在工件中包含所有现有的[!UICONTROL 设备上决策]限定活动”]**&#x200B;切换开关。
 
    首个JSON规则工件生成操作最多可能需要10分钟。
 
-1. 创建并激活[!UICONTROL on-device decisioning][&#128279;](/help/dev/implement/client-side/atjs/on-device-decisioning/supported-features.md)支持的活动类型，并验证它是否符合[!UICONTROL on-device decisioning]条件。
-1. 通过at.js设置UI将&#x200B;**[!UICONTROL Decisioning Method]**&#x200B;设置为&#x200B;**[!UICONTROL "Hybrid"]**&#x200B;或&#x200B;**[!UICONTROL "On-device only"]**。
+1. 创建并激活[!UICONTROL 设备上决策][&#128279;](/help/dev/implement/client-side/atjs/on-device-decisioning/supported-features.md)支持的活动类型，并验证它是否符合[!UICONTROL 设备上决策]的条件。
+1. 通过at.js设置UI将&#x200B;**[!UICONTROL 决策方法]**&#x200B;设置为&#x200B;**[!UICONTROL “混合”]**&#x200B;或&#x200B;**[!UICONTROL “仅限设备端”]**。
 1. 下载At.js 2.5.0及更高版本并将其部署到您的页面。

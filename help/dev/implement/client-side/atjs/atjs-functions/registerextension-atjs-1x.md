@@ -1,6 +1,6 @@
 ---
 keywords: registerExtension， registerextension，注册扩展， at.js，函数，函数， clientCode， serverDomain， globalMboxName， globalMboxAutoCreate， timeout， registerExtension2
-description: 对 [!DNL Adobe Target] at.js JavaScript库使用[!UICONTROL registerExtension()]函数来注册特定扩展。 (at.js 1.x)
+description: 对 [!DNL Adobe Target] at.js JavaScript库使用[!UICONTROL registerExtension()]函数注册特定扩展。 (at.js 1.x)
 title: 如何使用[!UICONTROL registerExtension()]函数？
 feature: at.js
 exl-id: 71decf00-84c5-4914-b0cd-bb061fa6265f
@@ -17,8 +17,8 @@ topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 274
-ht-degree: 63%
+source-wordcount: 277
+ht-degree: 62%
 
 ---
 

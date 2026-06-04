@@ -14,7 +14,7 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 789
+source-wordcount: 797
 ht-degree: 9%
 
 ---
@@ -81,7 +81,7 @@ curl -X POST \
 }
 ```
 
-生成的`tntId`是`10abf6304b2714215b1fd39a870f01afc.28_20`。 请注意，在跨会话为同一用户调用[!UICONTROL Adobe Target Delivery API]时，需要使用此`tntId`。
+生成的`tntId`是`10abf6304b2714215b1fd39a870f01afc.28_20`。 请注意，在跨会话为同一用户调用[!UICONTROL Adobe Target交付API]时，需要使用此`tntId`。
 
 ## Marketing Cloud 访客 ID
 
@@ -124,7 +124,7 @@ curl -X POST \
 
 ## 第三方ID
 
-如果您的组织使用ID来识别访客，则可以使用`thirdPartyID`来交付内容。 但是，您必须为每[!UICONTROL Adobe Target Delivery API]次调用提供`thirdPartyID`。
+如果您的组织使用ID来识别访客，则可以使用`thirdPartyID`来交付内容。 但是，您必须为发出的每个[!UICONTROL Adobe Target投放API]调用提供`thirdPartyID`。
 
 ```
 curl -X POST \

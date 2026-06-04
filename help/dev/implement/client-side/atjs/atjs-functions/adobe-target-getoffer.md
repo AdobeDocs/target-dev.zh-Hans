@@ -1,6 +1,6 @@
 ---
 keywords: adobe.target.getOffer， getOffer， getoffer， get offer， at.js，函数，函数， $8
-description: 对 [!DNL Adobe Target] at.js库使用[!UICONTROL adobe.target.getOffer()]函数及其选项以触发获取 [!DNL Target] 选件的请求。
+description: 使用针对 [!DNL Adobe Target] at.js库的[!UICONTROL adobe.target.getOffer()]函数及其选项触发获取 [!DNL Target] 选件的请求。
 title: 如何使用[!UICONTROL adobe.target.getOffer()]函数？
 feature: at.js
 exl-id: 7b917d42-06e8-4838-a09d-0c4872c9beaa
@@ -19,8 +19,8 @@ topic_v2:
   - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 463
-ht-degree: 72%
+source-wordcount: 472
+ht-degree: 71%
 
 ---
 
@@ -36,11 +36,11 @@ ht-degree: 72%
 | 参数 | 对象 | 否 | Mbox 参数。 键值对这一对象具有以下结构：<P>`{ "param1": "value1", "param2": "value2"}` |
 | success | 函数 | 是 | 当我们从服务器获得响应时执行的回调函数。 success 回调函数将接收一个参数，该参数表示一组选件对象。 以下是一个success回调示例：<P>`function handleSuccess(response){......}`<P>有关详细信息，请参阅下文的“响应”。 |
 | error | 函数 | 是 | 我们遇到错误时执行的回调函数。 以下是几个出现错误的案例：<ul><li>HTTP 状态码不是 200 OK</li><li>响应无法解析。 例如，我们不当地构造了 JSON，或者构造了 HTML 而不是 JSON。</li><li>响应包含“error”键值。 例如，在边缘服务器上引发异常，无法正确处理请求。 当mbox被阻止，我们无法为其检索任何内容等情况时，我们可能会收到错误。error回调函数将收到两个参数： status和error。 以下是一个错误回调示例： `function handleError(status, error){......}`</li></ul>有关详细信息，请参阅下文的“错误响应”。 |
-| timeout | 数值 | 否 | 以毫秒为单位的超时时间。 如果未指定，将使用 at.js 中的默认超时设置。<P>可以在[!UICONTROL Administration] > [!UICONTROL Implementation]下的[!DNL Target] UI中设置默认超时。 |
+| timeout | 数值 | 否 | 以毫秒为单位的超时时间。 如果未指定，将使用 at.js 中的默认超时设置。<P>可以从[!UICONTROL 管理] > [!UICONTROL 实现]下的[!DNL Target] UI设置默认超时。 |
 
 ## 示例
 
-正在添加带[!UICONTROL getOffer()]的参数并使用[!UICONTROL applyOffer()]进行成功处理：
+正在通过[!UICONTROL getOffer()]添加参数并使用[!UICONTROL applyOffer()]进行成功处理：
 
 ```javascript {line-numbers="true"}
 adobe.target.getOffer({   

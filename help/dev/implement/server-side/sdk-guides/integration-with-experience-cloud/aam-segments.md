@@ -1,6 +1,6 @@
 ---
-title: 与Experience Cloud AAM Segments集成
-description: 与Experience Cloud集成，Audience Manager集成
+title: 与Experience Cloud AAM区段集成
+description: 与Experience Cloud的集成、Audience Manager集成
 keywords: 投放api，服务器端，服务器端，集成， audience manager， aam
 exl-id: c21e0200-23ba-4a0b-adf4-38e03c087f00
 feature: Implement Server-side

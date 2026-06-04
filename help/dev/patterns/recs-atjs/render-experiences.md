@@ -20,7 +20,7 @@ topic_v2:
   - id: d3cdead0-685a-4489-9250-4bb709942f66
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 1060
+source-wordcount: 1144
 ht-degree: 3%
 
 ---
@@ -39,7 +39,7 @@ ht-degree: 3%
 
 ## 渲染体验图 {#diagram}
 
-只有当您启用了[!UICONTROL Automatic Page Load Request]时，at.js提供的现成自动闪烁处理才有意义。 此选项在从[!DNL Target]获取体验时隐藏整个HTML正文。 在这种情况下，您有责任处理闪烁。 搜索可用于闪烁处理的实施模式以获取指导。
+只有当您启用了[!UICONTROL 自动页面加载请求]时，at.js提供的现成自动闪烁处理才有意义。 此选项在从[!DNL Target]获取体验时隐藏整个HTML正文。 在这种情况下，您有责任处理闪烁。 搜索可用于闪烁处理的实施模式以获取指导。
 
 >[!NOTE]
 >
@@ -94,9 +94,9 @@ ht-degree: 3%
 
 **可用标准**
 
-* [!UICONTROL People Who Viewed These, Viewed Those]
-* [!UICONTROL People Who Viewed These, Bought Those]
-* [!UICONTROL People Who Bought These, Bought Those]
+* [!UICONTROL 查看了这些项目，也查看了这些项目的人]
+* [!UICONTROL 查看了这些项目，但购买了那些项目的人]
+* [!UICONTROL 购买了这些商品的人，也购买了这些商品]
 
 **需要实体参数**
 
@@ -118,13 +118,13 @@ ht-degree: 3%
 
 **可用标准**
 
-* [!UICONTROL Most Viewed Across the Site]
-* [!UICONTROL Most Viewed by Category]
-* [!UICONTROL Most Viewed by Item Attribute]
-* [!UICONTROL Top Sellers Across the Site]
-* [!UICONTROL Top Sellers by Category]
-* [!UICONTROL Top Sellers by Item Attribute]
-* [!UICONTROL Top by Analytics Metric]
+* 整个网站查看的次数最多
+* 按类别查看的次数最多
+* [!UICONTROL 按项目属性查看的次数最多]
+* [!UICONTROL 网站上的最畅销商品]
+* [!UICONTROL 按类别划分的最畅销商品]
+* 按项目属性[!UICONTROL 最畅销商品]
+* [!UICONTROL 按Analytics指标排名]
 
 **需要实体参数**
 
@@ -147,10 +147,10 @@ ht-degree: 3%
 
 **可用标准**
 
-* [!UICONTROL People Who Viewed This, Viewed That]
-* [!UICONTROL People Who Viewed This, Bought That]
-* [!UICONTROL People Who Bought This, Bought That]
-* [!UICONTROL Items with Similar Attributes]
+* [!UICONTROL 查看了这个项目，也查看了那个项目的人]
+* [!UICONTROL 查看了这个项目，但购买了那个项目的人]
+* [!UICONTROL 购买了这个项目，也购买了那个项目的人]
+* [!UICONTROL 具有相似属性的项目]
 
 **需要实体参数**
 
@@ -173,8 +173,8 @@ ht-degree: 3%
 
 **可用标准**
 
-* [!UICONTROL Recently Viewed Items]
-* [!UICONTROL Recommended for You]
+* [!UICONTROL 最近查看的项目]
+* [!UICONTROL 为您推荐]
 
 **需要实体参数**
 
@@ -196,7 +196,7 @@ ht-degree: 3%
 
 **可用标准**
 
-* [!UICONTROL Custom algorithm]
+* [!UICONTROL 自定义算法]
 
 **需要实体参数**
 

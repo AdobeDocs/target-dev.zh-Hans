@@ -19,8 +19,8 @@ topic_v2:
   - id: c1579802-ddd4-4214-8a91-97b2066abe11
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 309
-ht-degree: 32%
+source-wordcount: 316
+ht-degree: 31%
 
 ---
 
@@ -34,7 +34,7 @@ ht-degree: 32%
 
 您可以通过向活动中添加 URL 规则来限制活动运行的位置。 有关详细信息，请参阅[在相似页面上包含相同体验](https://experienceleague.adobe.com/docs/target/using/experiences/vec/temtest.html?lang=zh-Hans)。
 
-您还可以在页面上使用[targetPageParams](/help/dev/implement/client-side/atjs/atjs-functions/targetpageparams.md)来传递参数，然后在[!UICONTROL Visual Experience Composer] (VEC)的“配置URL”部分选择这些参数，或者通过在[!UICONTROL Form-Based Experience Composer]中将参数添加为“细化”来选择这些参数。
+您还可以在页面上使用[targetPageParams](/help/dev/implement/client-side/atjs/atjs-functions/targetpageparams.md)来传递参数，然后在[!UICONTROL 可视化体验编辑器] (VEC)的“配置URL”部分选择这些参数，或者通过在基于表单的体验编辑器中将参数添加为“细化”来选择这些参数。
 
 ## 如何在[!DNL Target]全局mbox中传递收入数据？
 

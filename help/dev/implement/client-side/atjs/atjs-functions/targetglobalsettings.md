@@ -1,6 +1,6 @@
 ---
 keywords: serverstate， targetGlobalSettings， targetglobalsettings， globalSettings， globalsettings，全局设置， at.js，函数，函数， clientCode， clientcode， serverDomain， serverdomain， cookieDomain， serverstate5， serverstate6， serverstate7， serverstate8， serverstate9， targetGlobalSettings0， targetGlobalSettings1， targetGlobalSettings2， targetGlobalSettings5， cookiedomain， crossCross域， cross域， cross域timeout， globalMboxAutoCreate， visitorApiTimeout， defaultContentHiddenStyle， defaultContentVisibleStyle， bodyHidingEnabled， imsOrgId， secureOnly， overrideMboxEdgeServerTimeout， cookiedomain5， cookiedomain6， cookiedomain7， cookiedomain8， cookiomain9， crossDomain0， crossCrossDomain1， crossCrossDomain1， crossCrossDomain2， crossCrossCrossDomain3， cross crossDomain4， crossDomain5， optoutEnabled， optout， opt out， selectorsPollingTimeout， dataProviders， Hybrid Personalization， deviceIdLifetime
-description: 对 [!DNL Adobe Target] at.js JavaScript库使用[!UICONTROL targetGlobalSettings()]函数来覆盖设置，而不使用 [!DNL Target] UI或REST API。
+description: 对 [!DNL Adobe Target] at.js JavaScript库使用[!UICONTROL targetGlobalSettings()]函数替代使用 [!DNL Target] UI或REST API来覆盖设置。
 title: 如何使用[!UICONTROL targetGlobalSettings()]函数？
 feature: at.js
 exl-id: f6218313-6a70-448e-8555-b7b039e64b2c
@@ -24,7 +24,7 @@ topic_v2:
   - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 2702
+source-wordcount: 2705
 ht-degree: 17%
 
 ---

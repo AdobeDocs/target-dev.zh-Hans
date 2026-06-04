@@ -16,16 +16,16 @@ topic_v2:
   - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 1316
+source-wordcount: 1321
 ht-degree: 2%
 
 ---
 
 # 模型API概述
 
-模型API（也称为阻止列表API）使用户能够查看和管理机器学习模型中用于[!UICONTROL Automated Personalization] (AP)和[!DNL Auto-Target] (AT)活动的功能的列表。 如果用户希望排除模型用于AP或AT活动的功能，可以使用模型API将该功能添加到“”中。
+模型API（也称为API）使用户能够查看和管理机器学习模型中用于[!UICONTROL Automated Personalization] (AP)和[!DNL Auto-Target] (AT)活动的功能的列表。 如果用户希望排除模型用于AP或AT活动的功能，可以使用模型API将该功能添加到“”中。
 
-**[!UICONTROL blocklist]**&#x200B;定义将由[!DNL Adobe Target]从其机器学习模型中排除的功能集。 有关功能的详细信息，请参阅[机器学习算法 [!DNL Target] 使用的数据](https://experienceleague.adobe.com/docs/target/using/activities/automated-personalization/ap-data.html?lang=zh-Hans)。
+**[!UICONTROL 阻止列表]**&#x200B;定义将由[!DNL Adobe Target]从其机器学习模型中排除的功能集。 有关功能的详细信息，请参阅[机器学习算法 [!DNL Target] 使用的数据](https://experienceleague.adobe.com/docs/target/using/activities/automated-personalization/ap-data.html?lang=zh-Hans)。
 
 可以按活动（活动级别）定义阻止列表，也可以为[!DNL Target]帐户内的所有活动（全局级别）定义活动。
 
@@ -113,7 +113,7 @@ GET https://mc.adobe.io/<tenant>/target/models/features/<campaignId>
 
 **[!UICONTROL externalName]**&#x200B;是某个功能的用户友好名称。 它由[!DNL Target]创建，此值可能会随着时间的推移而改变。 用户可以在[Personalization Insights报表](https://experienceleague.adobe.com/docs/target/using/reports/insights/personalization-insights-reports.html?lang=zh-Hans)中查看这些用户友好的名称。
 
-**[!UICONTROL internalName]**&#x200B;是功能的实际标识符。 它也是由[!DNL Target]创建的，但无法更改。 为了确定要阻止列表的特征，需要参照此值。
+**[!UICONTROL internalName]**&#x200B;是该功能的实际标识符。 它也是由[!DNL Target]创建的，但无法更改。 为了确定要阻止列表的特征，需要参照此值。
 
 请注意，为了使功能列表填入值（即，为了使其非空），活动：
 
@@ -154,7 +154,7 @@ GET https://mc.adobe.io/<tenant>/target/models/features/blockList/<campaignId>
 
 ## 步骤3：将功能添加到活动的阻止列表 {#step3}
 
-要将功能添加到GET，请将请求从PUT更改为列入阻止列表，并修改请求正文以根据需要指定`blockedFeatureSources`或`blockedFeatures`。
+要将功能添加到PUT，请将请求从GET更改为PUT，并修改请求正文以根据需要指定`blockedFeatureSources`或`blockedFeatures`。
 
 * 请求正文需要`blockedFeatures`或`blockedFeatureSources`。 两者均可包括在内。
 * 使用从`internalName`中标识的值填充`blockedFeatures`。 请参阅[步骤1](#step1)。
@@ -212,7 +212,7 @@ PUT https://mc.adobe.io/<tenant>/target/models/features/blockList/<campaignId>
 
 ![步骤 3](assets/models-api-step-3.png)
 
-请注意，在列入阻止列表功能后，建议您再次执行[步骤2](#step2) (GET阻止列表)来验证更新的。 验证结果是否按预期显示（验证结果是否包含从最新PUT请求添加的功能）。
+请注意，在列入阻止列表功能后，建议您再次执行[步骤2](#step2)来验证更新的（获取）。 验证结果是否按预期显示（验证结果是否包含从最新PUT请求添加的功能）。
 
 ## 步骤4：（可选）取消阻止 {#step4}
 
@@ -246,7 +246,7 @@ PUT https://mc.adobe.io/<tenant>/target/models/features/blockList/<campaignId>
 
 ![步骤 4](assets/models-api-step-4.png)
 
-与往常一样，修改后，建议您再次执行[步骤2](#step2) （GET的验证列表包含预期的功能）。 在此处的示例中，用户正在验证其阻止列表现在是否为空。
+与往常一样，修改后，建议您再次执行[步骤2](#step2) （获取阻止列表以验证列表是否按预期包含功能）。 在此处的示例中，用户正在验证其阻止列表现在是否为空。
 
 ![步骤4b](assets/models-api-step-4b.png)
 
@@ -293,7 +293,7 @@ PUT https://mc.adobe.io/<tenant>/target/models/features/blockList/global
 
 问题：以上代码示例不是多余的吗？
 
-回答：是。 对于以值开头为“AAM”的功能，如果同时阻止源为“AAM”的所有功能，则是多余的。 最终结果是所有源自AAM （Experience Cloud区段）的功能都将被阻止。 因此，如果目标是阻止来自Experience Cloud区段的所有功能，则无需在上例中以“AAM”开头单独指定某些功能。
+回答：是。 对于以值开头为“AAM”的功能，如果同时阻止源为“AAM”的所有功能，则是多余的。 最终结果是所有源自AAM（Experience Cloud区段）的功能都将被阻止。 因此，如果目标是阻止来自Experience Cloud区段的所有功能，则无需在上例中单独指定以“AAM”开头的特定功能。
 
 最后步骤：无论是在活动级别还是全局级别，都建议您在修改活动后验证URL，以确保该URL包含所需的值。 将`PUT`更改为`GET`以执行此操作。
 

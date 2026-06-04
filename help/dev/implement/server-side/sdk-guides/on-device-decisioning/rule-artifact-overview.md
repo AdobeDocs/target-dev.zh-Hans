@@ -1,6 +1,6 @@
 ---
 title: 了解设备上决策规则构件
-description: 了解如何使用规则构件，它是 [!DNL Adobe Target] [!UICONTROL on-device decisioning]活动的JSON表示形式。
+description: 了解如何使用规则构件，它是 [!DNL Adobe Target] [!UICONTROL 设备上决策]活动的JSON表示形式。
 feature: APIs/SDKs
 exl-id: 3dfb08df-eaa9-43d4-b009-e5f64c3a96d7
 TQID: https://experienceleague.adobe.com/mPzCK-vBYFAQnslX-8FPsBaeSiYtyxjZv76anbpHWuE
@@ -16,14 +16,14 @@ topic_v2:
   - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
 source-git-commit: 86209eb483ca69d40615c632ba435d27fec78f36
 workflow-type: tm+mt
-source-wordcount: 266
+source-wordcount: 277
 ht-degree: 0%
 
 ---
 
 # 规则工件概述
 
-规则工件是[!DNL Adobe Target] [!UICONTROL on-device decisioning]活动的JSON表示形式。 它由[!DNL Adobe Target]生成并传播到Akamai CDN，以确保有一个尽可能接近最终用户的规则工件。 它包含元数据，可确保准确执行和交付活动，同时允许通过事件跟踪进行实时分析。 [!DNL Adobe Target] SDK的配置方式可允许自动管理规则构件，根据用户指定的时间间隔可下载或更新该构件。 此外，您还可以使用分布式内存缓存系统（如[Memcached](https://memcached.org/)）维护自己的规则工件的本地副本，以初始化[!DNL Adobe Target] SDK，以便无状态服务器可以立即处理请求。 要了解有关这些选项的更多信息，请参阅以下指南：
+规则工件是[!DNL Adobe Target] [!UICONTROL 设备上决策]活动的JSON表示形式。 它由[!DNL Adobe Target]生成并传播到Akamai CDN，以确保有一个尽可能接近最终用户的规则工件。 它包含元数据，可确保准确执行和交付活动，同时允许通过事件跟踪进行实时分析。 [!DNL Adobe Target] SDK的配置方式可允许自动管理规则构件，根据用户指定的时间间隔可下载或更新该构件。 此外，您还可以使用分布式内存缓存系统（如[Memcached](https://memcached.org/)）维护自己的规则工件的本地副本，以初始化[!DNL Adobe Target] SDK，以便无状态服务器可以立即处理请求。 要了解有关这些选项的更多信息，请参阅以下指南：
 
 * [通过 [!DNL Adobe Target] SDK自动下载、存储和更新规则构件](rule-artifact-sdk.md)
 * [通过JSON有效负载下载、存储和更新规则构件](rule-artifact-json.md)
@@ -41,7 +41,7 @@ ht-degree: 0%
    <!-- Insert image-target-ui-1.png -->
    ![替代图像](assets/asset-rule-artifact-1.png)
 
-1. 导航到&#x200B;**[!UICONTROL Administration]** > **[!UICONTROL Implementation]**&#x200B;并单击&#x200B;**[!UICONTROL Generate New Authorization Token]**。
+1. 导航到&#x200B;**[!UICONTROL 管理]** > **[!UICONTROL 实现]**，然后单击&#x200B;**[!UICONTROL 生成新的授权令牌]**。
 
    <!-- Insert image-target-ui-2.png -->
    ![替代图像](assets/asset-rule-artifact-2.png)

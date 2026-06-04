@@ -19,8 +19,8 @@ topic_v2:
   - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 352
-ht-degree: 3%
+source-wordcount: 424
+ht-degree: 1%
 
 ---
 
@@ -38,10 +38,10 @@ ht-degree: 3%
 
 版本 84.0.4147.105
 
-1. 单击&#x200B;**[!UICONTROL Chrome]**&#x200B;菜单> **[!UICONTROL Preferences]**。
-1. 单击&#x200B;**[!UICONTROL Privacy and Security]**&#x200B;选项卡。
-1. 单击 **[!UICONTROL Cookies and other site data]**。
-1. 单击 **[!UICONTROL See all cookies and site data]**。
+1. 单击&#x200B;**[!UICONTROL Chrome]**&#x200B;菜单> **[!UICONTROL 首选项]**。
+1. 单击&#x200B;**[!UICONTROL 隐私和安全]**&#x200B;选项卡。
+1. 单击&#x200B;**[!UICONTROL Cookie和其他站点数据]**。
+1. 单击&#x200B;**[!UICONTROL 查看所有Cookie和网站数据]**。
 1. 展开`adobe.com`部分，选择&#x200B;**mbox** Cookie，然后单击删除图标(X)。
 
 ## 从Mozilla Firefox中删除[!DNL Target] Cookie
@@ -50,10 +50,10 @@ ht-degree: 3%
 
 ### 删除与`adobe.com`关联的所有Cookie
 
-1. 单击&#x200B;**[!UICONTROL Firefox]**&#x200B;菜单> **[!UICONTROL Preferences]**。
-1. 单击&#x200B;**[!UICONTROL Privacy and Security]**&#x200B;选项卡。
-1. 在&#x200B;**&#x200B; Cookie和站点数据*下，单击&#x200B;**&#x200B;[!UICONTROL Manage Data]**。
-1. 选择`adobe.com`站点，然后单击&#x200B;**[!UICONTROL Remove Selected]**。
+1. 单击&#x200B;**[!UICONTROL Firefox]**&#x200B;菜单> **[!UICONTROL 首选项]**。
+1. 单击&#x200B;**[!UICONTROL 隐私和安全]**&#x200B;选项卡。
+1. 在&#x200B;**&#x200B; Cookie和站点数据*下，单击&#x200B;**&#x200B;[!UICONTROL 管理数据]**。
+1. 选择`adobe.com`站点，然后单击&#x200B;**[!UICONTROL 删除选定项]**。
 
 >[!WARNING]
 >
@@ -61,20 +61,20 @@ ht-degree: 3%
 
 ### 删除单个Cookie (mbox)
 
-1. 在Firefo中，单击&#x200B;**[!UICONTROL Tools]** > **[!UICONTROL Web Developer]** > **[!UICONTROL Storage Inspector]**。
-1. 单击&#x200B;**[!UICONTROL Advanced]**&#x200B;选项卡。
+1. 在Firefo中，单击&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL Web Developer]** > **[!UICONTROL 存储检查器]**。
+1. 单击&#x200B;**[!UICONTROL 高级]**&#x200B;选项卡。
 1. 导航到包含要删除的Cookie的网页。
-1. 展开&#x200B;**[!UICONTROL Cookies]**&#x200B;部分，然后单击`https://experience.adobe.com`。
-1. 右键单击&#x200B;**[!UICONTROL mbox]** Cookie，然后单击&#x200B;**[!UICONTROL Delete]**。
+1. 展开&#x200B;**[!UICONTROL Cookie]**&#x200B;部分，然后单击`https://experience.adobe.com`。
+1. 右键单击&#x200B;**[!UICONTROL mbox]** Cookie，然后单击&#x200B;**[!UICONTROL 删除]**。
 
 ## 从Microsoft Edge中删除[!DNL Target] Cookie
 
 版本84.0.522.52
 
-1. 单击&#x200B;**[!UICONTROL Microsoft Edge]**&#x200B;菜单> **[!UICONTROL Preferences]**。
-1. 单击&#x200B;**[!UICONTROL Site Permissions]**&#x200B;选项卡。
-1. 单击 **[!UICONTROL Cookies and site data]**。
-1. 单击 **[!UICONTROL See all cookies and site data]**。
+1. 单击&#x200B;**[!UICONTROL Microsoft Edge]**&#x200B;菜单> **[!UICONTROL 首选项]**。
+1. 单击&#x200B;**[!UICONTROL 网站权限]**&#x200B;选项卡。
+1. 单击&#x200B;**[!UICONTROL Cookie和网站数据]**。
+1. 单击&#x200B;**[!UICONTROL 查看所有Cookie和网站数据]**。
 1. 展开`adobe.com`部分，选择&#x200B;**mbox** Cookie，然后单击删除图标(X)。
 
 ## 从Apple Safari中删除[!DNL Target] Cookie
@@ -83,10 +83,10 @@ ht-degree: 3%
 
 ### 删除与`adobe.com`关联的所有Cookie
 
-1. 单击&#x200B;**[!UICONTROL Safari]**&#x200B;菜单> **[!UICONTROL Preferences]**。
-1. 单击&#x200B;**[!UICONTROL Privacy]**&#x200B;选项卡。
-1. 单击 **[!UICONTROL Manage Website Data]**。
-1. 为要删除的Cookie选择站点，然后单击&#x200B;**[!UICONTROL Remove]**。
+1. 单击&#x200B;**[!UICONTROL Safari]**&#x200B;菜单> **[!UICONTROL 首选项]**。
+1. 单击&#x200B;**[!UICONTROL 隐私]**&#x200B;选项卡。
+1. 单击&#x200B;**[!UICONTROL 管理网站数据]**。
+1. 为要删除的Cookie选择站点，然后单击&#x200B;**[!UICONTROL 删除]**。
 
 >[!WARNING]
 >
@@ -94,11 +94,11 @@ ht-degree: 3%
 
 ### 删除单个Cookie (mbox)
 
-1. 单击&#x200B;**[!UICONTROL Safari]**&#x200B;菜单> **[!UICONTROL Preferences]**。
-1. 单击&#x200B;**[!UICONTROL Advanced]**&#x200B;选项卡。
-1. 选择&#x200B;**[!UICONTROL Show Develop menu in menu bar]**&#x200B;选项。
+1. 单击&#x200B;**[!UICONTROL Safari]**&#x200B;菜单> **[!UICONTROL 首选项]**。
+1. 单击&#x200B;**[!UICONTROL 高级]**&#x200B;选项卡。
+1. 选择&#x200B;**[!UICONTROL 在菜单栏]**&#x200B;中显示开发菜单选项。
 1. 导航到包含要删除的Cookie的网页。
-1. 单击&#x200B;**[!UICONTROL Develop]**&#x200B;菜单> **[!UICONTROL Show Web Inspector]**。
-1. 单击&#x200B;**[!UICONTROL Storage]**&#x200B;选项卡。
-1. 展开&#x200B;**[!UICONTROL Cookies]**&#x200B;部分，然后单击`www.adobe.com`。
-1. 右键单击&#x200B;**mbox** Cookie，然后单击&#x200B;**[!UICONTROL Delete]**。
+1. 单击&#x200B;**[!UICONTROL 开发]**&#x200B;菜单> **[!UICONTROL 显示Web检查器]**。
+1. 单击&#x200B;**[!UICONTROL 存储]**&#x200B;选项卡。
+1. 展开&#x200B;**[!UICONTROL Cookie]**&#x200B;部分，然后单击`www.adobe.com`。
+1. 右键单击&#x200B;**mbox** Cookie，然后单击&#x200B;**[!UICONTROL 删除]**。

@@ -10,7 +10,7 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 120
+source-wordcount: 133
 ht-degree: 5%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 5%
 
 ## 描述
 
-在[初始化SDK](initialize-sdk.md)时，可在`TargetClientConfig`对象中提供可选的`OnDeviceDecisioningReady`委派，当SDK准备好进行设备上方法调用时，将调用该委派。 还有几个其他代理人可用于处理[!UICONTROL on-device decisioning]工件下载。
+在[初始化SDK](initialize-sdk.md)时，可在`TargetClientConfig`对象中提供可选的`OnDeviceDecisioningReady`委派，当SDK准备好进行设备上方法调用时，将调用该委派。 还有几个其他代理人可用于处理[!UICONTROL 设备上决策]工件下载。
 
 ## 事件
 
@@ -27,9 +27,9 @@ ht-degree: 5%
 
 | 名称 | 参数 | 描述 |
 | --- | --- | --- |
-| OndeviceDecisioningReady | 无 | 在客户端第一次为[!UICONTROL on-device decisioning]准备就绪时只调用一次 |
-| ArtifactDownloadSucceeded | 工件文件的字符串内容 | 每次下载[!UICONTROL on-device decisioning]工件时调用 |
-| ArtifactDownloadFailed | 例外 | 每次下载[!UICONTROL on-device decisioning]工件失败时调用 |
+| OndeviceDecisioningReady | 无 | 在客户端首次准备[!UICONTROL 设备上决策]时只调用一次 |
+| ArtifactDownloadSucceeded | 工件文件的字符串内容 | 每次下载[!UICONTROL 设备上决策]工件时调用 |
+| ArtifactDownloadFailed | 例外 | 每次未能下载[!UICONTROL 设备上决策]工件时调用 |
 
 ## 示例
 

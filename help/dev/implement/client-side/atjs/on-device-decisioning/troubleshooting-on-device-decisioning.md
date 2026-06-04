@@ -1,6 +1,6 @@
 ---
 keywords: 实施， javascript库， js， atjs，设备上决策，设备上决策， at.js，设备上，设备上，故障排除，故障排除，实施2
-description: 了解如何使用at.js库对[!UICONTROL on-device decisioning]进行故障排除。
+description: 了解如何使用at.js库对[!UICONTROL 设备上决策]进行故障排除。
 title: 如何使用at.js JavaScript库为设备上决策排除故障？
 feature: at.js
 exl-id: b9530cc7-5e83-4fdf-bde9-b2492e0861ff
@@ -18,14 +18,14 @@ topic_v2:
   - id: c1579802-ddd4-4214-8a91-97b2066abe11
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 267
+source-wordcount: 281
 ht-degree: 0%
 
 ---
 
-# 针对at.js的[!UICONTROL on-device decisioning]进行故障排除
+# 对at.js的[!UICONTROL 设备上决策]进行故障排除
 
-完成以下步骤以使用at.js JavaScript库对[!UICONTROL Adobe Target]中的[!UICONTROL on-device decisioning]进行故障排除：
+完成以下步骤以使用at.js JavaScript库对[!UICONTROL Adobe Target]中的[!UICONTROL 设备上决策]进行故障诊断：
 
 ## 步骤1：为at.js启用控制台日志
 
@@ -60,7 +60,7 @@ AT: LD.ArtifactProvider artifact received - status=200
 
 ## 步骤3：使用at.js自定义事件验证规则工件下载
 
-at.js库调度两个新的自定义事件以支持[!UICONTROL on-device decisioning]。
+at.js库调度了两个新的自定义事件以支持[!UICONTROL 设备上决策]。
 
 * `adobe.target.event.ARTIFACT_DOWNLOAD_SUCCEEDED`
 * `adobe.target.event.ARTIFACT_DOWNLOAD_FAILED`

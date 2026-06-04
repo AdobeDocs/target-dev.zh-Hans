@@ -33,7 +33,7 @@ topic_v2:
   - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 501
+source-wordcount: 510
 ht-degree: 11%
 
 ---
@@ -104,7 +104,7 @@ ht-degree: 11%
 
 [**[!DNL Target Profile API]**](/help/dev/administer/profile-api/profiles-api.md)：检索[!DNL Adobe Target]用户配置文件信息。
 
-[**[!DNL Target Reporting API]**](https://developer.adobe.com/target/administer/admin-api/#tag/Reports)：检索[!UICONTROL A/B Test]和[!UICONTROL Automated Personalization]活动报告数据。
+[**[!DNL Target Reporting API]**](https://developer.adobe.com/target/administer/admin-api/#tag/Reports)：检索[!UICONTROL A/B测试]和[!UICONTROL Automated Personalization]活动报告数据。
 
 [**[!DNL Target Recommendations API]**](https://developer.adobe.com/target/administer/recommendations-api/)：使用[!DNL Target Recommendations] API。
 

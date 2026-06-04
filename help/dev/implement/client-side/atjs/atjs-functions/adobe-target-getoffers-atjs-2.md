@@ -1,6 +1,6 @@
 ---
 keywords: adobe.target.getOffers， getOffers， getoffers， get offers， at.js，函数，函数， $8
-description: 使用 [!DNL Adobe Target] at.js库的[!UICONTROL adobe.target.getOffers()]函数及其选项触发获取多个 [!DNL Target] 选件的请求。 (at.js 2.x)
+description: 使用针对 [!DNL Adobe Target] at.js库的[!UICONTROL adobe.target.getOffers()]函数及其选项来触发获取多个 [!DNL Target] 选件的请求。 (at.js 2.x)
 title: 如何使用[!UICONTROL adobe.target.getOffers()]函数？
 feature: at.js
 exl-id: b96a3018-93eb-49e7-9aed-b27bd9ae073a
@@ -19,8 +19,8 @@ topic_v2:
   - id: c2be0313-b3ae-45e0-b454-d20bf54b23f2
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 1340
-ht-degree: 60%
+source-wordcount: 1357
+ht-degree: 57%
 
 ---
 
@@ -51,7 +51,7 @@ ht-degree: 60%
 | request > id > thirdPartyId | 否 | 最大大小= 128。 |  |
 | Request > experienceCloud | 否 |  |  |
 | Request > experienceCloud > analytics | 否 |  | Adobe Analytics 集成 |
-| Request > experienceCloud > analytics > logging | 否 | 必须在页面上实施以下内容：<ul><li>访客 ID 服务</li><li>Appmeasurement.js</li></ul> | 支持以下值：<P>**client_side**：指定后，将向调用方返回分析有效负载，该有效负载应该用于通过[!UICONTROL Data Insertion API]发送到[!UICONTROL Adobe Analytics]。<P>**server_side**：这是默认值，[!DNL Target]和[!DNL Analytics]后端将使用SDID将调用拼合在一起进行报告。 |
+| Request > experienceCloud > analytics > logging | 否 | 必须在页面上实施以下内容：<ul><li>访客 ID 服务</li><li>Appmeasurement.js</li></ul> | 支持以下值：<P>**client_side**：指定后，将向调用方返回分析有效负载，该有效负载应该用于通过[!UICONTROL 数据插入API]发送到[!UICONTROL Adobe Analytics]。<P>**server_side**：这是默认值，[!DNL Target]和[!DNL Analytics]后端将使用SDID将调用拼合在一起进行报告。 |
 | request > prefetch | 否 |  |  |
 | request > prefetch > views | 否 | 最大计数50。<P>名称不为空。<P>名称长度`<=` 128。<P>值长度`<=` 5000。<P>名称不应以“profile”开头。<P>不允许的名称： “orderId”、“orderTotal”、“productPurchasedId”。 | 传递用于检索活跃活动中相关视图的参数。 |
 | request > prefetch > views > profileParameters | 否 | 最大计数50。<P>名称不为空。<P>名称长度`<=` 128。<P>值长度`<=` 5000。<P>仅接受字符串值。<P>名称不应以“profile”开头。 | 传递用于检索活跃活动中相关视图的轮廓参数。 |
@@ -86,7 +86,7 @@ ht-degree: 60%
 | request > execute > mboxes > mbox > order > total | 否 | `>=` 0. | 使用指定的订单总额检索给定 mbox 的产品建议。 |
 | request > execute > mboxes > mbox > order > purchasedProductIds | 否 | 无空白值。<P>每个值的最大长度= 50。<P>连接并以逗号分隔。<P>产品ID总长度`<=` 250。 | 使用指定的订单已购产品 ID 检索给定 mbox 的产品建议。 |
 
-## 为所有视图调用 [!UICONTROL getOffers()]
+## 为所有视图调用[!UICONTROL getOffers()]
 
 ```javascript {line-numbers="true"}
 adobe.target.getOffers({
@@ -117,7 +117,7 @@ adobe.target.getOffers({
 }); 
 ```
 
-## 调用 [!UICONTROL getOffers()] 以使用传递的参数和轮廓参数检索最新的视图
+## 调用[!UICONTROL getOffers()]以使用传入的参数和配置文件参数检索最新的视图
 
 ```javascript {line-numbers="true"}
 adobe.target.getOffers({
@@ -138,7 +138,7 @@ adobe.target.getOffers({
 });
 ```
 
-## 调用 [!UICONTROL getOffers()] 以使用传递的参数和轮廓参数检索 mbox。
+## 调用[!UICONTROL getOffers()]以使用传入的参数和配置文件参数检索mbox。
 
 ```javascript {line-numbers="true"}
 adobe.target.getOffers({
@@ -219,7 +219,7 @@ adobe.target.getOffers({
 
 然后，可以通过[数据插入API](https://github.com/AdobeDocs/analytics-1.4-apis/blob/master/docs/data-insertion-api/index.md)将该有效负载转发到[!DNL Adobe Analytics]。
 
-## 通过[!UICONTROL getOffers()]和[!UICONTROL applyOffers()]从多个mbox获取并渲染数据
+## 通过[!UICONTROL getOffers()]和[!UICONTROL applyOffers()]获取并渲染多个mbox的数据
 
 at.js 2.x 允许您通过 `[!UICONTROL getOffers()]` API 获取多个 mbox。 您还可以获取多个 mbox 的数据，然后使用 `[!UICONTROL applyOffers()]` 在 CSS 选择器标识的不同位置渲染数据。
 
@@ -300,7 +300,7 @@ adobe.target.getOffers({
 
 ## 调用[!UICONTROL getOffers()]以执行pageLoad
 
-以下示例说明如何使用[!UICONTROL getOffers()]和at.js 2.*x*&#x200B;执行pageLoad
+以下示例说明如何结合使用[!UICONTROL getOffers()]和at.js 2.*x*&#x200B;来执行pageLoad
 
 ```javascript {line-numbers="true"}
 adobe.target.getOffers({

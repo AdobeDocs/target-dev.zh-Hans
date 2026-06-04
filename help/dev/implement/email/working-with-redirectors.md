@@ -19,8 +19,8 @@ topic_v2:
   - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 689
-ht-degree: 63%
+source-wordcount: 697
+ht-degree: 62%
 
 ---
 
@@ -57,7 +57,7 @@ ht-degree: 63%
 
    * 其中，`yourclientcode` 是您公司的客户端代码。 您公司的客户端代码全部为小写字母，且不含任何特殊字符。
 
-     您的客户端代码位于[!DNL Target]界面的&#x200B;**[!UICONTROL Administration]** > **[!UICONTROL Implementation]**&#x200B;页面顶部。
+     您的客户端代码位于[!DNL Target]界面的&#x200B;**[!UICONTROL 管理]** > **[!UICONTROL 实现]**&#x200B;页面的顶部。
 
    * `redirectorlink_456` 是出现在您帐户中并在营销活动和测试中使用的重定向器 mbox 的名称。
 
@@ -107,7 +107,7 @@ ht-degree: 63%
 
 >[!NOTE]
 >
->最佳实践是使用&#x200B;**[!UICONTROL Score per visit]**&#x200B;参与度量度确定成本值。
+>最佳实践是使用&#x200B;**[!UICONTROL 每次访问得分]**&#x200B;参与度量度确定成本值。
 
 将 `&mboxPageValue=-value` 添加到 URL。 请注意负值。
 
@@ -124,7 +124,7 @@ https://<your_clientcode>.tt.omtrdc.net/​m2/yourclientcode/ubox/​page?mbox=r
 
 >[!NOTE]
 >
->最佳实践是使用&#x200B;**[!UICONTROL Score per visit]**&#x200B;参与度量度确定收入值。
+>最佳实践是使用&#x200B;**[!UICONTROL 每次访问得分]**&#x200B;参与度量度确定收入值。
 
 将 `&mboxPageValue=value` 添加到 URL。
 

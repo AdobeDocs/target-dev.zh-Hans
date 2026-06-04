@@ -30,7 +30,7 @@ ht-degree: 15%
 ### [!DNL Target]库
 
 有关详细信息，请参阅[[!DNL Target] 库](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/target-library.html?lang=zh-Hans)。
- 
+&#x200B;AEM
 * 反向链接来自Bing
 * Chrome Browser
 * Firefox浏览器
@@ -47,7 +47,7 @@ ht-degree: 15%
 
 ### 地域
 
-有关更多信息，请参阅[地域](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/geo.html?lang=zh-Hans)。
+有关详细信息，请参阅[地域](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/geo.html?lang=zh-Hans)。
 &#x200B;
 * 国家/地区
 * 省/自治区/直辖市

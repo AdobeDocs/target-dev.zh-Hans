@@ -18,8 +18,8 @@ topic_v2:
   - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 160
-ht-degree: 70%
+source-wordcount: 171
+ht-degree: 54%
 
 ---
 
@@ -27,9 +27,9 @@ ht-degree: 70%
 
 此方法允许您从请求代码外部将参数附加到所有 mbox。
 
-在多个 mbox 调用中包含相同的一组参数时，这非常有用。 该函数需由客户定义。 它应返回一个参数数组，这些参数将传递给页面上的所有 mbox 请求。 此函数可在at.js加载之前或在&#x200B;**[!UICONTROL Administration]** > **[!UICONTROL Implementation]** > **[!UICONTROL Edit]** > **[!UICONTROL Code Settings]** > **[!UICONTROL Library Header]**&#x200B;中定义。
+在多个 mbox 调用中包含相同的一组参数时，这非常有用。 该函数需由客户定义。 它应返回一个参数数组，这些参数将传递给页面上的所有 mbox 请求。 此函数可在at.js加载之前或在&#x200B;**[!UICONTROL 管理]** > **[!UICONTROL 实现]** > **[!UICONTROL 编辑]** > **[!UICONTROL 代码设置]** > **[!UICONTROL 库标头]**&#x200B;中定义。
 
-您可以按照以下任一方式使用 [!UICONTROL targetPageParamsAll()] 函数将参数传递到 target-global-mbox：
+您可以通过以下任意方式使用[!UICONTROL targetPageParamsAll()]函数将参数传递到target-global-mbox：
 
 * 以与号 (&amp;) 分隔的列表
 * 数组

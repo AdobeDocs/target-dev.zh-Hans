@@ -23,7 +23,7 @@ topic_v2:
   - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 2303
+source-wordcount: 2308
 ht-degree: 5%
 
 ---
@@ -38,7 +38,7 @@ ht-degree: 5%
 
 ### 安装at.js
 
-[!DNL Adobe]允许客户直接从[!DNL Adobe Experience Cloud] [!UICONTROL Implementation]选项卡下载库。 使用客户拥有的如下设置自定义at.js库： clientCode、imsOrgId等
+[!DNL Adobe]允许客户直接从[!DNL Adobe Experience Cloud] [!UICONTROL 实现]选项卡下载库。 使用客户拥有的如下设置自定义at.js库： clientCode、imsOrgId等
 
 ### 安装Web SDK
 
@@ -319,7 +319,7 @@ adobe.target.getOffers({
 
 ### 使用[!DNL Platform Web SDK]
 
-您可以使用`sendEvent`命令并在`decisionScopes`选项下传递mbox名称来获取基于[!UICONTROL Form-Based Composer]的活动。 `sendEvent`命令返回一个承诺，该承诺会使用包含所请求的活动/建议的对象来解析：
+通过使用`sendEvent`命令并在`decisionScopes`选项下传递mbox名称，您可以获取基于[!UICONTROL 表单的编辑器]的活动。 `sendEvent`命令返回一个承诺，该承诺会使用包含所请求的活动/建议的对象来解析：
 
 此代码片段是`propositions`数组的外观：
 
@@ -670,7 +670,7 @@ alloy("sendEvent", {
 
 ### 使用at.js
 
-使用`adobe.target.triggerView`函数。 每当加载新页面或重新渲染页面上的组件时，都可以调用此函数。 应该为单页应用程序(SPA)实施`adobe.target.triggerView()`函数以使用[!UICONTROL Visual Experience Composer] (VEC)创建[!UICONTROL A/B Test]和[!UICONTROL Experience Targeting] (XT)活动。 如果未在网站上实施`adobe.target.triggerView()`，则VEC无法用于SPA。
+使用`adobe.target.triggerView`函数。 每当加载新页面或重新渲染页面上的组件时，都可以调用此函数。 应该为单页应用程序(SPA)实施`adobe.target.triggerView()`函数以使用[!UICONTROL 可视化体验编辑器] (VEC)创建[!UICONTROL A/B测试]和[!UICONTROL 体验定位] (XT)活动。 如果未在网站上实施`adobe.target.triggerView()`，则VEC无法用于SPA。
 
 **示例**
 
@@ -682,7 +682,7 @@ adobe.target.triggerView("homeView")
 
 ### 使用[!DNL Platform Web SDK]
 
-要触发或指示单页应用程序[!UICONTROL View Change]，请在`sendEvent`命令的`xdm`选项下设置`web.webPageDetails.viewName`属性。 如果`sendEvent`中指定的`viewName`有选件，[!DNL Platform Web SDK]将检查视图缓存，然后执行选件并发送显示通知事件。
+要触发或发出单页应用程序[!UICONTROL 查看更改]的信号，请在`sendEvent`命令的`xdm`选项下设置`web.webPageDetails.viewName`属性。 如果`sendEvent`中指定的`viewName`有选件，[!DNL Platform Web SDK]将检查视图缓存，然后执行选件并发送显示通知事件。
 
 **示例**
 
@@ -701,7 +701,7 @@ alloy("sendEvent", {
 
 [了解详情](/help/dev/implement/client-side/aep-web-sdk/spa-implementation.md)
 
-## 如何利用[!UICONTROL Response Tokens]
+## 如何利用[!UICONTROL 响应令牌]
 
 从[!DNL Target]返回的Personalization内容包含[响应令牌](https://experienceleague.adobe.com/zh-hans/docs/target/using/administer/response-tokens)。 响应令牌包含有关活动、选件、体验、用户配置文件、地理信息等的详细信息。 这些详细信息可与第三方工具共享或用于调试。 可在[!DNL Target]用户界面中配置响应令牌。
 

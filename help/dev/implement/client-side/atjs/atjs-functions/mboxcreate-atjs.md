@@ -17,12 +17,12 @@ topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 211
-ht-degree: 41%
+source-wordcount: 216
+ht-degree: 40%
 
 ---
 
-# [!UICONTROL mboxCreate(mbox,params)] - at.js 1.x
+# [!UICONTROL mboxCreate(mbox，params)] - at.js 1.x
 
 可使用 mboxDefault 类名称执行请求并将产品建议应用到最近的 DIV。
 

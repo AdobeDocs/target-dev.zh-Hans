@@ -37,7 +37,7 @@ ht-degree: 67%
 
 at.js 会生成一个会话 ID 并将其存储在 Cookie 中。 第一个响应包含任何活动信息，以及 [!DNL Target] 服务器生成的 `TNT` 或 `PC ID`。 然后，at.js 将 `TNT/PC ID` 写入 Cookie。
 
-`AMCV_###@AdobeOrg`第一方Cookie始终由Experience Cloud ID服务设置，尽管在[!DNL Target]请求中传递了`ECID`。
+虽然`ECID`在[!DNL Target]请求中传递，但`AMCV_###@AdobeOrg`第一方Cookie始终由Experience Cloud ID服务设置。
 
 >[!NOTE]
 >

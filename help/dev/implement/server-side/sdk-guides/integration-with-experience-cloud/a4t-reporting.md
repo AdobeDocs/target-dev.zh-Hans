@@ -1,5 +1,5 @@
 ---
-title: 与Experience Cloud A4T报表集成
+title: 与Experience Cloud A4T报告集成
 description: 与Experience Cloud、A4T报表、Analytics for Target的集成
 keywords: 投放api，服务器端，服务器端，集成， a4t
 exl-id: 0d09d7a1-528d-4e6a-bc6c-f7ccd61f5b75
@@ -14,12 +14,12 @@ topic_v2:
   - id: d3cdead0-685a-4489-9250-4bb709942f66
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 392
+source-wordcount: 399
 ht-degree: 6%
 
 ---
 
-# [!UICONTROL Analytics for Target] (A4T)报告
+# [!UICONTROL Analytics for Target] (A4T)报表
 
 [!DNL Adobe Target]支持设备上决策和服务器端[!DNL Target]活动的A4T报告。 启用A4T报表的配置选项有两种：
 
@@ -33,7 +33,7 @@ ht-degree: 6%
 ## 先决条件
 
 1. 在[!DNL Adobe Target] UI中将活动配置为将[!DNL Adobe Analytics]作为报表源，并确保已为A4T启用这些帐户。
-1. API用户生成Adobe [!UICONTROL Marketing Cloud Visitor ID]并确保此ID在执行[!DNL Target]请求时可用。
+1. API用户生成Adobe [!UICONTROL Marketing Cloud访客ID]，并确保此ID在执行[!DNL Target]请求时可用。
 
 ## [!DNL Adobe Target]自动转发[!DNL Analytics]有效负载
 
@@ -199,7 +199,7 @@ TargetDeliveryResponse offers = targetClient.getOffers(request);
 
 指定`logging = client_side`后，您将在mbox字段中接收有效负载。
 
-如果来自[!DNL Target]的响应在`analytics -> payload`属性中包含任何内容，请将其转发给[!DNL Adobe Analytics]。 [!DNL Adobe Analytics]知道如何处理此有效负载。 这可以在GET请求中完成，使用以下格式：
+如果来自[!DNL Target]的响应在`analytics -> payload`属性中包含任何内容，请将其转发给[!DNL Adobe Analytics]。 [!DNL Adobe Analytics]知道如何处理此有效负载。 这可以在GET请求中使用以下格式完成：
 
 ```
 https://{datacollectionhost.sc.omtrdc.net}/b/ss/{rsid}/{content_type_num}/{code_ver}/{session}?pe=tnt&tnta={payload}&c.&a.&target.&sessionId={sessionId}&.target&.a&.c&mid={mid}

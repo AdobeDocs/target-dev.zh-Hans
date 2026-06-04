@@ -13,7 +13,7 @@ topic_v2:
   - id: c2be0313-b3ae-45e0-b454-d20bf54b23f2
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 229
+source-wordcount: 232
 ht-degree: 2%
 
 ---
@@ -59,7 +59,7 @@ PrefetchRequest prefetchMboxesRequest = new PrefetchRequest().setMboxes(mboxRequ
 TargetDeliveryResponse targetResponse = targetJavaClient.getOffers(targetDeliveryRequest);
 ```
 
-成功的响应将包含[!UICONTROL Target Delivery API]响应对象，其中包含所请求mbox的预获取内容。 示例`targetResponse.response`对象可能如下所示：
+成功的响应将包含[!UICONTROL Target投放API]响应对象，该对象包含所请求mbox的预获取内容。 示例`targetResponse.response`对象可能如下所示：
 
 ### 响应
 

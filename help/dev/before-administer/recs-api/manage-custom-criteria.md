@@ -15,7 +15,7 @@ topic_v2:
   - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
 source-git-commit: f05a93102cc0f9b86a6521ff8007aa59f2af3c1a
 workflow-type: tm+mt
-source-wordcount: 921
+source-wordcount: 890
 ht-degree: 0%
 
 ---
@@ -42,7 +42,7 @@ ht-degree: 0%
 
 只有在阅读了上述警告并熟悉了如何创建新自定义标准且无法随后从UI中删除后，才应继续执行以下步骤。
 
-1. 验证&#x200B;**[!UICONTROL Create custom criteria]**&#x200B;的`TENANT_ID`和`API_KEY`是否引用了之前建立的Postman环境变量。 使用下图进行比较。
+1. 验证&#x200B;**[!UICONTROL 创建自定义标准]**&#x200B;的`TENANT_ID`和`API_KEY`是否引用之前建立的Postman环境变量。 使用下图进行比较。
 
    ![CreateCustomCriteria1](assets/CreateCustomCriteria1.png)
 
@@ -54,11 +54,11 @@ ht-degree: 0%
 
    ![CreateCustomCriteria3](assets/CreateCustomCriteria3.png)
 
-1. 要验证您的自定义标准是否已创建，请在Adobe Target中导航到&#x200B;**[!UICONTROL Recommendations > Criteria]**&#x200B;并按名称搜索您的标准，或者在下一个步骤中使用&#x200B;**[!UICONTROL List Custom Criteria API]**。
+1. 要验证您的自定义标准是否已创建，请在Adobe Target中导航到&#x200B;**[!UICONTROL 推荐>标准]**，并按名称搜索您的标准，或者在下一个步骤中使用&#x200B;**[!UICONTROL 列出自定义标准API]**。
 
    ![CreateCustomCriteria4](assets/CreateCustomCriteria4.png)
 
-在这种情况下，我们有一个错误。 让我们通过使用&#x200B;**[!UICONTROL List Custom Criteria API]**&#x200B;更仔细地检查自定义条件来调查错误。
+在这种情况下，我们有一个错误。 让我们通过使用&#x200B;**[!UICONTROL 列出自定义标准API]**&#x200B;更仔细地检查自定义标准来调查错误。
 
 ## 列出自定义标准
 
@@ -66,7 +66,7 @@ ht-degree: 0%
 
 `GET https://mc.adobe.io/{{TENANT_ID}}/target/recs/criteria/custom`
 
-1. 与之前一样验证`TENANT_ID`和`API_KEY`，并发送请求。 在响应中，请注意自定义标准ID以及有关之前指出的错误消息的详细信息。
+1. 与之前一样验证`TENANT_ID`和`API_KEY`，并发送请求。在响应中，请注意自定义标准ID以及有关之前指出的错误消息的详细信息。
    ![ListCustomCriteria](assets/ListCustomCriteria.png)
 
 在这种情况下，发生错误的原因是服务器信息不正确，这意味着Target无法访问包含自定义标准定义的CSV文件。 让我们编辑自定义标准来更正此问题。
@@ -83,13 +83,13 @@ ht-degree: 0%
 1. 指定要编辑的（单个）自定义标准的标准ID。
    ![EditCustomCriteria2](assets/EditCustomCriteria2.png)
 
-1. 在正文中，为更新的JSON提供正确的服务器信息。 （在此步骤中，指定对可以访问的服务器的FTP访问权限。）
+1. 在正文中，为更新的JSON提供正确的服务器信息。（在此步骤中，指定对可以访问的服务器的FTP访问权限。）
    ![EditCustomCriteria3](assets/EditCustomCriteria3.png)
 
 1. 发送请求并记录响应。
    ![EditCustomCriteria4](assets/EditCustomCriteria4.png)
 
-让我们使用&#x200B;**[!UICONTROL Get Custom Criteria API]**&#x200B;验证更新后的自定义标准是否成功。
+让我们使用&#x200B;**[!UICONTROL 获取自定义标准API]**，验证更新的自定义标准是否成功。
 
 ## 获取自定义标准
 
@@ -97,9 +97,9 @@ ht-degree: 0%
 
 `GET https://mc.adobe.io/{{TENANT_ID}}/target/recs/criteria/custom/:criteriaId`
 
-1. 指定要获取其详细信息的自定义标准的标准ID。 发送请求并查看响应。
+1. 指定要获取其详细信息的自定义标准的标准ID。发送请求并查看响应。
    ![GetCustomCriteria.png](assets/GetCustomCriteria.png)
-1. 验证是否成功。 （在本例中，请确认没有进一步的FTP错误。）
+1. 验证是否成功。（在本例中，请确认没有进一步的FTP错误。）
    ![GetCustomCriteria1.png](assets/GetCustomCriteria1.png)
 1. （可选）验证更新是否在UI中准确显示。
    ![GetCustomCriteria2.png](assets/GetCustomCriteria2.png)
@@ -110,7 +110,7 @@ ht-degree: 0%
 
 `DELETE https://mc.adobe.io/{{TENANT_ID}}/target/recs/criteria/custom/:criteriaId`
 
-1. 指定要删除的（单个）自定义标准的标准ID。 单击 **[!UICONTROL Send]**。
+1. 指定要删除的（单个）自定义标准的标准ID。单击&#x200B;**[!UICONTROL 发送]**。
    ![DeleteCustomCriteria1](assets/DeleteCustomCriteria1.png)
 
 1. 验证是否已使用获取自定义标准删除该标准。

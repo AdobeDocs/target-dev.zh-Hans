@@ -1,7 +1,7 @@
 ---
-keywords: at.js，调试at.js， adobe Experience Cloud debugger， experience cloud debugger， mbox trace， mbox highlight， debug，调试， $9
-description: 使用[!UICONTROL Adobe Experience Cloud Debugger]查看库配置、检查请求、打开控制台日志记录、禁用 [!DNL Target] 调用请求等。
-title: 如何在上调试？与[!UICONTROL Adobe Experience Cloud Debugger]的JS？
+keywords: at.js，调试at.js， adobe Experience Cloud调试器， experience cloud调试器， mbox跟踪， mbox高亮，调试，调试， $9
+description: 使用[!UICONTROL Adobe Experience Cloud调试器]查看库配置、检查请求、打开控制台日志记录、禁用 [!DNL Target] 调用请求等。
+title: 如何在上调试？与[!UICONTROL Adobe Experience Cloud调试器]的Js？
 feature: at.js
 exl-id: ac215560-3f6f-4269-947c-961e7a43c9e1
 TQID: https://experienceleague.adobe.com/pZtiohItxWcjKFJTCXX8JtvOpEjFMsG1SJdp9ANalOE
@@ -17,12 +17,12 @@ topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 162
+source-wordcount: 178
 ht-degree: 6%
 
 ---
 
-# 使用[!UICONTROL Adobe Experience Cloud Debugger]调试at.js
+# 使用[!UICONTROL Adobe Experience Cloud调试器]调试at.js
 
 有关使用[!UICONTROL Adobe Experience Cloud Debugger]扩展的信息，该扩展可帮助您快速轻松地了解您的[!DNL Target]实施。
 
@@ -34,11 +34,11 @@ ht-degree: 6%
 
 以下视频将逐步指导您完成调试过程：
 
-### 添加Adobe Experience Cloud Debugger扩展![概述徽章](../../assets/overview.png)
+### 添加Adobe Experience Cloud调试器扩展![概述徽章](../../assets/overview.png)
 
 >[!VIDEO](https://video.tv.adobe.com/v/33301/?captions=chi_hans&quality=12)
 
-### 使用Adobe Target Debugger ![概述徽章进行基本的Adobe Experience Cloud调试](../../assets/overview.png)
+### 使用Adobe Experience Cloud Debugger ![概述徽章进行基本Adobe Target调试](../../assets/overview.png)
 
 >[!VIDEO](https://video.tv.adobe.com/v/33302/?captions=chi_hans&quality=12)
 

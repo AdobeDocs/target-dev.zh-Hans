@@ -15,8 +15,8 @@ topic_v2:
   - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 321
-ht-degree: 18%
+source-wordcount: 332
+ht-degree: 17%
 
 ---
 
@@ -24,7 +24,7 @@ ht-degree: 18%
 
 ## 描述
 
-使用`create`方法初始化Node.js SDK并实例化[!UICONTROL Target]客户端以调用[!DNL Adobe Target]进行实验和个性化体验。
+使用`create`方法初始化Node.js SDK并实例化[!UICONTROL Target]客户端以调用[!DNL Adobe Target]进行实验及个性化体验。
 
 ## 方法
 
@@ -40,9 +40,9 @@ TargetClient.create(options: Object): TargetClient
 
 | 名称 | 类型 | 必需 | 默认 | 描述 |
 | --- | --- | --- | --- | --- |
-| 客户端 | 字符串 | 是 | 无 | [!UICONTROL Adobe Target Client ID] |
-| organizationId | 字符串 | 是 | 无 | [!UICONTROL Experience Cloud Organization ID] |
-| 环境 | 字符串 | 否 | 生产 | 目标环境名称。 在[!DNL Target]用户界面中，[!UICONTROL Administration] > [!UICONTROL Environments]。 |
+| 客户端 | 字符串 | 是 | 无 | [!UICONTROL Adobe Target客户端ID] |
+| organizationId | 字符串 | 是 | 无 | [!UICONTROL Experience Cloud组织ID] |
+| 环境 | 字符串 | 否 | 生产 | 目标环境名称。 在[!DNL Target] UI中，[!UICONTROL 管理] > [!UICONTROL 环境]。 |
 | timeout | 数值 | 否 | 3000 | 超时时间（以毫秒为单位） |
 | serverDomain | 字符串 | 否 | `*client*.tt.omtrdc.net` | 覆盖默认主机名 |
 | secure | 布尔值 | 否 | true | 取消设置以强制HTTP方案 |
