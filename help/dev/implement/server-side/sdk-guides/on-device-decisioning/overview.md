@@ -1,14 +1,27 @@
 ---
 keywords: 服务器端，服务器端， sdk， sdk，设备上，决策，设备上， ondevice，零延迟，延迟，近零， node.js，服务器端3
-description: 了解如何使用[!UICONTROL [！UICONTROL设备上决策]]在服务器上缓存 [!DNL Target] A/B和MVT活动，以便在几乎零延迟的情况下执行内存中决策。
+description: 了解如何使用[!UICONTROL [!UICONTROL 设备上决策]]在服务器上缓存 [!DNL Target] A/B和MVT活动，以便在几乎零延迟的情况下执行内存中决策。
 title: 什么是设备上决策？
 feature: Implement Server-side
 exl-id: 22ed3072-56f0-4075-9d1a-d642afe3b649
 TQID: https://experienceleague.adobe.com/-HHGn3lG5fOh2GLXQ6jOLRQmX7H24lN-2fseOg4y5H4
-product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
-feature_v2: id: adee20bd-51f4-461d-b9db-d215f8756eebid: c93393a4-e558-47e1-992e-c91ed4d480ce
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dcid: aa2f3246-cb95-4b30-8899-fdf7d73550ccid: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: bcc5edb5-84c3-4940-9f84-ed88b6c16274id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1id: e0eb8757-182f-49f3-94a4-1587d16f5094id: e1e0219c-f879-479f-8427-888ed2a6e9c2id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+product_v2:
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2:
+  - id: adee20bd-51f4-461d-b9db-d215f8756eeb
+  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+  - id: bcc5edb5-84c3-4940-9f84-ed88b6c16274
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+  - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
+  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+  - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
 source-wordcount: 1349
@@ -115,7 +128,7 @@ ht-degree: 8%
 ## 要确保通过[!DNL Adobe Target]的服务器端SDK成功交付我的[!UICONTROL 设备上决策]活动，需要遵循的步骤概要是什么？
 
 1. 访问[!DNL Adobe Target] UI并导航到&#x200B;**[!UICONTROL 管理]** > **[!UICONTROL 实施]** > **[!UICONTROL 帐户详细信息]**&#x200B;以启用&#x200B;**[!UICONTROL 设备上决策]**&#x200B;切换开关。
-1. 在项目&#x200B;]**中启用**[!UICONTROL &#x200B;包含所有现有的[!UICONTROL 设备上决策]限定活动。
+1. 在项目&#x200B;**中启用**&#x200B;包含所有现有的[!UICONTROL 设备上决策]限定活动。
 1. 创建并激活[!UICONTROL 设备上决策]支持的活动类型，并验证该活动的&#x200B;**[!UICONTROL 决策方法]**&#x200B;是否为&#x200B;**[!UICONTROL 设备上决策]**。
 1. 使用`decisioningMethod = on-device`安装并初始化[Node.js](../../node-js/overview.md)或[Java](../../java/overview.md) SDK。
 1. 在您的代码中实施`getOffers()`或`getAttributes()`以检索设备上的体验。

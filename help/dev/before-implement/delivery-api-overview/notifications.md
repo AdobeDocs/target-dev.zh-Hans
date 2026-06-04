@@ -5,9 +5,12 @@ keywords: 投放api
 exl-id: 711388fd-2c1f-4ca4-939f-c56dc4bdc04a
 feature: APIs/SDKs
 TQID: https://experienceleague.adobe.com/rooWLG-bh7lu7eBELTQys3KoNtS-6ZicxfHoQcU6TU0
-product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+product_v2:
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
 source-wordcount: 426
@@ -23,7 +26,7 @@ ht-degree: 0%
 
 ## 预取Mbox的通知
 
-可以通过单个投放调用发送一个或多个通知。 确定需要跟踪的量度是每个mbox的`click`还是`display`，以便能够正确反映通知的`type`。 此外，请为每个通知传入`id`，以便您能够确定是否通过[!UICONTROL  Adobe Target投放API]正确发送了通知。 `timestamp`转发到[!DNL Target]也很重要，以指示给定mbox何时发生`click`或`display`以用于报告。
+可以通过单个投放调用发送一个或多个通知。 确定需要跟踪的量度是每个mbox的`click`还是`display`，以便能够正确反映通知的`type`。 此外，请为每个通知传入`id`，以便您能够确定是否通过[!UICONTROL &#x200B; Adobe Target投放API]正确发送了通知。 `timestamp`转发到[!DNL Target]也很重要，以指示给定mbox何时发生`click`或`display`以用于报告。
 
 ```
 curl -X POST \

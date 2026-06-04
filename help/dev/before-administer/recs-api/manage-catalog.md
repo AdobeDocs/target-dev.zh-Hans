@@ -7,9 +7,12 @@ thumbnail: null
 author: Judy Kim
 exl-id: aea82607-cde4-456a-8dfb-2967badce455
 TQID: https://experienceleague.adobe.com/9uKu-mX9xzz-sG4-peyfzrwogo27nF8TZ4zFXBi6TaU
-product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+product_v2:
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
 source-git-commit: 0fe52344f654f22d1ff7aaace0ba5a99e92d036d
 workflow-type: tm+mt
 source-wordcount: 930
@@ -25,7 +28,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->每当您需要刷新访问令牌以进行身份验证时，请通过用户令牌&#x200B;]**请求发送**[!UICONTROL  IMS： JWT生成+身份验证，因为它在24小时后过期。 有关说明，请参阅[配置Adobe API身份验证](../configure-authentication.md)。
+>每当您需要刷新访问令牌以进行身份验证时，请通过用户令牌&#x200B;**请求发送** IMS： JWT生成+身份验证，因为它在24小时后过期。 有关说明，请参阅[配置Adobe API身份验证](../configure-authentication.md)。
 
 ![JWT3ff](assets/configure-io-target-jwt3ff.png)
 
