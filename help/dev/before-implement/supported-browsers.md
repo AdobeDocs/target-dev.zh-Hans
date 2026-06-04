@@ -45,7 +45,7 @@ ht-degree: 19%
 
 ## 可视化编辑要求
 
-若要能够在[!UICONTROL 可视化体验编辑器] (VEC)中以可靠的方式打开、创作和预览网页，必须在Web浏览器上安装[Adobe Experience Cloud可视化编辑帮助程序浏览器扩展](https://experienceleague.adobe.com/en/docs/target/using/experiences/vec/troubleshoot-composer/visual-editing-helper-extension){target=_blank}，或者使用[!UICONTROL 增强型体验编辑器(EEC)]。
+若要能够在[!UICONTROL 可视化体验编辑器] (VEC)中以可靠的方式打开、创作和预览网页，必须在Web浏览器上安装[Adobe Experience Cloud可视化编辑帮助程序浏览器扩展](https://experienceleague.adobe.com/zh-hans/docs/target/using/experiences/vec/troubleshoot-composer/visual-editing-helper-extension){target=_blank}，或者使用[!UICONTROL 增强型体验编辑器(EEC)]。
 
 >[!NOTE]
 >

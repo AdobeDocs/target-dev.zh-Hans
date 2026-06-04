@@ -12,24 +12,24 @@ ht-degree: 5%
 
 # 使用[!DNL Adobe Target]和[!DNL Web SDK]进行个性化
 
-[!DNL Adobe Experience Platform] [!DNL Web SDK]可以将在[!DNL Adobe Target]中管理的个性化体验交付并渲染到Web渠道。 您可以使用名为[可视化体验编辑器](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html) (VEC)的WYSIWYG编辑器，或使用非可视化界面[基于表单的体验编辑器](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html)创建、激活并交付活动和个性化体验。
+[!DNL Adobe Experience Platform] [!DNL Web SDK]可以将在[!DNL Adobe Target]中管理的个性化体验交付并渲染到Web渠道。 您可以使用名为[可视化体验编辑器](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html?lang=zh-Hans) (VEC)的WYSIWYG编辑器，或使用非可视化界面[基于表单的体验编辑器](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html?lang=zh-Hans)创建、激活并交付活动和个性化体验。
 
 >[!IMPORTANT]
 >
->了解如何使用[将Target从at.js 2.x迁移到Experience Platform Web SDK](https://experienceleague.adobe.com/docs/platform-learn/migrate-target-to-websdk/introduction.html)教程将[!DNL Target]实施迁移到[!DNL Experience Platform Web SDK]。
+>了解如何使用[将Target从at.js 2.x迁移到Experience Platform Web SDK](https://experienceleague.adobe.com/docs/platform-learn/migrate-target-to-websdk/introduction.html?lang=zh-Hans)教程将[!DNL Target]实施迁移到[!DNL Experience Platform Web SDK]。
 >
->了解如何使用[使用Web SDK实施Adobe Experience Cloud](https://experienceleague.adobe.com/docs/platform-learn/implement-web-sdk/overview.html)教程首次实施[!DNL Target]。 有关[!DNL Target]的特定信息，请参阅标题为[使用Experience Platform Web SDK设置Target](https://experienceleague.adobe.com/docs/platform-learn/implement-web-sdk/applications-setup/setup-target.html)的教程部分。
+>了解如何使用[使用Web SDK实施Adobe Experience Cloud](https://experienceleague.adobe.com/docs/platform-learn/implement-web-sdk/overview.html?lang=zh-Hans)教程首次实施[!DNL Target]。 有关[!DNL Target]的特定信息，请参阅标题为[使用Experience Platform Web SDK设置Target](https://experienceleague.adobe.com/docs/platform-learn/implement-web-sdk/applications-setup/setup-target.html?lang=zh-Hans)的教程部分。
 
 以下功能已经过测试，当前在[!DNL Target]中受支持：
 
-* [A/B测试](https://experienceleague.adobe.com/docs/target/using/activities/abtest/test-ab.html)
-* [A4T展示和转化报表](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t.html)
-* [Automated Personalization活动](https://experienceleague.adobe.com/docs/target/using/activities/automated-personalization/automated-personalization.html)
-* [体验定位活动](https://experienceleague.adobe.com/docs/target/using/activities/automated-personalization/automated-personalization.html)
-* [多变量测试(MVT)](https://experienceleague.adobe.com/docs/target/using/activities/multivariate-test/multivariate-testing.html)
-* [Recommendations活动](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations.html)
-* [原生Target展示和转化报表](https://experienceleague.adobe.com/docs/target/using/reports/reports.html)
-* [VEC支持](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html)
+* [A/B测试](https://experienceleague.adobe.com/docs/target/using/activities/abtest/test-ab.html?lang=zh-Hans)
+* [A4T展示和转化报表](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t.html?lang=zh-Hans)
+* [Automated Personalization活动](https://experienceleague.adobe.com/docs/target/using/activities/automated-personalization/automated-personalization.html?lang=zh-Hans)
+* [体验定位活动](https://experienceleague.adobe.com/docs/target/using/activities/automated-personalization/automated-personalization.html?lang=zh-Hans)
+* [多变量测试(MVT)](https://experienceleague.adobe.com/docs/target/using/activities/multivariate-test/multivariate-testing.html?lang=zh-Hans)
+* [Recommendations活动](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations.html?lang=zh-Hans)
+* [原生Target展示和转化报表](https://experienceleague.adobe.com/docs/target/using/reports/reports.html?lang=zh-Hans)
+* [VEC支持](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html?lang=zh-Hans)
 
 ## [!DNL Web SDK]系统图
 
@@ -52,27 +52,27 @@ ht-degree: 5%
 
 要启用[!DNL Target]，请执行以下操作：
 
-1. 使用适当的客户端代码启用[数据流](https://experienceleague.adobe.com/en/docs/experience-platform/datastreams/overview)中的[!DNL Target]。
+1. 使用适当的客户端代码启用[数据流](https://experienceleague.adobe.com/zh-hans/docs/experience-platform/datastreams/overview)中的[!DNL Target]。
 1. 将`renderDecisions`选项添加到您的事件。
 
 然后，您还可以选择添加以下选项：
 
 * **`decisionScopes`**：通过将此选项添加到您的事件中，检索特定活动（对于使用基于表单的编辑器创建的活动很有用）。
-* **[预隐藏代码片段](https://experienceleague.adobe.com/en/docs/experience-platform/web-sdk/personalization/manage-flicker)**：仅隐藏页面的某些部分。
+* **[预隐藏代码片段](https://experienceleague.adobe.com/zh-hans/docs/experience-platform/web-sdk/personalization/manage-flicker)**：仅隐藏页面的某些部分。
 
 ## 使用[!UICONTROL Adobe Target] VEC
 
-要将VEC与[!DNL Web SDK]实现结合使用，请安装并激活[Firefox](https://addons.mozilla.org/en-US/firefox/addon/adobe-target-vec-helper/)或[Chrome](https://experienceleague.adobe.com/en/docs/target/using/experiences/vec/troubleshoot-composer/visual-editing-helper-extension) VEC Helper扩展。
+要将VEC与[!DNL Web SDK]实现结合使用，请安装并激活[Firefox](https://addons.mozilla.org/en-US/firefox/addon/adobe-target-vec-helper/)或[Chrome](https://experienceleague.adobe.com/zh-hans/docs/target/using/experiences/vec/troubleshoot-composer/visual-editing-helper-extension) VEC Helper扩展。
 
-有关详细信息，请参阅&#x200B;*Adobe Target指南*&#x200B;中的[可视化体验编辑器助手扩展](https://experienceleague.adobe.com/docs/target/using/experiences/vec/troubleshoot-composer/vec-helper-browser-extension.html)。
+有关详细信息，请参阅&#x200B;*Adobe Target指南*&#x200B;中的[可视化体验编辑器助手扩展](https://experienceleague.adobe.com/docs/target/using/experiences/vec/troubleshoot-composer/vec-helper-browser-extension.html?lang=zh-Hans)。
 
 ## 呈现个性化内容
 
-有关详细信息，请参阅[呈现个性化内容](https://experienceleague.adobe.com/en/docs/experience-platform/web-sdk/personalization/rendering-personalization-content)。
+有关详细信息，请参阅[呈现个性化内容](https://experienceleague.adobe.com/zh-hans/docs/experience-platform/web-sdk/personalization/rendering-personalization-content)。
 
 ## XDM中的受众
 
-在为通过[!DNL Web SDK]交付的[!DNL Target]活动定义受众时，必须定义和使用[XDM](https://experienceleague.adobe.com/docs/experience-platform/xdm/home.html)。 定义XDM架构、类和架构字段组后，可创建由XDM数据定义的[!DNL Target]受众规则以进行定位。 在[!DNL Target]内，XDM数据在[!UICONTROL 受众生成器]中显示为自定义参数。 XDM使用点表示法序列化（例如，`web.webPageDetails.name`）。
+在为通过[!DNL Web SDK]交付的[!DNL Target]活动定义受众时，必须定义和使用[XDM](https://experienceleague.adobe.com/docs/experience-platform/xdm/home.html?lang=zh-Hans)。 定义XDM架构、类和架构字段组后，可创建由XDM数据定义的[!DNL Target]受众规则以进行定位。 在[!DNL Target]内，XDM数据在[!UICONTROL 受众生成器]中显示为自定义参数。 XDM使用点表示法序列化（例如，`web.webPageDetails.name`）。
 
 如果您的[!DNL Target]活动包含使用自定义参数或用户配置文件的预定义受众，则无法通过SDK正确交付这些受众。 您必须改用XDM，而不是使用自定义参数或用户配置文件。 但是，有一些通过[!DNL Web SDK]支持的现成受众定向字段不需要XDM。 这些字段在[!DNL Target] UI中可用，不需要XDM：
 
@@ -85,7 +85,7 @@ ht-degree: 5%
 * 流量源
 * 时间范围
 
-有关详细信息，请参阅&#x200B;*Adobe Target指南*&#x200B;中的[受众类别](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/target-rules.html)。
+有关详细信息，请参阅&#x200B;*Adobe Target指南*&#x200B;中的[受众类别](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/target-rules.html?lang=zh-Hans)。
 
 ### 响应令牌
 
@@ -288,7 +288,7 @@ alloy("sendEvent", {
 
 ## 调试
 
-已弃用mboxTrace和mboxDebug。 请改用[Web SDK调试](https://experienceleague.adobe.com/en/docs/experience-platform/web-sdk/use-cases/debugging)的方法。
+已弃用mboxTrace和mboxDebug。 请改用[Web SDK调试](https://experienceleague.adobe.com/zh-hans/docs/experience-platform/web-sdk/use-cases/debugging)的方法。
 
 ## 术语
 

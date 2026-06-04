@@ -27,4 +27,4 @@ ht-degree: 0%
 
 查看未来弃用第三方Cookie对您的[!DNL Adobe Target] at.js实施意味着什么。
 
-有关更多信息，请参阅Adobe Target社区中的[第三方Cookie弃用对Adobe Target (at.js)的影响](https://experienceleaguecommunities.adobe.com/t5/adobe-target-blogs/the-impact-of-third-party-cookie-deprecation-on-adobe-target-at/ba-p/661615?search=Third%20Party%20Cookie%20Deprecation){target=_blank}。
+有关更多信息，请参阅Adobe Target社区中的[第三方Cookie弃用对Adobe Target (at.js)的影响](https://experienceleaguecommunities.adobe.com/t5/adobe-target-blogs/the-impact-of-third-party-cookie-deprecation-on-adobe-target-at/ba-p/661615?profile.language=zh-Hans&search=Third%20Party%20Cookie%20Deprecation){target=_blank}。

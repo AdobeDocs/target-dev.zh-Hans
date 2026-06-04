@@ -29,7 +29,7 @@ ht-degree: 1%
 
 # [!DNL Experience Platform Web SDK]中的[!DNL Adobe Analytics for Target] (A4T)日志记录
 
-当使用[!DNL Adobe Target]进行个性化时，您可以选择要用于性能测量的系统。 每个[Target活动](https://experienceleague.adobe.com/docs/target/using/activities/target-activities-guide.html)都允许您在[!DNL Target]报表和Adobe [!DNL Analytics]报表之间进行选择。
+当使用[!DNL Adobe Target]进行个性化时，您可以选择要用于性能测量的系统。 每个[Target活动](https://experienceleague.adobe.com/docs/target/using/activities/target-activities-guide.html?lang=zh-Hans)都允许您在[!DNL Target]报表和Adobe [!DNL Analytics]报表之间进行选择。
 
 如果您正在使用[!DNL Analytics]报表，[!DNL Target]必须向[!DNL Analytics]传达以下信息：
 
@@ -42,9 +42,9 @@ ht-degree: 1%
 | 日志记录方法 | 描述 |
 | --- | --- |
 | 服务器端[!DNL Analytics]日志记录 | 通过Edge Network发送的所有[!DNL Analytics]点击量在服务器端都通过[!DNL Target]详细信息进行了增强，无需经历点击拼合过程。 |
-| 客户端[!DNL Analytics]日志记录 | [!DNL Target]数据在客户端返回，允许您使用[数据插入API](https://experienceleague.adobe.com/docs/analytics/import/c-data-insertion-api.html)手动扩充数据并将其发送到[!DNL Analytics]。 |
+| 客户端[!DNL Analytics]日志记录 | [!DNL Target]数据在客户端返回，允许您使用[数据插入API](https://experienceleague.adobe.com/docs/analytics/import/c-data-insertion-api.html?lang=zh-Hans)手动扩充数据并将其发送到[!DNL Analytics]。 |
 
-日志记录方法取决于您是否对配置的[数据流](https://experienceleague.adobe.com/en/docs/experience-platform/datastreams/overview)启用了[!DNL Adobe Analytics]：
+日志记录方法取决于您是否对配置的[数据流](https://experienceleague.adobe.com/zh-hans/docs/experience-platform/datastreams/overview)启用了[!DNL Adobe Analytics]：
 
 ![正在记录方法决策流程](/help/dev/implement/a4t/assets/analytics-logging.png)
 

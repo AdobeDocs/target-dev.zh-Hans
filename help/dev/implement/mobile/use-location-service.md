@@ -22,6 +22,6 @@ ht-degree: 3%
 
 [!DNL Adobe Experience Platform Location Service] ([!DNL Location Service])是一项地理位置服务，通过此服务，具有位置感知功能的移动设备应用程序可以使用丰富且易于使用的SDK界面以及灵活的关注点(POI)数据库来了解位置上下文。
 
-您可以使用带有[!DNL Target]的[!DNL Location Service]来利用Adobe Experience Platform中带有[标记的规则](https://experienceleague.adobe.com/docs/experience-platform/tags/home.html)，将您的[!UICONTROL Places]数据附加到[!DNL Adobe Target]个SDK事件。
+您可以使用带有[!DNL Target]的[!DNL Location Service]来利用Adobe Experience Platform中带有[标记的规则](https://experienceleague.adobe.com/docs/experience-platform/tags/home.html?lang=zh-Hans)，将您的[!UICONTROL Places]数据附加到[!DNL Adobe Target]个SDK事件。
 
-有关详细信息，请参阅[Adobe Experience Platform Location Service指南](https://experienceleague.adobe.com/docs/places/using/home.html)中的[将[!UICONTROL Location Service]与 [!DNL Adobe Target]](https://experienceleague.adobe.com/docs/places/using/use-places-with-other-solutions/places-target/places-target.html)一起使用。
+有关详细信息，请参阅[Adobe Experience Platform Location Service指南](https://experienceleague.adobe.com/docs/places/using/home.html?lang=zh-Hans)中的[将[!UICONTROL Location Service]与 [!DNL Adobe Target]](https://experienceleague.adobe.com/docs/places/using/use-places-with-other-solutions/places-target/places-target.html?lang=zh-Hans)一起使用。

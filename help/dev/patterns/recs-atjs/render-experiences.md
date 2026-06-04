@@ -71,8 +71,8 @@ ht-degree: 3%
 **可用选项**
 
 * 按ID提升
-* [按收藏集促销](https://experienceleague.adobe.com/docs/target/using/recommendations/entities/collections.html){target=_blank}
-* [按属性促销](https://experienceleague.adobe.com/docs/target/using/recommendations/entities/entity-attributes.html){target=_blank}
+* [按收藏集促销](https://experienceleague.adobe.com/docs/target/using/recommendations/entities/collections.html?lang=zh-Hans){target=_blank}
+* [按属性促销](https://experienceleague.adobe.com/docs/target/using/recommendations/entities/entity-attributes.html?lang=zh-Hans){target=_blank}
 
 **需要实体参数**
 
@@ -80,7 +80,7 @@ ht-degree: 3%
 
 **读数**
 
-* [添加促销活动](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations-activity/adding-promotions.html){target=_blank}
+* [添加促销活动](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations-activity/adding-promotions.html?lang=zh-Hans){target=_blank}
 
 +++
 
@@ -104,7 +104,7 @@ ht-degree: 3%
 
 **读数**
 
-* [基于购物车](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/algorithms.html?lang=en#section_885B3BB1B43048A88A8926F6B76FC482){target=_blank}
+* [基于购物车](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/algorithms.html?lang=zh-Hans#section_885B3BB1B43048A88A8926F6B76FC482){target=_blank}
 
 +++
 
@@ -133,7 +133,7 @@ ht-degree: 3%
 
 **读数**
 
-* [基于热门程度](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/algorithms.html?lang=en#section_885B3BB1B43048A88A8926F6B76FC482){target=_blank}
+* [基于热门程度](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/algorithms.html?lang=zh-Hans#section_885B3BB1B43048A88A8926F6B76FC482){target=_blank}
 
 +++
 
@@ -159,7 +159,7 @@ ht-degree: 3%
 
 **读数**
 
-* [基于项目](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/algorithms.html?lang=en#section_885B3BB1B43048A88A8926F6B76FC482){target=_blank}
+* [基于项目](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/algorithms.html?lang=zh-Hans#section_885B3BB1B43048A88A8926F6B76FC482){target=_blank}
 
 +++
 
@@ -182,7 +182,7 @@ ht-degree: 3%
 
 **读数**
 
-* [基于用户](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/algorithms.html?lang=en#section_885B3BB1B43048A88A8926F6B76FC482){target=_blank}
+* [基于用户](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/algorithms.html?lang=zh-Hans#section_885B3BB1B43048A88A8926F6B76FC482){target=_blank}
 
 +++
 
@@ -204,7 +204,7 @@ ht-degree: 3%
 
 **读数**
 
-* [自定义标准](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/algorithms.html?lang=en#section_885B3BB1B43048A88A8926F6B76FC482){target=_blank}
+* [自定义标准](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/algorithms.html?lang=zh-Hans#section_885B3BB1B43048A88A8926F6B76FC482){target=_blank}
 
 +++
 
@@ -216,7 +216,7 @@ ht-degree: 3%
 
 **读数**
 
-* [使用动态和静态包含规则](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/dynamic-static/use-dynamic-and-static-inclusion-rules.html){target=_blank}
+* [使用动态和静态包含规则](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/dynamic-static/use-dynamic-and-static-inclusion-rules.html?lang=zh-Hans){target=_blank}
 
 +++
 
@@ -230,7 +230,7 @@ ht-degree: 3%
 
 **读数**
 
-* [我可以动态排除实体吗？](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations-faq/recommendations-faq.html?lang=en#exclude){target=_blank}
+* [我可以动态排除实体吗？](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations-faq/recommendations-faq.html?lang=zh-Hans#exclude){target=_blank}
 
 +++
 
@@ -242,9 +242,9 @@ ht-degree: 3%
 
 **读数**
 
-* [实体属性](https://experienceleague.adobe.com/docs/target/using/recommendations/entities/entity-attributes.html){target=_blank}
+* [实体属性](https://experienceleague.adobe.com/docs/target/using/recommendations/entities/entity-attributes.html?lang=zh-Hans){target=_blank}
 
-您还可以通过使用[!DNL Target] UI创建[产品馈送](https://experienceleague.adobe.com/docs/target/using/recommendations/entities/feeds.html){target=_blank}来更新[!DNL Recommendations]的产品目录，从而完成此步骤。
+您还可以通过使用[!DNL Target] UI创建[产品馈送](https://experienceleague.adobe.com/docs/target/using/recommendations/entities/feeds.html?lang=zh-Hans){target=_blank}来更新[!DNL Recommendations]的产品目录，从而完成此步骤。
 
 +++
 
@@ -258,7 +258,7 @@ ht-degree: 3%
 
 **读数**
 
-* [轮廓属性](https://experienceleague.adobe.com/docs/target/using/audiences/visitor-profiles/profile-parameters.html){target=_blank}
+* [轮廓属性](https://experienceleague.adobe.com/docs/target/using/audiences/visitor-profiles/profile-parameters.html?lang=zh-Hans){target=_blank}
 
 +++
 
@@ -266,7 +266,7 @@ ht-degree: 3%
 
 ## 3.11：触发页面加载请求 {#fire}
 
-此步骤在请求中触发具有`execute` > `pageLoad`有效负载的[!DNL Delivery API]调用。 `getOffers()`方法提取体验，`applyOffers()`渲染页面上的体验。 在[可视化体验编辑器](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html){target=_blank} (VEC)中创作的呈现体验需要`pageLoad`请求。
+此步骤在请求中触发具有`execute` > `pageLoad`有效负载的[!DNL Delivery API]调用。 `getOffers()`方法提取体验，`applyOffers()`渲染页面上的体验。 在[可视化体验编辑器](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html?lang=zh-Hans){target=_blank} (VEC)中创作的呈现体验需要`pageLoad`请求。
 
 +++查看详细信息
 
