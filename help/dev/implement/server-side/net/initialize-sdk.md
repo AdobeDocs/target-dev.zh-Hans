@@ -4,13 +4,11 @@ description: 了解如何使用create方法初始化Java SDK并实例化[!UICONT
 feature: APIs/SDKs
 exl-id: 501010c3-22f4-49a8-b2ac-c7307232d180
 TQID: https://experienceleague.adobe.com/uOEojoWWjXmcDl2yY1UmSRD-EXL0j9p-p-eE8PXa7Rk
-product_v2:
-  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: b18c88053a47a97d6718a69cb72cb4e5d99969c8
 workflow-type: tm+mt
-source-wordcount: 359
+source-wordcount: 369
 ht-degree: 15%
 
 ---
@@ -19,7 +17,7 @@ ht-degree: 15%
 
 ## 描述
 
-使用`Create`方法初始化.NET SDK并实例化[!UICONTROL Target Client]以调用[!DNL Adobe Target]进行实验及个性化体验。
+使用`Create`方法初始化.NET SDK并实例化[!UICONTROL Target客户端]以调用[!DNL Adobe Target]进行实验及个性化体验。
 
 使用.NET依赖项注入时，只需在服务配置步骤中通过调用`services.AddTargetLibrary()`添加SDK；然后在应用程序的构造函数中注入`ITargetClient targetClient`。
 
@@ -29,7 +27,7 @@ ht-degree: 15%
 
 `TargetClient`是使用`TargetClient.Create`创建的。
 
-## C&#35;
+## C#
 
 ```csharp {line-numbers="true"}
 TargetClient TargetClient.Create(TargetClientConfig clientConfig)
@@ -37,7 +35,7 @@ TargetClient TargetClient.Create(TargetClientConfig clientConfig)
 
 `ClientConfig`是使用ClientConfig.Builder创建的。
 
-## C&#35;
+## C#
 
 ```csharp {line-numbers="true"}
 TargetClientConfig.Builder TargetClientConfig.Builder()
@@ -49,8 +47,8 @@ TargetClientConfig.Builder TargetClientConfig.Builder()
 
 | 名称 | 类型 | 必需 | 默认 | 描述 |
 | --- | --- | --- | --- | --- |
-| 客户 | 字符串 | 是 | 无 | [!UICONTROL Target Client Id] |
-| OrganizationId | 字符串 | 是 | 无 | [!UICONTROL Experience Cloud Organization ID] |
+| 客户 | 字符串 | 是 | 无 | [!UICONTROL Target客户端ID] |
+| OrganizationId | 字符串 | 是 | 无 | [!UICONTROL Experience Cloud组织ID] |
 | 超时 | int | 否 | 10000 | 所有请求的超时（以毫秒为单位） |
 | 代理 | WebProxy | 否 | null | 所有[!DNL Target]请求的代理 |
 | RetryPolicy | 策略 | 否 | null | 重试所有[!DNL Target]请求的策略 |
@@ -71,7 +69,7 @@ TargetClientConfig.Builder TargetClientConfig.Builder()
 
 ## 示例
 
-## C&#35;
+## C#
 
 ```csharp {line-numbers="true"}
 var targetClientConfig = new TargetClientConfig.Builder("acmeclient", "ABCDEF012345677890ABCDEF0@AdobeOrg")

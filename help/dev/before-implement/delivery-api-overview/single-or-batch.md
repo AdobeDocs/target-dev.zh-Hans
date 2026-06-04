@@ -1,30 +1,28 @@
 ---
 title: Adobe Target交付API单次或批量交付
-description: 如何使用[!UICONTROL Adobe Target Delivery API]单次或批量投放调用？
+description: 如何使用[!UICONTROL Adobe Target交付API]单次或批量交付调用？
 keywords: 投放api
 exl-id: 525cd1f2-616a-486c-8f49-8117615500bb
 feature: APIs/SDKs
 TQID: https://experienceleague.adobe.com/NMNCubmUyiVOWfq2MnkONSrQCZRqNEh0VJTfFBGptOk
-product_v2:
-  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 448
+source-wordcount: 460
 ht-degree: 0%
 
 ---
 
 # 单次或批量交付
 
-[!UICONTROL Adobe Target Delivery API]支持单个或批次投放调用。 可以为单个或多个mbox发出内容服务器请求。
+[!UICONTROL Adobe Target交付API]支持单个或批量交付调用。 可以为单个或多个mbox发出内容服务器请求。
 
 在决定进行单次呼叫与批量呼叫时权衡性能成本。 如果您知道需要为用户显示的所有内容，则最佳实践是通过单个批量投放调用检索所有mbox的内容，以避免发出多个单个投放调用。
 
 ## 单个投放调用
 
-您可以检索要通过[!UICONTROL Adobe Target Delivery API]显示给用户的一个mbox的体验。 请注意，如果您进行单个交付调用，则需要启动另一个服务器调用，以便为用户的mbox检索其他内容。 随着时间的推移，这可能变得非常昂贵，因此，请确保在使用单个交付API调用时评估您的方法。
+您可以通过[!UICONTROL Adobe Target投放API]检索要向用户显示的mbox体验。 请注意，如果您进行单个交付调用，则需要启动另一个服务器调用，以便为用户的mbox检索其他内容。 随着时间的推移，这可能变得非常昂贵，因此，请确保在使用单个交付API调用时评估您的方法。
 
 ```
 curl -X POST \

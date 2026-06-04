@@ -1,27 +1,21 @@
 ---
 title: 设备上决策疑难解答
-description: 了解如何对[!UICONTROL on-device decisioning]进行故障排除
+description: 了解如何对[!UICONTROL 设备上决策]进行故障排除
 exl-id: e76f95ce-afae-48e0-9dbb-2097133574dc
 feature: APIs/SDKs
 TQID: https://experienceleague.adobe.com/Fp25tLDtuk-CqqcbofshX2-0MzQzayE2xN8OvNT3zVo
-product_v2:
-  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
-feature_v2:
-  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-  - id: c1579802-ddd4-4214-8a91-97b2066abe11
-  - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2: id: c93393a4-e558-47e1-992e-c91ed4d480ce
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: c1579802-ddd4-4214-8a91-97b2066abe11id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 1158
+source-wordcount: 1188
 ht-degree: 0%
 
 ---
 
-# 疑难解答 [!UICONTROL on-device decisioning]
+# [!UICONTROL 设备上决策]疑难解答
 
 ## 正在验证配置
 
@@ -29,8 +23,8 @@ ht-degree: 0%
 
 1. 确保已配置`logger`
 1. 确保启用[!DNL Target]跟踪
-1. 验证是否已根据定义的轮询间隔检索和缓存[!UICONTROL on-device decisioning] *规则项目*。
-1. 通过基于表单的体验编辑器创建测试[!UICONTROL on-device decisioning]活动，验证通过缓存的规则工件进行的内容交付。
+1. 验证是否已根据定义的轮询间隔检索和缓存[!UICONTROL 设备上决策] *规则构件*。
+1. 通过基于表单的体验编辑器创建测试[!UICONTROL 设备上决策]活动，验证通过缓存的规则工件进行的内容交付。
 1. 检查发送通知错误
 
 ## &#x200B;1. 确保已配置日志程序
@@ -75,7 +69,7 @@ java -Dorg.slf4j.simpleLogger.defaultLogLevel=DEBUG ...
 
    ![替代图像](assets/asset-target-ui-1.png)
 
-1. 导航到&#x200B;**[!UICONTROL Administration]** > **[!UICONTROL Implementation]**&#x200B;并单击&#x200B;**[!UICONTROL Generate New Authorization Token]**。
+1. 导航到&#x200B;**[!UICONTROL 管理]** > **[!UICONTROL 实现]**，然后单击&#x200B;**[!UICONTROL 生成新的授权令牌]**。
 
    ![替代图像](assets/asset-target-ui-2.png)
 
@@ -124,7 +118,7 @@ java -Dorg.slf4j.simpleLogger.defaultLogLevel=DEBUG ...
      AT: LD.ArtifactProvider artifact received - status=200
    ```
 
-## &#x200B;3. 验证是否已根据定义的轮询间隔检索和缓存[!UICONTROL on-device decisioning] *规则项目*。
+## &#x200B;3. 验证是否已根据定义的轮询间隔检索和缓存[!UICONTROL 设备上决策] *规则构件*。
 
 1. 等待轮询间隔的持续时间（默认值为20分钟），并确保SDK正在获取构件。 将输出相同的终端日志。
 
@@ -146,7 +140,7 @@ java -Dorg.slf4j.simpleLogger.defaultLogLevel=DEBUG ...
      },
    ```
 
-## &#x200B;4. 通过基于表单的体验编辑器创建测试[!UICONTROL on-device decisioning]活动，通过缓存的规则工件验证内容交付
+## &#x200B;4. 通过基于表单的体验编辑器创建测试[!UICONTROL 设备上决策]活动，验证通过缓存的规则构件进行的内容交付
 
 1. 导航到Experience Cloud中的[!DNL Target]用户界面
 
@@ -250,11 +244,11 @@ client = TargetClient.create({
 
 ## 常见疑难解答方案
 
-遇到问题时，请务必查看[!UICONTROL on-device decisioning]的[支持的功能](supported-features.md)。
+当遇到问题时，请务必查看[!UICONTROL 设备上决策]的[支持的功能](supported-features.md)。
 
 ### 由于受众或活动不受支持，设备上决策活动无法执行
 
-一个可能发生的常见问题是[!UICONTROL on-device decisioning]个活动由于受众正在使用或活动类型不受支持而无法执行。
+一个可能发生的常见问题是[!UICONTROL 设备上决策]活动由于受众正在使用或活动类型不受支持而无法执行。
 
 (1)使用记录器输出，查看响应对象中trace属性中的条目。 明确标识促销活动属性：
 

@@ -6,20 +6,14 @@ level: Experienced
 role: Developer
 exl-id: 65fd369a-6034-4b51-8ddf-e53e526a795d
 TQID: https://experienceleague.adobe.com/H85u3UrJXqEeUPscsxTkbTJsF9kmSSpK-ExzCyZT8yE
-product_v2:
-  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
-feature_v2:
-  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
-  - id: f7c7de77-382f-4f48-8b36-61a170f06d3d
-subfeature_v2:
-  - id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2: id: c93393a4-e558-47e1-992e-c91ed4d480ceid: f7c7de77-382f-4f48-8b36-61a170f06d3d
+subfeature_v2: id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 383
+source-wordcount: 398
 ht-degree: 0%
 
 ---
@@ -54,19 +48,19 @@ ht-degree: 0%
    >
    >您必须登录到`github.com`才能在[!DNL Experience League]中打开问题。 如果您是第一次打开问题，请查看投稿指南和行为准则说明。
 
-1. （视情况而定）要提出新模式或对现有模式的改进建议，请单击&#x200B;**[!UICONTROL Detailed feedback options]**，然后单击&#x200B;**[!UICONTROL Report an issue]**。
+1. （视情况而定）要提出新模式或改进现有模式的想法，请单击&#x200B;**[!UICONTROL 详细反馈选项]**，然后单击&#x200B;**[!UICONTROL 报告问题]**。
 
    1. 提供标题，然后在文本框中键入您的注释。
 
       根据需要附加文件或屏幕截图。
 
-   1. 完成后单击&#x200B;**[!UICONTROL Submit new issue]**。
+   1. 完成后，单击&#x200B;**[!UICONTROL 提交新问题]**。
 
-1. （视情况而定）要编辑现有模式的文本，请从相关文章上的反馈选项模型中单击&#x200B;**[!UICONTROL Suggest an edit]**，然后单击&#x200B;**[!UICONTROL Edit]**&#x200B;图标（铅笔图标）。
+1. （视情况而定）要编辑现有模式的文本，请从相关文章上的反馈选项模型中单击&#x200B;**[!UICONTROL 建议编辑]**，然后单击&#x200B;**[!UICONTROL 编辑]**&#x200B;图标（铅笔图标）。
 
    1. 使用Markdown语法进行编辑。
 
-   1. 完成后单击&#x200B;**[!UICONTROL Commit changes]**。
+   1. 完成后单击&#x200B;**[!UICONTROL 提交更改]**。
 
 如有必要，[!DNL Target]团队可以审阅您的评论或编辑内容，并使用此功能与您沟通，以收集其他信息或获取进一步说明。
 

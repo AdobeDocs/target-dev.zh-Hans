@@ -2,33 +2,34 @@
 title: 使用 [!DNL Adobe Target] 与 [!DNL Web SDK] 进行个性化。
 description: 了解如何使用 [!DNL Experience Platform Web SDK] 使用 [!DNL Adobe Target]呈现个性化内容。
 feature: AEP Web SDK
-source-git-commit: 1fe6adc25604612ed9fa090f1f68c18b9c0bdf63
+exl-id: 31c00779-20a8-4d18-9ee4-0430e5e9a84c
+source-git-commit: 925a150c06057f5830a1370eee65b5984f81a72d
 workflow-type: tm+mt
-source-wordcount: '1342'
+source-wordcount: '1560'
 ht-degree: 5%
 
 ---
 
 # 使用[!DNL Adobe Target]和[!DNL Web SDK]进行个性化
 
-[!DNL Adobe Experience Platform] [!DNL Web SDK]可以将在[!DNL Adobe Target]中管理的个性化体验交付并渲染到Web渠道。 您可以使用名为[可视化体验编辑器](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html?lang=zh-Hans) (VEC)的WYSIWYG编辑器，或使用非可视化界面[基于表单的体验编辑器](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html?lang=zh-Hans)创建、激活并交付活动和个性化体验。
+[!DNL Adobe Experience Platform] [!DNL Web SDK]可以将在[!DNL Adobe Target]中管理的个性化体验交付并渲染到Web渠道。 您可以使用名为[可视化体验编辑器](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html) (VEC)的WYSIWYG编辑器，或使用非可视化界面[基于表单的体验编辑器](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html)创建、激活并交付活动和个性化体验。
 
 >[!IMPORTANT]
 >
->了解如何使用[!DNL Target]将Target从at.js 2.x迁移到Experience Platform Web SDK[!DNL Experience Platform Web SDK]教程将[实施迁移到](https://experienceleague.adobe.com/docs/platform-learn/migrate-target-to-websdk/introduction.html?lang=zh-Hans)。
+>了解如何使用[将Target从at.js 2.x迁移到Experience Platform Web SDK](https://experienceleague.adobe.com/docs/platform-learn/migrate-target-to-websdk/introduction.html)教程将[!DNL Target]实施迁移到[!DNL Experience Platform Web SDK]。
 >
->了解如何使用[!DNL Target]使用Web SDK实施Adobe Experience Cloud[教程首次实施](https://experienceleague.adobe.com/docs/platform-learn/implement-web-sdk/overview.html?lang=zh-Hans)。 有关[!DNL Target]的特定信息，请参阅标题为[使用Experience Platform Web SDK设置Target](https://experienceleague.adobe.com/docs/platform-learn/implement-web-sdk/applications-setup/setup-target.html?lang=zh-Hans)的教程部分。
+>了解如何使用[使用Web SDK实施Adobe Experience Cloud](https://experienceleague.adobe.com/docs/platform-learn/implement-web-sdk/overview.html)教程首次实施[!DNL Target]。 有关[!DNL Target]的特定信息，请参阅标题为[使用Experience Platform Web SDK设置Target](https://experienceleague.adobe.com/docs/platform-learn/implement-web-sdk/applications-setup/setup-target.html)的教程部分。
 
 以下功能已经过测试，当前在[!DNL Target]中受支持：
 
-* [A/B 测试](https://experienceleague.adobe.com/docs/target/using/activities/abtest/test-ab.html?lang=zh-Hans)
-* [A4T展示和转化报告](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t.html?lang=zh-Hans)
-* [Automated Personalization活动](https://experienceleague.adobe.com/docs/target/using/activities/automated-personalization/automated-personalization.html?lang=zh-Hans)
-* [体验定位活动](https://experienceleague.adobe.com/docs/target/using/activities/automated-personalization/automated-personalization.html?lang=zh-Hans)
-* [多变量测试 (MVT)](https://experienceleague.adobe.com/docs/target/using/activities/multivariate-test/multivariate-testing.html?lang=zh-Hans)
-* [推荐活动](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations.html?lang=zh-Hans)
-* [本机目标展示和转化报告](https://experienceleague.adobe.com/docs/target/using/reports/reports.html?lang=zh-Hans)
-* [VEC支持](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html?lang=zh-Hans)
+* [A/B测试](https://experienceleague.adobe.com/docs/target/using/activities/abtest/test-ab.html)
+* [A4T展示和转化报表](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t.html)
+* [Automated Personalization活动](https://experienceleague.adobe.com/docs/target/using/activities/automated-personalization/automated-personalization.html)
+* [体验定位活动](https://experienceleague.adobe.com/docs/target/using/activities/automated-personalization/automated-personalization.html)
+* [多变量测试(MVT)](https://experienceleague.adobe.com/docs/target/using/activities/multivariate-test/multivariate-testing.html)
+* [Recommendations活动](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations.html)
+* [原生Target展示和转化报表](https://experienceleague.adobe.com/docs/target/using/reports/reports.html)
+* [VEC支持](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html)
 
 ## [!DNL Web SDK]系统图
 
@@ -41,9 +42,9 @@ ht-degree: 5%
 | 1 | 设备加载[!DNL Web SDK]。 [!DNL Web SDK]向Edge Network发送请求，其中包含XDM数据、数据流环境ID、传入参数和客户ID（可选）。 页面（或容器）已预先隐藏。 |
 | 2 | Edge Network将请求发送到边缘服务，以使用访客ID、同意和其他访客上下文信息（如地理位置和设备友好名称）对其进行扩充。 |
 | 3 | Edge Network使用访客ID和传入的参数将扩充的个性化请求发送给[!DNL Target]边缘。 |
-| 4 | 配置文件脚本在执行后进入[!DNL Target]配置文件存储。 配置文件存储从[!UICONTROL Audience Library]获取区段（例如，从[!DNL Adobe Analytics]、[!DNL Adobe Audience Manager]、[!DNL Adobe Experience Platform]共享的区段）。 |
+| 4 | 配置文件脚本在执行后进入[!DNL Target]配置文件存储。 配置文件存储从[!UICONTROL 受众库]中获取区段（例如，从[!DNL Adobe Analytics]、[!DNL Adobe Audience Manager]、[!DNL Adobe Experience Platform]共享的区段）。 |
 | 5 | 根据URL请求参数和配置文件数据，[!DNL Target]确定将为访客显示的当前页面视图和未来预取视图的活动和体验。 [!DNL Target]然后将此数据发送回Edge Network。 |
-| 6 | a. Edge Network将个性化响应发送回页面，其中可能包含其他个性化的配置文件值。 当前页面上的个性化内容会在默认内容不发生闪烁的情况下尽快显示。<br>b。作为用户在单页应用程序(SPA)中操作结果而显示的视图的个性化内容将缓存，这样便可在触发视图时即时应用而无需额外的服务器调用。 <br>c。Edge Network会发送访客ID以及Cookie中的其他值，例如同意、会话ID、身份、Cookie检查和个性化。 |
+| 6 | a. Edge Network将个性化响应发送回页面，其中可能包含其他个性化的配置文件值。 当前页面上的个性化内容会在默认内容不发生闪烁的情况下尽快显示。<br>b。 作为用户在单页应用程序(SPA)中操作结果而显示的视图的个性化内容将缓存，这样便可在触发视图时即时应用而无需额外的服务器调用。 <br>c. Edge Network会发送访客ID以及Cookie中的其他值，例如同意、会话ID、身份、Cookie检查和个性化。 |
 | 7 | Web SDK将通知从设备发送到Edge Network。 |
 | 8 | Edge Network将[!UICONTROL Analytics for Target] (A4T)详细信息（活动、体验和转化元数据）转发到[!DNL Analytics]边缘。 |
 
@@ -51,27 +52,27 @@ ht-degree: 5%
 
 要启用[!DNL Target]，请执行以下操作：
 
-1. 使用适当的客户端代码启用[!DNL Target]数据流[中的](https://experienceleague.adobe.com/zh-hans/docs/experience-platform/datastreams/overview)。
+1. 使用适当的客户端代码启用[数据流](https://experienceleague.adobe.com/en/docs/experience-platform/datastreams/overview)中的[!DNL Target]。
 1. 将`renderDecisions`选项添加到您的事件。
 
 然后，您还可以选择添加以下选项：
 
 * **`decisionScopes`**：通过将此选项添加到您的事件中，检索特定活动（对于使用基于表单的编辑器创建的活动很有用）。
-* **[预隐藏代码片段](https://experienceleague.adobe.com/zh-hans/docs/experience-platform/web-sdk/personalization/manage-flicker)**：仅隐藏页面的某些部分。
+* **[预隐藏代码片段](https://experienceleague.adobe.com/en/docs/experience-platform/web-sdk/personalization/manage-flicker)**：仅隐藏页面的某些部分。
 
 ## 使用[!UICONTROL Adobe Target] VEC
 
-要将VEC与[!DNL Web SDK]实现结合使用，请安装并激活[Firefox](https://addons.mozilla.org/en-US/firefox/addon/adobe-target-vec-helper/)或[Chrome](https://experienceleague.adobe.com/zh-hans/docs/target/using/experiences/vec/troubleshoot-composer/visual-editing-helper-extension) VEC Helper扩展。
+要将VEC与[!DNL Web SDK]实现结合使用，请安装并激活[Firefox](https://addons.mozilla.org/en-US/firefox/addon/adobe-target-vec-helper/)或[Chrome](https://experienceleague.adobe.com/en/docs/target/using/experiences/vec/troubleshoot-composer/visual-editing-helper-extension) VEC Helper扩展。
 
-有关详细信息，请参阅[Adobe Target指南](https://experienceleague.adobe.com/docs/target/using/experiences/vec/troubleshoot-composer/vec-helper-browser-extension.html?lang=zh-Hans)中的&#x200B;*可视化体验编辑器助手扩展*。
+有关详细信息，请参阅&#x200B;*Adobe Target指南*&#x200B;中的[可视化体验编辑器助手扩展](https://experienceleague.adobe.com/docs/target/using/experiences/vec/troubleshoot-composer/vec-helper-browser-extension.html)。
 
 ## 呈现个性化内容
 
-有关详细信息，请参阅[呈现个性化内容](https://experienceleague.adobe.com/zh-hans/docs/experience-platform/web-sdk/personalization/rendering-personalization-content)。
+有关详细信息，请参阅[呈现个性化内容](https://experienceleague.adobe.com/en/docs/experience-platform/web-sdk/personalization/rendering-personalization-content)。
 
 ## XDM中的受众
 
-在为通过[!DNL Target]交付的[!DNL Web SDK]活动定义受众时，必须定义和使用[XDM](https://experienceleague.adobe.com/docs/experience-platform/xdm/home.html?lang=zh-Hans)。 定义XDM架构、类和架构字段组后，可创建由XDM数据定义的[!DNL Target]受众规则以进行定位。 在[!DNL Target]内，XDM数据在[!UICONTROL Audience Builder]中显示为自定义参数。 XDM使用点表示法序列化（例如，`web.webPageDetails.name`）。
+在为通过[!DNL Web SDK]交付的[!DNL Target]活动定义受众时，必须定义和使用[XDM](https://experienceleague.adobe.com/docs/experience-platform/xdm/home.html)。 定义XDM架构、类和架构字段组后，可创建由XDM数据定义的[!DNL Target]受众规则以进行定位。 在[!DNL Target]内，XDM数据在[!UICONTROL 受众生成器]中显示为自定义参数。 XDM使用点表示法序列化（例如，`web.webPageDetails.name`）。
 
 如果您的[!DNL Target]活动包含使用自定义参数或用户配置文件的预定义受众，则无法通过SDK正确交付这些受众。 您必须改用XDM，而不是使用自定义参数或用户配置文件。 但是，有一些通过[!DNL Web SDK]支持的现成受众定向字段不需要XDM。 这些字段在[!DNL Target] UI中可用，不需要XDM：
 
@@ -84,12 +85,12 @@ ht-degree: 5%
 * 流量源
 * 时间范围
 
-有关详细信息，请参阅[Adobe Target指南](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/target-rules.html?lang=zh-Hans)中的&#x200B;*受众类别*。
+有关详细信息，请参阅&#x200B;*Adobe Target指南*&#x200B;中的[受众类别](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/target-rules.html)。
 
 ### 响应令牌
 
 响应令牌用于将元数据发送到Google或Facebook等第三方。 返回响应令牌
-在`meta` > `propositions`内的`items`字段中。
+在`propositions` > `items`内的`meta`字段中。
 
 以下是示例：
 
@@ -150,11 +151,11 @@ alloy("sendEvent",
 
 * 基于表单的编辑器`propositions`，其中`renderAttempted`标志设置为`false`
 * 基于Visual Experience Composer的建议，`renderAttempted`标志设置为`true`
-* 对于标志设置为`renderAttempted`的`true`的单页应用程序视图，基于可视化体验编辑器的建议
+* 对于标志设置为`true`的`renderAttempted`的单页应用程序视图，基于可视化体验编辑器的建议
 
 #### 查看时 — 更改（对于缓存的视图）：
 
-* 对于标志设置为`renderAttempted`的`true`的单页应用程序视图，基于可视化体验编辑器的建议
+* 对于标志设置为`true`的`renderAttempted`的单页应用程序视图，基于可视化体验编辑器的建议
 
 禁用自动渲染时，建议数组包含：
 
@@ -162,11 +163,11 @@ alloy("sendEvent",
 
 * 基于[!DNL Form-based Composer]的`propositions`，其中`renderAttempted`标志设置为`false`
 * 基于[!DNL Visual Experience Composer]的建议，其中`renderAttempted`标志设置为`false`
-* 基于[!DNL Visual Experience Composer]的单页应用程序视图建议，且标志设置为`renderAttempted` `false`
+* 基于[!DNL Visual Experience Composer]的单页应用程序视图建议，且标志设置为`renderAttempted``false`
 
 #### 查看时 — 更改（对于缓存的视图）：
 
-* 针对标志设置为`renderAttempted`的`false`的单页应用程序视图，基于可视化体验编辑器的建议
+* 针对标志设置为`false`的`renderAttempted`的单页应用程序视图，基于可视化体验编辑器的建议
 
 ### 单个配置文件更新
 
@@ -287,7 +288,7 @@ alloy("sendEvent", {
 
 ## 调试
 
-已弃用mboxTrace和mboxDebug。 请改用[Web SDK调试](https://experienceleague.adobe.com/zh-hans/docs/experience-platform/web-sdk/use-cases/debugging)的方法。
+已弃用mboxTrace和mboxDebug。 请改用[Web SDK调试](https://experienceleague.adobe.com/en/docs/experience-platform/web-sdk/use-cases/debugging)的方法。
 
 ## 术语
 

@@ -5,13 +5,11 @@ keywords: 投放api
 exl-id: e760bddc-b1ae-4b7b-bff2-aba81c6b6d34
 feature: APIs/SDKs
 TQID: https://experienceleague.adobe.com/gPXGax6ccvZZPklT3jnZbqyOj3mCClEfSpdufAFPtSs
-product_v2:
-  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 184
+source-wordcount: 188
 ht-degree: 0%
 
 ---
@@ -20,7 +18,7 @@ ht-degree: 0%
 
 [!DNL Adobe Target Delivery API]基于REST。 本文档介绍了构成[!DNL Adobe Target] [!DNL Delivery API]的资源。 HTTP方法用于对这些资源执行操作。
 
-使用[!UICONTROL Adobe Target's Delivery API]，您可以：
+使用[!UICONTROL Adobe Target的投放API]，您可以：
 
 * 跨Web（包括SPA）和移动频道以及非基于浏览器的物联网设备（例如联网电视、网亭或店内数字屏幕）交付体验。
 * 从任何可进行HTTP/s调用的服务器端平台或应用程序交付体验。

@@ -7,15 +7,12 @@ thumbnail: null
 author: Judy Kim
 exl-id: aea82607-cde4-456a-8dfb-2967badce455
 TQID: https://experienceleague.adobe.com/9uKu-mX9xzz-sG4-peyfzrwogo27nF8TZ4zFXBi6TaU
-product_v2:
-  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
 source-git-commit: 0fe52344f654f22d1ff7aaace0ba5a99e92d036d
 workflow-type: tm+mt
-source-wordcount: 901
+source-wordcount: 930
 ht-degree: 0%
 
 ---
@@ -28,7 +25,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->每当您需要刷新访问令牌以进行身份验证时，请发送&#x200B;**[!UICONTROL IMS: JWT Generate + Auth via User Token]**&#x200B;请求，因为它在24小时后过期。 有关说明，请参阅[配置Adobe API身份验证](../configure-authentication.md)。
+>每当您需要刷新访问令牌以进行身份验证时，请通过用户令牌&#x200B;]**请求发送**[!UICONTROL  IMS： JWT生成+身份验证，因为它在24小时后过期。 有关说明，请参阅[配置Adobe API身份验证](../configure-authentication.md)。
 
 ![JWT3ff](assets/configure-io-target-jwt3ff.png)
 
@@ -44,7 +41,7 @@ POST https://mc.adobe.io/{{TENANT_ID}}/target/recs/entities
 
 例如，当满足某些阈值时（例如库存或价格的阈值），可以使用保存实体来更新项目，以便标记这些项目并阻止推荐它们。
 
-1. 导航到&#x200B;**[!UICONTROL Target]** > **[!UICONTROL Setup]** > **[!UICONTROL Hosts]** > **[!UICONTROL CONTROL Environments]**，以获取要添加或更新项的目标环境ID。
+1. 导航到&#x200B;**[!UICONTROL Target]** > **[!UICONTROL 设置]** > **[!UICONTROL 主机]** > **[!UICONTROL 控制环境]**，以获取要在其中添加或更新项目的目标环境ID。
 
    ![SaveEntities1](assets/SaveEntities01.png)
 
@@ -79,7 +76,7 @@ POST https://mc.adobe.io/{{TENANT_ID}}/target/recs/entities
        }
    ```
 
-1. 单击 **[!UICONTROL Send]**。 您应会收到以下响应。
+1. 单击&#x200B;**[!UICONTROL 发送]**。 您应会收到以下响应。
 
    ![SaveEntities5.png](assets/SaveEntities05.png)
 
@@ -123,11 +120,11 @@ POST https://mc.adobe.io/{{TENANT_ID}}/target/recs/entities
        }
    ```
 
-1. 现在轮到你了！ 使用&#x200B;**[!UICONTROL Save Entities]** API将以下项目添加到您的目录。 使用上面的JSON示例作为起点。 （您需要扩展JSON以包含其他实体。）
+1. 现在轮到你了！ 使用&#x200B;**[!UICONTROL 保存实体]** API将以下项目添加到您的目录。 使用上面的JSON示例作为起点。 （您需要扩展JSON以包含其他实体。）
 
    ![SaveEntities6.png](assets/SaveEntities06.png)
 
-似乎后两个项目不属于该组。 让我们使用&#x200B;**[!UICONTROL Get Entity]** API检查这些实例，如有必要，请使用&#x200B;**[!UICONTROL Delete Entities]** API删除它们。
+似乎后两个项目不属于该组。 让我们使用&#x200B;**[!UICONTROL 获取实体]** API检查这些实体，如有必要，请使用&#x200B;**[!UICONTROL 删除实体]** API删除它们。
 
 ## 使用获取实体API获取项目详细信息
 
@@ -156,17 +153,17 @@ GET https://mc.adobe.io/{{TENANT_ID}}/target/recs/entities/[entity.id]
 
    >[!NOTE]
    >
-   >如果未明确指定任何环境，则获取实体仅尝试从[默认环境](https://experienceleague.adobe.com/docs/target/using/administer/environments.html?lang=zh-Hans)获取实体。 如果要从默认环境以外的任何环境提取，则必须指定环境ID。
+   >如果未明确指定任何环境，则获取实体仅尝试从[默认环境](https://experienceleague.adobe.com/docs/target/using/administer/environments.html)获取实体。 如果要从默认环境以外的任何环境提取，则必须指定环境ID。
 
 1. 如有必要，请添加`environmentId`参数，然后重新发送请求。
 
    ![GetEntity4](assets/GetEntity4.png)
 
-1. 再次发送&#x200B;**[!UICONTROL Get Entity]**&#x200B;请求，这次检查其entityId=kit2005的实体。
+1. 发送另一个&#x200B;**[!UICONTROL 获取实体]**&#x200B;请求，这次检查其entityId=kit2005的实体。
 
    ![GetEntity5](assets/GetEntity5.png)
 
-假设您决定需要从目录中删除这些实体。 让我们使用&#x200B;**[!UICONTROL Delete Entities]** API。
+假设您决定需要从目录中删除这些实体。 让我们使用&#x200B;**[!UICONTROL 删除实体]** API。
 
 ## 使用删除实体API删除项目
 
@@ -180,7 +177,7 @@ DELETE https://mc.adobe.io/{{TENANT_ID}}/target/recs/entities?ids=[comma-delimit
 >
 >删除实体API会删除由您指定的ID引用的实体。 如果未提供实体ID，则给定环境中的所有实体都将被删除。 如果未指定环境ID，将从所有环境中删除实体。 请谨慎使用！
 
-1. 导航到&#x200B;**[!UICONTROL Target]** > **[!UICONTROL Setup]** > **[!UICONTROL Hosts]** > **[!UICONTROL Environments]**，以获取要删除项目的目标环境ID。
+1. 导航到&#x200B;**[!UICONTROL Target]** > **[!UICONTROL 设置]** > **[!UICONTROL 主机]** > **[!UICONTROL 环境]**，以获取要删除项目的目标环境ID。
 
    ![DeleteEntities1](assets/SaveEntities01.png)
 
@@ -200,7 +197,7 @@ DELETE https://mc.adobe.io/{{TENANT_ID}}/target/recs/entities?ids=[comma-delimit
 
    ![DeleteEntities5](assets/DeleteEntities5.png)
 
-1. 使用&#x200B;**[!UICONTROL Get Entity]**&#x200B;验证您的结果，它现在应表示找不到已删除的实体。
+1. 使用&#x200B;**[!UICONTROL 获取实体]**&#x200B;验证您的结果，它现在应表示找不到已删除的实体。
 
    ![DeleteEntities6](assets/DeleteEntities6.png)
 

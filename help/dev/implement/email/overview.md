@@ -5,19 +5,11 @@ title: 如何为电子邮件实施 [!DNL Target] ？
 feature: Implement Email
 exl-id: dda00b75-5d58-4405-ae58-75e7883a30ed
 TQID: https://experienceleague.adobe.com/NeITIa97pW-yiB6EB-ajqRuBgp9mx-uzdwlREdgotj8
-product_v2:
-  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
-feature_v2:
-  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
-subfeature_v2:
-  - id: c94a34eb-b51c-4dd1-a6a4-46b0d84ccccd
-  - id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-  - id: d095671a-1355-40aa-8b5f-06c33c68080b
-  - id: e9001ce2-5245-4a8e-8601-dd958009072f
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2: id: c93393a4-e558-47e1-992e-c91ed4d480ce
+subfeature_v2: id: c94a34eb-b51c-4dd1-a6a4-46b0d84ccccdid: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: d095671a-1355-40aa-8b5f-06c33c68080bid: e9001ce2-5245-4a8e-8601-dd958009072f
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
 source-wordcount: 441
@@ -42,7 +34,7 @@ AdBox 广告和重定向器可用于任何类型的活动。 下表比较了 Adb
 
 ## 安全最佳实践
 
-请注意，使用重定向器，您可能会面临开放重定向漏洞的风险。 为避免第三方未经授权即使用重定向程序链接，我们建议您使用“授权的主机”来允许列表默认的重定向URL域。 [!DNL Target]使用主机允许列表您要允许重定向的域。 有关详细信息，请参阅[创建允许列表，指定有权将mbox调用发送到&#x200B;*主机*&#x200B;中的 [!DNL Target]](https://experienceleague.adobe.com/docs/target/using/administer/hosts.html?lang=zh-Hans#allowlist)的主机。
+请注意，使用重定向器，您可能会面临开放重定向漏洞的风险。 为避免第三方未经授权即使用重定向程序链接，我们建议您使用“授权的主机”来允许列表默认的重定向URL域。 [!DNL Target]使用主机允许列表您要允许重定向的域。 有关详细信息，请参阅[创建允许列表，指定有权将mbox调用发送到&#x200B;*主机*&#x200B;中的 [!DNL Target]](https://experienceleague.adobe.com/docs/target/using/administer/hosts.html#allowlist)的主机。
 
 ## 限制
 

@@ -4,16 +4,12 @@ description: 用户标识和分段
 exl-id: 4fcf235b-6a58-442c-ae13-9d05ec1033fc
 feature: Implement Server-side
 TQID: https://experienceleague.adobe.com/V9hK5oj7F-SV2wou2sz-Ve3RVJ1EMsFJDmcNF4ctV5o
-product_v2:
-  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
-feature_v2:
-  - id: adee20bd-51f4-461d-b9db-d215f8756eeb
-  - id: f7c7de77-382f-4f48-8b36-61a170f06d3d
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2: id: adee20bd-51f4-461d-b9db-d215f8756eebid: f7c7de77-382f-4f48-8b36-61a170f06d3d
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 1172
+source-wordcount: 1173
 ht-degree: 4%
 
 ---
@@ -29,7 +25,7 @@ ht-degree: 4%
 | `tntID` | `tntId`是用户[!DNL Target]中的主要标识符。 您可以提供此ID，否则[!DNL Target]将在请求中不包含此ID时自动生成此ID。 |
 | `thirdPartyId` | `thirdPartyId`是您公司的用户标识符，您可以随每次调用发送该标识符。 当用户登录到某个公司的网站时，该公司通常会创建一个ID，并将其绑定到访客的帐户、会员卡、会员编号或该公司的其他适用标识符。 |
 | `marketingCloudVisitorId` | `marketingCloudVisitorId`用于在不同的Adobe解决方案之间合并和共享数据。 要与Adobe Analytics和Adobe Audience Manager集成，需要marketingCloudVisitorId。 |
-| `customerIds` | 除了Experience Cloud访客ID之外，还可以使用其他[客户ID](https://experienceleague.adobe.com/docs/id-service/using/reference/authenticated-state.html?lang=zh-Hans)以及每个访客的身份验证状态。 |
+| `customerIds` | 除了Experience Cloud访客ID之外，还可以使用其他[客户ID](https://experienceleague.adobe.com/docs/id-service/using/reference/authenticated-state.html)以及每个访客的身份验证状态。 |
 
 ## [!DNL Target] ID (tntID)
 
@@ -241,7 +237,7 @@ TargetDeliveryResponse offers = targetClient.getOffers(request);
 
 ## 客户ID (customerIds)
 
-[客户ID](https://experienceleague.adobe.com/docs/id-service/using/reference/authenticated-state.html?lang=zh-Hans)可以添加到Experience Cloud访客ID或与其关联。 无论何时发送`customerIds`，都必须提供`marketingCloudVisitorId`。 此外，可以为每个访客随每个`customerId`提供身份验证状态。 可以使用以下身份验证状态：
+[客户ID](https://experienceleague.adobe.com/docs/id-service/using/reference/authenticated-state.html)可以添加到Experience Cloud访客ID或与其关联。 无论何时发送`customerIds`，都必须提供`marketingCloudVisitorId`。 此外，可以为每个访客随每个`customerId`提供身份验证状态。 可以使用以下身份验证状态：
 
 | 身份验证状态 | 用户状态 |
 | --- | --- |
@@ -323,7 +319,7 @@ TargetDeliveryResponse offers = targetClient.getOffers(request);
 
 ## 合并的配置文件
 
-您可以在同一请求中合并`tntId`、`thirdPartyID`和`marketingCloudVisitorId`。 在此方案中，[!DNL Adobe Target]将维护所有这些ID的映射，并将其固定到访客。 了解如何使用不同的标识符实时[合并和同步配置文件](https://experienceleague.adobe.com/docs/target/using/audiences/visitor-profiles/3rd-party-id.html?lang=zh-Hans)。
+您可以在同一请求中合并`tntId`、`thirdPartyID`和`marketingCloudVisitorId`。 在此方案中，[!DNL Adobe Target]将维护所有这些ID的映射，并将其固定到访客。 了解如何使用不同的标识符实时[合并和同步配置文件](https://experienceleague.adobe.com/docs/target/using/audiences/visitor-profiles/3rd-party-id.html)。
 
 >[!BEGINTABS]
 

@@ -5,22 +5,15 @@ title: 我是否可以使用旧版实施中的全局mbox？
 feature: at.js
 exl-id: fe608b5e-ff66-4ba2-a622-d4f7307a9ca9
 TQID: https://experienceleague.adobe.com/BCubNDwB8gxZ9bpuCNhxcnFnjB1xQK8ZRkLveinPj4w
-product_v2:
-  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
-feature_v2:
-  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
-subfeature_v2:
-  - id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-  - id: c1579802-ddd4-4214-8a91-97b2066abe11
-  - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2: id: c93393a4-e558-47e1-992e-c91ed4d480ce
+subfeature_v2: id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: c1579802-ddd4-4214-8a91-97b2066abe11id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 285
-ht-degree: 20%
+source-wordcount: 304
+ht-degree: 19%
 
 ---
 
@@ -34,15 +27,15 @@ ht-degree: 20%
 
 要将现有的全局 mbox 用于 [!DNL Target] 和旧版实施，您必须设置一些参数。
 
-1. 转到[!DNL Target]，然后单击&#x200B;**[!UICONTROL Administration]** > **[!UICONTROL Implementation]**。
+1. 转到[!DNL Target]，然后单击&#x200B;**[!UICONTROL 管理]** > **[!UICONTROL 实现]**。
 
-   默认情况下，**[!UICONTROL Page load enabled (Auto-create global mbox]**&#x200B;已启用，自定义全局mbox名为`target-global-mbox`。
+   默认情况下，**[!UICONTROL 页面加载已启用(自动创建全局mbox]**&#x200B;已启用，自定义全局mbox名为`target-global-mbox`。
 
-1. 如果要使用现有的mbox，请禁用&#x200B;**[!UICONTROL Page load enabled (Auto-create global mbox]**，然后在&#x200B;**[!UICONTROL Global Mbox]**&#x200B;字段中指定之前创建的全局mbox的名称。
+1. 如果要使用现有mbox，请禁用&#x200B;**[!UICONTROL 启用页面加载(自动创建全局mbox]**，并在&#x200B;**[!UICONTROL 全局mbox]**&#x200B;字段中指定之前创建的全局mbox的名称。
 
    全局mbox下拉列表列出了您帐户中的所有mbox。 如果要使用尚不存在的mbox，请创建该mbox。
 
-1. 单击 **[!UICONTROL Save]**。
+1. 单击&#x200B;**[!UICONTROL 保存]**。
 
    您的帐户设置已更新。
 

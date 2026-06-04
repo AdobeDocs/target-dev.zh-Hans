@@ -4,19 +4,13 @@ description: 使用属性执行功能测试
 feature: APIs/SDKs
 exl-id: c89d337c-20a9-454c-930c-79d9217e23b6
 TQID: https://experienceleague.adobe.com/y2Mwmnn2k91-LKBy1UmZ5a1s6dZeb5VMyHdyJc2lc34
-product_v2:
-  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
-feature_v2:
-  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
-  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-  - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2: id: c93393a4-e558-47e1-992e-c91ed4d480ce
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: aa2f3246-cb95-4b30-8899-fdf7d73550ccid: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: eddd9b14-83bd-4ff4-9072-54a4a484abb7
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 891
+source-wordcount: 960
 ht-degree: 1%
 
 ---
@@ -25,8 +19,8 @@ ht-degree: 1%
 
 ## 步骤摘要
 
-1. 为您的组织启用[!UICONTROL on-device decisioning]
-1. 创建[!UICONTROL A/B Test]活动
+1. 为您的组织启用[!UICONTROL 设备上决策]
+1. 创建[!UICONTROL A/B测试]活动
 1. 定义A和B
 1. 添加受众
 1. 设置流量分配
@@ -41,41 +35,41 @@ ht-degree: 1%
 >
 >假设您是一家零售电子商务公司。 当客户浏览您的产品目录并进行排序时，您希望提高转化率。 您有一个假设，即某些排序算法和分页策略产生比其他算法更好的结果。 为了测试此理论，您决定运行一个功能测试，该测试涉及使用最终用户不同的排序选项重新设计排序小组件。 您希望确保此功能测试在近乎零延迟的情况下执行，以便它不会对用户体验产生负面影响并扭曲结果。
 
-## &#x200B;1. 为您的组织启用[!UICONTROL on-device decisioning]
+## &#x200B;1. 为您的组织启用[!UICONTROL 设备上决策]
 
-启用设备上决策可确保在几乎零延迟的情况下执行A/B活动。 要启用此功能，请在[!DNL Adobe Target]中导航到&#x200B;**[!UICONTROL Administration]** > **[!UICONTROL Implementation]** > **[!UICONTROL Account details]**，并启用&#x200B;**[!UICONTROL On-Device Decisioning]**&#x200B;切换开关。
+启用设备上决策可确保在几乎零延迟的情况下执行A/B活动。 要启用此功能，请在[!DNL Adobe Target]中导航到&#x200B;**[!UICONTROL 管理]** > **[!UICONTROL 实施]** > **[!UICONTROL 帐户详细信息]**，并启用&#x200B;**[!UICONTROL 设备上决策]**&#x200B;切换开关。
 
 ![替代图像](assets/asset-odd-toggle.png)
 
 >[!NOTE]
 >
->您必须具有管理员或审批者[用户角色](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/user-management.html?lang=zh-Hans)才能启用或禁用&#x200B;**[!UICONTROL On-Device Decisioning]**&#x200B;切换开关。
+>您必须具有管理员或审批者[用户角色](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/user-management.html)才能启用或禁用&#x200B;**[!UICONTROL 设备上决策]**&#x200B;切换开关。
 
-启用&#x200B;**[!UICONTROL On-Device Decisioning]**&#x200B;切换后，[!DNL Adobe Target]开始为您的客户端生成&#x200B;*规则工件*。
+启用&#x200B;**[!UICONTROL 设备上决策]**&#x200B;切换后，[!DNL Adobe Target]开始为您的客户端生成&#x200B;*规则工件*。
 
-## &#x200B;2. 创建[!UICONTROL A/B Test]活动
+## &#x200B;2. 创建[!UICONTROL A/B测试]活动
 
-1. 在[!DNL Adobe Target]中，导航到&#x200B;**[!UICONTROL Activities]**&#x200B;页面，然后选择&#x200B;**[!UICONTROL Create Activity]** > **[!UICONTROL A/B test]**。
+1. 在[!DNL Adobe Target]中，导航到&#x200B;**[!UICONTROL 活动]**&#x200B;页面，然后选择&#x200B;**[!UICONTROL 创建活动]** > **[!UICONTROL A/B测试]**。
 
    ![替代图像](assets/asset-ab.png)
 
-1. 在&#x200B;**[!UICONTROL Create A/B Test Activity]**&#x200B;模式中，保留默认的&#x200B;**[!UICONTROL Web]**&#x200B;选项(1)，选择&#x200B;**[!UICONTROL Form]**&#x200B;作为体验编辑器(2)，选择带有&#x200B;**[!UICONTROL No Property Restrictions]** (3)的&#x200B;**[!UICONTROL Default Workspace]**，然后单击&#x200B;**[!UICONTROL Next]** (4)。
+1. 在&#x200B;**[!UICONTROL 创建A/B测试活动]**&#x200B;模式中，保留默认的&#x200B;**[!UICONTROL Web]**&#x200B;选项(1)，选择&#x200B;**[!UICONTROL 表单]**&#x200B;作为体验编辑器(2)，选择具有&#x200B;**[!UICONTROL 无属性限制]**&#x200B;的&#x200B;**[!UICONTROL 默认Workspace]**，然后单击&#x200B;**[!UICONTROL 下一步]** (4)。
 
    ![替代图像](assets/asset-form.png)
 
 ## &#x200B;3. 定义A和B
 
-1. 在活动创建&#x200B;**[!UICONTROL Experiences]**&#x200B;步骤中，提供活动(1)的名称，然后单击&#x200B;**[!UICONTROL Add Experience]** (2)按钮以添加第二个体验，即体验B。 输入应用程序内要使用属性执行功能测试的位置(3)的名称。 在下面显示的示例中，`product-results-page`是为体验A定义的位置。 （也是为体验B定义的位置。）
+1. 在活动创建&#x200B;**[!UICONTROL 体验]**&#x200B;步骤中，提供活动的名称(1)并添加第二个体验，即体验B，方法是单击&#x200B;**[!UICONTROL 添加体验]** (2)按钮。 输入应用程序内要使用属性执行功能测试的位置(3)的名称。 在下面显示的示例中，`product-results-page`是为体验A定义的位置。 （也是为体验B定义的位置。）
 
    ![替代图像](assets/asset-location.png)
 
-   **[!UICONTROL Experience A]**&#x200B;将包含指示您的业务逻辑执行以下操作的JSON：
+   **[!UICONTROL 体验A]**&#x200B;将包含指示您的业务逻辑执行以下操作的JSON：
 
    * 通过`test_sorting`功能标志启动排序算法功能
    * 执行`sorting_algorithm _**_attribute`中定义的推荐排序算法
    * 按照`pagination_limit`中定义的分页策略定义，每页返回50个产品
 
-1. 在体验A中，通过选择&#x200B;**[!UICONTROL Create JSON Offer]**&#x200B;将内容从&#x200B;**[!UICONTROL Default Content]**&#x200B;更改为JSON，如下所示(1)。
+1. 在体验A中，通过选择&#x200B;**[!UICONTROL 创建JSON选件]**，单击以将内容从&#x200B;**[!UICONTROL 默认内容]**&#x200B;更改为JSON，如下所示(1)。
 
    ![替代图像](assets/asset-offer.png)
 
@@ -87,7 +81,7 @@ ht-degree: 1%
 
    ![替代图像](assets/asset-sorting.png)
 
-   **[!UICONTROL Experience B]**&#x200B;将定义指示您的业务逻辑执行以下操作的JSON：
+   **[!UICONTROL 体验B]**&#x200B;将定义指示您的业务逻辑执行以下操作的JSON：
 
    * 通过test_sorting功能标志启动排序算法功能
    * 执行`sorting_algorithm _**_attribute`中定义的`best_sellers`排序算法
@@ -101,7 +95,7 @@ ht-degree: 1%
 
 ## &#x200B;4. 添加受众
 
-在&#x200B;**[!UICONTROL Targeting]**&#x200B;步骤中，保留&#x200B;**[!UICONTROL All Visitors]**&#x200B;受众。 这使您能够了解排序功能的影响，以及哪个算法和项目数最能影响结果。
+在&#x200B;**[!UICONTROL 定位]**&#x200B;步骤中，保留&#x200B;**[!UICONTROL 所有访客]**&#x200B;受众。 这使您能够了解排序功能的影响，以及哪个算法和项目数最能影响结果。
 
 ![替代图像](assets/asset-audience-b.png)
 
@@ -119,13 +113,13 @@ ht-degree: 1%
 
 ## &#x200B;7. 设置报表
 
-在&#x200B;**[!UICONTROL Goals & Settings]**&#x200B;步骤中，选择&#x200B;**[!UICONTROL Adobe Target]**&#x200B;作为&#x200B;**[!UICONTROL Reporting Source]**，以便在[!DNL Adobe Target] UI中查看A/B测试结果；或者选择&#x200B;**[!UICONTROL Adobe Analytics]**，以便在Adobe Analytics UI中查看这些结果。
+在&#x200B;**[!UICONTROL 目标和设置]**&#x200B;步骤中，选择&#x200B;**[!UICONTROL Adobe Target]**&#x200B;作为&#x200B;**[!UICONTROL 报表Source]**，以便在[!DNL Adobe Target] UI中查看A/B测试结果；或者选择&#x200B;**[!UICONTROL Adobe Analytics]**，以便在Adobe Analytics UI中查看这些结果。
 
 ![替代图像](assets/asset-reporting-b.png)
 
 ## &#x200B;8. 添加用于跟踪KPI的量度
 
-选择&#x200B;**[!UICONTROL Goal Metric]**&#x200B;以使用属性测量功能测试。 在本例中，成功取决于用户是否购买产品，具体取决于显示它们的排序算法和分页策略。
+选择一个&#x200B;**[!UICONTROL 目标量度]**&#x200B;来测量具有属性的功能测试。 在本例中，成功取决于用户是否购买产品，具体取决于显示它们的排序算法和分页策略。
 
 ## &#x200B;9. 在应用程序中实施具有属性的功能测试
 

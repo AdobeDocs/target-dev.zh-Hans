@@ -5,22 +5,15 @@ title: 关于全局mbox的常见问题解答是什么？
 feature: at.js
 exl-id: 7bcd1b67-809a-466a-b648-6e0e44386157
 TQID: https://experienceleague.adobe.com/bxsjCqSQpp6M20StzZtMBrfxjJCKgPEPfS2OlBUP00A
-product_v2:
-  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
-feature_v2:
-  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
-subfeature_v2:
-  - id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
-  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-  - id: c1579802-ddd4-4214-8a91-97b2066abe11
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2: id: c93393a4-e558-47e1-992e-c91ed4d480ce
+subfeature_v2: id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: aa2f3246-cb95-4b30-8899-fdf7d73550ccid: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: c1579802-ddd4-4214-8a91-97b2066abe11
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 309
-ht-degree: 32%
+source-wordcount: 316
+ht-degree: 31%
 
 ---
 
@@ -32,9 +25,9 @@ ht-degree: 32%
 
 您的帐户仅支持一个全局 mbox。
 
-您可以通过向活动中添加 URL 规则来限制活动运行的位置。 有关详细信息，请参阅[在相似页面上包含相同体验](https://experienceleague.adobe.com/docs/target/using/experiences/vec/temtest.html?lang=zh-Hans)。
+您可以通过向活动中添加 URL 规则来限制活动运行的位置。 有关详细信息，请参阅[在相似页面上包含相同体验](https://experienceleague.adobe.com/docs/target/using/experiences/vec/temtest.html)。
 
-您还可以在页面上使用[targetPageParams](/help/dev/implement/client-side/atjs/atjs-functions/targetpageparams.md)来传递参数，然后在[!UICONTROL Visual Experience Composer] (VEC)的“配置URL”部分选择这些参数，或者通过在[!UICONTROL Form-Based Experience Composer]中将参数添加为“细化”来选择这些参数。
+您还可以在页面上使用[targetPageParams](/help/dev/implement/client-side/atjs/atjs-functions/targetpageparams.md)来传递参数，然后在[!UICONTROL 可视化体验编辑器] (VEC)的“配置URL”部分选择这些参数，或者通过在基于表单的体验编辑器]中将参数添加为“细化”来选择这些参数。[!UICONTROL 
 
 ## 如何在[!DNL Target]全局mbox中传递收入数据？
 

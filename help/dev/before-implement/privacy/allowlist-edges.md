@@ -5,18 +5,11 @@ title: 如何允许列表 [!DNL Target] Edge节点？
 feature: Privacy & Security
 exl-id: a7e5d2fc-da8e-414d-a3da-2441ea21503d
 TQID: https://experienceleague.adobe.com/-XCVJpuvQ1xV9vQBZbomDKU3F-60b5FS-LU8lIBp4GQ
-product_v2:
-  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
-feature_v2:
-  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
-subfeature_v2:
-  - id: a94ced60-8199-4549-b453-ede2acb4101e
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-  - id: d095671a-1355-40aa-8b5f-06c33c68080b
-  - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2: id: c93393a4-e558-47e1-992e-c91ed4d480ce
+subfeature_v2: id: a94ced60-8199-4549-b453-ede2acb4101e
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: d095671a-1355-40aa-8b5f-06c33c68080bid: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
 source-wordcount: 373
@@ -28,7 +21,7 @@ ht-degree: 0%
 
 帮助您允许列表[!DNL Adobe Target]边缘的信息和最新的主机列表。
 
-边缘是一种地理上分散的服务架构，它确保请求内容的最终用户无论身在何处，均可获得最佳响应时间。 每个边缘节点都具有响应用户的内容请求并跟踪该请求上的分析数据所需的所有信息。 用户请求被路由到最近的边缘节点。 有关详细信息，请参阅[边缘网络](https://experienceleague.adobe.com/docs/target/using/introduction/how-target-works.html?lang=zh-Hans#concept_0AE2ED8E9DE64288A8B30FCBF1040934)。
+边缘是一种地理上分散的服务架构，它确保请求内容的最终用户无论身在何处，均可获得最佳响应时间。 每个边缘节点都具有响应用户的内容请求并跟踪该请求上的分析数据所需的所有信息。 用户请求被路由到最近的边缘节点。 有关详细信息，请参阅[边缘网络](https://experienceleague.adobe.com/docs/target/using/introduction/how-target-works.html#concept_0AE2ED8E9DE64288A8B30FCBF1040934)。
 
 如果需要，您可以允许列表[!DNL Target]边缘节点。
 
@@ -36,7 +29,7 @@ ht-degree: 0%
 >
 >除了列入允许列表文章中讨论的[!DNL Target]个边缘和[!DNL Target]个边缘IP地址的网络地址转换(NAT) IP地址外，您还应转换所有[!DNL Adobe Analytics] IP地址块。
 >
->有关详细信息，请参阅&#x200B;*Adobe Analytics技术说明*&#x200B;文档中的[所有Adobe Analytics IP地址块](https://experienceleague.adobe.com/docs/analytics/technotes/ip-addresses.html?lang=zh-Hans#all-adobe-analytics-ip-address-blocks){target=_blank}。
+>有关详细信息，请参阅&#x200B;*Adobe Analytics技术说明*&#x200B;文档中的[所有Adobe Analytics IP地址块](https://experienceleague.adobe.com/docs/analytics/technotes/ip-addresses.html?lang=en#all-adobe-analytics-ip-address-blocks){target=_blank}。
 >
 >正在更新[!DNL Adobe Target]基础结构，希望允许列表地址的客户必须使用这两组IP。 如果未能做到这一点，将会影响使用服务器端或混合实施的客户，在这些实施中，用于获取体验的Target API调用源自配置为使用的防火墙之后的网络内。
 

@@ -1,25 +1,23 @@
 ---
 title: Adobe Target Delivery API用户权限
 description: Adobe Target Delivery API用户权限
-badgePremium: label="Premium" type="Positive" url="https://experienceleague.adobe.com/docs/target/using/introduction/intro.html?lang=zh-Hans#premium newtab=true" tooltip="查看Target Premium中包含的内容。"
+badgePremium: label="Premium" type="Positive" url="https://experienceleague.adobe.com/docs/target/using/introduction/intro.html?lang=en#premium newtab=true" tooltip="查看Target Premium中包含的内容。"
 keywords: 投放api
 exl-id: 332f90bd-4079-4653-aa38-b35837631c94
 feature: APIs/SDKs
 TQID: https://experienceleague.adobe.com/V7F8WjDNUMJJySyep0nVCg0wMK05ZfdV4XPtMjXOBvM
-product_v2:
-  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 180
+source-wordcount: 184
 ht-degree: 0%
 
 ---
 
 # 用户权限(Premium)
 
-[!DNL Adobe]允许客户在使用Adobe Target时管理其用户的权限。 为了成功进行[!UICONTROL Adobe Target Delivery API]调用，必须在API调用中传递具有正确权限的令牌。 要了解有关用户权限以及如何检索令牌的更多信息，请访问[本文档](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/enterprise/properties-overview.html?lang=zh-Hans)。
+[!DNL Adobe]允许客户在使用Adobe Target时管理其用户的权限。 为了成功进行[!UICONTROL Adobe Target交付API]调用，必须在API调用中传递具有正确权限的令牌。 要了解有关用户权限以及如何检索令牌的更多信息，请访问[本文档](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/enterprise/properties-overview.html)。
 
 ```
 curl -X POST \

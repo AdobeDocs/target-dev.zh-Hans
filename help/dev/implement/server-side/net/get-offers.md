@@ -4,17 +4,13 @@ description: 了解如何使用getOffers()执行决策并从 [!DNL Adobe Target]
 feature: APIs/SDKs
 exl-id: 4d1d1cbd-c7e5-4146-9fea-08e01923874d
 TQID: https://experienceleague.adobe.com/T-oUyDgCJZ8hqQZgCb3-Z-d9WeMaffwq8krMHhGvYlI
-product_v2:
-  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
-feature_v2:
-  - id: f7c7de77-382f-4f48-8b36-61a170f06d3d
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2: id: f7c7de77-382f-4f48-8b36-61a170f06d3d
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 572
+source-wordcount: 576
 ht-degree: 13%
 
 ---
@@ -70,7 +66,7 @@ TargetDeliveryRequest.Builder TargetDeliveryRequest.Builder()
 | tntId | 字符串 | 否 | [!DNL Target]中用户的主要标识符。 已从targetCookies获取。 如果未提供，则自动生成。 |
 | mcId | 字符串 | 否 | 用于在不同的Adobe解决方案(ECID)之间合并和共享数据。 已从targetCookies获取。 如果未提供，则自动生成。 |
 | trackingServer | 字符串 | 否 | Adobe Analytics服务器，以便[!DNL Adobe Target]和[!DNL Adobe Analytics]将数据正确拼合在一起。 |
-| trackingServerSecure | 字符串 | 否 | 为了[!DNL Adobe Target]和[!DNL Adobe Analytics]将数据正确拼合在一起，请使用[!UICONTROL Adobe Analytics Secure Server]。 |
+| trackingServerSecure | 字符串 | 否 | [!UICONTROL Adobe Analytics安全服务器]，以便[!DNL Adobe Target]和[!DNL Adobe Analytics]能够正确地将数据拼合在一起。 |
 | 决策方法 | 决策方法 | 否 | 可用于为设备上决策明确设置ON_DEVICE或HYBRID决策方法 |
 
 每个字段的值应符合[Target投放API](/help/dev/implement/delivery-api/overview.md)请求规范。

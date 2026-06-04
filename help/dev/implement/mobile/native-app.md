@@ -6,19 +6,14 @@ feature: Implement Mobile
 role: Developer
 exl-id: 3dd2e1d7-c744-4ba8-aaa4-6c2fe64d01fa
 TQID: https://experienceleague.adobe.com/JrbjPpq3ds0sl4rkMnuzF9SYk2PI4r676hHqN-Pvn78
-product_v2:
-  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
-feature_v2:
-  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
-subfeature_v2:
-  - id: d051910f-2bda-47ea-a969-6ade9fcd71f1
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2: id: c93393a4-e558-47e1-992e-c91ed4d480ce
+subfeature_v2: id: d051910f-2bda-47ea-a969-6ade9fcd71f1
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 611
+source-wordcount: 624
 ht-degree: 0%
 
 ---
@@ -27,7 +22,7 @@ ht-degree: 0%
 
 本文分享在移动应用程序中实施[!DNL Adobe Target]的最佳实践，该应用程序使用[!DNL Adobe Experience Platform Mobile SDK]在Web视图中使用本机代码。
 
-本文使用GitHub存储库[&#128279;](https://github.com/adobe/aep-sdk-app/){target=_blank}中以Swift格式编写的[[!DNL Adobe Experience Platform Mobile SDK]](https://developer.adobe.com/client-sdks/documentation/getting-started/){target=_blank}和[!DNL Target]集成，使用示例iOS应用程序。
+本文使用GitHub存储库](https://github.com/adobe/aep-sdk-app/){target=_blank}中以[Swift格式编写的[[!DNL Adobe Experience Platform Mobile SDK]](https://developer.adobe.com/client-sdks/documentation/getting-started/){target=_blank}和[!DNL Target]集成，使用示例iOS应用程序。
 
 在现实中，您的企业应用程序可能会使用移动应用程序中的Web视图。 Web视图是一个使用URL加载网页的容器。 该容器类似于没有控件的浏览器窗口。 在iOS中，处理网页时，Web视图容器可充当Safari浏览器。
 
@@ -72,7 +67,7 @@ https://vadymus.github.io/ateng/at-order-confirmation/index.html?a=1&b=2&adobe_m
 
 * TS=1660667205：当前时间戳。 此时间戳可确保Web视图不会接收过期的值。
 * MCMID=69624092487065093697422606480535692677： [!UICONTROL Experience Cloud ID] (ECID)。 也称为[!DNL Adobe]跨解决方案访客识别所需的MID或[!UICONTROL Marketing Cloud ID]。
-* MCORGID=EB9CAE8B56E003697F000101@AdobeOrg： [!UICONTROL Adobe Organization ID]。
+* mcorgid=EB9CAE8B56E003697F000101@AdobeOrg： [!UICONTROL Adobe组织ID]。
 
 `Identity.getUrlVariables`是一种替代[!DNL Adobe Experience Platform Mobile SDK]方法，它返回包含[!DNL Experience Cloud Identity Service] URL变量的格式正确的字符串。 有关详细信息，请参阅&#x200B;*标识API引用*&#x200B;中的[getUrlVariables](https://developer.adobe.com/client-sdks/documentation/mobile-core/identity/api-reference/#geturlvariables){target=_blank}。
 
@@ -90,7 +85,7 @@ Target.getSessionId { (id, err) in
 
 ## 在Web视图中测试
 
-通过单击[[!UICONTROL Adobe QA]链接](/help/dev/implement/mobile/target-mobile-preview.md)在[!UICONTROL Activity detail]页面上生成Web预览链接，以显示弹出窗口来复制每个体验预览链接，如下所示：
+通过单击[[!UICONTROL Adobe QA]链接](/help/dev/implement/mobile/target-mobile-preview.md)以显示弹出窗口来复制每个体验预览链接，在[!UICONTROL 活动详细信息]页面上生成Web预览链接，如下所示：
 
 ```
 ?at_preview_token=mhFIzJSF7JWb-RsnakpBqi_s83Sl64hZp928VWpkwvI&at_preview_index=1_1&at_preview_listed_activities_only=true

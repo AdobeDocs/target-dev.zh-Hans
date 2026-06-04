@@ -4,17 +4,12 @@ description: 了解如何使用sendNotifications()向 [!DNL Adobe Target] 发送
 feature: APIs/SDKs
 exl-id: 03827b18-a546-4ec8-8762-391fcb3ac435
 TQID: https://experienceleague.adobe.com/r7j2MaCmcZBEsx7TmTlKL9R-IKlncZJw5DhSfcKmVNU
-product_v2:
-  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
-  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
-  - id: c2be0313-b3ae-45e0-b454-d20bf54b23f2
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dcid: aa2f3246-cb95-4b30-8899-fdf7d73550ccid: c2be0313-b3ae-45e0-b454-d20bf54b23f2
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 411
+source-wordcount: 420
 ht-degree: 8%
 
 ---
@@ -50,7 +45,7 @@ target_client.send_notifications(options)
 
 | 名称 | 类型 | 必需 | 默认 | 描述 |
 | --- | --- | --- | --- | --- |
-| request | DeliveryRequest | 是 | 无 | 符合[[!UICONTROL Target Delivery API]](/help/dev/implement/delivery-api/overview.md)请求 |
+| request | DeliveryRequest | 是 | 无 | 符合[[!UICONTROL Target投放API]](/help/dev/implement/delivery-api/overview.md)请求 |
 | target_cookie | str | 否 | 无 | [!DNL Target] Cookie |
 | target_location_hint | str | 否 | 无 | [!DNL Target]位置提示 |
 | consumer_id | str | 否 | 无 | 在拼接多个调用时，应提供不同的消费者ID |
@@ -70,12 +65,12 @@ target_client.send_notifications(options)
 | target_location_hint_cookie | dict | [!DNL Target]位置提示Cookie |
 | analytics_details | 列表[AnalyticsResponse] | [!DNL Analytics]有效负载，适用于客户端[!DNL Analytics] |
 | trace | 列表[dict] | 所有请求mbox/视图的汇总跟踪数据 |
-| response_tokens | 列表[dict] | [&#x200B;响应令牌](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html?lang=zh-Hans)列表 |
+| response_tokens | 列表[dict] | [&#x200B;响应令牌](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html)列表 |
 | meta | dict | 用于设备上决策的其他决策元数据 |
 
 ## 示例
 
-首先，让我们构建[!UICONTROL Target Delivery API]请求以预取`home`和`product1` mbox的内容。
+首先，我们构建[!UICONTROL Target投放API]请求，以预取`home`和`product1` mbox的内容。
 
 ### Python
 
@@ -89,7 +84,7 @@ delivery_request = DeliveryRequest(prefetch=prefetch)
 response = target_client.get_offers({ "request": delivery_request })
 ```
 
-成功的响应将包含[!UICONTROL Target Delivery API]响应对象，其中包含所请求mbox的预获取内容。 示例`target_response["response"]`对象（格式为dict）可能如下所示：
+成功的响应将包含[!UICONTROL Target投放API]响应对象，该对象包含所请求mbox的预获取内容。 示例`target_response["response"]`对象（格式为dict）可能如下所示：
 
 ### Python
 

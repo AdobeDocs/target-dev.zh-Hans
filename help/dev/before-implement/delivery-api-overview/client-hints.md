@@ -4,24 +4,18 @@ description: 如何在 [!DNL Adobe Target] 交付API中使用客户端提示？
 exl-id: 317b9d7d-5b98-464e-9113-08b899ee1455
 feature: APIs/SDKs
 TQID: https://experienceleague.adobe.com/ijbOsWitZdNHpjNduh8xtPyEYdw2tsWz2rB6jZ5JbQA
-product_v2:
-  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
-feature_v2:
-  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
-  - id: ff2b9b37-92e0-45fc-b853-379d44c08c89
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2: id: c93393a4-e558-47e1-992e-c91ed4d480ce
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: e0eb8757-182f-49f3-94a4-1587d16f5094id: ff2b9b37-92e0-45fc-b853-379d44c08c89
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 278
+source-wordcount: 282
 ht-degree: 0%
 
 ---
 
-# 客户端提示和[!UICONTROL Adobe Target Delivery API]
+# 客户端提示和[!UICONTROL Adobe Target交付API]
 
 必须根据优惠请求将客户端提示发送到[!DNL Adobe Target]。
 

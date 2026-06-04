@@ -1,30 +1,18 @@
 ---
 keywords: serverstate， targetGlobalSettings， targetglobalsettings， globalSettings， globalsettings，全局设置， at.js，函数，函数， clientCode， clientcode， serverDomain， serverdomain， cookieDomain， serverstate5， serverstate6， serverstate7， serverstate8， serverstate9， targetGlobalSettings0， targetGlobalSettings1， targetGlobalSettings2， targetGlobalSettings5， cookiedomain， crossCross域， cross域， cross域timeout， globalMboxAutoCreate， visitorApiTimeout， defaultContentHiddenStyle， defaultContentVisibleStyle， bodyHidingEnabled， imsOrgId， secureOnly， overrideMboxEdgeServerTimeout， cookiedomain5， cookiedomain6， cookiedomain7， cookiedomain8， cookiomain9， crossDomain0， crossCrossDomain1， crossCrossDomain1， crossCrossDomain2， crossCrossCrossDomain3， cross crossDomain4， crossDomain5， optoutEnabled， optout， opt out， selectorsPollingTimeout， dataProviders， Hybrid Personalization， deviceIdLifetime
-description: 对 [!DNL Adobe Target] at.js JavaScript库使用[!UICONTROL targetGlobalSettings()]函数来覆盖设置，而不使用 [!DNL Target] UI或REST API。
+description: 对 [!DNL Adobe Target] at.js JavaScript库使用[!UICONTROL targetGlobalSettings()]函数替代使用 [!DNL Target] UI或REST API来覆盖设置。
 title: 如何使用[!UICONTROL targetGlobalSettings()]函数？
 feature: at.js
 exl-id: f6218313-6a70-448e-8555-b7b039e64b2c
 TQID: https://experienceleague.adobe.com/6IeQo7RCys6Qe6bPydmmtgaAERi7rnneBYFOzseaL2g
-product_v2:
-  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
-feature_v2:
-  - id: adee20bd-51f4-461d-b9db-d215f8756eeb
-  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
-  - id: f7c7de77-382f-4f48-8b36-61a170f06d3d
-subfeature_v2:
-  - id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
-  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-  - id: d095671a-1355-40aa-8b5f-06c33c68080b
-  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
-  - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
-  - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2: id: adee20bd-51f4-461d-b9db-d215f8756eebid: c93393a4-e558-47e1-992e-c91ed4d480ceid: f7c7de77-382f-4f48-8b36-61a170f06d3d
+subfeature_v2: id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dcid: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: d095671a-1355-40aa-8b5f-06c33c68080bid: e0eb8757-182f-49f3-94a4-1587d16f5094id: eddd9b14-83bd-4ff4-9072-54a4a484abb7id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 2702
+source-wordcount: 2705
 ht-degree: 17%
 
 ---
@@ -120,7 +108,7 @@ ht-degree: 17%
 
   仅服务器端是默认的决策方法，当在Web资产上实施和部署at.js 2.5及更高版本时，此方法为现成可用的。
 
-  仅将服务器端用作默认配置意味着在[!DNL Target]边缘网络上做出所有决策，其中涉及阻止服务器调用。 此方法可能会引入增量延迟，但它也提供了显着的优势，例如允许您应用[!DNL Target]的机器学习功能，包括[推荐](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations.html?lang=zh-Hans)、[Automated Personalization](https://experienceleague.adobe.com/docs/target/using/activities/automated-personalization/automated-personalization.html?lang=zh-Hans) (AP)和[自动定位](https://experienceleague.adobe.com/docs/target/using/activities/auto-target/auto-target-to-optimize.html?lang=zh-Hans)活动。
+  仅将服务器端用作默认配置意味着在[!DNL Target]边缘网络上做出所有决策，其中涉及阻止服务器调用。 此方法可能会引入增量延迟，但它也提供了显着的优势，例如允许您应用[!DNL Target]的机器学习功能，包括[推荐](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations.html)、[Automated Personalization](https://experienceleague.adobe.com/docs/target/using/activities/automated-personalization/automated-personalization.html) (AP)和[自动定位](https://experienceleague.adobe.com/docs/target/using/activities/auto-target/auto-target-to-optimize.html)活动。
 
   此外，通过使用[!DNL Target]的用户配置文件（跨会话和渠道保留）增强您的个性化体验，可为您的业务带来强大的成果。
 
@@ -302,8 +290,8 @@ window.targetGlobalSettings = {
 
 | 视频 | 描述 |
 |--- |--- |
-| [在 Adobe Target 中使用数据提供程序](https://experienceleague.adobe.com/docs/target-learn/tutorials/integrations/use-data-providers-to-integrate-third-party-data.html?lang=zh-Hans) | 数据提供程序是一项功能，允许您轻松地将数据从第三方传递到 Target。 第三方可以是气象服务、DMP，甚至是您自己的 Web 服务。 然后，您可以使用这些数据来构建受众、定位内容并丰富访客配置文件。 |
-| [在 Adobe Target 中实施数据提供程序](https://experienceleague.adobe.com/docs/target-learn/tutorials/integrations/implement-data-providers-to-integrate-third-party-data.html?lang=zh-Hans) | 有关如何使用Adobe [!DNL Target]的dataProviders功能从第三方数据提供程序检索数据并将其传递到[!DNL Target]请求的实现详细信息和示例。 |
+| [在 Adobe Target 中使用数据提供程序](https://experienceleague.adobe.com/docs/target-learn/tutorials/integrations/use-data-providers-to-integrate-third-party-data.html) | 数据提供程序是一项功能，允许您轻松地将数据从第三方传递到 Target。 第三方可以是气象服务、DMP，甚至是您自己的 Web 服务。 然后，您可以使用这些数据来构建受众、定位内容并丰富访客配置文件。 |
+| [在 Adobe Target 中实施数据提供程序](https://experienceleague.adobe.com/docs/target-learn/tutorials/integrations/implement-data-providers-to-integrate-third-party-data.html) | 有关如何使用Adobe [!DNL Target]的dataProviders功能从第三方数据提供程序检索数据并将其传递到[!DNL Target]请求的实现详细信息和示例。 |
 
 `window.targetGlobalSettings.dataProviders` 设置是一个数据提供程序数组。
 

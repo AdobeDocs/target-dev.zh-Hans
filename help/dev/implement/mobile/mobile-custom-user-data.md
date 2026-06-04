@@ -6,7 +6,7 @@ feature: Implement Mobile
 exl-id: 9cf8e8fd-1898-43b1-b339-d7a21cb35d57
 source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
 workflow-type: tm+mt
-source-wordcount: '407'
+source-wordcount: '417'
 ht-degree: 55%
 
 ---
@@ -17,9 +17,9 @@ ht-degree: 55%
 
 >[!IMPORTANT]
 >
->支持[!DNL Adobe Mobile]版本4。*x* SDK已于2021年8月31日结束，不再推荐用于[!DNL Adobe Target]移动用户。
+>对[!DNL Adobe Mobile]版本4.*x* SDK的支持已于2021年8月31日终止，不再建议向[!DNL Adobe Target]移动用户提供。
 >
->适用于移动设备应用程序的[Adobe Experience Platform SDK](https://developer.adobe.com/client-sdks/documentation/){target=_blank}是推荐的解决方案，旨在为您的移动设备应用程序中的[!DNL Adobe Experience Cloud]解决方案和服务提供支持。
+>适用于移动设备应用程序的[Adobe Experience Platform SDK](https://developer.adobe.com/client-sdks/documentation/){target=_blank}是推荐的解决方案，旨在为移动设备应用程序中的[!DNL Adobe Experience Cloud]解决方案和服务提供支持。
 
 此信息可用于在报表中构建自定义受众（例如，距离超过 25000 英里的用户）。
 
@@ -34,7 +34,7 @@ ht-degree: 55%
 
    首先，使用您发送的要传递到[!DNL Target]的值创建一个字典。 为方便起见，请将此字典添加到 `welcomeMessageCampaign` 方法中，这样便无需担心范围问题。
 
-   以下是一个示例字典。您可以将此字典复制并粘贴到 `(void)welcomeMessageCampaign` 中。在此示例中，对 `userLevel` 和 `userMiles` 等键的值进行了硬编码。一般情况下，您需要传入对应的变量。
+   以下是一个示例字典。 您可以将此字典复制并粘贴到 `(void)welcomeMessageCampaign` 中。 在此示例中，对 `userLevel` 和 `userMiles` 等键的值进行了硬编码。 一般情况下，您需要传入对应的变量。
 
    ```
    NSDictionary *targetParams = [[NSDictionary alloc] initWithObjectsAndKeys: 
@@ -50,7 +50,7 @@ ht-degree: 55%
 
    * 前缀为“profile”的键（例如 `profile.persona`）存储在用户的配置文件中。
 
-     这些配置文件属性可以在不同的活动和渠道中使用。
+     这些轮廓属性可以在不同的活动和渠道中使用。
 
    * 没有任何前缀的键（例如 `userMiles`）为 mbox 参数。
 
@@ -65,7 +65,7 @@ ht-degree: 55%
    1. 构建应用程序。
    1. 确认已将参数传入 Target 调用。
 
-      在调试控制台中搜索您的 Target 位置名称。您将会看到对 `YOUR-CLIENT-CODE.tt.omtrdc.net` 的调用，其中包含您刚刚传递的所有参数。
+      在调试控制台中搜索您的 Target 位置名称。 您将会看到对 `YOUR-CLIENT-CODE.tt.omtrdc.net` 的调用，其中包含您刚刚传递的所有参数。
 
       （单击图像可展开至全宽。）
 
