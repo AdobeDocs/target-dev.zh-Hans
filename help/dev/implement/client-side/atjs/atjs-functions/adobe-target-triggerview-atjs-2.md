@@ -5,17 +5,12 @@ title: 如何使用adobe.target.triggerView()函数？
 feature: at.js
 exl-id: d6130c56-4e77-4668-ad21-a5b335f8b234
 TQID: https://experienceleague.adobe.com/pBC1GRKG0mxeaZ1hfaByKv2tu-XScrSJfm7lUw-3yKw
-product_v2:
-  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
-feature_v2:
-  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
-subfeature_v2:
-  - id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2: id: c93393a4-e558-47e1-992e-c91ed4d480ce
+subfeature_v2: id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+source-git-commit: 4d0e7f9f2887db71229061fa64b2633a84c6d054
 workflow-type: tm+mt
 source-wordcount: 446
 ht-degree: 19%
@@ -83,7 +78,7 @@ adobe.target.getOffers({
 
 ## 示例： `triggerView()`与[!UICONTROL Adobe可视化编辑帮助程序扩展的最佳兼容性]
 
-使用[Adobe可视化编辑帮助程序扩展](https://experienceleague.adobe.com/zh-hans/docs/target/using/experiences/vec/troubleshoot-composer/visual-editing-helper-extension){target=_blank}时，请考虑以下事项：
+使用[Adobe可视化编辑帮助程序扩展](https://experienceleague.adobe.com/en/docs/target/using/experiences/vec/troubleshoot-composer/visual-editing-helper-extension){target=_blank}时，请考虑以下事项：
 
 由于[!DNL Googl]e为[!DNL Chrome]扩展添加了新的V3清单策略，[!UICONTROL 可视化编辑帮助程序扩展]必须等待`DOMContentLoaded`事件才能在VEC中加载[!DNL Target]库。 此延迟可能会导致网页在创作库准备就绪之前触发`triggerView()`调用，从而导致在加载时未填充视图。
 
@@ -104,5 +99,6 @@ if (document.readyState === "complete") {
     window.addEventListener("load", triggerViewIfLoaded);
 }
 ```
+
 
 
