@@ -20,7 +20,7 @@ topic_v2:
   - id: d3cdead0-685a-4489-9250-4bb709942f66
   - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
   - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
-source-git-commit: 929e1f10bc5dd0741f0fe28cd46435e680a4a308
+source-git-commit: 4d0e7f9f2887db71229061fa64b2633a84c6d054
 workflow-type: tm+mt
 source-wordcount: 1830
 ht-degree: 67%
@@ -172,4 +172,3 @@ Cookie 有多个默认设置。 您可以根据需要更改这些设置，但 Co
 |--- |--- |
 | 选择退出支持 | Apple 的 WebKit 跟踪更改会中断选择退出支持。<P>[!DNL Target]选择退出使用`clientcode.tt.omtrdc.net`域中的Cookie。 有关更多详细信息，请参阅[隐私](/help/dev/before-implement/privacy/privacy.md)。<P>[!DNL Target]支持两种选择退出：<ul><li>一种是按客户端退出（客户端管理选择退出链接）。</li><li>通过Adobe选择用户退出所有客户的所有[!DNL Target]功能之一。</li></ul>这两种方法都使用第三方 Cookie。 |
 | [!DNL Target]活动 | 客户可以为其[!DNL Target]帐户选择其[配置文件生命周期长度](https://experienceleague.adobe.com/docs/target/using/audiences/visitor-profiles/visitor-profile-lifetime.html?lang=zh-Hans) — 最长90天。 问题在于如果帐户的配置文件生命周期超过30天，并且由于客户的域已被标记为跨站点跟踪用户而清除了第一方Cookie，则Safari访客的行为将在[!DNL Target]的以下区域中受到影响：<P>**[!DNL Target]报告**：如果Safari用户进入活动，30天后返回转化，则该用户将计为两个访客和一次转化。<P>对于使用[!DNL Analytics]作为报表源(A4T)的活动，此行为是相同的。<P>**配置文件和活动成员资格**：<ul><li>第一方 Cookie 过期后会擦除配置文件数据。</li><li>第一方 Cookie 过期后会擦除活动成员资格。</li><li> 对于使用第三方Cookie实施或第一方和第三方Cookie实施的帐户，[!DNL Target]在Safari中不起作用。 请注意，这不是一种新的行为。 Safari 暂时还不允许使用第三方 Cookie。</li></ul><P>**建议**：如果担心客户域可能会被标记为跨会话跟踪访客，则最安全的做法是将[!DNL Target]中的配置文件生命周期设置为等于或少于30天。 这可确保在 Safari 和所有其他浏览器中以类似的方式对用户进行跟踪。 |
-

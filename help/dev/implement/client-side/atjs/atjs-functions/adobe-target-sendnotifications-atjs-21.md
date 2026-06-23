@@ -15,7 +15,7 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
+source-git-commit: 4d0e7f9f2887db71229061fa64b2633a84c6d054
 workflow-type: tm+mt
 source-wordcount: 642
 ht-degree: 83%
@@ -130,3 +130,4 @@ adobe.target.getOffers({
 >[!NOTE]
 >
 >如果您正在使用[!DNL Adobe Analytics]、`[!UICONTROL getOffers()]`和`[!UICONTROL sendNotifications()]`，则在执行`[!UICONTROL sendNotifications()]`后必须触发[!DNL Analytics]请求。 其目的在于确保`[!UICONTROL sendNotifications()]`生成的SDID与发送到[!DNL Analytics]和[!DNL Target]的SDID匹配。
+
