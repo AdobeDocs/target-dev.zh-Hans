@@ -333,13 +333,13 @@ at.js 2.x API允许您通过多种方式自定义您的[!DNL Target]实施，但
 
 ### 在 SPA 中实施 at.js 2.x
 
->[!VIDEO](https://video.tv.adobe.com/v/26248/?quality=12)
+>[!VIDEO](https://video.tv.adobe.com/v/34754/?captions=chi_hans&quality=12)
 
 有关更多信息，请参阅[在单页应用程序(SPA)中实施Adobe Target的at.js 2.x](https://experienceleague.adobe.com/docs/target-learn/tutorials/experiences/use-the-visual-experience-composer-for-single-page-applications.html?lang=zh-Hans)。
 
 ### 在[!DNL Adobe Target]中使用SPA VEC
 
->[!VIDEO](https://video.tv.adobe.com/v/26249/?quality=12)
+>[!VIDEO](https://video.tv.adobe.com/v/34758/?captions=chi_hans&quality=12)
 
 有关详细信息，请参阅[在Adobe Target中使用单页应用程序的可视化体验编辑器(SPA VEC)](https://experienceleague.adobe.com/docs/target-learn/tutorials/experiences/use-the-visual-experience-composer-for-single-page-applications.html?lang=zh-Hans)。
 
