@@ -5,17 +5,12 @@ title: 如何使用[!UICONTROL adobe.target.trackEvent()]函数？
 feature: at.js
 exl-id: 9a55e4f1-d7f9-47c1-867c-2ce06fb26f9f
 TQID: https://experienceleague.adobe.com/Jib9C5FvmsgIF6CA-0UbdMdnMiXxQCkU2-O3Zys3vrY
-product_v2:
-  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
-feature_v2:
-  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
-subfeature_v2:
-  - id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-source-git-commit: 4d0e7f9f2887db71229061fa64b2633a84c6d054
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2: id: c93393a4-e558-47e1-992e-c91ed4d480ce
+subfeature_v2: id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+source-git-commit: 07d851e2344279caeae25e4823ca86b9c17efd63
 workflow-type: tm+mt
 source-wordcount: 336
 ht-degree: 59%
@@ -26,7 +21,7 @@ ht-degree: 59%
 
 此函数会触发用户操作（例如点击和转化）报告请求。 它不会在响应中交付活动。
 
-这些事件跟踪 mbox 调用可以用来定义活动中的量度。 有关更多信息，请参阅[成功量度](https://experienceleague.adobe.com/docs/target/using/activities/success-metrics/success-metrics.html?lang=zh-Hans)和[跟踪转化](../how-to-deployatjs/implement-target-without-a-tag-manager.md#track-conversions)。
+这些事件跟踪 mbox 调用可以用来定义活动中的量度。 有关更多信息，请参阅[成功量度](https://experienceleague.adobe.com/docs/target/using/activities/success-metrics/success-metrics.html)和[跟踪转化](../how-to-deployatjs/implement-target-without-a-tag-manager.md#track-conversions)。
 
 以下是该 API 的详细信息：
 
@@ -71,4 +66,5 @@ adobe.target.trackEvent({
 >[!WARNING]
 >
 >如果未设置必填字段，则不会执行请求，并会引发错误。
+
 
