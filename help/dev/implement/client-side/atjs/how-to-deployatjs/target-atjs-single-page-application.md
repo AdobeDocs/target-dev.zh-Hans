@@ -22,7 +22,7 @@ topic_v2:
   - id: d3cdead0-685a-4489-9250-4bb709942f66
   - id: e0eb8757-182f-49f3-94a4-1587d16f5094
   - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
-source-git-commit: 4d0e7f9f2887db71229061fa64b2633a84c6d054
+source-git-commit: 07d851e2344279caeae25e4823ca86b9c17efd63
 workflow-type: tm+mt
 source-wordcount: 2851
 ht-degree: 53%
@@ -342,4 +342,5 @@ at.js 2.x API允许您通过多种方式自定义您的[!DNL Target]实施，但
 >[!VIDEO](https://video.tv.adobe.com/v/34758/?captions=chi_hans&quality=12)
 
 有关详细信息，请参阅[在Adobe Target中使用单页应用程序的可视化体验编辑器(SPA VEC)](https://experienceleague.adobe.com/docs/target-learn/tutorials/experiences/use-the-visual-experience-composer-for-single-page-applications.html?lang=zh-Hans)。
+
 

@@ -16,7 +16,7 @@ role_v2:
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
   - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
-source-git-commit: 4d0e7f9f2887db71229061fa64b2633a84c6d054
+source-git-commit: 07d851e2344279caeae25e4823ca86b9c17efd63
 workflow-type: tm+mt
 source-wordcount: 91
 ht-degree: 0%
@@ -30,4 +30,5 @@ ht-degree: 0%
 [!DNL Adobe Experience Platform]中的标记是来自[!DNL Adobe]的下一代标记管理功能。 标记为客户提供了一种简单的方式来部署和管理用来加强相关客户体验的分析、营销和广告标记。
 
 有关详细信息，请参阅[使用 [!DNL Adobe Platform]](/help/dev/implement/client-side/atjs/how-to-deployatjs/implement-target-using-adobe-launch.md)实施 [!DNL Target] 。
+
 

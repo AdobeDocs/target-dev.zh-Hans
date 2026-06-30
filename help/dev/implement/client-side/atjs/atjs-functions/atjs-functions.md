@@ -16,7 +16,7 @@ role_v2:
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
   - id: c1579802-ddd4-4214-8a91-97b2066abe11
-source-git-commit: 4d0e7f9f2887db71229061fa64b2633a84c6d054
+source-git-commit: 07d851e2344279caeae25e4823ca86b9c17efd63
 workflow-type: tm+mt
 source-wordcount: 557
 ht-degree: 38%
@@ -43,4 +43,5 @@ ht-degree: 38%
 | [[!UICONTROL 注册扩展（选项）]](/help/dev/implement/client-side/atjs/atjs-functions/registerextension-atjs-1x.md)<P>(at.js 1.x) | 可提供用于注册特定扩展的标准方法。<P>**注意：**&#x200B;此函数仅适用于at.js版本1.*x*。 此函数已在at.js 2.x版本中弃用。 如果与at.js 2.x一起使用，此函数将返回默认内容。 |
 | [[!UICONTROL at.js自定义事件]](/help/dev/implement/client-side/atjs/atjs-functions/atjs-custom-events.md) | 通过 at.js 自定义事件，您可以知道 mbox 请求或产品建议何时成功或失败。 |
 | [[!UICONTROL adobe.target.sendNotifications(options)]](/help/dev/implement/client-side/atjs/atjs-functions/adobe-target-sendnotifications-atjs-21.md)<P>(at.js 2.1.0) | 在不使用`[!UICONTROL adobe.target.applyOffer()]`或`[!UICONTROL adobe.target.applyOffers()]`呈现体验时，此函数会向[!DNL Target]边缘发送通知。<P>**注意**：此函数已在at.js 2.1.0中引入，可用于2.1.0以上的任何版本。 |
+
 

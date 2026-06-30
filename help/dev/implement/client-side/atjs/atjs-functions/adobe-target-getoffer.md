@@ -17,7 +17,7 @@ topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
   - id: c1579802-ddd4-4214-8a91-97b2066abe11
   - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
-source-git-commit: 4d0e7f9f2887db71229061fa64b2633a84c6d054
+source-git-commit: 07d851e2344279caeae25e4823ca86b9c17efd63
 workflow-type: tm+mt
 source-wordcount: 472
 ht-degree: 71%
@@ -141,4 +141,5 @@ adobe.target.getOffer({
 |--- |--- |--- |
 | status | 字符串 | 表示错误状态。 该参数可以具有以下值：<ul><li>timeout：表示请求超时。</li><li>parseerror：表示无法解析响应，例如，如果我们收到 HTML 或纯文本而不是 JSON。</li><li>error：表示常规错误，例如我们收到的 HTTP 状态不是 200 OK</li></ul> |
 | error | 字符串 | 包含其他数据，例如异常消息或其他任何可能对故障诊断有用的信息。 |
+
 
