@@ -33,7 +33,7 @@ ht-degree: 4%
 
 # 针对at.js的[!UICONTROL 设备上决策]
 
-从版本2.5.0开始，at.js提供[!UICONTROL 设备上决策]。 [!UICONTROL 设备上决策]允许您在浏览器上缓存[A/B测试](https://experienceleague.adobe.com/docs/target/using/activities/abtest/test-ab.html)和[体验定位](https://experienceleague.adobe.com/docs/target/using/activities/experience-targeting/experience-target.html) (XT)活动，以执行内存中决策，而无需向[!DNL Adobe Target] Edge Network发送阻止网络请求。
+从版本2.5.0开始，at.js提供[!UICONTROL 设备上决策]。 [!UICONTROL 设备上决策]允许您在浏览器上缓存[A/B测试](https://experienceleague.adobe.com/docs/target/using/activities/abtest/test-ab.html?lang=zh-Hans)和[体验定位](https://experienceleague.adobe.com/docs/target/using/activities/experience-targeting/experience-target.html?lang=zh-Hans) (XT)活动，以执行内存中决策，而无需向[!DNL Adobe Target] Edge Network发送阻止网络请求。
 
 >[!NOTE]
 >
@@ -48,7 +48,7 @@ ht-degree: 4%
 * **提供超快的决策和体验。** 在内存中和浏览器上执行分段和决策，以避免阻止网络请求。
 * **增强应用程序性能。** 在不影响最终用户体验的情况下运行实验并向客户和用户提供个性化。
 * **提高Google网站质量分数。** 由于决策在内存中进行，因此可提高您在线业务的Google网站质量分数，使其更易于消费者发现。
-* **从实时分析中学习。** 通过[Analytics for Target](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t.html) (A4T)报表实时了解您的活动表现。 A4T允许您在关键时刻调整策略。
+* **从实时分析中学习。** 通过[Analytics for Target](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t.html?lang=zh-Hans) (A4T)报表实时了解您的活动表现。 A4T允许您在关键时刻调整策略。
 
 ## 受支持的功能
 
@@ -76,7 +76,7 @@ ht-degree: 4%
 
 仅服务器端是在您的Web资产上实施和部署at.js 2.5.0及更高版本时开箱即用的默认决策方法。
 
-仅将服务器端用作默认配置意味着在[!DNL Target]边缘网络上做出所有决策，其中涉及阻止服务器调用。 此方法可能会引入增量延迟，但它也提供了显着的优势，例如允许您应用[!DNL Target]的机器学习功能，包括[推荐](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations.html)、[Automated Personalization](https://experienceleague.adobe.com/docs/target/using/activities/automated-personalization/automated-personalization.html) (AP)和[自动定位](https://experienceleague.adobe.com/docs/target/using/activities/auto-target/auto-target-to-optimize.html)活动。
+仅将服务器端用作默认配置意味着在[!DNL Target]边缘网络上做出所有决策，其中涉及阻止服务器调用。 此方法可能会引入增量延迟，但它也提供了显着的优势，例如允许您应用[!DNL Target]的机器学习功能，包括[推荐](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations.html?lang=zh-Hans)、[Automated Personalization](https://experienceleague.adobe.com/docs/target/using/activities/automated-personalization/automated-personalization.html?lang=zh-Hans) (AP)和[自动定位](https://experienceleague.adobe.com/docs/target/using/activities/auto-target/auto-target-to-optimize.html?lang=zh-Hans)活动。
 
 此外，通过使用[!DNL Target]的用户配置文件（跨会话和渠道保留）增强您的个性化体验，可为您的业务带来强大的成果。
 
@@ -92,7 +92,7 @@ ht-degree: 4%
 
 | 步骤 | 描述 |
 | --- | --- |
-| 1 | Experience Cloud访客ID是从[Adobe Experience Cloud Identity Service](https://experienceleague.adobe.com/docs/id-service/using/home.html？)中检索的。 |
+| 1 | Experience Cloud访客ID是从[Adobe Experience Cloud Identity Service](https://experienceleague.adobe.com/docs/id-service/using/home.html?lang=zh-Hans？)中检索的。 |
 | 2 | at.js库同步加载并隐藏文档正文。<br />   也可以选择在页面上实施预先隐藏的代码片段，以异步方式加载at.js库。 |
 | 3 | at.js库会隐藏正文以防止闪烁。 |
 | 4 | 将会发出页面加载请求，其中包括已配置的所有参数，例如（ECID、客户ID、自定义参数、用户配置文件等）。 |
@@ -131,7 +131,7 @@ ht-degree: 4%
 
 | 步骤 | 描述 |
 | --- | --- |
-| 1 | Experience Cloud访客ID是从[Adobe Experience Cloud Identity Service](https://experienceleague.adobe.com/docs/id-service/using/home.html)中检索的。 |
+| 1 | Experience Cloud访客ID是从[Adobe Experience Cloud Identity Service](https://experienceleague.adobe.com/docs/id-service/using/home.html?lang=zh-Hans)中检索的。 |
 | 2 | at.js 库会同步加载，并隐藏文档正文。<br />也可以使用页面上实施的可选预隐藏代码片段异步加载at.js库。 |
 | 3 | at.js库会隐藏正文以防止闪烁。 |
 | 4 | at.js库会发出请求，请求从距离访客最近的Akamai CDN检索JSON规则构件。 |
@@ -158,7 +158,7 @@ ht-degree: 4%
 
 | 步骤 | 描述 |
 | --- | --- |
-| 1 | Experience Cloud访客ID是从[Adobe Experience Cloud Identity Service](https://experienceleague.adobe.com/docs/id-service/using/home.html)中检索的。 |
+| 1 | Experience Cloud访客ID是从[Adobe Experience Cloud Identity Service](https://experienceleague.adobe.com/docs/id-service/using/home.html?lang=zh-Hans)中检索的。 |
 | 2 | at.js 库会同步加载，并隐藏文档正文。<br />也可以使用页面上实施的可选预隐藏代码片段异步加载at.js库。 |
 | 3 | at.js库会隐藏正文以防止闪烁。 |
 | 4 | at.js库解释JSON规则工件并在内存中执行决策以检索体验。 |
@@ -193,7 +193,7 @@ JSON规则工件包含元数据，用于通知at.js mbox是正在运行的服务
 
 | 步骤 | 描述 |
 | --- | --- |
-| 1 | Experience Cloud访客ID是从[Adobe Experience Cloud Identity Service](https://experienceleague.adobe.com/docs/id-service/using/home.html)中检索的。 |
+| 1 | Experience Cloud访客ID是从[Adobe Experience Cloud Identity Service](https://experienceleague.adobe.com/docs/id-service/using/home.html?lang=zh-Hans)中检索的。 |
 | 2 | at.js 库会同步加载，并隐藏文档正文。<br />也可以使用页面上实施的可选预隐藏代码片段异步加载at.js库。 |
 | 3 | at.js库会隐藏正文以防止闪烁。 |
 | 4 | 向[!DNL Adobe Target] Edge Network发出页面加载请求，其中包括已配置的所有参数，例如（ECID、客户ID、自定义参数、用户配置文件等）。 |
@@ -223,7 +223,7 @@ JSON规则工件包含元数据，用于通知at.js mbox是正在运行的服务
 
 | 步骤 | 描述 |
 | --- | --- |
-| 1 | Experience Cloud访客ID是从[Adobe Experience Cloud Identity Service](https://experienceleague.adobe.com/docs/id-service/using/home.html)中检索的。 |
+| 1 | Experience Cloud访客ID是从[Adobe Experience Cloud Identity Service](https://experienceleague.adobe.com/docs/id-service/using/home.html?lang=zh-Hans)中检索的。 |
 | 2 | at.js 库会同步加载，并隐藏文档正文。<br />也可以使用页面上实施的可选预隐藏代码片段异步加载at.js库。 |
 | 3 | at.js库会隐藏正文以防止闪烁。 |
 | 4 | 系统会提出检索体验的请求。 |
@@ -243,7 +243,7 @@ JSON规则工件包含元数据，用于通知at.js mbox是正在运行的服务
 
 >[!NOTE]
 >
->您必须具有管理员或审批者[用户角色](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/user-management.html)才能启用或禁用“设备端决策”切换开关。
+>您必须具有管理员或审批者[用户角色](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/user-management.html?lang=zh-Hans)才能启用或禁用“设备端决策”切换开关。
 
 1. 单击&#x200B;**[!UICONTROL 管理]** > **[!UICONTROL 实施]** > **[!UICONTROL 帐户详细信息]**。
 1. 在&#x200B;**[!UICONTROL 帐户详细信息]**&#x200B;下，将&#x200B;**[!UICONTROL 设备上决策]**&#x200B;切换开关滑动到“开”位置。
