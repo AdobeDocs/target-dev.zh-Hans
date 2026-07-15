@@ -17,7 +17,7 @@ topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
   - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
   - id: d3cdead0-685a-4489-9250-4bb709942f66
-source-git-commit: 07d851e2344279caeae25e4823ca86b9c17efd63
+source-git-commit: ca4254966a337a0215d66bd28506128b9751d0e0
 workflow-type: tm+mt
 source-wordcount: 446
 ht-degree: 4%
@@ -51,5 +51,6 @@ ht-degree: 4%
   >在[!DNL Adobe Analytics]扩展中使用Send Beacon操作，以便[!DNL Analytics]调用等待[!DNL Target]调用。 如果您使用自定义代码直接调用`s.t()`或`s.tl()`，则[!DNL Analytics]调用不会等到[!DNL Target]调用完成。
 
 * **阻止错误的重定向选件处理：**&#x200B;如果您在页面上同时具有[!DNL Target]和[!DNL Analytics]，并且有一个重定向选件由Target执行，则您可能会遇到如下情况：[!DNL Analytics]跟踪器触发了不应触发的请求（因为用户将被重定向到不同的URL）。 如果您通过[!DNL Adobe Experience Platform]中的标记实施[!DNL Target]和[!DNL Analytics]，则不会遇到此问题。 使用[!DNL Adobe Experience Platform]中的标记，[!DNL Target]指示[!DNL Analytics]中止[!DNL Analytics]信标请求。
+
 
 

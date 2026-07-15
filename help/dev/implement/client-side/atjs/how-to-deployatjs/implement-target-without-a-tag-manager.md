@@ -21,7 +21,7 @@ topic_v2:
   - id: e0eb8757-182f-49f3-94a4-1587d16f5094
   - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
   - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
-source-git-commit: 07d851e2344279caeae25e4823ca86b9c17efd63
+source-git-commit: ca4254966a337a0215d66bd28506128b9751d0e0
 workflow-type: tm+mt
 source-wordcount: 1785
 ht-degree: 32%
@@ -295,5 +295,6 @@ at.js 应该在您网站每个页面的 `<head>` 元素中实施。
 | orderId | 针对转化计数标识订单的唯一值。<p>`orderId` 必须是唯一的。 报表中会忽略重复订单。 |
 | orderTotal | 所购产品的币值。<p>请勿传递货币符号。 使用小数点（而非逗号）表示小数值。 |
 | productPurchasedId（可选） | 订单中所购产品的产品 ID（逗号分隔）列表。<p>这些产品 ID 显示在审计报告中以支持其他报告分析。 |
+
 
 
