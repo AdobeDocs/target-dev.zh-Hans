@@ -9,9 +9,9 @@ product_v2:
   - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
+source-git-commit: b6b447ccb88925a8efb6ff6a80ae475c8780dbc8
 workflow-type: tm+mt
-source-wordcount: 188
+source-wordcount: 244
 ht-degree: 0%
 
 ---
@@ -19,6 +19,10 @@ ht-degree: 0%
 # 投放API概述
 
 [!DNL Adobe Target Delivery API]基于REST。 本文档介绍了构成[!DNL Adobe Target] [!DNL Delivery API]的资源。 HTTP方法用于对这些资源执行操作。
+
+>[!IMPORTANT]
+>
+>此处记录的[!DNL Delivery API]适用于[!DNL at.js]和直接服务器端实施。 如果您使用[!DNL Adobe Experience Platform Web SDK]实现[!DNL Target]，请使用通过[!UICONTROL Experience Platform Edge Network]上的`sendEvent`命令访问的Interact API，而不是直接调用[!DNL Delivery API]。 有关详细信息，请参阅[Adobe Experience Platform Web SDK](/help/dev/implement/client-side/aep-web-sdk/aep-web-sdk-overview.md)和[将at.js库与Experience Platform Web SDK进行比较](/help/dev/implement/client-side/aep-web-sdk/web-sdk-atjs-comparison.md)。
 
 使用[!UICONTROL Adobe Target的投放API]，您可以：
 

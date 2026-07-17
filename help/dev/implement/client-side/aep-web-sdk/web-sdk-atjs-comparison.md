@@ -21,9 +21,9 @@ topic_v2:
   - id: c2be0313-b3ae-45e0-b454-d20bf54b23f2
   - id: e0eb8757-182f-49f3-94a4-1587d16f5094
   - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
-source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
+source-git-commit: b6b447ccb88925a8efb6ff6a80ae475c8780dbc8
 workflow-type: tm+mt
-source-wordcount: 2308
+source-wordcount: 2354
 ht-degree: 5%
 
 ---
@@ -33,6 +33,10 @@ ht-degree: 5%
 ## 概述
 
 本文概述了`at.js`库与Experience Platform Web SDK之间的差异。
+
+>[!NOTE]
+>
+>`at.js`实施直接调用[!DNL Target] [投放API](/help/dev/implement/delivery-api/overview.md)，例如`POST https://<clientCode>.tt.omtrdc.net/rest/v1/delivery`。 [!DNL Platform Web SDK]实施改为通过[!UICONTROL Experience Platform Edge Network]上的`sendEvent`命令调用Interact API（例如，`POST https://edge.adobedc.net/ee/v2/interact`）。 它们是两个不同的API，并且不可互换。
 
 ## 安装库
 

@@ -20,10 +20,10 @@ topic_v2:
   - id: c2be0313-b3ae-45e0-b454-d20bf54b23f2
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
   - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
-source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
+source-git-commit: 45af56b5ac64eb1db67c1bfdfecd6887dce990ff
 workflow-type: tm+mt
-source-wordcount: 618
-ht-degree: 12%
+source-wordcount: 825
+ht-degree: 9%
 
 ---
 
@@ -91,3 +91,26 @@ ht-degree: 12%
 链接： [Target推荐API](https://developers.adobetarget.com/api/recommendations)和[Adobe Recommendations API概述](../../before-administer/recs-api/overview.md)。
 
 推荐API允许您以编程方式与[!DNL Target]推荐服务器交互。 这些API可与一系列应用程序栈集成，以执行通常将通过[!DNL Target]用户界面执行的功能。
+
+## 不使用SDK的[!DNL Platform Edge Network]个API调用 {#platform-edge-api-user-agent}
+
+[!UICONTROL Adobe Experience Platform Web SDK]和其他支持的SDK集成在调用[!DNL Experience Platform Edge Network]时，在HTTP请求标头中包含类似浏览器的`User-Agent`值。 使用公共[Interact API](https://experienceleague.adobe.com/en/docs/experience-platform/edge-network/server-api/interact){target=_blank}而不使用SDK的服务器端集成必须显式提供此标头。
+
+对于非SDK Interact API调用，请遵循以下要求：
+
+* 在HTTP请求标头中包含有效的类似浏览器的`User-Agent`。 仅仅JSON请求正文中的访客或用户代理值不符合此集成模式的机器人检测要求。
+* 请勿使用占位符或非浏览器值，例如`MyApp/1.0`，此类值可能会导致机器人分类。
+* 公共SDK API调用不需要Edge名称或SDK版本。 对于此方案，有效的`User-Agent` HTTP标头是必需的元素。
+
+当[!DNL Target]将请求分类为机器人流量时，由于配置文件查找、区段评估和诸如[!UICONTROL 推荐]和[!UICONTROL 自动定位]等活动的个性化内容被禁止（如下所述），个性化可能会失败或看起来间歇性异常。
+
+在[[!DNL Adobe Experience Platform Web SDK] 概述](https://experienceleague.adobe.com/zh-hans/docs/target-dev/developer/client-side/aep/aep-web-sdk-overview){target=_blank}中了解有关使用SDK实施的更多信息。
+
+**Interact API请求示例（标头必须包含`User-Agent`）：**
+
+```http
+POST https://edge.adobedc.net/ee/v2/interact?dataStreamId=YOUR_DATASTREAM_ID&requestId=YOUR_REQUEST_ID
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/26.5 Safari/605.1.15
+Accept: */*
+Content-Type: text/plain; charset=UTF-8
+```
