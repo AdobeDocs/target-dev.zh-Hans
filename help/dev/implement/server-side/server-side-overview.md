@@ -35,7 +35,7 @@ ht-degree: 9%
 >
 >如果您的实施在客户端使用at.js和[!DNL AppMeasurement]，则您应该使用下面讨论的[!UICONTROL Target投放API]和服务器端SDK。
 >
->如果您的实施使用[!UICONTROL Adobe Experience Platform Web SDK]，则您应该使用[[!UICONTROL Adobe Experience Platform] [!UICONTROL Edge Network服务器API]](https://experienceleague.adobe.com/en/docs/experience-platform/edge-network-server-api/overview){target=_blank}。
+>如果您的实施使用[!UICONTROL Adobe Experience Platform Web SDK]，则您应该使用[[!UICONTROL Adobe Experience Platform] [!UICONTROL Edge Network服务器API]](https://experienceleague.adobe.com/zh-hans/docs/experience-platform/edge-network-server-api/overview){target=_blank}。
 
 以下过程会在 [!DNL Target] 的服务器端实施中发生：
 
@@ -104,7 +104,7 @@ ht-degree: 9%
 
 当[!DNL Target]将请求分类为机器人流量时，由于配置文件查找、区段评估和诸如[!UICONTROL 推荐]和[!UICONTROL 自动定位]等活动的个性化内容被禁止（如下所述），个性化可能会失败或看起来间歇性异常。
 
-在[[!DNL Adobe Experience Platform Web SDK] 概述](https://experienceleague.adobe.com/en/docs/target-dev/developer/client-side/aep/aep-web-sdk-overview){target=_blank}中了解有关使用SDK实施的更多信息。
+在[[!DNL Adobe Experience Platform Web SDK] 概述](https://experienceleague.adobe.com/zh-hans/docs/target-dev/developer/client-side/aep/aep-web-sdk-overview){target=_blank}中了解有关使用SDK实施的更多信息。
 
 **Interact API请求示例（标头必须包含`User-Agent`）：**
 
