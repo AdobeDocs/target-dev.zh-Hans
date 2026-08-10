@@ -399,11 +399,11 @@ at.js 版本 1.3.0 现已可用。
 
 * 以下新事件可用于帮助跟踪、调试和自定义与 at.js 的交互：
 
-   * LIBRARY_LOADED
-   * REQUEST_START
-   * CONTENT_RENDERING_START
-   * CONTENT_RENDERING_NO_OFFERS
-   * CONTENT_RENDERING_REDIRECT
+  * LIBRARY_LOADED
+  * REQUEST_START
+  * CONTENT_RENDERING_START
+  * CONTENT_RENDERING_NO_OFFERS
+  * CONTENT_RENDERING_REDIRECT
 
   有关详细信息，请参阅[at.js自定义事件](/help/dev/implement/client-side/atjs/atjs-functions/atjs-custom-events.md)。
 
@@ -553,10 +553,10 @@ at.js版本0.9.6中包含以下增强功能和修复：
 
   通过该新API，开发人员可以访问at.js中使用的特定jQuery模块，以开发适用于库的扩展（即插件）。 这项更改存在一些影响。 这只会影响使用以下功能的用户：
 
-   * 已删除 `getSettings()` API，但可使用 `registerExtension()` 实现相同的功能。
-   * 已删除 `getTracking()` API，但可使用 `registerExtension()` 实现相同的功能。
+  * 已删除 `getSettings()` API，但可使用 `registerExtension()` 实现相同的功能。
+  * 已删除 `getTracking()` API，但可使用 `registerExtension()` 实现相同的功能。
 
-   * 必须更新现有扩展（如 AngularJS 扩展），才能使用 `registerExtension()` 方法。
+  * 必须更新现有扩展（如 AngularJS 扩展），才能使用 `registerExtension()` 方法。
 
 * 新增了at.js通知API。
 
