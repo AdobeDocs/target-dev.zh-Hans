@@ -5,24 +5,14 @@ title: 可在何处了解 [!DNL Target] 服务器端交付API和SDK？
 feature: Implement Server-side
 exl-id: 3eb0a789-cf1a-4d02-acf7-3c895bcb662f
 TQID: https://experienceleague.adobe.com/x5WKb9Eenz2bw-idOnxlpWdtiivTx05n38sNXEt3DNc
-product_v2:
-  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
-feature_v2:
-  - id: b050e0cd-2ddd-42cd-a71b-5d9e1fdf75e0
-  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
-subfeature_v2:
-  - id: a6cc21b9-1a36-4fa6-9c61-4acd04d9c88c
-  - id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-  - id: c2be0313-b3ae-45e0-b454-d20bf54b23f2
-  - id: d095671a-1355-40aa-8b5f-06c33c68080b
-  - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
-source-git-commit: 45af56b5ac64eb1db67c1bfdfecd6887dce990ff
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2: id: b050e0cd-2ddd-42cd-a71b-5d9e1fdf75e0id: c93393a4-e558-47e1-992e-c91ed4d480ce
+subfeature_v2: id: a6cc21b9-1a36-4fa6-9c61-4acd04d9c88cid: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: c2be0313-b3ae-45e0-b454-d20bf54b23f2id: d095671a-1355-40aa-8b5f-06c33c68080bid: eb30f47f-d87a-400f-8f78-63ce7979ff56
+source-git-commit: 7a393cc6a3f30a276a256cdabb5b42fe08f3c505
 workflow-type: tm+mt
-source-wordcount: 825
+source-wordcount: 820
 ht-degree: 9%
 
 ---
@@ -35,7 +25,7 @@ ht-degree: 9%
 >
 >如果您的实施在客户端使用at.js和[!DNL AppMeasurement]，则您应该使用下面讨论的[!UICONTROL Target投放API]和服务器端SDK。
 >
->如果您的实施使用[!UICONTROL Adobe Experience Platform Web SDK]，则您应该使用[[!UICONTROL Adobe Experience Platform] [!UICONTROL Edge Network服务器API]](https://experienceleague.adobe.com/zh-hans/docs/experience-platform/edge-network-server-api/overview){target=_blank}。
+>如果您的实施使用[!UICONTROL Adobe Experience Platform Web SDK]，则您应该使用[[!UICONTROL Adobe Experience Platform] [!UICONTROL Edge Network服务器API]](https://experienceleague.adobe.com/en/docs/experience-platform/edge-network-server-api/overview){target=_blank}。
 
 以下过程会在 [!DNL Target] 的服务器端实施中发生：
 
@@ -94,19 +84,19 @@ ht-degree: 9%
 
 ## 不使用SDK的[!DNL Platform Edge Network]个API调用 {#platform-edge-api-user-agent}
 
-[!UICONTROL Adobe Experience Platform Web SDK]和其他支持的SDK集成在调用[!DNL Experience Platform Edge Network]时，在HTTP请求标头中包含类似浏览器的`User-Agent`值。 使用公共[Interact API](https://experienceleague.adobe.com/en/docs/experience-platform/edge-network/server-api/interact){target=_blank}而不使用SDK的服务器端集成必须显式提供此标头。
+[!UICONTROL Adobe Experience Platform Web SDK]和其他支持的SDK集成在调用[!DNL Experience Platform Edge Network]时，在HTTP请求标头中包含类似浏览器的`User-Agent`值。 使用公共[Edge API](https://developer.adobe.com/data-collection-apis/docs/getting-started/personalization){target=_blank}而不使用SDK的服务器端集成必须显式提供此标头。
 
-对于非SDK Interact API调用，请遵循以下要求：
+对于非SDK Edge API调用，请遵循以下要求：
 
 * 在HTTP请求标头中包含有效的类似浏览器的`User-Agent`。 仅仅JSON请求正文中的访客或用户代理值不符合此集成模式的机器人检测要求。
 * 请勿使用占位符或非浏览器值，例如`MyApp/1.0`，此类值可能会导致机器人分类。
 * 公共SDK API调用不需要Edge名称或SDK版本。 对于此方案，有效的`User-Agent` HTTP标头是必需的元素。
 
-当[!DNL Target]将请求分类为机器人流量时，由于配置文件查找、区段评估和诸如[!UICONTROL 推荐]和[!UICONTROL 自动定位]等活动的个性化内容被禁止（如下所述），个性化可能会失败或看起来间歇性异常。
+当[!DNL Target]将请求分类为机器人流量时，由于配置文件查找、区段评估和诸如[!UICONTROL 推荐]和[!UICONTROL 自动定位]等活动的个性化内容被禁止，因此个性化可能会失败或看起来间歇性。
 
-在[[!DNL Adobe Experience Platform Web SDK] 概述](https://experienceleague.adobe.com/zh-hans/docs/target-dev/developer/client-side/aep/aep-web-sdk-overview){target=_blank}中了解有关使用SDK实施的更多信息。
+在[[!DNL Adobe Experience Platform Web SDK] 概述](https://experienceleague.adobe.com/en/docs/target-dev/developer/client-side/aep/aep-web-sdk-overview){target=_blank}中了解有关使用SDK实施的更多信息。
 
-**Interact API请求示例（标头必须包含`User-Agent`）：**
+**Edge API请求示例（标头必须包含`User-Agent`）：**
 
 ```http
 POST https://edge.adobedc.net/ee/v2/interact?dataStreamId=YOUR_DATASTREAM_ID&requestId=YOUR_REQUEST_ID
