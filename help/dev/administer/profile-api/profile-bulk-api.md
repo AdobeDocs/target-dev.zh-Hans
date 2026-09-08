@@ -90,7 +90,7 @@ batch=pcId,param1,param2,param3,param4
 >
 >所有参数名称和值都必须采用URL编码(UTF-8)，然后才能提交随`Content-Type: application/x-www-form-urlencoded`一起发送的批次，其正文以`batch=`开头。 未编码的保留字符将作为请求语法而非数据读取，这可能导致批次被拒绝、截断或损坏。
 >
->如果您收到未发出`batchId`的“意外错误”响应，请参阅[批量配置文件更新API返回“意外错误”](https://experienceleague.adobe.com/en/docs/experience-cloud-kcs/kbarticles/ka-24281)以了解故障排除步骤。
+>如果您收到未发出`batchId`的“意外错误”响应，请参阅[批量配置文件更新API返回“意外错误”](https://experienceleague.adobe.com/zh-hans/docs/experience-cloud-kcs/kbarticles/ka-24281)以了解故障排除步骤。
 
 以下字符通常存在于配置文件值中，但在`application/x-www-form-urlencoded`数据中具有特殊含义。 如果发送未编码的数据，则请求会失败或者数据已损坏，并且没有出现明显错误：
 
