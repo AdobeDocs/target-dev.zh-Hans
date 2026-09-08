@@ -15,10 +15,10 @@ topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
   - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
-source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
+source-git-commit: 9ecf805fe5a25a161564412fb01081a3546ea309
 workflow-type: tm+mt
-source-wordcount: 156
-ht-degree: 71%
+source-wordcount: 163
+ht-degree: 62%
 
 ---
 
@@ -30,4 +30,4 @@ ht-degree: 71%
 
 此外，我们还与合作伙伴、重要研究人员、安全研究机构以及业内其他组织携手合作，帮助我们及时了解最新的安全威胁和漏洞，而且我们还定期将先进的安全技术整合到我们提供的产品和服务中。
 
-有关更多信息，请参阅 [Adobe Target 安全概述](https://www.adobe.com/content/dam/cc/en/security/pdfs/AdobeTargetSecurityOverview.pdf)白皮书。
+有关更多信息，请参阅 [Adobe Target 安全概述](https://www.adobe.com/cc-shared/assets/pdf/trust-center/ungated/whitepapers/experience-cloud/adobe-target-security-overview.pdf)白皮书。
