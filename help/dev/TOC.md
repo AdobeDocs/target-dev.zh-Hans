@@ -3,13 +3,11 @@ user-guide-title: Adobe Target开发人员指南
 breadcrumb-title: Target开发人员指南
 user-guide-description: 了解如何定制和个性化客户体验，从而最大限度地提升网站和移动网站、应用程序、社交媒体和其他数字渠道的收入。
 nudge: true
-source-git-commit: 5c19d83d1ba84165dee064183ec04a9803dd1a61
+source-git-commit: 59113ca1ef6c4d6e4ff2f7ad76e53a96fb5c255b
 workflow-type: tm+mt
 source-wordcount: '854'
 ht-degree: 41%
-
 ---
-
 
 # Adobe Target开发人员指南 {#developer}
 
@@ -44,7 +42,7 @@ ht-degree: 41%
   + [CNAME 和 Adobe Target](before-implement/implement-cname-support-in-target.md)
 + 客户端实施 {#client-side}
   + [概述：为客户端 Web 实施 Target](implement/client-side/overview.md)
-  + {hide-from-toc}[预隐藏SDK集成指南](implement/client-side/prehide-sdk/prehide-sdk.md)
+  + [预隐藏SDK集成指南](implement/client-side/prehide-sdk/prehide-sdk.md)
   + Adobe Experience Platform Web SDK实施 {#aep}
     + [Adobe Experience Platform Web SDK实施概述](/help/dev/implement/client-side/aep-web-sdk/aep-web-sdk-overview.md)
     + [使用Adobe Target和Web SDK进行个性化](/help/dev/implement/client-side/aep-web-sdk/target-overview.md)
