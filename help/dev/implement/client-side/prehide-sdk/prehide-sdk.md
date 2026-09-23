@@ -1,16 +1,13 @@
 ---
 keywords: 预隐藏SDK，闪烁，防闪烁，预隐藏，预隐藏， alloy， at.js，实现，同意， CMP，脚本放置，内联，外部， SDK选择
-description: 了解如何集成 [!DNL Adobe Target] 预隐藏SDK以消除页面加载期间非个性化内容的闪烁（闪烁）。 SDK可与Adobe Alloy (Web SDK)和at.js配合使用。
+description: 了解如何集成[!DNL Adobe Target]预隐藏SDK以消除页面加载期间非个性化内容的闪烁（闪烁）。 SDK可与Adobe Alloy (Web SDK)和at.js配合使用。
 title: 预隐藏SDK集成指南
 feature: Implementation
-hide: true
-source-git-commit: bb3c2906a52daecca03cf29331d9bec5e2955d2e
+source-git-commit: 35ac4480ead5069169a2c55d35b43d3c1a81d78a
 workflow-type: tm+mt
-source-wordcount: '1007'
-ht-degree: 0%
-
+source-wordcount: '1066'
+ht-degree: 1%
 ---
-
 
 # 预隐藏SDK集成指南
 
@@ -62,8 +59,9 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->预隐藏SDK必须在Alloy/at.js之前运行。如果Alloy先加载，则页面会呈现非个性化内容，然后重新呈现。这正是此SDK旨在防止的闪烁。
-></br>>不要将`async`或`defer`添加到“预隐藏SDK”脚本标记中。需要同步执行，以便在浏览器开始布局页面之前注入隐藏规则。
+>预隐藏SDK必须在Alloy/at.js之前运行。 如果Alloy先加载，则页面会呈现非个性化内容，然后重新呈现。 这正是此SDK旨在防止的闪烁。
+></br>
+>请勿将`async`或`defer`添加到“预隐藏SDK”脚本标记。 需要同步执行，以便在浏览器开始布局页面之前注入隐藏规则。
 
 预隐藏SDK在文档中的显示时间必须比在其之后清理的[!DNL Adobe Target]SDK更早。 装货单不可协商：
 
