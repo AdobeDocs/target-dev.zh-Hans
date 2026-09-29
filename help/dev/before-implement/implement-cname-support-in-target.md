@@ -1,30 +1,39 @@
 ---
 keywords: 客户关怀；CNAME；证书程序；规范名称；Cookie；证书；AMC；Adobe托管证书；数字证书；域控制器验证；DCV
-description: 与 [!DNL Adobe] 客户关怀团队合作，在 [!DNL Adobe Target] 中实施CNAME （规范名称）支持，以处理广告拦截问题。
+description: 与[!DNL Adobe]客户关怀团队合作，在[!DNL Adobe Target]中实施CNAME（规范名称）支持以处理广告阻止问题。
 title: 如何在Target中使用CNAME？
 feature: Privacy & Security
 role: Developer
 exl-id: bf533771-6d46-48ba-964c-3ad9ce9f7352
-TQID: https://experienceleague.adobe.com/gTS60hypD2WGc2fJh-sUkq2-pkzt2KnM4CzSQ050L40
+TQID: 'https://experienceleague.adobe.com/gTS60hypD2WGc2fJh-sUkq2-pkzt2KnM4CzSQ050L40'
 product_v2:
   - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
 feature_v2:
   - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+    internal-label: Implementation
+  - id: f599e456-545c-47e5-8e50-b7dfe3579517
+    internal-label: Governance and control
 subfeature_v2:
   - id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+    internal-label: at.js
+  - id: ee6498fb-34b1-4925-be4a-9ec7a38e8dab
+    internal-label: Privacy and security
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+    internal-label: Implementation
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
+    internal-label: Security
   - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
-source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
+    internal-label: Privacy
+source-git-commit: 78ca638b097a9d3f3028353c80f4929e036e2f49
 workflow-type: tm+mt
-source-wordcount: 1255
+source-wordcount: '1326'
 ht-degree: 1%
-
 ---
-
 # CNAME和[!DNL Target]
 
 有关使用[!DNL Adobe]客户关怀在[!DNL Adobe Target]中实施CNAME （规范名称）支持的说明。 使用CNAME处理广告阻止问题或与ITP相关的（智能防跟踪）Cookie策略。 使用CNAME时，会调用客户拥有的域，而不是[!DNL Adobe]拥有的域。
@@ -32,18 +41,18 @@ ht-degree: 1%
 ## 在[!DNL Target]中请求CNAME支持
 
 1. 确定您的SSL证书所需的主机名列表（请参阅下面的常见问题解答）。
-1. [填写此表单](/help/dev/implement/assets/FPC_Request_Form.xlsx)并在您[打开请求CNAME支持的 [!DNL Adobe] 客户关怀票证](https://experienceleague.adobe.com/zh-hans/docs/target/using/cmp-resources-and-contact-information#reference_ACA3391A00EF467B87930A450050077C)时包含它：
+1. [填写此表单](/help/dev/implement/assets/FPC_Request_Form.xlsx)并在您[打开请求CNAME支持的 [!DNL Adobe] 客户关怀票证](https://experienceleague.adobe.com/en/docs/target/using/cmp-resources-and-contact-information#reference_ACA3391A00EF467B87930A450050077C)时包含它：
 
    * [!DNL Adobe Target]客户端代码：
    * SSL证书主机名（示例： `target.example.com target.example.org`）：
    * 强烈建议SSL证书购买者（[!DNL Adobe]，请参阅常见问题解答）： Adobe/customer
    * 如果客户正在购买证书(也称为“自带证书”(BYOC))，请填写以下其他详细信息：
 
-      * 证书组织（示例：Example Company Inc）：
-      * 证书组织单位（可选，例如：营销）：
-      * 证书国家/地区（例如：美国）：
-      * 证书所在州/地区（示例：加利福尼亚）：
-      * 证书城市（示例：圣何塞）：
+     * 证书组织（示例：Example Company Inc）：
+     * 证书组织单位（可选，例如：营销）：
+     * 证书国家/地区（例如：美国）：
+     * 证书所在州/地区（示例：加利福尼亚）：
+     * 证书城市（示例：圣何塞）：
 
 1. 对于每个主机名请求，Adobe将创建实现并返回一个供您创建的CNAME记录名称，该名称将包含一个后缀为`tt.omtrdc.net`的随机字符串
 
