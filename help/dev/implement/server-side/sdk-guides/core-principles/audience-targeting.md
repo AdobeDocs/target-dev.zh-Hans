@@ -1,36 +1,42 @@
 ---
 title: 受众定位
-description: 可以使用受众来定位您的实验和个性化活动。 [!DNL Adobe Target] 支持各种现成的强大受众定位功能。
+description: 受众可用于定向您的试验性和个性化活动。 [!DNL Adobe Target]支持多种现成的强大受众定位功能。
 exl-id: df1bd856-e848-452c-90a0-abf29e7a2313
 feature: Implement Server-side
-TQID: https://experienceleague.adobe.com/BmKrCmWIkEkNHiipZ-DqDlhzOT7bVmKHl9de5uXhJQU
+TQID: 'https://experienceleague.adobe.com/BmKrCmWIkEkNHiipZ-DqDlhzOT7bVmKHl9de5uXhJQU'
 product_v2:
   - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
 feature_v2:
   - id: adee20bd-51f4-461d-b9db-d215f8756eeb
+    internal-label: Audiences
+  - id: a8a69496-b9ae-554a-b68e-e92a87809fc5
+    internal-label: Implement Server-side
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+    internal-label: Metadata
   - id: bcc5edb5-84c3-4940-9f84-ed88b6c16274
+    internal-label: Experimentation
   - id: e0eb8757-182f-49f3-94a4-1587d16f5094
-source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
+    internal-label: Personalization
+source-git-commit: 5d119ccf18b09b3ba864a69642458597f65c754f
 workflow-type: tm+mt
-source-wordcount: 1069
+source-wordcount: '1070'
 ht-degree: 15%
-
 ---
-
 # 受众定位
 
 ## 概述
 
-受众可用于定向您的试验性和个性化活动。 [!DNL Adobe Target]支持多种现成的强大受众定位功能。 以下属性可用于[受众定位](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/create-audience.html?lang=zh-Hans)：
+受众可用于定向您的试验性和个性化活动。 [!DNL Adobe Target]支持多种现成的强大受众定位功能。 以下属性可用于[受众定位](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/create-audience.html)：
 
 ### [!DNL Target]库
 
-有关详细信息，请参阅[[!DNL Target] 库](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/target-library.html?lang=zh-Hans)。
-&#x200B;AEM
+有关详细信息，请参阅[[!DNL Target] 库](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/target-library.html)。
+&#x200B;
 * 反向链接来自Bing
 * Chrome Browser
 * Firefox浏览器
@@ -47,8 +53,8 @@ ht-degree: 15%
 
 ### 地域
 
-有关详细信息，请参阅[地域](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/geo.html?lang=zh-Hans)。
-&#x200B;
+有关更多信息，请参阅[地域](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/geo.html)。
+&#x200B;&#x200B;
 * 国家/地区
 * 省/自治区/直辖市
 * 城市
@@ -60,7 +66,7 @@ ht-degree: 15%
 
 ### 网络
 
-有关详细信息，请参阅[网络](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/network.html?lang=zh-Hans)。
+有关详细信息，请参阅[网络](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/network.html)。
 
 * ISP
 * 域名
@@ -68,7 +74,7 @@ ht-degree: 15%
 
 ### 移动设备
 
-有关更多信息，请参阅[移动设备](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/mobile.html?lang=zh-Hans)。
+有关更多信息，请参阅[移动设备](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/mobile.html)。
 
 * 设备营销名称
 * 设备型号
@@ -82,13 +88,13 @@ ht-degree: 15%
 
 ### 自定义
 
-有关详细信息，请参阅[自定义参数](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/custom-parameters.html?lang=zh-Hans)。
+有关详细信息，请参阅[自定义参数](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/custom-parameters.html)。
 
 * 任意键/值对
 
 ### 操作系统
 
-有关详细信息，请参阅[操作系统](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/operating-system.html?lang=zh-Hans)。
+有关详细信息，请参阅[操作系统](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/operating-system.html)。
 
 * Linux
 * Macintosh
@@ -96,7 +102,7 @@ ht-degree: 15%
 
 ### 网站页面
 
-有关详细信息，请参阅[网站页面](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/site-pages.html?lang=zh-Hans)。
+有关详细信息，请参阅[网站页面](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/site-pages.html)。
 
 * 当前页面
 * 上一页面
@@ -105,7 +111,7 @@ ht-degree: 15%
 
 ### 浏览器
 
-有关详细信息，请参阅[浏览器](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/browser.html?lang=zh-Hans)。
+有关详细信息，请参阅[浏览器](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/browser.html)。
 
 * 类型
 * 语言
@@ -113,13 +119,13 @@ ht-degree: 15%
 
 ### 访客轮廓
 
-有关详细信息，请参阅[访客资料](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/visitor-profile.html?lang=zh-Hans)。
+有关详细信息，请参阅[访客资料](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/visitor-profile.html)。
 
 * 任何键/值对，将保留
 
 ### 流量源
 
-有关详细信息，请参阅[流量源](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/traffic-sources.html?lang=zh-Hans)。
+有关详细信息，请参阅[流量源](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/traffic-sources.html)。
 
 * 来自 Baidu
 * 来自 Bing
@@ -131,7 +137,7 @@ ht-degree: 15%
 
 ### 时间范围
 
-有关更多信息，请参阅[期限](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/time-frame.html?lang=zh-Hans)。
+有关更多信息，请参阅[期限](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/time-frame.html)。
 
 * 开始日期/结束日期
 
@@ -208,17 +214,17 @@ TargetDeliveryRequest request = TargetDeliveryRequest.builder()
 
 | 受众规则 | 设备上决策 |
 | --- | --- |
-| [地域](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/geo.html?lang=zh-Hans) | 是 |
-| [网络](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/network.html?lang=zh-Hans) | 否 |
-| [移动设备](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/mobile.html?lang=zh-Hans) | 否 |
-| [自定义参数](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/custom-parameters.html?lang=zh-Hans) | 是 |
-| [操作系统](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/operating-system.html?lang=zh-Hans) | 是 |
-| [网页](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/site-pages.html?lang=zh-Hans) | 是 |
-| [浏览器](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/browser.html?lang=zh-Hans) | 是 |
-| [访客轮廓](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/visitor-profile.html?lang=zh-Hans) | 否 |
-| [流量源](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/traffic-sources.html?lang=zh-Hans) | 否 |
-| [时间范围](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/time-frame.html?lang=zh-Hans) | 是 |
-| [Experience Cloud受众](https://experienceleague.adobe.com/docs/target/using/integrate/mmp.html?lang=zh-Hans)（来自Adobe Audience Manager、Adobe Analytics和Adobe Experience Manager的受众） | 否 |
+| [地域](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/geo.html) | 是 |
+| [网络](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/network.html) | 否 |
+| [移动设备](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/mobile.html) | 否 |
+| [自定义参数](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/custom-parameters.html) | 是 |
+| [操作系统](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/operating-system.html) | 是 |
+| [网页](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/site-pages.html) | 是 |
+| [浏览器](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/browser.html) | 是 |
+| [访客轮廓](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/visitor-profile.html) | 否 |
+| [流量源](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/traffic-sources.html) | 否 |
+| [时间范围](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/time-frame.html) | 是 |
+| [Experience Cloud受众](https://experienceleague.adobe.com/docs/target/using/integrate/mmp.html)（来自Adobe Audience Manager、Adobe Analytics和Adobe Experience Manager的受众） | 否 |
 
 ### 针对设备上决策的地理定位
 
@@ -335,14 +341,14 @@ public class TargetRequestUtils {
 
 | 受众规则 | 服务器端决策 |
 | --- | --- |
-| [地域](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/geo.html?lang=zh-Hans) | 是 |
-| [网络](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/network.html?lang=zh-Hans) | 是 |
-| [移动设备](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/mobile.html?lang=zh-Hans) | 是 |
-| [自定义参数](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/custom-parameters.html?lang=zh-Hans) | 是 |
-| [操作系统](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/operating-system.html?lang=zh-Hans) | 是 |
-| [网页](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/site-pages.html?lang=zh-Hans) | 是 |
-| [浏览器](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/browser.html?lang=zh-Hans) | 是 |
-| [访客轮廓](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/visitor-profile.html?lang=zh-Hans) | 是 |
-| [流量源](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/traffic-sources.html?lang=zh-Hans) | 是 |
-| [时间范围](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/time-frame.html?lang=zh-Hans) | 是 |
-| [Experience Cloud受众](https://experienceleague.adobe.com/docs/target/using/integrate/mmp.html?lang=zh-Hans)（来自Adobe Audience Manager、Adobe Analytics和Adobe Experience Manager的受众） | 是 |
+| [地域](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/geo.html) | 是 |
+| [网络](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/network.html) | 是 |
+| [移动设备](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/mobile.html) | 是 |
+| [自定义参数](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/custom-parameters.html) | 是 |
+| [操作系统](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/operating-system.html) | 是 |
+| [网页](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/site-pages.html) | 是 |
+| [浏览器](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/browser.html) | 是 |
+| [访客轮廓](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/visitor-profile.html) | 是 |
+| [流量源](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/traffic-sources.html) | 是 |
+| [时间范围](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/time-frame.html) | 是 |
+| [Experience Cloud受众](https://experienceleague.adobe.com/docs/target/using/integrate/mmp.html)（来自Adobe Audience Manager、Adobe Analytics和Adobe Experience Manager的受众） | 是 |

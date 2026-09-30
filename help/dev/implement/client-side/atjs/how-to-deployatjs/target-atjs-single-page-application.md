@@ -1,34 +1,46 @@
 ---
 keywords: 单页应用程序实施，实施单页应用程序， spa， at.js 2.x， at.js，单页应用程序，单页应用程序， spa， SPA，单页应用程序实施
-description: 了解如何使用 [!DNL Adobe Target] at.js 2.x为单页应用程序(SPA)实施 [!DNL Target] 。
-title: 我可以为单页应用程序(SPA)实施 [!DNL Target] 吗？
+description: 了解如何使用[!DNL Adobe Target] at.js 2.x为单页应用程序(SPA)实施[!DNL Target]。
+title: 我可以为单页应用程序(SPA)实施[!DNL Target]吗？
 feature: Implement Server-side
 exl-id: d59d7683-0a63-47a9-bbb5-0fe4a5bb7766
-TQID: https://experienceleague.adobe.com/zFYKCYv740tA3UXvJfJx-eiNst-r0xYlj3RP-LbCcOo
+TQID: 'https://experienceleague.adobe.com/zFYKCYv740tA3UXvJfJx-eiNst-r0xYlj3RP-LbCcOo'
 product_v2:
   - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
 feature_v2:
   - id: adee20bd-51f4-461d-b9db-d215f8756eeb
+    internal-label: Audiences
   - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+    internal-label: Implementation
+  - id: a8a69496-b9ae-554a-b68e-e92a87809fc5
+    internal-label: Implement Server-side
 subfeature_v2:
   - id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+    internal-label: at.js
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+    internal-label: Reporting
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+    internal-label: Implementation
   - id: bcc5edb5-84c3-4940-9f84-ed88b6c16274
+    internal-label: Experimentation
   - id: c2be0313-b3ae-45e0-b454-d20bf54b23f2
+    internal-label: Measurement
   - id: d3cdead0-685a-4489-9250-4bb709942f66
+    internal-label: Data collection
   - id: e0eb8757-182f-49f3-94a4-1587d16f5094
+    internal-label: Personalization
   - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
-source-git-commit: ca4254966a337a0215d66bd28506128b9751d0e0
+    internal-label: Administration
+source-git-commit: 5d119ccf18b09b3ba864a69642458597f65c754f
 workflow-type: tm+mt
-source-wordcount: 2851
+source-wordcount: '2854'
 ht-degree: 53%
-
 ---
-
 # 单页应用程序实施
 
 传统网站使用的是“页面到页面”导航模型，也称为多页应用程序，其中网站设计与 URL 紧密耦合，并且从一个网页转换到另一个网页时，需要页面加载。 而现代 Web 应用程序（例如单页应用程序 (SPA)）采用的模型可以提高使用浏览器 UI 渲染的速度，这种渲染通常与页面重新加载无关。 这些体验通常通过客户交互触发，例如滚动、点击和光标移动。 随着现代 Web 范例的不断发展，传统的通用事件（例如页面加载）与部署个性化和实验不再具有相关性。
@@ -238,7 +250,7 @@ SPA [!DNL Adobe Target] VEC利用了称为“视图”的新概念：视觉元�
 
 ## 单页应用程序可视化体验编辑器
 
-完成安装 at.js 2.x 并将 `triggerView()` 添加到站点后，便可使用 VEC 来运行 A/B 和 XT 活动。 有关更多信息，请参阅[单页应用程序 (SPA) 可视化体验编辑器](https://experienceleague.adobe.com/docs/target/using/experiences/spa-visual-experience-composer.html?lang=zh-Hans)。
+完成安装 at.js 2.x 并将 `triggerView()` 添加到站点后，便可使用 VEC 来运行 A/B 和 XT 活动。 有关更多信息，请参阅[单页应用程序 (SPA) 可视化体验编辑器](https://experienceleague.adobe.com/docs/target/using/experiences/spa-visual-experience-composer.html)。
 
 >[!NOTE]
 >
@@ -246,7 +258,7 @@ SPA [!DNL Adobe Target] VEC利用了称为“视图”的新概念：视觉元�
 
 ## 使用TriggerView确保A4T与at.js 2.x和SPA一起正常工作
 
-要确保[Analytics for Target](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t.html?lang=zh-Hans) (A4T)与at.js 2.x一起正常工作，请务必在[!DNL Target]请求和[!DNL Analytics]请求中发送相同的SDID。
+要确保[Analytics for Target](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t.html) (A4T)与at.js 2.x一起正常工作，请务必在[!DNL Target]请求和[!DNL Analytics]请求中发送相同的SDID。
 
 与 SPA 相关的最佳实践：
 
@@ -329,19 +341,19 @@ at.js 2.x API允许您通过多种方式自定义您的[!DNL Target]实施，但
 
 >[!VIDEO](https://video.tv.adobe.com/v/26250/?quality=12)
 
-有关更多信息，请参阅[了解 at.js 2.x 的工作方式](https://experienceleague.adobe.com/docs/target-learn/tutorials/implementation/understanding-how-atjs-20-works.html?lang=zh-Hans)。
+有关更多信息，请参阅[了解 at.js 2.x 的工作方式](https://experienceleague.adobe.com/docs/target-learn/tutorials/implementation/understanding-how-atjs-20-works.html)。
 
 ### 在 SPA 中实施 at.js 2.x
 
->[!VIDEO](https://video.tv.adobe.com/v/34754/?captions=chi_hans&quality=12)
+>[!VIDEO](https://video.tv.adobe.com/v/26248/?quality=12)
 
-有关更多信息，请参阅[在单页应用程序(SPA)中实施Adobe Target的at.js 2.x](https://experienceleague.adobe.com/docs/target-learn/tutorials/experiences/use-the-visual-experience-composer-for-single-page-applications.html?lang=zh-Hans)。
+有关更多信息，请参阅[在单页应用程序(SPA)中实施Adobe Target的at.js 2.x](https://experienceleague.adobe.com/docs/target-learn/tutorials/experiences/use-the-visual-experience-composer-for-single-page-applications.html)。
 
 ### 在[!DNL Adobe Target]中使用SPA VEC
 
->[!VIDEO](https://video.tv.adobe.com/v/34758/?captions=chi_hans&quality=12)
+>[!VIDEO](https://video.tv.adobe.com/v/26249/?quality=12)
 
-有关详细信息，请参阅[在Adobe Target中使用单页应用程序的可视化体验编辑器(SPA VEC)](https://experienceleague.adobe.com/docs/target-learn/tutorials/experiences/use-the-visual-experience-composer-for-single-page-applications.html?lang=zh-Hans)。
+有关详细信息，请参阅[在Adobe Target中使用单页应用程序的可视化体验编辑器(SPA VEC)](https://experienceleague.adobe.com/docs/target-learn/tutorials/experiences/use-the-visual-experience-composer-for-single-page-applications.html)。
 
 
 

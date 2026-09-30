@@ -1,33 +1,46 @@
 ---
 title: 将at.js与Experience Platform Web SDK进行比较
-description: 了解at.js功能与 [!DNL Experience Platform Web SDK]的比较。
+description: 了解at.js功能与[!DNL Experience Platform Web SDK]的比较。
 keywords: target；adobe target；activity.id；experience.id；renderDecisions；decisionScopes；预隐藏代码片段；vec；基于表单的体验编辑器；xdm；受众；决策；范围；架构；系统图；图
 feature: AEP Web SDK
 exl-id: 31c9722b-5d92-4653-aa20-4183d166c097
-TQID: https://experienceleague.adobe.com/Ly2ytp87gfQ5mCES-43K5tU4-4fhTjdcdk-OxRRL-II
+TQID: 'https://experienceleague.adobe.com/Ly2ytp87gfQ5mCES-43K5tU4-4fhTjdcdk-OxRRL-II'
 product_v2:
   - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
 feature_v2:
   - id: adee20bd-51f4-461d-b9db-d215f8756eeb
+    internal-label: Audiences
   - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+    internal-label: Implementation
+  - id: b050e0cd-2ddd-42cd-a71b-5d9e1fdf75e0
+    internal-label: APIs and SDKs
 subfeature_v2:
   - id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+    internal-label: at.js
+  - id: a1f3c920-a3a8-4506-8067-53189547b5e6
+    internal-label: AEP Web SDK
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+    internal-label: Reporting
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+    internal-label: Implementation
   - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+    internal-label: Customer experience
   - id: c2be0313-b3ae-45e0-b454-d20bf54b23f2
+    internal-label: Measurement
   - id: e0eb8757-182f-49f3-94a4-1587d16f5094
+    internal-label: Personalization
   - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
-source-git-commit: b6b447ccb88925a8efb6ff6a80ae475c8780dbc8
+    internal-label: Administration
+source-git-commit: 5d119ccf18b09b3ba864a69642458597f65c754f
 workflow-type: tm+mt
-source-wordcount: 2354
+source-wordcount: '2354'
 ht-degree: 5%
-
 ---
-
 # 将at.js库与[!DNL Adobe Experience Platform Web SDK]进行比较
 
 ## 概述
@@ -48,7 +61,7 @@ ht-degree: 5%
 
 预建版本在CDN上可用。 您可以在页面上直接在CDN上引用库，也可以将其下载并托管在您自己的基础架构上。 它以缩小和未缩小的格式提供。 未缩小的版本有助于进行调试。
 
-有关详细信息，请参阅[使用JavaScript库安装Web SDK](https://experienceleague.adobe.com/zh-hans/docs/experience-platform/web-sdk/install/library)。
+有关详细信息，请参阅[使用JavaScript库安装Web SDK](https://experienceleague.adobe.com/en/docs/experience-platform/web-sdk/install/library)。
 
 ## 配置库
 
@@ -94,7 +107,7 @@ window.adobe.target.init(window, document, {
 
 ### 配置平台Web SDK
 
-使用[`configure`](https://experienceleague.adobe.com/zh-hans/docs/experience-platform/web-sdk/commands/configure/overview)命令完成SDK的配置。 `configure`命令是首先调用的&#x200B;*始终*。
+使用[`configure`](https://experienceleague.adobe.com/en/docs/experience-platform/web-sdk/commands/configure/overview)命令完成SDK的配置。 `configure`命令是首先调用的&#x200B;*始终*。
 
 ## 如何请求和自动渲染页面加载[!DNL Target]选件
 
@@ -104,7 +117,7 @@ window.adobe.target.init(window, document, {
 
 ### 使用[!DNL PLatform Web SDK]
 
-SDK可以自动检索和渲染[!DNL Target] [可视化体验编辑器](https://experienceleague.adobe.com/zh-hans/docs/target/using/experiences/vec/visual-experience-composer)中创建的内容。
+SDK可以自动检索和渲染[!DNL Target] [可视化体验编辑器](https://experienceleague.adobe.com/en/docs/target/using/experiences/vec/visual-experience-composer)中创建的内容。
 
 要请求并自动呈现[!DNL Target]优惠，请使用`sendEvent`命令并将`renderDecisions`选项设置为`true.`。这样做会强制SDK自动呈现任何有资格自动呈现的个性化内容。
 
@@ -204,7 +217,7 @@ alloy("sendEvent", {
 }
 ```
 
-[了解详情](https://experienceleague.adobe.com/zh-hans/docs/experience-platform/web-sdk/personalization/rendering-personalization-content)
+[了解详情](https://experienceleague.adobe.com/en/docs/experience-platform/web-sdk/personalization/rendering-personalization-content)
 
 ## 如何请求和&#x200B;*NOT*&#x200B;自动渲染页面加载目标选件
 
@@ -283,7 +296,7 @@ alloy("sendEvent", {
   });
 ```
 
-[了解详情](https://experienceleague.adobe.com/zh-hans/docs/experience-platform/web-sdk/personalization/rendering-personalization-content)
+[了解详情](https://experienceleague.adobe.com/en/docs/experience-platform/web-sdk/personalization/rendering-personalization-content)
 
 ## 如何请求特定的基于表单的Target mbox
 
@@ -440,7 +453,7 @@ alloy("sendEvent", {
 });
 ```
 
-[了解详情](https://experienceleague.adobe.com/zh-hans/docs/experience-platform/web-sdk/personalization/rendering-personalization-content)
+[了解详情](https://experienceleague.adobe.com/en/docs/experience-platform/web-sdk/personalization/rendering-personalization-content)
 
 ## 如何应用[!DNL Target]活动
 
@@ -471,7 +484,7 @@ alloy("applyPropositions", {
 });
 ```
 
-从[专用文档](https://experienceleague.adobe.com/zh-hans/docs/experience-platform/web-sdk/personalization/rendering-personalization-content)了解有关`applyPropositions`命令的更多信息。
+从[专用文档](https://experienceleague.adobe.com/en/docs/experience-platform/web-sdk/personalization/rendering-personalization-content)了解有关`applyPropositions`命令的更多信息。
 
 ## 如何跟踪事件
 
@@ -625,7 +638,7 @@ alloy("sendEvent", {
 });
 ```
 
-[了解详情](https://experienceleague.adobe.com/zh-hans/docs/experience-platform/web-sdk/personalization/rendering-personalization-content#manual)
+[了解详情](https://experienceleague.adobe.com/en/docs/experience-platform/web-sdk/personalization/rendering-personalization-content#manual)
 
 **示例3 — 跟踪执行操作后触发的事件**
 
@@ -707,7 +720,7 @@ alloy("sendEvent", {
 
 ## 如何利用[!UICONTROL 响应令牌]
 
-从[!DNL Target]返回的Personalization内容包含[响应令牌](https://experienceleague.adobe.com/zh-hans/docs/target/using/administer/response-tokens)。 响应令牌包含有关活动、选件、体验、用户配置文件、地理信息等的详细信息。 这些详细信息可与第三方工具共享或用于调试。 可在[!DNL Target]用户界面中配置响应令牌。
+从[!DNL Target]返回的Personalization内容包含[响应令牌](https://experienceleague.adobe.com/en/docs/target/using/administer/response-tokens)。 响应令牌包含有关活动、选件、体验、用户配置文件、地理信息等的详细信息。 这些详细信息可与第三方工具共享或用于调试。 可在[!DNL Target]用户界面中配置响应令牌。
 
 ### 使用at.js
 
@@ -721,7 +734,7 @@ document.addEventListener(adobe.target.event.REQUEST_SUCCEEDED, function(e) {
 }); 
 ```
 
-[了解详情](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html?lang=zh-Hans)
+[了解详情](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html)
 
 ### 使用[!DNL Platform Web SDK]
 
@@ -729,7 +742,7 @@ document.addEventListener(adobe.target.event.REQUEST_SUCCEEDED, function(e) {
 >
 >确保您使用的是[!DNL Experience Platform Web SDK]版本2.6.0或更高版本。
 
-响应令牌作为`propositions`的一部分返回，在`sendEvent`命令的结果中公开。 每个建议包含一个由`items,`组成的数组，并且每个项目都有一个使用响应令牌填充的`meta`对象（如果在[!DNL Target]管理UI中启用了响应令牌）。 [了解详情](https://experienceleague.adobe.com/zh-hans/docs/target/using/administer/response-tokens)
+响应令牌作为`propositions`的一部分返回，在`sendEvent`命令的结果中公开。 每个建议包含一个由`items,`组成的数组，并且每个项目都有一个使用响应令牌填充的`meta`对象（如果在[!DNL Target]管理UI中启用了响应令牌）。 [了解详情](https://experienceleague.adobe.com/en/docs/target/using/administer/response-tokens)
 
 **示例**
 
@@ -836,7 +849,7 @@ alloy("configure", {
 }
 ```
 
-然后，可以通过[!DNL &#x200B; Data Insertion API]将该有效负载转发到[!DNL Analytics]。
+然后，可以通过[!DNL  Data Insertion API]将该有效负载转发到[!DNL Analytics]。
 
 示例2：在每个`getOffers`函数中对其进行配置：
 
@@ -900,7 +913,7 @@ adobe.target.getOffers({
 
 ![显示Analytics服务器端日志记录工作流的图表](/help/dev/implement/client-side/aep-web-sdk/assets/a4t-server-side-atjs.png)
 
-[了解更多](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4timplementation.html?lang=zh-Hans)
+[了解更多](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4timplementation.html)
 
 ### 使用[!DNL Platform Web SDK]
 
@@ -1282,5 +1295,5 @@ at.js库会显示以下调试功能：
 * 使用[Assurance](https://experienceleague.adobe.com/zh-hans/docs/experience-platform/assurance/home)
 * [已启用Web SDK debug](https://experienceleague.adobe.com/zh-hans/docs/experience-platform/assurance/home)
 * 使用[Web SDK监视挂接](https://github.com/adobe/alloy/wiki/Monitoring-Hooks)
-* 使用[Adobe Experience Platform Debugger](https://experienceleague.adobe.com/zh-hans/docs/experience-platform/debugger/home)
+* 使用[Adobe Experience Platform Debugger](https://experienceleague.adobe.com/en/docs/experience-platform/debugger/home)
 * 目标跟踪

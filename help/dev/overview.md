@@ -1,46 +1,66 @@
 ---
 keywords: target开发人员指南；概述；主页
 title: Adobe Target开发人员指南
-description: 如何实施和管理 [!DNL Adobe Target] 以及如何使用其API和SDK？
+description: 如何实施和管理 [!DNL Adobe Target] 并使用其 API 和 SDK？
 contributors: https://github.com/icaraps
 feature: APIs/SDKs
 exl-id: 655cff9b-fc04-45cf-9068-5c6c32b70d79
-TQID: https://experienceleague.adobe.com/lTn4veG9PKL-ZXohH3qv1UH7lpyLfn80nwuxgehXSy0
+TQID: 'https://experienceleague.adobe.com/lTn4veG9PKL-ZXohH3qv1UH7lpyLfn80nwuxgehXSy0'
 product_v2:
   - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
 feature_v2:
   - id: adee20bd-51f4-461d-b9db-d215f8756eeb
+    internal-label: Audiences
   - id: b050e0cd-2ddd-42cd-a71b-5d9e1fdf75e0
+    internal-label: APIs and SDKs
   - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+    internal-label: Implementation
   - id: dfc8a233-f2b5-4811-bf63-b4262aebc5a5
+    internal-label: Administration and configuration
+  - id: a19e8738-9679-599a-b83b-5f2f15f8e4d6
+    internal-label: APIs/SDKs
 subfeature_v2:
   - id: a94ced60-8199-4549-b453-ede2acb4101e
+    internal-label: Hybrid implementation
   - id: c011fe9c-b94b-4a88-93d8-f2acece55112
+    internal-label: Administration
   - id: c5abb976-5170-45d6-bcac-66d15d10a4d4
+    internal-label: Release notes
   - id: cd7b6938-5837-4ee0-9790-5840997133d9
+    internal-label: User management
   - id: e22d67ea-317b-44f8-abd1-52e07f636ca8
+    internal-label: Reporting
   - id: fc9c2184-9102-403f-bd6c-0055021e4bea
+    internal-label: Overview
   - id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+    internal-label: at.js
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+    internal-label: Reporting
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+    internal-label: Implementation
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
+    internal-label: Security
   - id: d3cdead0-685a-4489-9250-4bb709942f66
+    internal-label: Data collection
   - id: e0eb8757-182f-49f3-94a4-1587d16f5094
+    internal-label: Personalization
   - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
+    internal-label: Machine learning
   - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
-source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
+    internal-label: Administration
+source-git-commit: 5d119ccf18b09b3ba864a69642458597f65c754f
 workflow-type: tm+mt
-source-wordcount: 510
-ht-degree: 11%
-
+source-wordcount: '511'
+ht-degree: 13%
 ---
-
 # [!DNL Adobe Target] 开发人员指南
 
-**（[查看 [!DNL Target] 文档更新](https://experienceleague.adobe.com/docs/target/using/release-notes/doc-change.html?lang=zh-Hans){target=_blank}）**
+**（[查看 [!DNL Target] 文档更新](https://experienceleague.adobe.com/docs/target/using/release-notes/doc-change.html){target=_blank}）**
 
 此&#x200B;*[!DNL Adobe Target]开发人员指南*&#x200B;为[!DNL Target]开发人员提供实施和管理[!DNL Target]所需的资源和指南，包括API和SDK文档。
 
@@ -52,7 +72,7 @@ ht-degree: 11%
 >
 >* [*[!DNL Adobe Target]教程&#x200B;*](https://experienceleague.adobe.com/docs/target-learn/tutorials/overview.html?lang=zh-Hans){target=_blank}
 >
->有关发行信息，请参阅&#x200B;*[!DNL Adobe Target]商业从业者指南*&#x200B;中的[Target发行说明（当前版本）](https://experienceleague.adobe.com/docs/target/using/release-notes/release-notes.html?lang=zh-Hans){target=_blank}。
+>有关发行信息，请参阅&#x200B;*[!DNL Adobe Target]商业从业者指南*&#x200B;中的[Target发行说明（当前版本）](https://experienceleague.adobe.com/docs/target/using/release-notes/release-notes.html){target=_blank}。
 
 ## 实施入门
 
@@ -112,7 +132,7 @@ ht-degree: 11%
 
 [**Admin Console API**](https://developer.adobe.com/umapi/)：通过Adobe User Management和User Sync API管理用户和产品权限。
 
-[**[!DNL Adobe Experience Platform Edge Network Server API]**](https://experienceleague.adobe.com/docs/experience-platform/edge-network-server-api/overview.html?lang=zh-Hans)：将[!DNL Adobe Experience Platform Edge Network Server] API用于各种数据收集、个性化、广告和营销用例。
+[**[!DNL Adobe Experience Platform Edge Network Server API]**](https://experienceleague.adobe.com/docs/experience-platform/edge-network-server-api/overview.html)：将[!DNL Adobe Experience Platform Edge Network Server] API用于各种数据收集、个性化、广告和营销用例。
 
 ## 资源
 
@@ -124,6 +144,6 @@ ht-degree: 11%
 * [Target实施](./before-implement/prepare-to-implement-target.md)
 * [Target管理](./before-administer/target-api-overview.md)
 * [Adobe Target开发文档GitHub存储库](https://github.com/AdobeDocs/target-developers)
-* [Adobe Target发行说明](https://experienceleague.adobe.com/docs/target/using/release-notes/release-notes.html?lang=zh-Hans)
+* [Adobe Target发行说明](https://experienceleague.adobe.com/docs/target/using/release-notes/release-notes.html)
 * [Adobe Target商业用户指南](https://experienceleague.adobe.com/docs/target/using/target-home.html?lang=zh-Hans)
 

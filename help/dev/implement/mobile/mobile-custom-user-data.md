@@ -1,16 +1,26 @@
 ---
 keywords: 移动设备应用程序, 移动设备应用程序发送数据, 定位移动设备应用程序, 移动设备自定义用户数据, 移动设备应用程序自定义数据
-description: 了解如何以名称 — 值对的形式向 [!DNL Adobe Target] 发送有关位置或用户的其他信息，以帮助您构建自定义受众。
+description: 了解如何以名称 — 值对的形式向[!DNL Adobe Target]发送有关位置或用户的其他信息，以帮助您构建自定义受众。
 title: 如何在iOS应用程序中发送自定义用户数据？
 feature: Implement Mobile
 exl-id: 9cf8e8fd-1898-43b1-b339-d7a21cb35d57
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+product_v2:
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
+feature_v2:
+  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+    internal-label: Implementation
+subfeature_v2:
+  - id: d051910f-2bda-47ea-a969-6ade9fcd71f1
+    internal-label: Implement mobile
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 5d119ccf18b09b3ba864a69642458597f65c754f
 workflow-type: tm+mt
-source-wordcount: '417'
+source-wordcount: '418'
 ht-degree: 55%
-
 ---
-
 # iOS - 发送自定义用户数据
 
 您可以将有关位置或用户的其他信息以名称 — 值对的形式发送到[!DNL Target]。

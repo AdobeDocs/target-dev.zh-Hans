@@ -1,32 +1,42 @@
 ---
 keywords: 服务器端，服务器端， api， sdk， node.js， nodejs， node js， recommendations api， api， api，服务器端1
-description: 了解 [!DNL Adobe Target] 服务器端交付API、SDK和 [!DNL Target Recommendations] API。
-title: 可在何处了解 [!DNL Target] 服务器端交付API和SDK？
+description: 了解[!DNL Adobe Target]服务器端交付API、SDK和[!DNL Target Recommendations] API。
+title: 可在何处了解[!DNL Target]服务器端交付API和SDK？
 feature: Implement Server-side
 exl-id: 3eb0a789-cf1a-4d02-acf7-3c895bcb662f
-TQID: https://experienceleague.adobe.com/x5WKb9Eenz2bw-idOnxlpWdtiivTx05n38sNXEt3DNc
+TQID: 'https://experienceleague.adobe.com/x5WKb9Eenz2bw-idOnxlpWdtiivTx05n38sNXEt3DNc'
 product_v2:
   - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
 feature_v2:
   - id: b050e0cd-2ddd-42cd-a71b-5d9e1fdf75e0
+    internal-label: APIs and SDKs
   - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+    internal-label: Implementation
+  - id: a8a69496-b9ae-554a-b68e-e92a87809fc5
+    internal-label: Implement Server-side
 subfeature_v2:
   - id: a6cc21b9-1a36-4fa6-9c61-4acd04d9c88c
+    internal-label: Delivery API
   - id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+    internal-label: at.js
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+    internal-label: Implementation
   - id: c2be0313-b3ae-45e0-b454-d20bf54b23f2
+    internal-label: Measurement
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
+    internal-label: Security
   - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
-source-git-commit: 7a393cc6a3f30a276a256cdabb5b42fe08f3c505
+    internal-label: Machine learning
+source-git-commit: 5d119ccf18b09b3ba864a69642458597f65c754f
 workflow-type: tm+mt
-source-wordcount: 820
+source-wordcount: '823'
 ht-degree: 9%
-
 ---
-
 # 服务器端：实现[!DNL Target]
 
 有关[!DNL Adobe Target]服务器端交付API、SDK和[!DNL Target Recommendations] API的信息。
@@ -35,7 +45,7 @@ ht-degree: 9%
 >
 >如果您的实施在客户端使用at.js和[!DNL AppMeasurement]，则您应该使用下面讨论的[!UICONTROL Target投放API]和服务器端SDK。
 >
->如果您的实施使用[!UICONTROL Adobe Experience Platform Web SDK]，则您应该使用[[!UICONTROL Adobe Experience Platform] [!UICONTROL Edge Network服务器API]](https://experienceleague.adobe.com/zh-hans/docs/experience-platform/edge-network-server-api/overview){target=_blank}。
+>如果您的实施使用[!UICONTROL Adobe Experience Platform Web SDK]，则您应该使用[[!UICONTROL Adobe Experience Platform] [!UICONTROL Edge Network服务器API]](https://experienceleague.adobe.com/en/docs/experience-platform/edge-network-server-api/overview){target=_blank}。
 
 以下过程会在 [!DNL Target] 的服务器端实施中发生：
 
@@ -104,7 +114,7 @@ ht-degree: 9%
 
 当[!DNL Target]将请求分类为机器人流量时，由于配置文件查找、区段评估和诸如[!UICONTROL 推荐]和[!UICONTROL 自动定位]等活动的个性化内容被禁止，因此个性化可能会失败或看起来间歇性。
 
-在[[!DNL Adobe Experience Platform Web SDK] 概述](https://experienceleague.adobe.com/zh-hans/docs/target-dev/developer/client-side/aep/aep-web-sdk-overview){target=_blank}中了解有关使用SDK实施的更多信息。
+在[[!DNL Adobe Experience Platform Web SDK] 概述](https://experienceleague.adobe.com/en/docs/target-dev/developer/client-side/aep/aep-web-sdk-overview){target=_blank}中了解有关使用SDK实施的更多信息。
 
 **Edge API请求示例（标头必须包含`User-Agent`）：**
 

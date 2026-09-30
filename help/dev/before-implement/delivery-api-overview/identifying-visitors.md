@@ -1,24 +1,28 @@
 ---
 title: 识别访客的Adobe Target交付API
-description: 如何识别 [!DNL Adobe Target]中的用户？
+description: 如何识别[!DNL Adobe Target]中的用户？
 keywords: 投放api
 exl-id: 5b8c28aa-caad-44a9-880a-3c5f844e47b2
 feature: APIs/SDKs
-TQID: https://experienceleague.adobe.com/ciTxaPn8odyuyHzrnqhPWzdmpcU2bknOATGCt-ZtAZw
+TQID: 'https://experienceleague.adobe.com/ciTxaPn8odyuyHzrnqhPWzdmpcU2bknOATGCt-ZtAZw'
 product_v2:
   - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
 feature_v2:
   - id: adee20bd-51f4-461d-b9db-d215f8756eeb
+    internal-label: Audiences
   - id: f7c7de77-382f-4f48-8b36-61a170f06d3d
+    internal-label: Integrations
+  - id: a19e8738-9679-599a-b83b-5f2f15f8e4d6
+    internal-label: APIs/SDKs
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
+    internal-label: Developer
+source-git-commit: 5d119ccf18b09b3ba864a69642458597f65c754f
 workflow-type: tm+mt
-source-wordcount: 797
+source-wordcount: '797'
 ht-degree: 9%
-
 ---
-
 # 识别访客
 
 在[!DNL Adobe Target]中，可通过多种方法来识别访客。
@@ -30,7 +34,7 @@ Target使用三个标识符：
 | `tntId` | `tntId`是用户[!DNL Target]中的主要标识符。 您可以提供此ID，否则[!DNL Target]将在请求中不包含此ID时自动生成此ID。 |
 | `thirdPartyId` | `thirdPartyId`是您公司的用户标识符，您可在每次调用时发送该标识符。 当用户登录到某个公司的网站时，该公司通常会创建一个ID，并将其绑定到访客的帐户、会员卡、会员编号或该公司的其他适用标识符。 |
 | `marketingCloudVisitorId` | `marketingCloudVisitorId`用于在不同的Adobe解决方案之间合并和共享数据。 要与Adobe Analytics和Adobe Audience Manager集成，需要`marketingCloudVisitorId`。 |
-| `customerIds` | 除了Experience Cloud访客ID之外，还可以使用其他[客户ID](https://experienceleague.adobe.com/docs/id-service/using/reference/authenticated-state.html?lang=zh-Hans)以及每个访客的身份验证状态。 |
+| `customerIds` | 除了Experience Cloud访客ID之外，还可以使用其他[客户ID](https://experienceleague.adobe.com/docs/id-service/using/reference/authenticated-state.html)以及每个访客的身份验证状态。 |
 
 ## [!DNL Target] ID
 
@@ -177,7 +181,7 @@ curl -X POST \
 
 ## Customer ID
 
-可以添加[客户ID](https://experienceleague.adobe.com/docs/id-service/using/reference/authenticated-state.html?lang=zh-Hans)并将其与Experience Cloud访客ID关联。 无论何时发送`customerIds`，都必须提供`marketingCloudVisitorId`。 此外，可以为每个访客随每个`customerId`提供身份验证状态。 可考虑以下身份验证状态：
+可以添加[客户ID](https://experienceleague.adobe.com/docs/id-service/using/reference/authenticated-state.html)并将其与Experience Cloud访客ID关联。 无论何时发送`customerIds`，都必须提供`marketingCloudVisitorId`。 此外，可以为每个访客随每个`customerId`提供身份验证状态。 可考虑以下身份验证状态：
 
 | 身份验证状态 | 用户状态 |
 | --- | --- |
@@ -232,7 +236,7 @@ curl -X POST \
 
 ## 合并的配置文件
 
-您可以在同一请求中合并`tntId`、`thirdPartyID`和`marketingCloudVisitorId`。 在此方案中，Adobe Target将维护所有这些ID的映射，并将其固定到访客中。 了解如何使用不同的标识符实时[合并和同步配置文件](https://experienceleague.adobe.com/docs/target/using/audiences/visitor-profiles/3rd-party-id.html?lang=zh-Hans)。
+您可以在同一请求中合并`tntId`、`thirdPartyID`和`marketingCloudVisitorId`。 在此方案中，Adobe Target将维护所有这些ID的映射，并将其固定到访客中。 了解如何使用不同的标识符实时[合并和同步配置文件](https://experienceleague.adobe.com/docs/target/using/audiences/visitor-profiles/3rd-party-id.html)。
 
 ```
 curl -X POST \

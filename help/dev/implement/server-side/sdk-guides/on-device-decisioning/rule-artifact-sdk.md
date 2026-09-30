@@ -1,25 +1,30 @@
 ---
 title: 自动下载、存储和更新设备上决策规则构件
-description: 了解如何在初始化 [!DNL Adobe Target] SDK时使用设备上决策规则构件。
+description: 了解如何在初始化[!DNL Adobe Target] SDK时使用设备上决策规则构件。
 feature: APIs/SDKs
 exl-id: be41a723-616f-4aa3-9a38-8143438bd18a
-TQID: https://experienceleague.adobe.com/o4oNaCtd3PS1cDndSJHkI10pDke1DTaEnBn8u9pIQk8
+TQID: 'https://experienceleague.adobe.com/o4oNaCtd3PS1cDndSJHkI10pDke1DTaEnBn8u9pIQk8'
 product_v2:
   - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
 feature_v2:
   - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+    internal-label: Implementation
+  - id: a19e8738-9679-599a-b83b-5f2f15f8e4d6
+    internal-label: APIs/SDKs
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+    internal-label: Implementation
   - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
-source-git-commit: 7a5aae2510a014c6efaeee63080cde3e7746f91c
+    internal-label: Administration
+source-git-commit: 5d119ccf18b09b3ba864a69642458597f65c754f
 workflow-type: tm+mt
-source-wordcount: 352
+source-wordcount: '353'
 ht-degree: 0%
-
 ---
-
 # 通过[!DNL Adobe Target] SDK自动下载、存储和更新规则构件
 
 当您能够同时初始化[!DNL Adobe Target] SDK并启动Web服务器时，此方法将最有效。 在Web服务器应用程序开始提供请求之前，规则工件将由[!DNL Adobe Target] SDK下载并缓存到内存中。 一旦您的Web应用程序启动并运行，将使用内存中规则工件执行所有[!DNL Adobe Target]决策。 缓存的规则工件将基于您在SDK初始化步骤中指定的`pollingInterval`进行更新。
@@ -156,7 +161,7 @@ TargetDeliveryResponse response = targetClient.getOffers(request);
 
 >[!NOTE]
 >
->在上述代码示例中，`TargetClient`对象保留对内存中规则工件的引用。 当您使用此对象来调用标准SDK方法时，它会使用内存中规则工件进行决策。 如果您的应用程序的结构决定了您需要调用SDK方法，而不是初始化和侦听客户端请求的文件中的方法，并且这些文件无权访问TargetClient对象，则您可以下载JSON有效负载并将其存储在本地JSON文件中，以供其他文件使用，这些文件需要初始化SDK。 有关使用JSON有效负载[&#128279;](rule-artifact-json.md)下载规则工件的部分，将对此进行说明。
+>在上述代码示例中，`TargetClient`对象保留对内存中规则工件的引用。 当您使用此对象来调用标准SDK方法时，它会使用内存中规则工件进行决策。 如果您的应用程序的结构决定了您需要调用SDK方法，而不是初始化和侦听客户端请求的文件中的方法，并且这些文件无权访问TargetClient对象，则您可以下载JSON有效负载并将其存储在本地JSON文件中，以供其他文件使用，这些文件需要初始化SDK。 有关使用JSON有效负载](rule-artifact-json.md)下载规则工件的[部分，将对此进行说明。
 
 以下是初始化[!DNL Adobe Target] SDK后启动Web应用程序的示例。
 

@@ -3,28 +3,39 @@ title: 如何管理自定义标准
 description: 使用Adobe Target API管理、创建、列出、编辑、获取和删除Adobe Target推荐标准所需的步骤。
 feature: APIs/SDKs, Recommendations, Administration & Configuration
 kt: 3815
-thumbnail: null
+thumbnail:
 author: Judy Kim
 exl-id: 51a67a49-a92d-4377-9a9f-27116e011ab1
-TQID: https://experienceleague.adobe.com/sRzck0uJDaJdFZ9nG4Ijrbw31iX3M8WY5nIW2x4nl-0
+TQID: 'https://experienceleague.adobe.com/sRzck0uJDaJdFZ9nG4Ijrbw31iX3M8WY5nIW2x4nl-0'
 product_v2:
   - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
+feature_v2:
+  - id: a19e8738-9679-599a-b83b-5f2f15f8e4d6
+    internal-label: APIs/SDKs
+  - id: dfc8a233-f2b5-4811-bf63-b4262aebc5a5
+    internal-label: Administration and configuration
+  - id: f69bc5f1-ebdb-4306-a281-f2e77daf734c
+    internal-label: Activities and tests
+subfeature_v2:
+  - id: ed58f4a1-16eb-4c8c-b505-be9da766a9ec
+    internal-label: Recommendations
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
-source-git-commit: f05a93102cc0f9b86a6521ff8007aa59f2af3c1a
+    internal-label: Administration
+source-git-commit: 5d119ccf18b09b3ba864a69642458597f65c754f
 workflow-type: tm+mt
-source-wordcount: 890
+source-wordcount: '939'
 ht-degree: 0%
-
 ---
-
 # 管理自定义标准
 
 有时，推荐提供的算法无法显示您要促销的特定项目。 在这种情况下，自定义标准为您提供了一种方法，可以为给定的关键项目或类别提供一组特定的推荐项目。
 
-要创建自定义标准，请定义并导入关键项目或类别与推荐项目之间的所需映射。 [自定义标准文档](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/recommendations-csv.html?lang=zh-Hans)中介绍了此过程。 如该文档中所述，您可以通过Target用户界面(UI)创建、编辑和删除自定义标准。 但是，Target还提供了一组自定义标准API，允许对自定义标准进行更详细的管理。
+要创建自定义标准，请定义并导入关键项目或类别与推荐项目之间的所需映射。 [自定义标准文档](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/recommendations-csv.html)中介绍了此过程。 如该文档中所述，您可以通过Target用户界面(UI)创建、编辑和删除自定义标准。 但是，Target还提供了一组自定义标准API，允许对自定义标准进行更详细的管理。
 
 >[!WARNING]
 >
@@ -38,7 +49,7 @@ ht-degree: 0%
 
 >[!WARNING]
 >
->使用创建自定义标准API创建的自定义标准（如本练习中所述）将显示在UI中，并将保留这些标准。 您将无法从UI中编辑或删除它们。 您可以通过API **编辑或删除它们**，但无论哪种方式，它们将继续显示在Target UI中。 要保留从UI编辑或删除的选项，请使用[文档](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/recommendations-csv.html?lang=zh-Hans)的UI创建自定义标准，而不是使用创建自定义标准API。
+>使用创建自定义标准API创建的自定义标准（如本练习中所述）将显示在UI中，并将保留这些标准。 您将无法从UI中编辑或删除它们。 您可以通过API **编辑或删除它们**，但无论哪种方式，它们将继续显示在Target UI中。 要保留从UI编辑或删除的选项，请使用[文档](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/recommendations-csv.html)的UI创建自定义标准，而不是使用创建自定义标准API。
 
 只有在阅读了上述警告并熟悉了如何创建新自定义标准且无法随后从UI中删除后，才应继续执行以下步骤。
 
@@ -66,7 +77,7 @@ ht-degree: 0%
 
 `GET https://mc.adobe.io/{{TENANT_ID}}/target/recs/criteria/custom`
 
-1. 与之前一样验证`TENANT_ID`和`API_KEY`，并发送请求。在响应中，请注意自定义标准ID以及有关之前指出的错误消息的详细信息。
+1. 与之前一样验证`TENANT_ID`和`API_KEY`，并发送请求。 在响应中，请注意自定义标准ID以及有关之前指出的错误消息的详细信息。
    ![ListCustomCriteria](assets/ListCustomCriteria.png)
 
 在这种情况下，发生错误的原因是服务器信息不正确，这意味着Target无法访问包含自定义标准定义的CSV文件。 让我们编辑自定义标准来更正此问题。
@@ -83,7 +94,7 @@ ht-degree: 0%
 1. 指定要编辑的（单个）自定义标准的标准ID。
    ![EditCustomCriteria2](assets/EditCustomCriteria2.png)
 
-1. 在正文中，为更新的JSON提供正确的服务器信息。（在此步骤中，指定对可以访问的服务器的FTP访问权限。）
+1. 在正文中，为更新的JSON提供正确的服务器信息。 （在此步骤中，指定对可以访问的服务器的FTP访问权限。）
    ![EditCustomCriteria3](assets/EditCustomCriteria3.png)
 
 1. 发送请求并记录响应。
@@ -97,9 +108,9 @@ ht-degree: 0%
 
 `GET https://mc.adobe.io/{{TENANT_ID}}/target/recs/criteria/custom/:criteriaId`
 
-1. 指定要获取其详细信息的自定义标准的标准ID。发送请求并查看响应。
+1. 指定要获取其详细信息的自定义标准的标准ID。 发送请求并查看响应。
    ![GetCustomCriteria.png](assets/GetCustomCriteria.png)
-1. 验证是否成功。（在本例中，请确认没有进一步的FTP错误。）
+1. 验证是否成功。 （在本例中，请确认没有进一步的FTP错误。）
    ![GetCustomCriteria1.png](assets/GetCustomCriteria1.png)
 1. （可选）验证更新是否在UI中准确显示。
    ![GetCustomCriteria2.png](assets/GetCustomCriteria2.png)
@@ -110,12 +121,12 @@ ht-degree: 0%
 
 `DELETE https://mc.adobe.io/{{TENANT_ID}}/target/recs/criteria/custom/:criteriaId`
 
-1. 指定要删除的（单个）自定义标准的标准ID。单击&#x200B;**[!UICONTROL 发送]**。
+1. 指定要删除的（单个）自定义标准的标准ID。 单击&#x200B;**[!UICONTROL 发送]**。
    ![DeleteCustomCriteria1](assets/DeleteCustomCriteria1.png)
 
 1. 验证是否已使用获取自定义标准删除该标准。
    ![DeleteCustomCriteria2](assets/DeleteCustomCriteria2.png)
-在这种情况下，预期的404错误表示无法找到已删除的标准。
+   在这种情况下，预期的404错误表示无法找到已删除的标准。
 
 >[!NOTE]
 >

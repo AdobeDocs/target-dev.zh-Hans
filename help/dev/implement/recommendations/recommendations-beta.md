@@ -1,37 +1,46 @@
 ---
 keywords: 推荐、设置、首选项、垂直行业、筛选不兼容的标准、默认主机组、缩览图基本URL、推荐API令牌、
-description: 了解如何在 [!DNL Adobe Target]中实施[!UICONTROL 推荐]活动。
+description: 了解如何在[!DNL Adobe Target]中实施[!UICONTROL 推荐]活动。
 title: 如何实施[!UICONTROL 推荐]活动？
 feature: Recommendations
 hide: true
 exl-id: 0a9c9649-195b-44e2-987e-d02eaf98cc54
-TQID: https://experienceleague.adobe.com/A7j0oJbyO3oei-a2l02I58o9I0vCPrRcqWC-QgQUxBo
+TQID: 'https://experienceleague.adobe.com/A7j0oJbyO3oei-a2l02I58o9I0vCPrRcqWC-QgQUxBo'
 product_v2:
   - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
 feature_v2:
   - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+    internal-label: Implementation
+  - id: f69bc5f1-ebdb-4306-a281-f2e77daf734c
+    internal-label: Activities and tests
 subfeature_v2:
   - id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+    internal-label: at.js
+  - id: ed58f4a1-16eb-4c8c-b505-be9da766a9ec
+    internal-label: Recommendations
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+    internal-label: Implementation
   - id: e0eb8757-182f-49f3-94a4-1587d16f5094
+    internal-label: Personalization
   - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
-source-git-commit: 929e1f10bc5dd0741f0fe28cd46435e680a4a308
+    internal-label: Administration
+source-git-commit: 5d119ccf18b09b3ba864a69642458597f65c754f
 workflow-type: tm+mt
-source-wordcount: 1734
+source-wordcount: '1734'
 ht-degree: 17%
-
 ---
-
 # 计划和实施[!UICONTROL 推荐]
 
 此信息可帮助您计划和实施[!DNL Adobe Target Recommendations]。
 
 >[!NOTE]
 >
->除了本文之外，[Adobe Target商业从业者指南](https://experienceleague.adobe.com/zh-hans/docs/target/using/target-home){target=_blank}还包含有关[Target推荐](https://experienceleague.adobe.com/zh-hans/docs/target/using/recommendations/recommendations){target=_blank}的深入信息。
+>除了本文之外，[Adobe Target商业从业者指南](https://experienceleague.adobe.com/en/docs/target/using/target-home){target=_blank}还包含有关[Target推荐](https://experienceleague.adobe.com/en/docs/target/using/recommendations/recommendations){target=_blank}的深入信息。
 
 在[!DNL Adobe Target]中设置您的第一个[!UICONTROL 推荐]活动之前，请完成以下步骤：
 
@@ -58,7 +67,7 @@ ht-degree: 17%
 
 | 方法 | 内容 | 何时使用 | 其他信息 |
 | --- | --- | --- | --- |
-| 目录信息源 | 计划每天上传和摄取信息源（CSV、[!DNL Google]产品XML或[!UICONTROL Analytics产品分类]）。 | 用于一次发送有关多个项目的信息。 用于发送不经常更改的信息。 | 请参阅[信息源](https://experienceleague.adobe.com/zh-hans/docs/target/using/recommendations/entities/feeds)。 |
+| 目录信息源 | 计划每天上传和摄取信息源（CSV、[!DNL Google]产品XML或[!UICONTROL Analytics产品分类]）。 | 用于一次发送有关多个项目的信息。 用于发送不经常更改的信息。 | 请参阅[信息源](https://experienceleague.adobe.com/en/docs/target/using/recommendations/entities/feeds)。 |
 | 实体API | 调用API以发送单个项目的最新更新。 | 用于在更新发生时一次发送一个项目的更新。 用于发送经常更改的信息（例如价格、库存/库存水平）。 | 请参阅[实体API开发人员文档](https://developer.adobe.com/target/administer/recommendations-api/#tag/Entities)。 |
 | 在页面上传递更新 | 使用页面上的JavaScript或使用投放API发送单个项目的即时更新。 | 用于在更新发生时一次发送一个项目的更新。 用于发送经常更改的信息（例如价格、库存/库存水平）。 | 请参阅下面的[项目查看次数/产品页面](#item-views-or-product-pages)。 |
 
@@ -121,7 +130,7 @@ function targetPageParams() {
 }
 ```
 
-有关基于购物车的推荐的更多信息，请参阅&#x200B;*[!DNL Adobe Target]商业从业者指南*&#x200B;中的[基于购物车的推荐](https://experienceleague.adobe.com/zh-hans/docs/target/using/recommendations/criteria/base-the-recommendation-on-a-recommendation-key#cart-based)。
+有关基于购物车的推荐的更多信息，请参阅&#x200B;*[!DNL Adobe Target]商业从业者指南*&#x200B;中的[基于购物车的推荐](https://experienceleague.adobe.com/en/docs/target/using/recommendations/criteria/base-the-recommendation-on-a-recommendation-key#cart-based)。
 
 ### 排除访客购物车中已有的项目
 
@@ -143,7 +152,7 @@ function targetPageParams() {
 
 ## &#x200B;4. 配置全局排除项
 
-排除全局级别上您绝不希望向访客推荐的任何项目。 请参阅&#x200B;*[!DNL Adobe Target]商业从业者指南*&#x200B;中的[排除项](https://experienceleague.adobe.com/zh-hans/docs/target/using/recommendations/entities/exclusions)。
+排除全局级别上您绝不希望向访客推荐的任何项目。 请参阅&#x200B;*[!DNL Adobe Target]商业从业者指南*&#x200B;中的[排除项](https://experienceleague.adobe.com/en/docs/target/using/recommendations/entities/exclusions)。
 
 ## &#x200B;5. 配置[!UICONTROL 推荐]设置
 
@@ -181,7 +190,7 @@ function targetPageParams() {
 
 [!DNL Recommendations]中的标准即规则，可根据预先确定的一组访客行为来确定要推荐的产品或内容。 标准可基于流行趋势、访客的当前与过去行为，或相似的产品和内容。 您可以添加多个标准，以便对多个推荐类型进行相互测试。
 
-有关详细信息，请参阅&#x200B;*Adobe Target商业从业者指南*&#x200B;中的[标准](https://experienceleague.adobe.com/zh-hans/docs/target/using/recommendations/criteria/algorithms){target=_blank}。
+有关详细信息，请参阅&#x200B;*Adobe Target商业从业者指南*&#x200B;中的[标准](https://experienceleague.adobe.com/en/docs/target/using/recommendations/criteria/algorithms){target=_blank}。
 
 [!UICONTROL 标准]部分中有以下设置：
 
@@ -204,7 +213,7 @@ function targetPageParams() {
 
 如果使用标签管理解决方案，Adobe建议您禁用此选项。
 
-有关此选项的详细信息，请参阅&#x200B;*[!DNL Adobe Target]商业从业者指南*&#x200B;中的[[!UICONTROL 推荐]常见问题解答](https://experienceleague.adobe.com/zh-hans/docs/target/using/recommendations/recommendations-faq/recommendations-faq){target=_blank}。
+有关此选项的详细信息，请参阅&#x200B;*[!DNL Adobe Target]商业从业者指南*&#x200B;中的[[!UICONTROL 推荐]常见问题解答](https://experienceleague.adobe.com/en/docs/target/using/recommendations/recommendations-faq/recommendations-faq){target=_blank}。
 
 ### [!UICONTROL 产品目录]
 
@@ -231,7 +240,7 @@ function targetPageParams() {
 * 创建排除项对话框（**[!UICONTROL 推荐]** > **[!UICONTROL 排除项]** > **[!UICONTROL 创建排除项]**）
 * “更新排除项”对话框（**[!UICONTROL 推荐]** > **[!UICONTROL 排除项]** > **[!UICONTROL 编辑]**）
 
-有关详细信息，请参阅&#x200B;*[!DNL Adobe Target]商业从业者指南*&#x200B;中的[主机](https://experienceleague.adobe.com/zh-hans/docs/target/using/administer/hosts){target=_blank}。
+有关详细信息，请参阅&#x200B;*[!DNL Adobe Target]商业从业者指南*&#x200B;中的[主机](https://experienceleague.adobe.com/en/docs/target/using/administer/hosts){target=_blank}。
 
 #### [!UICONTROL 缩略图基数]
 

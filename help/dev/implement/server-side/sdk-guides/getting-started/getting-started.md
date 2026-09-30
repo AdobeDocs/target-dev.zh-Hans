@@ -3,25 +3,32 @@ title: Target SDK快速入门
 description: 如何使用Adobe Target SDK？
 feature: APIs/SDKs
 exl-id: a5ae9826-7bb5-41de-8796-76edc4f5b281
-TQID: https://experienceleague.adobe.com/oW9op2s6buvt5Jp18DYzrwh7aBXSNEPAikq9EPISaWQ
+TQID: 'https://experienceleague.adobe.com/oW9op2s6buvt5Jp18DYzrwh7aBXSNEPAikq9EPISaWQ'
 product_v2:
   - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
 feature_v2:
   - id: adee20bd-51f4-461d-b9db-d215f8756eeb
+    internal-label: Audiences
   - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+    internal-label: Implementation
+  - id: a19e8738-9679-599a-b83b-5f2f15f8e4d6
+    internal-label: APIs/SDKs
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+    internal-label: Reporting
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+    internal-label: Implementation
   - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
-source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
+    internal-label: Administration
+source-git-commit: 5d119ccf18b09b3ba864a69642458597f65c754f
 workflow-type: tm+mt
-source-wordcount: 702
+source-wordcount: '702'
 ht-degree: 1%
-
 ---
-
 # [!DNL Target] SDK快速入门
 
 为了启动并运行，我们鼓励您以您选择的语言创建您的第一个[设备上决策](../on-device-decisioning/overview.md)功能标记活动：
@@ -49,7 +56,7 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->您必须具有&#x200B;**[!UICONTROL 管理员]**&#x200B;或&#x200B;**[!UICONTROL 审批者]** [用户角色](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/user-management.html?lang=zh-Hans)才能启用或禁用&#x200B;**[!UICONTROL 设备上决策]**&#x200B;切换开关。
+>您必须具有&#x200B;**[!UICONTROL 管理员]**&#x200B;或&#x200B;**[!UICONTROL 审批者]** [用户角色](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/user-management.html)才能启用或禁用&#x200B;**[!UICONTROL 设备上决策]**&#x200B;切换开关。
 
 启用&#x200B;**[!UICONTROL 设备上决策]**&#x200B;切换后，[!DNL Adobe Target]开始为您的客户端生成[规则工件](../on-device-decisioning/rule-artifact-overview.md)。
 
@@ -164,7 +171,7 @@ target_client = TargetClient.create(CONFIG)
 
    ![替代图像](assets/asset-ab.png)
 
-1. 在&#x200B;**[!UICONTROL 创建A/B测试活动]**&#x200B;模式中，保留默认的Web选项(1)，选择&#x200B;**[!UICONTROL 表单]**&#x200B;作为体验编辑器(2)，选择&#x200B;**[!UICONTROL 具有**&#x200B;[!UICONTROL &#x200B;无属性限制的Workspace &#x200B;]&#x200B;**]**(3)，然后单击&#x200B;**[!UICONTROL 下一步]**(4)。
+1. 在&#x200B;**[!UICONTROL 创建A/B测试活动]**&#x200B;模式中，保留默认的Web选项(1)，选择&#x200B;**[!UICONTROL 表单]**&#x200B;作为体验编辑器(2)，选择&#x200B;**[!UICONTROL 具有**[!UICONTROL &#x200B;无属性限制的Workspace ]**]**(3)，然后单击&#x200B;**[!UICONTROL 下一步]**(4)。
 
    ![替代图像](assets/asset-form.png)
 
@@ -400,6 +407,6 @@ target_client.send_notifications({
 
    >[!NOTE]
    >
-   >您必须具有&#x200B;**[!UICONTROL 审批者]**&#x200B;或&#x200B;**[!UICONTROL 发布者]** [用户角色](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/user-management.html?lang=zh-Hans)才能执行此步骤。
+   >您必须具有&#x200B;**[!UICONTROL 审批者]**&#x200B;或&#x200B;**[!UICONTROL 发布者]** [用户角色](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/user-management.html)才能执行此步骤。
 
    ![替代图像](assets/asset-activate.png)

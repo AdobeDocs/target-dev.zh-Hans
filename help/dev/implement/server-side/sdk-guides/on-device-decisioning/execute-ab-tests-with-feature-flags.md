@@ -3,25 +3,32 @@ title: 使用功能标志和设备上决策执行A/B测试
 description: 使用设备上决策通过功能标志执行A/B测试。
 feature: APIs/SDKs
 exl-id: abf66e00-742d-4d40-9b6e-9bd71638c31a
-TQID: https://experienceleague.adobe.com/OnRFP7WgNvPy-9v8Ea8te3v5QAUlcR2WUlD7yGB-QzQ
+TQID: 'https://experienceleague.adobe.com/OnRFP7WgNvPy-9v8Ea8te3v5QAUlcR2WUlD7yGB-QzQ'
 product_v2:
   - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
 feature_v2:
   - id: adee20bd-51f4-461d-b9db-d215f8756eeb
+    internal-label: Audiences
   - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+    internal-label: Implementation
+  - id: a19e8738-9679-599a-b83b-5f2f15f8e4d6
+    internal-label: APIs/SDKs
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+    internal-label: Reporting
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+    internal-label: Implementation
   - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
-source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
+    internal-label: Administration
+source-git-commit: 5d119ccf18b09b3ba864a69642458597f65c754f
 workflow-type: tm+mt
-source-wordcount: 813
+source-wordcount: '813'
 ht-degree: 1%
-
 ---
-
 # 使用功能标志执行A/B测试
 
 ## 步骤摘要
@@ -50,7 +57,7 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->您必须具有管理员或审批者[用户角色](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/user-management.html?lang=zh-Hans)才能启用或禁用“设备端决策”切换开关。
+>您必须具有管理员或审批者[用户角色](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/user-management.html)才能启用或禁用“设备端决策”切换开关。
 
 启用&#x200B;**[!UICONTROL 设备上决策]**&#x200B;切换后，[!DNL Adobe Target]开始为您的客户端生成规则项目。
 
@@ -60,7 +67,7 @@ ht-degree: 1%
 
 ![替代图像](assets/asset-ab.png)
 
-在&#x200B;**[!UICONTROL 创建A/B测试活动]**&#x200B;模式中，保留默认的&#x200B;**[!UICONTROL Web]**&#x200B;选项(1)，选择&#x200B;**[!UICONTROL 表单]**&#x200B;作为体验编辑器(2)，选择不带&#x200B;**[!UICONTROL 属性限制的**&#x200B;[!UICONTROL &#x200B;默认Workspace &#x200B;]&#x200B;**]** (3)，然后单击&#x200B;**[!UICONTROL 下一步]** (4)。
+在&#x200B;**[!UICONTROL 创建A/B测试活动]**&#x200B;模式中，保留默认的&#x200B;**[!UICONTROL Web]**&#x200B;选项(1)，选择&#x200B;**[!UICONTROL 表单]**&#x200B;作为体验编辑器(2)，选择不带&#x200B;**[!UICONTROL 属性限制的**[!UICONTROL &#x200B;默认Workspace ]**]** (3)，然后单击&#x200B;**[!UICONTROL 下一步]** (4)。
 
 ![替代图像](assets/asset-form.png)
 

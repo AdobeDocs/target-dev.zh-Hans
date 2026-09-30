@@ -1,25 +1,32 @@
 ---
-title: 如何为 [!DNL Adobe Target] API配置身份验证
-description: 如何生成成功与 [!DNL Adobe Target] API交互所需的身份验证令牌？
+title: 如何配置[!DNL Adobe Target] API的身份验证
+description: 如何生成成功与[!DNL Adobe Target] API交互所需的身份验证令牌？
 feature: APIs/SDKs, Administration & Configuration
 exl-id: fc67363c-6527-40aa-aff1-350b5af884ab
-TQID: https://experienceleague.adobe.com/sgdBKse1b-0kPKjzDx4fDoFsNpnIzXAT8TpDUkQ7fGw
+TQID: 'https://experienceleague.adobe.com/sgdBKse1b-0kPKjzDx4fDoFsNpnIzXAT8TpDUkQ7fGw'
 product_v2:
   - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
 feature_v2:
   - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+    internal-label: Implementation
+  - id: a19e8738-9679-599a-b83b-5f2f15f8e4d6
+    internal-label: APIs/SDKs
+  - id: dfc8a233-f2b5-4811-bf63-b4262aebc5a5
+    internal-label: Administration and configuration
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+    internal-label: Implementation
   - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
-source-git-commit: addda914fcf7ba1616ae9a9d49118e737b3ad923
+    internal-label: Administration
+source-git-commit: 5d119ccf18b09b3ba864a69642458597f65c754f
 workflow-type: tm+mt
-source-wordcount: 1927
+source-wordcount: '1929'
 ht-degree: 1%
-
 ---
-
 # 为[!DNL Adobe Target] API配置身份验证
 
 [!DNL Adobe Target]管理员API（包括[!DNL Recommendations Admin] API）受身份验证保护，以确保只有授权用户使用它们来访问[!DNL Adobe Target]。 使用[Adobe Developer Console](https://developer.adobe.com/console/home)管理所有[!DNL Adobe Experience Cloud solutions]的此身份验证，包括[!DNL Adobe Target]。
@@ -54,7 +61,7 @@ ht-degree: 1%
 
 <!--(1. Generate your private key and public certificate, per the [documentation on authentication](https://developer.adobe.com/developer-console/docs/guides/authentication/). // [//]: # (as described in **Step 1** of [How to set up Adobe IO: Authentication - Step by Step](https://helpx.adobe.com/marketing-cloud-core/kb/adobe-io-authentication-step-by-step.html). After completing Step 1, return to this guide and resume with Step 2, below. // The outcome of this step should be the creation of a `private.key` file and a `certificate_pub.crt` file. Return to this guide once you have generated these two files.)-->
 
-1. 在[Adobe Admin Console](https://adminconsole.adobe.com/)中，确保您的[!DNL Adobe]用户帐户已被授予[!DNL Target]的[产品管理员](https://helpx.adobe.com/cn/enterprise/using/admin-roles.html)和[开发人员](https://helpx.adobe.com/cn/enterprise/using/manage-developers.html)级别访问权限。
+1. 在[Adobe Admin Console](https://adminconsole.adobe.com/)中，确保您的[!DNL Adobe]用户帐户已被授予[!DNL Target]的[产品管理员](https://helpx.adobe.com/enterprise/using/admin-roles.html)和[开发人员](https://helpx.adobe.com/enterprise/using/manage-developers.html)级别访问权限。
 
 1. 在[Adobe Developer Console](https://developer.adobe.com/console/home)中，选择要为其创建此集成的[!UICONTROL Experience Cloud组织]。 （请注意，您可能只能访问单个[!UICONTROL Experience Cloud组织]。）
 
@@ -84,7 +91,7 @@ ht-degree: 1%
 
    ![configure-io-target-createproject8](assets/configure-io-target-createproject8.png)
 
-1. 返回Adobe Developer Console，选择与您使用Adobe Recommendations的属性对应的[产品配置文件](https://helpx.adobe.com/cn/enterprise/using/manage-products-and-profiles.html)。 （如果您未使用资产，请选择“默认Workspace”选项。） 单击&#x200B;**[!UICONTROL 保存配置的API]**。
+1. 返回Adobe Developer Console，选择与您使用Adobe Recommendations的属性对应的[产品配置文件](https://helpx.adobe.com/enterprise/using/manage-products-and-profiles.html)。 （如果您未使用资产，请选择“默认Workspace”选项。） 单击&#x200B;**[!UICONTROL 保存配置的API]**。
 
    ![configure-io-target-createproject9](assets/configure-io-target-createproject9.png)
 
@@ -105,7 +112,7 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->有关适用于任何Experience Cloud解决方案（包括[!DNL Target]）的视频说明，请参阅[将Postman与Experience Platform API结合使用](https://experienceleague.adobe.com/docs/platform-learn/tutorials/platform-api-authentication.html?lang=zh-Hans)。 以下部分与[!DNL Target] API相关： 1. 创建Experience Platform API并将其导出到Postman 2。 使用Postman生成访问令牌。 以下也提供了这些步骤。
+>有关适用于任何Experience Cloud解决方案（包括[!DNL Target]）的视频说明，请参阅[将Postman与Experience Platform API结合使用](https://experienceleague.adobe.com/docs/platform-learn/tutorials/platform-api-authentication.html)。 以下部分与[!DNL Target] API相关： 1. 创建Experience Platform API并将其导出到Postman 2。 使用Postman生成访问令牌。 以下也提供了这些步骤。
 
 1. 仍在[Adobe Developer Console](https://developer.adobe.com/console/home)中，导航以查看您新项目的&#x200B;**[!UICONTROL 服务帐户(JWT)]**&#x200B;凭据。 使用左侧导航或&#x200B;**[!UICONTROL 凭据]**&#x200B;部分，如图所示。
 

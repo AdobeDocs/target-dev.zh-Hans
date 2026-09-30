@@ -4,36 +4,48 @@ description: 了解Target和欧盟通用数据保护条例(GDPR)、加州消费�
 title: Target如何处理隐私和数据保护法规？
 feature: Privacy & Security
 exl-id: 40bac3c5-8e6f-4a90-ac0c-eddce1dbe6c0
-TQID: https://experienceleague.adobe.com/W-aYBengoNH5uKTcFZNHARelgAFX3-QrZixh09n0FU0
+TQID: 'https://experienceleague.adobe.com/W-aYBengoNH5uKTcFZNHARelgAFX3-QrZixh09n0FU0'
 product_v2:
   - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
 feature_v2:
   - id: adee20bd-51f4-461d-b9db-d215f8756eeb
+    internal-label: Audiences
   - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+    internal-label: Implementation
+  - id: f599e456-545c-47e5-8e50-b7dfe3579517
+    internal-label: Governance and control
 subfeature_v2:
   - id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+    internal-label: at.js
+  - id: ee6498fb-34b1-4925-be4a-9ec7a38e8dab
+    internal-label: Privacy and security
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+    internal-label: Reporting
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+    internal-label: Implementation
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
+    internal-label: Security
   - id: d3cdead0-685a-4489-9250-4bb709942f66
+    internal-label: Data collection
   - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
-source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
+    internal-label: Privacy
+source-git-commit: 5d119ccf18b09b3ba864a69642458597f65c754f
 workflow-type: tm+mt
-source-wordcount: 2432
+source-wordcount: '2432'
 ht-degree: 61%
-
 ---
-
 # 隐私和数据保护法规
 
 有关欧盟通用数据保护条例 (GDPR)、加州消费者隐私法案 (CCPA) 和其他隐私要求的信息。 了解这些法规对您的组织和Adobe Target有何影响。
 
 ## 隐私和通用数据保护条例 (GDPR) 概述
 
-2018 年 5 月 25 日，欧盟的 GDPR 已正式生效。 有关此法规对您影响的更多信息，请参阅 [GDPR 和您的业务](https://business.adobe.com/cn/privacy/general-data-protection-regulation.html)。
+2018 年 5 月 25 日，欧盟的 GDPR 已正式生效。 有关此法规对您影响的更多信息，请参阅 [GDPR 和您的业务](https://business.adobe.com/privacy/general-data-protection-regulation.html)。
 
 当 Adobe 向企业提供软件和服务时，作为提供这些服务的一部分，Adobe 将充当其处理并存储的任何个人数据的“数据处理方”。 作为“数据处理方”，Adobe 将根据贵公司授予的权限及指示（例如，遵照您与 Adobe 签署的协议中的规定）处理个人数据。
 
@@ -46,9 +58,9 @@ Adobe Experience Cloud为数据控制方提供了为GDPR做好准备的API，允
 
 有关更多信息，请参阅：
 
-* [Adobe Privacy Service概述](https://experienceleague.adobe.com/docs/experience-platform/privacy/home.html?lang=zh-Hans)
-* [Privacy Service API指南](https://experienceleague.adobe.com/docs/experience-platform/privacy/api/overview.html?lang=zh-Hans)
-* [Privacy Service UI概述](https://experienceleague.adobe.com/docs/experience-platform/privacy/ui/overview.html?lang=zh-Hans)
+* [Adobe Privacy Service概述](https://experienceleague.adobe.com/docs/experience-platform/privacy/home.html)
+* [Privacy Service API指南](https://experienceleague.adobe.com/docs/experience-platform/privacy/api/overview.html)
+* [Privacy Service UI概述](https://experienceleague.adobe.com/docs/experience-platform/privacy/ui/overview.html)
 
 ## 《加州消费者隐私法案》(CCPA) 概述
 
@@ -89,7 +101,7 @@ window.targetGlobalSettings = {
 
 1. **Target标记已通过Adobe Experience Platform预批准（或数据主体以前批准了Target）：** Target标记不适用于征求同意，且会按预期运行。
 1. **Target 标记没有获得预批准且 `bodyHidingEnabled` 设置为 FALSE：**&#x200B;只有在收到客户的同意之后，才会触发 Target 标记。 在收到客户同意之前，仅默认内容可用。 在收到客户同意之后，将调用 Target 并向数据主体（访客）提供个性化内容。 由于在同意之前只有默认内容可用，因此务必要使用正确的策略，例如过场动画页面涵盖了页面的任意部分或者可能个性化的内容。 此过程确保对于所有数据主体（访客）保持一致的体验。
-1. **Target 标记没有获得预批准且 `bodyHidingEnabled` 设置为 TRUE：**&#x200B;只有在收到客户的同意之后，才会触发 Target 标记。 在收到客户同意之前，仅默认内容可用。 但是，因为 `bodyHidingEnabled` 设置为 true，`bodyHiddenStyle` 会指示在触发 Target 标记之前页面上需要隐藏的内容（或者数据主体拒绝使用选择加入功能，这种情况下会显示默认内容）。 默认情况下，`bodyHiddenStyle` 设置为 `body { opacity:0;}`，这会隐藏 HTML 正文标记。 Adobe 的推荐页面配置如下，通过将页面内容放在一个容器中并将同意管理器对话框放在单独的容器中，从而隐藏页面全部正文而不隐藏同意管理器对话框。 配置这种设置之后，Target 仅隐藏页面内容容器。 请参阅 [Privacy Service 概述](https://experienceleague.adobe.com/docs/experience-platform/privacy/home.html?lang=zh-Hans？)。
+1. **Target 标记没有获得预批准且 `bodyHidingEnabled` 设置为 TRUE：**&#x200B;只有在收到客户的同意之后，才会触发 Target 标记。 在收到客户同意之前，仅默认内容可用。 但是，因为 `bodyHidingEnabled` 设置为 true，`bodyHiddenStyle` 会指示在触发 Target 标记之前页面上需要隐藏的内容（或者数据主体拒绝使用选择加入功能，这种情况下会显示默认内容）。 默认情况下，`bodyHiddenStyle` 设置为 `body { opacity:0;}`，这会隐藏 HTML 正文标记。 Adobe 的推荐页面配置如下，通过将页面内容放在一个容器中并将同意管理器对话框放在单独的容器中，从而隐藏页面全部正文而不隐藏同意管理器对话框。 配置这种设置之后，Target 仅隐藏页面内容容器。 请参阅 [Privacy Service 概述](https://experienceleague.adobe.com/docs/experience-platform/privacy/home.html？)。
 
    适用于情景 3 的推荐页面设置是：
 
@@ -135,7 +147,7 @@ Adobe已经履行或者正在履行其作为数据处理商的义务。 Adobe �
 
 ### 作为对数据主体/用户请求的回应，Adobe允许客户删除哪些信息？
 
-在 Target 中，与单独访客有关的信息是包含在 Target 访客配置文件中。 Target允许客户删除与其访客配置文件中某个ID关联的所有数据。 有关Target存储的配置文件数据的示例，请参阅[访客配置文件](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/visitor-profile.html?lang=zh-Hans)。
+在 Target 中，与单独访客有关的信息是包含在 Target 访客配置文件中。 Target允许客户删除与其访客配置文件中某个ID关联的所有数据。 有关Target存储的配置文件数据的示例，请参阅[访客配置文件](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/visitor-profile.html)。
 
 未标识特定个人的聚合或匿名数据（例如，报表数据）或与特定个人无关的数据（例如，内容数据），不在用户删除请求的范围之内。
 
@@ -163,7 +175,7 @@ Adobe 目前不提供同意管理解决方案，不过，市面上有各种各�
 
 Target通过Adobe Experience Platform提供选择加入功能支持，以支持您的同意管理策略。 选择加入功能让客户可自行决定如何以及何时触发 Target 标记。 还有一个选项，即通过Adobe Experience Platform预批准Target标记。 推荐使用Adobe Experience Platform管理选择加入功能。 Adobe Experience Platform中存在更细粒度的控制，用于在触发Target之前隐藏页面的选定元素，这对于在同意策略中的使用会非常有帮助。
 
-有关GDPR、CCPA和Adobe Experience Platform的更多信息，请参阅[Adobe隐私JavaScript库和GDPR](https://experienceleague.adobe.com/docs/experience-platform/privacy/home.html?lang=zh-Hans？)。 此外，请参阅上文的 *Adobe Target 和 Adobe Experience Platform 选择启用*&#x200B;部分。
+有关GDPR、CCPA和Adobe Experience Platform的更多信息，请参阅[Adobe隐私JavaScript库和GDPR](https://experienceleague.adobe.com/docs/experience-platform/privacy/home.html？)。 此外，请参阅上文的 *Adobe Target 和 Adobe Experience Platform 选择启用*&#x200B;部分。
 
 ### `AdobePrivacy.js` 是否向 GDPR API 提交信息？
 
@@ -302,7 +314,7 @@ Target 配置文件 JSON 示例可能如下所示：
 | Sample_Parameter | Target 配置文件中的许多信息都由“数据控制方”上传或直接提供。 在此示例中，可使用配置文件更新 API 将参数上传到 Target 配置文件中。 有关更多信息，请参阅[将数据导入 Target 的方法](/help/dev/before-implement/methods-to-get-data-into-target/methods-to-get-data-into-target.md)。 |
 | user.ReturnTimeOfDay | 此标准字段包括用户最近一次回访的时间。 |
 | firstSessionStart | 此标准字段包括用户首次会话开始的时间。 |
-| user.sessionCountScript | Target 配置文件中的许多信息都由“数据控制方”上传或直接提供。 在此示例中，配置文件脚本递增该访客对数据控制者网站的会话数。 有关更多信息，请参阅[配置文件脚本属性](https://experienceleague.adobe.com/docs/target/using/audiences/visitor-profiles/profile-parameters.html?lang=zh-Hans)。 |
+| user.sessionCountScript | Target 配置文件中的许多信息都由“数据控制方”上传或直接提供。 在此示例中，配置文件脚本递增该访客对数据控制者网站的会话数。 有关更多信息，请参阅[配置文件脚本属性](https://experienceleague.adobe.com/docs/target/using/audiences/visitor-profiles/profile-parameters.html)。 |
 
 >[!NOTE]
 >

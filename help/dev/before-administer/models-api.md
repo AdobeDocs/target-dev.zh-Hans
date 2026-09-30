@@ -3,29 +3,44 @@ title: Adobe模型API概述
 description: 模型API的概述，用户可以使用它阻止将功能包含在机器学习模型中。
 exl-id: e34b9b03-670b-4f7c-a94e-0c3cb711d8e4
 feature: APIs/SDKs, Recommendations, Administration & Configuration
-TQID: https://experienceleague.adobe.com/1Q28459Ct9BcEynSmD6oBPnGaEY2Hgnp9frKhWB4M-Q
+TQID: 'https://experienceleague.adobe.com/1Q28459Ct9BcEynSmD6oBPnGaEY2Hgnp9frKhWB4M-Q'
 product_v2:
   - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
+feature_v2:
+  - id: a19e8738-9679-599a-b83b-5f2f15f8e4d6
+    internal-label: APIs/SDKs
+  - id: dfc8a233-f2b5-4811-bf63-b4262aebc5a5
+    internal-label: Administration and configuration
+  - id: f69bc5f1-ebdb-4306-a281-f2e77daf734c
+    internal-label: Activities and tests
+subfeature_v2:
+  - id: ed58f4a1-16eb-4c8c-b505-be9da766a9ec
+    internal-label: Recommendations
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+    internal-label: Reporting
   - id: e0eb8757-182f-49f3-94a4-1587d16f5094
+    internal-label: Personalization
   - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+    internal-label: Insights
   - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
+    internal-label: Machine learning
   - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
-source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
+    internal-label: Administration
+source-git-commit: 5d119ccf18b09b3ba864a69642458597f65c754f
 workflow-type: tm+mt
-source-wordcount: 1321
+source-wordcount: '1321'
 ht-degree: 2%
-
 ---
-
 # 模型API概述
 
 模型API（也称为API）使用户能够查看和管理机器学习模型中用于[!UICONTROL Automated Personalization] (AP)和[!DNL Auto-Target] (AT)活动的功能的列表。 如果用户希望排除模型用于AP或AT活动的功能，可以使用模型API将该功能添加到“”中。
 
-**[!UICONTROL 阻止列表]**&#x200B;定义将由[!DNL Adobe Target]从其机器学习模型中排除的功能集。 有关功能的详细信息，请参阅[机器学习算法 [!DNL Target] 使用的数据](https://experienceleague.adobe.com/docs/target/using/activities/automated-personalization/ap-data.html?lang=zh-Hans)。
+**[!UICONTROL 阻止列表]**&#x200B;定义将由[!DNL Adobe Target]从其机器学习模型中排除的功能集。 有关功能的详细信息，请参阅[机器学习算法 [!DNL Target] 使用的数据](https://experienceleague.adobe.com/docs/target/using/activities/automated-personalization/ap-data.html)。
 
 可以按活动（活动级别）定义阻止列表，也可以为[!DNL Target]帐户内的所有活动（全局级别）定义活动。
 
@@ -111,7 +126,7 @@ GET https://mc.adobe.io/<tenant>/target/models/features/<campaignId>
 >
 >要查找您活动的活动ID，请导航到[!DNL Target] UI中的活动列表。 单击感兴趣的活动。 活动ID将显示在生成的活动概述页面的正文中，以及此页面URL的末尾。
 
-**[!UICONTROL externalName]**&#x200B;是某个功能的用户友好名称。 它由[!DNL Target]创建，此值可能会随着时间的推移而改变。 用户可以在[Personalization Insights报表](https://experienceleague.adobe.com/docs/target/using/reports/insights/personalization-insights-reports.html?lang=zh-Hans)中查看这些用户友好的名称。
+**[!UICONTROL externalName]**&#x200B;是某个功能的用户友好名称。 它由[!DNL Target]创建，此值可能会随着时间的推移而改变。 用户可以在[Personalization Insights报表](https://experienceleague.adobe.com/docs/target/using/reports/insights/personalization-insights-reports.html)中查看这些用户友好的名称。
 
 **[!UICONTROL internalName]**&#x200B;是该功能的实际标识符。 它也是由[!DNL Target]创建的，但无法更改。 为了确定要阻止列表的特征，需要参照此值。
 

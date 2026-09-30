@@ -1,34 +1,41 @@
 ---
 title: Adobe Target管理API概述
-description: ' [!DNL Adobe Target Admin API]概述'
+description: '[!DNL Adobe Target Admin API]概述'
 exl-id: 1168d376-c95b-4c5a-b7a2-c7815799a787
 feature: APIs/SDKs
-TQID: https://experienceleague.adobe.com/pJIaDbvs5sAFD8KPsnaNAMQAoq-lowmLs-B0zRAGzDY
+TQID: 'https://experienceleague.adobe.com/pJIaDbvs5sAFD8KPsnaNAMQAoq-lowmLs-B0zRAGzDY'
 product_v2:
   - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
 feature_v2:
   - id: adee20bd-51f4-461d-b9db-d215f8756eeb
+    internal-label: Audiences
   - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+    internal-label: Implementation
+  - id: a19e8738-9679-599a-b83b-5f2f15f8e4d6
+    internal-label: APIs/SDKs
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+    internal-label: Implementation
   - id: e0eb8757-182f-49f3-94a4-1587d16f5094
+    internal-label: Personalization
   - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
-source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
+    internal-label: Administration
+source-git-commit: 5d119ccf18b09b3ba864a69642458597f65c754f
 workflow-type: tm+mt
-source-wordcount: 1400
+source-wordcount: '1400'
 ht-degree: 2%
-
 ---
-
 # Target管理员API概述
 
 本文概述成功理解和使用[!DNL Adobe Target Admin API]所需的背景信息。 以下内容假设您了解如何[为[!DNL Adobe Target Admin API]配置身份验证](../configure-authentication.md)。
 
 >[!NOTE]
 >
->如果您希望通过UI管理[!DNL Target]，请参阅&#x200B;*Adobe Target商业从业者指南*[&#128279;](https://experienceleague.adobe.com/docs/target/using/administer/administrating-target.html?lang=zh-Hans)的管理部分。
+>如果您希望通过UI管理[!DNL Target]，请参阅&#x200B;*Adobe Target商业从业者指南*](https://experienceleague.adobe.com/docs/target/using/administer/administrating-target.html?lang=en)的[管理部分。
 >
 >管理员API和配置文件API通常统称为“管理员API和配置文件API”)，但也可以单独称为（“管理员API”和“配置文件API”）。 推荐API是[!DNL Target]管理员API的特定实施。
 
@@ -86,11 +93,11 @@ Postman是一款能够轻松触发API调用的应用程序。 此[Target管理�
 
 利用活动，可测试或个性化用户的内容。 活动可以是以下类型之一：
 
-* [A/B](https://experienceleague.adobe.com/docs/target/using/activities/abtest/test-ab.html?lang=zh-Hans)
-* [体验定位 (XT)](https://experienceleague.adobe.com/docs/target/using/activities/experience-targeting/experience-target.html?lang=zh-Hans)
-* [推荐](https://experienceleague.adobe.com/docs/target/using/activities/recommendations-activity.html?lang=zh-Hans)
-* [自动个性化](https://experienceleague.adobe.com/docs/target/using/activities/automated-personalization/automated-personalization.html?lang=zh-Hans)
-* [多变量测试 (MVT)](https://experienceleague.adobe.com/docs/target/using/activities/multivariate-test/multivariate-testing.html?lang=zh-Hans)
+* [A/B](https://experienceleague.adobe.com/docs/target/using/activities/abtest/test-ab.html)
+* [体验定位 (XT)](https://experienceleague.adobe.com/docs/target/using/activities/experience-targeting/experience-target.html)
+* [推荐](https://experienceleague.adobe.com/docs/target/using/activities/recommendations-activity.html)
+* [自动个性化](https://experienceleague.adobe.com/docs/target/using/activities/automated-personalization/automated-personalization.html)
+* [多变量测试 (MVT)](https://experienceleague.adobe.com/docs/target/using/activities/multivariate-test/multivariate-testing.html)
 
 ## 批量更新
 

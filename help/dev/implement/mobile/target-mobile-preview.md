@@ -1,21 +1,27 @@
 ---
 keywords: qa，预览，预览链接，移动设备，移动设备预览
 description: 使用移动设备预览链接对移动设备应用程序活动执行端到端QA。
-title: 如何在 [!DNL Adobe Target] 移动设备中使用移动设备预览链接？
+title: 如何在[!DNL Adobe Target]移动设备中使用移动设备预览链接？
 feature: Implement Mobile
 exl-id: c0c4237a-de1f-4231-b085-f8f1e96afc13
-TQID: https://experienceleague.adobe.com/ISZJ4lc8hhsQc3a-Mwz07US4fuEHobuvzCciFhmxEJk
+TQID: 'https://experienceleague.adobe.com/ISZJ4lc8hhsQc3a-Mwz07US4fuEHobuvzCciFhmxEJk'
 product_v2:
   - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
+feature_v2:
+  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+    internal-label: Implementation
+subfeature_v2:
+  - id: d051910f-2bda-47ea-a969-6ade9fcd71f1
+    internal-label: Implement mobile
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
+    internal-label: Developer
+source-git-commit: 5d119ccf18b09b3ba864a69642458597f65c754f
 workflow-type: tm+mt
-source-wordcount: 578
+source-wordcount: '579'
 ht-degree: 24%
-
 ---
-
 # [!DNL Target]移动设备预览
 
 使用移动设备预览链接可对移动设备应用程序活动轻松执行端到端QA，并且无需任何特殊的测试设备即可在使用您的设备的不同体验中注册。
@@ -80,7 +86,7 @@ ht-degree: 24%
 1. 选择要查看的体验组合，然后单击&#x200B;**[!UICONTROL 启动体验]**。
 
    |![移动设备预览1](assets/mobile-preview-experience-selection-1.png)|![移动设备预览2](assets/mobile-preview-experience-result-1-france.png)|![移动设备预览3](assets/mobile-preview-experience-result-1-shipfree.png)|
-|![移动设备预览4](assets/mobile-preview-experience-selection-2.png)|![移动设备预览5](assets/mobile-preview-experience-result-2-aus.png)|![移动设备预览6](assets/mobile-preview-experience-result-2-10off.png)|
+   |![移动设备预览4](assets/mobile-preview-experience-selection-2.png)|![移动设备预览5](assets/mobile-preview-experience-result-2-aus.png)|![移动设备预览6](assets/mobile-preview-experience-result-2-10off.png)|
 
 ## 限制
 
