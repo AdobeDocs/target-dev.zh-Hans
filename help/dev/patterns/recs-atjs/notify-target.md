@@ -1,26 +1,33 @@
 ---
 title: 通知Target
-description: 确保使用trackEvent方法发送所有需要由 [!DNL Target] 跟踪的事件。
+description: 确保使用trackEvent方法发送所有需要由[!DNL Target]跟踪的事件。
 feature: APIs/SDKs
 level: Experienced
 role: Developer
 exl-id: efccadab-d139-4423-8613-c2743d87b3a0
-TQID: https://experienceleague.adobe.com/u-RPLXjG8UBI7bDu2HgPFFnNBU--Yr0UydVX-Q-dcTc
+TQID: 'https://experienceleague.adobe.com/u-RPLXjG8UBI7bDu2HgPFFnNBU--Yr0UydVX-Q-dcTc'
 product_v2:
   - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
 feature_v2:
   - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+    internal-label: Implementation
+  - id: a19e8738-9679-599a-b83b-5f2f15f8e4d6
+    internal-label: APIs/SDKs
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+level_v2:
+  - id: d378ca77-2da1-4f39-ad92-1917fe974a38
+    internal-label: Experienced
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
+    internal-label: Implementation
+source-git-commit: 5d119ccf18b09b3ba864a69642458597f65c754f
 workflow-type: tm+mt
-source-wordcount: 369
+source-wordcount: '370'
 ht-degree: 0%
-
 ---
-
 # 通知[!DNL Target]
 
 完成此步骤可确保使用`trackEvent`方法发送所有必须发送到[!DNL Adobe Target]的事件。
@@ -56,11 +63,11 @@ ht-degree: 0%
 * 与您的业务团队会面，以确定可被视为转化或成功量度的所有事件。 您还必须确定生成收入的转化事件，以便将这些详细信息与事件数据一起发送到[!DNL Target]。
 * 确保以下属性在数据层中可用，以便您可以在发送转换事件的同时发送这些属性。 转化事件可生成收入，如产品购买或添加到购物车事件。
 
-   * `productPurchaseId`：作为订单的一部分购买的产品ID。 使用逗号分隔多个产品。
-   * `orderTotal`：购买的订单总计。
-   * `orderId`：购买的订单ID。
+  * `productPurchaseId`：作为订单的一部分购买的产品ID。 使用逗号分隔多个产品。
+  * `orderTotal`：购买的订单总计。
+  * `orderId`：购买的订单ID。
 
-  下图显示了 [!DNL Experience Platform][&#128279;](https://experienceleague.adobe.com/docs/tags.html?lang=zh-Hans){target=_blank}中 [!DNL tags] 的规则，该规则应仅在[!UICONTROL Confirmation]页面上触发。
+  下图显示了 [!DNL Experience Platform]&#x200B;[&#128279;](https://experienceleague.adobe.com/docs/tags.html?lang=zh-Hans){target=_blank}中 [!DNL tags] 的规则，该规则应仅在[!UICONTROL Confirmation]页面上触发。
 
   ![操作配置页面](/help/dev/patterns/recs-atjs/assets/action-configuration.png){width="400" zoomable="yes"}
 

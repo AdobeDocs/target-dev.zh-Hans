@@ -1,21 +1,24 @@
 ---
 title: 获取配置文件
-description: 了解如何使用Adobe Target配置文件API来获取访客数据，以便在 [!DNL Target]中使用。
+description: 了解如何使用Adobe Target配置文件API来获取访客数据，以便在[!DNL Target]中使用。
 contributors: https://github.com/icaraps
 feature: APIs/SDKs
 exl-id: b422ae68-49b3-4d60-9ea4-0fa67b6934b0
-TQID: https://experienceleague.adobe.com/sCVfAY8W0oYu2ak-W4MYvcWSoUiAuaU3762JEhocZSE
+TQID: 'https://experienceleague.adobe.com/sCVfAY8W0oYu2ak-W4MYvcWSoUiAuaU3762JEhocZSE'
 product_v2:
   - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
+feature_v2:
+  - id: a19e8738-9679-599a-b83b-5f2f15f8e4d6
+    internal-label: APIs/SDKs
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
+    internal-label: Developer
+source-git-commit: 5d119ccf18b09b3ba864a69642458597f65c754f
 workflow-type: tm+mt
-source-wordcount: 297
+source-wordcount: '297'
 ht-degree: 0%
-
 ---
-
 # 获取配置文件
 
 可以通过三种方式获取[!DNL Target]配置文件：使用`[!DNL Experience Cloud Visitor ID]` (`ECID`)、`tntid`或`thirdPartyId`。

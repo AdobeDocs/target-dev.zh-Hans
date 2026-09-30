@@ -3,24 +3,30 @@ title: 通过JSON有效负载下载、存储和更新设备上决策规则构件
 description: 如果应用程序的结构方式要求在其使用SDK方法的每个文件中初始化SDK，则此方法将是最佳的。
 feature: APIs/SDKs
 exl-id: 4ccfb455-f813-4bdb-a9c1-d576a110a9bb
-TQID: https://experienceleague.adobe.com/knFQFgPKL-DBOtBnWUIz2-7usi35DPtxd-FSINqHHhY
+TQID: 'https://experienceleague.adobe.com/knFQFgPKL-DBOtBnWUIz2-7usi35DPtxd-FSINqHHhY'
 product_v2:
   - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
 feature_v2:
   - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+    internal-label: Implementation
+  - id: a19e8738-9679-599a-b83b-5f2f15f8e4d6
+    internal-label: APIs/SDKs
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+    internal-label: Implementation
   - id: e7840a7b-a94f-4256-aed0-4e94b08e157b
+    internal-label: System architecture
   - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
-source-git-commit: 4131354373a42c475db9a4f8dcf8090dd0cbdfcd
+    internal-label: Administration
+source-git-commit: 5d119ccf18b09b3ba864a69642458597f65c754f
 workflow-type: tm+mt
-source-wordcount: 296
+source-wordcount: '296'
 ht-degree: 1%
-
 ---
-
 # 通过JSON有效负载下载、存储和更新规则构件
 
 如果应用程序的结构方式要求在其使用SDK方法的每个文件中初始化SDK，则此方法将是最佳的。 在SDK初始化期间，Web应用程序可以使用规则工件的JSON有效负载之前，您应该确保已下载JSON有效负载并且可供应用程序使用。

@@ -4,13 +4,23 @@ description: 了解Target Cookie行为（第一方Cookie、第三方和第一方
 title: 可在何处找到有关Target Cookie的信息？
 feature: at.js
 role: Developer
-source-git-commit: 39f390a0e5eedf8c6957333759d31d96ed11b321
+product_v2:
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
+feature_v2:
+  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+    internal-label: Implementation
+subfeature_v2:
+  - id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+    internal-label: at.js
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 5d119ccf18b09b3ba864a69642458597f65c754f
 workflow-type: tm+mt
 source-wordcount: '1688'
 ht-degree: 53%
-
 ---
-
 # Target Cookie
 
 Cookie 行为取决于它是第一方 Cookie、第三方和第一方 Cookie，还是仅仅为第三方 Cookie。

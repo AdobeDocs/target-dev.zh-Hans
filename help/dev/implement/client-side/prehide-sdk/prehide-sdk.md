@@ -3,7 +3,16 @@ keywords: 预隐藏SDK，闪烁，防闪烁，预隐藏，预隐藏， alloy， 
 description: 了解如何集成[!DNL Adobe Target]预隐藏SDK以消除页面加载期间非个性化内容的闪烁（闪烁）。 SDK可与Adobe Alloy (Web SDK)和at.js配合使用。
 title: 预隐藏SDK集成指南
 feature: Implementation
-source-git-commit: 35ac4480ead5069169a2c55d35b43d3c1a81d78a
+product_v2:
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
+feature_v2:
+  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+    internal-label: Implementation
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 5d119ccf18b09b3ba864a69642458597f65c754f
 workflow-type: tm+mt
 source-wordcount: '1066'
 ht-degree: 1%

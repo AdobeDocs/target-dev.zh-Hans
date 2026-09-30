@@ -1,26 +1,32 @@
 ---
 title: 受众定位
-description: 可以使用受众来定位您的实验和个性化活动。 [!DNL Adobe Target] 支持各种现成的强大受众定位功能。
+description: 受众可用于定向您的试验性和个性化活动。 [!DNL Adobe Target]支持多种现成的强大受众定位功能。
 exl-id: df1bd856-e848-452c-90a0-abf29e7a2313
 feature: Implement Server-side
-TQID: https://experienceleague.adobe.com/BmKrCmWIkEkNHiipZ-DqDlhzOT7bVmKHl9de5uXhJQU
+TQID: 'https://experienceleague.adobe.com/BmKrCmWIkEkNHiipZ-DqDlhzOT7bVmKHl9de5uXhJQU'
 product_v2:
   - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
 feature_v2:
   - id: adee20bd-51f4-461d-b9db-d215f8756eeb
+    internal-label: Audiences
+  - id: a8a69496-b9ae-554a-b68e-e92a87809fc5
+    internal-label: Implement Server-side
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+    internal-label: Metadata
   - id: bcc5edb5-84c3-4940-9f84-ed88b6c16274
+    internal-label: Experimentation
   - id: e0eb8757-182f-49f3-94a4-1587d16f5094
-source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
+    internal-label: Personalization
+source-git-commit: 5d119ccf18b09b3ba864a69642458597f65c754f
 workflow-type: tm+mt
-source-wordcount: 1069
+source-wordcount: '1070'
 ht-degree: 15%
-
 ---
-
 # 受众定位
 
 ## 概述
@@ -30,7 +36,7 @@ ht-degree: 15%
 ### [!DNL Target]库
 
 有关详细信息，请参阅[[!DNL Target] 库](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/target-library.html?lang=zh-Hans)。
-&#x200B;AEM
+&#x200B;
 * 反向链接来自Bing
 * Chrome Browser
 * Firefox浏览器
@@ -47,8 +53,8 @@ ht-degree: 15%
 
 ### 地域
 
-有关详细信息，请参阅[地域](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/geo.html?lang=zh-Hans)。
-&#x200B;
+有关更多信息，请参阅[地域](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/geo.html?lang=zh-Hans)。
+&#x200B;&#x200B;
 * 国家/地区
 * 省/自治区/直辖市
 * 城市

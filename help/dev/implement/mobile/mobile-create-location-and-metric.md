@@ -1,23 +1,30 @@
 ---
 keywords: 移动设备应用程序, 移动设备应用程序位置, 定位移动设备应用程序, 移动设备 Target 位置, 移动设备应用程序成功量度
-description: 查看示例代码，以帮助您了解如何在iOS应用程序中创建位置和成功量度，以便使用 [!DNL Adobe Target] 个性化和优化您的应用程序。
-title: 如何在iOS应用程序中创建 [!DNL Target] 位置和成功量度？
+description: 查看示例代码，以帮助您了解如何在iOS应用程序中创建位置和成功量度，以便使用[!DNL Adobe Target]个性化和优化您的应用程序。
+title: 如何在iOS应用程序中创建[!DNL Target]位置和成功量度？
 feature: Implement Mobile
 exl-id: 755c8b26-5c60-48fc-9e7e-5e97a25edb78
-TQID: https://experienceleague.adobe.com/frolzqCgdL0iz5Z3E8OaJmP6yiVq7jEYiWn6LD4bocA
+TQID: 'https://experienceleague.adobe.com/frolzqCgdL0iz5Z3E8OaJmP6yiVq7jEYiWn6LD4bocA'
 product_v2:
   - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
+feature_v2:
+  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+    internal-label: Implementation
+subfeature_v2:
+  - id: d051910f-2bda-47ea-a969-6ade9fcd71f1
+    internal-label: Implement mobile
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 level_v2:
   - id: e8ccd51f-da0d-4e3b-939b-e30d5ebb1ea5
-source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
+    internal-label: Beginner
+source-git-commit: 5d119ccf18b09b3ba864a69642458597f65c754f
 workflow-type: tm+mt
-source-wordcount: 469
-ht-degree: 63%
-
+source-wordcount: '471'
+ht-degree: 62%
 ---
-
 # iOS — 创建[!DNL Target]位置和成功量度
 
 要在移动应用程序中使用[!DNL Target]，请创建位置和成功量度。

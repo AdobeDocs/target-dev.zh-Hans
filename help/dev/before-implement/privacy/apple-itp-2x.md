@@ -1,31 +1,42 @@
 ---
 keywords: apple， ITP，智能防跟踪， experience cloud id， ecid， itp
-description: 了解 [!DNL Adobe Target] 以及旨在保护Safari用户隐私的Apple智能防跟踪(ITP)计划的影响。
-title: ' [!DNL Target] 如何处理Apple ITP支持？'
+description: 了解[!DNL Adobe Target]以及旨在保护Safari用户隐私的Apple智能防跟踪(ITP)计划的影响。
+title: '[!DNL Target]如何处理Apple ITP支持？'
 feature: Privacy & Security
 exl-id: 6deee03b-df86-4d0d-999c-b11855ddfda5
-TQID: https://experienceleague.adobe.com/AvrlwiLa-soHwrGT1QMa8KgsiIwfwKaF-0LBxMjb8cs
+TQID: 'https://experienceleague.adobe.com/AvrlwiLa-soHwrGT1QMa8KgsiIwfwKaF-0LBxMjb8cs'
 product_v2:
   - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
 feature_v2:
   - id: adee20bd-51f4-461d-b9db-d215f8756eeb
+    internal-label: Audiences
   - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+    internal-label: Implementation
+  - id: f599e456-545c-47e5-8e50-b7dfe3579517
+    internal-label: Governance and control
 subfeature_v2:
   - id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+    internal-label: at.js
+  - id: ee6498fb-34b1-4925-be4a-9ec7a38e8dab
+    internal-label: Privacy and security
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+    internal-label: Implementation
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
+    internal-label: Security
   - id: e0eb8757-182f-49f3-94a4-1587d16f5094
+    internal-label: Personalization
   - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
-source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
+    internal-label: Privacy
+source-git-commit: 5d119ccf18b09b3ba864a69642458597f65c754f
 workflow-type: tm+mt
-source-wordcount: 681
+source-wordcount: '683'
 ht-degree: 28%
-
 ---
-
 # Apple 智能防跟踪 (ITP) 2.x
 
 智能防跟踪(ITP)是Apple的一项旨在保护Safari用户隐私的举措。 第一版 ITP 于 2017 年发布，主要针对使用第三方 Cookie 的情况。 事实上，Apple 完全阻止了第三方 Cookie，这反而给广告技术公司和营销技术公司造成严重的困扰，因为这些公司通常使用第三方 Cookie 来跟踪访客并收集访客数据。 现在，Apple 正在对如何在 Safari 中使用第一方 Cookie 进行限制和约束。

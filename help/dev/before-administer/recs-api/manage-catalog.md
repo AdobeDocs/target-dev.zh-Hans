@@ -3,23 +3,34 @@ title: 如何使用API管理您的推荐目录
 description: 使用Adobe Target API创建、更新、保存、获取和删除推荐目录中的实体所需的步骤。
 feature: APIs/SDKs, Recommendations, Administration & Configuration
 kt: 3815
-thumbnail: null
+thumbnail:
 author: Judy Kim
 exl-id: aea82607-cde4-456a-8dfb-2967badce455
-TQID: https://experienceleague.adobe.com/9uKu-mX9xzz-sG4-peyfzrwogo27nF8TZ4zFXBi6TaU
+TQID: 'https://experienceleague.adobe.com/9uKu-mX9xzz-sG4-peyfzrwogo27nF8TZ4zFXBi6TaU'
 product_v2:
   - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
+feature_v2:
+  - id: a19e8738-9679-599a-b83b-5f2f15f8e4d6
+    internal-label: APIs/SDKs
+  - id: dfc8a233-f2b5-4811-bf63-b4262aebc5a5
+    internal-label: Administration and configuration
+  - id: f69bc5f1-ebdb-4306-a281-f2e77daf734c
+    internal-label: Activities and tests
+subfeature_v2:
+  - id: ed58f4a1-16eb-4c8c-b505-be9da766a9ec
+    internal-label: Recommendations
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
-source-git-commit: 0fe52344f654f22d1ff7aaace0ba5a99e92d036d
+    internal-label: Administration
+source-git-commit: 5d119ccf18b09b3ba864a69642458597f65c754f
 workflow-type: tm+mt
-source-wordcount: 930
+source-wordcount: '930'
 ht-degree: 0%
-
 ---
-
 # 使用API管理您的推荐目录
 
 在确保您符合[使用推荐API](/help/dev/before-administer/recs-api/overview.md#prerequisites)的要求时，您已了解如何[使用JWT身份验证流生成访问令牌](/help/dev/before-administer/configure-authentication.md)，以便在[Adobe Developer Console](https://developer.adobe.com/console/home)上使用[!DNL Adobe Target]管理员API。
@@ -150,7 +161,7 @@ GET https://mc.adobe.io/{{TENANT_ID}}/target/recs/entities/[entity.id]
 1. 发送请求。
 
    ![GetEntity3](assets/GetEntity3.png)
-如果您收到错误消息指出未找到实体，如上面的示例所示，请验证您是否向正确的Target环境提交请求。
+   如果您收到错误消息指出未找到实体，如上面的示例所示，请验证您是否向正确的Target环境提交请求。
 
 
 

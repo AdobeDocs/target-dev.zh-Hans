@@ -1,28 +1,36 @@
 ---
 keywords: 推荐、设置、首选项、垂直行业、筛选不兼容的标准、默认主机组、缩览图基本URL、推荐API令牌、$9
-description: 了解如何在 [!DNL Adobe Target]中实施[!UICONTROL 推荐]活动。
+description: 了解如何在[!DNL Adobe Target]中实施[!UICONTROL 推荐]活动。
 title: 如何实施[!UICONTROL 推荐]活动？
 feature: Recommendations
 exl-id: af1e8b60-6dbb-451b-aa4f-e167d1800d1c
-TQID: https://experienceleague.adobe.com/XHlWA44OdaG0N-lQoXiKvCSUS2OBHwAsFRla4exneEI
+TQID: 'https://experienceleague.adobe.com/XHlWA44OdaG0N-lQoXiKvCSUS2OBHwAsFRla4exneEI'
 product_v2:
   - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
 feature_v2:
   - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+    internal-label: Implementation
+  - id: f69bc5f1-ebdb-4306-a281-f2e77daf734c
+    internal-label: Activities and tests
 subfeature_v2:
   - id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+    internal-label: at.js
+  - id: ed58f4a1-16eb-4c8c-b505-be9da766a9ec
+    internal-label: Recommendations
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+    internal-label: Implementation
   - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
-source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
+    internal-label: Administration
+source-git-commit: 5d119ccf18b09b3ba864a69642458597f65c754f
 workflow-type: tm+mt
-source-wordcount: 1607
+source-wordcount: '1607'
 ht-degree: 21%
-
 ---
-
 # 计划和实施[!UICONTROL 推荐]
 
 此信息可帮助您计划和实施[!DNL Adobe Target Recommendations]。
