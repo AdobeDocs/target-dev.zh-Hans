@@ -849,7 +849,7 @@ alloy("configure", {
 }
 ```
 
-然后，可以通过[!DNL  Data Insertion API]将该有效负载转发到[!DNL Analytics]。
+然后，可以通过[!DNL &#x200B; Data Insertion API]将该有效负载转发到[!DNL Analytics]。
 
 示例2：在每个`getOffers`函数中对其进行配置：
 

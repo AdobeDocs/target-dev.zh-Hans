@@ -32,7 +32,7 @@ ht-degree: 15%
 
 `TargetClient`是使用`TargetClient.Create`创建的。
 
-## C#
+## C#&#x200B;
 
 ```csharp {line-numbers="true"}
 TargetClient TargetClient.Create(TargetClientConfig clientConfig)
@@ -40,7 +40,7 @@ TargetClient TargetClient.Create(TargetClientConfig clientConfig)
 
 `ClientConfig`是使用ClientConfig.Builder创建的。
 
-## C#
+## C#&#x200B;
 
 ```csharp {line-numbers="true"}
 TargetClientConfig.Builder TargetClientConfig.Builder()
@@ -74,7 +74,7 @@ TargetClientConfig.Builder TargetClientConfig.Builder()
 
 ## 示例
 
-## C#
+## C#&#x200B;
 
 ```csharp {line-numbers="true"}
 var targetClientConfig = new TargetClientConfig.Builder("acmeclient", "ABCDEF012345677890ABCDEF0@AdobeOrg")

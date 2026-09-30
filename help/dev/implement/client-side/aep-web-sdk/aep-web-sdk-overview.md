@@ -60,7 +60,7 @@ ht-degree: 8%
 
 ### 使用[!DNL Platform Web SDK]实施[!DNL Adobe Experience Cloud]
 
-了解如何结合使用[!DNL Adobe Experience Platform Web SDK]和[本教程](https://experienceleague.adobe.com/docs/platform-learn/implement-web-sdk/overview.html)实施[!DNL Experience Cloud]应用程序。 有关[!DNL Target]的特定信息，请参阅标题为[使用Platform Web SDK设置 [!DNL Target] ](https://experienceleague.adobe.com/docs/platform-learn/implement-web-sdk/applications-setup/setup-target.html)的教程部分。
+了解如何结合使用[!DNL Adobe Experience Platform Web SDK]和[本教程](https://experienceleague.adobe.com/docs/platform-learn/implement-web-sdk/overview.html)实施[!DNL Experience Cloud]应用程序。 有关[!DNL Target]的特定信息，请参阅标题为[使用Platform Web SDK设置 [!DNL Target] &#x200B;](https://experienceleague.adobe.com/docs/platform-learn/implement-web-sdk/applications-setup/setup-target.html)的教程部分。
 
 ### 将[!DNL Target]从at.js 2.*x*&#x200B;迁移到[!DNL Platform Web SDK]
 

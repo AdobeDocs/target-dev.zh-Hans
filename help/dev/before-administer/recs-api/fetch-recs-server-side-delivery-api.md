@@ -84,7 +84,7 @@ Adobe Target和Adobe Target Recommendations API可用于提供对网页的响应
 
 `POST https://{{CLIENT_CODE}}.tt.omtrdc.net/rest/v1/delivery`
 
-1. 请注意，客户端代码为必填项。 提醒一下，通过导航到&#x200B;**[!UICONTROL 推荐]** > **[!UICONTROL 设置]**，可以在Adobe Target中找到您的客户端代码。 请注意&#x200B;**推荐API令牌**&#x200B;部分中的&#x200B;**客户端代码**值。
+1. 请注意，客户端代码为必填项。 提醒一下，通过导航到&#x200B;**[!UICONTROL 推荐]** > **[!UICONTROL 设置]**，可以在Adobe Target中找到您的客户端代码。 请注意&#x200B;**推荐API令牌**&#x200B;部分中的&#x200B;**客户端代码**&#x200B;值。
    ![client-code.png](assets/client-code.png)
 1. 获得客户端代码后，即可构建投放API调用。 以下示例以[投放API Postman集合](../../implement/delivery-api/overview.md#section/Getting-Started/Postman-Collection)中提供的&#x200B;**[!UICONTROL Web批处理Mbox投放API调用]**&#x200B;开头，进行了相关修改。 例如：
    * 已从&#x200B;**正文**&#x200B;中移除&#x200B;**浏览器**&#x200B;和&#x200B;**地址**&#x200B;对象，因为非HTML用例不需要这些对象

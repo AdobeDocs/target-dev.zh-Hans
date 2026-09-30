@@ -171,7 +171,7 @@ target_client = TargetClient.create(CONFIG)
 
    ![替代图像](assets/asset-ab.png)
 
-1. 在&#x200B;**[!UICONTROL 创建A/B测试活动]**&#x200B;模式中，保留默认的Web选项(1)，选择&#x200B;**[!UICONTROL 表单]**&#x200B;作为体验编辑器(2)，选择&#x200B;**[!UICONTROL 具有**[!UICONTROL &#x200B;无属性限制的Workspace ]**]**(3)，然后单击&#x200B;**[!UICONTROL 下一步]**(4)。
+1. 在&#x200B;**[!UICONTROL 创建A/B测试活动]**&#x200B;模式中，保留默认的Web选项(1)，选择&#x200B;**[!UICONTROL 表单]**&#x200B;作为体验编辑器(2)，选择&#x200B;**[!UICONTROL 具有**&#x200B;[!UICONTROL &#x200B;无属性限制的Workspace &#x200B;]&#x200B;**]**(3)，然后单击&#x200B;**[!UICONTROL 下一步]**(4)。
 
    ![替代图像](assets/asset-form.png)
 

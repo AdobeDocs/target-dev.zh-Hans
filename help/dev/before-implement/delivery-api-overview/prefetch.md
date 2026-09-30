@@ -188,7 +188,7 @@ curl -X POST \
 
 ## 预取视图
 
-视图更无缝地支持单页应用程序(SPA)和移动应用程序。 视图可以视为视觉元素的逻辑组，这些元素共同构成了SPA或移动设备体验。 现在，通过投放API，VEC创建的[[!UICONTROL A/B测试]](https://experienceleague.adobe.com/docs/target/using/activities/abtest/test-ab.html){target=_blank}和[[!UICONTROL 体验定位]](https://experienceleague.adobe.com/docs/target/using/activities/experience-targeting/experience-target.html){target=_blank} (X)T活动现在可以预取修改了SPA](/help/dev/implement/client-side/atjs/how-to-deployatjs/target-atjs-single-page-application.md)的[视图。
+视图更无缝地支持单页应用程序(SPA)和移动应用程序。 视图可以视为视觉元素的逻辑组，这些元素共同构成了SPA或移动设备体验。 现在，通过投放API，VEC创建的[[!UICONTROL A/B测试]](https://experienceleague.adobe.com/docs/target/using/activities/abtest/test-ab.html){target=_blank}和[[!UICONTROL 体验定位]](https://experienceleague.adobe.com/docs/target/using/activities/experience-targeting/experience-target.html){target=_blank} (X)T活动现在可以预取修改了SPA[&#128279;](/help/dev/implement/client-side/atjs/how-to-deployatjs/target-atjs-single-page-application.md)的视图。
 
 ```shell  {line-numbers="true"}
 curl -X POST \

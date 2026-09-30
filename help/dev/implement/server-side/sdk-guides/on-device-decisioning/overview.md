@@ -141,7 +141,7 @@ ht-degree: 8%
 ## 要确保通过[!DNL Adobe Target]的服务器端SDK成功交付我的[!UICONTROL 设备上决策]活动，需要遵循的步骤概要是什么？
 
 1. 访问[!DNL Adobe Target] UI并导航到&#x200B;**[!UICONTROL 管理]** > **[!UICONTROL 实施]** > **[!UICONTROL 帐户详细信息]**&#x200B;以启用&#x200B;**[!UICONTROL 设备上决策]**&#x200B;切换开关。
-1. 在项目&#x200B;]**中启用**[!UICONTROL &#x200B;包含所有现有的[!UICONTROL 设备上决策]限定活动。
+1. 在项目&#x200B;**中启用**&#x200B;包含所有现有的[!UICONTROL 设备上决策]限定活动。
 1. 创建并激活[!UICONTROL 设备上决策]支持的活动类型，并验证该活动的&#x200B;**[!UICONTROL 决策方法]**&#x200B;是否为&#x200B;**[!UICONTROL 设备上决策]**。
 1. 使用`decisioningMethod = on-device`安装并初始化[Node.js](../../node-js/overview.md)或[Java](../../java/overview.md) SDK。
 1. 在您的代码中实施`getOffers()`或`getAttributes()`以检索设备上的体验。

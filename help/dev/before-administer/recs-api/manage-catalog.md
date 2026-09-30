@@ -39,7 +39,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->每当您需要刷新访问令牌以进行身份验证时，请通过用户令牌&#x200B;]**请求发送**[!UICONTROL  IMS： JWT生成+身份验证，因为它在24小时后过期。 有关说明，请参阅[配置Adobe API身份验证](../configure-authentication.md)。
+>每当您需要刷新访问令牌以进行身份验证时，请通过用户令牌&#x200B;**请求发送** IMS： JWT生成+身份验证，因为它在24小时后过期。 有关说明，请参阅[配置Adobe API身份验证](../configure-authentication.md)。
 
 ![JWT3ff](assets/configure-io-target-jwt3ff.png)
 
