@@ -7,26 +7,34 @@ exl-id: e0d87d95-ee95-4ca9-8632-222ae1fb9a91
 TQID: https://experienceleague.adobe.com/7-Kr0OwJ4o780zkFL2EIQ0vJUqVyQp-RuoJOaBNYrQg
 product_v2:
   - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
 feature_v2:
   - id: adee20bd-51f4-461d-b9db-d215f8756eeb
+    internal-label: Audiences
   - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+    internal-label: Implementation
 subfeature_v2:
   - id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+    internal-label: at.js
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+    internal-label: Implementation
   - id: e0eb8757-182f-49f3-94a4-1587d16f5094
+    internal-label: Personalization
   - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+    internal-label: Insights
   - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+    internal-label: Privacy
   - id: ff2b9b37-92e0-45fc-b853-379d44c08c89
-source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
+    internal-label: Audience segmentation
+source-git-commit: 09c7444b7ed70521cfd01caf5c996643d0a27547
 workflow-type: tm+mt
-source-wordcount: 1340
-ht-degree: 73%
-
+source-wordcount: '1460'
+ht-degree: 67%
 ---
-
 # 用户代理和客户端提示
 
 Adobe Target使用用户代理，使访问者符合分段和个性化的条件。
@@ -57,6 +65,14 @@ Mozilla/5.0 (Linux; Android 12; SM-S908E) AppleWebKit/537.36 (KHTML, like Gecko)
 | 设备 | SM-S908E (Samsung Galaxy S22 Ultra) |
 
 多年来，用户代理字符串中包含的浏览器和设备信息量不断增加。
+
+## 覆盖用户代理的自定义脚本 {#custom-scripts-overwrite-user-agent}
+
+由于移动设备定位依赖于User-Agent字符串，因此，页面上任何在[!DNL Target]读取之前修改`navigator.userAgent`的自定义脚本都可能导致设备定位失败。
+
+如果您的网站有一个自定义脚本，用于侦听所有事件，而不是它所需的特定事件，则它可能会无意中拦截[!DNL Web SDK]事件并覆盖`navigator.userAgent`。 因此，[!DNL Target]会收到错误的设备信息而不是访客的实际设备，并且不会提供预期的体验。
+
+如果移动设备定位未按预期运行，请检查页面上的任何自定义脚本或事件侦听器是否修改了`navigator.userAgent`，并尽可能缩小这些侦听器的范围，以便它们不会无意中拦截[!DNL Target]或Web SDK事件。
 
 ## 用户代理用例
 
