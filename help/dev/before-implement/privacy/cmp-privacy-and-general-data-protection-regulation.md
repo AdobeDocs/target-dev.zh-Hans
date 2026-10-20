@@ -49,7 +49,7 @@ ht-degree: 61%
 
 当 Adobe 向企业提供软件和服务时，作为提供这些服务的一部分，Adobe 将充当其处理并存储的任何个人数据的“数据处理方”。 作为“数据处理方”，Adobe 将根据贵公司授予的权限及指示（例如，遵照您与 Adobe 签署的协议中的规定）处理个人数据。
 
-作为“数据控制方”，您可以决定 Adobe 代表您处理和存储的个人数据。 如果您使用 Adobe Experience Cloud 解决方案，Adobe 可能会根据您使用的解决方案和您选择发送到 Adobe Experience Cloud 帐户的信息，来为您托管个人数据。 有关详细的示例列表，请参阅 [Adobe Experience Cloud 隐私](https://www.adobe.com/privacy/experience-cloud.html#collect)。
+作为“数据控制方”，您可以决定 Adobe 代表您处理和存储的个人数据。 如果您使用 Adobe Experience Cloud 解决方案，Adobe 可能会根据您使用的解决方案和您选择发送到 Adobe Experience Cloud 帐户的信息，来为您托管个人数据。 有关详细的示例列表，请参阅 [Adobe Experience Cloud 隐私](https://www.adobe.com/cn/privacy/experience-cloud.html#collect)。
 
 Adobe Experience Cloud为数据控制方提供了为GDPR做好准备的API，允许他们完成以下任务：
 
