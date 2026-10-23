@@ -56,7 +56,7 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->您必须具有&#x200B;**[!UICONTROL 管理员]**&#x200B;或&#x200B;**[!UICONTROL 审批者]** [用户角色](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/user-management.html?lang=zh-Hans)才能启用或禁用&#x200B;**[!UICONTROL 设备上决策]**&#x200B;切换开关。
+>您必须具有&#x200B;**[!UICONTROL 管理员]**&#x200B;或&#x200B;**[!UICONTROL 审批者]** [用户角色](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/user-management.html)才能启用或禁用&#x200B;**[!UICONTROL 设备上决策]**&#x200B;切换开关。
 
 启用&#x200B;**[!UICONTROL 设备上决策]**&#x200B;切换后，[!DNL Adobe Target]开始为您的客户端生成[规则工件](../on-device-decisioning/rule-artifact-overview.md)。
 
@@ -171,7 +171,7 @@ target_client = TargetClient.create(CONFIG)
 
    ![替代图像](assets/asset-ab.png)
 
-1. 在&#x200B;**[!UICONTROL 创建A/B测试活动]**&#x200B;模式中，保留默认的Web选项(1)，选择&#x200B;**[!UICONTROL 表单]**&#x200B;作为体验编辑器(2)，选择&#x200B;**[!UICONTROL 具有**&#x200B;[!UICONTROL &#x200B;无属性限制的Workspace &#x200B;]&#x200B;**]**(3)，然后单击&#x200B;**[!UICONTROL 下一步]**(4)。
+1. 在&#x200B;**[!UICONTROL 创建A/B测试活动]**&#x200B;模式中，保留默认的Web选项(1)，选择&#x200B;**[!UICONTROL 表单]**&#x200B;作为体验编辑器(2)，选择&#x200B;**[!UICONTROL 具有**[!UICONTROL &#x200B;无属性限制的Workspace ]**]**(3)，然后单击&#x200B;**[!UICONTROL 下一步]**(4)。
 
    ![替代图像](assets/asset-form.png)
 
@@ -407,6 +407,6 @@ target_client.send_notifications({
 
    >[!NOTE]
    >
-   >您必须具有&#x200B;**[!UICONTROL 审批者]**&#x200B;或&#x200B;**[!UICONTROL 发布者]** [用户角色](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/user-management.html?lang=zh-Hans)才能执行此步骤。
+   >您必须具有&#x200B;**[!UICONTROL 审批者]**&#x200B;或&#x200B;**[!UICONTROL 发布者]** [用户角色](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/user-management.html)才能执行此步骤。
 
    ![替代图像](assets/asset-activate.png)

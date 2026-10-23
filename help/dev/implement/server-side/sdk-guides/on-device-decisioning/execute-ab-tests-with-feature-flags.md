@@ -57,7 +57,7 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->您必须具有管理员或审批者[用户角色](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/user-management.html?lang=zh-Hans)才能启用或禁用“设备端决策”切换开关。
+>您必须具有管理员或审批者[用户角色](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/user-management.html)才能启用或禁用“设备端决策”切换开关。
 
 启用&#x200B;**[!UICONTROL 设备上决策]**&#x200B;切换后，[!DNL Adobe Target]开始为您的客户端生成规则项目。
 
@@ -67,7 +67,7 @@ ht-degree: 1%
 
 ![替代图像](assets/asset-ab.png)
 
-在&#x200B;**[!UICONTROL 创建A/B测试活动]**&#x200B;模式中，保留默认的&#x200B;**[!UICONTROL Web]**&#x200B;选项(1)，选择&#x200B;**[!UICONTROL 表单]**&#x200B;作为体验编辑器(2)，选择不带&#x200B;**[!UICONTROL 属性限制的**&#x200B;[!UICONTROL &#x200B;默认Workspace &#x200B;]&#x200B;**]** (3)，然后单击&#x200B;**[!UICONTROL 下一步]** (4)。
+在&#x200B;**[!UICONTROL 创建A/B测试活动]**&#x200B;模式中，保留默认的&#x200B;**[!UICONTROL Web]**&#x200B;选项(1)，选择&#x200B;**[!UICONTROL 表单]**&#x200B;作为体验编辑器(2)，选择不带&#x200B;**[!UICONTROL 属性限制的**[!UICONTROL &#x200B;默认Workspace ]**]** (3)，然后单击&#x200B;**[!UICONTROL 下一步]** (4)。
 
 ![替代图像](assets/asset-form.png)
 
