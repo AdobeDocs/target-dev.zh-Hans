@@ -25,9 +25,9 @@ topic_v2:
     internal-label: Security
   - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
     internal-label: Administration
-source-git-commit: 5d119ccf18b09b3ba864a69642458597f65c754f
+source-git-commit: 3a1674348a1cb39351051addf8e063efbf0dc9e9
 workflow-type: tm+mt
-source-wordcount: '1313'
+source-wordcount: '1336'
 ht-degree: 6%
 ---
 # [!DNL Adobe Target Bulk Profile Update API]
@@ -86,7 +86,7 @@ batch=pcId,param1,param2,param3,param4
 * 第一个标头应为`pcId`或`thirdPartyId`。 不支持[!UICONTROL Marketing Cloud访客ID]。 [!UICONTROL pcId]是[!DNL Target]生成的访客ID。 `thirdPartyId`是由客户端应用程序指定的ID，它通过mbox调用作为`mbox3rdPartyId`传递给[!DNL Target]。 它必须在此作为`thirdPartyId`引用。
 * 出于安全原因，您在批处理文件中指定的参数和值必须使用UTF-8进行URL编码。 参数和值可以转发到其他边缘节点以供通过HTTP请求进行处理。
 * 参数必须仅采用`paramName`格式。 参数在[!DNL Target]中显示为`profile.paramName`。
-* 如果您使用[!UICONTROL 批量配置文件更新API] v2，则不需要为每个`pcId`指定所有参数值。 已为[!DNL Target]中未找到的任何`pcId`或`mbox3rdPartyId`创建配置文件。 如果您使用的是v1，则不会为缺少的pcIds或mbox3rdPartyIds创建配置文件。 有关详细信息，请参阅以下 [!DNL Bulk Profile Update API]&#x200B;[&#128279;](#empty)中的处理空值。
+* 如果您使用[!UICONTROL 批量配置文件更新API] v2，则不需要为每个`pcId`指定所有参数值。 已为[!DNL Target]中未找到的任何`pcId`或`mbox3rdPartyId`创建配置文件。 如果您使用的是v1，则不会为缺少的pcIds或mbox3rdPartyIds创建配置文件。 有关详细信息，请参阅以下 [!DNL Bulk Profile Update API]](#empty)中的[处理空值。
 * 批处理文件必须小于 50 MB。 此外，总行数不应超过500,000。 此限制可确保服务器不会因请求过多而泛滥。
 * 您可以上传的属性数量没有限制。 但是，外部配置文件数据（包括客户属性、配置文件API、Mbox内配置文件参数和配置文件脚本输出）的总大小不得超过64 KB。
 * 参数和值区分大小写。
@@ -97,7 +97,7 @@ batch=pcId,param1,param2,param3,param4
 >
 >所有参数名称和值都必须采用URL编码(UTF-8)，然后才能提交随`Content-Type: application/x-www-form-urlencoded`一起发送的批次，其正文以`batch=`开头。 未编码的保留字符将作为请求语法而非数据读取，这可能导致批次被拒绝、截断或损坏。
 >
->如果您收到未发出`batchId`的“意外错误”响应，请参阅[批量配置文件更新API返回“意外错误”](https://experienceleague.adobe.com/zh-hans/docs/experience-cloud-kcs/kbarticles/ka-24281)以了解故障排除步骤。
+>如果您收到未发出`batchId`的“意外错误”响应，请参阅[批量配置文件更新API返回“意外错误”](https://experienceleague.adobe.com/en/docs/experience-cloud-kcs/kbarticles/ka-24281)以了解故障排除步骤。
 
 以下字符通常存在于配置文件值中，但在`application/x-www-form-urlencoded`数据中具有特殊含义。 如果发送未编码的数据，则请求会失败或者数据已损坏，并且没有出现明显错误：
 
@@ -156,9 +156,9 @@ BATCH.TXT是文件名。 CLIENTCODE是[!DNL Target]客户端代码。
 
 | 状态 | 详细信息 |
 | --- | --- |
-| [!UICONTROL complete] | 配置文件批量更新请求已成功完成。 |
-| [!UICONTROL 未完成] | 用户档案批量更新请求仍在处理中，尚未完成。 |
-| [!UICONTROL 卡住] | 配置文件批次更新请求卡住，无法完成。 |
+| [!UICONTROL complete] | 配置文件批量更新请求已成功完成。 无需执行任何操作。 |
+| [!UICONTROL 未完成] | 用户档案批量更新请求仍在处理中，尚未完成。 无需执行任何操作。 |
+| [!UICONTROL 卡住] | 配置文件批次更新请求卡住，无法完成。 如果某个批次在上传24小时后仍然卡住，则必须再次上传。 |
 
 ### 详细的批次状态URL响应
 
