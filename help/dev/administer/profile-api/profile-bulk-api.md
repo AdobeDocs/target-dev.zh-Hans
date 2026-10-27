@@ -25,9 +25,9 @@ topic_v2:
     internal-label: Security
   - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
     internal-label: Administration
-source-git-commit: 5d119ccf18b09b3ba864a69642458597f65c754f
+source-git-commit: 3a1674348a1cb39351051addf8e063efbf0dc9e9
 workflow-type: tm+mt
-source-wordcount: '1313'
+source-wordcount: '1336'
 ht-degree: 6%
 ---
 # [!DNL Adobe Target Bulk Profile Update API]
@@ -156,9 +156,9 @@ BATCH.TXT是文件名。 CLIENTCODE是[!DNL Target]客户端代码。
 
 | 状态 | 详细信息 |
 | --- | --- |
-| [!UICONTROL complete] | 配置文件批量更新请求已成功完成。 |
-| [!UICONTROL 未完成] | 用户档案批量更新请求仍在处理中，尚未完成。 |
-| [!UICONTROL 卡住] | 配置文件批次更新请求卡住，无法完成。 |
+| [!UICONTROL complete] | 配置文件批量更新请求已成功完成。 无需执行任何操作。 |
+| [!UICONTROL 未完成] | 用户档案批量更新请求仍在处理中，尚未完成。 无需执行任何操作。 |
+| [!UICONTROL 卡住] | 配置文件批次更新请求卡住，无法完成。 如果某个批次在上传24小时后仍然卡住，则必须再次上传。 |
 
 ### 详细的批次状态URL响应
 
